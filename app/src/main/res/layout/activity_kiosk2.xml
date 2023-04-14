@@ -17,8 +17,10 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
             android:gravity="center"
-            android:text="1. 글자크기 -> 2. 음성 속도 -> 3. 음성 크기" />
+            android:text="1. 글자크기 -> 2. 음성 속도 -> 3. 음성 크기"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,32 +30,35 @@
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="작게" />
+                android:text="작게"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="중간" />
+                android:text="중간"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="크게" />
+                android:text="크게"
+                android:textSize="24sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -71,7 +76,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:text="이전" />
+            android:text="이전"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button5"
@@ -81,6 +87,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:text="다음" />
+            android:text="다음"
+            android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

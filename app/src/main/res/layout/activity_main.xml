@@ -18,22 +18,22 @@
             android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="200dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:text="연습"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/real_Btn"
             android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="200dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:text="실전"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,7 +65,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 android:text="가나다"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/english_Btn"
@@ -75,7 +75,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 android:text="English"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
     </LinearLayout>

@@ -15,7 +15,7 @@
 
         <Button
             android:id="@+id/practice_Btn"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="80dp"
@@ -26,7 +26,7 @@
 
         <Button
             android:id="@+id/real_Btn"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="80dp"
@@ -59,7 +59,7 @@
 
             <Button
                 android:id="@+id/korean_Btn"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="100dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
@@ -69,7 +69,7 @@
 
             <Button
                 android:id="@+id/english_Btn"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="100dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"

@@ -15,10 +15,10 @@
 
         <Button
             android:id="@+id/practice_Btn"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:text="연습"
@@ -26,10 +26,10 @@
 
         <Button
             android:id="@+id/real_Btn"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:text="실전"
@@ -46,6 +46,7 @@
             android:id="@+id/language_Text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
             android:layout_weight="3"
             android:gravity="center"
             android:text="언어를 선택해주세요"

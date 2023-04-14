@@ -50,7 +50,7 @@
             android:layout_weight="3"
             android:gravity="center"
             android:text="언어를 선택해주세요"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"

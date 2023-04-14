@@ -16,7 +16,7 @@
         <Button
             android:id="@+id/practice_Btn"
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
+            android:layout_height="fill_parent"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="200dp"
             android:layout_marginRight="30dp"
@@ -27,7 +27,7 @@
         <Button
             android:id="@+id/real_Btn"
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
+            android:layout_height="fill_parent"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="200dp"
             android:layout_marginRight="30dp"

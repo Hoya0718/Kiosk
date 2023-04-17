@@ -9,6 +9,6 @@ public class Kiosk_8 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk8);
+        setContentView(R.layout.activity_kiosk08);
     }
 }

@@ -76,6 +76,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
+            android:onClick="goto_main"
             android:text="이전"
             android:textSize="18sp" />
 
@@ -87,6 +88,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
+            android:onClick="goto_kiosk_03"
             android:text="다음"
             android:textSize="18sp" />
     </LinearLayout>

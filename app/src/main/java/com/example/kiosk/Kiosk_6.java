@@ -10,5 +10,7 @@ public class Kiosk_6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk06);
+
+
     }
 }

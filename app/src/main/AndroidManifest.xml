@@ -38,37 +38,37 @@
             android:exported="false" />
         <activity
             android:name=".Kiosk_23"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_22"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_21"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_20"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_19"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_18"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_17"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_16"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_15"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_14"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_13"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Kiosk_12"
             android:exported="false" />

@@ -14,6 +14,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
+        android:enabled="false"
         android:text="접수"
         android:textSize="18sp" />
 
@@ -25,6 +26,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
+        android:onClick="goto_kiosk_29"
         android:text="수납"
         android:textSize="18sp" />
 </LinearLayout>

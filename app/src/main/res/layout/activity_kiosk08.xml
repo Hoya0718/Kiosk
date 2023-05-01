@@ -18,16 +18,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="1. 메뉴 선택"
+            android:text="@string/select_menu_2"
             android:textAlignment="center"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="->"
+            android:text="@string/arrow_3"
             android:textAlignment="center" />
 
         <TextView
@@ -35,16 +35,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="2. 결제"
+            android:text="@string/payment_2"
             android:textAlignment="center"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="->"
+            android:text="@string/arrow_4"
             android:textAlignment="center" />
 
         <TextView
@@ -52,9 +52,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="3. 완료"
+            android:text="@string/complete_2"
             android:textAlignment="center"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,22 +74,22 @@
                 android:id="@+id/drink_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
-                android:text="음료"
-                android:textSize="18sp"/>
+                android:text="@string/drink_2"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/burger_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
-                android:text="버거"
-                android:textSize="18sp"/>
+                android:text="@string/burger_2"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/side_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
-                android:text="사이드"
-                android:textSize="18sp"/>
+                android:text="@string/side_2"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -157,7 +157,7 @@
             android:layout_marginBottom="30dp"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="선택한 음식 표시"
+            android:text="@string/shopping_basket_2"
             android:textSize="18sp" />
 
         <LinearLayout
@@ -172,7 +172,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:text="결제하기_"
+                android:text="@string/make_a_payment_2"
                 android:textSize="18sp" />
 
             <Button
@@ -180,7 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:text="취소하기"
+                android:text="@string/cancle_2"
                 android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>

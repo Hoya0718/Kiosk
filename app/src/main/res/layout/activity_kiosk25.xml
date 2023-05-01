@@ -7,24 +7,26 @@
     tools:context=".Kiosk_25">
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/receipt_btn"
         android:layout_width="fill_parent"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
-        android:text="접수"
+        android:onClick="goto_kiosk_26"
+        android:text="@string/receipt"
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/acceptance_btn"
         android:layout_width="fill_parent"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
-        android:text="수납"
+        android:enabled="false"
+        android:text="@string/acceptance"
         android:textSize="18sp" />
 </LinearLayout>

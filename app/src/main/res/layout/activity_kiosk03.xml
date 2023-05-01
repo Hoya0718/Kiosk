@@ -9,87 +9,95 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_weight="3"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="1. 글자크기 -> 2. 음성 속도 -> 3. 음성 크기"
+            android:text="@string/volume_speed"
             android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/down_Btn"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:id="@+id/volume_speed_slow"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="느리게"
+                android:text="@string/volume_speed_slow"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/v_Sound_Btn"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:id="@+id/volume_speed_medium"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="중간"
+                android:text="@string/volume_speed_medium"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/up_Btn"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:id="@+id/volume_speed_fast"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="빠르게"
+                android:text="@string/volume_speed_fast"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/pre_Btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_02"
-            android:text="이전"
+            android:text="@string/previous_2"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/save_Btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_04"
-            android:text="다음"
+            android:text="@string/next_2"
             android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

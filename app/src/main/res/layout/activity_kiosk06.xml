@@ -8,23 +8,24 @@
 
     <Button
         android:id="@+id/store_Btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_weight="1"
-        android:text="매장"
+        android:onClick="goto_kiosk_07"
+        android:text="@string/store"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/takeout_Btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_weight="1"
-        android:text="포장"
+        android:text="@string/takeout"
         android:textSize="18sp" />
 </LinearLayout>

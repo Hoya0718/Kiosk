@@ -14,7 +14,7 @@ import java.util.Calendar;
 
 public class Kiosk_14 extends AppCompatActivity {
 
-    private Button button9; //버스 버튼
+    private Button button9; //버스 버튼1
     private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/M/d");
     TextView textView11;
 

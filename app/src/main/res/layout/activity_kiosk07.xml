@@ -82,6 +82,7 @@
                 android:layout_width="100dp"
                 android:layout_height="130dp"
                 android:text="@string/side"
+                android:onClick="goto_kiosk_08"
                 android:textSize="18sp"/>
 
             <Button
@@ -89,6 +90,7 @@
                 android:layout_width="100dp"
                 android:layout_height="130dp"
                 android:text="@string/drink"
+                android:onClick="goto_kiosk_09"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -96,27 +98,60 @@
         <TableLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:gravity="center">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent" >
+
+                <ImageButton
+                    android:id="@+id/b1955_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/b1955" />
+
+                <ImageButton
+                    android:id="@+id/batodi_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:onClick="goto_kiosk_10"
+                    app:srcCompat="@drawable/batodi" />
+
+                <ImageButton
+                    android:id="@+id/bigmc_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/bigmc" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
                 <ImageButton
                     android:id="@+id/bulgogi_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="5dp"
-                    app:srcCompat="@drawable/bilgogi" />
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/bulgogi" />
 
                 <ImageButton
                     android:id="@+id/cheese_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/cheese"
-                    tools:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/cheese" />
+
+                <ImageButton
+                    android:id="@+id/ham_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/ham" />
             </TableRow>
 
             <TableRow
@@ -124,19 +159,51 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/shrimp_Btn"
+                    android:id="@+id/mcchi_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="5dp"
-                    app:srcCompat="@drawable/shrimp" />
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/mcchi" />
 
                 <ImageButton
-                    android:id="@+id/truple_Btn"
+                    android:id="@+id/mccri_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/truple"
-                    tools:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/mccri" />
+
+                <ImageButton
+                    android:id="@+id/quater_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/quater" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/sanhi_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/sanhi" />
+
+                <ImageButton
+                    android:id="@+id/subi_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/subi" />
+
+                <ImageButton
+                    android:id="@+id/susu_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/susu" />
             </TableRow>
         </TableLayout>
 
@@ -182,6 +249,7 @@
 
                 android:layout_marginRight="20dp"
                 android:text="@string/cancle"
+                android:onClick="goto_kiosk_05"
                 android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>

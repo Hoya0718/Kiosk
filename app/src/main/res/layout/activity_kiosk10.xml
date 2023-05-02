@@ -18,16 +18,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="1. 메뉴 선택"
+            android:text="@string/select_menu"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="->"
+            android:text="@string/arrow_1"
             android:textAlignment="center" />
 
         <TextView
@@ -35,16 +35,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="2. 결제"
+            android:text="@string/payment"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="->"
+            android:text="@string/arrow_2"
             android:textAlignment="center" />
 
         <TextView
@@ -52,9 +52,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="3. 완료"
+            android:text="@string/complete"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -74,21 +74,21 @@
                 android:id="@+id/burger_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
-                android:text="버거"
+                android:text="@string/birger"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/side_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
-                android:text="사이드"
-                android:textSize="18sp" />
+                android:text="@string/side"
+                android:textSize="18sp"/>
 
             <Button
                 android:id="@+id/drink_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
-                android:text="음료"
+                android:text="@string/drink"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -96,27 +96,59 @@
         <TableLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:gravity="center">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent" >
+
+                <ImageButton
+                    android:id="@+id/b1955_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/b1955" />
+
+                <ImageButton
+                    android:id="@+id/batodi_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/batodi" />
+
+                <ImageButton
+                    android:id="@+id/bigmc_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/bigmc" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
                 <ImageButton
                     android:id="@+id/bulgogi_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="5dp"
-                    app:srcCompat="@drawable/bilgogi" />
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/bulgogi" />
 
                 <ImageButton
                     android:id="@+id/cheese_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/cheese"
-                    tools:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/cheese" />
+
+                <ImageButton
+                    android:id="@+id/ham_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/ham" />
             </TableRow>
 
             <TableRow
@@ -124,19 +156,51 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/shrimp_Btn"
+                    android:id="@+id/mcchi_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="5dp"
-                    app:srcCompat="@drawable/shrimp" />
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/mcchi" />
 
                 <ImageButton
-                    android:id="@+id/truple_Btn"
+                    android:id="@+id/mccri_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/truple"
-                    tools:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/mccri" />
+
+                <ImageButton
+                    android:id="@+id/quater_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/quater" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/sanhi_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/sanhi" />
+
+                <ImageButton
+                    android:id="@+id/subi_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/subi" />
+
+                <ImageButton
+                    android:id="@+id/susu_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/susu" />
             </TableRow>
         </TableLayout>
 
@@ -155,7 +219,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/bilgogi" />
+            app:srcCompat="@drawable/batodi" />
 
         <ImageButton
             android:id="@+id/imageButton"

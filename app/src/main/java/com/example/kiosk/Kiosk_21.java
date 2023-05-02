@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Kiosk_21 extends AppCompatActivity {
-    private String destination = "목적지";
+    private String destination = "목적지"; //목적지
 
     private TextView textView37; //목적지
     private TextView textView38; //버스종류, 좌석

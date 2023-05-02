@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class Kiosk_22 extends AppCompatActivity {
 
-    private Button button66; // 취소하기
+    private Button button66; // 취소해
     private ImageView imageView3; //이미지 터치시 다음 화면 전환
 
     @Override

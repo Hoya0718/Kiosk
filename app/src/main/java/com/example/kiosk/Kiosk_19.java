@@ -12,7 +12,7 @@ import org.w3c.dom.Text;
 
 public class Kiosk_19 extends AppCompatActivity {
 
-    private TextView textView37; //목적지
+    private TextView textView37; //목적지2
     private TextView textView38; //버스, 좌석
 
     private Button button45; //버스 3B;

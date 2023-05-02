@@ -12,7 +12,7 @@ public class Kiosk_18 extends AppCompatActivity {
 
     private TextView textView18; // 목적지 텍스트 뷰
 
-    private Button button17; //좌석 선택 버튼
+    private Button button17; //좌석 선택 버튼 1
     private Button button41; //좌석 선택 버튼
     private Button button42; //좌석 선택 버튼
 

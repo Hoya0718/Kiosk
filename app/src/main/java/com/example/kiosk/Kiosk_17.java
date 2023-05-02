@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Kiosk_17 extends AppCompatActivity {
-    private String destination;
+    private String destination; //목적지
     private String bus;
     private String seat;
 

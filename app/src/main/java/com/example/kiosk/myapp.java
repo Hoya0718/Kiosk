@@ -7,8 +7,8 @@ public class myapp extends Application {
 
     protected int id=18;
     private TextToSpeech tts;
-    private int ttsVolume = 11;
-    private float ttsSpeed = 1.0f;
+    private int ttsVolume;
+    private float ttsSpeed;
 
     public float getTtsVolume(){return this.ttsVolume;}
     public void setTtsVolume(int a) {this.ttsVolume =a;}

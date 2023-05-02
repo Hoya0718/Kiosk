@@ -4,19 +4,45 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class Kiosk_29 extends AppCompatActivity {
 
     private TextView ssn ;
+    private TextToSpeech tts;
+    private myapp sound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk29);
 
         ssn = findViewById(R.id.SSN);
+
+        sound = (myapp) getApplication();
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                }
+            }
+        });
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                tts.setSpeechRate(sound.getTtsSpeed()) ;
+                sound.getTtsVolume();
+                tts.speak("바코드가 있는 경우 바코드를 리더리에 대주세요. 바코드가 없으시다면 주민등록번호,전화번호,환자 번호중 하나를 입력해주세요",
+                        TextToSpeech.QUEUE_FLUSH, null, null);
+            }
+        }, 3000);
+
     }
     public void put_n(View view) {
         String current = ssn.getText().toString();
@@ -106,11 +132,28 @@ public class Kiosk_29 extends AppCompatActivity {
         }
     }
     public void goto_kiosk_30(View v) {
+
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
+
         Intent goto_kiosk_30= new Intent(getApplicationContext(), Kiosk_30.class);
         if(ssn.length() == 14)
             startActivity(goto_kiosk_30);
         else {
             Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
         }
+    }
+
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
     }
 }

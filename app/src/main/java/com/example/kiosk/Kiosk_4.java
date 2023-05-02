@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -77,6 +78,9 @@ public class Kiosk_4 extends AppCompatActivity {
             sound.setTtsVolume(currentVolume);
             tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
         }
+        else if(currentVolume == maxVolume){
+            tts.speak("최대 크기입니다.", TextToSpeech.QUEUE_FLUSH, null, null);
+        }
     }
     public void volume_size_down(View v) {
         tts.setSpeechRate(sound.getTtsSpeed()) ;
@@ -85,6 +89,9 @@ public class Kiosk_4 extends AppCompatActivity {
             currentVolume -= 1;
             sound.setTtsVolume(currentVolume);
             tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+        }
+        else if(currentVolume == 0) {
+            Toast.makeText(getApplicationContext(),"최소 크기입니다.", Toast.LENGTH_LONG).show();
         }
     }
     public void goto_kiosk_02(View v) {

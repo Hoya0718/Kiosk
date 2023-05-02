@@ -71,18 +71,11 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/drink_Btn"
-                android:layout_width="100dp"
-                android:layout_height="130dp"
-                android:text="@string/drink"
-                android:textSize="18sp"/>
-
-            <Button
                 android:id="@+id/burger_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
                 android:text="@string/birger"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/side_Btn"
@@ -90,6 +83,13 @@
                 android:layout_height="130dp"
                 android:text="@string/side"
                 android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/drink_Btn"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:text="@string/drink"
+                android:textSize="18sp" />
 
         </LinearLayout>
 

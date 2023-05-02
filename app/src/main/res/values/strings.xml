@@ -26,8 +26,8 @@
     <string name="food">음식점</string>
     <string name="bus">버스</string>
     <string name="hospital">병원</string>
-    <string name="store">매장</string>
-    <string name="takeout">포장</string>
+    <string name="store">매장 식사</string>
+    <string name="takeout">테이크 아웃</string>
     <string name="select_menu">1. 메뉴 선택</string>
     <string name="arrow_1"><![CDATA[->]]></string>
     <string name="payment">2. 결제</string>

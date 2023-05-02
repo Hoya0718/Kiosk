@@ -87,7 +87,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:onClick="goto_kiosk_02"
+            android:onClick="goto_kiosk_04"
             android:text="@string/previous_2"
             android:textSize="18sp" />
 
@@ -99,7 +99,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:onClick="goto_kiosk_04"
+            android:onClick="goto_kiosk_05"
             android:text="@string/next_2"
             android:textSize="18sp" />
     </LinearLayout>

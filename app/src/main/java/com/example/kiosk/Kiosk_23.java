@@ -20,7 +20,7 @@ public class Kiosk_23 extends AppCompatActivity {
         button67.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_23.this, Kiosk_13.class);
+                Intent intent = new Intent(Kiosk_23.this, Kiosk_24.class);
                 startActivity(intent);
             }
 

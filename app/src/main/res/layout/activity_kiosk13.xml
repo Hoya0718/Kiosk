@@ -15,6 +15,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
+        android:enabled="false"
         android:text="음식점"
         android:textSize="18sp" />
 
@@ -37,6 +38,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
+        android:enabled="false"
         android:onClick="goto_kiosk_25"
         android:text="병원"
         android:textSize="18sp" />

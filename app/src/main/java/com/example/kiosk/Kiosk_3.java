@@ -50,14 +50,14 @@ public class Kiosk_3 extends AppCompatActivity {
         });
     }
 
-    public void goto_kiosk_02(View v){
-        Intent goto_kiosk_02 = new Intent(getApplicationContext(), Kiosk_2.class);
-        startActivity(goto_kiosk_02);
-    }
-
-    public void goto_kiosk_04(View v) {
+    public void goto_kiosk_04(View v){
         Intent goto_kiosk_04 = new Intent(getApplicationContext(), Kiosk_4.class);
         startActivity(goto_kiosk_04);
+    }
+
+    public void goto_kiosk_05(View v) {
+        Intent goto_kiosk_05 = new Intent(getApplicationContext(), Kiosk_5.class);
+        startActivity(goto_kiosk_05);
     }
     public void volume_speed_slow(View view) {
         tts.setSpeechRate(0.8f);

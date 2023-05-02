@@ -28,9 +28,9 @@ public class Kiosk_2 extends AppCompatActivity {
         Intent goto_main = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(goto_main);
     }
-    public void goto_kiosk_03(View v){
-        Intent goto_kiosk_03 = new Intent(getApplicationContext(), Kiosk_3.class);
-        startActivity(goto_kiosk_03);
+    public void goto_kiosk_04(View v){
+        Intent goto_kiosk_04 = new Intent(getApplicationContext(), Kiosk_4.class);
+        startActivity(goto_kiosk_04);
     }
     public void be_down(View v){
         korean_text.setTextSize(Dimension.SP,16);

@@ -137,11 +137,11 @@
                     app:srcCompat="@drawable/bulgogi" />
 
                 <ImageButton
-                    android:id="@+id/cheese_Btn"
+                    android:id="@+id/cheeze_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/cheese" />
+                    app:srcCompat="@drawable/cheeze" />
 
                 <ImageButton
                     android:id="@+id/ham_Btn"
@@ -244,7 +244,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:text="결제하기"
-                android:onClick="goto_kiosk_05"
+                android:onClick="goto_kiosk_11"
                 android:textSize="18sp" />
 
             <Button
@@ -253,7 +253,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:text="@string/cancle_2"
-                android:onClick="goto_kiosk_11"
+                android:onClick="goto_kiosk_05"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>

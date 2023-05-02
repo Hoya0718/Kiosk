@@ -26,7 +26,7 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="현재시각 알려주는 텍스트"
+            android:text=""
             android:textAlignment="center"
             android:textSize="18sp" />
     </LinearLayout>

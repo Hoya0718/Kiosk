@@ -7,29 +7,48 @@
     android:orientation="vertical"
     tools:context=".Kiosk_29">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/barcode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="바코드가 없는 경우\n주민등록 번호 또는 핸드폰 번호,\n환자등록번호를 입력해주세요"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/SSN"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:maxLength="14"
             android:hint="주민등록번호 입력(- 제외)"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:maxLength="14"
+            android:textSize="18sp" />
+    </LinearLayout>
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_weight="2">
 
         <TableRow
             android:layout_width="match_parent"
@@ -39,11 +58,9 @@
             <Button
                 android:id="@+id/num_1"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="1"
@@ -52,26 +69,22 @@
             <Button
                 android:id="@+id/num_2"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="put_n"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="2"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/num_3"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="put_n"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="3"
                 android:textSize="18sp" />
         </TableRow>
@@ -84,39 +97,33 @@
             <Button
                 android:id="@+id/num_4"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="put_n"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="4"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/num_5"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="put_n"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="5"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/num_6"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="put_n"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="6"
                 android:textSize="18sp" />
         </TableRow>
@@ -129,39 +136,33 @@
             <Button
                 android:id="@+id/num_7"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="put_n"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="7"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/num_8"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="put_n"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="8"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/num_9"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="put_n"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="9"
                 android:textSize="18sp" />
         </TableRow>
@@ -174,11 +175,9 @@
             <Button
                 android:id="@+id/CL"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="정정"
@@ -187,11 +186,9 @@
             <Button
                 android:id="@+id/num_0"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="0"
@@ -200,11 +197,9 @@
             <Button
                 android:id="@+id/Check"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:onClick="goto_kiosk_30"
                 android:text="확인"

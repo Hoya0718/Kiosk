@@ -15,6 +15,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:layout_weight="5"
+        android:onClick="goto_kiosk_28"
         app:srcCompat="@drawable/waiting_list" />
 
     <Button

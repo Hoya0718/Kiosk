@@ -37,6 +37,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
+        android:onClick="goto_kiosk_25"
         android:text="병원"
         android:textSize="18sp" />
 </LinearLayout>

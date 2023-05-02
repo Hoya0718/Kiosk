@@ -23,7 +23,6 @@ public class Kiosk_16 extends AppCompatActivity {
                 Intent intent = new Intent(Kiosk_16.this, Kiosk_17.class);
                 startActivity(intent);
             }
-
         });
 
     }

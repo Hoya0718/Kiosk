@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Kiosk_9 extends AppCompatActivity {
+public class Kiosk_9_1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

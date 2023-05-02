@@ -56,15 +56,13 @@ public class Kiosk_4 extends AppCompatActivity {
         });
     }
 
-    public void goto_kiosk_03(View v) {
-        Intent goto_kiosk_03 = new Intent(getApplicationContext(), Kiosk_3.class);
-        startActivity(goto_kiosk_03);
+    public void volume_size_medium(View v) {
+
+        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume =11, 0);
+        currentVolume = 11;
+        tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
     }
 
-    public void goto_kiosk_05(View v) {
-        Intent goto_kiosk_05 = new Intent(getApplicationContext(), Kiosk_5.class);
-        startActivity(goto_kiosk_05);
-    }
 
     public void volume_size_up(View v) {
         if (currentVolume < maxVolume) {
@@ -73,15 +71,6 @@ public class Kiosk_4 extends AppCompatActivity {
             tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
         }
     }
-
-    public void volume_size_medium(View v) {
-        if (currentVolume < maxVolume) {
-            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume + 1, 0);
-            currentVolume = 10;
-            tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
-        }
-    }
-
     public void volume_size_down(View v) {
         if (currentVolume > 0) {
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume - 1, 0);
@@ -89,6 +78,18 @@ public class Kiosk_4 extends AppCompatActivity {
             tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
         }
     }
+    public void goto_kiosk_03(View v) {
+        Intent goto_kiosk_03 = new Intent(getApplicationContext(), Kiosk_3.class);
+        startActivity(goto_kiosk_03);
+    }
+
+
+
+    public void goto_kiosk_05(View v) {
+        Intent goto_kiosk_05 = new Intent(getApplicationContext(), Kiosk_5.class);
+        startActivity(goto_kiosk_05);
+    }
+
     protected void onDestroy() {
         if(tts != null) {
             tts.stop();

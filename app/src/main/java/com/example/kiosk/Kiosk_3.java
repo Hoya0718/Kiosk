@@ -3,6 +3,7 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -13,6 +14,7 @@ import java.util.Locale;
 public class Kiosk_3 extends AppCompatActivity {
 
     private TextToSpeech tts;
+
     private myapp text_size;
     private Button vss;
     private Button vsm;

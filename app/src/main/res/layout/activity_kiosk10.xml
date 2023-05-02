@@ -221,15 +221,7 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/batodi" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/cheese" />
+
 
         <LinearLayout
             android:layout_width="0dp"

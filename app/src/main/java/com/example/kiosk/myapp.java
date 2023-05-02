@@ -7,14 +7,16 @@ public class myapp extends Application {
 
     protected int id=18;
     private TextToSpeech tts;
-    private float ttsVolume = 1.0f;
+    private int ttsVolume = 11;
     private float ttsSpeed = 1.0f;
 
-    public float getTtsVolume() {
-        return ttsVolume;
-    }
+    public float getTtsVolume(){return this.ttsVolume;}
+    public void setTtsVolume(int a) {this.ttsVolume =a;}
 
-    public void setTtsVolume(float a){ this.ttsVolume = a;}
+    public float getTtsSpeed() {return this.ttsSpeed;}
+
+    public void setTtsSpeed(float ttsSpeed) {this.ttsSpeed=ttsSpeed;}
+
     public int getId() {
         return this.id;
     }

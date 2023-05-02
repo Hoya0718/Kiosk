@@ -13,14 +13,6 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="출발시간, 도착시간"
-            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,7 +61,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="좌석 번호"
+            android:text="선택한 버스, 좌석 번호"
             android:textSize="18sp" />
     </LinearLayout>
 

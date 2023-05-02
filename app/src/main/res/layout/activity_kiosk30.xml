@@ -73,6 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
+        android:onClick="goto_kiosk_31"
         app:srcCompat="@drawable/liquidate" />
 
     <Button

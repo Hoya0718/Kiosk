@@ -31,9 +31,10 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="5A"
+                    android:text="매진"
                     android:textSize="18sp"
-                    tools:layout_marginLeft="5dp" />
+                    android:backgroundTint="@android:color/darker_gray"
+                    tools:layout_marginLeft="5dp"/>
 
                 <Button
                     android:id="@+id/button43"
@@ -43,8 +44,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="5B"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
 
@@ -91,8 +93,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="3A"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -105,7 +108,8 @@
                     android:layout_weight="1"
                     android:text="3B"
                     android:textSize="18sp"
-                    tools:layout_marginLeft="5dp" />
+                    tools:layout_marginLeft="5dp"
+                    android:onClick='onClick'/>
             </TableRow>
 
             <TableRow
@@ -121,8 +125,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="2A"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -135,7 +140,8 @@
                     android:layout_weight="1"
                     android:text="2B"
                     android:textSize="18sp"
-                    tools:layout_marginLeft="5dp" />
+                    tools:layout_marginLeft="5dp"
+                    android:onClick='onClick'/>
             </TableRow>
 
             <TableRow
@@ -151,8 +157,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="1A"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -163,8 +170,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="1B"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
 
@@ -241,8 +249,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="4C"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -253,8 +262,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="4D"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
 
@@ -271,8 +281,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="3C"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -283,8 +294,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="3D"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
 
@@ -331,8 +343,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="1C"
+                    android:text="매진"
                     android:textSize="18sp"
+                    android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -343,7 +356,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="1D"
+                    android:text="매진"
+                    android:backgroundTint="@android:color/darker_gray"
                     android:textSize="18sp"
                     tools:layout_marginLeft="5dp" />
             </TableRow>

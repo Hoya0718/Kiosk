@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Kiosk_23 extends AppCompatActivity {
 
-    private Button button67; //버스 버튼
+    private Button button67; //처음으로 돌아가
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

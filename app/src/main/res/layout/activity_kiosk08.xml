@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="1. 메뉴 선택"
+            android:text="@string/select_menu"
             android:textAlignment="center"
             android:textSize="18sp"/>
 
@@ -27,7 +27,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="->"
+            android:text="@string/arrow_1"
             android:textAlignment="center" />
 
         <TextView
@@ -35,7 +35,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="2. 결제"
+            android:text="@string/payment"
             android:textAlignment="center"
             android:textSize="18sp"/>
 
@@ -44,7 +44,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="->"
+            android:text="@string/arrow_2"
             android:textAlignment="center" />
 
         <TextView
@@ -52,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="3. 완료"
+            android:text="@string/complete"
             android:textAlignment="center"
             android:textSize="18sp"/>
     </LinearLayout>
@@ -71,52 +71,86 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/drink_Btn"
-                android:layout_width="100dp"
-                android:layout_height="130dp"
-                android:text="음료"
-                android:textSize="18sp"/>
-
-            <Button
                 android:id="@+id/burger_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
-                android:text="버거"
-                android:textSize="18sp"/>
+                android:text="@string/birger"
+                android:onClick="goto_kiosk_07"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/side_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
-                android:text="사이드"
+                android:text="@string/side"
                 android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/drink_Btn"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:text="@string/drink"
+                android:onClick="goto_kiosk_09"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <TableLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:gravity="center">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent" >
 
                 <ImageButton
-                    android:id="@+id/bulgogi_Btn"
+                    android:id="@+id/snacksan_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="5dp"
-                    app:srcCompat="@drawable/bilgogi" />
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/snacksan" />
 
                 <ImageButton
-                    android:id="@+id/cheese_Btn"
+                    android:id="@+id/snackshu_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/cheese"
-                    tools:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/snackshu" />
+
+                <ImageButton
+                    android:id="@+id/mcnurget_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/mcnurget" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageButton
+                    android:id="@+id/huri_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/huri" />
+
+                <ImageButton
+                    android:id="@+id/hashbra_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/hashbra" />
+
+                <ImageButton
+                    android:id="@+id/chickentender_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/chickentender" />
             </TableRow>
 
             <TableRow
@@ -124,19 +158,51 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/shrimp_Btn"
+                    android:id="@+id/chezstick_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="5dp"
-                    app:srcCompat="@drawable/shrimp" />
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/chezstick" />
 
                 <ImageButton
-                    android:id="@+id/truple_Btn"
+                    android:id="@+id/mccri_Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/truple"
-                    tools:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/cuol" />
+
+                <ImageButton
+                    android:id="@+id/churu_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/churu" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/iceba_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/iceba" />
+
+                <ImageButton
+                    android:id="@+id/iceco_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/iceco" />
+
+                <ImageButton
+                    android:id="@+id/icesu_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/icesu" />
             </TableRow>
         </TableLayout>
 
@@ -157,7 +223,7 @@
             android:layout_marginBottom="30dp"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="선택한 음식 표시"
+            android:text="@string/shopping_basket"
             android:textSize="18sp" />
 
         <LinearLayout
@@ -172,15 +238,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:text="결제하기"
+                android:text="@string/make_a_payment"
                 android:textSize="18sp"/>
 
             <Button
                 android:id="@+id/cancel_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:layout_marginRight="20dp"
-                android:text="취소하기"
+                android:text="@string/cancle"
+                android:onClick="goto_kiosk_05"
                 android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>

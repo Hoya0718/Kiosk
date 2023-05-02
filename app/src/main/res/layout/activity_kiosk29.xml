@@ -13,11 +13,12 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/textView41"
+            android:id="@+id/SSN"
             android:layout_width="300dp"
             android:layout_height="100dp"
             android:gravity="center"
-            android:text="주민등록번호 입력(- 제외)"
+            android:maxLength="14"
+            android:hint="주민등록번호 입력(- 제외)"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +37,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/button69"
+                android:id="@+id/num_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -44,29 +45,32 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="1"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button70"
+                android:id="@+id/num_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="put_n"
                 android:layout_weight="1"
                 android:text="2"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button68"
+                android:id="@+id/num_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="put_n"
                 android:layout_weight="1"
                 android:text="3"
                 android:textSize="18sp" />
@@ -78,37 +82,40 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/button71"
+                android:id="@+id/num_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="put_n"
                 android:layout_weight="1"
                 android:text="4"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button72"
+                android:id="@+id/num_5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="put_n"
                 android:layout_weight="1"
                 android:text="5"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button73"
+                android:id="@+id/num_6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="put_n"
                 android:layout_weight="1"
                 android:text="6"
                 android:textSize="18sp" />
@@ -120,37 +127,40 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/button74"
+                android:id="@+id/num_7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="put_n"
                 android:layout_weight="1"
                 android:text="7"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button75"
+                android:id="@+id/num_8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="put_n"
                 android:layout_weight="1"
                 android:text="8"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button76"
+                android:id="@+id/num_9"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="put_n"
                 android:layout_weight="1"
                 android:text="9"
                 android:textSize="18sp" />
@@ -162,7 +172,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/button77"
+                android:id="@+id/CL"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -170,11 +180,12 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="정정"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button78"
+                android:id="@+id/num_0"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -182,11 +193,12 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
+                android:onClick="put_n"
                 android:text="0"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button79"
+                android:id="@+id/Check"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -194,6 +206,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
+                android:onClick="goto_kiosk_30"
                 android:text="확인"
                 android:textSize="18sp" />
         </TableRow>

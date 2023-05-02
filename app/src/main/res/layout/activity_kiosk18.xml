@@ -80,7 +80,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="소요시간"
+                android:text="40분"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -117,11 +117,11 @@
 
             <TextView
                 android:id="@+id/textView23"
-                android:layout_width="wrap_content"
+                android:layout_width="54dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="소요시간"
+                android:text="1시간 10분"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -164,7 +164,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="소요시간"
+                android:text="1시간 30분"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -207,7 +207,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="소요시간"
+                android:text="40분"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -249,7 +249,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="소요시간"
+                android:text="1시간 10분"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -290,7 +290,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="소요시간"
+                android:text="1시간 30분"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 

@@ -43,6 +43,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:onClick="volume_speed_slow"
                 android:text="@string/volume_speed_slow"
                 android:textSize="18sp" />
 
@@ -54,6 +55,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:onClick="volume_speed_medium"
                 android:text="@string/volume_speed_medium"
                 android:textSize="18sp" />
 
@@ -65,6 +67,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:onClick="volume_speed_fast"
                 android:text="@string/volume_speed_fast"
                 android:textSize="18sp" />
         </LinearLayout>

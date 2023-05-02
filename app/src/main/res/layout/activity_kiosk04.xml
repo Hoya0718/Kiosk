@@ -43,8 +43,9 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:textSize="18sp"
-                android:text="@string/volume_size_down" />
+                android:onClick="volume_size_down"
+                android:text="@string/volume_size_down"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/volume_size_medium"
@@ -54,8 +55,9 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:textSize="18sp"
-                android:text="@string/volume_size_medium" />
+                android:onClick="volume_size_medium"
+                android:text="@string/volume_size_medium"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/volume_size_up"
@@ -66,6 +68,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:textSize="18sp"
+                android:onClick="volume_size_up"
                 android:text="@string/volume_size_up" />
         </LinearLayout>
     </LinearLayout>

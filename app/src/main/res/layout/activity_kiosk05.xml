@@ -26,6 +26,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
+        android:onClick="goto_kiosk_14"
         android:text="@string/bus"
         android:textSize="18sp" />
 

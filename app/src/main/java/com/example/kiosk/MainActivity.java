@@ -35,4 +35,15 @@ public class MainActivity extends AppCompatActivity {
         finish();
         startActivity(intent);
     }
+    public void change_to_korean(View v) {
+        Locale newLocale = new Locale("kr");
+        Locale.setDefault(newLocale);
+        Configuration config = new Configuration();
+        config.setLocale(newLocale);
+        getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
 }

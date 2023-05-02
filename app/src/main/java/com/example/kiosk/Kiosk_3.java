@@ -14,7 +14,7 @@ import java.util.Locale;
 public class Kiosk_3 extends AppCompatActivity {
 
     private TextToSpeech tts;
-
+    private myapp sound;
     private myapp text_size;
     private Button vss;
     private Button vsm;
@@ -27,6 +27,7 @@ public class Kiosk_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk03);
         text_size =(myapp)getApplication();
+        sound =(myapp)getApplication();
         vss = findViewById(R.id.volume_speed_slow);
         vsm = findViewById(R.id.volume_speed_medium);
         vsf = findViewById(R.id.volume_speed_fast);
@@ -60,14 +61,17 @@ public class Kiosk_3 extends AppCompatActivity {
     }
     public void volume_speed_slow(View view) {
         tts.setSpeechRate(0.8f);
+        sound.setTtsSpeed(0.8f);
         tts.speak("이 정도 속도 어떠세요?.", TextToSpeech.QUEUE_FLUSH, null,null);
     }
     public void volume_speed_medium(View view) {
         tts.setSpeechRate(1.0f);
+        sound.setTtsSpeed(1.0f);
         tts.speak("이 정도 속도 어떠세요?.", TextToSpeech.QUEUE_FLUSH, null,null);
     }
     public void volume_speed_fast(View view) {
         tts.setSpeechRate(1.5f);
+        sound.setTtsSpeed(1.5f);
         tts.speak("이 정도 속도 어떠세요?.", TextToSpeech.QUEUE_FLUSH, null,null);
     }
     protected void onDestroy() {

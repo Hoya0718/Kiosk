@@ -18,6 +18,7 @@ public class Kiosk_4 extends AppCompatActivity {
 
     private AudioManager audioManager;
     private int maxVolume;
+    private myapp sound;
     private int currentVolume;
     private myapp text_size;
     private Button vsd;
@@ -31,6 +32,7 @@ public class Kiosk_4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk04);
         text_size = (myapp) getApplication();
+        sound = (myapp)getApplication();
         vsd = findViewById(R.id.volume_size_down);
         vsm = findViewById(R.id.volume_size_medium);
         vsu = findViewById(R.id.volume_size_up);
@@ -42,6 +44,7 @@ public class Kiosk_4 extends AppCompatActivity {
         vsu.setTextSize(text_size.getId());
         pre.setTextSize(text_size.getId());
         next.setTextSize(text_size.getId());
+
 
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
@@ -57,24 +60,30 @@ public class Kiosk_4 extends AppCompatActivity {
     }
 
     public void volume_size_medium(View v) {
-
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume =11, 0);
         currentVolume = 11;
+        sound.setTtsVolume(11);
         tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
     }
 
 
     public void volume_size_up(View v) {
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
         if (currentVolume < maxVolume) {
+
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume + 1, 0);
             currentVolume += 1;
+            sound.setTtsVolume(currentVolume);
             tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
         }
     }
     public void volume_size_down(View v) {
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
         if (currentVolume > 0) {
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume - 1, 0);
             currentVolume -= 1;
+            sound.setTtsVolume(currentVolume);
             tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
         }
     }

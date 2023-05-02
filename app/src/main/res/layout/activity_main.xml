@@ -71,6 +71,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
+                android:onClick="change_to_korean"
                 android:text="@string/set_korean"
                 android:textSize="18sp" />
 

@@ -48,12 +48,8 @@ public class Kiosk_25 extends AppCompatActivity {
         }, 3000);
     }
     public void goto_kiosk_26(View v){
-        if(tts != null) {
-            tts.stop();
-            tts.shutdown();
             tts=null;
-        }
-        super.onDestroy();
+
         Intent goto_kiosk_26 = new Intent(getApplicationContext(),Kiosk_26.class);
         startActivity(goto_kiosk_26);
     }

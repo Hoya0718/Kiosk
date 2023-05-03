@@ -45,9 +45,10 @@ public class Kiosk_21 extends AppCompatActivity {
         textView37 = findViewById(R.id.textView37);
         Intent intent = getIntent();
         String destination = intent.getStringExtra("destination");
-        if(destination != null && !destination.isEmpty()) {
+        if(destination != null) {
             textView37.setText(destination);
         }
+        else textView37.setText("도착 안함");
 
         textView38 = findViewById(R.id.textView38);
         Intent intent1 = getIntent();

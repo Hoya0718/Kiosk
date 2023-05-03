@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -44,7 +45,8 @@ public class Kiosk_19 extends AppCompatActivity {
             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
             Intent intent1 = getIntent();
             String bus = intent1.getStringExtra("bus");
-            intent.putExtra("destination", "목포");
+            String destination = intent1.getStringExtra("destination");
+            intent.putExtra("destination", destination);
             intent.putExtra("bus", bus);
             intent.putExtra("seat", "좌석 번호 : 3B");
             String price = intent1.getStringExtra("price");
@@ -59,7 +61,8 @@ public class Kiosk_19 extends AppCompatActivity {
             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
             Intent intent1 = getIntent();
             String bus = intent1.getStringExtra("bus");
-            intent.putExtra("destination", "목포");
+            String destination = intent1.getStringExtra("destination");
+            intent.putExtra("destination", destination);
             intent.putExtra("bus", bus);
             intent.putExtra("seat", "좌석 번호 : 4B");
             String price = intent1.getStringExtra("price");
@@ -73,7 +76,8 @@ public class Kiosk_19 extends AppCompatActivity {
                 Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                 Intent intent1 = getIntent();
                 String bus = intent1.getStringExtra("bus");
-                intent.putExtra("destination", "목포");
+                String destination = intent1.getStringExtra("destination");
+                intent.putExtra("destination", destination);
                 intent.putExtra("bus", bus);
                 intent.putExtra("seat", "좌석 번호 : 4A");
                 String price = intent1.getStringExtra("price");
@@ -87,7 +91,8 @@ public class Kiosk_19 extends AppCompatActivity {
                 Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                 Intent intent1 = getIntent();
                 String bus = intent1.getStringExtra("bus");
-                intent.putExtra("destination", "목포");
+                String destination = intent1.getStringExtra("destination");
+                intent.putExtra("destination", destination);
                 intent.putExtra("bus", bus);
                 intent.putExtra("seat", "좌석 번호 : 2B");
                 String price = intent1.getStringExtra("price");
@@ -101,7 +106,8 @@ public class Kiosk_19 extends AppCompatActivity {
                 Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                 Intent intent1 = getIntent();
                 String bus = intent1.getStringExtra("bus");
-                intent.putExtra("destination", "목포");
+                String destination = intent1.getStringExtra("destination");
+                intent.putExtra("destination", destination);
                 intent.putExtra("bus", bus);
                 intent.putExtra("seat", "좌석 번호 : 5D");
                 String price = intent1.getStringExtra("price");
@@ -115,7 +121,8 @@ public class Kiosk_19 extends AppCompatActivity {
                 Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                 Intent intent1 = getIntent();
                 String bus = intent1.getStringExtra("bus");
-                intent.putExtra("destination", "목포");
+                String destination = intent1.getStringExtra("destination");
+                intent.putExtra("destination", destination);
                 intent.putExtra("bus", bus);
                 intent.putExtra("seat", "좌석 번호 : 5C");
                 String price = intent1.getStringExtra("price");
@@ -129,7 +136,8 @@ public class Kiosk_19 extends AppCompatActivity {
                 Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                 Intent intent1 = getIntent();
                 String bus = intent1.getStringExtra("bus");
-                intent.putExtra("destination", "목포");
+                String destination = intent1.getStringExtra("destination");
+                intent.putExtra("destination", destination);
                 intent.putExtra("bus", bus);
                 intent.putExtra("seat", "좌석 번호 : 2C");
                 String price = intent1.getStringExtra("price");
@@ -143,7 +151,8 @@ public class Kiosk_19 extends AppCompatActivity {
                 Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                 Intent intent1 = getIntent();
                 String bus = intent1.getStringExtra("bus");
-                intent.putExtra("destination", "목포");
+                String destination = intent1.getStringExtra("destination");
+                intent.putExtra("destination", destination);
                 intent.putExtra("bus", bus);
                 intent.putExtra("seat", "좌석 번호 : 2D");
                 String price = intent1.getStringExtra("price");

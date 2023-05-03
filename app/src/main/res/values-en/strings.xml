@@ -16,9 +16,9 @@
     <string name="speed_fast">Fast</string>
     <string name="speed_normal">Normal</string>
     <string name="speed_slow">Slow</string>
-    <string name="text_size"><![CDATA[1. TextSize -> 2.Volume Seppd -> 3. Volume Size]]></string>
-    <string name="volume_speed"><![CDATA[1. TextSize -> 2.Volume Seppd -> 3. Volume Size]]></string>
-    <string name="volume_size"><![CDATA[1. TextSize -> 2.Volume Seppd -> 3. Volume Size]]></string>
+    <string name="text_size"><![CDATA[1. TextSize -> 2.Volume Size -> 3. Volume Speed]]></string>
+    <string name="volume_speed"><![CDATA[1. TextSize -> 2.Volume Size -> 3. Volume Speed]]></string>
+    <string name="volume_size"><![CDATA[1. TextSize -> 2.Volume Size -> 3. Volume Speed]]></string>
     <string name="volume_medium">Medium</string>
     <string name="volume_up">Up</string>
     <string name="previous_3">Previous</string>

@@ -29,7 +29,8 @@ public class Kiosk_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                intent.putExtra("bus", "우등버스 1");
+                intent.putExtra("bus", "우등버스");
+                intent.putExtra("price", "25,000원");
                 startActivity(intent);
             }
 
@@ -38,7 +39,8 @@ public class Kiosk_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                intent.putExtra("bus", "고속버스 2");
+                intent.putExtra("bus", "고속버스");
+                intent.putExtra("price", "20,000원");
                 startActivity(intent);
             }
         });
@@ -46,7 +48,8 @@ public class Kiosk_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                intent.putExtra("bus", "일반버스 2");
+                intent.putExtra("bus", "일반버스");
+                intent.putExtra("price", "15,000원");
                 startActivity(intent);
             }
         });

@@ -59,5 +59,12 @@ public class Kiosk_21 extends AppCompatActivity {
             textView38.setText(busAndSeat);
         }
 
+        textView39 = findViewById(R.id.textView39);
+        Intent intent3 = getIntent();
+        String price = intent3.getStringExtra("price");
+        if(price != null) {
+            textView39.setText(price);
+        }
+
     }
 }

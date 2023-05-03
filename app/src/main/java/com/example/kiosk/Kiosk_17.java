@@ -12,6 +12,7 @@ public class Kiosk_17 extends AppCompatActivity {
     private String destination; //목적지
     private String bus;
     private String seat;
+    private String price;
 
     private Button button19; //목포 버튼
 

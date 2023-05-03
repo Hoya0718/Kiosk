@@ -13,8 +13,8 @@ public class Kiosk_31 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk31);
     }
-    public void goto_kiosk_32(View v) {
-        Intent goto_kiosk_32 = new Intent(getApplicationContext(), Kiosk_32.class);
-        startActivity(goto_kiosk_32);
+    public void goto_MainActivity(View v) {
+        Intent goto_MainActivity = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(goto_MainActivity);
     }
 }

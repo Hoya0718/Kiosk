@@ -54,12 +54,13 @@ public class Kiosk_5 extends AppCompatActivity {
         }, 3000); // 3초 딜레이
     }
     public void goto_kiosk_06(View v) {
-        if(tts != null) {
-            tts.stop();
-            tts.shutdown();
-            tts=null;
-        }
-        super.onDestroy();
+//        if(tts != null) {
+//            tts.stop();
+//            tts.shutdown();
+//            tts=null;
+//        }
+//        super.onDestroy();
+        tts.shutdown();
         Intent goto_kiosk_06 = new Intent(getApplicationContext(), Kiosk_6.class);
         startActivity(goto_kiosk_06);
     }

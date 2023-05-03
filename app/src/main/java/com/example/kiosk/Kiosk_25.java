@@ -43,13 +43,17 @@ public class Kiosk_25 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("접수하기 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                tts.speak("접수 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
             }
         }, 3000);
     }
     public void goto_kiosk_26(View v){
-
-        tts.shutdown();
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
         Intent goto_kiosk_26 = new Intent(getApplicationContext(),Kiosk_26.class);
         startActivity(goto_kiosk_26);
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_10">
+    tools:context=".Kiosk_8_1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,19 +59,18 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView0"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="결제 방법을 선택해 주세요"
+        android:text="세트로 주문하시겠습니까?"
         android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="9"
+        android:layout_height="446dp"
         android:orientation="horizontal">
 
         <Button
@@ -79,15 +78,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goto_kiosk_11"
-            android:text="카드 결제" />
+            android:text="세트"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button38"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="모바일 상품권" />
+            android:text="단품"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <Button
@@ -99,7 +99,6 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
         android:layout_weight="2"
-        android:onClick="goto_kiosk_09"
         android:text="취소하기"
         android:textSize="18sp" />
 </LinearLayout>

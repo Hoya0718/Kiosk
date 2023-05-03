@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_10">
+    tools:context=".Kiosk_8_7">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,29 +65,29 @@
         android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="결제 방법을 선택해 주세요"
+        android:text="함께 즐기면 더욱 좋습니다"
         android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="9"
+        android:layout_height="446dp"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button39"
+        <ImageButton
+            android:id="@+id/snackshu_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:onClick="goto_kiosk_11"
-            android:text="카드 결제" />
+            app:srcCompat="@drawable/snackshu" />
 
-        <Button
-            android:id="@+id/button38"
+        <ImageButton
+            android:id="@+id/mcnurget_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="모바일 상품권" />
+            app:srcCompat="@drawable/mcnurget" />
     </LinearLayout>
 
     <Button
@@ -99,7 +99,6 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
         android:layout_weight="2"
-        android:onClick="goto_kiosk_09"
-        android:text="취소하기"
+        android:text="선택안함"
         android:textSize="18sp" />
 </LinearLayout>

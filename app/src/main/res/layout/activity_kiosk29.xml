@@ -17,7 +17,7 @@
             android:id="@+id/imageView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/barcode" />
+            app:srcCompat="@drawable/barcord_2" />
     </LinearLayout>
 
     <LinearLayout
@@ -30,9 +30,16 @@
             android:id="@+id/textView43"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="바코드가 없는 경우\n주민등록 번호 또는 핸드폰 번호,\n환자등록번호를 입력해주세요"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="진료비 영수증이나 진료안내서가 없으신 분은\n진료카드 번호 또는 주민등록번호 입력 후\n 확인을 눌러주세요."
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/SSN"
@@ -58,7 +65,7 @@
             <Button
                 android:id="@+id/num_1"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -69,7 +76,7 @@
             <Button
                 android:id="@+id/num_2"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -80,7 +87,7 @@
             <Button
                 android:id="@+id/num_3"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -97,7 +104,7 @@
             <Button
                 android:id="@+id/num_4"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -108,7 +115,7 @@
             <Button
                 android:id="@+id/num_5"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -119,7 +126,7 @@
             <Button
                 android:id="@+id/num_6"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -136,7 +143,7 @@
             <Button
                 android:id="@+id/num_7"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -147,7 +154,7 @@
             <Button
                 android:id="@+id/num_8"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -158,7 +165,7 @@
             <Button
                 android:id="@+id/num_9"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -175,7 +182,7 @@
             <Button
                 android:id="@+id/CL"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -186,7 +193,7 @@
             <Button
                 android:id="@+id/num_0"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
@@ -197,7 +204,7 @@
             <Button
                 android:id="@+id/Check"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"

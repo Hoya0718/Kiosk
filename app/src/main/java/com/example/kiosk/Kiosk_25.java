@@ -43,7 +43,7 @@ public class Kiosk_25 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("접수 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                tts.speak("접수하기 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
             }
         }, 3000);
     }

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
-import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,13 +19,19 @@ public class Kiosk_26 extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
 
+    private CheckBox personal_Information;
+
+    private String get_num;
+
+    private myapp pn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk26);
 
+        personal_Information = findViewById(R.id.personal_Information);
         ssn = findViewById(R.id.SSN);
-
+        pn = (myapp) getApplication();
         sound = (myapp) getApplication();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -40,7 +46,7 @@ public class Kiosk_26 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("바코드가 있는 경우 바코드를 리더리에 대주세요. 바코드가 없으시다면 주민등록번호,전화번호,환자 번호중 하나를 입력해주세요",
+                tts.speak("바코드가 있는 경우 바코드를 리더기에 대주세요. 바코드가 없으시다면 주민등록번호, 환자 번호 하나를 입력해주세요",
                         TextToSpeech.QUEUE_FLUSH, null, null);
             }
         }, 3000);
@@ -134,16 +140,28 @@ public class Kiosk_26 extends AppCompatActivity {
                 }
         }
     }
-    public void goto_kiosk_27(View v) {
+    public void goto_kiosk_26_2(View v) {
+        if(personal_Information.isChecked()) {
+            if (ssn.length() == 14) {
+                tts.shutdown();
+                Intent goto_kiosk_26_2 = new Intent(getApplicationContext(), Kiosk_26_2.class);
 
-        tts.shutdown();
-        Intent goto_kiosk_27 = new Intent(getApplicationContext(), Kiosk_27.class);
-        if(ssn.length() == 14)
-            startActivity(goto_kiosk_27);
+                get_num = ssn.getText().toString();
+                pn.setGet_pn(get_num);
+;
+                startActivity(goto_kiosk_26_2);
+            } else {
+                tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+            }
+        }
         else {
-            Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+            tts.speak("체크박스를 확인해 주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+            Toast.makeText(getApplicationContext(), "체크박스를 확인해주세요", Toast.LENGTH_LONG).show();
         }
     }
+
+
     protected void onDestroy() {
         if(tts != null) {
             tts.stop();

@@ -38,7 +38,7 @@ public class Kiosk_29 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("바코드가 있는 경우 바코드를 리더리에 대주세요. 바코드가 없으시다면 주민등록번호,전화번호,환자 번호중 하나를 입력해주세요",
+                tts.speak("진료비 영수증 또는 진료안내서의 바코드를 아래 리더기에 대주세요. 바코드가 없으시다면 진료카드 번호 또는 주민등록번호 입력 후 확인을 눌러주세요",
                         TextToSpeech.QUEUE_FLUSH, null, null);
             }
         }, 3000);
@@ -133,12 +133,13 @@ public class Kiosk_29 extends AppCompatActivity {
     }
     public void goto_kiosk_30(View v) {
 
-
-        tts.shutdown();
         Intent goto_kiosk_30= new Intent(getApplicationContext(), Kiosk_30.class);
-        if(ssn.length() == 14)
+        if(ssn.length() == 14) {
+            tts.shutdown();
             startActivity(goto_kiosk_30);
+        }
         else {
+            tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);
             Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
         }
     }

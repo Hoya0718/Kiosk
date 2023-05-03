@@ -19,6 +19,12 @@
         android:theme="@style/Theme.Kiosk"
         tools:targetApi="31">
         <activity
+            android:name=".Kiosk_29_2"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_26_2"
+            android:exported="false" />
+        <activity
             android:name=".Kiosk_32"
             android:exported="false" />
         <activity

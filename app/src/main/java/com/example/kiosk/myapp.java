@@ -10,6 +10,10 @@ public class myapp extends Application {
     private int ttsVolume;
     private float ttsSpeed;
 
+    private String get_pn;
+
+    public void setGet_pn(String a) {this.get_pn =a;}
+    public  String getGet_pn(){return  this.get_pn;}
     public float getTtsVolume(){return this.ttsVolume;}
     public void setTtsVolume(int a) {this.ttsVolume =a;}
 

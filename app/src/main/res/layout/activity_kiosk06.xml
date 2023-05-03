@@ -14,7 +14,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_weight="1"
-        android:onClick="goto_kiosk_07"
+        android:onClick="goto_kiosk_07_b"
         android:text="@string/store"
         android:textSize="18sp" />
 
@@ -26,7 +26,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_weight="1"
-        android:onClick="goto_kiosk_07"
+        android:onClick="goto_kiosk_07_b"
         android:text="@string/takeout"
         android:textSize="18sp" />
-</LinearLayout>
+</LinearLayout> <!---->

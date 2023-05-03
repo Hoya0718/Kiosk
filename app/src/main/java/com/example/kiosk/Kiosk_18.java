@@ -20,6 +20,14 @@ public class Kiosk_18 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk18);
+        Intent intent = getIntent();
+        String destination = intent.getStringExtra("destination");
+
+        //목적지 표시
+        textView18 = findViewById(R.id.textView18);
+        if (destination != null) {
+            textView18.setText(destination);
+        }
 
         button17 = findViewById(R.id.button17);
         button41 = findViewById(R.id.button41);
@@ -29,7 +37,9 @@ public class Kiosk_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                intent.putExtra("bus", "우등버스 1");
+                intent.putExtra("destination", destination);
+                intent.putExtra("bus", "우등버스");
+                intent.putExtra("price", "25,000원");
                 startActivity(intent);
             }
 
@@ -38,7 +48,9 @@ public class Kiosk_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                intent.putExtra("bus", "고속버스 2");
+                intent.putExtra("destination", destination);
+                intent.putExtra("bus", "고속버스");
+                intent.putExtra("price", "20,000원");
                 startActivity(intent);
             }
         });
@@ -46,18 +58,12 @@ public class Kiosk_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                intent.putExtra("bus", "일반버스 2");
+                intent.putExtra("destination", destination);
+                intent.putExtra("bus", "일반버스");
+                intent.putExtra("price", "15,000원");
                 startActivity(intent);
             }
         });
-
-        textView18 = findViewById(R.id.textView18);
-        Intent intent = getIntent();
-        String destination = intent.getStringExtra("destination");
-        if (destination != null && !destination.isEmpty()) {
-            textView18.setText(destination);
-        }
-
     }
 }
 

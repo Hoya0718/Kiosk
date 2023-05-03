@@ -88,13 +88,16 @@
             android:name=".Kiosk_10"
             android:exported="false" />
         <activity
-            android:name=".Kiosk_9_1"
+            android:name=".Kiosk_9"
             android:exported="false" />
         <activity
-            android:name=".Kiosk_8"
+            android:name=".Kiosk_7_d"
             android:exported="false" />
         <activity
-            android:name=".Kiosk_7"
+            android:name=".Kiosk_7_s"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_7_b"
             android:exported="false" />
         <activity
             android:name=".Kiosk_6"

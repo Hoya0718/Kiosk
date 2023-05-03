@@ -57,6 +57,6 @@
     <string name="volume_size_down">작게</string>
     <string name="volume_size_medium">중간</string>
     <string name="volume_size_up">크게</string>
-    <string name="receipt">접수</string>
-    <string name="acceptance">수납</string>
+    <string name="receipt">접 수 하 기</string>
+    <string name="acceptance">수납 및 처방전 발행</string>
 </resources>

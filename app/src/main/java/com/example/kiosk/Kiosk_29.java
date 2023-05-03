@@ -133,13 +133,8 @@ public class Kiosk_29 extends AppCompatActivity {
     }
     public void goto_kiosk_30(View v) {
 
-        if(tts != null) {
-            tts.stop();
-            tts.shutdown();
-            tts=null;
-        }
-        super.onDestroy();
 
+        tts.shutdown();
         Intent goto_kiosk_30= new Intent(getApplicationContext(), Kiosk_30.class);
         if(ssn.length() == 14)
             startActivity(goto_kiosk_30);

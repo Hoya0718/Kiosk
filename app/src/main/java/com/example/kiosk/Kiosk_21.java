@@ -45,9 +45,10 @@ public class Kiosk_21 extends AppCompatActivity {
         textView37 = findViewById(R.id.textView37);
         Intent intent = getIntent();
         String destination = intent.getStringExtra("destination");
-        if(destination != null && !destination.isEmpty()) {
+        if(destination != null) {
             textView37.setText(destination);
         }
+        else textView37.setText("도착 안함");
 
         textView38 = findViewById(R.id.textView38);
         Intent intent1 = getIntent();
@@ -57,6 +58,13 @@ public class Kiosk_21 extends AppCompatActivity {
         String busAndSeat = bus + "  /  " + seat;
         if (seat != null) {
             textView38.setText(busAndSeat);
+        }
+
+        textView39 = findViewById(R.id.textView39);
+        Intent intent3 = getIntent();
+        String price = intent3.getStringExtra("price");
+        if(price != null) {
+            textView39.setText(price);
         }
 
     }

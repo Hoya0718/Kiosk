@@ -13,6 +13,7 @@ public class Kiosk_21 extends AppCompatActivity {
 
     private TextView textView37; //목적지
     private TextView textView38; //버스종류, 좌석
+    private TextView textView39; //표 가격
     private Button button64; //취소하기
     private Button button65; //결제하기
 
@@ -57,5 +58,6 @@ public class Kiosk_21 extends AppCompatActivity {
         if (seat != null) {
             textView38.setText(busAndSeat);
         }
+
     }
 }

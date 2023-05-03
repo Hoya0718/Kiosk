@@ -141,13 +141,12 @@ public class Kiosk_26 extends AppCompatActivity {
         }
     }
     public void goto_kiosk_26_2(View v) {
-        Intent goto_kiosk_26_2 = new Intent(this, Kiosk_26_2.class);
         if(personal_Information.isChecked()) {
             if (ssn.length() == 14) {
                 get_num = ssn.getText().toString();
                 pn.setGet_pn(get_num);
                 tts.shutdown();
-
+                Intent goto_kiosk_26_2 = new Intent(this,Kiosk_26_2.class);
                 startActivity(goto_kiosk_26_2);
             }
             else {

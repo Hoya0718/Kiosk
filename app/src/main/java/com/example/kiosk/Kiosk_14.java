@@ -9,12 +9,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 
 public class Kiosk_14 extends AppCompatActivity {
 
-    private Button button9; //버스 버튼
-    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/M/d");
+    private Button button9;
+    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/M/d/E요일", Locale.KOREAN);
     TextView textView11;
 
 
@@ -29,7 +30,7 @@ public class Kiosk_14 extends AppCompatActivity {
 
         SimpleDateFormat format;
 
-        format = new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss");
+        format = new SimpleDateFormat("yyyy/MM/dd(E)-HH:mm:ss", Locale.KOREAN);
         textView11.setText(format.format(c.getTime()));
 
         button9 = findViewById(R.id.button9);

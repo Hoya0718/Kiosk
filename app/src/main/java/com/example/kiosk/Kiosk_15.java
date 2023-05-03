@@ -12,9 +12,10 @@ import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class Kiosk_15 extends AppCompatActivity {
-    private SimpleDateFormat mFormat = new SimpleDateFormat("MM dd");
+    private SimpleDateFormat mFormat = new SimpleDateFormat("MM dd (E)", Locale.KOREAN);
     TextView textView10;
 
     private Button button15; //도착지 버튼
@@ -31,7 +32,7 @@ public class Kiosk_15 extends AppCompatActivity {
 
         SimpleDateFormat format;
 
-        format = new SimpleDateFormat("MM월 dd일");
+        format = new SimpleDateFormat("MM월 dd일 (E)", Locale.KOREAN);
         textView10.setText(format.format(c.getTime()));
 
         button15 = findViewById(R.id.button15);

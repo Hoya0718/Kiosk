@@ -46,6 +46,7 @@ public class Kiosk_19 extends AppCompatActivity {
             Intent intent1 = getIntent();
             String bus = intent1.getStringExtra("bus");
             String destination = intent1.getStringExtra("destination");
+            String seat = intent1.getStringExtra("seat");
             intent.putExtra("destination", destination);
             intent.putExtra("bus", bus);
             intent.putExtra("seat", "좌석 번호 : 3B");

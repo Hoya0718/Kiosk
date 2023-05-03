@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="시간"
             android:textAlignment="center"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <LinearLayout

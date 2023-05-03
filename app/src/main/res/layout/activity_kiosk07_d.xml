@@ -250,7 +250,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:text="처음으로"
-                android:onClick="goto_kiosk_05"
+                android:onClick="goto_kiosk_06"
                 android:textSize="18sp" />
 
             <Button
@@ -262,4 +262,4 @@
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout> <!---->
+</LinearLayout>

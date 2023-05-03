@@ -88,4 +88,4 @@
         android:onClick="goto_kiosk_10"
         android:text="취소하기"
         android:textSize="18sp" />
-</LinearLayout> <!---->
+</LinearLayout>

@@ -17,9 +17,9 @@ public class Kiosk_7_b extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk07_b);
     }
 
-    public void goto_kiosk_05(View v){
-        Intent goto_kiosk_05 = new Intent(getApplicationContext(),Kiosk_5.class);
-        startActivity(goto_kiosk_05);
+    public void goto_kiosk_06(View v){
+        Intent goto_kiosk_06 = new Intent(getApplicationContext(),Kiosk_6.class);
+        startActivity(goto_kiosk_06);
     }
 
     public void goto_kiosk_07_s(View v){
@@ -35,5 +35,5 @@ public class Kiosk_7_b extends AppCompatActivity {
     public void goto_kiosk_09(View v){
         Intent goto_kiosk_09 = new Intent(getApplicationContext(),Kiosk_9.class);
         startActivity(goto_kiosk_09);
-    } //
+    }
 }

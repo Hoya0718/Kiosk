@@ -10,7 +10,7 @@
     <string name="text_size_big">크게</string>
     <string name="next">다음</string>
     <string name="previous">이전</string>
-    <string name="next_2">다음</string>
+    <string name="next_2">저장</string>
     <string name="previous_2">이전</string>
     <string name="speed_fast">빠르게</string>
     <string name="speed_normal">중간</string>
@@ -21,7 +21,7 @@
     <string name="volume_medium">중간</string>
     <string name="volume_up">크게</string>
     <string name="previous_3">이전</string>
-    <string name="save">저장</string>
+    <string name="next_0">다음</string>
     <string name="volume_down">작게</string>
     <string name="food">음식점</string>
     <string name="bus">버스</string>

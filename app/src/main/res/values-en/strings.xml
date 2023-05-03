@@ -11,7 +11,7 @@
     <string name="text_size_big">Big</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="next_2">Next</string>
+    <string name="next_2">Save</string>
     <string name="previous_2">Previous</string>
     <string name="speed_fast">Fast</string>
     <string name="speed_normal">Normal</string>
@@ -22,7 +22,7 @@
     <string name="volume_medium">Medium</string>
     <string name="volume_up">Up</string>
     <string name="previous_3">Previous</string>
-    <string name="save">Save</string>
+    <string name="next_0">Next</string>
     <string name="volume_down">Down</string>
     <string name="food">Food</string>
     <string name="bus">Bus</string>

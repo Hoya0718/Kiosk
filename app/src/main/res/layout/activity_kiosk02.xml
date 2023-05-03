@@ -109,7 +109,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:onClick="goto_kiosk_03"
+            android:onClick="goto_kiosk_04"
             android:text="@string/next"
             android:textSize="18sp" />
     </LinearLayout>

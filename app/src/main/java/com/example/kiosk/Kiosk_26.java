@@ -141,16 +141,16 @@ public class Kiosk_26 extends AppCompatActivity {
         }
     }
     public void goto_kiosk_26_2(View v) {
+        Intent goto_kiosk_26_2 = new Intent(this, Kiosk_26_2.class);
         if(personal_Information.isChecked()) {
             if (ssn.length() == 14) {
-                tts.shutdown();
-                Intent goto_kiosk_26_2 = new Intent(getApplicationContext(), Kiosk_26_2.class);
-
                 get_num = ssn.getText().toString();
                 pn.setGet_pn(get_num);
+                tts.shutdown();
 
                 startActivity(goto_kiosk_26_2);
-            } else {
+            }
+            else {
                 tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);
                 Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
             }

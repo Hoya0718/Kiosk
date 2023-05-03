@@ -148,7 +148,7 @@ public class Kiosk_26 extends AppCompatActivity {
 
                 get_num = ssn.getText().toString();
                 pn.setGet_pn(get_num);
-;
+
                 startActivity(goto_kiosk_26_2);
             } else {
                 tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);

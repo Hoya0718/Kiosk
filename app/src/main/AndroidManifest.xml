@@ -90,6 +90,24 @@
             android:name=".Kiosk_9"
             android:exported="false" />
         <activity
+            android:name=".Kiosk_8_7"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_8_5"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_8_4"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_8_3"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_8_2"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_8_1"
+            android:exported="false" />
+        <activity
             android:name=".Kiosk_7_d"
             android:exported="false" />
         <activity

@@ -90,6 +90,7 @@
                 android:id="@+id/drink_Btn"
                 android:layout_width="100dp"
                 android:layout_height="130dp"
+                android:enabled="false"
                 android:text="@string/drink"
                 android:textSize="18sp" />
 

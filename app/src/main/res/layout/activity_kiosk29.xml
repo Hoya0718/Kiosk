@@ -208,7 +208,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:onClick="goto_kiosk_30"
+                android:onClick="goto_kiosk_29_2"
                 android:text="확인"
                 android:textSize="18sp" />
         </TableRow>

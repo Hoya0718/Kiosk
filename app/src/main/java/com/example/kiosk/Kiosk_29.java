@@ -131,12 +131,12 @@ public class Kiosk_29 extends AppCompatActivity {
                 }
         }
     }
-    public void goto_kiosk_30(View v) {
+    public void goto_kiosk_29_2(View v) {
 
-        Intent goto_kiosk_30= new Intent(getApplicationContext(), Kiosk_30.class);
+        Intent goto_kiosk_29_2= new Intent(getApplicationContext(), Kiosk_29_2.class);
         if(ssn.length() == 14) {
             tts.shutdown();
-            startActivity(goto_kiosk_30);
+            startActivity(goto_kiosk_29_2);
         }
         else {
             tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);

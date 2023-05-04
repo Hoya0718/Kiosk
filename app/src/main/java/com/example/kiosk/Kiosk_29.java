@@ -17,6 +17,10 @@ public class Kiosk_29 extends AppCompatActivity {
     private TextView ssn ;
     private TextToSpeech tts;
     private myapp sound;
+
+    private String get_num_2;
+
+    private myapp pnpnpn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,7 @@ public class Kiosk_29 extends AppCompatActivity {
 
         ssn = findViewById(R.id.SSN);
 
+        pnpnpn = (myapp) getApplication();
         sound = (myapp) getApplication();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -136,6 +141,8 @@ public class Kiosk_29 extends AppCompatActivity {
         Intent goto_kiosk_29_2= new Intent(getApplicationContext(), Kiosk_29_2.class);
         if(ssn.length() == 14) {
             tts.shutdown();
+            get_num_2 = ssn.getText().toString();
+            pnpnpn.setGet_pn_2(get_num_2);
             startActivity(goto_kiosk_29_2);
         }
         else {

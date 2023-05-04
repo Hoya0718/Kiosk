@@ -24,6 +24,9 @@ public class Kiosk_26 extends AppCompatActivity {
     private String get_num;
 
     private myapp pn;
+
+    private long clickTime;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +148,8 @@ public class Kiosk_26 extends AppCompatActivity {
             if (ssn.length() == 14) {
                 get_num = ssn.getText().toString();
                 pn.setGet_pn(get_num);
+                clickTime = System.currentTimeMillis();
+                pn.setDay(clickTime);
                 tts.shutdown();
                 Intent goto_kiosk_26_2 = new Intent(this,Kiosk_26_2.class);
                 startActivity(goto_kiosk_26_2);

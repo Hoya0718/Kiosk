@@ -13,6 +13,21 @@ public class myapp extends Application {
 
     private String get_pn;
 
+    private String get_pn_2;
+    private long day;
+
+    private String department;
+    public void setGet_pn_2(String a) {this.get_pn_2 =a;}
+
+    public String getGet_pn_2() {return get_pn_2;}
+    public void setDepartment(String a) {this.department =a;}
+
+    public String getDepartment() { return this.department;}
+    public long getDay() { return this.day;}
+    public void setDay(long a) { this.day =a;}
+
+
+
     public void setGet_pn(String a) {this.get_pn =a;}
     public  String getGet_pn(){return  this.get_pn;}
     public float getTtsVolume(){return this.ttsVolume;}

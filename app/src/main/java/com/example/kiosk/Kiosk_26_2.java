@@ -16,11 +16,13 @@ public class Kiosk_26_2 extends AppCompatActivity {
     private Button btn_5;
     private Button btn_6;
     private String input;
+    private myapp department;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk26_2);
 
+        department = (myapp) getApplication();
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);
         btn_3 = findViewById(R.id.btn_3);
@@ -34,31 +36,37 @@ public class Kiosk_26_2 extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.btn_1:
                 input = btn_1.getText().toString();
+                department.setDepartment(btn_1.getText().toString());
                 goto_kiosk_27.putExtra("text", input);
                 startActivity(goto_kiosk_27);
                 break;
             case R.id.btn_2:
                 input = btn_2.getText().toString();
+                department.setDepartment(btn_2.getText().toString());
                 goto_kiosk_27.putExtra("text", input);
                 startActivity(goto_kiosk_27);
                 break;
             case R.id.btn_3:
                 input = btn_3.getText().toString();
+                department.setDepartment(btn_3.getText().toString());
                 goto_kiosk_27.putExtra("text", input);
                 startActivity(goto_kiosk_27);
                 break;
             case R.id.btn_4:
                 input = btn_4.getText().toString();
+                department.setDepartment(btn_4.getText().toString());
                 goto_kiosk_27.putExtra("text", input);
                 startActivity(goto_kiosk_27);
                 break;
             case R.id.btn_5:
                 input = btn_5.getText().toString();
+                department.setDepartment(btn_5.getText().toString());
                 goto_kiosk_27.putExtra("text", input);
                 startActivity(goto_kiosk_27);
                 break;
             case R.id.btn_6:
                 input = btn_6.getText().toString();
+                department.setDepartment(btn_6.getText().toString());
                 goto_kiosk_27.putExtra("text", input);
                 startActivity(goto_kiosk_27);
                 break;

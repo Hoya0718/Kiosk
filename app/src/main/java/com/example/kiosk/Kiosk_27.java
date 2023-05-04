@@ -39,7 +39,7 @@ public class Kiosk_27 extends AppCompatActivity {
         String text = intent.getStringExtra("text");
         department.setText(text);
 
-        birthday.setText(pn.getGet_pn().substring(0,6));
+        birthday.setText(pn.getGet_pn().substring(0,8));
     }
     public void goto_kiosk_28(View v) {
         Intent goto_kiosk_28 = new Intent(getApplicationContext(), Kiosk_28.class);

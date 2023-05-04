@@ -76,7 +76,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView59"
+                android:id="@+id/treatment_day"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -88,7 +88,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="TextView"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -99,7 +98,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView64"
+                android:id="@+id/department_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -111,7 +110,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="TextView"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -126,7 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="TextView"
+                android:text="13000원"
                 android:textSize="18sp" />
 
             <TextView
@@ -134,7 +132,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="TextView"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -193,7 +190,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="TextView"
+                android:text="13000원"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -225,7 +222,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="홍길동"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -246,12 +243,11 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView83"
+                    android:id="@+id/pnpn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="TextView"
                     android:textSize="18sp" />
             </LinearLayout>
 

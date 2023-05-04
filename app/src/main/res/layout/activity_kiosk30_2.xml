@@ -169,6 +169,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:onClick="goto_kiosk_31"
             android:text="확인"
             android:textSize="18sp" />
     </LinearLayout>

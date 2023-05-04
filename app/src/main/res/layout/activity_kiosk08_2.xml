@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="#99ffffff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Kiosk_8_2">
@@ -15,7 +14,7 @@
         android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="햄버거"
+        android:text="빅맥"
         android:textSize="30sp" />
 
     <LinearLayout
@@ -55,14 +54,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="세트" />
+            android:text="세트"
+            android:onClick="popup_kiosk_08_3"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button38"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="라지 세트" />
+            android:text="라지 세트"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <Button
@@ -74,7 +76,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
         android:layout_weight="2"
-        android:onClick="goto_kiosk_09"
         android:text="취소하기"
+        android:onClick="goto_kiosk_08_1"
         android:textSize="18sp" />
 </LinearLayout>

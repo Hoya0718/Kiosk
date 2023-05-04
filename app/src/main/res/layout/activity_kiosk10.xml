@@ -79,15 +79,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text="카드 결제"
             android:onClick="goto_kiosk_11"
-            android:text="카드 결제" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button38"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="모바일 상품권" />
+            android:text="모바일 상품권"
+            android:textSize="18sp"/>
     </LinearLayout>
 
     <Button
@@ -99,7 +101,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
         android:layout_weight="2"
-        android:onClick="goto_kiosk_09"
         android:text="취소하기"
+        android:onClick="goto_kiosk_09"
         android:textSize="18sp" />
 </LinearLayout>

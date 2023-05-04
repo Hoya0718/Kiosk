@@ -104,22 +104,22 @@
             android:exported="false" />
         <activity
             android:name=".Kiosk_8_7"
-            android:theme="@android:style/Theme.Dialog" />
+            android:exported="false" />
         <activity
             android:name=".Kiosk_8_5"
-            android:theme="@android:style/Theme.Dialog" />
+            android:exported="false" />
         <activity
             android:name=".Kiosk_8_4"
-            android:theme="@android:style/Theme.Dialog" />
+            android:exported="false" />
         <activity
             android:name=".Kiosk_8_3"
-            android:theme="@android:style/Theme.Dialog" />
+            android:exported="false" />
         <activity
             android:name=".Kiosk_8_2"
-            android:theme="@android:style/Theme.Dialog" />
+            android:exported="false" />
         <activity
             android:name=".Kiosk_8_1"
-            android:theme="@android:style/Theme.Dialog" />
+            android:exported="false" />
         <activity
             android:name=".Kiosk_7_d"
             android:exported="false" />

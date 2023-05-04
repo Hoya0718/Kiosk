@@ -28,6 +28,9 @@
             android:name=".Kiosk_30"
             android:exported="false" />
         <activity
+            android:name=".Kiosk_29_2"
+            android:exported="false" />
+        <activity
             android:name=".Kiosk_29"
             android:exported="false" />
         <activity

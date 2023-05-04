@@ -36,12 +36,12 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <Button
+        <TextView
             android:id="@+id/button14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="출발지"
+            android:text="목포"
             android:textAlignment="center"
             android:textSize="35sp" />
 

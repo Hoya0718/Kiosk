@@ -258,6 +258,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="3dp"
             android:text="ㅎ" />
+
     </LinearLayout>
 
 
@@ -267,35 +268,16 @@
         android:layout_weight="3"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/button_central"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:text="센트럴시티" />
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/button_eastseoul"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="마산" />
-
-        <Button
-            android:id="@+id/button20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="무안" />
-
-        <Button
-            android:id="@+id/button21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="무안공항" />
-
-        <Button
-            android:id="@+id/button22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="무주" />
-
-        <Button
-            android:id="@+id/button85"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="마량" />
+            android:layout_height="363dp"
+            android:text="동서울" />
     </LinearLayout>
 </LinearLayout>

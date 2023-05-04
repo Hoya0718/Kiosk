@@ -36,7 +36,7 @@ public class Kiosk_2 extends AppCompatActivity {
         String word ="1. 글자크기";
         int start = content.indexOf(word);
         int end = start + word.length();
-        spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#FF5500")), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#005B7A")), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannableString.setSpan(new RelativeSizeSpan(1.5f), start, end, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
         setting_list.setText(spannableString);
 

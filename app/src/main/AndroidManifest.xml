@@ -76,6 +76,9 @@
             android:name=".Kiosk_17"
             android:exported="true" />
         <activity
+            android:name=".Kiosk_16_1"
+            android:exported="true" />
+        <activity
             android:name=".Kiosk_16"
             android:exported="true" />
         <activity

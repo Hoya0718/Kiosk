@@ -43,15 +43,7 @@ public class Kiosk_7_b extends AppCompatActivity {
     }
 
     public void popup_kiosk_08_1(View view) {
-
-    }
-
-    public void popup_kiosk_08_7(View view) {
-
-    }
-
-    public void goto_kiosk_09(View v){
-        Intent goto_kiosk_09 = new Intent(getApplicationContext(),Kiosk_9.class);
-        startActivity(goto_kiosk_09);
+        Intent popup_kiosk_08_1 = new Intent(getApplicationContext(), Kiosk_8_1.class);
+        startActivity(popup_kiosk_08_1);
     }
 }

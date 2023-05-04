@@ -26,11 +26,13 @@ public class Kiosk_8_1 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk08_1);
     }
 
-    public void popup_kiosk_08_2(View v){
-
+    public void popup_kiosk_08_2(View view) {
+        Intent popup_kiosk_08_2 = new Intent(getApplicationContext(), Kiosk_8_2.class);
+        startActivity(popup_kiosk_08_2);
     }
 
-    public void popupClose(View view) {
-
+    public void goto_kiosk_07_b(View view) {
+        Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
+        startActivity(goto_kiosk_07_b);
     }
 }

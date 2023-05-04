@@ -6,22 +6,17 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Kiosk_8_5 extends AppCompatActivity {
+public class Kiosk_8_6 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk08_5);
+        setContentView(R.layout.activity_kiosk08_6);
     }
 
-    public void popup_kiosk_08_4(View view) {
-        Intent popup_kiosk_08_4 = new Intent(getApplicationContext(), Kiosk_8_4.class);
-        startActivity(popup_kiosk_08_4);
-    }
-
-    public void popup_kiosk_08_6(View view) {
-        Intent popup_kiosk_08_6 = new Intent(getApplicationContext(), Kiosk_8_6.class);
-        startActivity(popup_kiosk_08_6);
+    public void popup_kiosk_08_7(View view) {
+        Intent popup_kiosk_08_7 = new Intent(getApplicationContext(), Kiosk_8_7.class);
+        startActivity(popup_kiosk_08_7);
     }
 
     public void goto_kiosk_06(View view) {

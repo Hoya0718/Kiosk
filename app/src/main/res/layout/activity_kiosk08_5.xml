@@ -115,7 +115,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:text="취소"
-                android:onClick="goto_kiosk_08_4"
+                android:onClick="popup_kiosk_08_4"
                 android:textSize="18sp" />
 
             <Button
@@ -124,30 +124,36 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:text="장바구니 추가"
-                android:onClick="goto_kiosk_08_6"
+                android:onClick="popup_kiosk_08_6"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="80dp"
             android:layout_weight="2"
             android:gravity="center">
 
             <Button
                 android:id="@+id/button13"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
                 android:text="처음으로"
                 android:onClick="goto_kiosk_06"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
                 android:text="도움 기능"
                 android:textSize="18sp" />
         </LinearLayout>

@@ -19,11 +19,6 @@ public class Kiosk_9 extends AppCompatActivity {
         startActivity(goto_kiosk_06);
     }
 
-    public void goto_kiosk_07_b(View v){
-        Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
-        startActivity(goto_kiosk_07_b);
-    }
-
     public void goto_kiosk_10(View v) {
         Intent goto_kiosk_10 = new Intent(getApplicationContext(), Kiosk_10.class);
         startActivity(goto_kiosk_10);

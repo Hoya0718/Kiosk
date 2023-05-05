@@ -22,6 +22,18 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/fastfood_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:onClick="goto_kiosk_06"
+            android:text="@string/food"
+            android:textSize="18sp" />
+
+        <Button
             android:id="@+id/bus_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -32,7 +44,7 @@
             android:enabled="false"
             android:onClick="goto_kiosk_14"
             android:text="@string/bus"
-            android:textSize="@dimen/font_size_medium" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/hospital_btn"
@@ -45,19 +57,8 @@
             android:enabled="false"
             android:onClick="goto_kiosk_25"
             android:text="@string/hospital"
-            android:textSize="@dimen/font_size_medium" />
+            android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/fastfood_btn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:onClick="goto_kiosk_06"
-            android:text="@string/food"
-            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout

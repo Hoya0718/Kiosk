@@ -45,4 +45,13 @@ public class Kiosk_8_5 extends AppCompatActivity {
         Intent popup_kiosk_06 = new Intent(getApplicationContext(), Kiosk_6.class);
         startActivity(popup_kiosk_06);
     }
+
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
+    }
 }

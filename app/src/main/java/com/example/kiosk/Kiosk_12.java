@@ -22,7 +22,9 @@ public class Kiosk_12 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("축하드립니다. 음식점 단계를 완료했습니다. 버스 단계로 넘어가세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    tts.speak("축하드립니다!" +
+                            "음식점 연습 단계가 완료되엇습니다. 처음으로 돌아가기 버튼을 눌러주세요",
+                            TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });
@@ -32,5 +34,14 @@ public class Kiosk_12 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_13 = new Intent(getApplicationContext(),Kiosk_13.class);
         startActivity(goto_kiosk_13);
+    }
+
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
     }
 }

@@ -24,7 +24,7 @@ public class Kiosk_30 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("카드를 넣어주세요.");
+                    speakText("카드를 그림과 같이 넣어주세요.");
                 }
             }
         });

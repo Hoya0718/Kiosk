@@ -25,7 +25,7 @@ public class Kiosk_22 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("카드를 그림과 같이 구멍에 넣어주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                    tts.speak("카드를 그림과 같이 넣어주세요", TextToSpeech.QUEUE_FLUSH, null, null);
 
                     button66 = findViewById(R.id.button66);
                     button66.setOnClickListener(new View.OnClickListener() {

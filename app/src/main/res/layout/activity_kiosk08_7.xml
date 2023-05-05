@@ -87,6 +87,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/snackshu" />
 
         <ImageButton
@@ -98,6 +99,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/mcnurget" />
     </LinearLayout>
 

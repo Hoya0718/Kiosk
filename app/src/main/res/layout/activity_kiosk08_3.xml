@@ -168,38 +168,48 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/snacksan_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/snacksan" />
 
                 <ImageButton
                     android:id="@+id/snackshu_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/snackshu" />
 
                 <ImageButton
                     android:id="@+id/mcnurget_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/mcnurget" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/huri_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="10dp"
                     android:backgroundTint="#FFA500"
                     android:onClick="popup_kiosk_08_4"
@@ -207,67 +217,85 @@
 
                 <ImageButton
                     android:id="@+id/hashbra_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/hashbra" />
 
                 <ImageButton
                     android:id="@+id/chickentender_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/chickentender" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/chezstick_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/chezstick" />
 
                 <ImageButton
                     android:id="@+id/mccri_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/cuol" />
 
                 <ImageButton
                     android:id="@+id/churu_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/churu" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/iceba_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/iceba" />
 
                 <ImageButton
                     android:id="@+id/iceco_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/iceco" />
 
                 <ImageButton
                     android:id="@+id/icesu_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/icesu" />
             </TableRow>

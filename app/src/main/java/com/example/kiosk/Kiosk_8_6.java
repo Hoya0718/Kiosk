@@ -22,7 +22,7 @@ public class Kiosk_8_6 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("안녕", TextToSpeech.QUEUE_FLUSH, null, null);
+                    tts.speak("버거 메뉴 화면으로 돌아왔습니다. 좌측 하단에 가격이 추가되었습니다. 주문 내역 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });

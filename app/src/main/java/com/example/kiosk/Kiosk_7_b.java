@@ -35,7 +35,7 @@ public class Kiosk_7_b extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("안녕", TextToSpeech.QUEUE_FLUSH, null, null);
+                    tts.speak("버거 메뉴 화면입니다. 빅맥 세트 한 개를 주문해보겠습니다. 주황색 배경의 버튼을 잘 따라가주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });

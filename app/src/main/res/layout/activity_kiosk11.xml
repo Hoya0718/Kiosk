@@ -10,7 +10,9 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
         android:gravity="center"
         android:text="그림과 같이 카드를 넣어주세요"
         android:textSize="30sp" />

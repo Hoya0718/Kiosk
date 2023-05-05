@@ -51,6 +51,7 @@ public class Kiosk_18 extends AppCompatActivity {
                             intent.putExtra("destination", destination);
                             intent.putExtra("bus", "우등버스");
                             intent.putExtra("price", "25,000원");
+                            tts.shutdown();
                             startActivity(intent);
                         }
 
@@ -62,6 +63,7 @@ public class Kiosk_18 extends AppCompatActivity {
                             intent.putExtra("destination", destination);
                             intent.putExtra("bus", "고속버스");
                             intent.putExtra("price", "20,000원");
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -72,6 +74,7 @@ public class Kiosk_18 extends AppCompatActivity {
                             intent.putExtra("destination", destination);
                             intent.putExtra("bus", "일반버스");
                             intent.putExtra("price", "15,000원");
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });

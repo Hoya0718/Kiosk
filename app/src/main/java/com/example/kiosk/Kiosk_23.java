@@ -32,6 +32,7 @@ public class Kiosk_23 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_23.this, Kiosk_24.class);
+                            tts.shutdown();
                             startActivity(intent);
                         }
 

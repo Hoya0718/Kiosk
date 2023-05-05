@@ -16,7 +16,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="그림과 같이 카드를 넣어주세요"
-        android:textSize="40sp" />
+        android:textSize="30sp" />
 
     <ImageView
         android:id="@+id/imageView3"

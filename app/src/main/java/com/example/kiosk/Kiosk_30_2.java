@@ -32,6 +32,7 @@ public class Kiosk_30_2 extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                tts.shutdown();
                 Intent goto_kiosk_31 = new Intent(getApplicationContext(), Kiosk_31.class);
                 startActivity(goto_kiosk_31);
             }

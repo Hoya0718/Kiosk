@@ -35,6 +35,7 @@ public class Kiosk_31 extends AppCompatActivity {
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void goto_MainActivity(View v) {
+        tts.shutdown();
         Intent goto_MainActivity = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(goto_MainActivity);
     }

@@ -19,7 +19,7 @@
             android:layout_weight="2"
             android:gravity="right"
             android:text="우등버스 : 25,000원\n고속버스 : 20,000원\n일반버스 : 15,000원"
-            android:textSize="30sp"/>
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -35,7 +35,7 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="목포"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <TextView
             android:id="@+id/textView36"
@@ -53,7 +53,7 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="목적지"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="선택한 버스, 좌석 번호"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -105,7 +105,8 @@
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:text="취소하기"
-            android:textSize="30sp" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
         <Button
             android:id="@+id/button65"
             android:layout_width="wrap_content"
@@ -116,6 +117,8 @@
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:text="결제하기"
-            android:textSize="30sp" />
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:backgroundTint="@android:color/holo_orange_dark"/>
     </LinearLayout>
 </LinearLayout>

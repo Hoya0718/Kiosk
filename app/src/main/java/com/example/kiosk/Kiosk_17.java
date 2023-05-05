@@ -47,6 +47,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
                             intent.putExtra("destination", "무안");
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -56,6 +57,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
                             intent.putExtra("destination", "마산");
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -65,6 +67,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
                             intent.putExtra("destination", "무안공항");
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -74,6 +77,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
                             intent.putExtra("destination", "무주");
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -83,6 +87,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
                             intent.putExtra("destination", "마량");
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });

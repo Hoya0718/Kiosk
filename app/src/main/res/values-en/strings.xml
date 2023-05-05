@@ -181,6 +181,7 @@
     <string name="french_fries">French Fries</string>
     <string name="_13000_3">₩13000</string>
     <string name="go_home">Back to Beginning</string>
+    <string name="b_time">Time</string>
     <string name="b_ticket">Buy ticket</string>
     <string name="b_reserved">Reserved ticket</string>
     <string name="b_refund">Refund ticket</string>
@@ -281,4 +282,7 @@
     <string name="b_muanairport">Muan Airport</string>
     <string name="b_muju">Muju</string>
     <string name="b_maryang">Maryang</string>
+    <string name="fastfood">Food</string>
+    <string name="busbut">Bus</string>
+    <string name="hospita">Hospital</string>
 </resources>

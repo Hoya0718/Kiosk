@@ -282,4 +282,7 @@
     <string name="b_muanairport">무안공항</string>
     <string name="b_muju">무주</string>
     <string name="b_maryang">마량</string>
+    <string name="fastfood">음식점</string>
+    <string name="busbut">버스</string>
+    <string name="hospita">병원</string>
 </resources>

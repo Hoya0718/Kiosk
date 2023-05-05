@@ -41,7 +41,7 @@ public class Kiosk_14 extends AppCompatActivity {
 
                     SimpleDateFormat format;
 
-                    if(Locale.getDefault().getLanguage().equals("ko"))
+                    if(getResources().getConfiguration().locale.getLanguage().equals("kr"))
                         format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.KOREAN);
                     else
                         format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.ENGLISH);

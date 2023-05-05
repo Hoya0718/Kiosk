@@ -32,7 +32,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp"/>
 
@@ -45,7 +45,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
@@ -64,7 +64,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="4A"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -76,7 +76,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="4B"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
 
@@ -94,7 +94,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
@@ -107,7 +107,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="3B"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp"
                     android:onClick='onClick'/>
             </TableRow>
@@ -126,7 +126,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
@@ -139,7 +139,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="2B"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp"
                     android:onClick='onClick'/>
             </TableRow>
@@ -158,7 +158,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
@@ -171,7 +171,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
@@ -188,7 +188,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="출입문"
-                    android:textSize="18sp" />
+                    android:textSize="30sp" />
             </TableRow>
         </TableLayout>
 
@@ -199,7 +199,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="통로"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
 
         <TableLayout
             android:layout_width="0dp"
@@ -220,7 +220,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="5C"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -232,7 +232,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="5D"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
 
@@ -250,7 +250,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
@@ -263,7 +263,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
@@ -282,7 +282,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
@@ -295,7 +295,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
@@ -314,7 +314,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="2C"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
@@ -326,7 +326,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="2D"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
 
@@ -344,7 +344,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="매진"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp" />
 
@@ -358,7 +358,7 @@
                     android:layout_weight="1"
                     android:text="매진"
                     android:backgroundTint="@android:color/darker_gray"
-                    android:textSize="18sp"
+                    android:textSize="30sp"
                     tools:layout_marginLeft="5dp" />
             </TableRow>
 
@@ -374,7 +374,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="운전석"
-                    android:textSize="18sp" />
+                    android:textSize="30sp" />
             </TableRow>
         </TableLayout>
 

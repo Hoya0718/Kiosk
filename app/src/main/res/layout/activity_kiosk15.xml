@@ -74,9 +74,9 @@
             android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="출발 1분전부터는 발권되지 않습니다. 다음 출발 차량을 이용해주세요"
+            android:text="출발 1분전부터는 발권되지 않습다. 다음 출발 차량을 이용해주세요"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="27sp" />
 
         <Button
             android:id="@+id/button16"

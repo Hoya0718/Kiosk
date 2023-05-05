@@ -104,6 +104,7 @@
         android:layout_marginBottom="50dp"
         android:layout_weight="2"
         android:text="선택안함"
+        android:backgroundTint="#FFA500"
         android:onClick="goto_kiosk_09"
         android:textSize="18sp" />
 </LinearLayout>

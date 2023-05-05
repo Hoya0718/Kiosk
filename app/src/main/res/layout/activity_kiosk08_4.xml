@@ -289,7 +289,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="30dp"
             android:onClick="popup_kiosk_08_3"
-            android:text="취소하기"
+            android:text="@string/cancle"
             android:textSize="18sp" />
     </LinearLayout>
 

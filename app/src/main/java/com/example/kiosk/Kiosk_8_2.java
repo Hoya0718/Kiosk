@@ -29,11 +29,13 @@ public class Kiosk_8_2 extends AppCompatActivity {
     }
 
     public void popup_kiosk_08_3(View view) {
+        tts.shutdown();
         Intent popup_kiosk_08_3 = new Intent(getApplicationContext(), Kiosk_8_3.class);
         startActivity(popup_kiosk_08_3);
     }
 
     public void popup_kiosk_08_1(View view) {
+        tts.shutdown();
         Intent popup_kiosk_08_1 = new Intent(getApplicationContext(), Kiosk_8_1.class);
         startActivity(popup_kiosk_08_1);
     }

@@ -28,11 +28,8 @@ public class Kiosk_8_7 extends AppCompatActivity {
         });
     }
 
-    public void popupClose(View view) {
-
-    }
-
     public void goto_kiosk_09(View v){
+        tts.shutdown();
         Intent goto_kiosk_09 = new Intent(getApplicationContext(),Kiosk_9.class);
         startActivity(goto_kiosk_09);
     }

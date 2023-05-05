@@ -29,16 +29,19 @@ public class Kiosk_8_5 extends AppCompatActivity {
     }
 
     public void popup_kiosk_08_4(View view) {
+        tts.shutdown();
         Intent popup_kiosk_08_4 = new Intent(getApplicationContext(), Kiosk_8_4.class);
         startActivity(popup_kiosk_08_4);
     }
 
     public void popup_kiosk_08_6(View view) {
+        tts.shutdown();
         Intent popup_kiosk_08_6 = new Intent(getApplicationContext(), Kiosk_8_6.class);
         startActivity(popup_kiosk_08_6);
     }
 
     public void goto_kiosk_06(View view) {
+        tts.shutdown();
         Intent popup_kiosk_06 = new Intent(getApplicationContext(), Kiosk_6.class);
         startActivity(popup_kiosk_06);
     }

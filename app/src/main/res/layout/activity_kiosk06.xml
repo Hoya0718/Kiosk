@@ -29,4 +29,4 @@
         android:onClick="goto_kiosk_07_b"
         android:text="@string/takeout"
         android:textSize="18sp" />
-</LinearLayout> <!---->
+</LinearLayout>

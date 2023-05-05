@@ -32,7 +32,7 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="바코드가 없는 경우\n주민등록번호 또는 \n환자등록번호를 입력해주세요"
+            android:text="@string/hospital_list_2"
             android:textSize="18sp" />
 
         <CheckBox
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="개인정보 수집 동의(필수)" />
+            android:text="@string/accept_personal_information" />
 
         <TextView
             android:id="@+id/SSN"
@@ -48,7 +48,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:hint="주민등록번호 입력(- 제외)"
+            android:hint="@string/ssn"
             android:maxLength="14"
             android:textSize="18sp" />
     </LinearLayout>
@@ -71,7 +71,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="1"
+                android:text="@string/num_1_btn"
                 android:textSize="18sp" />
 
             <Button
@@ -82,7 +82,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="2"
+                android:text="@string/num_2_btn"
                 android:textSize="18sp" />
 
             <Button
@@ -93,7 +93,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="3"
+                android:text="@string/num_3_btn"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -110,7 +110,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="4"
+                android:text="@string/num_4_btn"
                 android:textSize="18sp" />
 
             <Button
@@ -121,7 +121,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="5"
+                android:text="@string/num_5_btn"
                 android:textSize="18sp" />
 
             <Button
@@ -132,7 +132,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="6"
+                android:text="@string/num_6_btn"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -149,7 +149,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="7"
+                android:text="@string/num_7_btn"
                 android:textSize="18sp" />
 
             <Button
@@ -160,7 +160,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="8"
+                android:text="@string/num_8_btn"
                 android:textSize="18sp" />
 
             <Button
@@ -171,7 +171,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="9"
+                android:text="@string/num_9_btn"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -188,7 +188,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="정정"
+                android:text="@string/num_CL_btn"
                 android:textSize="18sp" />
 
             <Button
@@ -199,7 +199,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="0"
+                android:text="@string/num_0_btn"
                 android:textSize="18sp" />
 
             <Button
@@ -210,7 +210,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="goto_kiosk_26_2"
-                android:text="확인"
+                android:text="@string/check"
                 android:textSize="18sp" />
         </TableRow>
     </TableLayout>

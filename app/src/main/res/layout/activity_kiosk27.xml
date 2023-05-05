@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="접수가 완료되었습니다.\n대기공간에서 기다려주세요"
+            android:text="@string/hostital_2"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -34,7 +34,7 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="TextView"
+            android:text="@string/department_2"
             android:textSize="40sp" />
 
         <LinearLayout
@@ -49,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="대기인수:"
+                android:text="@string/wating"
                 android:textAlignment="textEnd"
                 android:textSize="18sp" />
 
@@ -59,7 +59,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="3명"
+                android:text="@string/third_m"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -93,7 +93,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="TextView"
+                android:text="@string/hospital_day"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -110,7 +110,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="등록번호:"
+                android:text="@string/registration_num"
                 android:textAlignment="textEnd"
                 android:textSize="18sp" />
 
@@ -120,7 +120,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="1212"
+                android:text="@string/_1212"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -136,7 +136,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="생년월일:"
+                android:text="@string/hospital_birthday"
                 android:textAlignment="textEnd"
                 android:textSize="18sp" />
 
@@ -146,7 +146,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="TextView"
+                android:text="@string/birthday_number"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -162,7 +162,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="성       명:"
+                android:text="@string/hospital_num"
                 android:textAlignment="textEnd"
                 android:textSize="18sp" />
 
@@ -172,7 +172,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="홍 길 동"
+                android:text="@string/Hong"
                 android:textSize="18sp" />
         </LinearLayout><![CDATA[
 
@@ -192,7 +192,7 @@
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:onClick="goto_kiosk_28"
-            android:text="접수증 출력"
+            android:text="@string/printing"
             android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

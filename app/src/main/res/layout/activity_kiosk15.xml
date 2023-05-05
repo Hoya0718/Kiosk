@@ -18,7 +18,7 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="출발일"
+            android:text="@string/b_startdate"
             android:textAlignment="center"
             android:textSize="35sp"
 
@@ -56,7 +56,7 @@
             android:autoSizeStepGranularity="2sp"
 
             android:autoSizeTextType="uniform"
-            android:text="목포"
+            android:text="@string/b_Mokpo1"
             android:textAlignment="center"
             android:textSize="35sp" />
 
@@ -87,7 +87,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="100dp"
             android:layout_weight="1"
-            android:text="도착지"
+            android:text="@string/b_arrive"
             android:backgroundTint="@android:color/holo_orange_dark"
             android:textAlignment="center"
             android:textSize="35sp"
@@ -108,7 +108,7 @@
             android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="출발 1분전부터는 발권되지 않습니다. 다음 출발 차량을 이용해주세요"
+            android:text="@string/b_nextbus"
             android:textAlignment="center"
             android:textSize="27sp"
 
@@ -121,7 +121,7 @@
             android:id="@+id/button16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="처음 화면으로 돌아가기"
+            android:text="@string/b_gofirst"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="20dp"

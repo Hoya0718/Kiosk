@@ -73,23 +73,23 @@
 
             <Button
                 android:id="@+id/burger_Btn"
-                android:layout_width="100dp"
-                android:layout_height="130dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:enabled="false"
                 android:text="@string/birger"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/side_Btn"
-                android:layout_width="100dp"
-                android:layout_height="130dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:text="@string/side"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/drink_Btn"
-                android:layout_width="100dp"
-                android:layout_height="130dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:text="@string/drink"
                 android:textSize="18sp" />
 
@@ -103,104 +103,132 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/b1955_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/b1955" />
 
                 <ImageButton
                     android:id="@+id/batodi_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/batodi" />
 
                 <ImageButton
                     android:id="@+id/bigmc_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/bigmc" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/bulgogi_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/bulgogi" />
 
                 <ImageButton
                     android:id="@+id/cheeze_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/cheeze" />
 
                 <ImageButton
                     android:id="@+id/ham_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/ham" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/mcchi_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/mcchi" />
 
                 <ImageButton
                     android:id="@+id/mccri_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/mccri" />
 
                 <ImageButton
                     android:id="@+id/quater_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/quater" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/sanhi_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/sanhi" />
 
                 <ImageButton
                     android:id="@+id/subi_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/subi" />
 
                 <ImageButton
                     android:id="@+id/susu_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/susu" />
             </TableRow>

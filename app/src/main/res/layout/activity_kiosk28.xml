@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="접수/수납을 하시려면\n아래 버튼을 선택해주세요!"
+            android:text="@string/hospital_list_3"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -37,7 +37,7 @@
             android:layout_marginRight="10dp"
             android:enabled="false"
             android:gravity="center"
-            android:text="접수하기"
+            android:text="@string/receipt_2"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -56,7 +56,7 @@
             android:layout_marginBottom="50dp"
             android:gravity="center"
             android:onClick="goto_kiosk_29"
-            android:text="수납 및 처방전 발행"
+            android:text="@string/acceptance_2"
             android:textSize="18sp" />
     </LinearLayout>
 

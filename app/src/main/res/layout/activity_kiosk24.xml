@@ -15,7 +15,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:enabled="false"
-        android:text="음식점"
+        android:text="@string/food_2"
         android:textSize="18sp" />
 
     <Button
@@ -27,7 +27,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:enabled="false"
-        android:text="버스"
+        android:text="@string/bus_2"
         android:textSize="18sp" />
 
     <Button
@@ -39,7 +39,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:onClick="goto_kiosk_25"
-        android:text="병원"
+        android:text="@string/hospital_2"
         android:textSize="18sp" />
 
 </LinearLayout>

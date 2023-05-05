@@ -25,6 +25,6 @@
         android:layout_marginBottom="50dp"
         android:layout_weight="1"
         android:onClick="goto_MainActivity"
-        android:text="처음으로 돌아가기"
+        android:text="@string/taecho"
         android:textSize="18sp" />
 </LinearLayout>

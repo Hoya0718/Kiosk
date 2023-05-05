@@ -118,7 +118,7 @@
     <string name="diagnosis_money">Receipt amount</string>
     <string name="diagnosis_check">Receipt is Checked</string>
     <string name="diagnosis_total_money">Total Payment:</string>
-    <string name="_13000">13$</string>
+    <string name="_13000">13000₩</string>
     <string name="hospital_name">Name: </string>
     <string name="Hong_2">Tom</string>
     <string name="ssn_3">Resident registration number:</string>
@@ -128,7 +128,7 @@
     <string name="insert_card">Please insert the card as shown in the picture</string>
     <string name="pay_cancle">Cancle</string>
     <string name="all_money">The total amount</string>
-    <string name="_13000_2">13$</string>
+    <string name="_13000_2">13000₩</string>
     <string name="installment_month">installment month:</string>
     <string name="lump_sum">pay in full</string>
     <string name="patient_name">Name:</string>
@@ -179,6 +179,6 @@
     <string name="order_to_set">Would you like to order as a set?</string>
     <string name="big_mc_set">Big MC set</string>
     <string name="french_fries">French Fries</string>
-    <string name="_13000_3">13$</string>
+    <string name="_13000_3">13000₩</string>
     <string name="go_home">Back to Beginning</string>
 </resources>

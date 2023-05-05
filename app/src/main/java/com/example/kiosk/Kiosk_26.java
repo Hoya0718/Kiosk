@@ -40,6 +40,7 @@ public class Kiosk_26 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                    speakText("접수하기 위한 절차입니다. 접수를 하기위해 주민등록번호를 입력해주세요.");
                 }
             }
         });
@@ -49,10 +50,11 @@ public class Kiosk_26 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("바코드가 있는 경우 바코드를 리더기에 대주세요. 바코드가 없으시다면 주민등록번호, 환자 번호 하나를 입력해주세요",
+
+                tts.speak("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.",
                         TextToSpeech.QUEUE_FLUSH, null, null);
             }
-        }, 3000);
+        }, 15000);
     }
 
     public void put_n(View view) {
@@ -160,11 +162,16 @@ public class Kiosk_26 extends AppCompatActivity {
             }
         }
         else {
-            tts.speak("체크박스를 확인해 주세요", TextToSpeech.QUEUE_FLUSH, null, null);
-            Toast.makeText(getApplicationContext(), "체크박스를 확인해주세요", Toast.LENGTH_LONG).show();
+            tts.speak("개인정보 수집 동의를 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+            Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
         }
     }
+    private void speakText(String text) {
 
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }
 
     protected void onDestroy() {
         if(tts != null) {

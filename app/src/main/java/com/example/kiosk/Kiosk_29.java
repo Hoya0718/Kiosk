@@ -34,6 +34,7 @@ public class Kiosk_29 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                    speakText("처방전을 받기 전 본인 확인을 위해 주민등록번호를 입력해야합니다. 주민등록번호를 입력해주세요");
                 }
             }
         });
@@ -43,11 +44,17 @@ public class Kiosk_29 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("진료비 영수증 또는 진료안내서의 바코드를 아래 리더기에 대주세요. 바코드가 없으시다면 진료카드 번호 또는 주민등록번호 입력 후 확인을 눌러주세요",
+                tts.speak("아래에 숫자를 통해 주민등록번호를 입력하실 수 있어요.",
                         TextToSpeech.QUEUE_FLUSH, null, null);
             }
-        }, 3000);
+        }, 15000);
 
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void put_n(View view) {
         String current = ssn.getText().toString();

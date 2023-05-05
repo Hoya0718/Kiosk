@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="시간"
             android:textAlignment="center"
-            android:textSize="30sp" />
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -38,8 +38,14 @@
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:text="승차권 구매"
-            android:textSize="18sp"
-            tools:layout_marginBottom="20dp" />
+            android:textSize="40sp"
+            android:gravity="center"
+            tools:layout_marginBottom="20dp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
 
         <Button
             android:id="@+id/button10"
@@ -50,8 +56,14 @@
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:text="예매한 승차권"
-            android:textSize="18sp"
-            tools:layout_marginBottom="20dp" />
+            android:textSize="40sp"
+            android:gravity="center"
+            tools:layout_marginBottom="20dp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
 
         <Button
             android:id="@+id/button11"
@@ -62,7 +74,13 @@
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:text="승차권 환불"
-            android:textSize="18sp"
-            tools:layout_marginBottom="20dp" />
+            android:textSize="40sp"
+            android:gravity="center"
+            tools:layout_marginBottom="20dp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
     </LinearLayout>
 </LinearLayout>

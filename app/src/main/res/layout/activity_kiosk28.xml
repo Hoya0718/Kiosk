@@ -56,7 +56,7 @@
             android:layout_marginBottom="50dp"
             android:gravity="center"
             android:onClick="goto_kiosk_29"
-            android:text="수방 및 처방전 발행"
+            android:text="수납 및 처방전 발행"
             android:textSize="18sp" />
     </LinearLayout>
 

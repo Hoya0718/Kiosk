@@ -18,25 +18,34 @@ public class Kiosk_24 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk24);
-
         sound = (myapp) getApplication();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                    speakText("병원에 있는 키오스크를 교육하는 단계입니다. 병원 버튼을 눌러주세요.");
                 }
             }
         });
+
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("병원 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                tts.speak("여기에있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
             }
-        }, 3000);
+        }, 15000);
 
+    }
+
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void goto_kiosk_25(View v){
 

@@ -28,7 +28,9 @@ public class Kiosk_18 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("좌석 선택 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                    tts.speak("가고 싶은 곳을 고르셨나요? 그럼 이제" +
+                            "버스가 출발하는 시간, 버스 종류를 확인하시고" +
+                            "타고 싶은 버스의 좌석 선택 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
                     Intent intent = getIntent();
                     String destination = intent.getStringExtra("destination");
 

@@ -29,7 +29,8 @@ public class Kiosk_14 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("승차권 구매 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                    tts.speak("이 화면에서는 버스 표를 구매하실 수 있습니다." +
+                            "승차권 구매 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
 
                     textView11 = (TextView) findViewById(R.id.textView11);
 

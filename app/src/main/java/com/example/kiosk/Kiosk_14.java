@@ -20,7 +20,7 @@ public class Kiosk_14 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private Button button9;
-    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/M/d/E요일", Locale.KOREAN);
+    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/MMM/d/E요일", Locale.KOREAN);
     TextView textView11;
 
     @Override
@@ -42,9 +42,9 @@ public class Kiosk_14 extends AppCompatActivity {
                     SimpleDateFormat format;
 
                     if(getResources().getConfiguration().locale.getLanguage().equals("kr"))
-                        format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.KOREAN);
+                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.KOREAN);
                     else
-                        format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
+                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
 
 
 

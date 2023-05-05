@@ -16,7 +16,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class Kiosk_15 extends AppCompatActivity {
-    private SimpleDateFormat mFormat = new SimpleDateFormat("MM dd (E)", Locale.KOREAN);
+    private SimpleDateFormat mFormat = new SimpleDateFormat("MMM dd (E)", Locale.KOREAN);
     TextView textView10;
     private TextToSpeech tts;
 
@@ -41,7 +41,10 @@ public class Kiosk_15 extends AppCompatActivity {
 
                     SimpleDateFormat format;
 
-                    format = new SimpleDateFormat("MM월 dd일 (E)", Locale.KOREAN);
+                    if(getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.KOREAN);
+                    else
+                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
                     textView10.setText(format.format(c.getTime()));
 
                     button15 = findViewById(R.id.button15);

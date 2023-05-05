@@ -25,7 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="@string/b_Mokpo"
+                android:text="목포"
                 android:textSize="30sp"
                 android:gravity="center"/>
 
@@ -44,7 +44,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:text="@string/b_arrive1"
+                android:text="목적지"
                 android:textSize="30sp"/>
 
 

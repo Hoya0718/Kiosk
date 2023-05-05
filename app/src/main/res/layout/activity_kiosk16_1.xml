@@ -9,107 +9,97 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1.3"
+        android:layout_weight="2"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/button_seoul"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="서울" />
 
         <Button
             android:id="@+id/button_gyeongi"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="인천/경기" />
 
         <Button
             android:id="@+id/button_kangwon"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="강원" />
 
         <Button
             android:id="@+id/button_sejong"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="대전/세종" />
 
         <Button
             android:id="@+id/button_chungnam"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="충남" />
 
         <Button
             android:id="@+id/button_chungbuk"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="충북" />
 
         <Button
             android:id="@+id/button_kwangju"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="광주/전남" />
 
         <Button
             android:id="@+id/button_jeonbuk"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="전북" />
 
         <Button
             android:id="@+id/butto_busan"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="부산/경남" />
 
         <Button
             android:id="@+id/button_daegu"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:text="대구/경북" />
     </LinearLayout>
 
@@ -122,145 +112,101 @@
         <Button
             android:id="@+id/button27"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㄱ" />
 
         <Button
             android:id="@+id/button26"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㄴ" />
 
         <Button
             android:id="@+id/button25"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㄷ" />
 
         <Button
             android:id="@+id/button24"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㄹ" />
 
         <Button
             android:id="@+id/button23"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅁ" />
 
         <Button
             android:id="@+id/button32"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅂ" />
 
         <Button
             android:id="@+id/button31"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅅ" />
 
         <Button
             android:id="@+id/button30"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅇ" />
 
         <Button
             android:id="@+id/button29"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅈ" />
 
         <Button
             android:id="@+id/button28"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅊ" />
 
         <Button
             android:id="@+id/button34"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅋ" />
 
         <Button
             android:id="@+id/button35"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅌ" />
 
         <Button
             android:id="@+id/button36"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅍ" />
 
         <Button
             android:id="@+id/button37"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="3dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:text="ㅎ" />
-
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="0dp"
@@ -271,13 +217,21 @@
         <Button
             android:id="@+id/button_central"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
             android:text="센트럴시티" />
 
         <Button
             android:id="@+id/button_eastseoul"
             android:layout_width="match_parent"
-            android:layout_height="363dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
             android:text="동서울" />
     </LinearLayout>
 </LinearLayout>

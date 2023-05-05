@@ -78,4 +78,12 @@ public class Kiosk_29_2 extends AppCompatActivity {
         else
             Toast.makeText(getApplicationContext(), "체크박스를 확인해주세요", Toast.LENGTH_LONG).show();
     }
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
+    }
 }

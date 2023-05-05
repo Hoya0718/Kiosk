@@ -39,4 +39,12 @@ public class Kiosk_31 extends AppCompatActivity {
         Intent goto_MainActivity = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(goto_MainActivity);
     }
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
+    }
 }

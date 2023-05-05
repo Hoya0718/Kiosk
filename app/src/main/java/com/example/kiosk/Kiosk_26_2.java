@@ -122,4 +122,12 @@ public class Kiosk_26_2 extends AppCompatActivity {
                 break;
         }
     }
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
+    }
 }

@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:orientation="vertical">
 
         <ImageView
@@ -39,7 +39,7 @@
             android:id="@+id/personal_Information"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:text="@string/accept_personal_information"
             android:textSize="@dimen/font_size_medium" />
 
@@ -47,7 +47,7 @@
             android:id="@+id/SSN"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.9"
             android:gravity="center"
             android:hint="@string/ssn"
             android:maxLength="14"
@@ -71,6 +71,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_1_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -82,6 +83,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_2_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -93,6 +95,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_3_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -110,6 +113,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_4_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -121,6 +125,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_5_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -132,6 +137,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_6_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -149,6 +155,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_7_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -160,6 +167,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_8_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -171,6 +179,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_9_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -188,6 +197,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_CL_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -199,6 +209,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="put_n"
                 android:text="@string/num_0_btn"
                 android:textSize="@dimen/font_size_medium" />
@@ -210,9 +221,16 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:onClick="goto_kiosk_26_2"
                 android:text="@string/check"
                 android:textSize="@dimen/font_size_medium" />
         </TableRow>
     </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical"></LinearLayout>
 </LinearLayout>

@@ -22,9 +22,6 @@
             android:name=".Kiosk_30_2"
             android:exported="false" />
         <activity
-            android:name=".Kiosk_32"
-            android:exported="false" />
-        <activity
             android:name=".Kiosk_31"
             android:exported="false" />
         <activity

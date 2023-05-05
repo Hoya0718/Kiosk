@@ -30,7 +30,7 @@ public class Kiosk_14 extends AppCompatActivity {
 
         SimpleDateFormat format;
 
-        format = new SimpleDateFormat("yyyy/MM/dd(E)-HH:mm:ss", Locale.KOREAN);
+        format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.KOREAN);
         textView11.setText(format.format(c.getTime()));
 
         button9 = findViewById(R.id.button9);

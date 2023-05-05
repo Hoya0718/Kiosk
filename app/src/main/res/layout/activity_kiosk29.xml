@@ -32,7 +32,7 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="진료비 영수증이나 진료안내서가 없으신 분은\n진료카드 번호 또는 주민등록번호 입력 후\n 확인을 눌러주세요."
+            android:text="@string/hospital_list_4"
             android:textSize="18sp" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:hint="주민등록번호 입력(- 제외)"
+            android:hint="@string/ssn_2"
             android:maxLength="14"
             android:textSize="18sp" />
     </LinearLayout>
@@ -70,7 +70,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="1"
+                android:text="@string/ssn_btn_1"
                 android:textSize="18sp" />
 
             <Button
@@ -81,7 +81,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="2"
+                android:text="@string/ssn_btn_2"
                 android:textSize="18sp" />
 
             <Button
@@ -92,7 +92,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="3"
+                android:text="@string/ssn_btn_3"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -109,7 +109,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="4"
+                android:text="@string/ssn_btn_4"
                 android:textSize="18sp" />
 
             <Button
@@ -120,7 +120,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="5"
+                android:text="@string/ssn_btn_5"
                 android:textSize="18sp" />
 
             <Button
@@ -131,7 +131,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="6"
+                android:text="@string/ssn_btn_6"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -148,7 +148,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="7"
+                android:text="@string/ssn_btn_7"
                 android:textSize="18sp" />
 
             <Button
@@ -159,7 +159,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="8"
+                android:text="@string/ssn_btn_8"
                 android:textSize="18sp" />
 
             <Button
@@ -170,7 +170,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="9"
+                android:text="@string/ssn_btn_9"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -187,7 +187,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="정정"
+                android:text="@string/ssn_btn_CL"
                 android:textSize="18sp" />
 
             <Button
@@ -198,7 +198,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="put_n"
-                android:text="0"
+                android:text="@string/ssn_btn_0"
                 android:textSize="18sp" />
 
             <Button
@@ -209,7 +209,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="goto_kiosk_29_2"
-                android:text="확인"
+                android:text="@string/ssn_btn_check"
                 android:textSize="18sp" />
         </TableRow>
     </TableLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,6 +16,8 @@ public class Kiosk_13 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk13);
+
+
 
         button7 = findViewById(R.id.button7);
         button7.setOnClickListener(new View.OnClickListener() {

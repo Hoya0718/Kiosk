@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="진료받기 원하시는 진료과목을 선택해주세요."
+            android:text="@string/medical_Department"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -38,7 +38,7 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
-            android:text="호흡기 내과"
+            android:text="@string/respiratory"
             android:textSize="18sp" />
 
         <Button
@@ -51,7 +51,7 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
-            android:text="심장내과"
+            android:text="@string/cardiology"
             android:textSize="18sp" />
 
         <Button
@@ -64,7 +64,7 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
-            android:text="신경외과"
+            android:text="@string/neurosurgery"
             android:textSize="18sp" />
 
         <Button
@@ -77,7 +77,7 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
-            android:text="정형외과"
+            android:text="@string/orthopedics"
             android:textSize="18sp" />
 
         <Button
@@ -90,7 +90,7 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
-            android:text="비뇨기과"
+            android:text="@string/urology"
             android:textSize="18sp" />
 
         <Button
@@ -103,7 +103,7 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
-            android:text="가정의학과"
+            android:text="@string/department_Family_Medicine"
             android:textSize="18sp" />
 
         <Button
@@ -116,7 +116,7 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
-            android:text="소화기내과"
+            android:text="@string/gastroenterology"
             android:textSize="18sp" />
 
     </LinearLayout>

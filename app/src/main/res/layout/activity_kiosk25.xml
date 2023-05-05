@@ -20,7 +20,7 @@
             android:layout_marginTop="50dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="접수/수납을 하시려면\n아래 버튼을 선택해주세요!"
+            android:text="@string/hospital_list"
             android:textSize="18sp" />
     </LinearLayout>
 

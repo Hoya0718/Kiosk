@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="수납 및 처방전 발행"
+            android:text="@string/prescription"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -33,7 +33,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="진료일"
+            android:text="@string/diagnosis_day"
             android:textSize="18sp" />
 
         <TextView
@@ -42,7 +42,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="진료과"
+            android:text="@string/diagnosis_list"
             android:textSize="18sp" />
 
         <TextView
@@ -51,7 +51,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="수납 금액"
+            android:text="@string/diagnosis_money"
             android:textSize="18sp" />
 
         <TextView
@@ -60,7 +60,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="수납여부체크"
+            android:text="@string/diagnosis_check"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -123,7 +123,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="13000원"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView62"
@@ -179,7 +180,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="총수납액:"
+                android:text="@string/diagnosis_total_money"
                 android:textSize="18sp" />
 
             <TextView
@@ -188,7 +189,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="13000원"
+                android:text="@string/_13000"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -211,7 +212,7 @@
                     android:layout_weight="1"
                     android:height="0dp"
                     android:gravity="center"
-                    android:text="환  자   성  명:"
+                    android:text="@string/hospital_name"
                     android:textSize="18sp" />
 
                 <TextView
@@ -220,7 +221,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="홍길동"
+                    android:text="@string/Hong_2"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -237,7 +238,7 @@
                     android:layout_weight="1"
                     android:height="0dp"
                     android:gravity="center"
-                    android:text="주민등록번호:"
+                    android:text="@string/ssn_3"
                     android:textSize="18sp" />
 
                 <TextView
@@ -263,7 +264,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="[신용카드결제] 결제방법을 선택해주세요."
+                android:text="@string/howto_money"
                 android:textSize="18sp" />
 
             <TextView
@@ -272,7 +273,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="각 진료과 기준 5만원 이상 할부가능"
+                android:text="@string/money_50000"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -295,7 +296,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="4"
                 android:onClick="goto_kiosk_30"
-                android:text="지불하기" />
+                android:text="@string/pay" />
 
             <TextView
                 android:id="@+id/textView80"

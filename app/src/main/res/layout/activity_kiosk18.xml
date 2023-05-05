@@ -25,7 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="목포"
+                android:text="@string/b_Mokpo"
                 android:textSize="30sp"
                 android:gravity="center"/>
 
@@ -44,7 +44,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:text="목적지"
+                android:text="@string/b_arrive1"
                 android:textSize="30sp"/>
 
 
@@ -63,7 +63,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:text="출발 시간"/>
+                android:text="@string/b_starttime"/>
 
             <TextView
                 android:id="@+id/textView52"
@@ -72,7 +72,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:text="버스 종류"/>
+                android:text="@string/b_bustype"/>
 
             <TextView
                 android:id="@+id/textView53"
@@ -81,7 +81,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:text="소요 시간"/>
+                android:text="@string/b_usetime"/>
 
             <TextView
                 android:id="@+id/textView54"
@@ -90,7 +90,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:text="좌석 선택"/>
+                android:text="@string/b_seatcollect"/>
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,7 +105,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="8시 30분"/>
+            android:text="@string/_8_30"/>
 
         <TextView
             android:id="@+id/textView20"
@@ -114,7 +114,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="우등버스"/>
+            android:text="@string/b_honor"/>
 
         <TextView
             android:id="@+id/textView21"
@@ -123,7 +123,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="40분"/>
+            android:text="@string/_40"/>
 
         <Button
             android:id="@+id/button17"
@@ -132,7 +132,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="좌석 선택"
+            android:text="@string/b_seat1"
             android:textStyle="bold"
             android:backgroundTint="@android:color/holo_orange_dark"/>
     </LinearLayout>
@@ -150,7 +150,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="8시 40분"/>
+            android:text="@string/_8_40"/>
 
         <TextView
             android:id="@+id/textView22"
@@ -159,7 +159,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="고속버스"/>
+            android:text="@string/b_speedbus"/>
 
         <TextView
             android:id="@+id/textView23"
@@ -168,7 +168,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="1시간 10분"/>
+            android:text="@string/_1_10"/>
 
         <Button
             android:id="@+id/button87"
@@ -177,7 +177,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="매진"
+            android:text="@string/b_all1"
             android:backgroundTint="@android:color/darker_gray"/>
     </LinearLayout>
 
@@ -194,7 +194,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="8시 50분"/>
+            android:text="@string/_8_50"/>
 
         <TextView
             android:id="@+id/textView24"
@@ -203,7 +203,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="일반버스"/>
+            android:text="@string/b_normal"/>
         <TextView
             android:id="@+id/textView25"
             android:layout_width="0dp"
@@ -211,13 +211,13 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="1시 30분"/>
+            android:text="@string/_1_30"/>
         <Button
             android:id="@+id/button88"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="매진"
+            android:text="@string/b_all2"
             android:gravity="center"
             android:textSize="15sp"
             android:backgroundTint="@android:color/darker_gray"/>
@@ -236,7 +236,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="9시 20분"/>
+                android:text="@string/_9_20"/>
 
             <TextView
                 android:id="@+id/textView26"
@@ -245,7 +245,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="우등버스"/>
+                android:text="@string/b_honorbus1"/>
 
             <TextView
                 android:id="@+id/textView27"
@@ -254,7 +254,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="40분" />
+                android:text="@string/_40_1" />
             <Button
                 android:id="@+id/button86"
                 android:layout_width="0dp"
@@ -262,7 +262,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="매진"
+                android:text="@string/b_all3"
                 android:backgroundTint="@android:color/darker_gray"/>
         </LinearLayout>
 
@@ -279,7 +279,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="9시 40분"/>
+                android:text="@string/_9_40"/>
 
             <TextView
                 android:id="@+id/textView28"
@@ -288,7 +288,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="고속버스"/>
+                android:text="@string/b_speedbus2"/>
             <TextView
                 android:id="@+id/textView29"
                 android:layout_width="0dp"
@@ -296,7 +296,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="1시간 10분"/>
+                android:text="@string/_1_10_1"/>
             <Button
                 android:id="@+id/button41"
                 android:layout_width="0dp"
@@ -304,7 +304,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="좌석 선택"
+                android:text="@string/b_seat2"
                 android:textStyle="bold"
                 android:backgroundTint="@android:color/holo_orange_dark"/>
         </LinearLayout>
@@ -322,7 +322,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="10시 00분"/>
+                android:text="@string/_10_00"/>
 
             <TextView
                 android:id="@+id/textView30"
@@ -331,7 +331,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="일반버스"/>
+                android:text="@string/b_normal2"/>
             <TextView
                 android:id="@+id/textView31"
                 android:layout_width="0dp"
@@ -339,7 +339,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="1시간 30분"/>
+                android:text="@string/_1_30_1"/>
             <Button
                 android:id="@+id/button42"
                 android:layout_width="0dp"
@@ -347,7 +347,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="좌석 선택"
+                android:text="@string/b_seat3"
                 android:textStyle="bold"
                 android:backgroundTint="@android:color/holo_orange_dark"/>
         </LinearLayout>

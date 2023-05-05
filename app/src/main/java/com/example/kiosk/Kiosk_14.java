@@ -8,9 +8,12 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import android.widget.Toast;
 
 
 public class Kiosk_14 extends AppCompatActivity {
@@ -20,11 +23,11 @@ public class Kiosk_14 extends AppCompatActivity {
     private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/M/d/E요일", Locale.KOREAN);
     TextView textView11;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk14);
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
@@ -38,7 +41,13 @@ public class Kiosk_14 extends AppCompatActivity {
 
                     SimpleDateFormat format;
 
-                    format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.KOREAN);
+                    if(Locale.getDefault().getLanguage().equals("ko"))
+                        format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.KOREAN);
+                    else
+                        format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
+
+
+
                     textView11.setText(format.format(c.getTime()));
 
                     button9 = findViewById(R.id.button9);

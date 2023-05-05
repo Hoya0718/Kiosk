@@ -34,6 +34,7 @@ public class Kiosk_25 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                    speakText("접수를 하기위해 보이는 창입니다. 접수하기를 눌러주세요.");
                 }
             }
         });
@@ -43,9 +44,15 @@ public class Kiosk_25 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("접수 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                tts.speak("접수하기는 여기에 있어요 접수하기를 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
             }
-        }, 3000);
+        }, 15000);
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void goto_kiosk_26(View v){
             tts.shutdown();

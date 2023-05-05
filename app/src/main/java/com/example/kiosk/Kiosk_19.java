@@ -62,6 +62,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             intent.putExtra("seat", "좌석 번호 : 3B");
                             String price = intent1.getStringExtra("price");
                             intent.putExtra("price", price);
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -78,6 +79,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             intent.putExtra("seat", "좌석 번호 : 4B");
                             String price = intent1.getStringExtra("price");
                             intent.putExtra("price", price);
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -93,6 +95,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             intent.putExtra("seat", "좌석 번호 : 4A");
                             String price = intent1.getStringExtra("price");
                             intent.putExtra("price", price);
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -108,6 +111,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             intent.putExtra("seat", "좌석 번호 : 2B");
                             String price = intent1.getStringExtra("price");
                             intent.putExtra("price", price);
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -123,6 +127,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             intent.putExtra("seat", "좌석 번호 : 5D");
                             String price = intent1.getStringExtra("price");
                             intent.putExtra("price", price);
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -138,6 +143,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             intent.putExtra("seat", "좌석 번호 : 5C");
                             String price = intent1.getStringExtra("price");
                             intent.putExtra("price", price);
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -153,6 +159,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             intent.putExtra("seat", "좌석 번호 : 2C");
                             String price = intent1.getStringExtra("price");
                             intent.putExtra("price", price);
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });
@@ -168,6 +175,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             intent.putExtra("seat", "좌석 번호 : 2D");
                             String price = intent1.getStringExtra("price");
                             intent.putExtra("price", price);
+                            tts.shutdown();
                             startActivity(intent);
                         }
                     });

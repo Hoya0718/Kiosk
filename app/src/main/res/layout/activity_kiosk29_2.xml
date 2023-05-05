@@ -122,9 +122,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="13000원"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText" />
+                android:text="@string/_13000_3"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView62"

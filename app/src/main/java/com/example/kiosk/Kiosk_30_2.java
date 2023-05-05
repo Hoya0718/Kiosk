@@ -45,6 +45,7 @@ public class Kiosk_30_2 extends AppCompatActivity {
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void goto_kiosk_31(View v){
+        tts.shutdown();
         Intent goto_kiosk_31 = new Intent(this, Kiosk_31.class);
         startActivity(goto_kiosk_31);
     }

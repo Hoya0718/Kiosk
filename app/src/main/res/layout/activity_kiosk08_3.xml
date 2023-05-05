@@ -176,7 +176,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/snacksan" />
 
@@ -185,7 +185,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/snackshu" />
 
@@ -194,7 +194,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/mcnurget" />
             </TableRow>
@@ -209,7 +209,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="10dp"
                     android:backgroundTint="#FFA500"
                     android:onClick="popup_kiosk_08_4"
@@ -220,7 +220,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/hashbra" />
 
@@ -229,7 +229,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/chickentender" />
             </TableRow>
@@ -244,7 +244,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/chezstick" />
 
@@ -253,7 +253,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/cuol" />
 
@@ -262,7 +262,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/churu" />
             </TableRow>
@@ -277,7 +277,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/iceba" />
 
@@ -286,7 +286,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/iceco" />
 
@@ -295,7 +295,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/icesu" />
             </TableRow>

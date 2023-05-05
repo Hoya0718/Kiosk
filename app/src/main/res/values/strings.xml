@@ -139,6 +139,5 @@
     <string name="_1_1">1/1 출력완료</string>
     <string name="check_2">확인</string>
     <string name="taecho">처음으로 돌아가기</string>
-    <string name="acceptance_2">수납 및 처방전 발행</string>
-    <string name="acceptance_2">수납 및 처방전 발행</string>
+    <string name="acception_2">수납 및 처방전 발행</string>
 </resources>

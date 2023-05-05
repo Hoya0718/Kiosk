@@ -101,7 +101,6 @@
     <string name="printing">Print out the receipt</string>
     <string name="hospital_list_3">Please select the button below to register/receive!</string>
     <string name="receipt_2">" Receipt"</string>
-    <string name="acceptance_2">Receiving and issuing prescriptions</string>
     <string name="ssn_2">Enter your resident registration number (Exclude \'-\')</string>
     <string name="hospital_list_4">If you don\'t have a medical fee receipt or a medical guide, please enter your medical card number or resident registration number and click OK.</string>
     <string name="ssn_btn_1">1</string>
@@ -141,4 +140,5 @@
     <string name="_1_1">Output Completed</string>
     <string name="check_2">Check</string>
     <string name="taecho">First</string>
+    <string name="acception_2">Issuing a prescription</string>
 </resources>

@@ -233,7 +233,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:text="12300"
+                android:text="8,400"
                 android:textSize="18sp" />
 
             <Button

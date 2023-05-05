@@ -60,16 +60,15 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_weight="1"
+        android:layout_height="70dp"
         android:gravity="center"
         android:text="빅맥"
         android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4.4"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -102,8 +101,10 @@
         <Button
             android:id="@+id/button39"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:text="세트"
             android:onClick="popup_kiosk_08_3"
             android:textSize="18sp" />
@@ -111,20 +112,22 @@
         <Button
             android:id="@+id/button38"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="라지 세트"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="라지"
             android:textSize="18sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="100dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="50dp"
         android:layout_weight="2"
         android:text="취소하기"
         android:onClick="popup_kiosk_08_1"

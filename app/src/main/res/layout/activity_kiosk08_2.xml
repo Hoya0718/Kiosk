@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
-            android:text="빅맥"
+            android:text="@string/big_mc"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -98,7 +98,7 @@
                     android:id="@+id/textView47"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="주문 확인하기" />
+                    android:text="@string/check_order" />
 
             </LinearLayout>
 
@@ -119,7 +119,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FFA500"
                 android:onClick="popup_kiosk_08_3"
-                android:text="세트"
+                android:text="@string/set_menu"
                 android:textSize="18sp" />
 
             <Button
@@ -129,7 +129,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:text="라지"
+                android:text="@string/large_menu"
                 android:textSize="18sp" />
         </LinearLayout>
 

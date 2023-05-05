@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
-            android:text="세트메뉴 음료를 선택하세요"
+            android:text="@string/choose_drink"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -99,7 +99,7 @@
                     android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="빅맥 세트" />
+                    android:text="@string/big_mc_set" />
             </LinearLayout>
 
             <LinearLayout
@@ -118,7 +118,7 @@
                     android:id="@+id/textView45"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="후렌치 후라이" />
+                    android:text="@string/french_fries" />
             </LinearLayout>
 
             <LinearLayout
@@ -136,7 +136,7 @@
                     android:id="@+id/textView46"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="세트메뉴 음료를 선택하세요" />
+                    android:text="@string/choose_drink" />
             </LinearLayout>
 
             <LinearLayout
@@ -154,7 +154,7 @@
                     android:id="@+id/textView47"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="주문 확인하기" />
+                    android:text="@string/check_order" />
 
             </LinearLayout>
 

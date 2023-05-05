@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:gravity="center"
-            android:text="빅맥 - 라지세트\n₩8,400 1105kcal"
+            android:text="@string/total_menu"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -179,7 +179,7 @@
             android:layout_height="160dp"
             android:layout_weight="1.5"
             android:onClick="popup_kiosk_08_4"
-            android:text="취소"
+            android:text="@string/cancel_no"
             android:textSize="18sp" />
 
         <Button
@@ -189,7 +189,7 @@
             android:layout_weight="1"
             android:backgroundTint="#FFA500"
             android:onClick="popup_kiosk_08_6"
-            android:text="장바구니 추가"
+            android:text="@string/add_to_cart"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -204,7 +204,7 @@
             android:layout_width="160dp"
             android:layout_height="80dp"
             android:onClick="goto_kiosk_06"
-            android:text="처음으로"
+            android:text="@string/home"
             android:textSize="18sp" />
 
         <Button
@@ -212,7 +212,7 @@
             android:layout_width="160dp"
             android:layout_height="80dp"
             android:layout_marginLeft="30dp"
-            android:text="도움 기능"
+            android:text="@string/help_features"
             android:textSize="18sp" />
     </LinearLayout>
 

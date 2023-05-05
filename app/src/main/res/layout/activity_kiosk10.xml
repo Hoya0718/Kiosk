@@ -57,18 +57,24 @@
             android:textSize="18sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:gravity="center"
-        android:text="결제 방법을 선택해 주세요"
-        android:textSize="30sp" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:text="결제 방법을 선택해 주세요"
+            android:textSize="30sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:orientation="horizontal">
 
         <Button
@@ -80,9 +86,9 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
-            android:text="카드 결제"
             android:backgroundTint="#FFA500"
             android:onClick="goto_kiosk_11"
+            android:text="카드 결제"
             android:textSize="18sp" />
 
         <Button
@@ -95,19 +101,26 @@
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
             android:text="모바일 상품권"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button4"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="50dp"
-        android:layout_weight="2"
-        android:text="취소하기"
-        android:onClick="goto_kiosk_09"
-        android:textSize="18sp" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:onClick="goto_kiosk_09"
+            android:text="취소하기"
+            android:textSize="18sp" />
+    </LinearLayout>
+
 </LinearLayout>

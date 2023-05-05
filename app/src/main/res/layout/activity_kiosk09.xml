@@ -59,7 +59,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="462dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
         android:orientation="horizontal">
 
         <ScrollView
@@ -140,6 +141,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <TextView
@@ -163,60 +165,57 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/button12"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="160dp"
+            android:layout_weight="1.5"
+            android:text="추가 주문"
+            android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/button12"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_weight="1.5"
-                android:text="추가 주문"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button40"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_weight="1"
-                android:text="주문 완료"
-                android:backgroundTint="#FFA500"
-                android:onClick="goto_kiosk_10"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
+        <Button
+            android:id="@+id/button40"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/button13"
-                android:layout_width="160dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="처음으로"
-                android:onClick="goto_kiosk_06"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="160dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="도움 기능"
-                android:textSize="18sp" />
-        </LinearLayout>
+            android:layout_height="160dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FFA500"
+            android:onClick="goto_kiosk_10"
+            android:text="주문 완료"
+            android:textSize="18sp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:onClick="goto_kiosk_06"
+            android:text="처음으로"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="도움 기능"
+            android:textSize="18sp" />
+    </LinearLayout>
+
 </LinearLayout>

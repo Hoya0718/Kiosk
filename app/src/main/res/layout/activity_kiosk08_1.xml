@@ -81,6 +81,7 @@
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
             android:text="세트"
+            android:backgroundTint="#FFA500"
             android:onClick="popup_kiosk_08_2"
             android:textSize="18sp" />
 

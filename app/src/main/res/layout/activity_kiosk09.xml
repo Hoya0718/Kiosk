@@ -185,6 +185,7 @@
                 android:layout_height="160dp"
                 android:layout_weight="1"
                 android:text="주문 완료"
+                android:backgroundTint="#FFA500"
                 android:onClick="goto_kiosk_10"
                 android:textSize="18sp" />
         </LinearLayout>

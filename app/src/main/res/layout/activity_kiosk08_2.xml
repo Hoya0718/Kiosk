@@ -106,6 +106,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:text="세트"
+            android:backgroundTint="#FFA500"
             android:onClick="popup_kiosk_08_3"
             android:textSize="18sp" />
 

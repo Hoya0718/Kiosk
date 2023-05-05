@@ -82,7 +82,7 @@
             android:id="@+id/button16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="홈"
+            android:text="처음 화면으로 돌아가기"
             android:textSize="50sp" />
     </LinearLayout>
 </LinearLayout>

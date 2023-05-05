@@ -33,8 +33,6 @@ public class Kiosk_4 extends AppCompatActivity {
     private Button vsu;
     private Button pre;
     private Button next;
-
-    private TextView setting_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,17 +55,6 @@ public class Kiosk_4 extends AppCompatActivity {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-
-        setting_list = findViewById(R.id.setting_list);
-
-        String content = setting_list.getText().toString();
-        SpannableString spannableString = new SpannableString(content);
-        String word ="2. 음성 크기";
-        int start = content.indexOf(word);
-        int end = start + word.length();
-        spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#005B7A")), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableString.setSpan(new RelativeSizeSpan(1.5f), start, end, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
-        setting_list.setText(spannableString);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

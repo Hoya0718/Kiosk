@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Kiosk</string>
     <string name="english">English</string>
@@ -15,9 +16,6 @@
     <string name="speed_fast">빠르게</string>
     <string name="speed_normal">중간</string>
     <string name="speed_slow">느리게</string>
-    <string name="text_size"><![CDATA[1. 글자크기 -> 2. 음성 크기 -> 3. 음성 속도]]></string>
-    <string name="volume_speed"><![CDATA[1. 글자크기 -> 2. 음성 크기 -> 3. 음성 속도]]></string>
-    <string name="volume_size"><![CDATA[1. 글자크기 -> 2. 음성 크기 -> 3. 음성 속도]]></string>
     <string name="volume_medium">중간</string>
     <string name="volume_up">크게</string>
     <string name="previous_3">이전</string>
@@ -140,4 +138,19 @@
     <string name="check_2">확인</string>
     <string name="taecho">처음으로 돌아가기</string>
     <string name="acception_2">수납 및 처방전 발행</string>
+    <string name="arrow"><![CDATA[->]]></string>
+    <string name="textSize">1. 글자 크기</string>
+    <string name="volumeSize">2. 음성 크기</string>
+    <string name="arrow_5"><![CDATA[->]]></string>
+    <string name="arrow_6"><![CDATA[->]]></string>
+    <string name="volumeSpeed">3. 음성 속도</string>
+    <string name="TextSize">1. 글자 크기</string>
+    <string name="TextSize_2">1. 글자 크기</string>
+    <string name="arrow_7"><![CDATA[->]]></string>
+    <string name="volumeSpeed_2">2. 음성 크기</string>
+    <string name="arrow_8"><![CDATA[->]]></string>
+    <string name="volumeSpeed_3">3. 음성 속도</string>
+    <string name="VolumeSize">2. 음성 크기</string>
+    <string name="arrow_9"><![CDATA[->]]></string>
+    <string name="VolumeSpeed">3. 음성 속도</string>
 </resources>

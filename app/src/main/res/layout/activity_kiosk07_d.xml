@@ -239,7 +239,7 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_weight="1"
-            android:text="주문 내역"
+            android:text="@string/order_history"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -255,7 +255,7 @@
             android:layout_width="160dp"
             android:layout_height="80dp"
             android:onClick="goto_kiosk_06"
-            android:text="처음으로"
+            android:text="@string/home"
             android:textSize="18sp" />
 
         <Button
@@ -263,7 +263,7 @@
             android:layout_width="160dp"
             android:layout_height="80dp"
             android:layout_marginLeft="30dp"
-            android:text="도움 기능"
+            android:text="@string/help_features"
             android:textSize="18sp" />
     </LinearLayout>
 

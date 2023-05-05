@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
-            android:text="결제 방법을 선택해 주세요"
+            android:text="@string/select_payment"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -88,7 +88,7 @@
             android:layout_weight="1"
             android:backgroundTint="#FFA500"
             android:onClick="goto_kiosk_11"
-            android:text="카드 결제"
+            android:text="@string/card_payment"
             android:textSize="18sp" />
 
         <Button
@@ -100,7 +100,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
-            android:text="모바일 상품권"
+            android:text="@string/mobile_gift_certificate"
             android:textSize="18sp" />
     </LinearLayout>
 

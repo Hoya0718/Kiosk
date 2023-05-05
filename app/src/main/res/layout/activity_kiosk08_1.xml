@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
-            android:text="세트로 주문하시겠습니까?"
+            android:text="@string/order_to_set"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -88,7 +88,7 @@
             android:layout_weight="1"
             android:backgroundTint="#FFA500"
             android:onClick="popup_kiosk_08_2"
-            android:text="세트"
+            android:text="@string/set_menu"
             android:textSize="18sp" />
 
         <Button
@@ -100,7 +100,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
-            android:text="단품"
+            android:text="@string/single_item"
             android:textSize="18sp" />
     </LinearLayout>
 

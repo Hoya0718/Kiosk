@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
-            android:text="함께 즐기면 더욱 좋습니다"
+            android:text="@string/enjoy_together"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -116,7 +116,7 @@
             android:layout_marginBottom="30dp"
             android:backgroundTint="#FFA500"
             android:onClick="goto_kiosk_09"
-            android:text="선택안함"
+            android:text="@string/uncheck"
             android:textSize="18sp" />
     </LinearLayout>
 

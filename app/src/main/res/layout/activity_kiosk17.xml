@@ -217,52 +217,57 @@
 
         <Button
             android:id="@+id/button18"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="30dp"
+            android:layout_weight="1"
             android:text="마산" />
 
         <Button
             android:id="@+id/button20"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="30dp"
+            android:layout_weight="1"
             android:text="무안" />
 
         <Button
             android:id="@+id/button21"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="30dp"
+            android:layout_weight="1"
             android:text="무안공항" />
 
         <Button
             android:id="@+id/button22"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="30dp"
+            android:layout_weight="1"
             android:text="무주" />
 
         <Button
             android:id="@+id/button85"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="30dp"
+            android:layout_weight="1"
             android:text="마량" />
     </LinearLayout>
 </LinearLayout>

@@ -27,6 +27,11 @@ public class Kiosk_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk02);
+
+        float fontSizeLarge = getResources().getDimension(R.dimen.font_size_large);
+        float fontSizeMedium = getResources().getDimension(R.dimen.font_size_medium);
+        float fontSizeSmall = getResources().getDimension(R.dimen.font_size_small);
+
         text_size =(myapp) getApplication();
         korean_text = findViewById(R.id.korean_text);
 
@@ -44,8 +49,8 @@ public class Kiosk_2 extends AppCompatActivity {
         text_size.setId(16);
     }
     public void be_medium(View v){
-        korean_text.setTextSize(Dimension.SP,18);
-        text_size.setId(18);
+        korean_text.setTextSize(Dimension.SP,22);
+        text_size.setId(22);
     }
     public void be_up(View v){
         korean_text.setTextSize(Dimension.SP,26);

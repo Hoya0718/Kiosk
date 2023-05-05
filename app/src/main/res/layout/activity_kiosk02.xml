@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="4"
         android:orientation="vertical">
 
         <LinearLayout
@@ -24,138 +24,147 @@
             <TextView
                 android:id="@+id/textSize"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:text="@string/textSize"
                 android:textColor="#033359"
-                android:textSize="40sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView90"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/arrow"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView91"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:text="@string/VolumeSize"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView92"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/arrow_9"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView93"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:text="@string/VolumeSpeed"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/korean_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/korean_text"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
+            android:layout_weight="1.5"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/size_down_Btn"
                 android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="50dp"
                 android:layout_weight="1"
                 android:onClick="be_down"
                 android:text="@string/text_size_small"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/size_medium_btn"
                 android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="50dp"
                 android:layout_weight="1"
                 android:onClick="be_medium"
                 android:text="@string/text_size_medium"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/size_up_Btn"
                 android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="50dp"
                 android:layout_weight="1"
                 android:onClick="be_up"
                 android:text="@string/text_size_big"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
+
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/pre_Btn"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="50dp"
             android:layout_weight="1"
             android:onClick="goto_main"
             android:text="@string/previous"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/save_Btn"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="50dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_04"
             android:text="@string/next"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"></LinearLayout>
 </LinearLayout>

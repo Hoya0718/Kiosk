@@ -10,32 +10,42 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.3"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/practice_Btn"
             android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk02"
             android:text="@string/set_practice"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/real_Btn"
             android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="@string/set_real"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,7 +65,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/select_language"
-                android:textSize="18sp" />
+                android:textSize="30dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,25 +77,32 @@
             <Button
                 android:id="@+id/korean_Btn"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="change_to_korean"
                 android:text="@string/set_korean"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/english_Btn"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:onClick="change_to_english"
                 android:text="@string/english"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"></LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

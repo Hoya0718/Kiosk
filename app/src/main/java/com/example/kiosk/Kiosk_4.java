@@ -37,6 +37,11 @@ public class Kiosk_4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk04);
+
+        float fontSizeLarge = getResources().getDimension(R.dimen.font_size_large);
+        float fontSizeMedium = getResources().getDimension(R.dimen.font_size_medium);
+        float fontSizeSmall = getResources().getDimension(R.dimen.font_size_small);
+
         text_size = (myapp) getApplication();
         sound = (myapp)getApplication();
         vsd = findViewById(R.id.volume_size_down);

@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        float fontSizeLarge = getResources().getDimension(R.dimen.font_size_large);
     }
     public void goto_kiosk02(View v){
         Intent intent = new Intent(getApplicationContext(),Kiosk_2.class);

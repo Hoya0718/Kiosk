@@ -40,7 +40,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/all_money"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView87"
@@ -49,7 +49,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/_13000_2"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,7 +65,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/installment_month"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView57"
@@ -74,7 +74,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/lump_sum"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
         </LinearLayout>
 
@@ -113,7 +113,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/patient_name"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size_medium"
                 tools:layout_weight="1" />
 
             <TextView
@@ -123,7 +123,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/Hong_3"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size_medium"
                 tools:layout_weight="1" />
         </LinearLayout>
 
@@ -146,7 +146,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/output_status"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size_medium"
                 tools:layout_weight="1" />
 
             <TextView
@@ -156,7 +156,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/_1_1"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size_medium"
                 tools:layout_weight="1" />
         </LinearLayout>
 
@@ -171,6 +171,6 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_31"
             android:text="@string/check_2"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 </LinearLayout>

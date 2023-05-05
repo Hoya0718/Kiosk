@@ -32,7 +32,7 @@
             android:enabled="false"
             android:onClick="goto_kiosk_14"
             android:text="@string/bus"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/hospital_btn"
@@ -45,7 +45,7 @@
             android:enabled="false"
             android:onClick="goto_kiosk_25"
             android:text="@string/hospital"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/fastfood_btn"
@@ -57,7 +57,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_06"
             android:text="@string/food"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout

@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/medical_Department"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,7 +39,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
             android:text="@string/respiratory"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/btn_2"
@@ -52,7 +52,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
             android:text="@string/cardiology"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/btn_3"
@@ -65,7 +65,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
             android:text="@string/neurosurgery"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/btn_4"
@@ -78,7 +78,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
             android:text="@string/orthopedics"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/btn_5"
@@ -91,7 +91,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
             android:text="@string/urology"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/btn_6"
@@ -104,7 +104,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
             android:text="@string/department_Family_Medicine"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/btn_7"
@@ -117,7 +117,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_27"
             android:text="@string/gastroenterology"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
     </LinearLayout>
 

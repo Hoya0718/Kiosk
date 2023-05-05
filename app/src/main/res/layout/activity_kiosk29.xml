@@ -33,7 +33,7 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="@string/hospital_list_4"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <TextView
             android:id="@+id/textView49"
@@ -49,7 +49,7 @@
             android:gravity="center"
             android:hint="@string/ssn_2"
             android:maxLength="14"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <TableLayout
@@ -71,7 +71,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_1"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_2"
@@ -82,7 +82,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_2"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_3"
@@ -93,7 +93,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_3"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </TableRow>
 
         <TableRow
@@ -110,7 +110,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_4"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_5"
@@ -121,7 +121,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_5"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_6"
@@ -132,7 +132,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_6"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </TableRow>
 
         <TableRow
@@ -149,7 +149,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_7"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_8"
@@ -160,7 +160,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_8"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_9"
@@ -188,7 +188,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_CL"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_0"
@@ -199,7 +199,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/ssn_btn_0"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/Check"
@@ -210,7 +210,7 @@
                 android:layout_weight="1"
                 android:onClick="goto_kiosk_29_2"
                 android:text="@string/ssn_btn_check"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

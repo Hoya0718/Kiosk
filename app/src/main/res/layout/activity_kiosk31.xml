@@ -26,5 +26,5 @@
         android:layout_weight="1"
         android:onClick="goto_MainActivity"
         android:text="@string/taecho"
-        android:textSize="18sp" />
+        android:textSize="@dimen/font_size_medium" />
 </LinearLayout>

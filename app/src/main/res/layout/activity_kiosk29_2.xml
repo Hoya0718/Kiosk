@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/prescription"
-            android:textSize="30sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout
@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/diagnosis_day"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <TextView
             android:id="@+id/textView72"
@@ -43,7 +43,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/diagnosis_list"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <TextView
             android:id="@+id/textView73"
@@ -52,7 +52,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/diagnosis_money"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <TextView
             android:id="@+id/textView74"
@@ -61,7 +61,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/diagnosis_check"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout
@@ -80,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView60"
@@ -101,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView63"
@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/_13000_3"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView62"
@@ -180,7 +180,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/diagnosis_total_money"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView77"
@@ -189,7 +189,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/_13000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 
         <LinearLayout
@@ -212,7 +212,7 @@
                     android:height="0dp"
                     android:gravity="center"
                     android:text="@string/hospital_name"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/font_size_medium" />
 
                 <TextView
                     android:id="@+id/textView82"
@@ -221,7 +221,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/Hong_2"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/font_size_medium" />
             </LinearLayout>
 
             <LinearLayout
@@ -238,7 +238,7 @@
                     android:height="0dp"
                     android:gravity="center"
                     android:text="@string/ssn_3"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/font_size_medium" />
 
                 <TextView
                     android:id="@+id/pnpn"
@@ -246,7 +246,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/font_size_medium" />
             </LinearLayout>
 
         </LinearLayout>
@@ -264,7 +264,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/howto_money"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView70"
@@ -273,7 +273,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/money_50000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 
         <LinearLayout
@@ -297,7 +297,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="4"
                 android:onClick="goto_kiosk_30"
-                android:text="@string/pay" />
+                android:text="@string/pay"
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView80"

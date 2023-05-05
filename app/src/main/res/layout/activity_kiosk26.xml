@@ -33,14 +33,15 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="@string/hospital_list_2"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <CheckBox
             android:id="@+id/personal_Information"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/accept_personal_information" />
+            android:text="@string/accept_personal_information"
+            android:textSize="@dimen/font_size_medium" />
 
         <TextView
             android:id="@+id/SSN"
@@ -50,7 +51,7 @@
             android:gravity="center"
             android:hint="@string/ssn"
             android:maxLength="14"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <TableLayout
@@ -72,7 +73,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_1_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_2"
@@ -83,7 +84,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_2_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_3"
@@ -94,7 +95,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_3_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </TableRow>
 
         <TableRow
@@ -111,7 +112,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_4_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_5"
@@ -122,7 +123,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_5_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_6"
@@ -133,7 +134,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_6_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </TableRow>
 
         <TableRow
@@ -150,7 +151,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_7_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_8"
@@ -161,7 +162,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_8_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_9"
@@ -172,7 +173,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_9_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </TableRow>
 
         <TableRow
@@ -189,7 +190,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_CL_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/num_0"
@@ -200,7 +201,7 @@
                 android:layout_weight="1"
                 android:onClick="put_n"
                 android:text="@string/num_0_btn"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <Button
                 android:id="@+id/Check"
@@ -211,7 +212,7 @@
                 android:layout_weight="1"
                 android:onClick="goto_kiosk_26_2"
                 android:text="@string/check"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

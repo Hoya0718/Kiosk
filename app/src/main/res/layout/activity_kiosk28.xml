@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/hospital_list_3"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout
@@ -38,7 +38,7 @@
             android:enabled="false"
             android:gravity="center"
             android:text="@string/receipt_2"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,7 +57,7 @@
             android:gravity="center"
             android:onClick="goto_kiosk_29"
             android:text="@string/acception_2"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout

@@ -41,7 +41,7 @@
             android:layout_weight="1"
             android:onClick="goto_kiosk_26"
             android:text="@string/receipt"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
 
     </LinearLayout>
 
@@ -63,7 +63,7 @@
             android:enabled="false"
             android:onClick="goto_kiosk_28"
             android:text="@string/acceptance"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout

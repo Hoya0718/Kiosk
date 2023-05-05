@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/hostital_2"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,7 +35,7 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="@string/department_2"
-            android:textSize="40sp" />
+            android:textSize="@dimen/font_size_medium" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:gravity="center_vertical"
                 android:text="@string/wating"
                 android:textAlignment="textEnd"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView55"
@@ -60,14 +60,15 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text="@string/third_m"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView54"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size_medium" />
 
         <View
             android:layout_width="match_parent"
@@ -79,7 +80,8 @@
             android:id="@+id/textView53"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size_medium" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,7 +96,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/hospital_day"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
         </LinearLayout>
 
@@ -112,7 +114,7 @@
                 android:gravity="center_vertical"
                 android:text="@string/registration_num"
                 android:textAlignment="textEnd"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/number"
@@ -121,7 +123,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text="@string/_1212"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 
         <LinearLayout
@@ -138,7 +140,7 @@
                 android:gravity="center_vertical"
                 android:text="@string/hospital_birthday"
                 android:textAlignment="textEnd"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/birthday"
@@ -147,7 +149,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text="@string/birthday_number"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 
         <LinearLayout
@@ -164,7 +166,7 @@
                 android:gravity="center_vertical"
                 android:text="@string/hospital_num"
                 android:textAlignment="textEnd"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
 
             <TextView
                 android:id="@+id/textView58"
@@ -173,7 +175,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text="@string/Hong"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size_medium" />
         </LinearLayout><![CDATA[
 
         />
@@ -193,6 +195,6 @@
             android:layout_height="80dp"
             android:onClick="goto_kiosk_28"
             android:text="@string/printing"
-            android:textSize="18sp" />
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 </LinearLayout>

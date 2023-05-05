@@ -20,7 +20,12 @@
             android:layout_height="wrap_content"
             android:text="출발일"
             android:textAlignment="center"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,7 +52,12 @@
             android:layout_marginBottom="100dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
 
         <TextView
             android:id="@+id/textView13"
@@ -60,20 +70,30 @@
             android:layout_weight="1"
             android:text="->"
             android:textAlignment="center"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
 
         <Button
             android:id="@+id/button15"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="100dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="150dp"
+            android:layout_marginBottom="100dp"
             android:layout_weight="1"
             android:text="도착지"
             android:textAlignment="center"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -86,9 +106,14 @@
             android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="출발 1분전부터는 발권되지 않습다. 다음 출발 차량을 이용해주세요"
+            android:text="출발 1분전부터는 발권되지 않습니다. 다음 출발 차량을 이용해주세요"
             android:textAlignment="center"
-            android:textSize="27sp" />
+            android:textSize="27sp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
 
         <Button
             android:id="@+id/button16"
@@ -97,6 +122,13 @@
             android:text="처음 화면으로 돌아가기"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:textSize="50sp" />
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="50sp"
+
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
     </LinearLayout>
 </LinearLayout>

@@ -57,9 +57,9 @@ public class Kiosk_26 extends AppCompatActivity {
                 tts.setSpeechRate(sound.getTtsSpeed());
                 sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    tts.speak("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.");
                 else
-                    tts.speak("You can enter your social security number through the numbers below.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("You can enter your social security number through the numbers below.");
             }
         }, 15000);
     }
@@ -168,22 +168,22 @@ public class Kiosk_26 extends AppCompatActivity {
             }
             else {
                 if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("주민등록번호를 입력해주세요");
                     Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    tts.speak("Enter your social security number", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("Enter your social security number");
                     Toast.makeText(getApplicationContext(), "Enter your social security number", Toast.LENGTH_LONG).show();
                 }
             }
         }
         else {
             if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                tts.speak("개인정보 수집 동의를 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                speakText("개인정보 수집 동의를 눌러주세요");
                 Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
             }
             else{
-                tts.speak("Agree to collect personal information.", TextToSpeech.QUEUE_FLUSH, null, null);
+                speakText("Agree to collect personal information.");
                 Toast.makeText(getApplicationContext(), "Agree to collect personal information.", Toast.LENGTH_LONG).show();
             }
 

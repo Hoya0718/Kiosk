@@ -62,9 +62,9 @@ public class Kiosk_29_2 extends AppCompatActivity {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    tts.speak("수납여부는 여기에있고 지불하기는 여기에 있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("수납여부는 여기에있고 지불하기는 여기에 있어요.");
                 else
-                    tts.speak("The checkout is here and the payment is here.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("The checkout is here and the payment is here.");
             }
         }, 15000);
 

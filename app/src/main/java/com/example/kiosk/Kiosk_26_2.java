@@ -60,9 +60,9 @@ public class Kiosk_26_2 extends AppCompatActivity {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    tts.speak("원하시는 진료과목이 없으시다면 아무 진료과목을 눌러보세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("원하시는 진료과목이 없으시다면 아무 진료과목을 눌러보세요.");
                 else
-                    tts.speak("If you don't see the specialty you're looking for, tap any specialty.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("If you don't see the specialty you're looking for, tap any specialty.");
             }
         }, 15000);
     }

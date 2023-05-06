@@ -50,9 +50,9 @@ public class Kiosk_29 extends AppCompatActivity {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    tts.speak("아래에 숫자를 통해 주민등록번호를 입력하실 수 있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("아래에 숫자를 통해 주민등록번호를 입력하실 수 있어요.");
                 else
-                    tts.speak("You can enter your social security number via the numbers below.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("You can enter your social security number via the numbers below.");
             }
         }, 15000);
 
@@ -166,11 +166,11 @@ public class Kiosk_29 extends AppCompatActivity {
         }
         else {
                 if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("주민등록번호를 입력해주세요");
                     Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
                 }
                 else{
-                    tts.speak("Enter your social security number.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("Enter your social security number.");
                     Toast.makeText(getApplicationContext(), "Enter your social security number.", Toast.LENGTH_LONG).show();}
         }
     }

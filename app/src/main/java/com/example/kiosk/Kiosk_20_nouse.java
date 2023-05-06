@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Kiosk_20 extends AppCompatActivity {
+public class Kiosk_20_nouse extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

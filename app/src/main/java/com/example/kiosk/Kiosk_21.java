@@ -43,7 +43,6 @@ public class Kiosk_21 extends AppCompatActivity {
                                 "If you make a mistake, you can click the Cancel button " +
                                 "to return to the previous screen.", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
-
                     button64 = findViewById(R.id.button64);
                     button65 = findViewById(R.id.button65);
 

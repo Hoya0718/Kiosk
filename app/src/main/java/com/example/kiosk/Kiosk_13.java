@@ -35,8 +35,6 @@ public class Kiosk_13 extends AppCompatActivity {
 
 
 
-
-
         button7 = findViewById(R.id.button7);
         button7.setOnClickListener(new View.OnClickListener() {
             @Override

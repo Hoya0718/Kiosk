@@ -32,7 +32,6 @@ public class Kiosk_23 extends AppCompatActivity {
                         tts.speak("Congratulations. Bus practice phase is complete" +
                                 "Please click the back button", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
-
                     button67 = findViewById(R.id.button67);
                     button67.setOnClickListener(new View.OnClickListener() {
                         @Override

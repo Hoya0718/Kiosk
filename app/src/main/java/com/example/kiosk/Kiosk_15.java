@@ -67,7 +67,6 @@ public class Kiosk_15 extends AppCompatActivity {
                             tts.shutdown();
                             startActivity(intent);
                         }
-
                     });
                     button16.setOnClickListener(new View.OnClickListener() {
                         @Override

@@ -47,7 +47,6 @@ public class Kiosk_19 extends AppCompatActivity {
                                 "reserved by someone else and and cannot be selected" +
                                 "Choose a different seat", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
-
                     button45 = findViewById(R.id.button45);
                     button47 = findViewById(R.id.button47);
                     button48 = findViewById(R.id.button48);

@@ -42,7 +42,6 @@ public class Kiosk_17 extends AppCompatActivity {
                         tts.speak("Bus stops with the letter ㅁ in front appear." +
                                 "From the orange buttons on the right, click the button where you want to go", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
-
                     button20 = findViewById(R.id.button20);
                     button18 = findViewById(R.id.button18);
                     button21 = findViewById(R.id.button21);

@@ -61,7 +61,7 @@
             android:name=".Kiosk_21"
             android:exported="true" />
         <activity
-            android:name=".Kiosk_20"
+            android:name=".Kiosk_20_nouse"
             android:exported="true" />
         <activity
             android:name=".Kiosk_19"

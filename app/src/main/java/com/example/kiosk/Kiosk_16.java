@@ -45,7 +45,6 @@ public class Kiosk_16 extends AppCompatActivity {
                             tts.shutdown();
                             startActivity(intent);
                         }
-
                     });
                 }
             }

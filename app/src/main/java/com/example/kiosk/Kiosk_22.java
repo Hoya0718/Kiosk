@@ -32,7 +32,6 @@ public class Kiosk_22 extends AppCompatActivity {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         tts.speak("Insert the card as shown in the picture", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
-
                     button66 = findViewById(R.id.button66);
                     button66.setOnClickListener(new View.OnClickListener() {
                         @Override

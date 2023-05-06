@@ -39,7 +39,6 @@ public class Kiosk_16_1 extends AppCompatActivity {
                                 "This time, let's use the first letter to find it." +
                                 "Please press the ㅁ button", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
-
                     button23 = findViewById(R.id.button23);
 
                     button23.setOnClickListener(new View.OnClickListener() {

@@ -60,7 +60,6 @@ public class Kiosk_14 extends AppCompatActivity {
                         format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
 
 
-
                     textView11.setText(format.format(c.getTime()));
 
                     button9 = findViewById(R.id.button9);

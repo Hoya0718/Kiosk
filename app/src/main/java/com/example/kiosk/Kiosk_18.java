@@ -56,34 +56,62 @@ public class Kiosk_18 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                            intent.putExtra("destination", destination);
-                            intent.putExtra("bus", "우등버스");
-                            intent.putExtra("price", "25,000원");
-                            tts.shutdown();
-                            startActivity(intent);
-                        }
+                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "우등버스");
+                                intent.putExtra("price", "25,000원");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else {
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "Honor bus");
+                                intent.putExtra("price", "25,000won");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
 
+                        }
                     });
+
                     button41.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                            intent.putExtra("destination", destination);
-                            intent.putExtra("bus", "고속버스");
-                            intent.putExtra("price", "20,000원");
-                            tts.shutdown();
-                            startActivity(intent);
+                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "고속버스");
+                                intent.putExtra("price", "20,000원");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else {
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "Express bus");
+                                intent.putExtra("price", "20,000won");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
                         }
                     });
                     button42.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                            intent.putExtra("destination", destination);
-                            intent.putExtra("bus", "일반버스");
-                            intent.putExtra("price", "15,000원");
-                            tts.shutdown();
-                            startActivity(intent);
+                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "일반버스");
+                                intent.putExtra("price", "15,000원");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else{
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "Regular bus");
+                                intent.putExtra("price", "15,000won");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
                         }
                     });
                 }

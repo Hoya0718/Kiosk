@@ -52,7 +52,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="목적지"
+            android:text="@string/b_destination"
             android:textSize="35sp" />
     </LinearLayout>
 
@@ -68,7 +68,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="선택한 버스, 좌석 번호"
+            android:text="@string/b_busandseatnum"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -84,7 +84,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="표 가격"
+            android:text="@string/b_ticketprice"
             android:textSize="40sp" />
     </LinearLayout>
 

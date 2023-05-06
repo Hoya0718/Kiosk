@@ -43,8 +43,13 @@ public class Kiosk_26_2 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("진료과목을 보여줍니다. 원하시는 진료과목을 선택하시면 됩니다.");
+                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("진료과목을 보여줍니다. 원하시는 진료과목을 선택하시면 됩니다.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("Shows medical specialties. Select your preferred medical specialty.");
+                    }
                 }
             }
         });
@@ -54,9 +59,10 @@ public class Kiosk_26_2 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-
-                tts.speak("원하시는 진료과목이 없으시다면 아무 진료과목을 눌러보세요.",
-                        TextToSpeech.QUEUE_FLUSH, null, null);
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                    tts.speak("원하시는 진료과목이 없으시다면 아무 진료과목을 눌러보세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                else
+                    tts.speak("If you don't see the specialty you're looking for, tap any specialty.", TextToSpeech.QUEUE_FLUSH, null, null);
             }
         }, 15000);
     }

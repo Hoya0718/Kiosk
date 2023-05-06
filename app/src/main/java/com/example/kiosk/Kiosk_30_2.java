@@ -25,8 +25,13 @@ public class Kiosk_30_2 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("결제 완료 창을 보여줍니다. 아래에 처방전이 나옵니다. 확인해주세요");
+                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("결제 완료 창을 보여줍니다. 아래에 처방전이 나옵니다. 확인해주세요.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("The payment completion window appears. Below you will see your prescription, please check it.");
+                    }
                 }
             }
         });

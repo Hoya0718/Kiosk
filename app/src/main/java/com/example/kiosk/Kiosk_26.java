@@ -37,10 +37,16 @@ public class Kiosk_26 extends AppCompatActivity {
         pn = (myapp) getApplication();
         sound = (myapp) getApplication();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("접수하기 위한 절차입니다. 접수를 하기위해 주민등록번호를 입력해주세요.");
+                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("접수하기 위한 절차입니다. 접수를 하기위해 주민등록번호를 입력해주세요.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("This is the procedure for submitting an application. Please enter your social security number to register.");
+                    }
                 }
             }
         });
@@ -48,11 +54,12 @@ public class Kiosk_26 extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                tts.setSpeechRate(sound.getTtsSpeed()) ;
+                tts.setSpeechRate(sound.getTtsSpeed());
                 sound.getTtsVolume();
-
-                tts.speak("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.",
-                        TextToSpeech.QUEUE_FLUSH, null, null);
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                    tts.speak("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                else
+                    tts.speak("You can enter your social security number through the numbers below.", TextToSpeech.QUEUE_FLUSH, null, null);
             }
         }, 15000);
     }
@@ -134,7 +141,10 @@ public class Kiosk_26 extends AppCompatActivity {
                 break;
             case R.id.CL:
                 if(ssn.length() ==0){
-                    Toast.makeText(getApplicationContext(),"주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+                    if(getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                        Toast.makeText(getApplicationContext(),"주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(getApplicationContext(),"Enter your social security number", Toast.LENGTH_LONG).show();
                 }
                 else if(ssn.length() == 8){
                     ssn.setText(current.substring(0, current.length() - 2));
@@ -157,15 +167,29 @@ public class Kiosk_26 extends AppCompatActivity {
                 startActivity(goto_kiosk_26_2);
             }
             else {
-                tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);
-                Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+                if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                    Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    tts.speak("Enter your social security number", TextToSpeech.QUEUE_FLUSH, null, null);
+                    Toast.makeText(getApplicationContext(), "Enter your social security number", Toast.LENGTH_LONG).show();
+                }
             }
         }
         else {
-            tts.speak("개인정보 수집 동의를 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
-            Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
+            if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                tts.speak("개인정보 수집 동의를 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
+            }
+            else{
+                tts.speak("Agree to collect personal information.", TextToSpeech.QUEUE_FLUSH, null, null);
+                Toast.makeText(getApplicationContext(), "Agree to collect personal information.", Toast.LENGTH_LONG).show();
+            }
+
         }
     }
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

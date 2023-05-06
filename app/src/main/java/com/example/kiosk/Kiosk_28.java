@@ -23,8 +23,13 @@ public class Kiosk_28 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("이제 수납 및 처방을 알아볼까요? 수납 및 처방전 발행을 눌러주세요.");
+                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("이제 수납 및 처방을 알아볼까요? 수납 및 처방전 발행을 눌러주세요.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("Now let's take a look at receiving and prescribing. Tap Collections and prescriptions.");
+                    }
                 }
             }
         });
@@ -34,9 +39,13 @@ public class Kiosk_28 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                tts.speak("수납 및 처방전 발행은 여기에 있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                    tts.speak("수납 및 처방전 발행은 여기에 있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                else
+                    tts.speak("Storage and prescriptions are here.", TextToSpeech.QUEUE_FLUSH, null, null);
             }
         }, 15000);
+
     }
     private void speakText(String text) {
 

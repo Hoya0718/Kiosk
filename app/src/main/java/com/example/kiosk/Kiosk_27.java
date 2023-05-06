@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.TextView;
@@ -48,12 +49,30 @@ public class Kiosk_27 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("접수가 완료되었습니다. 접수증 출력을 눌러주세요. 실제 병원에서는 아래에 접수증이 출력이될거에요.");
+                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("접수가 완료되었습니다. 접수증 출력을 눌러주세요. 실제 병원에서는 아래에 접수증이 출력이될거에요.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("The registration has been completed, please click Print Receipt. In a real hospital, you will see a receipt below.");
+                    }
                 }
             }
         });
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                tts.setSpeechRate(sound.getTtsSpeed()) ;
+                sound.getTtsVolume();
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                    tts.speak("접수증 출력은 여기에 있어요", TextToSpeech.QUEUE_FLUSH, null, null);
+                else
+                    tts.speak("Here's a printout of the receipt", TextToSpeech.QUEUE_FLUSH, null, null);
+            }
+        }, 15000);
     }
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

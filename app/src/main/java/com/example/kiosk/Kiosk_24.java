@@ -41,9 +41,9 @@ public class Kiosk_24 extends AppCompatActivity {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    tts.speak("여기에있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("여기에있어요.");
                 else
-                    tts.speak("Here it is", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("Here it is");
             }
         }, 15000);
 

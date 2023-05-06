@@ -43,6 +43,9 @@
             android:gravity="center"
             android:backgroundTint="@android:color/holo_orange_dark"
             tools:layout_marginBottom="20dp"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:onClick="onClick"
 
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="12sp"

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ public class Kiosk_15 extends AppCompatActivity {
     private SimpleDateFormat mFormat = new SimpleDateFormat("MM dd (E)", Locale.KOREAN);
     TextView textView10;
     private TextToSpeech tts;
+
 
     private Button button15; //도착지 버튼
     private Button button16; //홈 버튼
@@ -81,5 +84,13 @@ public class Kiosk_15 extends AppCompatActivity {
                 }
             }
         });
+    }
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
     }
 }

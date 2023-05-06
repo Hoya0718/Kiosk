@@ -51,9 +51,9 @@ public class Kiosk_25 extends AppCompatActivity {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    tts.speak("접수하기는 여기에 있어요 접수하기를 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("접수하기는 여기에 있어요 접수하기를 눌러주세요.");
                 else
-                    tts.speak("You can submit a submission here, just hit submit.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("You can submit a submission here, just hit submit.");
             }
         }, 15000);
     }

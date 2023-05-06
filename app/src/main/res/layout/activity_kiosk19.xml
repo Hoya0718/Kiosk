@@ -25,14 +25,14 @@
 
                 <Button
                     android:id="@+id/button44"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:text="@string/b_alll1"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     android:backgroundTint="@android:color/darker_gray"
                     tools:layout_marginLeft="5dp"
@@ -71,7 +71,7 @@
 
                 <Button
                     android:id="@+id/button48"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
@@ -87,7 +87,7 @@
 
                 <Button
                     android:id="@+id/button47"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
@@ -109,7 +109,7 @@
 
                 <Button
                     android:id="@+id/button46"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
@@ -125,7 +125,7 @@
 
                 <Button
                     android:id="@+id/button45"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
@@ -148,7 +148,7 @@
 
                 <Button
                     android:id="@+id/button50"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
@@ -164,7 +164,7 @@
 
                 <Button
                     android:id="@+id/button49"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
@@ -203,7 +203,7 @@
 
                 <Button
                     android:id="@+id/button52"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"

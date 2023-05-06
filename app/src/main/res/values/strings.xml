@@ -162,7 +162,7 @@
     <string name="complete_order">주문 완료</string>
     <string name="home">처음으로</string>
     <string name="help_features">도움 기능</string>
-    <string name="total_menu_2">빅맥 - 세트 1105kcal</string>
+    <string name="total_menu_2">빅맥 - 세트 1105kcalㅂ</string>
     <string name="enjoy_together">함께 즐기면 더욱 좋습니다</string>
     <string name="deselect">선택 안함</string>
     <string name="order_history">주문 내역</string>
@@ -296,28 +296,4 @@
     <string name="quater">쿼터파운더 치즈 버거</string>
     <string name="mccri">맥크리스피 버거</string>
     <string name="mcchi">맥치킨 버거</string>
-    <string name="snacksan">상하이 치킨 스낵랩</string>
-    <string name="snackshu">슈림프 스낵랩</string>
-    <string name="mcnurget">맥너겟</string>
-    <string name="huri">후렌치 후라이</string>
-    <string name="hashbra">해쉬 브라운</string>
-    <string name="chickentender">맥스파이시 치킨 텐더</string>
-    <string name="chezstick">골든 모짜렐라 치즈스틱</string>
-    <string name="cuol">코울슬로</string>
-    <string name="churu">츄러스</string>
-    <string name="icesu">딸기 선데이 아이스크림</string>
-    <string name="iceco">초코 선데이 아이스크림</string>
-    <string name="iceba">바닐라 선데이 아이스크림</string>
-    <string name="chistr">딸기 칠러</string>
-    <string name="chijadu">자두 칠러</string>
-    <string name="drinkoran">오렌지 쥬스</string>
-    <string name="shakestr">딸기 쉐이크</string>
-    <string name="shakecho">초코 쉐이크</string>
-    <string name="shakeba">바닐라 쉐이크</string>
-    <string name="drinkcoca">코카 콜라</string>
-    <string name="drinkcoze">코카 콜라 제로</string>
-    <string name="drinkspri">스프라이트</string>
-    <string name="drinkhwan">환타</string>
-    <string name="milk">우유</string>
-    <string name="water">생수</string>
 </resources>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class Kiosk_21 extends AppCompatActivity {
@@ -42,9 +43,9 @@ public class Kiosk_21 extends AppCompatActivity {
                                 "If you make a mistake, you can click the Cancel button " +
                                 "to return to the previous screen.", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
+
                     button64 = findViewById(R.id.button64);
                     button65 = findViewById(R.id.button65);
-
 
                     button64.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -67,9 +68,9 @@ public class Kiosk_21 extends AppCompatActivity {
                     textView37 = findViewById(R.id.textView37);
                     Intent intent = getIntent();
                     String destination = intent.getStringExtra("destination");
-                    if (destination != null) {
+                    if(destination != null) {
                         textView37.setText(destination);
-                    } else textView37.setText("도착 안함");
+                    }
 
                     textView38 = findViewById(R.id.textView38);
                     Intent intent1 = getIntent();

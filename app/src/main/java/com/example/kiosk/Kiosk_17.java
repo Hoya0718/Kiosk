@@ -32,9 +32,16 @@ public class Kiosk_17 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("앞 글자가 ㅁ 인 정류장들이 나옵니다." +
-                            "이 중에 가고 싶은 곳 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        tts.speak("앞 글자가 ㅁ인 버스 정류장들이 나옵니다." +
+                                "오른쪽의 주황색 버튼 중에서 가고 싶은 곳 버튼을 클릭해주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
+                    else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        tts.speak("Bus stops with the letter ㅁ in front appear." +
+                                "From the orange buttons on the right, click the button where you want to go", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
 
                     button20 = findViewById(R.id.button20);
                     button18 = findViewById(R.id.button18);

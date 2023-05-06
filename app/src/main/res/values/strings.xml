@@ -278,4 +278,11 @@
     <string name="fastfood">음식점</string>
     <string name="busbut">버스</string>
     <string name="hospita">병원</string>
+    <string name="_25_000_n_20_000_n_15_000">우등버스 : 25,000원\n 고속버스 : 20,000원\n 일반버스 : 15,000원</string>
+    <string name="b_eastseoul">동서울</string>
+    <string name="b_masan">마산</string>
+    <string name="b_muan">무안</string>
+    <string name="b_muanairport">무안공항</string>
+    <string name="b_muju">무주</string>
+    <string name="b_maryang">마량</string>
 </resources>

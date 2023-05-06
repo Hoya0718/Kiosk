@@ -20,11 +20,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="서울"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"
+            android:textSize="25sp"
             android:backgroundTint="#FF9933"/>
 
         <Button
@@ -35,11 +31,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="인천/경기"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_kangwon"
@@ -49,11 +41,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="강원도"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_sejong"
@@ -63,11 +51,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="대전/세종"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_chungnam"
@@ -77,11 +61,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="충청남도"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_chungbuk"
@@ -91,11 +71,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="충청북도"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="27sp" />
 
         <Button
             android:id="@+id/button_kwangju"
@@ -105,11 +81,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="광주/전남"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_jeonbuk"
@@ -119,11 +91,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="전라남도"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_busan"
@@ -133,11 +101,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="부산/경남"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_daegu"
@@ -147,11 +111,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="대구/경북"
-            android:textSize="27sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout

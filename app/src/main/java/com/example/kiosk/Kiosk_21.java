@@ -28,11 +28,20 @@ public class Kiosk_21 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("목적지는 알맞은지, 버스는 맞게 고르셨는지 확인하시고" +
-                            "결제하기 버튼을 눌러서 결제를 해주세요." +
-                            "만약 잘못 고르셨다면 취소하기 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
-
+                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        tts.speak("목적지는 맞게 골랐는지. 버스 종류와 좌석은 정확하게 골랐는지" +
+                                " 확인해주시고, 맞게 고르셨다면 결제하기 버튼을 눌러주세요" +
+                                "만약 잘못 고르셨다면 취소하기 버튼을 눌러서 " +
+                                "이전 화면으로 돌아가실 수 있습니다.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
+                    else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        tts.speak("Make sure you have chosen the correct destination, bus type and seat" +
+                                "If you have selected the right one, please click the checkout button" +
+                                "If you make a mistake, you can click the Cancel button " +
+                                "to return to the previous screen.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
                     button64 = findViewById(R.id.button64);
                     button65 = findViewById(R.id.button65);
 

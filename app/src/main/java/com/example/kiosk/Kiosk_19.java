@@ -36,9 +36,17 @@ public class Kiosk_19 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("매진이라고 써진 회색 버튼은 다른 사람이 예약해서 선택할 수 없는" +
-                            "좌석입니다. 매진이 아닌 좌석을 제외하고 다른 자리를 선택해주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        tts.speak("매진이라고 써진 회색 좌석은 다른 사람이 이미 예약해서" +
+                                "선택할 수 없는 좌석입니다. 다른 좌석을 골라주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
+                    else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        tts.speak("Gray seats with Sold out are seats that have already been" +
+                                "reserved by someone else and and cannot be selected" +
+                                "Choose a different seat", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
 
                     button45 = findViewById(R.id.button45);
                     button47 = findViewById(R.id.button47);

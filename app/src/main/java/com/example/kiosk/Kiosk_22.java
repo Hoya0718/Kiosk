@@ -24,8 +24,14 @@ public class Kiosk_22 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("카드를 그림과 같이 넣어주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        tts.speak("카드를 그림과 같이 꽂아주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
+                    else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        tts.speak("Insert the card as shown in the picture", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
 
                     button66 = findViewById(R.id.button66);
                     button66.setOnClickListener(new View.OnClickListener() {

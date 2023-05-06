@@ -16,7 +16,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class Kiosk_15 extends AppCompatActivity {
-    private SimpleDateFormat mFormat = new SimpleDateFormat("MMM dd (E)", Locale.KOREAN);
+    private SimpleDateFormat mFormat = new SimpleDateFormat("MM dd (E)", Locale.KOREAN);
     TextView textView10;
     private TextToSpeech tts;
 
@@ -31,9 +31,20 @@ public class Kiosk_15 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("가고 싶은 곳을 고르기 위해서는 도착지 버튼을" +
-                            "눌러주세요 ", TextToSpeech.QUEUE_FLUSH, null, null);
+                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        tts.speak("이 화면에서는 도착지를 선택할 수 있습니다." +
+                                "목적지 버튼을 눌러주세요" +
+                                "만약 처음 화면으로 돌아가고 싶으시면 처음 화면으로 돌아가기" +
+                                "버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
+                    else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        tts.speak("This screen allows you to select your destination." +
+                                "Please click the destination button" +
+                                "If you want to return to the first screen, " +
+                                "click the Back to Home Screen button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
 
                     textView10 = (TextView) findViewById(R.id.textView10);
 
@@ -42,7 +53,7 @@ public class Kiosk_15 extends AppCompatActivity {
                     SimpleDateFormat format;
 
                     if(getResources().getConfiguration().locale.getLanguage().equals("kr"))
-                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.KOREAN);
+                        format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.KOREAN);
                     else
                         format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
                     textView10.setText(format.format(c.getTime()));

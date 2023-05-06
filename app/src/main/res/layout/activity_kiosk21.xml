@@ -18,8 +18,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="right"
-            android:text="우등버스 : 25,000원\n 고속버스 : 20,000원\n
-                                일반버스 : 15,000원"
+            android:text="@string/_25_000_n_20_000_n_15_000"
             android:textSize="20sp"/>
     </LinearLayout>
 
@@ -98,28 +97,36 @@
 
         <Button
             android:id="@+id/button64"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:text="@string/b_cancel"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
         <Button
             android:id="@+id/button65"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:text="@string/b_payment"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:backgroundTint="@android:color/holo_orange_dark"/>
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"/>
     </LinearLayout>
 </LinearLayout>

@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
+                tts.setLanguage(KOREAN);
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(KOREAN);
@@ -38,7 +39,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("여기에있어요.");
+                else
+                    speakText("Here it is");
+            }
+        }, 15000);
+
     }
+
 
 
     private void speakText(String text) {

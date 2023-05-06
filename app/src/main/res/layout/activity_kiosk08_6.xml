@@ -106,32 +106,104 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/b1955_Btn"
+                <TableLayout
+                    android:id="@+id/b1955"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/b1955" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/batodi_Btn"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/batodi" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/b1955" />
 
-                <ImageButton
-                    android:id="@+id/bigmc_Btn"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/b1955"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩6,400"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/batodi"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/bigmc" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/batodi" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/batodi"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩5,800"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/bigmc"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/bigmc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/big_mc"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩5,200"
+                        android:gravity="center"/>
+                </TableLayout>
             </TableRow>
 
             <TableRow
@@ -139,32 +211,104 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/bulgogi_Btn"
+                <TableLayout
+                    android:id="@+id/mcchi"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/bulgogi" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/cheeze_Btn"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/cheeze" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/mcchi" />
 
-                <ImageButton
-                    android:id="@+id/ham_Btn"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/mcchi"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩3,500"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/mccri"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/ham" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/mccri" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/mccri"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩5,900"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/quater"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/quater" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/quater"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩5,500"
+                        android:gravity="center"/>
+                </TableLayout>
             </TableRow>
 
             <TableRow
@@ -172,32 +316,104 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/mcchi_Btn"
+                <TableLayout
+                    android:id="@+id/sanhi"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/mcchi" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/mccri_Btn"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/mccri" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/sanhi" />
 
-                <ImageButton
-                    android:id="@+id/quater_Btn"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/sanhi"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩5,200"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/susu"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/quater" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/susu" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/susu"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩4,700"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/subi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/subi" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/subi"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩5,800"
+                        android:gravity="center"/>
+                </TableLayout>
             </TableRow>
 
             <TableRow
@@ -205,32 +421,104 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/sanhi_Btn"
+                <TableLayout
+                    android:id="@+id/bulgogi"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/sanhi" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/subi_Btn"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/subi" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/bulgogi" />
 
-                <ImageButton
-                    android:id="@+id/susu_Btn"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/bulgogi"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩2,300"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/cheeze"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/susu" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/cheeze" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/cheeze"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="2,700"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/ham"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/ham" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/ham"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩2,500"
+                        android:gravity="center"/>
+                </TableLayout>
             </TableRow>
         </TableLayout>
 

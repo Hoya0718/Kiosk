@@ -171,32 +171,104 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/snacksan_Btn"
+                <TableLayout
+                    android:id="@+id/snacksan"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/snacksan" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/snackshu_Btn"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/snackshu" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/snacksan" />
 
-                <ImageButton
-                    android:id="@+id/mcnurget_Btn"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/snacksan"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩3,000"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/snackshu"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/mcnurget" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/snackshu" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/snackshu"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩2,300"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/mcnurget"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/mcnurget" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/mcnurget"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩2,900"
+                        android:gravity="center"/>
+                </TableLayout>
             </TableRow>
 
             <TableRow
@@ -204,34 +276,106 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/huri_Btn"
+                <TableLayout
+                    android:id="@+id/huri"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="10dp"
-                    android:backgroundTint="#FFA500"
+                    android:layout_margin="5dp"
                     android:onClick="popup_kiosk_08_4"
-                    app:srcCompat="@drawable/huri" />
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/hashbra_Btn"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/huri" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="#FFA500"
+                        android:text="@string/huri"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩2,000"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/hashbra"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/hashbra" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/chickentender_Btn"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/hashbra" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/hashbra"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩1,300"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/chickentender"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/chickentender" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/chickentender" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/chickentender"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩1,200"
+                        android:gravity="center"/>
+                </TableLayout>
             </TableRow>
 
             <TableRow
@@ -239,32 +383,104 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/chezstick_Btn"
+                <TableLayout
+                    android:id="@+id/chezstick"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/chezstick" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/mccri_Btn"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/cuol" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/chezstick" />
 
-                <ImageButton
-                    android:id="@+id/churu_Btn"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/chezstick"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩2,500"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/cuol"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/churu" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/cuol" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/cuol"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩1,900"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/churu"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/churu" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/churu"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩1,000"
+                        android:gravity="center"/>
+                </TableLayout>
             </TableRow>
 
             <TableRow
@@ -272,32 +488,104 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/iceba_Btn"
+                <TableLayout
+                    android:id="@+id/icesu"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/iceba" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/iceco_Btn"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/iceco" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/icesu" />
 
-                <ImageButton
-                    android:id="@+id/icesu_Btn"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/icesu"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩2,100"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/iceco"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/icesu" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/iceco" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/iceco"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="2,100"
+                        android:gravity="center"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/iceba"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/table_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/iceba" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/iceba"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="₩1,600"
+                        android:gravity="center"/>
+                </TableLayout>
             </TableRow>
         </TableLayout>
 

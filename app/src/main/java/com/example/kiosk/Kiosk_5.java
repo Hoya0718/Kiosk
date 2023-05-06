@@ -38,42 +38,36 @@ public class Kiosk_5 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                    tts.speak("음식점 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+                else {
+                    tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                    tts.speak("Press the restaurant button.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                tts.setSpeechRate(sound.getTtsSpeed()) ;
-                sound.getTtsVolume();
-                tts.speak("음식점 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
-            }
-        }, 3000); // 3초 딜레이
     }
+
     public void goto_kiosk_06(View v) {
-//        if(tts != null) {
-//            tts.stop();
-//            tts.shutdown();
-//            tts=null;
-//        }
-//        super.onDestroy();
         tts.shutdown();
         Intent goto_kiosk_06 = new Intent(getApplicationContext(), Kiosk_6.class);
         startActivity(goto_kiosk_06);
     }
 
     public void goto_kiosk_14(View v){
+        tts.shutdown();
         Intent goto_kiosk_14 = new Intent(getApplicationContext(),Kiosk_14.class);
         startActivity(goto_kiosk_14);
     }
 
     public void goto_kiosk_25(View v){
+        tts.shutdown();
         Intent goto_kiosk_25 = new Intent(getApplicationContext(),Kiosk_25.class);
         startActivity(goto_kiosk_25);
     }
+
     protected void onDestroy() {
         if(tts != null) {
             tts.stop();

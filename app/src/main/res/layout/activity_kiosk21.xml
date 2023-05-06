@@ -52,7 +52,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="@string/b_destination"
+            android:text="@string/b_arrive2"
             android:textSize="35sp" />
     </LinearLayout>
 
@@ -68,7 +68,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/b_busandseatnum"
+            android:text="@string/b_busandseat"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -84,7 +84,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/b_ticketprice"
+            android:text="@string/b_price"
             android:textSize="40sp" />
     </LinearLayout>
 

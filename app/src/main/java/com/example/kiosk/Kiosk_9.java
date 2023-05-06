@@ -20,9 +20,13 @@ public class Kiosk_9 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     tts.speak("주문 내역에 빅맥 세트가 추가되었습니다. 주문 완료 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+                else {
+                    tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                    tts.speak("Big Mc Set has been added to your order history. Press the Complete order button.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });

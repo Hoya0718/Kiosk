@@ -164,7 +164,7 @@
     <string name="help_features">Help</string>
     <string name="total_menu_2">Big MC - Set 1105kcal</string>
     <string name="enjoy_together">Better to enjoy together</string>
-    <string name="uncheck">Uncheck</string>
+    <string name="deselect">Deselect</string>
     <string name="order_history">Order History</string>
     <string name="cancel_no">Cancel</string>
     <string name="add_to_cart">Add to Cart</string>
@@ -177,7 +177,7 @@
     <string name="check_order">Check Order</string>
     <string name="single_item">Single Item</string>
     <string name="order_to_set">Would you like to order as a set?</string>
-    <string name="big_mc_set">Big MC set</string>
+    <string name="big_mc_set">Big Mc set</string>
     <string name="french_fries">French Fries</string>
     <string name="_13000_3">₩13000</string>
     <string name="go_home">Back to Beginning</string>

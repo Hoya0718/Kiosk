@@ -20,9 +20,13 @@ public class Kiosk_6 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     tts.speak("식사할 장소를 골라주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+                else {
+                    tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                    tts.speak("Choose a place to eat.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });

@@ -118,7 +118,7 @@
             android:layout_marginBottom="15dp"
             android:backgroundTint="#FFA500"
             android:onClick="goto_kiosk_09"
-            android:text="@string/uncheck"
+            android:text="@string/deselect"
             android:textSize="18sp" />
     </LinearLayout>
 

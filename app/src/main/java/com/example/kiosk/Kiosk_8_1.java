@@ -34,9 +34,13 @@ public class Kiosk_8_1 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     tts.speak("세트 여부를 물어보는 화면입니다. 세트 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+                else {
+                    tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                    tts.speak("This screen asks you to confirm your settings. Press the Set button.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });

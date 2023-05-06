@@ -20,11 +20,15 @@ public class Kiosk_12 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("축하드립니다!" +
-                            "음식점 연습 단계가 완료되엇습니다. 처음으로 돌아가기 버튼을 눌러주세요",
-                            TextToSpeech.QUEUE_FLUSH, null, null);
+                    tts.speak("축하드립니다. 음식점 연습 단계가 완료되었습니다" +
+                            "처음으로 돌아가기 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+                else {
+                    tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                    tts.speak("Congratulations. Restaurant practice phase is complete" +
+                            "Please click the back button", TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });

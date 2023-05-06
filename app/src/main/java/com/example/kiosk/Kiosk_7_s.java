@@ -20,9 +20,13 @@ public class Kiosk_7_s extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     tts.speak("사이드 메뉴 화면입니다. 버거 메뉴 화면으로 돌아가주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+                else {
+                    tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                    tts.speak("This is the Side menu screen. Return to the Burger menu screen.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }
             }
         });

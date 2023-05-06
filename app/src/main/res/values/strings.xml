@@ -61,7 +61,7 @@
     <string name="bus_2">버스</string>
     <string name="hospital_2">병원</string>
     <string name="hospital_list">접수/수납을 하시려면 아래 버튼을 선택해주세요!</string>
-    <string name="hospital_list_2">바코드가 없는 경우 주민등록번호 또는  환자등록번호를 입력해주세요</string>
+    <string name="hospital_list_2">바코드가 없는 경우 주민등록번호 입력해주세요</string>
     <string name="accept_personal_information">개인정보 수집 동의(필수)</string>
     <string name="ssn">주민등록번호 입력(- 제외)</string>
     <string name="num_1_btn">1</string>
@@ -99,7 +99,7 @@
     <string name="hospital_list_3">접수/수납을 하시려면 아래 버튼을 선택해주세요!</string>
     <string name="receipt_2">접수하기</string>
     <string name="ssn_2">주민등록번호 입력(- 제외)</string>
-    <string name="hospital_list_4">진료비 영수증이나 진료안내서가 없으신 분은 진료카드 번호 또는 주민등록번호 입력 후  확인을 눌러주세요.</string>
+    <string name="hospital_list_4">진료비 영수증이나 진료안내서가 없으신 분은  주민등록번호 입력 후  확인을 눌러주세요.</string>
     <string name="ssn_btn_1">1</string>
     <string name="ssn_btn_2">2</string>
     <string name="ssn_btn_3">3</string>
@@ -116,7 +116,7 @@
     <string name="diagnosis_day">진료일</string>
     <string name="diagnosis_list">진료과</string>
     <string name="diagnosis_money">수납 금액</string>
-    <string name="diagnosis_check">수납여부체크</string>
+    <string name="diagnosis_check">수납여부</string>
     <string name="diagnosis_total_money">총수납액:</string>
     <string name="_13000">13000원</string>
     <string name="hospital_name">환 자 성 명:</string>

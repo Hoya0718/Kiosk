@@ -14,11 +14,13 @@ public class Kiosk_30_2 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
+    private Handler handler;
+    private Runnable runnable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk30_2);
-
+        handler = new Handler();
         sound = (myapp) getApplication();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -29,12 +31,15 @@ public class Kiosk_30_2 extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
+
+        new Handler().postDelayed(runnable = new Runnable() {
             @Override
             public void run() {
                 tts.shutdown();
-                Intent goto_kiosk_31 = new Intent(getApplicationContext(), Kiosk_31.class);
-                startActivity(goto_kiosk_31);
+                if(getClass().getSimpleName().equals("Kiosk_30_2")) {
+                    Intent goto_kiosk_31 = new Intent(getApplicationContext(), Kiosk_31.class);
+                    startActivity(goto_kiosk_31);
+                }
             }
         }, 15000);
     }
@@ -57,4 +62,6 @@ public class Kiosk_30_2 extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
+
 }

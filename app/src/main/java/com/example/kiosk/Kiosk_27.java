@@ -49,7 +49,7 @@ public class Kiosk_27 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("접수가 완료되었습니다. 접수증 출력을 눌러주세요.");
+                    speakText("접수가 완료되었습니다. 접수증 출력을 눌러주세요. 실제 병원에서는 아래에 접수증이 출력이될거에요.");
                 }
             }
         });

@@ -46,7 +46,7 @@ public class Kiosk_29_2 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("처방전 발행 전 본인이 맞는지 확인 후 수납여부체크 아래에 네모 칸을 눌러주시고 지불하기를 눌러주세요.");
+                    speakText("처방전 발행 전을 보여주는 화면입니다. 본인이 맞는지 확인하시고 수납여부를 눌러주세요.");
                 }
             }
         });

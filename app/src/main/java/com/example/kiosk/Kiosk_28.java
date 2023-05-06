@@ -24,7 +24,7 @@ public class Kiosk_28 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("수납 및 처방을 위한 창입니다. 수납 및 처방전 발행을 눌러주세요.");
+                    speakText("이제 수납 및 처방을 알아볼까요? 수납 및 처방전 발행을 눌러주세요.");
                 }
             }
         });

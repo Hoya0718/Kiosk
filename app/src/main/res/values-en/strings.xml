@@ -61,7 +61,7 @@
     <string name="bus_2">Bus</string>
     <string name="hospital_2">Hospital</string>
     <string name="hospital_list">Please select the button below to register/receive</string>
-    <string name="hospital_list_2">If you do not have a barcode, please enter your resident registration number or patient registration number.</string>
+    <string name="hospital_list_2">" Social Security Number if there is no barcode"</string>
     <string name="accept_personal_information">Agreement on collection usage of personal information (Essential)</string>
     <string name="ssn">Enter your resident registration number (Exclude \' - \')</string>
     <string name="num_1_btn">1</string>
@@ -99,7 +99,7 @@
     <string name="hospital_list_3">Please select the button below to register or receive</string>
     <string name="receipt_2">Receipt</string>
     <string name="ssn_2">Enter your resident registration number (Exclude \' - \')</string>
-    <string name="hospital_list_4">If you don\'t have a medical fee receipt or a medical guide, please enter your medical card number or resident registration number and click OK.</string>
+    <string name="hospital_list_4">If you do not have a medical bill receipt or medical guide, enter your resident registration number and click OK.</string>
     <string name="ssn_btn_1">1</string>
     <string name="ssn_btn_2">2</string>
     <string name="ssn_btn_3">3</string>

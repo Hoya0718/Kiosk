@@ -44,7 +44,7 @@ public class Kiosk_26_2 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("원하시는 진료과목을 선택해주세요.");
+                    speakText("진료과목을 보여줍니다. 원하시는 진료과목을 선택하시면 됩니다.");
                 }
             }
         });

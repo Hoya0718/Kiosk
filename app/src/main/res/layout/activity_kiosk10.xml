@@ -109,16 +109,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:gravity="center">
 
         <Button
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="15dp"
             android:onClick="goto_kiosk_09"
             android:text="@string/cancle"
             android:textSize="18sp" />

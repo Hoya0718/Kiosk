@@ -4,25 +4,27 @@ import static java.util.Locale.KOREAN;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private TextToSpeech tts;
+    private Button practice_Btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        practice_Btn = findViewById(R.id.practice_Btn);
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 tts.setLanguage(KOREAN);
@@ -45,13 +47,14 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                changer(Color.BLUE,Color.YELLOW, practice_Btn, 10000, -1);
 
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                     speakText("연습은 여기에있어요.");
                 else
                     speakText("Practice is Here");
             }
-        }, 15000);
+        }, 5000);
 
     }
 
@@ -102,5 +105,18 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onPause();
     }
-
+    public void changer(int startColor, int endColor, final View v, long duration, int repeatCount) {
+        ValueAnimator colorAnimation = ValueAnimator.ofArgb(startColor, endColor);
+        colorAnimation.setDuration(duration);
+        colorAnimation.setRepeatCount(repeatCount);
+        colorAnimation.setRepeatMode(ValueAnimator.REVERSE);
+        colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animator) {
+                int color = (int) animator.getAnimatedValue();
+                v.setBackgroundColor(color);
+            }
+        });
+        colorAnimation.start();
+    }
 }

@@ -47,15 +47,13 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
 
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("여기에있어요.");
+                    speakText("연습은 여기에있어요.");
                 else
-                    speakText("Here it is");
+                    speakText("Practice is Here");
             }
         }, 15000);
 
     }
-
-
 
     private void speakText(String text) {
 
@@ -69,23 +67,23 @@ public class MainActivity extends AppCompatActivity {
     }
     public void change_to_korean(View v) {
 
+        tts.shutdown();
         Locale newLocale = new Locale("ko");
         Locale.setDefault(newLocale);
         Configuration config = new Configuration();
         config.setLocale(newLocale);
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        tts.shutdown();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
     public void change_to_english(View v) {
 
+        tts.shutdown();
         Locale newLocale = new Locale("en");
         Locale.setDefault(newLocale);
         Configuration config = new Configuration();
         config.setLocale(newLocale);
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        tts.shutdown();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

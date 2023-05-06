@@ -34,7 +34,7 @@ public class Kiosk_25 extends AppCompatActivity {
 
         public void onInit(int status) {
             if (status != TextToSpeech.ERROR) {
-                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("병원 접수를 하기위해 보이는 창입니다. 접수하기를 눌러주세요.");
                 } else {
@@ -50,7 +50,7 @@ public class Kiosk_25 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                if (getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                     tts.speak("접수하기는 여기에 있어요 접수하기를 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                 else
                     tts.speak("You can submit a submission here, just hit submit.", TextToSpeech.QUEUE_FLUSH, null, null);

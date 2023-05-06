@@ -25,7 +25,7 @@ public class Kiosk_30_2 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("결제 완료 창을 보여줍니다. 아래에 처방전이 나옵니다. 확인해주세요.");
                     } else {

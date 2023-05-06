@@ -44,12 +44,12 @@ public class Kiosk_27 extends AppCompatActivity {
         String text = intent.getStringExtra("text");
         department.setText(text);
 
-        birthday.setText(pn.getGet_pn().substring(0,8));
+        birthday.setText(pn.getGet_pn().substring(0,6));
         sound = (myapp) getApplication();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("접수가 완료되었습니다. 접수증 출력을 눌러주세요. 실제 병원에서는 아래에 접수증이 출력이될거에요.");
                     } else {
@@ -65,7 +65,7 @@ public class Kiosk_27 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
                 sound.getTtsVolume();
-                if (getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                     tts.speak("접수증 출력은 여기에 있어요", TextToSpeech.QUEUE_FLUSH, null, null);
                 else
                     tts.speak("Here's a printout of the receipt", TextToSpeech.QUEUE_FLUSH, null, null);

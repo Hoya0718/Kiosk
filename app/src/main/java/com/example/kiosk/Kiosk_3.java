@@ -52,13 +52,26 @@ public class Kiosk_3 extends AppCompatActivity {
         pre.setTextSize(text_size.getId());
         next.setTextSize(text_size.getId());
 
-        tts = new TextToSpeech(getApplicationContext(),new TextToSpeech.OnInitListener(){
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if(status != TextToSpeech.ERROR) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                if (status != TextToSpeech.ERROR) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("음성 속도를 바꿀수 있습니다. 느리게 보통 빠르게로 속도를 적용해보세요.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("You can change the voice speed of the kiosk. Try applying the speed from slow to normal to fast.");
+                    }
                 }
             }
         });
+    }
+
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,null);
     }
 
     public void goto_kiosk_04(View v){
@@ -75,17 +88,26 @@ public class Kiosk_3 extends AppCompatActivity {
     public void volume_speed_slow(View view) {
         tts.setSpeechRate(0.8f);
         sound.setTtsSpeed(0.8f);
-        tts.speak("이 정도 속도 어떠세요?.", TextToSpeech.QUEUE_FLUSH, null,null);
+        if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+            speakText("이 정도 속도 어떠세요?");
+        else
+            speakText("How's that for speed?");
     }
     public void volume_speed_medium(View view) {
         tts.setSpeechRate(1.0f);
         sound.setTtsSpeed(1.0f);
-        tts.speak("이 정도 속도 어떠세요?.", TextToSpeech.QUEUE_FLUSH, null,null);
+        if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+            speakText("이 정도 속도 어떠세요?");
+        else
+            speakText("How's that for speed?");
     }
     public void volume_speed_fast(View view) {
         tts.setSpeechRate(1.5f);
         sound.setTtsSpeed(1.5f);
-        tts.speak("이 정도 속도 어떠세요?.", TextToSpeech.QUEUE_FLUSH, null,null);
+        if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+            speakText("이 정도 속도 어떠세요?");
+        else
+            speakText("How's that for speed?");
     }
     protected void onDestroy() {
         if(tts != null) {

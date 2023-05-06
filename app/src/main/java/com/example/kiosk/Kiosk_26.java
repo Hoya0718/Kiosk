@@ -40,7 +40,7 @@ public class Kiosk_26 extends AppCompatActivity {
 
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("접수하기 위한 절차입니다. 접수를 하기위해 주민등록번호를 입력해주세요.");
                     } else {
@@ -56,7 +56,7 @@ public class Kiosk_26 extends AppCompatActivity {
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed());
                 sound.getTtsVolume();
-                if (getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                     tts.speak("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.", TextToSpeech.QUEUE_FLUSH, null, null);
                 else
                     tts.speak("You can enter your social security number through the numbers below.", TextToSpeech.QUEUE_FLUSH, null, null);
@@ -141,7 +141,7 @@ public class Kiosk_26 extends AppCompatActivity {
                 break;
             case R.id.CL:
                 if(ssn.length() ==0){
-                    if(getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                    if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
                         Toast.makeText(getApplicationContext(),"주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
                     else
                         Toast.makeText(getApplicationContext(),"Enter your social security number", Toast.LENGTH_LONG).show();
@@ -167,7 +167,7 @@ public class Kiosk_26 extends AppCompatActivity {
                 startActivity(goto_kiosk_26_2);
             }
             else {
-                if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.speak("주민등록번호를 입력해주세요", TextToSpeech.QUEUE_FLUSH, null, null);
                     Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
                 }
@@ -178,7 +178,7 @@ public class Kiosk_26 extends AppCompatActivity {
             }
         }
         else {
-            if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+            if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                 tts.speak("개인정보 수집 동의를 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
                 Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
             }

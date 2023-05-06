@@ -68,6 +68,26 @@ public class Kiosk_4 extends AppCompatActivity {
                 }
             }
         });
+
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("키오스크의 음성 크기를 설정합니다. 작게, 중간, 크게로 음성 크기를 적용해보세요.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("Set the voice volume for the kiosk. Try small, medium, and large voice sizes.");
+                    }
+                }
+            }
+        });
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,null);
     }
 
     public void volume_size_medium(View v) {
@@ -75,7 +95,10 @@ public class Kiosk_4 extends AppCompatActivity {
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume =11, 0);
         currentVolume = 11;
         sound.setTtsVolume(11);
-        tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+        if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+            speakText("소리를 측정하세요");
+        else
+            speakText("Measure the sound");
     }
 
 
@@ -86,10 +109,16 @@ public class Kiosk_4 extends AppCompatActivity {
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume + 1, 0);
             currentVolume += 1;
             sound.setTtsVolume(currentVolume);
-            tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+            if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                speakText("소리를 측정하세요");
+            else
+                speakText("Measure the sound");
         }
         else if(currentVolume == maxVolume){
-            tts.speak("최대 크기입니다.", TextToSpeech.QUEUE_FLUSH, null, null);
+            if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                speakText("최대 크기입니다.");
+            else
+                speakText("The maximum volume.");
         }
     }
     public void volume_size_down(View v) {
@@ -101,7 +130,10 @@ public class Kiosk_4 extends AppCompatActivity {
             tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
         }
         else if(currentVolume == 0) {
-            Toast.makeText(getApplicationContext(),"최소 크기입니다.", Toast.LENGTH_LONG).show();
+            if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                Toast.makeText(getApplicationContext(),"최소 크기입니다.", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(getApplicationContext(),"The minimum volume.", Toast.LENGTH_LONG).show();
         }
     }
     public void goto_kiosk_02(View v) {

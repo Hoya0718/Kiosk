@@ -41,12 +41,12 @@ public class Kiosk_2 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("병원에 있는 키오스크를 교육하는 단계입니다. 병원 버튼을 눌러주세요.");
+                        speakText("키오스크의 글자 크기를 설정합니다. 작게, 중간, 크게로 글자 크기를 적용해보세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("To train a kiosk in a hospital, press the Hospital button.");
+                        speakText("Set the font size for the kiosk. Try small, medium, and large font sizes.");
                     }
                 }
             }
@@ -59,22 +59,27 @@ public class Kiosk_2 extends AppCompatActivity {
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,null);
     }
     public void goto_main(View v){
+        tts.shutdown();
         Intent goto_main = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(goto_main);
     }
     public void goto_kiosk_04(View v){
+        tts.shutdown();
         Intent goto_kiosk_04 = new Intent(getApplicationContext(), Kiosk_4.class);
         startActivity(goto_kiosk_04);
     }
     public void be_down(View v){
+        tts.shutdown();
         korean_text.setTextSize(Dimension.SP,16);
         text_size.setId(16);
     }
     public void be_medium(View v){
+        tts.shutdown();
         korean_text.setTextSize(Dimension.SP,22);
         text_size.setId(22);
     }
     public void be_up(View v){
+        tts.shutdown();
         korean_text.setTextSize(Dimension.SP,26);
         text_size.setId(26);
     }

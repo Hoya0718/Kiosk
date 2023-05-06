@@ -32,7 +32,7 @@ public class Kiosk_17 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("앞 글자가 ㅁ인 버스 정류장들이 나옵니다." +
                                 "오른쪽의 주황색 버튼 중에서 가고 싶은 곳 버튼을 클릭해주세요.", TextToSpeech.QUEUE_FLUSH, null, null);

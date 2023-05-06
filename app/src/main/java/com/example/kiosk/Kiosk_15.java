@@ -31,7 +31,7 @@ public class Kiosk_15 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("이 화면에서는 도착지를 선택할 수 있습니다." +
                                 "목적지 버튼을 눌러주세요" +
@@ -52,7 +52,7 @@ public class Kiosk_15 extends AppCompatActivity {
 
                     SimpleDateFormat format;
 
-                    if(getResources().getConfiguration().locale.getLanguage().equals("kr"))
+                    if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
                         format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.KOREAN);
                     else
                         format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.ENGLISH);

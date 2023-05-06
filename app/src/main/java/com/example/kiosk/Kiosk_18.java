@@ -27,7 +27,7 @@ public class Kiosk_18 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("가고 싶은 곳을 고르셨나요?" +
                                 "그럼 이제 버스 종류, 출발 시간을 보고" +
@@ -56,7 +56,7 @@ public class Kiosk_18 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "우등버스");
                                 intent.putExtra("price", "25,000원");
@@ -78,7 +78,7 @@ public class Kiosk_18 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "고속버스");
                                 intent.putExtra("price", "20,000원");
@@ -98,7 +98,7 @@ public class Kiosk_18 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "일반버스");
                                 intent.putExtra("price", "15,000원");

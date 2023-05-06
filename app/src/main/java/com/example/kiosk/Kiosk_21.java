@@ -29,7 +29,7 @@ public class Kiosk_21 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("목적지는 맞게 골랐는지. 버스 종류와 좌석은 정확하게 골랐는지" +
                                 " 확인해주시고, 맞게 고르셨다면 결제하기 버튼을 눌러주세요" +

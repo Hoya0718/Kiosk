@@ -36,7 +36,7 @@ public class Kiosk_19 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("매진이라고 써진 회색 좌석은 다른 사람이 이미 예약해서" +
                                 "선택할 수 없는 좌석입니다. 다른 좌석을 골라주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
@@ -61,7 +61,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
@@ -94,7 +94,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
@@ -124,7 +124,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
@@ -156,7 +156,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
@@ -186,7 +186,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
@@ -216,7 +216,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
@@ -246,7 +246,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
@@ -276,7 +276,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");

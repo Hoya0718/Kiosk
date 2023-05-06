@@ -24,7 +24,7 @@ public class Kiosk_16 extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    if(getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                    if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("목적지를 찾을 수 있는 방법은 다양합니다" +
                                 "지역에 맞게 찾을 수 있고. 앞 글자를 검색할 수 있습니다." +

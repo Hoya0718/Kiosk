@@ -20,7 +20,7 @@ public class Kiosk_8_5 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     tts.speak("지금까지 고른 버거의 항목들을 보여주는 화면입니다. 장바구니 추가 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }

@@ -20,7 +20,7 @@ public class Kiosk_10 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     tts.speak("결제 방법을 선택하는 화면입니다. 카드 결제 버튼를 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }

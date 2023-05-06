@@ -20,7 +20,7 @@ public class Kiosk_9 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (getResources().getConfiguration().locale.getLanguage().equals("kr")) {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     tts.speak("주문 내역에 빅맥 세트가 추가되었습니다. 주문 완료 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                 }

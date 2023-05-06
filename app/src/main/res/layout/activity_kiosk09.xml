@@ -136,7 +136,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_gravity="center"
-                        android:text="₩8,400" />
+                        android:text="₩6,500" />
 
                 </TableRow>
 
@@ -167,7 +167,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="₩8400"
+            android:text="₩6,500"
             android:textSize="18sp" />
     </LinearLayout>
 

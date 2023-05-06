@@ -60,7 +60,7 @@ public class Kiosk_3 extends AppCompatActivity {
                         speakText("음성 속도를 바꿀수 있습니다. 느리게 보통 빠르게로 속도를 적용해보세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("You can change the voice speed of the kiosk. Try applying the speed from slow to normal to fast.");
+                        speakText("You can change the Volume speed of the kiosk. Try applying the speed from slow to normal to fast.");
                     }
                 }
             }

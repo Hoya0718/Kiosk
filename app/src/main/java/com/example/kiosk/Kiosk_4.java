@@ -77,7 +77,7 @@ public class Kiosk_4 extends AppCompatActivity {
                         speakText("키오스크의 음성 크기를 설정합니다. 작게, 중간, 크게로 음성 크기를 적용해보세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Set the voice volume for the kiosk. Try small, medium, and large voice sizes.");
+                        speakText("You can change the Volume size of the kiosk. Try small, medium, and large voice sizes.");
                     }
                 }
             }

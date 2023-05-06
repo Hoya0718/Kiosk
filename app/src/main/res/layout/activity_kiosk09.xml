@@ -81,27 +81,65 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_gravity="center"
-                        android:text="@string/delete" />
+                        android:text="@string/delete"
+                        android:textSize="10dp" />
 
                     <ImageView
                         android:id="@+id/burger"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
                         app:srcCompat="@drawable/bigmc" />
 
                     <TextView
                         android:id="@+id/tot_text"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1.5"
-                        android:layout_gravity="center"
-                        android:text="@string/total_menu_2"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/big_mc"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:text="@string/set_menu"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="right|center_vertical"
+                        android:text="1105"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="left|center_vertical"
+                        android:text="kcal"
                         android:textSize="18sp" />
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1.5"
                         android:layout_gravity="center"
                         android:orientation="horizontal">
@@ -109,14 +147,15 @@
                         <Button
                             android:id="@+id/minus_Btn"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1.5"
-                            android:text="-" />
+                            android:text="-"
+                            android:textSize="10dp" />
 
                         <TextView
                             android:id="@+id/count_text"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="1"
@@ -125,18 +164,30 @@
                         <Button
                             android:id="@+id/plus_Btn"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1.5"
-                            android:text="+" />
+                            android:text="+"
+                            android:textSize="10dp" />
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="right|center_vertical"
+                        android:text="₩ "
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/price_text"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:text="₩6,500" />
+                        android:layout_weight="0.9"
+                        android:gravity="left|center_vertical"
+                        android:text="6,500"
+                        android:textSize="18sp" />
 
                 </TableRow>
 
@@ -162,12 +213,21 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/textView59"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="right|center_vertical"
+            android:text="₩ "
+            android:textSize="18sp" />
+
+        <TextView
             android:id="@+id/hap_money_text"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="₩6,500"
+            android:layout_weight="0.8"
+            android:gravity="left|center_vertical"
+            android:text="6,500"
             android:textSize="18sp" />
     </LinearLayout>
 

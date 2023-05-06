@@ -13,20 +13,24 @@ public class Kiosk_8_7 extends AppCompatActivity {
 
     private TextToSpeech tts;
 
+    private myapp sound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk08_7);
 
+        sound = (myapp) getApplication();
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("메뉴 추천 화면입니다. 선택 안함 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("메뉴 추천 화면입니다. 선택 안함 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    tts.speak("Menu suggestions screen. Press the deselect button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("Menu suggestions screen. Press the deselect button.");
                 }
             }
         });
@@ -36,6 +40,13 @@ public class Kiosk_8_7 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_09 = new Intent(getApplicationContext(),Kiosk_9.class);
         startActivity(goto_kiosk_09);
+    }
+
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     protected void onDestroy() {

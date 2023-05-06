@@ -13,20 +13,24 @@ public class Kiosk_8_5 extends AppCompatActivity {
 
     private TextToSpeech tts;
 
+    private myapp sound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk08_5);
 
+        sound = (myapp) getApplication();
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("지금까지 고른 버거의 항목들을 보여주는 화면입니다. 장바구니 추가 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("지금까지 고른 버거의 항목들을 보여주는 화면입니다. 장바구니 추가 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    tts.speak("This screen shows the items in the burger you've selected so far. Press the Add to Cart button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("This screen shows the items in the burger you've selected so far. Press the Add to Cart button.");
                 }
             }
         });
@@ -48,6 +52,13 @@ public class Kiosk_8_5 extends AppCompatActivity {
         tts.shutdown();
         Intent popup_kiosk_06 = new Intent(getApplicationContext(), Kiosk_6.class);
         startActivity(popup_kiosk_06);
+    }
+
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     protected void onDestroy() {

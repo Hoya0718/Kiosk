@@ -13,20 +13,24 @@ public class Kiosk_10 extends AppCompatActivity {
 
     private TextToSpeech tts;
 
+    private myapp sound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk10);
 
+        sound = (myapp) getApplication();
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("결제 방법을 선택하는 화면입니다. 카드 결제 버튼를 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("결제 방법을 선택하는 화면입니다. 카드 결제 버튼를 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    tts.speak("This is the screen where you select your payment method. Press the Pay by card button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("This is the screen where you select your payment method. Press the Pay by card button.");
                 }
             }
         });
@@ -42,6 +46,13 @@ public class Kiosk_10 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_11 = new Intent(getApplicationContext(),Kiosk_11.class);
         startActivity(goto_kiosk_11);
+    }
+
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     protected void onDestroy() {

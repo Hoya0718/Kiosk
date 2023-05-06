@@ -78,29 +78,75 @@
         android:layout_weight="5"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/snackshu_Btn"
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/snackshu" />
+            android:background="@drawable/table_border"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/mcnurget_Btn"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_margin="5dp"
+                app:srcCompat="@drawable/snackshu" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="@string/snackshu"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="₩2,300"
+                android:gravity="center"/>
+        </TableLayout>
+
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/mcnurget" />
+            android:background="@drawable/table_border"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_margin="5dp"
+                app:srcCompat="@drawable/mcnurget" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="@string/mcnurget"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="₩2,900"
+                android:gravity="center"/>
+        </TableLayout>
     </LinearLayout>
 
     <LinearLayout

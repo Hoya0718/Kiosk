@@ -65,10 +65,65 @@
 
         <TextView
             android:id="@+id/total_text"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1.5"
             android:gravity="center"
-            android:text="@string/total_menu"
+            android:text="@string/big_mc"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/set_menu"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="right|center_vertical"
+            android:text="₩ "
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="left|center_vertical"
+            android:text="8,400"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="right|center_vertical"
+            android:text="1105"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="left|center_vertical"
+            android:text="kcal"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -82,7 +137,7 @@
             android:id="@+id/total_menu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/setmenu" />
+            app:srcCompat="@drawable/total_menu" />
     </LinearLayout>
 
     <LinearLayout

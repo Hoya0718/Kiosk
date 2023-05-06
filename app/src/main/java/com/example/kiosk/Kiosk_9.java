@@ -13,20 +13,24 @@ public class Kiosk_9 extends AppCompatActivity {
 
     private TextToSpeech tts;
 
+    private myapp sound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk09);
 
+        sound = (myapp) getApplication();
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("주문 내역에 빅맥 세트가 추가되었습니다. 주문 완료 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("주문 내역에 빅맥 세트가 추가되었습니다. 주문 완료 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    tts.speak("Big Mc Set has been added to your order history. Press the Complete order button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("Big Mc Set has been added to your order history. Press the Complete order button.");
                 }
             }
         });
@@ -42,6 +46,13 @@ public class Kiosk_9 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_10 = new Intent(getApplicationContext(), Kiosk_10.class);
         startActivity(goto_kiosk_10);
+    }
+
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     protected void onDestroy() {

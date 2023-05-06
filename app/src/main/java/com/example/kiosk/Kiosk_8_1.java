@@ -27,20 +27,24 @@ public class Kiosk_8_1 extends AppCompatActivity {
 
     private TextToSpeech tts;
 
+    private myapp sound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk08_1);
 
+        sound = (myapp) getApplication();
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("세트 여부를 물어보는 화면입니다. 세트 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("세트 여부를 물어보는 화면입니다. 세트 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    tts.speak("This screen asks you to confirm your settings. Press the Set button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("This screen asks you to confirm your settings. Press the Set button.");
                 }
             }
         });
@@ -56,6 +60,13 @@ public class Kiosk_8_1 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
         startActivity(goto_kiosk_07_b);
+    }
+
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     protected void onDestroy() {

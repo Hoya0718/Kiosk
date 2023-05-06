@@ -40,11 +40,11 @@ public class Kiosk_5 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("음식점 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("음식점 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    tts.speak("Press the restaurant button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("Press the restaurant button.");
                 }
             }
         });
@@ -66,6 +66,13 @@ public class Kiosk_5 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_25 = new Intent(getApplicationContext(),Kiosk_25.class);
         startActivity(goto_kiosk_25);
+    }
+
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     protected void onDestroy() {

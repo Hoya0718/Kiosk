@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,12 +16,21 @@ public class Kiosk_8_7 extends AppCompatActivity {
 
     private myapp sound;
 
+    private myapp text_size;
+    private Button unche;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk08_7);
 
         sound = (myapp) getApplication();
+
+        text_size = (myapp) getApplication();
+
+        unche = findViewById(R.id.unche_Btn);
+
+        unche.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

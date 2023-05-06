@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -16,12 +17,24 @@ public class Kiosk_6 extends AppCompatActivity {
 
     private myapp sound;
 
+    private myapp text_size;
+    private Button store;
+    private Button takeout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk06);
 
         sound = (myapp) getApplication();
+
+        text_size = (myapp) getApplication();
+
+        store = findViewById(R.id.store_Btn);
+        takeout = findViewById(R.id.takeout_Btn);
+
+        store.setTextSize(text_size.getId());
+        takeout.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -48,8 +61,6 @@ public class Kiosk_6 extends AppCompatActivity {
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-
-
     }
 
     protected void onDestroy() {

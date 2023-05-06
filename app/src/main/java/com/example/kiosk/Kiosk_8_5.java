@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,12 +16,30 @@ public class Kiosk_8_5 extends AppCompatActivity {
 
     private myapp sound;
 
+    private myapp text_size;
+    private Button canca;
+    private Button add_car;
+    private Button home;
+    private Button help;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk08_5);
 
         sound = (myapp) getApplication();
+
+        text_size = (myapp) getApplication();
+
+        canca = findViewById(R.id.canca_Btn);
+        add_car = findViewById(R.id.add_car_Btn);
+        home = findViewById(R.id.home_Btn);
+        help = findViewById(R.id.help_Btn);
+
+        canca.setTextSize(text_size.getId());
+        add_car.setTextSize(text_size.getId());
+        home.setTextSize(text_size.getId());
+        help.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

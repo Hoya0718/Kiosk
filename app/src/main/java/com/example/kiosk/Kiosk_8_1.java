@@ -29,12 +29,27 @@ public class Kiosk_8_1 extends AppCompatActivity {
 
     private myapp sound;
 
+    private myapp text_size;
+    private Button set;
+    private Button sig;
+    private Button cancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk08_1);
 
         sound = (myapp) getApplication();
+
+        text_size = (myapp) getApplication();
+
+        set = findViewById(R.id.set_Btn);
+        sig = findViewById(R.id.sig_Btn);
+        cancel = findViewById(R.id.cancel_Btn);
+
+        set.setTextSize(text_size.getId());
+        sig.setTextSize(text_size.getId());
+        cancel.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

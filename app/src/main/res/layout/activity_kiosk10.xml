@@ -75,16 +75,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="2"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/card_Btn"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
             android:backgroundTint="#FFA500"
@@ -95,14 +95,22 @@
         <Button
             android:id="@+id/cert_Btn"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginLeft="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
             android:text="@string/mobile_gift_certificate"
             android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
     </LinearLayout>
 
     <LinearLayout

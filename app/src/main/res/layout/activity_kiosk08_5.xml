@@ -236,7 +236,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/canc_Btn"
+            android:id="@+id/canca_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

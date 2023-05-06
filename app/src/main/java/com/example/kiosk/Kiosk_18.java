@@ -120,7 +120,6 @@ public class Kiosk_18 extends AppCompatActivity {
         textView50.setTextSize(text_size.getId());
         textView31.setTextSize(text_size.getId());
         textView31.setTextSize(text_size.getId());
-
         button17.setTextSize(text_size.getId());
         button87.setTextSize(text_size.getId());
         button88.setTextSize(text_size.getId());

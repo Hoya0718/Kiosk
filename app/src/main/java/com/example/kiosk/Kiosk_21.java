@@ -23,6 +23,7 @@ public class Kiosk_21 extends AppCompatActivity {
     private AudioManager audioManager;
     private myapp sound;
     private myapp text_size;
+    private TextView textView35;
     private TextView textView37; //목적지
     private TextView textView38; //버스종류, 좌석
     private TextView textView39; //표 가격
@@ -43,6 +44,7 @@ public class Kiosk_21 extends AppCompatActivity {
 
         button64 = findViewById(R.id.button64);
         button65 = findViewById(R.id.button65);
+        textView35 = findViewById(R.id.textView35);
         textView37 = findViewById(R.id.textView37);
         textView38 = findViewById(R.id.textView38);
         textView39 = findViewById(R.id.textView39);
@@ -50,6 +52,11 @@ public class Kiosk_21 extends AppCompatActivity {
 
         button64.setTextSize(text_size.getId());
         button65.setTextSize(text_size.getId());
+        textView35.setTextSize(text_size.getId());
+        textView37.setTextSize(text_size.getId());
+        textView38.setTextSize(text_size.getId());
+        textView39.setTextSize(text_size.getId());
+        textView100.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

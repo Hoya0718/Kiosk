@@ -20,12 +20,7 @@
             android:layout_height="wrap_content"
             android:text="@string/b_startdate"
             android:textAlignment="center"
-            android:textSize="35sp"
-
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="35sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +37,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/button14"
+            android:id="@+id/textView102"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -64,14 +59,9 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="100dp"
             android:layout_weight="1"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeStepGranularity="2sp"
-
-            android:autoSizeTextType="uniform"
             android:text="->"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button15"

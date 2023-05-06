@@ -21,7 +21,7 @@ import java.util.Locale;
 
 public class Kiosk_15 extends AppCompatActivity {
     private SimpleDateFormat mFormat = new SimpleDateFormat("MM dd (E)", Locale.KOREAN);
-    TextView textView10;
+
     private TextToSpeech tts;
     private int currentVolume;
     private AudioManager audioManager;
@@ -31,6 +31,10 @@ public class Kiosk_15 extends AppCompatActivity {
 
     private Button button15; //도착지 버튼
     private Button button16; //홈 버튼
+    private TextView textView10;
+    private TextView textView102;
+    private TextView textView15;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +48,15 @@ public class Kiosk_15 extends AppCompatActivity {
 
         button15 = findViewById(R.id.button15);
         button16 = findViewById(R.id.button16);
+        textView10 = findViewById(R.id.textView10);
+        textView15 = findViewById(R.id.textView15);
+        textView102 = findViewById(R.id.textView102);
 
         button15.setTextSize(text_size.getId());
         button16.setTextSize(text_size.getId());
+        textView10.setTextSize(text_size.getId());
+        textView15.setTextSize(text_size.getId());
+        textView102.setTextSize(text_size.getId());
 
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {

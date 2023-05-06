@@ -36,9 +36,10 @@ public class Kiosk_14 extends AppCompatActivity {
     private Button button9;
     private Button button10;
     private Button button11;
+    private TextView textView11;
+
 
     private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/MMM/d/E요일", Locale.KOREAN);
-    TextView textView11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +54,12 @@ public class Kiosk_14 extends AppCompatActivity {
         button9 = findViewById(R.id.button9);
         button10 = findViewById(R.id.button10);
         button11 = findViewById(R.id.button11);
+        textView11 = findViewById(R.id.textView11);
 
         button9.setTextSize(text_size.getId());
         button10.setTextSize(text_size.getId());
         button11.setTextSize(text_size.getId());
+        textView11.setTextSize(text_size.getId());
 
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {

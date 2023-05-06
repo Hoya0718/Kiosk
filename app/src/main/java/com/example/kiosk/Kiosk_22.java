@@ -13,6 +13,7 @@ import java.util.Locale;
 
 public class Kiosk_22 extends AppCompatActivity {
     private TextToSpeech tts;
+    private myapp sound;
     private Button button66; // 취소해
     private ImageView imageView3; //이미지 터치시 다음 화면 전환
 
@@ -20,6 +21,8 @@ public class Kiosk_22 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk22);
+
+        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -30,7 +33,7 @@ public class Kiosk_22 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        tts.speak("Insert the card as shown in the picture", TextToSpeech.QUEUE_FLUSH, null, null);
+                        speakText("Insert the card as shown in the picture");
                     }
                     button66 = findViewById(R.id.button66);
                     button66.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +59,12 @@ public class Kiosk_22 extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     protected void onDestroy() {
         if(tts != null) {

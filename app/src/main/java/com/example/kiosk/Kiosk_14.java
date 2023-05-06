@@ -27,6 +27,8 @@ import android.widget.Toast;
 
 public class Kiosk_14 extends AppCompatActivity {
     private TextToSpeech tts;
+    private myapp sound;
+    Animation Scale;
     private Button button9;
     private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/MMM/d/E요일", Locale.KOREAN);
     TextView textView11;
@@ -35,6 +37,8 @@ public class Kiosk_14 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk14);
+
+        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -46,8 +50,8 @@ public class Kiosk_14 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        tts.speak("From this screen you can purchase bus tickets." +
-                                "Click the buy ticket button", TextToSpeech.QUEUE_FLUSH, null, null);
+                        speakText("From this screen you can purchase bus tickets." +
+                                "Click the buy ticket button");
                     }
 
 
@@ -67,9 +71,11 @@ public class Kiosk_14 extends AppCompatActivity {
 
                     button9 = findViewById(R.id.button9);
 
+                    Scale = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale);
                     button9.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            button9.startAnimation(Scale);
                             Intent intent = new Intent(Kiosk_14.this, Kiosk_15.class);
                             tts.shutdown();
                             startActivity(intent);
@@ -79,7 +85,13 @@ public class Kiosk_14 extends AppCompatActivity {
                 }
             }
         });
+    }
 
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     protected void onDestroy() {
         if(tts != null) {

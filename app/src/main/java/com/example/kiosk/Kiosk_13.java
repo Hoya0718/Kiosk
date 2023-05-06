@@ -14,11 +14,13 @@ public class Kiosk_13 extends AppCompatActivity {
 
     private Button button7; //버스 버튼
     private TextToSpeech tts;
+    private myapp sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk13);
+        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -49,6 +51,12 @@ public class Kiosk_13 extends AppCompatActivity {
     public void goto_kiosk_25(View v){
         Intent goto_kiosk_25 = new Intent(getApplicationContext(),Kiosk_25.class);
         startActivity(goto_kiosk_25);
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     protected void onDestroy() {

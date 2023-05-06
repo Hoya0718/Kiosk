@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -47,6 +48,8 @@ public class Kiosk_6 extends AppCompatActivity {
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+
+
     }
 
     protected void onDestroy() {

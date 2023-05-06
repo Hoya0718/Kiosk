@@ -12,12 +12,15 @@ import java.util.Locale;
 
 public class Kiosk_23 extends AppCompatActivity {
     private TextToSpeech tts;
+    private myapp sound;
     private Button button67; //처음으로 돌아가
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk23);
+
+        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -29,8 +32,8 @@ public class Kiosk_23 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        tts.speak("Congratulations. Bus practice phase is complete" +
-                                "Please click the back button", TextToSpeech.QUEUE_FLUSH, null, null);
+                        speakText("Congratulations. Bus practice phase is complete" +
+                                "Please click the back button");
                     }
                     button67 = findViewById(R.id.button67);
                     button67.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +49,12 @@ public class Kiosk_23 extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     protected void onDestroy() {
         if(tts != null) {

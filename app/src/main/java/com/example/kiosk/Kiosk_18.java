@@ -13,6 +13,7 @@ import java.util.Locale;
 
 public class Kiosk_18 extends AppCompatActivity {
     private TextToSpeech tts;
+    private myapp sound;
     private TextView textView18; // 목적지 텍스트 뷰
 
     private Button button17; //좌석 선택 버튼
@@ -23,6 +24,8 @@ public class Kiosk_18 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk18);
+
+        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -35,9 +38,9 @@ public class Kiosk_18 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        tts.speak("Have you chosen where you want to go? " +
+                        speakText("Have you chosen where you want to go? " +
                                 "Then press the seat select button to see the bus type, " +
-                                "departure time and select the bus you want to ride.", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "departure time and select the bus you want to ride.");
                     }
                     Intent intent = getIntent();
                     String destination = intent.getStringExtra("destination");
@@ -117,6 +120,12 @@ public class Kiosk_18 extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     protected void onDestroy() {
         if(tts != null) {

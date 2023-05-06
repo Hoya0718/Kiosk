@@ -22,6 +22,8 @@ public class Kiosk_15 extends AppCompatActivity {
     TextView textView10;
     private TextToSpeech tts;
 
+    private myapp sound;
+
 
     private Button button15; //도착지 버튼
     private Button button16; //홈 버튼
@@ -30,6 +32,8 @@ public class Kiosk_15 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk15);
+
+        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -43,10 +47,10 @@ public class Kiosk_15 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        tts.speak("This screen allows you to select your destination." +
+                        speakText("This screen allows you to select your destination." +
                                 "Please click the destination button" +
                                 "If you want to return to the first screen, " +
-                                "click the Back to Home Screen button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "click the Back to Home Screen button.");
                     }
 
                     textView10 = (TextView) findViewById(R.id.textView10);
@@ -85,6 +89,13 @@ public class Kiosk_15 extends AppCompatActivity {
             }
         });
     }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
     protected void onDestroy() {
         if(tts != null) {
             tts.stop();

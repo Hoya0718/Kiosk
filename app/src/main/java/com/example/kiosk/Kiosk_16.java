@@ -13,6 +13,7 @@ import java.util.Locale;
 public class Kiosk_16 extends AppCompatActivity {
 
     private TextToSpeech tts;
+    private myapp sound;
 
     private Button button_seoul; // 서울
 
@@ -20,6 +21,8 @@ public class Kiosk_16 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk16);
+
+        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -32,9 +35,9 @@ public class Kiosk_16 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        tts.speak("There are many ways to find your destination" +
+                        speakText("There are many ways to find your destination" +
                                 "You can search according to the region, and you can search by the preceding letter" +
-                                "First, press the Seoul button", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "First, press the Seoul button");
                     }
 
                     button_seoul = findViewById(R.id.button_seoul);
@@ -49,6 +52,12 @@ public class Kiosk_16 extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     protected void onDestroy() {
         if(tts != null) {

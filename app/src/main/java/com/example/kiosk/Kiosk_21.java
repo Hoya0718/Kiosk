@@ -15,6 +15,7 @@ import java.util.Locale;
 public class Kiosk_21 extends AppCompatActivity {
     private String destination = "목적지"; //목적지
     private TextToSpeech tts;
+    private myapp sound;
     private TextView textView37; //목적지
     private TextView textView38; //버스종류, 좌석
     private TextView textView39; //표 가격
@@ -25,6 +26,8 @@ public class Kiosk_21 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk21);
+
+        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -38,10 +41,10 @@ public class Kiosk_21 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        tts.speak("Make sure you have chosen the correct destination, bus type and seat" +
+                        speakText("Make sure you have chosen the correct destination, bus type and seat" +
                                 "If you have selected the right one, please click the checkout button" +
                                 "If you make a mistake, you can click the Cancel button " +
-                                "to return to the previous screen.", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "to return to the previous screen.");
                     }
                     button64 = findViewById(R.id.button64);
                     button65 = findViewById(R.id.button65);
@@ -91,6 +94,12 @@ public class Kiosk_21 extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     protected void onDestroy() {
         if(tts != null) {

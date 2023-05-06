@@ -17,6 +17,7 @@ public class Kiosk_17 extends AppCompatActivity {
     private String seat;
     private String price;
     private TextToSpeech tts;
+    private myapp sound;
 
     private Button button18; //마산 버튼
     private Button button20; //무안 버튼
@@ -29,6 +30,8 @@ public class Kiosk_17 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk17);
 
+        sound = (myapp) getApplication();
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
@@ -39,8 +42,8 @@ public class Kiosk_17 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        tts.speak("Bus stops with the letter ㅁ in front appear." +
-                                "From the orange buttons on the right, click the button where you want to go", TextToSpeech.QUEUE_FLUSH, null, null);
+                        speakText("Bus stops with the letter ㅁ in front appear." +
+                                "From the orange buttons on the right, click the button where you want to go");
                     }
                     button20 = findViewById(R.id.button20);
                     button18 = findViewById(R.id.button18);
@@ -100,6 +103,12 @@ public class Kiosk_17 extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void speakText(String text) {
+
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     protected void onDestroy() {
         if(tts != null) {

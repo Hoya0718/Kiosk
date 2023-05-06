@@ -20,18 +20,18 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="서울"
-            android:textSize="25sp"
+            android:textSize="18sp"
             android:backgroundTint="#FF9933"/>
 
         <Button
-            android:id="@+id/button_gyeongi"
+            android:id="@+id/button_incheon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="인천/경기"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button_kangwon"
@@ -41,7 +41,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="강원도"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button_sejong"
@@ -51,7 +51,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="대전/세종"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button_chungnam"
@@ -61,7 +61,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="충청남도"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button_chungbuk"
@@ -71,7 +71,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="충청북도"
-            android:textSize="27sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button_kwangju"
@@ -81,7 +81,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="광주/전남"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button_jeonbuk"
@@ -90,8 +90,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="전라남도"
-            android:textSize="25sp" />
+            android:text="전라북도"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button_busan"
@@ -101,7 +101,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="부산/경남"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button_daegu"
@@ -111,7 +111,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="대구/경북"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -126,11 +126,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㄱ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button26"
@@ -138,11 +134,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㄴ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button25"
@@ -150,11 +142,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㄷ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button24"
@@ -162,11 +150,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㄹ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button23"
@@ -174,11 +158,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅁ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button32"
@@ -186,11 +166,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅂ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button31"
@@ -198,11 +174,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅅ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button30"
@@ -210,11 +182,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅇ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button29"
@@ -222,11 +190,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅈ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button28"
@@ -234,11 +198,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅊ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button34"
@@ -246,11 +206,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅋ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button35"
@@ -258,11 +214,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅌ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button36"
@@ -270,11 +222,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅍ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button37"
@@ -282,11 +230,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="ㅎ"
-            android:textSize="35sp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
 

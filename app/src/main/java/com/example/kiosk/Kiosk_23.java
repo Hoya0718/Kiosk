@@ -2,7 +2,9 @@ package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -13,6 +15,9 @@ import java.util.Locale;
 public class Kiosk_23 extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
+    private int currentVolume;
+    private AudioManager audioManager;
+    private myapp text_size;
     private Button button67; //처음으로 돌아가
 
     @Override
@@ -21,10 +26,19 @@ public class Kiosk_23 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk23);
 
         sound = (myapp) getApplication();
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+        text_size = (myapp) getApplication();
+
+        button67 = findViewById(R.id.button67);
+
+        button67.setTextSize(text_size.getId());
+
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
+                    sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("축하드립니다. 버스 연습 단계가 완료되었습니다" +

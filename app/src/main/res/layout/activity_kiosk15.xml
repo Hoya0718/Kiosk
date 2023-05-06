@@ -51,11 +51,6 @@
             android:layout_marginBottom="100dp"
             android:gravity="center"
             android:layout_weight="0.7"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeStepGranularity="2sp"
-
-            android:autoSizeTextType="uniform"
             android:text="목포"
             android:textAlignment="center"
             android:textSize="35sp" />
@@ -76,7 +71,7 @@
             android:autoSizeTextType="uniform"
             android:text="->"
             android:textAlignment="center"
-            android:textSize="35sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button15"
@@ -90,12 +85,7 @@
             android:text="@string/b_arrive"
             android:backgroundTint="@android:color/holo_orange_dark"
             android:textAlignment="center"
-            android:textSize="35sp"
-
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -110,12 +100,7 @@
             android:layout_height="wrap_content"
             android:text="@string/b_nextbus"
             android:textAlignment="center"
-            android:textSize="27sp"
-
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp"/>
 
         <Button
             android:id="@+id/button16"
@@ -126,11 +111,6 @@
             android:layout_marginRight="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:textSize="50sp"
-
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

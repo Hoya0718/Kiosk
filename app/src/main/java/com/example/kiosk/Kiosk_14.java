@@ -5,8 +5,10 @@ import androidx.appcompat.view.menu.MenuBuilder;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -26,10 +28,15 @@ import android.widget.Toast;
 
 
 public class Kiosk_14 extends AppCompatActivity {
+    private int currentVolume;
+    private AudioManager audioManager;
     private TextToSpeech tts;
     private myapp sound;
-    Animation Scale;
+    private myapp text_size;
     private Button button9;
+    private Button button10;
+    private Button button11;
+
     private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/MMM/d/E요일", Locale.KOREAN);
     TextView textView11;
 
@@ -39,14 +46,28 @@ public class Kiosk_14 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk14);
 
         sound = (myapp) getApplication();
+        text_size = (myapp) getApplication();
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+
+        button9 = findViewById(R.id.button9);
+        button10 = findViewById(R.id.button10);
+        button11 = findViewById(R.id.button11);
+
+        button9.setTextSize(text_size.getId());
+        button10.setTextSize(text_size.getId());
+        button11.setTextSize(text_size.getId());
+
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
+                    sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("이 화면에서는 버스 표를 구매하실 수 있습니다." +
-                                "승차권 구매 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null);
+
+                        speakText("이 화면에서는 버스 표를 구매하실 수 있습니다." +
+                                "승차권 구매 버튼을 눌러주세요");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -71,11 +92,9 @@ public class Kiosk_14 extends AppCompatActivity {
 
                     button9 = findViewById(R.id.button9);
 
-                    Scale = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale);
                     button9.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            button9.startAnimation(Scale);
                             Intent intent = new Intent(Kiosk_14.this, Kiosk_15.class);
                             tts.shutdown();
                             startActivity(intent);

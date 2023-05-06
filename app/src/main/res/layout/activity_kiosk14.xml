@@ -39,7 +39,7 @@
             android:layout_weight="1"
             android:text="@string/b_ticket"
             android:textStyle="bold"
-            android:textSize="40sp"
+            android:textSize="18sp"
             android:gravity="center"
             android:backgroundTint="@android:color/holo_orange_dark"
             tools:layout_marginBottom="20dp"
@@ -47,10 +47,7 @@
             android:scaleY="1.0"
             android:onClick="onClick"
 
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+           />
 
         <Button
             android:id="@+id/button10"
@@ -62,14 +59,10 @@
             android:layout_weight="1"
             android:text="@string/b_reserved"
             android:textStyle="bold"
-            android:textSize="40sp"
+            android:textSize="18sp"
             android:gravity="center"
             tools:layout_marginBottom="20dp"
-
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"/>
+            />
 
         <Button
             android:id="@+id/button11"
@@ -79,15 +72,11 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="50dp"
             android:layout_weight="1"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeStepGranularity="2sp"
-            android:autoSizeTextType="uniform"
 
             android:gravity="center"
             android:text="@string/b_refund"
             android:textStyle="bold"
-            android:textSize="40sp"
+            android:textSize="18sp"
             tools:layout_marginBottom="20dp" />
     </LinearLayout>
 </LinearLayout>

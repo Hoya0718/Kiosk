@@ -2,7 +2,9 @@ package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -21,9 +23,11 @@ public class Kiosk_15 extends AppCompatActivity {
     private SimpleDateFormat mFormat = new SimpleDateFormat("MM dd (E)", Locale.KOREAN);
     TextView textView10;
     private TextToSpeech tts;
+    private int currentVolume;
+    private AudioManager audioManager;
 
     private myapp sound;
-
+    private myapp text_size;
 
     private Button button15; //도착지 버튼
     private Button button16; //홈 버튼
@@ -34,10 +38,21 @@ public class Kiosk_15 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk15);
 
         sound = (myapp) getApplication();
+        text_size = (myapp) getApplication();
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+
+        button15 = findViewById(R.id.button15);
+        button16 = findViewById(R.id.button16);
+
+        button15.setTextSize(text_size.getId());
+        button16.setTextSize(text_size.getId());
+
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
+                    sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("이 화면에서는 도착지를 선택할 수 있습니다." +

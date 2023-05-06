@@ -27,7 +27,7 @@
         android:layout_weight="1"
         android:onClick="goto_kiosk_24"
         android:text="@string/b_gofirst1"
-        android:textSize="30sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:backgroundTint="@android:color/holo_orange_dark"/>
 </LinearLayout>

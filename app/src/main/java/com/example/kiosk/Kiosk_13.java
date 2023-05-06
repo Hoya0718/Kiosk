@@ -15,6 +15,7 @@ public class Kiosk_13 extends AppCompatActivity {
     private Button button7; //버스 버튼
     private TextToSpeech tts;
     private myapp sound;
+    private myapp text_size;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,11 @@ public class Kiosk_13 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    tts.speak("버스 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("버스 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    tts.speak("Press the bus button.", TextToSpeech.QUEUE_FLUSH, null, null);
+                    speakText("Press the bus button.");
                 }
             }
         });

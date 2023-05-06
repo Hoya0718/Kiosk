@@ -2,7 +2,9 @@ package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -17,17 +19,34 @@ import java.util.Locale;
 public class Kiosk_19 extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
-    private TextView textView37; //목적지2
-    private TextView textView38; //버스, 좌석
-    private TextView textView39; //표 가격
-    private Button button45; //3B;
-    private Button button47; //4B
-    private Button button48; //4A
-    private Button button49; //2B;
-    private Button button53; //5D
-    private Button button54; //5C
-    private Button button59; //2C
-    private Button button60; //2D
+    private int currentVolume;
+    private AudioManager audioManager;
+    private myapp text_size;
+    private TextView textView32;
+    private TextView textView34;
+    private TextView textView33;
+    private Button button43;
+    private Button button44;
+    private Button button45;
+    private Button button46;
+    private Button button53;
+    private Button button54;
+    private Button button47;
+    private Button button48;
+    private Button button55;
+    private Button button56;
+    private Button button57;
+    private Button button58;
+    private Button button50;
+    private Button button49;
+    private Button button59;
+    private Button button60;
+    private Button button51;
+    private Button button52;
+    private Button button61;
+    private Button button62;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +54,63 @@ public class Kiosk_19 extends AppCompatActivity {
     setContentView(R.layout.activity_kiosk19);
 
         sound = (myapp) getApplication();
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+        text_size = (myapp) getApplication();
+
+        button43 = findViewById(R.id.button43);
+        button44 = findViewById(R.id.button44);
+        button45 = findViewById(R.id.button45);
+        button46 = findViewById(R.id.button46);
+        button47 = findViewById(R.id.button47);
+        button48 = findViewById(R.id.button48);
+        button49 = findViewById(R.id.button49);
+        button50 = findViewById(R.id.button50);
+        button51 = findViewById(R.id.button51);
+        button52 = findViewById(R.id.button52);
+        button53 = findViewById(R.id.button53);
+        button54 = findViewById(R.id.button54);
+        button55 = findViewById(R.id.button55);
+        button56 = findViewById(R.id.button56);
+        button57 = findViewById(R.id.button57);
+        button58 = findViewById(R.id.button58);
+        button59 = findViewById(R.id.button59);
+        button60 = findViewById(R.id.button60);
+        button61 = findViewById(R.id.button61);
+        button62 = findViewById(R.id.button62);
+        textView32 = findViewById(R.id.textView32);
+        textView33 = findViewById(R.id.textView33);
+        textView34 = findViewById(R.id.textView34);
+
+        button43.setTextSize(text_size.getId());
+        button44.setTextSize(text_size.getId());
+        button45.setTextSize(text_size.getId());
+        button46.setTextSize(text_size.getId());
+        button47.setTextSize(text_size.getId());
+        button48.setTextSize(text_size.getId());
+        button49.setTextSize(text_size.getId());
+        button50.setTextSize(text_size.getId());
+        button51.setTextSize(text_size.getId());
+        button52.setTextSize(text_size.getId());
+        button53.setTextSize(text_size.getId());
+        button54.setTextSize(text_size.getId());
+        button55.setTextSize(text_size.getId());
+        button56.setTextSize(text_size.getId());
+        button57.setTextSize(text_size.getId());
+        button58.setTextSize(text_size.getId());
+        button59.setTextSize(text_size.getId());
+        button60.setTextSize(text_size.getId());
+        button61.setTextSize(text_size.getId());
+        button62.setTextSize(text_size.getId());
+        textView32.setTextSize(text_size.getId());
+        textView33.setTextSize(text_size.getId());
+        textView34.setTextSize(text_size.getId());
+
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
+                    sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("매진이라고 써진 회색 좌석은 다른 사람이 이미 예약해서" +
@@ -50,14 +122,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 "reserved by someone else and and cannot be selected" +
                                 "Choose a different seat");
                     }
-                    button45 = findViewById(R.id.button45);
-                    button47 = findViewById(R.id.button47);
-                    button48 = findViewById(R.id.button48);
-                    button49 = findViewById(R.id.button49);
-                    button53 = findViewById(R.id.button53);
-                    button54 = findViewById(R.id.button54);
-                    button59 = findViewById(R.id.button59);
-                    button60 = findViewById(R.id.button60);
+
 
                     button45.setOnClickListener(new View.OnClickListener() {
                         @Override

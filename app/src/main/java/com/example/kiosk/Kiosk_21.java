@@ -2,12 +2,16 @@ package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -15,12 +19,17 @@ import java.util.Locale;
 public class Kiosk_21 extends AppCompatActivity {
     private String destination = "목적지"; //목적지
     private TextToSpeech tts;
+    private int currentVolume;
+    private AudioManager audioManager;
     private myapp sound;
+    private myapp text_size;
     private TextView textView37; //목적지
     private TextView textView38; //버스종류, 좌석
     private TextView textView39; //표 가격
+    private TextView textView100;
     private Button button64; //취소하기
     private Button button65; //결제하기
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +37,24 @@ public class Kiosk_21 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk21);
 
         sound = (myapp) getApplication();
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+        text_size = (myapp) getApplication();
+
+        button64 = findViewById(R.id.button64);
+        button65 = findViewById(R.id.button65);
+        textView37 = findViewById(R.id.textView37);
+        textView38 = findViewById(R.id.textView38);
+        textView39 = findViewById(R.id.textView39);
+        textView100 = findViewById(R.id.textView100);
+
+        button64.setTextSize(text_size.getId());
+        button65.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
+                    sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("목적지는 맞게 골랐는지. 버스 종류와 좌석은 정확하게 골랐는지" +

@@ -127,7 +127,10 @@ public class Kiosk_4 extends AppCompatActivity {
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume - 1, 0);
             currentVolume -= 1;
             sound.setTtsVolume(currentVolume);
-            tts.speak("소리를 측정하세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+            if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                speakText("소리를 측정하세요");
+            else
+                speakText("Measure the sound");
         }
         else if(currentVolume == 0) {
             if(getResources().getConfiguration().locale.getLanguage().equals("ko"))

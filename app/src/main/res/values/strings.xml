@@ -162,7 +162,7 @@
     <string name="complete_order">주문 완료</string>
     <string name="home">처음으로</string>
     <string name="help_features">도움 기능</string>
-    <string name="total_menu_2">빅맥 - 세트 1105kcal</string>
+    <string name="total_menu_2">빅맥 - 세트 1105kcalㅂ</string>
     <string name="enjoy_together">함께 즐기면 더욱 좋습니다</string>
     <string name="uncheck">선택 안함</string>
     <string name="order_history">주문 내역</string>
@@ -285,4 +285,15 @@
     <string name="b_muanairport">무안공항</string>
     <string name="b_muju">무주</string>
     <string name="b_maryang">마량</string>
+    <string name="b1955">1955 버거</string>
+    <string name="batodi">베이컨 토마토 디럭스</string>
+    <string name="cheeze">치즈버거</string>
+    <string name="bulgogi">불고기버거</string>
+    <string name="susu">슈슈버거</string>
+    <string name="subi">슈비버거</string>
+    <string name="ham">햄버거</string>
+    <string name="sanhi">맥스파이시 상하이 버거</string>
+    <string name="quater">쿼터파운더 치즈 버거</string>
+    <string name="mccri">맥크리스피 버거</string>
+    <string name="mcchi">맥치킨 버거</string>
 </resources>

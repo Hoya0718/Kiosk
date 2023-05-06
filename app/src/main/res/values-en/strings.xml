@@ -171,7 +171,7 @@
     <string name="total_menu">Big MC - Large Set ₩8,400 1105kcal</string>
     <string name="choose_drink">Choose a drink from the set menu</string>
     <string name="choose_side">Choose a side from the set menu</string>
-    <string name="big_mc">Big MC</string>
+    <string name="big_mc">Big Mc</string>
     <string name="set_menu">Set Menu</string>
     <string name="large_menu">Large Set</string>
     <string name="check_order">Check Order</string>
@@ -285,4 +285,15 @@
     <string name="fastfood">Food</string>
     <string name="busbut">Bus</string>
     <string name="hospita">Hospital</string>
+    <string name="b1955">1955 Burger</string>
+    <string name="batodi">Bacon Tomato Deluxe</string>
+    <string name="cheeze">Cheese Burger</string>
+    <string name="bulgogi">Bulgogi Burger</string>
+    <string name="susu">Supreme Shrimp Burger</string>
+    <string name="subi">Shrimp Beef Burger</string>
+    <string name="ham">Hamburger</string>
+    <string name="sanhi">McSpicy Shanghai Burger</string>
+    <string name="quater">Quarter Pounder Cheese Burger</string>
+    <string name="mccri">McCrispy Burger</string>
+    <string name="mcchi">McChicken Burger</string>
 </resources>

@@ -18,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/table_border">
 
             <TextView
                 android:id="@+id/textView17"
@@ -54,7 +55,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/table_border">
 
             <TextView
                 android:id="@+id/textView51"
@@ -96,7 +98,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/table_border">
 
         <TextView
             android:id="@+id/textView45"
@@ -141,7 +144,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/table_border">
 
         <TextView
             android:id="@+id/textView46"
@@ -185,7 +189,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/table_border">
 
         <TextView
             android:id="@+id/textView47"
@@ -227,7 +232,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/table_border">
 
             <TextView
                 android:id="@+id/textView48"
@@ -270,7 +276,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/table_border">
 
             <TextView
                 android:id="@+id/textView49"
@@ -313,7 +320,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/table_border">
 
             <TextView
                 android:id="@+id/textView50"

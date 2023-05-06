@@ -20,7 +20,8 @@
             android:gravity="center"
             android:text="@string/select_menu"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textColor="#033359"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/arrow_1"

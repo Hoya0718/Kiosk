@@ -171,7 +171,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="15dp"
-            android:backgroundTint="#FFA500"
+            android:backgroundTint="#FF8800"
             android:onClick="goto_kiosk_09"
             android:text="@string/deselect"
             android:textSize="18sp" />

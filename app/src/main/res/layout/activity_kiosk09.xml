@@ -259,7 +259,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
-            android:backgroundTint="#FFA500"
+            android:backgroundTint="#FF8800"
             android:onClick="goto_kiosk_10"
             android:text="@string/complete_order"
             android:textSize="18sp" />

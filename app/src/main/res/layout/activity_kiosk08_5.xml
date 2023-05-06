@@ -258,7 +258,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
-            android:backgroundTint="#FFA500"
+            android:backgroundTint="#FF8800"
             android:onClick="popup_kiosk_08_6"
             android:text="@string/add_to_cart"
             android:textSize="18sp" />

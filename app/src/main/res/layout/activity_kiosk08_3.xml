@@ -294,8 +294,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFA500"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FF8800"
                         android:text="@string/huri"
                         android:gravity="center"/>
 
@@ -303,7 +305,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#FF8800"
                         android:text="₩2,000"
                         android:gravity="center"/>
                 </TableLayout>

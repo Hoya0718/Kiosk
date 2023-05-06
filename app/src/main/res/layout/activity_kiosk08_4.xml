@@ -401,7 +401,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:layout_margin="5dp"
-                        android:background="#FFA500"
+                        android:background="#FF8800"
                         android:text="@string/drinkcoca"
                         android:gravity="center"/>
 

@@ -88,7 +88,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
-            android:backgroundTint="#FFA500"
+            android:backgroundTint="#FF8800"
             android:onClick="goto_kiosk_11"
             android:text="@string/card_payment"
             android:textSize="18sp" />

@@ -128,7 +128,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#FFA500"
+                        android:backgroundTint="#FF8800"
                         android:onClick="popup_kiosk_08_3"
                         android:text="@string/set_menu"
                         android:textSize="18sp" />

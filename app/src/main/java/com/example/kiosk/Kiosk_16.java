@@ -50,5 +50,13 @@ public class Kiosk_16 extends AppCompatActivity {
             }
         });
     }
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
+    }
 }
 

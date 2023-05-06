@@ -3,6 +3,8 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -11,6 +13,7 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
@@ -63,6 +66,7 @@ public class Kiosk_14 extends AppCompatActivity {
                     textView11.setText(format.format(c.getTime()));
 
                     button9 = findViewById(R.id.button9);
+
                     button9.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -75,6 +79,15 @@ public class Kiosk_14 extends AppCompatActivity {
                 }
             }
         });
+
+    }
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
     }
 }
 

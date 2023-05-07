@@ -83,4 +83,12 @@ public class Kiosk_2 extends AppCompatActivity {
         korean_text.setTextSize(Dimension.SP,26);
         text_size.setId(26);
     }
+    protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
+        super.onDestroy();
+    }
 }

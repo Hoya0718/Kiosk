@@ -4,10 +4,9 @@ import static java.util.Locale.KOREAN;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
@@ -18,7 +17,9 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private TextToSpeech tts;
+    private AnimationDrawable anim;
     private Button practice_Btn;
+    Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,19 +45,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                changer(Color.BLUE,Color.YELLOW, practice_Btn, 10000, -1);
-
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                     speakText("연습은 여기에있어요.");
                 else
                     speakText("Practice is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        practice_Btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) practice_Btn.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
             }
-        }, 5000);
-
+        }, 10000);
     }
+
+
 
     private void speakText(String text) {
 
@@ -105,18 +113,5 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onPause();
     }
-    public void changer(int startColor, int endColor, final View v, long duration, int repeatCount) {
-        ValueAnimator colorAnimation = ValueAnimator.ofArgb(startColor, endColor);
-        colorAnimation.setDuration(duration);
-        colorAnimation.setRepeatCount(repeatCount);
-        colorAnimation.setRepeatMode(ValueAnimator.REVERSE);
-        colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animator) {
-                int color = (int) animator.getAnimatedValue();
-                v.setBackgroundColor(color);
-            }
-        });
-        colorAnimation.start();
-    }
+
 }

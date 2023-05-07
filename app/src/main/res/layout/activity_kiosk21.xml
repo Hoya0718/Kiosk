@@ -129,7 +129,6 @@
             android:text="@string/b_payment"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:backgroundTint="@android:color/holo_orange_dark"
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="12sp"
             android:autoSizeMaxTextSize="40sp"

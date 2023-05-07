@@ -263,7 +263,6 @@
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:text="마산"
-            android:backgroundTint="#FF9933"
             android:textSize="15sp" />
 
         <Button
@@ -276,7 +275,6 @@
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:text="무안"
-            android:backgroundTint="#FF9933"
             android:textSize="15sp" />
 
         <Button
@@ -289,7 +287,6 @@
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:text="무안공항"
-            android:backgroundTint="#FF9933"
             android:textSize="15sp" />
 
         <Button
@@ -301,7 +298,6 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
-            android:backgroundTint="#FF9933"
             android:text="무주"
             android:textSize="15sp" />
 
@@ -315,7 +311,6 @@
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:text="마량"
-            android:backgroundTint="#FF9933"
             android:textSize="15sp" />
     </LinearLayout>
 </LinearLayout>

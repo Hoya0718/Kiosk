@@ -162,8 +162,7 @@
             android:layout_weight="1"
             android:text="ㅁ"
             android:textSize="18sp"
-            android:textAlignment="center"
-            android:backgroundTint="#FF9933" />
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/button32"

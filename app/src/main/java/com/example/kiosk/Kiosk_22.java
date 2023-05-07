@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,8 @@ public class Kiosk_22 extends AppCompatActivity {
     private myapp sound;
     private int currentVolume;
     private AudioManager audioManager;
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
     private myapp text_size;
     private Button button66; // 취소해
     private TextView textView40;
@@ -44,11 +48,10 @@ public class Kiosk_22 extends AppCompatActivity {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
                     sound.setTtsVolume(currentVolume);
-                    if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("카드를 그림과 같이 꽂아주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
-                    }
-                    else {
+                    } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("Insert the card as shown in the picture");
                     }
@@ -77,6 +80,7 @@ public class Kiosk_22 extends AppCompatActivity {
             }
         });
     }
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

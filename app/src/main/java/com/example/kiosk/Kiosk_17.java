@@ -2,8 +2,10 @@ package com.example.kiosk;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
@@ -20,9 +22,11 @@ public class Kiosk_17 extends AppCompatActivity {
     private String price;
     private TextToSpeech tts;
     private myapp sound;
+    private AnimationDrawable anim;
     private int currentVolume;
     private AudioManager audioManager;
     private myapp text_size;
+    Handler handler = new Handler();
 
     private Button button_seoul; // 서울
     private Button button_gyeongi;
@@ -131,12 +135,12 @@ public class Kiosk_17 extends AppCompatActivity {
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("앞 글자가 ㅁ인 버스 정류장들이 나옵니다." +
-                                "오른쪽의 주황색 버튼 중에서 가고 싶은 곳 버튼을 클릭해주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "오른쪽의 버튼 중에서 가고 싶은 곳 버튼을 클릭해주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("Bus stops with the letter ㅁ in front appear." +
-                                "From the orange buttons on the right, click the button where you want to go");
+                                "From the buttons on the right, click the button where you want to go");
                     }
 
                     button20.setOnClickListener(new View.OnClickListener() {
@@ -191,7 +195,38 @@ public class Kiosk_17 extends AppCompatActivity {
                 }
             }
         });
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("목적지 버튼은 오른쪽 부분에 있습니다.");
+                else
+                    speakText("The destination button is on the right side");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        button18.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) button18.getBackground();
+                        anim.start();
+                        button20.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) button20.getBackground();
+                        anim.start();
+                        button21.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) button21.getBackground();
+                        anim.start();
+                        button22.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) button22.getBackground();
+                        anim.start();
+                        button85.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) button85.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
+            }
+        }, 10000);
     }
+
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

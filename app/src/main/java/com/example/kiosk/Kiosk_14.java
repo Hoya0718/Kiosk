@@ -12,6 +12,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.view.animation.Animation;
@@ -34,10 +35,12 @@ public class Kiosk_14 extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
     private myapp text_size;
+    private AnimationDrawable anim;
     private Button button9;
     private Button button10;
     private Button button11;
     private TextView textView11;
+    Handler handler = new Handler();
 
 
     private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/MMM/d/E요일", Locale.KOREAN);
@@ -46,11 +49,6 @@ public class Kiosk_14 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk14);
-
-        Button button = findViewById(R.id.button9);
-        AnimationDrawable buttonBorderAnimation = (AnimationDrawable) getResources().getDrawable(R.drawable.button_border_animation);
-        button.setBackground(buttonBorderAnimation);
-        startButtonBorderAnimation(button);
 
         sound = (myapp) getApplication();
         text_size = (myapp) getApplication();
@@ -113,8 +111,24 @@ public class Kiosk_14 extends AppCompatActivity {
                 }
             }
         });
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("승차권 구매 버튼은 여기에 있어요.");
+                else
+                    speakText("Buy ticket button is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        button9.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) button9.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
+            }
+        }, 10000);
     }
-
     private void startButtonBorderAnimation(Button button) {
         AnimationDrawable buttonBorderAnimation = (AnimationDrawable) button.getBackground();
         if (buttonBorderAnimation != null) {

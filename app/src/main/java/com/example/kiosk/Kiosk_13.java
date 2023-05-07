@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
@@ -18,11 +20,13 @@ public class Kiosk_13 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
+    private AnimationDrawable anim;
 
     private myapp text_size;
-    private Button fastfood;
-    private Button bus;
-    private Button hospital;
+    private Button fastfood_btn;
+    private Button bus_btn;
+    private Button hospital_btn;
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +37,13 @@ public class Kiosk_13 extends AppCompatActivity {
 
         text_size = (myapp) getApplication();
 
-        fastfood = findViewById(R.id.fastfood_btn);
-        bus = findViewById(R.id.bus_btn);
-        hospital = findViewById(R.id.hospital_btn);
+        fastfood_btn = findViewById(R.id.fastfood_btn);
+        bus_btn = findViewById(R.id.bus_btn);
+        hospital_btn = findViewById(R.id.hospital_btn);
 
-        fastfood.setTextSize(text_size.getId());
-        bus.setTextSize(text_size.getId());
-        hospital.setTextSize(text_size.getId());
+        fastfood_btn.setTextSize(text_size.getId());
+        bus_btn.setTextSize(text_size.getId());
+        hospital_btn.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -53,17 +57,23 @@ public class Kiosk_13 extends AppCompatActivity {
                 }
             }
         });
-
-        bus = findViewById(R.id.bus_btn);
-        bus.setOnClickListener(new View.OnClickListener() {
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_13.this, Kiosk_14.class);
-                tts.shutdown();
-                startActivity(intent);
+            public void run() {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("버스 버튼은 여기 있어요.");
+                else
+                    speakText("Bus button is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        bus_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) bus_btn.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
             }
-
-        });
+        }, 10000);
     }
 
     public void goto_kiosk_06(View v) {

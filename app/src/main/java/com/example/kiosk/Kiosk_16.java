@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,8 @@ public class Kiosk_16 extends AppCompatActivity {
     private int currentVolume;
     private AudioManager audioManager;
     private myapp text_size;
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
 
     private Button button_seoul; // 서울
     private Button button_gyeongi;
@@ -134,7 +138,26 @@ public class Kiosk_16 extends AppCompatActivity {
                 }
             }
         });
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("서울 버튼은 여기에 있어요.");
+                else
+                    speakText("Seoul button is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        button_seoul.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) button_seoul.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
+            }
+        }, 10000);
     }
+
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

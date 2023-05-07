@@ -30,6 +30,7 @@ public class Kiosk_15 extends AppCompatActivity {
 
     private myapp sound;
     private myapp text_size;
+    private AnimationDrawable anim;
 
     private Button button15; //도착지 버튼
     private Button button16; //홈 버튼
@@ -37,7 +38,7 @@ public class Kiosk_15 extends AppCompatActivity {
     private TextView textView102;
     private TextView textView15;
 
-    public AnimationDrawable anim;
+    Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +70,7 @@ public class Kiosk_15 extends AppCompatActivity {
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         tts.speak("이 화면에서는 도착지를 선택할 수 있습니다." +
-                                "목적지 버튼을 눌러주세요" +
+                                "도착지 버튼을 눌러주세요" +
                                 "만약 처음 화면으로 돌아가고 싶으시면 처음 화면으로 돌아가기" +
                                 "버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
@@ -116,16 +117,23 @@ public class Kiosk_15 extends AppCompatActivity {
                 }
             }
         });
-        final Handler Handler = new Handler();
-
-        Handler.postDelayed(new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                button15.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable)button15.getBackground();
-                anim.start();
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("목적지 버튼은 여기에 있어요.");
+                else
+                    speakText("Destination button is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        button15.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) button15.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
             }
-        }, 2000);
+        }, 10000);
     }
 
     private void speakText(String text) {

@@ -96,9 +96,9 @@ public class Kiosk_4 extends AppCompatActivity {
         currentVolume = 11;
         sound.setTtsVolume(11);
         if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
-            speakText("소리를 측정하세요");
+            speakText("크기가 어떠세요");
         else
-            speakText("Measure the sound");
+            speakText("How's the volume");
     }
 
 
@@ -110,9 +110,9 @@ public class Kiosk_4 extends AppCompatActivity {
             currentVolume += 1;
             sound.setTtsVolume(currentVolume);
             if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                speakText("소리를 측정하세요");
+                speakText("소리를 키웁니다.");
             else
-                speakText("Measure the sound");
+                speakText("Increases sound.");
         }
         else if(currentVolume == maxVolume){
             if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
@@ -128,9 +128,9 @@ public class Kiosk_4 extends AppCompatActivity {
             currentVolume -= 1;
             sound.setTtsVolume(currentVolume);
             if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                speakText("소리를 측정하세요");
+                speakText("소리를 줄입니다.");
             else
-                speakText("Measure the sound");
+                speakText("Reduce sound.");
         }
         else if(currentVolume == 0) {
             if(getResources().getConfiguration().locale.getLanguage().equals("ko"))

@@ -134,13 +134,13 @@ public class Kiosk_17 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("앞 글자가 ㅁ인 버스 정류장들이 나옵니다." +
-                                "오른쪽의 버튼 중에서 가고 싶은 곳 버튼을 클릭해주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                        tts.speak("ㅁ 버튼을 누르게 되면 앞글자가 ㅁ인 버스 정류장들이 나옵니다." +
+                                "오른쪽에 새로 생긴 버튼 중에서 가고 싶은 곳 버튼을 클릭해주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Bus stops with the letter ㅁ in front appear." +
-                                "From the buttons on the right, click the button where you want to go");
+                        speakText("If you press the ㅁ button, bus stops with the first letter ㅁ appear." +
+                                "Among the new buttons on the right, click the button where you want to go.");
                     }
 
                     button20.setOnClickListener(new View.OnClickListener() {
@@ -223,7 +223,7 @@ public class Kiosk_17 extends AppCompatActivity {
                     }
                 }, 2000);
             }
-        }, 10000);
+        }, 12000);
     }
 
 

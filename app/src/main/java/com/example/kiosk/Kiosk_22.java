@@ -50,10 +50,10 @@ public class Kiosk_22 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("카드를 그림과 같이 꽂아주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                        tts.speak("마지막 단계입니다. 카드를 그림과 같이 꽂아주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Insert the card as shown in the picture");
+                        speakText("This is the last step. Insert the card as shown in the picture");
                     }
                     button66 = findViewById(R.id.button66);
                     button66.setOnClickListener(new View.OnClickListener() {

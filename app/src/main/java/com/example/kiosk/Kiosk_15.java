@@ -69,7 +69,7 @@ public class Kiosk_15 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("이 화면에서는 도착지를 선택할 수 있습니다." +
+                        tts.speak("이 화면에서는 가고 싶은 곳을 선택할 수 있습니다." +
                                 "도착지 버튼을 눌러주세요" +
                                 "만약 처음 화면으로 돌아가고 싶으시면 처음 화면으로 돌아가기" +
                                 "버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
@@ -133,7 +133,7 @@ public class Kiosk_15 extends AppCompatActivity {
                     }
                 }, 2000);
             }
-        }, 10000);
+        }, 11000);
     }
 
     private void speakText(String text) {

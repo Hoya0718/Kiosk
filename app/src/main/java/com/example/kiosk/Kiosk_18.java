@@ -247,7 +247,7 @@ public class Kiosk_18 extends AppCompatActivity {
                     }
                 }, 2000);
             }
-        }, 10000);
+        }, 11000);
     }
 
 

@@ -83,7 +83,7 @@ public class Kiosk_23 extends AppCompatActivity {
                     }
                 }, 2000);
             }
-        }, 10000);
+        }, 8000);
     }
 
 

@@ -73,13 +73,15 @@ public class Kiosk_14 extends AppCompatActivity {
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
 
-                        speakText("이 화면에서는 버스 표를 구매하실 수 있습니다." +
+                        speakText("여기서는 승차권을 구매하실 수 있고, 예매한 승차권을 확인하실 수도 있습니다." +
+                                "또 잘못 예매한 승차권을 환불하실 수 있습니다." +
+                                "우선 승차권을 예매하는 방법에 대해 배워보겠습니다." +
                                 "승차권 구매 버튼을 눌러주세요");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("From this screen you can purchase bus tickets." +
-                                "Click the buy ticket button");
+                        speakText("You can purchase tickets here, and you can also check tickets you have reserved." +
+                                "First, let's learn how to book tickets. Please click the buy ticket button");
                     }
 
 
@@ -90,9 +92,9 @@ public class Kiosk_14 extends AppCompatActivity {
                     SimpleDateFormat format;
 
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.KOREAN);
+                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm", Locale.KOREAN);
                     else
-                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
+                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm", Locale.ENGLISH);
 
 
                     textView11.setText(format.format(c.getTime()));
@@ -127,7 +129,7 @@ public class Kiosk_14 extends AppCompatActivity {
                     }
                 }, 2000);
             }
-        }, 10000);
+        }, 20000);
     }
     private void startButtonBorderAnimation(Button button) {
         AnimationDrawable buttonBorderAnimation = (AnimationDrawable) button.getBackground();

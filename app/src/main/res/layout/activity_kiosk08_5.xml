@@ -106,7 +106,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1.2"
             android:gravity="left|center_vertical"
-            android:text="8,400"
+            android:text="6,500"
             android:textSize="30sp" />
 
         <TextView
@@ -166,26 +166,104 @@
                         android:layout_height="0dp"
                         android:layout_weight="1">
 
-                        <ImageView
-                            android:id="@+id/burger"
+                        <TableLayout
+                            android:id="@+id/bigmc"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            app:srcCompat="@drawable/bigmc" />
+                            android:layout_margin="5dp"
+                            android:background="@drawable/table_border"
+                            android:orientation="vertical">
 
-                        <ImageView
-                            android:id="@+id/side"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            app:srcCompat="@drawable/huri" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:layout_margin="5dp"
+                                app:srcCompat="@drawable/bigmc" />
 
-                        <ImageView
-                            android:id="@+id/drink"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"
+                                android:text="@string/big_mc"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"
+                                android:text="₩5,200"
+                                android:gravity="center"/>
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/huri"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            app:srcCompat="@drawable/drinkcoca" />
+                            android:layout_margin="5dp"
+                            android:background="@drawable/table_border"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:layout_margin="5dp"
+                                app:srcCompat="@drawable/huri" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"
+                                android:text="@string/huri"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"
+                                android:text="₩2,000"
+                                android:gravity="center"/>
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/drinkcoca"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/table_border"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:layout_margin="5dp"
+                                app:srcCompat="@drawable/drinkcoca" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"
+                                android:text="@string/drinkcoca"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"
+                                android:text="₩1,700"
+                                android:gravity="center"/>
+                        </TableLayout>
                     </TableRow>
 
                     <TableRow

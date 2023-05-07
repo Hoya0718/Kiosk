@@ -16,6 +16,7 @@ public class Kiosk_5 extends AppCompatActivity {
     private TextToSpeech tts;
 
     private myapp sound;
+
     private myapp text_size;
     private Button fastfood;
     private Button bus;
@@ -25,7 +26,11 @@ public class Kiosk_5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk05);
+
+        sound = (myapp) getApplication();
+
         text_size = (myapp) getApplication();
+
         fastfood = findViewById(R.id.fastfood_btn);
         bus = findViewById(R.id.bus_btn);
         hospital = findViewById(R.id.hospital_btn);
@@ -33,8 +38,6 @@ public class Kiosk_5 extends AppCompatActivity {
         fastfood.setTextSize(text_size.getId());
         bus.setTextSize(text_size.getId());
         hospital.setTextSize(text_size.getId());
-
-        sound = (myapp) getApplication();
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

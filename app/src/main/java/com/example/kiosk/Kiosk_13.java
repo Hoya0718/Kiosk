@@ -18,28 +18,28 @@ public class Kiosk_13 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
-    private myapp text_size;
 
-    private Button receipt_btn;
-    private Button button7;
-    private Button button8;
+    private myapp text_size;
+    private Button fastfood;
+    private Button bus;
+    private Button hospital;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk13);
+
         sound = (myapp) getApplication();
+
         text_size = (myapp) getApplication();
-        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-        currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        receipt_btn = findViewById(R.id.receipt_btn);
-        button7 = findViewById(R.id.button7);
-        button8 = findViewById(R.id.button8);
+        fastfood = findViewById(R.id.fastfood_btn);
+        bus = findViewById(R.id.bus_btn);
+        hospital = findViewById(R.id.hospital_btn);
 
-        receipt_btn.setTextSize(text_size.getId());
-        button7.setTextSize(text_size.getId());
-        button8.setTextSize(text_size.getId());
+        fastfood.setTextSize(text_size.getId());
+        bus.setTextSize(text_size.getId());
+        hospital.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -54,10 +54,8 @@ public class Kiosk_13 extends AppCompatActivity {
             }
         });
 
-
-
-        button7 = findViewById(R.id.button7);
-        button7.setOnClickListener(new View.OnClickListener() {
+        bus = findViewById(R.id.bus_btn);
+        bus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_13.this, Kiosk_14.class);
@@ -67,10 +65,25 @@ public class Kiosk_13 extends AppCompatActivity {
 
         });
     }
+
+    public void goto_kiosk_06(View v) {
+        tts.shutdown();
+        Intent goto_kiosk_06 = new Intent(getApplicationContext(), Kiosk_6.class);
+        startActivity(goto_kiosk_06);
+    }
+
+    public void goto_kiosk_14(View v){
+        tts.shutdown();
+        Intent goto_kiosk_14 = new Intent(getApplicationContext(),Kiosk_14.class);
+        startActivity(goto_kiosk_14);
+    }
+
     public void goto_kiosk_25(View v){
+        tts.shutdown();
         Intent goto_kiosk_25 = new Intent(getApplicationContext(),Kiosk_25.class);
         startActivity(goto_kiosk_25);
     }
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

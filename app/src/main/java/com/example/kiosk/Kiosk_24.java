@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.Locale;
 
@@ -14,11 +15,29 @@ public class Kiosk_24 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
+
+    private myapp text_size;
+    private Button fastfood;
+    private Button bus;
+    private Button hospital;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk24);
+
         sound = (myapp) getApplication();
+
+        text_size = (myapp) getApplication();
+
+        fastfood = findViewById(R.id.fastfood_btn);
+        bus = findViewById(R.id.bus_btn);
+        hospital = findViewById(R.id.hospital_btn);
+
+        fastfood.setTextSize(text_size.getId());
+        bus.setTextSize(text_size.getId());
+        hospital.setTextSize(text_size.getId());
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
@@ -32,8 +51,6 @@ public class Kiosk_24 extends AppCompatActivity {
                 }
             }
         });
-
-
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -49,19 +66,31 @@ public class Kiosk_24 extends AppCompatActivity {
 
     }
 
+    public void goto_kiosk_06(View v) {
+        tts.shutdown();
+        Intent goto_kiosk_06 = new Intent(getApplicationContext(), Kiosk_6.class);
+        startActivity(goto_kiosk_06);
+    }
+
+    public void goto_kiosk_14(View v){
+        tts.shutdown();
+        Intent goto_kiosk_14 = new Intent(getApplicationContext(),Kiosk_14.class);
+        startActivity(goto_kiosk_14);
+    }
+
+    public void goto_kiosk_25(View v){
+        tts.shutdown();
+        Intent goto_kiosk_25 = new Intent(getApplicationContext(),Kiosk_25.class);
+        startActivity(goto_kiosk_25);
+    }
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
-    public void goto_kiosk_25(View v){
 
-        tts.shutdown();
-
-        Intent goto_kiosk_25 = new Intent(getApplicationContext(),Kiosk_25.class);
-        startActivity(goto_kiosk_25);
-    }
     protected void onDestroy() {
         if(tts != null) {
             tts.stop();

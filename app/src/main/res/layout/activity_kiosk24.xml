@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.4"
-        android:orientation="horizontal"></LinearLayout>
+        android:orientation="horizontal">
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +22,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/fastfood_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -28,11 +30,12 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:enabled="false"
-            android:text="@string/bus_2"
-            android:textSize="@dimen/font_size_medium" />
+            android:onClick="goto_kiosk_06"
+            android:text="@string/food"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/receipt_btn"
+            android:id="@+id/bus_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -40,11 +43,12 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:enabled="false"
-            android:text="@string/food_2"
-            android:textSize="@dimen/font_size_medium" />
+            android:onClick="goto_kiosk_14"
+            android:text="@string/bus"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/hospital_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -52,8 +56,9 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:onClick="goto_kiosk_25"
-            android:text="@string/hospital_2"
-            android:textSize="@dimen/font_size_medium" />
+            android:text="@string/hospital"
+            android:textSize="18sp" />
+
     </LinearLayout>
 
     <LinearLayout

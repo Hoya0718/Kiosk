@@ -47,11 +47,11 @@ public class Kiosk_5 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("음식점 버튼을 눌러주세요.");
+                    speakText("패스트푸드 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Press the restaurant button.");
+                    speakText("Press the Fastfood button.");
                 }
             }
         });

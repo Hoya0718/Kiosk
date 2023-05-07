@@ -57,14 +57,14 @@ public class Kiosk_8_6 extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("버거 메뉴 화면으로 돌아왔습니다." +
-                            "좌측 하단에 가격이 추가되었습니다." +
+                            "우측 하단에 가격이 추가되었습니다." +
                             "이제 결제 단계로 넘어가보겠습니다." +
                             "주문 내역 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("You have returned to the Burger Menu screen." +
-                            "Price added to bottom left." +
+                            "Price added to bottom right." +
                             "Now let's move on to the payment phase." +
                             "Please press the order history button.");
                 }

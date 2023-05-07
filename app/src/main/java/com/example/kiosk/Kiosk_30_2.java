@@ -41,7 +41,7 @@ public class Kiosk_30_2 extends AppCompatActivity {
             @Override
             public void run() {
                 tts.shutdown();
-                if(getClass().getName().equals("Kiosk_30_2")) {
+                if(getClass().getSimpleName().equals("Kiosk_30_2")) {
                     Intent goto_kiosk_31 = new Intent(Kiosk_30_2.this, Kiosk_31.class);
                     startActivity(goto_kiosk_31);
                 }

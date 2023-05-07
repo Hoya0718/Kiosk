@@ -67,7 +67,7 @@ public class Kiosk_9 extends AppCompatActivity {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("버튼은 여기에 있어요.");
+                    speakText("주문 완료 버튼은 여기에 있어요.");
                 else
                     speakText("Button is Here");
                 handler.postDelayed(new Runnable() {
@@ -79,7 +79,7 @@ public class Kiosk_9 extends AppCompatActivity {
                     }
                 }, 2000);
             }
-        }, 10000);
+        }, 15000);
     }
 
     public void goto_kiosk_06(View v){

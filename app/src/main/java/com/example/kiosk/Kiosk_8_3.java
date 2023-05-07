@@ -25,7 +25,8 @@ public class Kiosk_8_3 extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
-    private TextView french;
+    private TextView french_text;
+    private TextView french_price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,8 @@ public class Kiosk_8_3 extends AppCompatActivity {
 
         cancel.setTextSize(text_size.getId());
 
-        french = findViewById(R.id.french);
+        french_text = findViewById(R.id.french_text);
+        french_price = findViewById(R.id.french_price);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -50,7 +52,7 @@ public class Kiosk_8_3 extends AppCompatActivity {
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Big Mc set is selected. From the side menu, tap French Fries.");
+                    speakText("Big Mc set was selected. Choose French fries from the side menu.");
                 }
             }
         });
@@ -65,8 +67,12 @@ public class Kiosk_8_3 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        french.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) french.getBackground();
+                        french_text.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) french_text.getBackground();
+                        anim.start();
+
+                        french_price.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) french_price.getBackground();
                         anim.start();
                     }
                 }, 2000);

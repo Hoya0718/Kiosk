@@ -47,11 +47,13 @@ public class Kiosk_10 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("결제 방법을 선택하는 화면입니다. 카드 결제 버튼를 눌러주세요.");
+                    speakText("결제 방법을 선택하는 화면입니다." +
+                            "카드 결제 버튼를 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This is the screen where you select your payment method. Press the Pay by card button.");
+                    speakText("This is the screen to select a payment method." +
+                            "Please press the credit card payment button.");
                 }
             }
         });

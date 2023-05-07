@@ -72,7 +72,7 @@ public class Kiosk_5 extends AppCompatActivity {
                     }
                 }, 2000);
             }
-        }, 10000);
+        }, 15000);
     }
 
     public void goto_kiosk_06(View v) {

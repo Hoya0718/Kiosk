@@ -42,7 +42,8 @@ public class Kiosk_7_b extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
-    private TextView bigmc;
+    private TextView bigmc_text;
+    private TextView bigmc_price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,19 +68,22 @@ public class Kiosk_7_b extends AppCompatActivity {
         home.setTextSize(text_size.getId());
         help.setTextSize(text_size.getId());
 
-        bigmc = findViewById(R.id.bigmc);
+        bigmc_text = findViewById(R.id.bigmc_text);
+        bigmc_price = findViewById(R.id.bigmc_price);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("버거 메뉴 화면입니다. 빅맥 세트 한 개를 주문해보겠습니다. 메뉴에서 빅맥을 골라주세요.");
+                    speakText("버거 메뉴 화면입니다. 빅맥 세트 한 개를 주문해보겠습니다." +
+                            "세트의 구성으로는 후렌치 후라이, 코카콜라를 골라보겠습니다." +
+                            "메뉴에서 빅맥을 골라주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This is the burger menu screen. " +
-                            "Let's order a set of Big Mc. " +
-                            "Follow the buttons on the orange background closely.");
+                    speakText("This is the burger menu screen. Let's order a Big Mc set." +
+                            "For the composition of the set, I'll choose French fries and Coca-Cola." +
+                            "Choose a Big Mc from the menu, please.");
                 }
             }
         });
@@ -94,8 +98,12 @@ public class Kiosk_7_b extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        bigmc.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) bigmc.getBackground();
+                        bigmc_text.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) bigmc_text.getBackground();
+                        anim.start();
+
+                        bigmc_price.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) bigmc_price.getBackground();
                         anim.start();
                     }
                 }, 2000);

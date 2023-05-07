@@ -25,7 +25,8 @@ public class Kiosk_8_4 extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
-    private TextView coca;
+    private TextView coca_text;
+    private TextView coca_price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,8 @@ public class Kiosk_8_4 extends AppCompatActivity {
 
         cancel.setTextSize(text_size.getId());
 
-        coca = findViewById(R.id.coca);
+        coca_text = findViewById(R.id.coca_text);
+        coca_price = findViewById(R.id.coca_price);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -50,7 +52,7 @@ public class Kiosk_8_4 extends AppCompatActivity {
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("French Fries is selected. From the drink menu, tap Coca-Cola.");
+                    speakText("French fries were selected. Please choose Coca-Cola from the drink menu.");
                 }
             }
         });
@@ -65,8 +67,12 @@ public class Kiosk_8_4 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        coca.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) coca.getBackground();
+                        coca_text.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) coca_text.getBackground();
+                        anim.start();
+
+                        coca_price.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) coca_price.getBackground();
                         anim.start();
                     }
                 }, 2000);

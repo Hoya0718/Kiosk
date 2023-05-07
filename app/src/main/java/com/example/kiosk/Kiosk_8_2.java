@@ -51,7 +51,7 @@ public class Kiosk_8_2 extends AppCompatActivity {
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This screen asks for the size of the set. Press the Set button.");
+                    speakText("This screen asks for the size of the set. Please press the set button.");
                 }
             }
         });

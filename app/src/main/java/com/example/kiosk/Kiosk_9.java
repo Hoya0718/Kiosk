@@ -50,11 +50,15 @@ public class Kiosk_9 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("주문 내역에 빅맥 세트가 추가되었습니다. 주문 완료 버튼을 눌러주세요.");
+                    speakText("주문 내역에 빅맥 세트가 추가되었습니다." +
+                            "이 화면에서는 메뉴를 삭제 또는 수량을 조절할 수 있습니다." +
+                            "주문 완료 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Big Mc Set has been added to your order history. Press the Complete order button.");
+                    speakText("The Big Mc set has been added to your order history." +
+                            "On this screen, you can delete the menu or adjust the quantity." +
+                            "Please press the order completion button.");
                 }
             }
         });

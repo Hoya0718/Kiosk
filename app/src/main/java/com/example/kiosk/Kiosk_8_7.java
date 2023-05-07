@@ -41,11 +41,13 @@ public class Kiosk_8_7 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("메뉴 추천 화면입니다. 선택 안함 버튼을 눌러주세요.");
+                    speakText("메뉴 추천 화면입니다." +
+                            "더 이상 추가할 메뉴가 없으므로 선택 안함 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Menu suggestions screen. Press the deselect button.");
+                    speakText("This is the menu recommendation screen." +
+                            "There are no more menu items to add, so please press the Unselect button.");
                 }
             }
         });

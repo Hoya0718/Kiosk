@@ -190,7 +190,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button74"
+            android:id="@+id/print_receipt"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:onClick="goto_kiosk_28"

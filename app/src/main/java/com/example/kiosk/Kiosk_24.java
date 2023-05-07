@@ -3,6 +3,7 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
@@ -20,6 +21,9 @@ public class Kiosk_24 extends AppCompatActivity {
     private Button fastfood;
     private Button bus;
     private Button hospital;
+
+    Handler handler = new Handler();
+    private AnimationDrawable anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +56,25 @@ public class Kiosk_24 extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                tts.setSpeechRate(sound.getTtsSpeed()) ;
-                sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("여기에있어요.");
+                    speakText("병원은 여기에있어요.");
                 else
-                    speakText("Here it is");
+                    speakText("Hospital is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hospital.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) hospital.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
             }
-        }, 15000);
-
+        }, 10000);
     }
+
 
     public void goto_kiosk_06(View v) {
         tts.shutdown();

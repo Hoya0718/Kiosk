@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pay_for"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -150,7 +151,8 @@
                 android:layout_height="match_parent"
 
                 android:layout_weight="1"
-                android:gravity="top" />
+                android:gravity="top"
+                android:text="                 " />
 
             <TextView
                 android:id="@+id/textView76"
@@ -290,7 +292,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/button70"
+                android:id="@+id/pay_for_"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginLeft="30dp"

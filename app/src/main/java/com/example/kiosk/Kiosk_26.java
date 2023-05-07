@@ -3,6 +3,7 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
@@ -26,7 +27,7 @@ public class Kiosk_26 extends AppCompatActivity {
     private myapp pn;
 
     private long clickTime;
-
+    private AnimationDrawable anim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,7 @@ public class Kiosk_26 extends AppCompatActivity {
         ssn = findViewById(R.id.SSN);
         pn = (myapp) getApplication();
         sound = (myapp) getApplication();
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
 
             public void onInit(int status) {
@@ -168,22 +170,34 @@ public class Kiosk_26 extends AppCompatActivity {
             }
             else {
                 if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주민등록번호를 입력해주세요");
-                    Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+                    speakText("주민등록번호가 맞는지 확인해주세요.");
+                    ssn.setBackgroundResource(R.drawable.anim_list2);
+                    anim = (AnimationDrawable) ssn.getBackground();
+                    anim.start();
+                    Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    speakText("Enter your social security number");
-                    Toast.makeText(getApplicationContext(), "Enter your social security number", Toast.LENGTH_LONG).show();
+                    speakText("Please verify your social security number");
+                    ssn.setBackgroundResource(R.drawable.anim_list2);
+                    anim = (AnimationDrawable) ssn.getBackground();
+                    anim.start();
+                    Toast.makeText(getApplicationContext(), "Please verify your social security number", Toast.LENGTH_LONG).show();
                 }
             }
         }
         else {
             if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                 speakText("개인정보 수집 동의를 눌러주세요");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
                 Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
             }
             else{
                 speakText("Agree to collect personal information.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
                 Toast.makeText(getApplicationContext(), "Agree to collect personal information.", Toast.LENGTH_LONG).show();
             }
 

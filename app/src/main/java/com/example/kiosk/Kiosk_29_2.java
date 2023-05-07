@@ -3,10 +3,12 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,8 +18,10 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Kiosk_29_2 extends AppCompatActivity {
-
+    Handler handler = new Handler();
+    private AnimationDrawable anim;
     private myapp pn;
+    private Button pay_for_;
     private TextView pnpn;
     private TextView department_2;
     private TextView treatment_day;
@@ -40,7 +44,7 @@ public class Kiosk_29_2 extends AppCompatActivity {
         String formattedTime = sdf.format(new Date(pn.getDay()));
         treatment_day.setText(formattedTime);
         check_Money = findViewById(R.id.check_Money);
-
+        pay_for_ = findViewById(R.id.pay_for_);
         sound = (myapp) getApplication();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -56,17 +60,26 @@ public class Kiosk_29_2 extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                tts.setSpeechRate(sound.getTtsSpeed()) ;
-                sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                     speakText("수납여부는 여기에있고 지불하기는 여기에 있어요.");
                 else
-                    speakText("The checkout is here and the payment is here.");
+                    speakText("The checkout is here and the payment is here.e");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        check_Money.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) check_Money.getBackground();
+                        anim.start();
+                        pay_for_.setBackgroundResource(R.drawable.anim_list2);
+                        anim = (AnimationDrawable) pay_for_.getBackground();
+                        anim.start();
+                    }
+                }, 3000);
             }
-        }, 15000);
+        }, 10000);
 
     }
     private void speakText(String text) {
@@ -83,10 +96,20 @@ public class Kiosk_29_2 extends AppCompatActivity {
             startActivity(goto_kiosk_30);
         }
         else
-            if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
+            if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                check_Money.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) check_Money.getBackground();
+                anim.start();
+
                 Toast.makeText(getApplicationContext(), "체크박스를 확인해주세요", Toast.LENGTH_LONG).show();
+            }
             else
-                Toast.makeText(getApplicationContext(), "Check CheckBox", Toast.LENGTH_LONG).show();
+            {
+                check_Money.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) check_Money.getBackground();
+                anim.start();
+            Toast.makeText(getApplicationContext(), "Check CheckBox", Toast.LENGTH_LONG).show();
+        }
     }
     protected void onDestroy() {
         if(tts != null) {

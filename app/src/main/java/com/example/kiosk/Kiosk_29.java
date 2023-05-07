@@ -3,6 +3,7 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
@@ -14,6 +15,8 @@ import java.util.Locale;
 
 public class Kiosk_29 extends AppCompatActivity {
 
+    Handler handler = new Handler();
+    private AnimationDrawable anim;
     private TextView ssn ;
     private TextToSpeech tts;
     private myapp sound;
@@ -166,12 +169,18 @@ public class Kiosk_29 extends AppCompatActivity {
         }
         else {
                 if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주민등록번호를 입력해주세요");
-                    Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+                    speakText("주민등록번호가 맞는지 확인해주세요.");
+                    ssn.setBackgroundResource(R.drawable.anim_list2);
+                    anim = (AnimationDrawable) ssn.getBackground();
+                    anim.start();
+                    Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해주세요.", Toast.LENGTH_LONG).show();
                 }
                 else{
-                    speakText("Enter your social security number.");
-                    Toast.makeText(getApplicationContext(), "Enter your social security number.", Toast.LENGTH_LONG).show();}
+                    ssn.setBackgroundResource(R.drawable.anim_list2);
+                    anim = (AnimationDrawable) ssn.getBackground();
+                    anim.start();
+                    speakText("Please verify your social security number.");
+                    Toast.makeText(getApplicationContext(), "Please verify your social security number.", Toast.LENGTH_LONG).show();}
         }
     }
 

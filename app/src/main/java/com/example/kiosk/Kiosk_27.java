@@ -3,10 +3,12 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -19,10 +21,13 @@ public class Kiosk_27 extends AppCompatActivity {
     private TextView department;
     private TextView day;
     private TextView birthday;
+    Handler handler = new Handler();
+    private AnimationDrawable anim;
 
     private TextToSpeech tts;
     private myapp sound;
 
+    private Button print_receipt;
     private myapp pn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,7 @@ public class Kiosk_27 extends AppCompatActivity {
 
         pn = (myapp) getApplication();
 
+        print_receipt = findViewById(R.id.print_receipt);
         department =findViewById(R.id.department);
         day =findViewById(R.id.day);
         birthday=findViewById(R.id.birthday);
@@ -60,17 +66,23 @@ public class Kiosk_27 extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                tts.setSpeechRate(sound.getTtsSpeed()) ;
-                sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("접수증 출력은 여기에 있어요");
+                    speakText("접수증 출력은 여기에 있어요.");
                 else
-                    speakText("Here's a printout of the receipt");
+                    speakText("Here's a printout of the receipt.");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        print_receipt.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) print_receipt.getBackground();
+                        anim.start();
+                    }
+                }, 2500);
             }
-        }, 15000);
+        }, 10000);
     }
 
     private void speakText(String text) {

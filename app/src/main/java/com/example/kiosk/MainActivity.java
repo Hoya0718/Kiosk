@@ -17,9 +17,10 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private TextToSpeech tts;
-    private AnimationDrawable anim;
+
     private Button practice_Btn;
     Handler handler = new Handler();
+    private AnimationDrawable anim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

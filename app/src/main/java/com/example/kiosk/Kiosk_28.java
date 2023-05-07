@@ -3,22 +3,29 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.Locale;
 
 public class Kiosk_28 extends AppCompatActivity {
 
+    Handler handler = new Handler();
+    private AnimationDrawable anim;
     private TextToSpeech tts;
     private myapp sound;
+
+    private Button acceptance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk28);
 
+        acceptance = findViewById(R.id.acceptance);
         sound = (myapp) getApplication();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -34,18 +41,23 @@ public class Kiosk_28 extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                tts.setSpeechRate(sound.getTtsSpeed()) ;
-                sound.getTtsVolume();
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                     speakText("수납 및 처방전 발행은 여기에 있어요.");
                 else
                     speakText("Storage and prescriptions are here.");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        acceptance.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) acceptance.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
             }
-        }, 15000);
-
+        }, 10000);
     }
     private void speakText(String text) {
 

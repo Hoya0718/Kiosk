@@ -27,10 +27,10 @@ public class Kiosk_30_2 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("결제 완료 창을 보여줍니다. 아래에 처방전이 나옵니다. 확인해주세요.");
+                        speakText("결제 완료 창을 보여줍니다. 실제 키오스크는 아래에 처방전이 나옵니다.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("The payment completion window appears. Below you will see your prescription, please check it.");
+                        speakText("The payment completion window appears. Below you will see your prescription.");
                     }
                 }
             }
@@ -46,7 +46,7 @@ public class Kiosk_30_2 extends AppCompatActivity {
                     startActivity(goto_kiosk_31);
                 }
             }
-        }, 15000);
+        }, 10000);
     }
     private void speakText(String text) {
 

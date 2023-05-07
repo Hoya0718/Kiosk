@@ -42,7 +42,7 @@ public class Kiosk_30_2 extends AppCompatActivity {
             public void run() {
                 tts.shutdown();
                 if(getClass().getSimpleName().equals("Kiosk_30_2")) {
-                    Intent goto_kiosk_31 = new Intent(getApplicationContext(), Kiosk_31.class);
+                    Intent goto_kiosk_31 = new Intent(Kiosk_30_2.this, Kiosk_31.class);
                     startActivity(goto_kiosk_31);
                 }
             }

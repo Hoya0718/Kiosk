@@ -1,10 +1,13 @@
 package com.example.kiosk;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +22,11 @@ public class Kiosk_8_4 extends AppCompatActivity {
     private myapp text_size;
     private Button cancel;
 
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
+
+    private TextView coca;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +40,13 @@ public class Kiosk_8_4 extends AppCompatActivity {
 
         cancel.setTextSize(text_size.getId());
 
+        coca = findViewById(R.id.coca);
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("후렌치 후라이가 선택되었습니다. 음료 메뉴에서 코카콜라를 눌러주세요.");
+                    speakText("후렌치 후라이가 선택되었습니다. 음료 메뉴에서 코카콜라를 골라주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -44,6 +54,24 @@ public class Kiosk_8_4 extends AppCompatActivity {
                 }
             }
         });
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("코카콜라는 여기에 있어요.");
+                else
+                    speakText("Coca-Cola is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        coca.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) coca.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
+            }
+        }, 10000);
     }
 
     public void popup_kiosk_08_5(View view) {

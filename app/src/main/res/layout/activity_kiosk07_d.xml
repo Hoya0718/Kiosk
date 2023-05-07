@@ -76,7 +76,6 @@
                 android:id="@+id/burger_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:backgroundTint="#FF8800"
                 android:onClick="goto_kiosk_07_b"
                 android:text="@string/birger"
                 android:textSize="18sp" />

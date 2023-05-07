@@ -7,8 +7,10 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,6 +20,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -35,6 +38,11 @@ public class Kiosk_7_b extends AppCompatActivity {
     private Button ord_his;
     private Button home;
     private Button help;
+
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
+
+    private TextView bigmc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +67,13 @@ public class Kiosk_7_b extends AppCompatActivity {
         home.setTextSize(text_size.getId());
         help.setTextSize(text_size.getId());
 
+        bigmc = findViewById(R.id.bigmc);
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("버거 메뉴 화면입니다. 빅맥 세트 한 개를 주문해보겠습니다. 주황색 배경의 버튼을 잘 따라가주세요.");
+                    speakText("버거 메뉴 화면입니다. 빅맥 세트 한 개를 주문해보겠습니다. 메뉴에서 빅맥을 골라주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -73,6 +83,24 @@ public class Kiosk_7_b extends AppCompatActivity {
                 }
             }
         });
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("빅맥은 여기에 있어요.");
+                else
+                    speakText("Big Mc is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        bigmc.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) bigmc.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
+            }
+        }, 10000);
     }
 
     public void goto_kiosk_06(View v){

@@ -3,8 +3,10 @@ package com.example.kiosk;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -33,6 +35,9 @@ public class Kiosk_8_1 extends AppCompatActivity {
     private Button set;
     private Button sig;
     private Button cancel;
+
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +68,24 @@ public class Kiosk_8_1 extends AppCompatActivity {
                 }
             }
         });
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("버튼은 여기에 있어요.");
+                else
+                    speakText("Button is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        set.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) set.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
+            }
+        }, 10000);
     }
 
     public void popup_kiosk_08_2(View view) {

@@ -3,7 +3,9 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +20,9 @@ public class Kiosk_11 extends AppCompatActivity {
 
     private myapp text_size;
     private Button cancel;
+
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,7 +3,9 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +22,9 @@ public class Kiosk_6 extends AppCompatActivity {
     private myapp text_size;
     private Button store;
     private Button takeout;
+
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +53,28 @@ public class Kiosk_6 extends AppCompatActivity {
                 }
             }
         });
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                    speakText("버튼은 여기에 있어요.");
+                else
+                    speakText("Button is Here");
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        store.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) store.getBackground();
+                        anim.start();
+
+                        takeout.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) takeout.getBackground();
+                        anim.start();
+                    }
+                }, 2000);
+            }
+        }, 10000);
     }
 
     public void goto_kiosk_07_b(View v){

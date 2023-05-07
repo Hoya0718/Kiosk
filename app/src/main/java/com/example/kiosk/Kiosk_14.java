@@ -8,6 +8,7 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -45,6 +46,11 @@ public class Kiosk_14 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk14);
+
+        Button button = findViewById(R.id.button9);
+        AnimationDrawable buttonBorderAnimation = (AnimationDrawable) getResources().getDrawable(R.drawable.button_border_animation);
+        button.setBackground(buttonBorderAnimation);
+        startButtonBorderAnimation(button);
 
         sound = (myapp) getApplication();
         text_size = (myapp) getApplication();
@@ -107,6 +113,13 @@ public class Kiosk_14 extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void startButtonBorderAnimation(Button button) {
+        AnimationDrawable buttonBorderAnimation = (AnimationDrawable) button.getBackground();
+        if (buttonBorderAnimation != null) {
+            buttonBorderAnimation.start();
+        }
     }
 
     private void speakText(String text) {

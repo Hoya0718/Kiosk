@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button_border_animation"
+    android:oneshot="false">
+    <item android:duration="50" android:drawable="@color/white" />
+    <item android:duration="50" android:drawable="@color/purple_700" />
+    <item android:duration="50" android:drawable="@color/black" />
+</animation-list>

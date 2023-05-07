@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.view.animation.Animation;
@@ -35,7 +37,7 @@ public class Kiosk_15 extends AppCompatActivity {
     private TextView textView102;
     private TextView textView15;
 
-
+    public AnimationDrawable anim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,7 @@ public class Kiosk_15 extends AppCompatActivity {
         textView10.setTextSize(text_size.getId());
         textView15.setTextSize(text_size.getId());
         textView102.setTextSize(text_size.getId());
+
 
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -113,7 +116,18 @@ public class Kiosk_15 extends AppCompatActivity {
                 }
             }
         });
+        final Handler Handler = new Handler();
+
+        Handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                button15.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable)button15.getBackground();
+                anim.start();
+            }
+        }, 2000);
     }
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

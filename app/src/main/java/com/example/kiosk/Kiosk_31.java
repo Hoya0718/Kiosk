@@ -36,7 +36,7 @@ public class Kiosk_31 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("축하드립니다. 연습의 모든 단계를 완료했습니다. 실전도 한번 해보세요.");
+                        speakText("축하드립니다. 병원의 모든 단계를 완료했습니다. 실전도 한번 해보세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("Congratulations. You've completed all the steps in the walkthrough. It's time to try it out for real.");

@@ -64,10 +64,10 @@ public class Kiosk_26_2 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("진료과목을 보여줍니다. 원하시는 진료과목을 선택하시면 됩니다.");
+                        speakText("진료과를 접수해볼까요? 진료과목 중 원하시는 과 하나를 선택해 보세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Shows medical specialties. Select your preferred medical specialty.");
+                        speakText("Want to sign up for a specialty? Choose one of our medical specialties.");
                     }
                 }
             }

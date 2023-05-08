@@ -76,10 +76,10 @@ public class Kiosk_26 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("접수하기 위한 절차입니다. 접수를 하기위해 주민등록번호를 입력해주세요.");
+                        speakText("접수를 하실려면 주민등록번호를 입력해야해요. 주민등록번호를 입력해보세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("This is the procedure for submitting an application. Please enter your social security number to register.");
+                        speakText("You'll need to enter your social security number to register. Try entering your social security number.");
                     }
                 }
             }

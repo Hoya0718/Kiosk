@@ -70,7 +70,7 @@ public class Kiosk_29 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("처방전을 받기 전 본인 확인을 위해 주민등록번호를 입력해야합니다. 주민등록번호를 입력해주세요.");
+                        speakText("처방전을 받기 전 본인 확인을 위해 주민등록번호를 입력해야합니다. 주민등록번호를 입력해보세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("Before you receive your prescription, you will need to enter your social security number to verify your identity. Please enter your social security number.");

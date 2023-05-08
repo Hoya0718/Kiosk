@@ -46,10 +46,10 @@ public class Kiosk_28 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("이제 수납 및 처방을 알아볼까요? 수납 및 처방전 발행을 눌러주세요.");
+                        speakText("이제 수납 및 처방을 알아볼까요? 수납 및 처방으로 처방전을 발행할 수 있어요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Now let's take a look at receiving and prescribing. Tap Collections and prescriptions.");
+                        speakText("Now let's look at Receive and Prescribe. You can issue prescriptions with Receiving and Prescribing.");
                     }
                 }
             }

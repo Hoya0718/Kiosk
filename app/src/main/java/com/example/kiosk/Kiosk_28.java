@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -19,14 +20,27 @@ public class Kiosk_28 extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
 
+    private myapp text_size;
+
+    private TextView hos_accept_txt;
+
+    private Button hosb_1;
     private Button acceptance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk28);
 
+        text_size = (myapp) getApplication();
         acceptance = findViewById(R.id.acceptance);
         sound = (myapp) getApplication();
+        hosb_1 = findViewById(R.id.hosb_1);
+        hos_accept_txt = findViewById(R.id.hos_accept_txt);
+
+        hos_accept_txt.setTextSize(text_size.getId());
+        hosb_1.setTextSize(text_size.getId());
+        acceptance.setTextSize(text_size.getId());
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
@@ -79,5 +93,12 @@ public class Kiosk_28 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

@@ -16,7 +16,6 @@ public class Kiosk_24 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
-
     private myapp text_size;
     private Button fastfood;
     private Button bus;
@@ -108,5 +107,12 @@ public class Kiosk_24 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

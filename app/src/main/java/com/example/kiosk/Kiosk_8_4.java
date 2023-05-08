@@ -107,4 +107,11 @@ public class Kiosk_8_4 extends AppCompatActivity {
         }
         super.onDestroy();
     }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
+    }
 }

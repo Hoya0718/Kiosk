@@ -172,5 +172,12 @@ public class Kiosk_16 extends AppCompatActivity {
         }
         super.onDestroy();
     }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
+    }
 }
 

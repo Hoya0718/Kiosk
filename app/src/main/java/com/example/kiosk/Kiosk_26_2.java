@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -17,6 +18,8 @@ public class Kiosk_26_2 extends AppCompatActivity {
     Handler handler = new Handler();
     private AnimationDrawable anim;
     private TextToSpeech tts;
+
+    private myapp text_size;
     private myapp sound;
     private Button btn_1;
     private Button btn_2;
@@ -26,15 +29,19 @@ public class Kiosk_26_2 extends AppCompatActivity {
     private Button btn_6;
     private Button btn_7;
     private String input;
+
+    private TextView hos_department_txt;
     private myapp department;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk26_2);
 
+        text_size = (myapp) getApplication();
         sound = (myapp) getApplication();
         department = (myapp) getApplication();
 
+        hos_department_txt = findViewById(R.id.hos_department_txt);
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);
         btn_3 = findViewById(R.id.btn_3);
@@ -42,6 +49,15 @@ public class Kiosk_26_2 extends AppCompatActivity {
         btn_5 = findViewById(R.id.btn_5);
         btn_6 = findViewById(R.id.btn_6);
         btn_7 = findViewById(R.id.btn_7);
+
+        hos_department_txt.setTextSize(text_size.getId());
+        btn_1.setTextSize(text_size.getId());
+        btn_2.setTextSize(text_size.getId());
+        btn_3.setTextSize(text_size.getId());
+        btn_4.setTextSize(text_size.getId());
+        btn_5.setTextSize(text_size.getId());
+        btn_6.setTextSize(text_size.getId());
+        btn_7.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -162,5 +178,12 @@ public class Kiosk_26_2 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

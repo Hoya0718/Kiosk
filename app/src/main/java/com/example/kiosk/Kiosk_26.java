@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,16 +17,17 @@ import java.util.Locale;
 
 public class Kiosk_26 extends AppCompatActivity {
 
-    private TextView ssn ;
+    private TextView ssn ,hos_bar_txt;
     private TextToSpeech tts;
     private myapp sound;
 
     private CheckBox personal_Information;
 
     private String get_num;
-
+    private Button num_0, num_1,num_2,num_3,num_4,num_5,num_6,num_7,num_8,num_9,cl, check;
     private myapp pn;
 
+    private myapp text_size;
     private long clickTime;
     private AnimationDrawable anim;
     @Override
@@ -33,11 +35,41 @@ public class Kiosk_26 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk26);
 
-        personal_Information = findViewById(R.id.personal_Information);
-        ssn = findViewById(R.id.SSN);
         pn = (myapp) getApplication();
         sound = (myapp) getApplication();
+        text_size = (myapp) getApplication();
 
+        personal_Information = findViewById(R.id.personal_Information);
+        ssn = findViewById(R.id.SSN);
+        num_0 = findViewById(R.id.num_0);
+        cl = findViewById(R.id.CL);
+        num_1 = findViewById(R.id.num_1);
+        num_2 = findViewById(R.id.num_2);
+        num_3 = findViewById(R.id.num_3);
+        num_4 = findViewById(R.id.num_4);
+        num_5 = findViewById(R.id.num_5);
+        num_6 = findViewById(R.id.num_6);
+        num_7 = findViewById(R.id.num_7);
+        num_8 = findViewById(R.id.num_8);
+        num_9 = findViewById(R.id.num_9);
+        check = findViewById(R.id.Check_2);
+        hos_bar_txt = findViewById(R.id.hos_bar_txt);
+
+        num_0.setTextSize(text_size.getId());
+        num_1.setTextSize(text_size.getId());
+        num_2.setTextSize(text_size.getId());
+        num_3.setTextSize(text_size.getId());
+        num_4.setTextSize(text_size.getId());
+        num_5.setTextSize(text_size.getId());
+        num_6.setTextSize(text_size.getId());
+        num_7.setTextSize(text_size.getId());
+        num_8.setTextSize(text_size.getId());
+        num_9.setTextSize(text_size.getId());
+        cl.setTextSize(text_size.getId());
+        check.setTextSize(text_size.getId());
+        hos_bar_txt.setTextSize(text_size.getId());
+        personal_Information.setTextSize(text_size.getId());
+        ssn.setTextSize(text_size.getId());
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
 
             public void onInit(int status) {
@@ -72,70 +104,70 @@ public class Kiosk_26 extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.num_0:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "0");
                 if(ssn.length()==7){
                     ssn.setText(current + "-0");
                 }
                 break;
             case R.id.num_1:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "1");
                 if(ssn.length()==7) {
                     ssn.setText(current + "-1");
                 }
                 break;
             case R.id.num_2:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "2");
                 if(ssn.length()==7){
                     ssn.setText(current + "-2");
                 }
                 break;
             case R.id.num_3:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "3");
                 if(ssn.length()==7){
                     ssn.setText(current + "-3");
                 }
                 break;
             case R.id.num_4:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "4");
                 if(ssn.length()==7){
                     ssn.setText(current + "-4");
                 }
                 break;
             case R.id.num_5:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "5");
                 if(ssn.length()==7){
                     ssn.setText(current + "-5");
                 }
                 break;
             case R.id.num_6:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "6");
                 if(ssn.length()==7){
                     ssn.setText(current + "-6");
                 }
                 break;
             case R.id.num_7:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "7");
                 if(ssn.length()==7){
                     ssn.setText(current + "-7");
                 }
                 break;
             case R.id.num_8:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "8");
                 if(ssn.length()==7){
                     ssn.setText(current + "-8");
                 }
                 break;
             case R.id.num_9:
-                ssn.setTextSize(20);
+                ssn.setTextSize(text_size.getId());
                 ssn.setText(current + "9");
                 if(ssn.length()==7){
                     ssn.setText(current + "-9");
@@ -218,5 +250,12 @@ public class Kiosk_26 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

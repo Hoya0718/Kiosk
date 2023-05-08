@@ -31,6 +31,8 @@ public class Kiosk_5 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk05);
 
+        anim = new AnimationDrawable();
+
         sound = (myapp) getApplication();
 
         text_size = (myapp) getApplication();
@@ -47,11 +49,11 @@ public class Kiosk_5 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("패스트푸드 버튼을 눌러주세요.");
+                    speakText("다양한 키오스크의 상황을 지원합니다. 어떤 상황을 연습할지 골라보세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Press the Fastfood button.");
+                    speakText("Press the button you want.");
                 }
             }
         });
@@ -60,7 +62,7 @@ public class Kiosk_5 extends AppCompatActivity {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("버튼은 여기에 있어요.");
+                    speakText("세 개의 상황 중 하나를 골라보세요.");
                 else
                     speakText("Button is Here");
                 handler.postDelayed(new Runnable() {
@@ -69,10 +71,17 @@ public class Kiosk_5 extends AppCompatActivity {
                         fastfood.setBackgroundResource(R.drawable.anim_list);
                         anim = (AnimationDrawable) fastfood.getBackground();
                         anim.start();
+                        bus.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) bus.getBackground();
+                        anim.start();
+                        hospital.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) hospital.getBackground();
+                        anim.start();
+
                     }
                 }, 2000);
             }
-        }, 15000);
+        }, 10000);
     }
 
     public void goto_kiosk_06(View v) {
@@ -107,5 +116,12 @@ public class Kiosk_5 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

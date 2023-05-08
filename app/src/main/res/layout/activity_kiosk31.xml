@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/congraturation" />
 
     <Button
-        android:id="@+id/button84"
+        android:id="@+id/goto_5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="30dp"
@@ -24,8 +24,8 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
         android:layout_weight="1"
-        android:onClick="goto_MainActivity"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:onClick="goto_kiosk_5"
         android:text="@string/taecho"
-        android:textSize="@dimen/font_size_medium"
-        android:backgroundTint="@android:color/holo_orange_dark" />
+        android:textSize="@dimen/font_size_medium" />
 </LinearLayout>

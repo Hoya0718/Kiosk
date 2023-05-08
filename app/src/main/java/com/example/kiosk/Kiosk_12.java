@@ -69,10 +69,10 @@ public class Kiosk_12 extends AppCompatActivity {
         }, 10000);
     }
 
-    public void goto_kiosk_13(View v){
+    public void goto_kiosk_5(View v){
         tts.shutdown();
-        Intent goto_kiosk_13 = new Intent(getApplicationContext(),Kiosk_13.class);
-        startActivity(goto_kiosk_13);
+        Intent goto_kiosk_5 = new Intent(getApplicationContext(),Kiosk_5.class);
+        startActivity(goto_kiosk_5);
     }
 
     private void speakText(String text) {
@@ -89,5 +89,12 @@ public class Kiosk_12 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

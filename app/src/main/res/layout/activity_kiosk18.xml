@@ -59,7 +59,7 @@
             android:background="@drawable/table_border">
 
             <TextView
-                android:id="@+id/textView51"
+                android:id="@+id/hos_birthdate"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -68,7 +68,7 @@
                 android:text="@string/b_starttime"/>
 
             <TextView
-                android:id="@+id/textView52"
+                android:id="@+id/hos_name"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -102,7 +102,7 @@
         android:background="@drawable/table_border">
 
         <TextView
-            android:id="@+id/textView45"
+            android:id="@+id/hos_complete_txt"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -147,7 +147,7 @@
         android:background="@drawable/table_border">
 
         <TextView
-            android:id="@+id/textView46"
+            android:id="@+id/hos_accept_txt"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -233,7 +233,7 @@
             android:background="@drawable/table_border">
 
             <TextView
-                android:id="@+id/textView48"
+                android:id="@+id/hos_wating"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -319,7 +319,7 @@
             android:background="@drawable/table_border">
 
             <TextView
-                android:id="@+id/textView50"
+                android:id="@+id/hos_wating_n"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

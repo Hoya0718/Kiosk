@@ -17,6 +17,21 @@ import java.util.Locale;
 
 public class Kiosk_27 extends AppCompatActivity {
 
+    private TextView hos_complete_txt;
+
+    private TextView hos_wating;
+
+    private TextView hos_third;
+
+    private TextView hos_waiting_n;
+
+    private TextView  hos_1212;
+
+    private TextView   hos_birthdate;
+
+    private TextView   hos_name;
+
+    private TextView   hos_Hond;
 
     private TextView department;
     private TextView day;
@@ -27,6 +42,8 @@ public class Kiosk_27 extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
 
+    private myapp text_size;
+
     private Button print_receipt;
     private myapp pn;
     @Override
@@ -35,11 +52,33 @@ public class Kiosk_27 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk27);
 
         pn = (myapp) getApplication();
+        text_size = (myapp) getApplication();
 
+        hos_complete_txt = findViewById(R.id.hos_complete_txt);
+        hos_wating = findViewById(R.id.hos_wating);
+        hos_third = findViewById(R.id.hos_third);
+        hos_waiting_n = findViewById(R.id.hos_wating_n);
+        hos_1212 = findViewById(R.id.hos_1212);
+        hos_birthdate = findViewById(R.id.hos_birthdate);
+        hos_name = findViewById(R.id.hos_name);
+        hos_Hond = findViewById(R.id.hos_Hond);
         print_receipt = findViewById(R.id.print_receipt);
-        department =findViewById(R.id.department);
-        day =findViewById(R.id.day);
-        birthday=findViewById(R.id.birthday);
+        department =findViewById(R.id.hos_department_2);
+        day =findViewById(R.id.hos_day);
+        birthday=findViewById(R.id.hos_98);
+
+        hos_1212.setTextSize(text_size.getId());
+        hos_complete_txt.setTextSize(text_size.getId());
+        hos_wating.setTextSize(text_size.getId());
+        hos_third.setTextSize(text_size.getId());
+        hos_waiting_n.setTextSize(text_size.getId());
+        hos_birthdate.setTextSize(text_size.getId());
+        hos_name.setTextSize(text_size.getId());
+        hos_Hond.setTextSize(text_size.getId());
+        print_receipt.setTextSize(text_size.getId());
+        department.setTextSize(text_size.getId());
+        day.setTextSize(text_size.getId());
+        birthday.setTextSize(text_size.getId());
 
         Calendar c = Calendar.getInstance();
         SimpleDateFormat format;
@@ -104,5 +143,12 @@ public class Kiosk_27 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

@@ -57,7 +57,7 @@ public class Kiosk_23 extends AppCompatActivity {
                     button67.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_23.this, Kiosk_24.class);
+                            Intent intent = new Intent(Kiosk_23.this, Kiosk_5.class);
                             tts.shutdown();
                             startActivity(intent);
                         }
@@ -100,5 +100,12 @@ public class Kiosk_23 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

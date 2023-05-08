@@ -70,26 +70,26 @@ public class Kiosk_18 extends AppCompatActivity {
         textView17 = findViewById(R.id.textView17);
         textView18 = findViewById(R.id.textView18);
         textView36 = findViewById(R.id.textView36);
-        textView51 = findViewById(R.id.textView51);
-        textView52 = findViewById(R.id.textView52);
+        textView51 = findViewById(R.id.hos_birthdate);
+        textView52 = findViewById(R.id.hos_name);
         textView53 = findViewById(R.id.textView53);
         textView54 = findViewById(R.id.textView54);
-        textView45 = findViewById(R.id.textView45);
+        textView45 = findViewById(R.id.hos_complete_txt);
         textView20 = findViewById(R.id.textView20);
         textView21 = findViewById(R.id.textView21);
-        textView46 = findViewById(R.id.textView46);
+        textView46 = findViewById(R.id.hos_accept_txt);
         textView22 = findViewById(R.id.textView22);
         textView23 = findViewById(R.id.textView23);
         textView47 = findViewById(R.id.textView47);
         textView24 = findViewById(R.id.textView24);
         textView25 = findViewById(R.id.textView25);
-        textView48 = findViewById(R.id.textView48);
+        textView48 = findViewById(R.id.hos_wating);
         textView26 = findViewById(R.id.textView26);
         textView27 = findViewById(R.id.textView27);
         textView49 = findViewById(R.id.textView49);
         textView28 = findViewById(R.id.textView28);
         textView29 = findViewById(R.id.textView29);
-        textView50 = findViewById(R.id.textView50);
+        textView50 = findViewById(R.id.hos_wating_n);
         textView30 = findViewById(R.id.textView30);
         textView31 = findViewById(R.id.textView31);
         button17 = findViewById(R.id.button17);
@@ -264,6 +264,13 @@ public class Kiosk_18 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }
 

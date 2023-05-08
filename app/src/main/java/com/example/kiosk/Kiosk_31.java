@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.Locale;
 
@@ -13,11 +14,22 @@ public class Kiosk_31 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
+    private Button goto_5;
+    private myapp text_size;
+
+    public Kiosk_31() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk31);
         sound = (myapp) getApplication();
+        text_size = (myapp) getApplication();
+        goto_5 =findViewById(R.id.goto_5);
+
+        goto_5.setTextSize(text_size.getId());
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -39,10 +51,10 @@ public class Kiosk_31 extends AppCompatActivity {
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
-    public void goto_MainActivity(View v) {
+    public void goto_kiosk_5(View v) {
         tts.shutdown();
-        Intent goto_MainActivity = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(goto_MainActivity);
+        Intent goto_kiosk_5 = new Intent(getApplicationContext(), Kiosk_5.class);
+        startActivity(goto_kiosk_5);
     }
     protected void onDestroy() {
         if(tts != null) {
@@ -51,5 +63,12 @@ public class Kiosk_31 extends AppCompatActivity {
             tts=null;
         }
         super.onDestroy();
+    }
+    protected void onPause() {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 }

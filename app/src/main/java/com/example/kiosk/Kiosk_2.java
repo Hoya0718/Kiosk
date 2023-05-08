@@ -69,17 +69,17 @@ public class Kiosk_2 extends AppCompatActivity {
         startActivity(goto_kiosk_04);
     }
     public void be_down(View v){
-        tts.shutdown();
+
         korean_text.setTextSize(Dimension.SP,16);
         text_size.setId(16);
     }
     public void be_medium(View v){
-        tts.shutdown();
+
         korean_text.setTextSize(Dimension.SP,22);
         text_size.setId(22);
     }
     public void be_up(View v){
-        tts.shutdown();
+
         korean_text.setTextSize(Dimension.SP,26);
         text_size.setId(26);
     }

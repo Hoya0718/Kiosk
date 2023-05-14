@@ -129,7 +129,7 @@
             android:text="@string/_40"/>
 
         <Button
-            android:id="@+id/button17"
+            android:id="@+id/seat_selection1_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -174,7 +174,7 @@
             android:text="@string/_1_10"/>
 
         <Button
-            android:id="@+id/button87"
+            android:id="@+id/soldout1_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -216,7 +216,7 @@
             android:textSize="18sp"
             android:text="@string/_1_30"/>
         <Button
-            android:id="@+id/button88"
+            android:id="@+id/soldout2_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -259,7 +259,7 @@
                 android:textSize="15sp"
                 android:text="@string/_40_1" />
             <Button
-                android:id="@+id/button86"
+                android:id="@+id/soldout3_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -301,7 +301,7 @@
                 android:textSize="15sp"
                 android:text="@string/_1_10_1"/>
             <Button
-                android:id="@+id/button41"
+                android:id="@+id/seat_selection2_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -344,7 +344,7 @@
                 android:textSize="15sp"
                 android:text="@string/_1_30_1"/>
             <Button
-                android:id="@+id/button42"
+                android:id="@+id/seat_selection3_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

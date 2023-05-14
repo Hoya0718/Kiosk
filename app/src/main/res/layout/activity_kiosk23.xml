@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/congraturation" />
 
     <Button
-        android:id="@+id/button67"
+        android:id="@+id/b_backbegin_btn"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="30dp"

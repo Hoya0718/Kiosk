@@ -29,26 +29,26 @@ public class Kiosk_19 extends AppCompatActivity {
     private TextView textView32;
     private TextView textView34;
     private TextView textView33;
-    private Button button43;
-    private Button button44;
-    private Button button45;
-    private Button button46;
-    private Button button53;
-    private Button button54;
-    private Button button47;
-    private Button button48;
-    private Button button55;
-    private Button button56;
-    private Button button57;
-    private Button button58;
-    private Button button50;
-    private Button button49;
-    private Button button59;
-    private Button button60;
-    private Button button51;
-    private Button button52;
-    private Button button61;
-    private Button button62;
+    private Button b_soldout1_btn;
+    private Button b_soldout2_btn;
+    private Button b_soldout3_btn;
+    private Button b_soldout4_btn;
+    private Button b_soldout5_btn;
+    private Button b_soldout6_btn;
+    private Button b_soldout7_btn;
+    private Button b_soldout8_btn;
+    private Button b_soldout9_btn;
+    private Button b_soldout10_btn;
+    private Button b_soldout11_btn;
+    private Button b_soldout12_btn;
+    private Button b_4A_btn;
+    private Button b_4B_btn;
+    private Button b_3B_btn;
+    private Button b_2B_btn;
+    private Button b_5C_btn;
+    private Button b_5D_btn;
+    private Button b_2C_btn;
+    private Button b_2D_btn;
 
 
 
@@ -62,50 +62,50 @@ public class Kiosk_19 extends AppCompatActivity {
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
 
-        button43 = findViewById(R.id.button43);
-        button44 = findViewById(R.id.button44);
-        button45 = findViewById(R.id.button45);
-        button46 = findViewById(R.id.button46);
-        button47 = findViewById(R.id.button47);
-        button48 = findViewById(R.id.button48);
-        button49 = findViewById(R.id.button49);
-        button50 = findViewById(R.id.button50);
-        button51 = findViewById(R.id.button51);
-        button52 = findViewById(R.id.button52);
-        button53 = findViewById(R.id.button53);
-        button54 = findViewById(R.id.button54);
-        button55 = findViewById(R.id.button55);
-        button56 = findViewById(R.id.button56);
-        button57 = findViewById(R.id.button57);
-        button58 = findViewById(R.id.button58);
-        button59 = findViewById(R.id.button59);
-        button60 = findViewById(R.id.button60);
-        button61 = findViewById(R.id.button61);
-        button62 = findViewById(R.id.button62);
+        b_soldout1_btn = findViewById(R.id.b_soldout1_btn);
+        b_soldout2_btn = findViewById(R.id.b_soldout2_btn);
+        b_soldout3_btn = findViewById(R.id.b_soldout3_btn);
+        b_soldout4_btn = findViewById(R.id.b_soldout4_btn);
+        b_soldout5_btn = findViewById(R.id.b_soldout5_btn);
+        b_soldout6_btn = findViewById(R.id.b_soldout6_btn);
+        b_soldout7_btn = findViewById(R.id.b_soldout7_btn);
+        b_soldout8_btn = findViewById(R.id.b_soldout8_btn);
+        b_soldout9_btn = findViewById(R.id.b_soldout9_btn);
+        b_soldout10_btn = findViewById(R.id.b_soldout10_btn);
+        b_soldout11_btn = findViewById(R.id.b_soldout11_btn);
+        b_soldout12_btn = findViewById(R.id.b_soldout12_btn);
+        b_4A_btn = findViewById(R.id.b_4A_btn);
+        b_4B_btn = findViewById(R.id.b_4B_btn);
+        b_2B_btn = findViewById(R.id.b_2B_btn);
+        b_3B_btn = findViewById(R.id.b_3B_btn);
+        b_5C_btn = findViewById(R.id.b_5C_btn);
+        b_5D_btn = findViewById(R.id.b_5D_btn);
+        b_2C_btn = findViewById(R.id.b_2C_btn);
+        b_2D_btn = findViewById(R.id.b_2D_btn);
         textView32 = findViewById(R.id.textView32);
         textView33 = findViewById(R.id.textView33);
         textView34 = findViewById(R.id.textView34);
 
-        button43.setTextSize(text_size.getId());
-        button44.setTextSize(text_size.getId());
-        button45.setTextSize(text_size.getId());
-        button46.setTextSize(text_size.getId());
-        button47.setTextSize(text_size.getId());
-        button48.setTextSize(text_size.getId());
-        button49.setTextSize(text_size.getId());
-        button50.setTextSize(text_size.getId());
-        button51.setTextSize(text_size.getId());
-        button52.setTextSize(text_size.getId());
-        button53.setTextSize(text_size.getId());
-        button54.setTextSize(text_size.getId());
-        button55.setTextSize(text_size.getId());
-        button56.setTextSize(text_size.getId());
-        button57.setTextSize(text_size.getId());
-        button58.setTextSize(text_size.getId());
-        button59.setTextSize(text_size.getId());
-        button60.setTextSize(text_size.getId());
-        button61.setTextSize(text_size.getId());
-        button62.setTextSize(text_size.getId());
+        b_soldout1_btn.setTextSize(text_size.getId());
+        b_soldout2_btn.setTextSize(text_size.getId());
+        b_soldout3_btn.setTextSize(text_size.getId());
+        b_soldout4_btn.setTextSize(text_size.getId());
+        b_soldout5_btn.setTextSize(text_size.getId());
+        b_soldout6_btn.setTextSize(text_size.getId());
+        b_soldout7_btn.setTextSize(text_size.getId());
+        b_soldout8_btn.setTextSize(text_size.getId());
+        b_soldout9_btn.setTextSize(text_size.getId());
+        b_soldout10_btn.setTextSize(text_size.getId());
+        b_soldout11_btn.setTextSize(text_size.getId());
+        b_soldout12_btn.setTextSize(text_size.getId());
+        b_4A_btn.setTextSize(text_size.getId());
+        b_4B_btn.setTextSize(text_size.getId());
+        b_3B_btn.setTextSize(text_size.getId());
+        b_2B_btn.setTextSize(text_size.getId());
+        b_5C_btn.setTextSize(text_size.getId());
+        b_5D_btn.setTextSize(text_size.getId());
+        b_2C_btn.setTextSize(text_size.getId());
+        b_2D_btn.setTextSize(text_size.getId());
         textView32.setTextSize(text_size.getId());
         textView33.setTextSize(text_size.getId());
         textView34.setTextSize(text_size.getId());
@@ -129,7 +129,7 @@ public class Kiosk_19 extends AppCompatActivity {
                     }
 
 
-                    button45.setOnClickListener(new View.OnClickListener() {
+                    b_3B_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
@@ -162,7 +162,7 @@ public class Kiosk_19 extends AppCompatActivity {
                         }
                     });
 
-                    button47.setOnClickListener(new View.OnClickListener() {
+                    b_4B_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
@@ -192,7 +192,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-                    button48.setOnClickListener(new View.OnClickListener() {
+                    b_4A_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
@@ -224,7 +224,7 @@ public class Kiosk_19 extends AppCompatActivity {
                     });
 
 
-                    button49.setOnClickListener(new View.OnClickListener() {
+                    b_2B_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
@@ -254,7 +254,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-                    button53.setOnClickListener(new View.OnClickListener() {
+                    b_5D_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
@@ -284,7 +284,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-                    button54.setOnClickListener(new View.OnClickListener() {
+                    b_5C_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
@@ -314,7 +314,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-                    button59.setOnClickListener(new View.OnClickListener() {
+                    b_2C_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
@@ -344,7 +344,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-                    button60.setOnClickListener(new View.OnClickListener() {
+                    b_2D_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
@@ -387,29 +387,29 @@ public class Kiosk_19 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        button45.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button45.getBackground();
+                        b_4A_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_4A_btn.getBackground();
                         anim.start();
-                        button47.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button47.getBackground();
+                        b_4B_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_4B_btn.getBackground();
                         anim.start();
-                        button48.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button48.getBackground();
+                        b_3B_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_3B_btn.getBackground();
                         anim.start();
-                        button49.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button49.getBackground();
+                        b_2B_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_2B_btn.getBackground();
                         anim.start();
-                        button53.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button53.getBackground();
+                        b_5C_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_5C_btn.getBackground();
                         anim.start();
-                        button54.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button54.getBackground();
+                        b_5D_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_5D_btn.getBackground();
                         anim.start();
-                        button59.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button59.getBackground();
+                        b_2C_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_2C_btn.getBackground();
                         anim.start();
-                        button60.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button60.getBackground();
+                        b_2D_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_2D_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

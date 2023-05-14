@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button_seoul"
+            android:id="@+id/seoul_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -23,7 +23,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_gyeongi"
+            android:id="@+id/incheon_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -33,7 +33,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_kangwon"
+            android:id="@+id/kangwon_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -43,7 +43,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_sejong"
+            android:id="@+id/sejong_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -53,7 +53,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_chungnam"
+            android:id="@+id/chungnam_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -63,7 +63,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_chungbuk"
+            android:id="@+id/chungbuk_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -73,7 +73,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_kwangju"
+            android:id="@+id/kwangju_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -83,7 +83,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_jeonbuk"
+            android:id="@+id/jeonbuk_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -93,7 +93,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_busan"
+            android:id="@+id/busan_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -103,7 +103,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button_daegu"
+            android:id="@+id/daegu_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -120,7 +120,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button27"
+            android:id="@+id/giyeok_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -129,7 +129,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button26"
+            android:id="@+id/nieun_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -138,7 +138,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button25"
+            android:id="@+id/digeut_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -147,7 +147,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button24"
+            android:id="@+id/rieul_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -156,7 +156,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button23"
+            android:id="@+id/mieum_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -165,7 +165,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button32"
+            android:id="@+id/bieup_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -174,7 +174,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button31"
+            android:id="@+id/siot_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -183,7 +183,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button30"
+            android:id="@+id/ieung_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -192,7 +192,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button29"
+            android:id="@+id/jieut_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -201,7 +201,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button28"
+            android:id="@+id/chieut_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -210,7 +210,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button34"
+            android:id="@+id/kieuk_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -219,7 +219,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button35"
+            android:id="@+id/tieut_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -228,7 +228,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button36"
+            android:id="@+id/pieup_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -237,7 +237,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button37"
+            android:id="@+id/hieut_btn"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -254,7 +254,7 @@
 
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/masan_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -266,7 +266,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button20"
+            android:id="@+id/muan_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -278,7 +278,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button21"
+            android:id="@+id/muanairport_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -290,7 +290,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button22"
+            android:id="@+id/muju_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -302,7 +302,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button85"
+            android:id="@+id/maryang_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

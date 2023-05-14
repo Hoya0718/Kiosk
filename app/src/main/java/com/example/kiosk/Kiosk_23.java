@@ -22,7 +22,7 @@ public class Kiosk_23 extends AppCompatActivity {
     private myapp text_size;
     private AnimationDrawable anim;
     Handler handler = new Handler();
-    private Button button67; //처음으로 돌아가
+    private Button b_backbegin_btn; //처음으로 돌아가
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +34,9 @@ public class Kiosk_23 extends AppCompatActivity {
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
 
-        button67 = findViewById(R.id.button67);
+        b_backbegin_btn = findViewById(R.id.b_backbegin_btn);
 
-        button67.setTextSize(text_size.getId());
+        b_backbegin_btn.setTextSize(text_size.getId());
 
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -53,8 +53,8 @@ public class Kiosk_23 extends AppCompatActivity {
                         speakText("Congratulations. Bus practice phase is complete" +
                                 "Please click the back button");
                     }
-                    button67 = findViewById(R.id.button67);
-                    button67.setOnClickListener(new View.OnClickListener() {
+                    b_backbegin_btn = findViewById(R.id.b_backbegin_btn);
+                    b_backbegin_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_23.this, Kiosk_5.class);
@@ -77,8 +77,8 @@ public class Kiosk_23 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        button67.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button67.getBackground();
+                        b_backbegin_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_backbegin_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

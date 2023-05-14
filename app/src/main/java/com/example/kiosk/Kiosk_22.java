@@ -24,7 +24,7 @@ public class Kiosk_22 extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
     private myapp text_size;
-    private Button button66; // 취소해
+    private Button b_cancel1_btn; // 취소해
     private TextView textView40;
     private ImageView imageView3; //이미지 터치시 다음 화면 전환
 
@@ -38,10 +38,10 @@ public class Kiosk_22 extends AppCompatActivity {
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
 
-        button66 = findViewById(R.id.button66);
+        b_cancel1_btn = findViewById(R.id.b_cancel1_btn);
         textView40 = findViewById(R.id.textView40);
 
-        button66.setTextSize(text_size.getId());
+        b_cancel1_btn.setTextSize(text_size.getId());
         textView40.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -55,8 +55,8 @@ public class Kiosk_22 extends AppCompatActivity {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("This is the last step. Insert the card as shown in the picture");
                     }
-                    button66 = findViewById(R.id.button66);
-                    button66.setOnClickListener(new View.OnClickListener() {
+                    b_cancel1_btn = findViewById(R.id.b_cancel1_btn);
+                    b_cancel1_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_22.this, Kiosk_14.class);

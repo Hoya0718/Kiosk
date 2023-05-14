@@ -32,8 +32,8 @@ public class Kiosk_15 extends AppCompatActivity {
     private myapp text_size;
     private AnimationDrawable anim;
 
-    private Button button15; //도착지 버튼
-    private Button button16; //홈 버튼
+    private Button destination_btn; //도착지 버튼
+    private Button b_homescreen_btn; //홈 버튼
     private TextView textView10;
     private TextView textView102;
     private TextView textView15;
@@ -49,14 +49,14 @@ public class Kiosk_15 extends AppCompatActivity {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        button15 = findViewById(R.id.button15);
-        button16 = findViewById(R.id.button16);
+        destination_btn = findViewById(R.id.destination_btn);
+        b_homescreen_btn = findViewById(R.id.b_homescreen_btn);
         textView10 = findViewById(R.id.textView10);
         textView15 = findViewById(R.id.textView15);
         textView102 = findViewById(R.id.textView102);
 
-        button15.setTextSize(text_size.getId());
-        button16.setTextSize(text_size.getId());
+        destination_btn.setTextSize(text_size.getId());
+        b_homescreen_btn.setTextSize(text_size.getId());
         textView10.setTextSize(text_size.getId());
         textView15.setTextSize(text_size.getId());
         textView102.setTextSize(text_size.getId());
@@ -94,9 +94,9 @@ public class Kiosk_15 extends AppCompatActivity {
                         format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
                     textView10.setText(format.format(c.getTime()));
 
-                    button15 = findViewById(R.id.button15);
-                    button16 = findViewById(R.id.button16);
-                    button15.setOnClickListener(new View.OnClickListener() {
+                    destination_btn = findViewById(R.id.destination_btn);
+                    b_homescreen_btn = findViewById(R.id.b_homescreen_btn);
+                    destination_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_15.this, Kiosk_16.class);
@@ -104,7 +104,7 @@ public class Kiosk_15 extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
-                    button16.setOnClickListener(new View.OnClickListener() {
+                    b_homescreen_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_15.this, Kiosk_14.class);
@@ -127,8 +127,8 @@ public class Kiosk_15 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        button15.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button15.getBackground();
+                        destination_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) destination_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

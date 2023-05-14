@@ -24,7 +24,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button44"
+                    android:id="@+id/b_soldout1_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -39,7 +39,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button43"
+                    android:id="@+id/b_soldout2_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -60,7 +60,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button48"
+                    android:id="@+id/b_4A_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -76,7 +76,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button47"
+                    android:id="@+id/b_4B_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -98,7 +98,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button46"
+                    android:id="@+id/b_soldout3_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -113,7 +113,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button45"
+                    android:id="@+id/b_3B_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -136,7 +136,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button50"
+                    android:id="@+id/b_soldout4_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -151,7 +151,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button49"
+                    android:id="@+id/b_2B_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -174,7 +174,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button51"
+                    android:id="@+id/b_soldout5_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -189,7 +189,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button52"
+                    android:id="@+id/b_soldout6_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -242,7 +242,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button54"
+                    android:id="@+id/b_5C_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -257,7 +257,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button53"
+                    android:id="@+id/b_5D_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -277,7 +277,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button55"
+                    android:id="@+id/b_soldout7_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -292,7 +292,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button56"
+                    android:id="@+id/b_soldout8_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -313,7 +313,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button57"
+                    android:id="@+id/b_soldout9_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -328,7 +328,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button58"
+                    android:id="@+id/b_soldout10_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -347,7 +347,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button59"
+                    android:id="@+id/b_2C_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -361,7 +361,7 @@
                     tools:layout_marginLeft="5dp" />
 
                 <Button
-                    android:id="@+id/button60"
+                    android:id="@+id/b_2D_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -383,7 +383,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/button61"
+                    android:id="@+id/b_soldout11_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -398,7 +398,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/button62"
+                    android:id="@+id/b_soldout12_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"

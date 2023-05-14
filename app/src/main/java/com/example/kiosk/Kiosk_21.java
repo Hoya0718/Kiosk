@@ -32,8 +32,8 @@ public class Kiosk_21 extends AppCompatActivity {
     private TextView textView38; //버스종류, 좌석
     private TextView textView39; //표 가격
     private TextView textView100;
-    private Button button64; //취소하기
-    private Button button65; //결제하기
+    private Button b_cancel_btn; //취소하기
+    private Button b_payment_btn; //결제하기
 
 
     @Override
@@ -46,16 +46,16 @@ public class Kiosk_21 extends AppCompatActivity {
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
 
-        button64 = findViewById(R.id.button64);
-        button65 = findViewById(R.id.button65);
+        b_cancel_btn = findViewById(R.id.b_cancel_btn);
+        b_payment_btn = findViewById(R.id.b_payment_btn);
         textView35 = findViewById(R.id.textView35);
         textView37 = findViewById(R.id.textView37);
         textView38 = findViewById(R.id.textView38);
         textView39 = findViewById(R.id.textView39);
         textView100 = findViewById(R.id.textView100);
 
-        button64.setTextSize(text_size.getId());
-        button65.setTextSize(text_size.getId());
+        b_cancel_btn.setTextSize(text_size.getId());
+        b_payment_btn.setTextSize(text_size.getId());
         textView35.setTextSize(text_size.getId());
         textView37.setTextSize(text_size.getId());
         textView38.setTextSize(text_size.getId());
@@ -80,10 +80,10 @@ public class Kiosk_21 extends AppCompatActivity {
                                 "If you make a mistake, you can click the Cancel button " +
                                 "to return to the previous screen.");
                     }
-                    button64 = findViewById(R.id.button64);
-                    button65 = findViewById(R.id.button65);
+                    b_cancel_btn = findViewById(R.id.b_cancel_btn);
+                    b_payment_btn = findViewById(R.id.b_payment_btn);
 
-                    button64.setOnClickListener(new View.OnClickListener() {
+                    b_cancel_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_21.this, Kiosk_14.class);
@@ -92,7 +92,7 @@ public class Kiosk_21 extends AppCompatActivity {
                         }
                     });
 
-                    button65.setOnClickListener(new View.OnClickListener() {
+                    b_payment_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_21.this, Kiosk_22.class);
@@ -138,8 +138,8 @@ public class Kiosk_21 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        button65.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button65.getBackground();
+                        b_payment_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) b_payment_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

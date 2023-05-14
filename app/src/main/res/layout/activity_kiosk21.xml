@@ -102,7 +102,7 @@
         android:background="@drawable/table_border">
 
         <Button
-            android:id="@+id/button64"
+            android:id="@+id/b_cancel_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -118,7 +118,7 @@
             android:autoSizeMaxTextSize="40sp"
             android:autoSizeStepGranularity="2sp"/>
         <Button
-            android:id="@+id/button65"
+            android:id="@+id/b_payment_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"

@@ -28,35 +28,35 @@ public class Kiosk_17 extends AppCompatActivity {
     private myapp text_size;
     Handler handler = new Handler();
 
-    private Button button_seoul; // 서울
-    private Button button_gyeongi;
-    private Button button_kangwon;
-    private Button button_sejong;
-    private Button button_chungnam;
-    private Button button_chungbuk;
-    private Button button_kwangju;
-    private Button button_jeonbuk;
-    private Button button_busan;
-    private Button button_daegu;
-    private Button button27;
-    private Button button26;
-    private Button button25;
-    private Button button24;
-    private Button button23;
-    private Button button32;
-    private Button button31;
-    private Button button30;
-    private Button button29;
-    private Button button28;
-    private Button button34;
-    private Button button35;
-    private Button button36;
-    private Button button37;
-    private Button button18;
-    private Button button20;
-    private Button button21;
-    private Button button22;
-    private Button button85;
+    private Button seoul_btn; // 서울
+    private Button incheon_btn;
+    private Button kangwon_btn;
+    private Button sejong_btn;
+    private Button chungnam_btn;
+    private Button chungbuk_btn;
+    private Button kwangju_btn;
+    private Button jeonbuk_btn;
+    private Button busan_btn;
+    private Button daegu_btn;
+    private Button giyeok_btn;
+    private Button nieun_btn;
+    private Button digeut_btn;
+    private Button rieul_btn;
+    private Button mieum_btn;
+    private Button bieub_btn;
+    private Button siot_btn;
+    private Button ieung_btn;
+    private Button jieut_btn;
+    private Button chieut_btn;
+    private Button kieuk_btn;
+    private Button tieut_btn;
+    private Button pieup_btn;
+    private Button hieut_btn;
+    private Button muan_btn;
+    private Button muanairport_btn;
+    private Button maryang_btn;
+    private Button muju_btn;
+    private Button masan_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,65 +68,65 @@ public class Kiosk_17 extends AppCompatActivity {
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
 
-        button18 = findViewById(R.id.button18);
-        button20 = findViewById(R.id.button20);
-        button21 = findViewById(R.id.button21);
-        button22 = findViewById(R.id.button22);
-        button85 = findViewById(R.id.button85);
-        button23 = findViewById(R.id.button23);
-        button24 = findViewById(R.id.button24);
-        button25 = findViewById(R.id.button25);
-        button26= findViewById(R.id.button26);
-        button27 = findViewById(R.id.button27);
-        button28 = findViewById(R.id.button28);
-        button29= findViewById(R.id.button29);
-        button30 = findViewById(R.id.button30);
-        button31 = findViewById(R.id.button31);
-        button32= findViewById(R.id.button32);
-        button34 = findViewById(R.id.button34);
-        button35 = findViewById(R.id.button35);
-        button36= findViewById(R.id.button36);
-        button37 = findViewById(R.id.button37);
-        button_seoul = findViewById(R.id.button_seoul);
-        button_busan = findViewById(R.id.button_busan);
-        button_chungbuk= findViewById(R.id.button_chungbuk);
-        button_chungnam = findViewById(R.id.button_chungnam);
-        button_daegu = findViewById(R.id.button_daegu);
-        button_gyeongi= findViewById(R.id.button_gyeongi);
-        button_jeonbuk = findViewById(R.id.button_jeonbuk);
-        button_kwangju = findViewById(R.id.button_kwangju);
-        button_sejong= findViewById(R.id.button_sejong);
-        button_kangwon = findViewById(R.id.button_kangwon);
+        muan_btn = findViewById(R.id.muan_btn);
+        muanairport_btn = findViewById(R.id.muanairport_btn);
+        muju_btn = findViewById(R.id.muju_btn);
+        maryang_btn = findViewById(R.id.maryang_btn);
+        masan_btn = findViewById(R.id.masan_btn);
+        giyeok_btn = findViewById(R.id.giyeok_btn);
+        nieun_btn = findViewById(R.id.nieun_btn);
+        digeut_btn = findViewById(R.id.digeut_btn);
+        rieul_btn = findViewById(R.id.rieul_btn);
+        mieum_btn = findViewById(R.id.mieum_btn);
+        bieub_btn = findViewById(R.id.bieup_btn);
+        siot_btn = findViewById(R.id.siot_btn);
+        ieung_btn = findViewById(R.id.ieung_btn);
+        jieut_btn = findViewById(R.id.jieut_btn);
+        chieut_btn = findViewById(R.id.chieut_btn);
+        kieuk_btn = findViewById(R.id.kieuk_btn);
+        tieut_btn = findViewById(R.id.tieut_btn);
+        pieup_btn = findViewById(R.id.pieup_btn);
+        hieut_btn = findViewById(R.id.hieut_btn);
+        seoul_btn = findViewById(R.id.seoul_btn);
+        busan_btn = findViewById(R.id.busan_btn);
+        chungbuk_btn = findViewById(R.id.chungbuk_btn);
+        chungnam_btn = findViewById(R.id.chungnam_btn);
+        daegu_btn = findViewById(R.id.daegu_btn);
+        incheon_btn = findViewById(R.id.incheon_btn);
+        jeonbuk_btn = findViewById(R.id.jeonbuk_btn);
+        kwangju_btn = findViewById(R.id.kwangju_btn);
+        sejong_btn = findViewById(R.id.sejong_btn);
+        kangwon_btn = findViewById(R.id.kangwon_btn);
 
-        button18.setTextSize(text_size.getId());
-        button20.setTextSize(text_size.getId());
-        button21.setTextSize(text_size.getId());
-        button22.setTextSize(text_size.getId());
-        button85.setTextSize(text_size.getId());
-        button23.setTextSize(text_size.getId());
-        button24.setTextSize(text_size.getId());
-        button25.setTextSize(text_size.getId());
-        button26.setTextSize(text_size.getId());
-        button27.setTextSize(text_size.getId());
-        button28.setTextSize(text_size.getId());
-        button29.setTextSize(text_size.getId());
-        button30.setTextSize(text_size.getId());
-        button31.setTextSize(text_size.getId());
-        button32.setTextSize(text_size.getId());
-        button34.setTextSize(text_size.getId());
-        button35.setTextSize(text_size.getId());
-        button36.setTextSize(text_size.getId());
-        button37.setTextSize(text_size.getId());
-        button_sejong.setTextSize(text_size.getId());
-        button_seoul.setTextSize(text_size.getId());
-        button_gyeongi.setTextSize(text_size.getId());
-        button_busan.setTextSize(text_size.getId());
-        button_kangwon.setTextSize(text_size.getId());
-        button_kwangju.setTextSize(text_size.getId());
-        button_jeonbuk.setTextSize(text_size.getId());
-        button_chungnam.setTextSize(text_size.getId());
-        button_chungbuk.setTextSize(text_size.getId());
-        button_daegu.setTextSize(text_size.getId());
+        giyeok_btn.setTextSize(text_size.getId());
+        nieun_btn.setTextSize(text_size.getId());
+        digeut_btn.setTextSize(text_size.getId());
+        rieul_btn.setTextSize(text_size.getId());
+        mieum_btn.setTextSize(text_size.getId());
+        bieub_btn.setTextSize(text_size.getId());
+        siot_btn.setTextSize(text_size.getId());
+        ieung_btn.setTextSize(text_size.getId());
+        jieut_btn.setTextSize(text_size.getId());
+        chieut_btn.setTextSize(text_size.getId());
+        kieuk_btn.setTextSize(text_size.getId());
+        tieut_btn.setTextSize(text_size.getId());
+        pieup_btn.setTextSize(text_size.getId());
+        hieut_btn.setTextSize(text_size.getId());
+        muju_btn.setTextSize(text_size.getId());
+        muanairport_btn.setTextSize(text_size.getId());
+        muan_btn.setTextSize(text_size.getId());
+        maryang_btn.setTextSize(text_size.getId());
+        masan_btn.setTextSize(text_size.getId());
+        sejong_btn.setTextSize(text_size.getId());
+        seoul_btn.setTextSize(text_size.getId());
+        incheon_btn.setTextSize(text_size.getId());
+        busan_btn.setTextSize(text_size.getId());
+        kangwon_btn.setTextSize(text_size.getId());
+        kwangju_btn.setTextSize(text_size.getId());
+        jeonbuk_btn.setTextSize(text_size.getId());
+        chungnam_btn.setTextSize(text_size.getId());
+        chungbuk_btn.setTextSize(text_size.getId());
+        daegu_btn.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -143,7 +143,7 @@ public class Kiosk_17 extends AppCompatActivity {
                                 "Among the new buttons on the right, click the button where you want to go.");
                     }
 
-                    button20.setOnClickListener(new View.OnClickListener() {
+                    muan_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
@@ -153,7 +153,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         }
                     });
 
-                    button18.setOnClickListener(new View.OnClickListener() {
+                    masan_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
@@ -163,7 +163,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         }
                     });
 
-                    button21.setOnClickListener(new View.OnClickListener() {
+                    muanairport_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
@@ -173,7 +173,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         }
                     });
 
-                    button22.setOnClickListener(new View.OnClickListener() {
+                    muju_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
@@ -183,7 +183,7 @@ public class Kiosk_17 extends AppCompatActivity {
                         }
                     });
 
-                    button85.setOnClickListener(new View.OnClickListener() {
+                    maryang_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
@@ -205,20 +205,20 @@ public class Kiosk_17 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        button18.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button18.getBackground();
+                        muan_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) muan_btn.getBackground();
                         anim.start();
-                        button20.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button20.getBackground();
+                        muanairport_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) muanairport_btn.getBackground();
                         anim.start();
-                        button21.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button21.getBackground();
+                        muju_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) muju_btn.getBackground();
                         anim.start();
-                        button22.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button22.getBackground();
+                        maryang_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) maryang_btn.getBackground();
                         anim.start();
-                        button85.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button85.getBackground();
+                        masan_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) masan_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

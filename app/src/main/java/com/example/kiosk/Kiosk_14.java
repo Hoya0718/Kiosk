@@ -36,9 +36,9 @@ public class Kiosk_14 extends AppCompatActivity {
     private myapp sound;
     private myapp text_size;
     private AnimationDrawable anim;
-    private Button button9;
-    private Button button10;
-    private Button button11;
+    private Button buy_ticket_btn;
+    private Button reserved_ticket_btn;
+    private Button refund_ticket_btn;
     private TextView textView11;
     Handler handler = new Handler();
 
@@ -55,14 +55,14 @@ public class Kiosk_14 extends AppCompatActivity {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        button9 = findViewById(R.id.button9);
-        button10 = findViewById(R.id.button10);
-        button11 = findViewById(R.id.button11);
+        buy_ticket_btn = findViewById(R.id.buy_ticket_btn);
+        reserved_ticket_btn = findViewById(R.id.reserved_ticket_btn);
+        refund_ticket_btn = findViewById(R.id.refund_ticket_btn);
         textView11 = findViewById(R.id.textView11);
 
-        button9.setTextSize(text_size.getId());
-        button10.setTextSize(text_size.getId());
-        button11.setTextSize(text_size.getId());
+        buy_ticket_btn.setTextSize(text_size.getId());
+        reserved_ticket_btn.setTextSize(text_size.getId());
+        refund_ticket_btn.setTextSize(text_size.getId());
         textView11.setTextSize(text_size.getId());
 
 
@@ -99,9 +99,9 @@ public class Kiosk_14 extends AppCompatActivity {
 
                     textView11.setText(format.format(c.getTime()));
 
-                    button9 = findViewById(R.id.button9);
+                    buy_ticket_btn = findViewById(R.id.buy_ticket_btn);
 
-                    button9.setOnClickListener(new View.OnClickListener() {
+                    buy_ticket_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_14.this, Kiosk_15.class);
@@ -123,8 +123,8 @@ public class Kiosk_14 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        button9.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button9.getBackground();
+                        buy_ticket_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) buy_ticket_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

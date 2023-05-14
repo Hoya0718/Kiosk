@@ -50,12 +50,12 @@ public class Kiosk_18 extends AppCompatActivity {
     private TextView textView30;
     private TextView textView31;
 
-    private Button button17;
-    private Button button41;
-    private Button button42;
-    private Button button86;
-    private Button button87;
-    private Button button88;
+    private Button seat_selection1_btn;
+    private Button seat_selection2_btn;
+    private Button seat_selection3_btn;
+    private Button soldout1_btn;
+    private Button soldout2_btn;
+    private Button soldout3_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,12 +92,12 @@ public class Kiosk_18 extends AppCompatActivity {
         textView50 = findViewById(R.id.hos_wating_n);
         textView30 = findViewById(R.id.textView30);
         textView31 = findViewById(R.id.textView31);
-        button17 = findViewById(R.id.button17);
-        button87 = findViewById(R.id.button87);
-        button88 = findViewById(R.id.button88);
-        button86 = findViewById(R.id.button86);
-        button41 = findViewById(R.id.button41);
-        button42 = findViewById(R.id.button42);
+        seat_selection1_btn = findViewById(R.id.seat_selection1_btn);
+        seat_selection2_btn = findViewById(R.id.seat_selection2_btn);
+        seat_selection3_btn = findViewById(R.id.seat_selection3_btn);
+        soldout1_btn = findViewById(R.id.soldout1_btn);
+        soldout2_btn = findViewById(R.id.soldout2_btn);
+        soldout3_btn = findViewById(R.id.soldout3_btn);
 
         textView17.setTextSize(text_size.getId());
         textView36.setTextSize(text_size.getId());
@@ -124,12 +124,13 @@ public class Kiosk_18 extends AppCompatActivity {
         textView50.setTextSize(text_size.getId());
         textView31.setTextSize(text_size.getId());
         textView31.setTextSize(text_size.getId());
-        button17.setTextSize(text_size.getId());
-        button87.setTextSize(text_size.getId());
-        button88.setTextSize(text_size.getId());
-        button86.setTextSize(text_size.getId());
-        button41.setTextSize(text_size.getId());
-        button42.setTextSize(text_size.getId());
+        seat_selection1_btn.setTextSize(text_size.getId());
+        seat_selection2_btn.setTextSize(text_size.getId());
+        seat_selection3_btn.setTextSize(text_size.getId());
+        soldout1_btn.setTextSize(text_size.getId());
+        soldout2_btn.setTextSize(text_size.getId());
+        soldout3_btn.setTextSize(text_size.getId());
+
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -156,11 +157,11 @@ public class Kiosk_18 extends AppCompatActivity {
                         textView18.setText(destination);
                     }
 
-                    button17 = findViewById(R.id.button17);
-                    button41 = findViewById(R.id.button41);
-                    button42 = findViewById(R.id.button42);
+                    seat_selection1_btn = findViewById(R.id.seat_selection1_btn);
+                    seat_selection2_btn = findViewById(R.id.seat_selection2_btn);
+                    seat_selection3_btn = findViewById(R.id.seat_selection3_btn);
 
-                    button17.setOnClickListener(new View.OnClickListener() {
+                    seat_selection1_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
@@ -182,7 +183,7 @@ public class Kiosk_18 extends AppCompatActivity {
                         }
                     });
 
-                    button41.setOnClickListener(new View.OnClickListener() {
+                    seat_selection2_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
@@ -202,7 +203,7 @@ public class Kiosk_18 extends AppCompatActivity {
                             }
                         }
                     });
-                    button42.setOnClickListener(new View.OnClickListener() {
+                    seat_selection3_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
@@ -235,14 +236,14 @@ public class Kiosk_18 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        button17.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button17.getBackground();
+                        seat_selection1_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) seat_selection1_btn.getBackground();
                         anim.start();
-                        button41.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button41.getBackground();
+                        seat_selection2_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) seat_selection2_btn.getBackground();
                         anim.start();
-                        button42.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) button42.getBackground();
+                        seat_selection3_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) seat_selection3_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

@@ -15,13 +15,16 @@ import android.widget.Button;
 import java.util.Locale;
 
 public class Kiosk_16 extends AppCompatActivity {
-
+    private String destination; //목적지
+    private String bus;
+    private String seat;
+    private String price;
     private TextToSpeech tts;
     private myapp sound;
-    private int currentVolume;
-    private AudioManager audioManager;
     private myapp text_size;
     private AnimationDrawable anim;
+    private int currentVolume;
+    private AudioManager audioManager;
     Handler handler = new Handler();
 
     private Button seoul_btn; // 서울
@@ -49,6 +52,9 @@ public class Kiosk_16 extends AppCompatActivity {
     private Button pieup_btn;
     private Button hieut_btn;
 
+    private Button central_btn;
+    private Button eastseoul_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +77,7 @@ public class Kiosk_16 extends AppCompatActivity {
         chieut_btn = findViewById(R.id.chieut_btn);
         kieuk_btn = findViewById(R.id.kieuk_btn);
         tieut_btn = findViewById(R.id.tieut_btn);
-        pieup_btn = findViewById(R.id.pieup_btn);
+        pieup_btn= findViewById(R.id.pieup_btn);
         hieut_btn = findViewById(R.id.hieut_btn);
         seoul_btn = findViewById(R.id.seoul_btn);
         busan_btn = findViewById(R.id.busan_btn);
@@ -83,6 +89,8 @@ public class Kiosk_16 extends AppCompatActivity {
         kwangju_btn = findViewById(R.id.kwangju_btn);
         sejong_btn = findViewById(R.id.sejong_btn);
         kangwon_btn = findViewById(R.id.kangwon_btn);
+        central_btn = findViewById(R.id.central_btn);
+        eastseoul_btn = findViewById(R.id.eastseoul_btn);
 
         giyeok_btn.setTextSize(text_size.getId());
         nieun_btn.setTextSize(text_size.getId());
@@ -108,6 +116,16 @@ public class Kiosk_16 extends AppCompatActivity {
         chungnam_btn.setTextSize(text_size.getId());
         chungbuk_btn.setTextSize(text_size.getId());
         daegu_btn.setTextSize(text_size.getId());
+        central_btn.setTextSize(text_size.getId());
+        eastseoul_btn.setTextSize(text_size.getId());
+
+        seoul_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                central_btn.setVisibility(View.VISIBLE);
+                eastseoul_btn.setVisibility(View.VISIBLE);
+            }
+        });
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -115,22 +133,23 @@ public class Kiosk_16 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("목적지를 찾을 수 있는 방법은 다양합니다" +
-                                "지역에 맞게 찾을 수 있고. 앞 글자를 검색할 수 있습니다." +
-                                "우선 서울 버튼을 눌러보세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                        tts.speak("서울 버튼을 누르게 되면 서울에 있는 버스 정류장들이 나옵니다." +
+                                    "이번에는 앞글자를 사용해서 찾아보겠습니다." +
+                                    "ㅁ 버튼을 눌러보세요", TextToSpeech.QUEUE_FLUSH, null, null);
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("There are many ways to find your destination" +
-                                "You can search according to the region, and you can search by the preceding letter" +
-                                "First, press the Seoul button");
+                        speakText("When you press the seoul button, the bus stops in seoul appear." +
+                                "This time, let's use the first letter to find it." +
+                                "Please press the ㅁ button");
                     }
+                    mieum_btn = findViewById(R.id.mieum_btn);
 
-                    seoul_btn = findViewById(R.id.seoul_btn);
-                    seoul_btn.setOnClickListener(new View.OnClickListener() {
+                    mieum_btn.setOnClickListener(new View.OnClickListener() {
+
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_16.this, Kiosk_16_1.class);
+                            Intent intent = new Intent(Kiosk_16.this, Kiosk_17.class);
                             tts.shutdown();
                             startActivity(intent);
                         }
@@ -142,14 +161,14 @@ public class Kiosk_16 extends AppCompatActivity {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("서울 버튼은 여기에 있어요.");
+                    speakText("ㅁ 버튼은 여기에 있어요.");
                 else
-                    speakText("Seoul button is Here");
+                    speakText("ㅁ button is Here");
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        seoul_btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) seoul_btn.getBackground();
+                        mieum_btn.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) mieum_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);
@@ -180,4 +199,5 @@ public class Kiosk_16 extends AppCompatActivity {
         super.onPause();
     }
 }
+
 

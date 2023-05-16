@@ -88,22 +88,24 @@ public class Kiosk_7_d extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_06 = new Intent(getApplicationContext(),Kiosk_6.class);
         startActivity(goto_kiosk_06);
+        finish();
     }
 
     public void goto_kiosk_07_b(View v){
         tts.shutdown();
         Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
         startActivity(goto_kiosk_07_b);
+        finish();
     }
 
     public void goto_kiosk_07_s(View v){
         tts.shutdown();
         Intent goto_kiosk_07_s = new Intent(getApplicationContext(), Kiosk_7_s.class);
         startActivity(goto_kiosk_07_s);
+        finish();
     }
 
     private void speakText(String text) {
-
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
@@ -117,6 +119,7 @@ public class Kiosk_7_d extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
     protected void onPause() {
         if (tts != null) {
             // TTS 발화 중지

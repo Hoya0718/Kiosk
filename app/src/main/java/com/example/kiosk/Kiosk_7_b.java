@@ -108,35 +108,45 @@ public class Kiosk_7_b extends AppCompatActivity {
                     }
                 }, 2000);
             }
-        }, 10000);
+        }, 15000);
     }
 
     public void goto_kiosk_06(View v){
         tts.shutdown();
         Intent goto_kiosk_06 = new Intent(getApplicationContext(),Kiosk_6.class);
         startActivity(goto_kiosk_06);
+        finish();
     }
 
     public void goto_kiosk_07_s(View v){
         tts.shutdown();
         Intent goto_kiosk_07_s = new Intent(getApplicationContext(), Kiosk_7_s.class);
         startActivity(goto_kiosk_07_s);
+        finish();
     }
 
     public void goto_kiosk_07_d(View v){
         tts.shutdown();
         Intent goto_kiosk_07_d = new Intent(getApplicationContext(), Kiosk_7_d.class);
         startActivity(goto_kiosk_07_d);
+        finish();
     }
 
     public void popup_kiosk_08_1(View view) {
         tts.shutdown();
         Intent popup_kiosk_08_1 = new Intent(getApplicationContext(), Kiosk_8_1.class);
         startActivity(popup_kiosk_08_1);
+        finish();
+    }
+
+    public void popup_kiosk_08_7(View view) {
+        tts.shutdown();
+        Intent popup_kiosk_08_7 = new Intent(getApplicationContext(), Kiosk_8_7.class);
+        startActivity(popup_kiosk_08_7);
+        finish();
     }
 
     private void speakText(String text) {
-
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
@@ -150,6 +160,7 @@ public class Kiosk_7_b extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
     protected void onPause() {
         if (tts != null) {
             // TTS 발화 중지

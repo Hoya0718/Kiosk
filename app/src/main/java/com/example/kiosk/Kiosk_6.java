@@ -84,10 +84,10 @@ public class Kiosk_6 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
         startActivity(goto_kiosk_07_b);
+        finish();
     }
 
     private void speakText(String text) {
-
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
@@ -101,6 +101,7 @@ public class Kiosk_6 extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
     protected void onPause() {
         if (tts != null) {
             // TTS 발화 중지

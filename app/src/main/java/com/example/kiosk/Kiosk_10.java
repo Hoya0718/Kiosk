@@ -81,16 +81,17 @@ public class Kiosk_10 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_09 = new Intent(getApplicationContext(), Kiosk_9.class);
         startActivity(goto_kiosk_09);
+        finish();
     }
 
     public void goto_kiosk_11(View v){
         tts.shutdown();
         Intent goto_kiosk_11 = new Intent(getApplicationContext(),Kiosk_11.class);
         startActivity(goto_kiosk_11);
+        finish();
     }
 
     private void speakText(String text) {
-
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);

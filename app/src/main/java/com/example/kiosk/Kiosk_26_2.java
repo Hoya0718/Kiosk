@@ -77,37 +77,21 @@ public class Kiosk_26_2 extends AppCompatActivity {
         @Override
         public void run() {
             if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                speakText("원하시는 진료과목이 없으시다면 아무 진료과목을 눌러보세요.");
+                speakText("원하시는 진료과목이 없으시다면 정형외과를 눌러보세요.");
             else
-                speakText("If you don't see the specialty you're looking for, tap any specialty.");
+                speakText("If you don't see the specialty you're looking for, try Orthopedics.");
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    btn_1.setBackgroundResource(R.drawable.anim_list);
-                    anim = (AnimationDrawable) btn_1.getBackground();
-                    anim.start();
-                    btn_2.setBackgroundResource(R.drawable.anim_list);
-                    anim = (AnimationDrawable) btn_2.getBackground();
-                    anim.start();
-                    btn_3.setBackgroundResource(R.drawable.anim_list);
-                    anim = (AnimationDrawable) btn_3.getBackground();
-                    anim.start();
+
                     btn_4.setBackgroundResource(R.drawable.anim_list);
                     anim = (AnimationDrawable) btn_4.getBackground();
                     anim.start();
-                    btn_5.setBackgroundResource(R.drawable.anim_list);
-                    anim = (AnimationDrawable) btn_5.getBackground();
-                    anim.start();
-                    btn_6.setBackgroundResource(R.drawable.anim_list);
-                    anim = (AnimationDrawable) btn_6.getBackground();
-                    anim.start();
-                    btn_7.setBackgroundResource(R.drawable.anim_list);
-                    anim = (AnimationDrawable) btn_7.getBackground();
-                    anim.start();
+
                 }
-            }, 5000);
+            }, 3500);
         }
-    }, 10000);
+    }, 12000);
 }
     private void speakText(String text) {
 

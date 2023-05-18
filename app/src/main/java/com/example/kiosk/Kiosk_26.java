@@ -76,7 +76,7 @@ public class Kiosk_26 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("접수를 하실려면 주민등록번호를 입력해야해요. 주민등록번호를 입력해보세요.");
+                        speakText("접수를 하실려면 주민등록번호와 개인정보 수집 동의를 눌러주셔야 병원 접수가 됩니다. 주민등록번호를 입력하시고 네모 칸을 꼭 눌러주세요");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("You'll need to enter your social security number to register. Try entering your social security number.");
@@ -95,8 +95,9 @@ public class Kiosk_26 extends AppCompatActivity {
                 else
                     speakText("You can enter your social security number through the numbers below.");
             }
-        }, 15000);
+        }, 17000);
     }
+
 
     public void put_n(View view) {
         String current = ssn.getText().toString();

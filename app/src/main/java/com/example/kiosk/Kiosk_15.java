@@ -89,9 +89,9 @@ public class Kiosk_15 extends AppCompatActivity {
                     SimpleDateFormat format;
 
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                        format = new SimpleDateFormat("yyyy/MM/dd(E) \n HH:mm:ss", Locale.KOREAN);
+                        format = new SimpleDateFormat("yyyy/MM/dd(E)", Locale.KOREAN);
                     else
-                        format = new SimpleDateFormat("yyyy/MMM/dd(E) \n HH:mm:ss", Locale.ENGLISH);
+                        format = new SimpleDateFormat("yyyy/MMM/dd(E)", Locale.ENGLISH);
                     textView10.setText(format.format(c.getTime()));
 
                     destination_btn = findViewById(R.id.destination_btn);

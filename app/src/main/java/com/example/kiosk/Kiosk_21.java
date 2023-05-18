@@ -31,7 +31,7 @@ public class Kiosk_21 extends AppCompatActivity {
     private TextView textView37; //목적지
     private TextView textView38; //버스종류, 좌석
     private TextView textView39; //표 가격
-    private TextView textView100;
+
     private Button b_cancel_btn; //취소하기
     private Button b_payment_btn; //결제하기
 
@@ -52,7 +52,6 @@ public class Kiosk_21 extends AppCompatActivity {
         textView37 = findViewById(R.id.textView37);
         textView38 = findViewById(R.id.textView38);
         textView39 = findViewById(R.id.textView39);
-        textView100 = findViewById(R.id.textView100);
 
         b_cancel_btn.setTextSize(text_size.getId());
         b_payment_btn.setTextSize(text_size.getId());
@@ -60,7 +59,6 @@ public class Kiosk_21 extends AppCompatActivity {
         textView37.setTextSize(text_size.getId());
         textView38.setTextSize(text_size.getId());
         textView39.setTextSize(text_size.getId());
-        textView100.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

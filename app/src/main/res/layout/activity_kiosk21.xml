@@ -7,27 +7,101 @@
     android:orientation="vertical"
     tools:context=".Kiosk_21">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
+        android:layout_weight="2"
         android:background="@drawable/table_border">
 
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine2"
+            android:layout_width="404dp"
+            android:layout_height="39dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            tools:layout_editor_absoluteX="362dp"
+            tools:layout_editor_absoluteY="204dp" />
+
         <TextView
-            android:id="@+id/textView100"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="right"
-            android:text="@string/_25_000_n_20_000_n_15_000"
-            android:textSize="20sp"/>
-    </LinearLayout>
+            android:id="@+id/textView20"
+            android:layout_width="138dp"
+            android:layout_height="79dp"
+            android:text="목포"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="35dp" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="136dp"
+            android:layout_height="78dp"
+            android:text="도착지"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="145dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="659dp"
+            android:layout_height="90dp"
+            android:text="결제 금액                                                                                                                                     "
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="307dp" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="125dp"
+            android:layout_height="65dp"
+            android:text="선택한 버스"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="385dp"
+            tools:layout_editor_absoluteY="54dp" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="125dp"
+            android:layout_height="65dp"
+            android:gravity="center"
+            android:text="선택한 버스"
+            tools:layout_editor_absoluteX="568dp"
+            tools:layout_editor_absoluteY="54dp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="125dp"
+            android:layout_height="65dp"
+            android:text="좌석 번호"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="385dp"
+            tools:layout_editor_absoluteY="158dp" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="125dp"
+            android:layout_height="65dp"
+            android:gravity="center"
+            android:text="좌석 번호"
+            tools:layout_editor_absoluteX="568dp"
+            tools:layout_editor_absoluteY="158dp" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="404dp"
+            android:layout_height="39dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            tools:layout_editor_absoluteX="362dp"
+            tools:layout_editor_absoluteY="88dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
         android:orientation="horizontal"
         android:background="@drawable/table_border">
 

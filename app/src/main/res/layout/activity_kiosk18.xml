@@ -59,7 +59,7 @@
             android:background="@drawable/table_border">
 
             <TextView
-                android:id="@+id/hos_birthdate"
+                android:id="@+id/bus_departuretime"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -68,7 +68,7 @@
                 android:text="@string/b_starttime"/>
 
             <TextView
-                android:id="@+id/hos_name"
+                android:id="@+id/bus_type"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -77,7 +77,7 @@
                 android:text="@string/b_bustype"/>
 
             <TextView
-                android:id="@+id/textView53"
+                android:id="@+id/bus_takentime"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -86,13 +86,13 @@
                 android:text="@string/b_usetime"/>
 
             <TextView
-                android:id="@+id/textView54"
+                android:id="@+id/lastseat"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="@string/b_seatcollect"/>
+                android:text="잔여석"/>
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -101,33 +101,6 @@
         android:orientation="horizontal"
         android:background="@drawable/table_border">
 
-        <TextView
-            android:id="@+id/hos_complete_txt"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="@string/_8_30"/>
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="@string/b_honor"/>
-
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="@string/_40"/>
-
         <Button
             android:id="@+id/seat_selection1_btn"
             android:layout_width="0dp"
@@ -135,7 +108,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="@string/b_seat1"
+            android:text="           8시 30분                                          우등버스                                            40분                                                 3              >"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -146,33 +119,6 @@
         android:orientation="horizontal"
         android:background="@drawable/table_border">
 
-        <TextView
-            android:id="@+id/hos_accept_txt"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="@string/_8_40"/>
-
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="@string/b_speedbus"/>
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="@string/_1_10"/>
-
         <Button
             android:id="@+id/soldout1_btn"
             android:layout_width="0dp"
@@ -180,7 +126,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="@string/b_all1" />
+            android:text="         8시 40분                                          고속버스                                        1시간 10분                                          매진           "
+            android:textStyle="bold"/>
     </LinearLayout>
 
     <LinearLayout
@@ -190,39 +137,15 @@
         android:orientation="horizontal"
         android:background="@drawable/table_border">
 
-        <TextView
-            android:id="@+id/textView47"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="@string/_8_50"/>
-
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="@string/b_normal"/>
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:text="@string/_1_30"/>
         <Button
             android:id="@+id/soldout2_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/b_all2"
+            android:text="        8시 50분                                          일반버스                                        1시간 30분                                          매진           "
             android:gravity="center"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
         <LinearLayout
@@ -232,32 +155,7 @@
             android:orientation="horizontal"
             android:background="@drawable/table_border">
 
-            <TextView
-                android:id="@+id/hos_wating"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/_9_20"/>
 
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/b_honorbus1"/>
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="3dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/_40_1" />
             <Button
                 android:id="@+id/soldout3_btn"
                 android:layout_width="0dp"
@@ -265,7 +163,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="@string/b_all3" />
+                android:text="       9시 20분                                          우등버스                                           40분                                                    매진          "
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -275,31 +174,6 @@
             android:orientation="horizontal"
             android:background="@drawable/table_border">
 
-            <TextView
-                android:id="@+id/textView49"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/_9_40"/>
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/b_speedbus2"/>
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/_1_10_1"/>
             <Button
                 android:id="@+id/seat_selection2_btn"
                 android:layout_width="0dp"
@@ -307,7 +181,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="@string/b_seat2"
+                android:text="              9시 40분                                          고속버스                                        1시간 10분                                          10               >           "
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -318,31 +192,6 @@
             android:orientation="horizontal"
             android:background="@drawable/table_border">
 
-            <TextView
-                android:id="@+id/hos_wating_n"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/_10_00"/>
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/b_normal2"/>
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:text="@string/_1_30_1"/>
             <Button
                 android:id="@+id/seat_selection3_btn"
                 android:layout_width="0dp"
@@ -350,7 +199,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="@string/b_seat3"
+                android:text="             10시 00분                                          일반버스                                        1시간 30분                                          14               >          "
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>

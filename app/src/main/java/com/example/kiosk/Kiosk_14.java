@@ -100,6 +100,8 @@ public class Kiosk_14 extends AppCompatActivity {
                     textView11.setText(format.format(c.getTime()));
 
                     buy_ticket_btn = findViewById(R.id.buy_ticket_btn);
+                    reserved_ticket_btn = findViewById(R.id.reserved_ticket_btn);
+                    refund_ticket_btn = findViewById(R.id.refund_ticket_btn);
 
                     buy_ticket_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -109,6 +111,15 @@ public class Kiosk_14 extends AppCompatActivity {
                             startActivity(intent);
                         }
 
+                    });
+
+                    reserved_ticket_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_14.this, Kiosk_14_reserved.class);
+                            tts.shutdown();
+                            startActivity(intent);
+                        }
                     });
                 }
             }

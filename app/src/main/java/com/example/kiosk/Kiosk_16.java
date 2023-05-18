@@ -1,7 +1,7 @@
 package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.appcompat.widget.SearchView;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -11,7 +11,11 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 public class Kiosk_16 extends AppCompatActivity {
@@ -51,9 +55,11 @@ public class Kiosk_16 extends AppCompatActivity {
     private Button tieut_btn;
     private Button pieup_btn;
     private Button hieut_btn;
+    private SearchView searchView;
 
     private Button central_btn;
     private Button eastseoul_btn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +125,19 @@ public class Kiosk_16 extends AppCompatActivity {
         central_btn.setTextSize(text_size.getId());
         eastseoul_btn.setTextSize(text_size.getId());
 
+        searchView = findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                performSearch(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return true;
+            }
+        });
         seoul_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -176,7 +195,9 @@ public class Kiosk_16 extends AppCompatActivity {
         }, 12000);
     }
 
-
+    private void performSearch(String query) {
+        Toast.makeText(this, "검색어 : " + query, Toast.LENGTH_SHORT).show();
+    }
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

@@ -86,7 +86,7 @@ public class Kiosk_29_2 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("처방전 발행을 보여주는 화면입니다. 본인이 맞는지 확인하시고 수납여부를 눌러주세요.");
+                        speakText("처방전 발행과 결제비용을 보여주는 화면이에요. 처방전과 비용을 확인하시면 돼요. 확인 후  수납여부와 지불하기를 눌러볼까요?");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("This is the screen before the prescription is filled. Make sure you are who you say you are and tap Accept.");
@@ -99,7 +99,7 @@ public class Kiosk_29_2 extends AppCompatActivity {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("수납여부는 여기에있고 지불하기는 여기에 있어요.");
+                    speakText("수납여부는 여기에있고 지불하기는 여기에 있어요. 지불하기를 눌러보세요.");
                 else
                     speakText("The checkout is here and the payment is here.e");
                 handler.postDelayed(new Runnable() {
@@ -112,9 +112,9 @@ public class Kiosk_29_2 extends AppCompatActivity {
                         anim = (AnimationDrawable) pay_for_.getBackground();
                         anim.start();
                     }
-                }, 3000);
+                }, 4000);
             }
-        }, 10000);
+        }, 17000);
 
     }
     private void speakText(String text) {
@@ -136,7 +136,7 @@ public class Kiosk_29_2 extends AppCompatActivity {
                 anim = (AnimationDrawable) check_Money.getBackground();
                 anim.start();
 
-                Toast.makeText(getApplicationContext(), "체크박스를 확인해주세요", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "수납여부를 확인해주세요", Toast.LENGTH_LONG).show();
             }
             else
             {

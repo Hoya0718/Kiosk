@@ -56,7 +56,7 @@ public class Kiosk_25 extends AppCompatActivity {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("접수하기는 여기에 있어요.");
+                    speakText("접수하기는 여기에 있어요. 접수하기를 눌러보세요.");
                 else
                     speakText("submission is here");
                 handler.postDelayed(new Runnable() {
@@ -66,7 +66,7 @@ public class Kiosk_25 extends AppCompatActivity {
                         anim = (AnimationDrawable) receipt.getBackground();
                         anim.start();
                     }
-                }, 2000);
+                }, 3000);
             }
         }, 10000);
     }

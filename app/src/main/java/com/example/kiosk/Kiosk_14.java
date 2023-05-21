@@ -135,7 +135,9 @@ public class Kiosk_14 extends AppCompatActivity {
                     @Override
                     public void run() {
                         buy_ticket_btn.setBackgroundResource(R.drawable.anim_list);
+                        reserved_ticket_btn.setBackgroundResource(R.drawable.anim_list);
                         anim = (AnimationDrawable) buy_ticket_btn.getBackground();
+                        anim = (AnimationDrawable) reserved_ticket_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

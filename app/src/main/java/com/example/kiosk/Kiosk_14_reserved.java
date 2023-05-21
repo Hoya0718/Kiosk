@@ -16,8 +16,9 @@ import java.util.Locale;
 
 public class Kiosk_14_reserved extends AppCompatActivity {
 
-    private TextView ssn, hos_bar_txt;
-    private TextView phonenumber;
+    private TextView bus_infoinput;
+    private TextView bus_birthdate, bus_birthdate_input;
+    private TextView phone, phonenumber;
     private TextToSpeech tts;
     private myapp sound;
 
@@ -51,7 +52,10 @@ public class Kiosk_14_reserved extends AppCompatActivity {
         num_8 = findViewById(R.id.num_8);
         num_9 = findViewById(R.id.num_9);
         check = findViewById(R.id.Check_2);
-        hos_bar_txt = findViewById(R.id.hos_bar_txt);
+        bus_infoinput = findViewById(R.id.bus_infoinput);
+        bus_birthdate = findViewById(R.id.bus_birthdate);
+        phone = findViewById(R.id.phone);
+        phonenumber = findViewById(R.id.phonenumber);
 
         num_0.setTextSize(text_size.getId());
         num_1.setTextSize(text_size.getId());
@@ -65,7 +69,9 @@ public class Kiosk_14_reserved extends AppCompatActivity {
         num_9.setTextSize(text_size.getId());
         cl.setTextSize(text_size.getId());
         check.setTextSize(text_size.getId());
-        hos_bar_txt.setTextSize(text_size.getId());
+        bus_birthdate.setTextSize(text_size.getId());
+        bus_birthdate_input.setTextSize(text_size.getId());
+        phone.setTextSize(text_size.getId());
         phonenumber.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -97,98 +103,97 @@ public class Kiosk_14_reserved extends AppCompatActivity {
     }
 
     public void put_n(View view) {
-        String current = ssn.getText().toString();
-
+        String current = bus_birthdate.getText().toString();
 
         switch (view.getId()) {
             case R.id.num_0:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "0");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-0");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "0");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-0");
                 }
                 break;
             case R.id.num_1:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "1");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-1");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "1");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-1");
                 }
                 break;
             case R.id.num_2:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "2");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-2");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "2");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-2");
                 }
                 break;
             case R.id.num_3:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "3");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-3");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "3");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-3");
                 }
                 break;
             case R.id.num_4:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "4");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-4");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "4");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-4");
                 }
                 break;
             case R.id.num_5:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "5");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-5");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "5");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-5");
                 }
                 break;
             case R.id.num_6:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "6");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-6");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "6");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-6");
                 }
                 break;
             case R.id.num_7:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "7");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-7");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "7");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-7");
                 }
                 break;
             case R.id.num_8:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "8");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-8");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "8");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-8");
                 }
                 break;
             case R.id.num_9:
-                ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "9");
-                if (ssn.length() == 7) {
-                    ssn.setText(current + "-9");
+                bus_birthdate.setTextSize(text_size.getId());
+                bus_birthdate.setText(current + "9");
+                if (bus_birthdate.length() == 6) {
+                    bus_birthdate.setText(current + "-9");
                 }
                 break;
             case R.id.CL:
-                if (ssn.length() == 0) {
+                if (bus_birthdate.length() == 0) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                         Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
                     else
                         Toast.makeText(getApplicationContext(), "Enter your social security number", Toast.LENGTH_LONG).show();
-                } else if (ssn.length() == 8) {
-                    ssn.setText(current.substring(0, current.length() - 2));
+                } else if (bus_birthdate.length() == 8) {
+                    bus_birthdate.setText(current.substring(0, current.length() - 2));
                 } else {
-                    ssn.setText(current.substring(0, current.length() - 1));
+                    bus_birthdate.setText(current.substring(0, current.length() - 1));
                     break;
                 }
         }
     }
 
     public void goto_kiosk_26_2(View v) {
-        if (ssn.length() == 14) {
-            get_num = ssn.getText().toString();
+        if (bus_birthdate.length() == 6) {
+            get_num = bus_birthdate.getText().toString();
             pn.setGet_pn(get_num);
             clickTime = System.currentTimeMillis();
             pn.setDay(clickTime);
@@ -198,18 +203,19 @@ public class Kiosk_14_reserved extends AppCompatActivity {
         } else {
             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                 speakText("주민등록번호가 맞는지 확인해주세요.");
-                ssn.setBackgroundResource(R.drawable.anim_list2);
-                anim = (AnimationDrawable) ssn.getBackground();
+                bus_birthdate.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) bus_birthdate.getBackground();
                 anim.start();
                 Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
             } else {
                 speakText("Please verify your social security number");
-                ssn.setBackgroundResource(R.drawable.anim_list2);
-                anim = (AnimationDrawable) ssn.getBackground();
+                bus_birthdate.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) bus_birthdate.getBackground();
                 anim.start();
                 Toast.makeText(getApplicationContext(), "Please verify your social security number", Toast.LENGTH_LONG).show();
             }
         }
+
     }
 
     private void speakText(String text) {

@@ -27,10 +27,6 @@ public class Kiosk_21 extends AppCompatActivity {
     private myapp text_size;
     private AnimationDrawable anim;
     Handler handler = new Handler();
-    private TextView textView35;
-    private TextView textView37; //목적지
-    private TextView textView38; //버스종류, 좌석
-    private TextView textView39; //표 가격
 
     private Button b_cancel_btn; //취소하기
     private Button b_payment_btn; //결제하기
@@ -48,17 +44,9 @@ public class Kiosk_21 extends AppCompatActivity {
 
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
         b_payment_btn = findViewById(R.id.b_payment_btn);
-        textView35 = findViewById(R.id.textView35);
-        textView37 = findViewById(R.id.textView37);
-        textView38 = findViewById(R.id.textView38);
-        textView39 = findViewById(R.id.textView39);
 
         b_cancel_btn.setTextSize(text_size.getId());
         b_payment_btn.setTextSize(text_size.getId());
-        textView35.setTextSize(text_size.getId());
-        textView37.setTextSize(text_size.getId());
-        textView38.setTextSize(text_size.getId());
-        textView39.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -98,30 +86,6 @@ public class Kiosk_21 extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
-
-                    textView37 = findViewById(R.id.textView37);
-                    Intent intent = getIntent();
-                    String destination = intent.getStringExtra("destination");
-                    if(destination != null) {
-                        textView37.setText(destination);
-                    }
-
-                    textView38 = findViewById(R.id.textView38);
-                    Intent intent1 = getIntent();
-                    String bus = intent1.getStringExtra("bus");
-                    Intent intent2 = getIntent();
-                    String seat = intent2.getStringExtra("seat");
-                    String busAndSeat = bus + "  /  " + seat;
-                    if (seat != null) {
-                        textView38.setText(busAndSeat);
-                    }
-
-                    textView39 = findViewById(R.id.textView39);
-                    Intent intent3 = getIntent();
-                    String price = intent3.getStringExtra("price");
-                    if (price != null) {
-                        textView39.setText(price);
-                    }
 
                 }
             }

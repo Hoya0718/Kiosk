@@ -19,6 +19,22 @@
             android:layout_weight="0.9">
 
             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/b_driveseat"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
@@ -204,21 +220,6 @@
                     android:minHeight="0dp"/>
             </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/textView33"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/b_opendoor"
-                    android:textSize="15sp"
-                    android:textStyle="bold"/>
-            </TableRow>
         </TableLayout>
 
         <TextView
@@ -237,9 +238,27 @@
             android:layout_weight="0.9">
 
             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/b_opendoor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
+
+
 
                 <Button
                     android:id="@+id/b_5C_btn"
@@ -411,22 +430,6 @@
                     tools:layout_marginLeft="5dp"
                     android:minWidth="0dp"
                     android:minHeight="0dp"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/textView34"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/b_driveseat"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
             </TableRow>
         </TableLayout>
 

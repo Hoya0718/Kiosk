@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_26">
+    tools:context=".Kiosk_R_Hospital_Receipt">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -222,7 +222,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="goto_kiosk_26_2"
+                android:onClick="goto_Kiosk_R_H_D"
                 android:text="@string/check"
                 android:textSize="@dimen/font_size_medium" />
         </TableRow>
@@ -239,6 +239,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goto_Kiosk_H_Main"
             android:text="홈"
             android:textSize="@dimen/font_size_medium" />
 
@@ -247,6 +248,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goto_Back"
             android:text="뒤로가기"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>

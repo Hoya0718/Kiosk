@@ -5,9 +5,9 @@ import android.speech.tts.TextToSpeech;
 
 public class myapp extends Application {
 
-    protected int id=18;
 
-    private TextToSpeech tts;
+
+    protected int id=18;
     private int ttsVolume;
     private float ttsSpeed;
 

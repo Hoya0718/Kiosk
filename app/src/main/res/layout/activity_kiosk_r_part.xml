@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_24">
+    tools:context=".Kiosk_R_Part">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,42 +22,40 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/fastfood_btn"
+            android:id="@+id/r_Fastfood_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:enabled="false"
-            android:onClick="goto_kiosk_06"
-            android:text="@string/food"
-            android:textSize="@dimen/font_size_medium" />
+            android:onClick="goto_Kiosk_R_Fastfood"
+            android:text="패스트푸드"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/bus_btn"
+            android:id="@+id/r_Bus_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:enabled="false"
-            android:onClick="goto_kiosk_14"
-            android:text="@string/bus"
-            android:textSize="@dimen/font_size_medium" />
+            android:onClick="goto_Kiosk_R_Bus"
+            android:text="버스"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/hospital_btn"
+            android:id="@+id/r_Hospital_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:onClick="goto_kiosk_25"
-            android:text="@string/hospital"
-            android:textSize="@dimen/font_size_medium" />
+            android:onClick="goto_Kiosk_R_Hospital"
+            android:text="병원"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -69,20 +67,12 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="0dp"
+            android:id="@+id/button21"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="홈"
-            android:textSize="@dimen/font_size_medium" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="뒤로가기"
-            android:textSize="@dimen/font_size_medium" />
+            android:onClick="goto_Kiosk_Main"
+            android:text="홈" />
     </LinearLayout>
 
 </LinearLayout>

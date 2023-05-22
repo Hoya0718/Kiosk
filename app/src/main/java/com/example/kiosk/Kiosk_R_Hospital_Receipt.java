@@ -28,7 +28,7 @@ public class Kiosk_R_Hospital_Receipt extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk26);
+        setContentView(R.layout.activity_kiosk_r_hospital_receipt);
 
         pn = (myapp) getApplication();
         text_size = (myapp) getApplication();

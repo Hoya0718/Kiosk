@@ -29,6 +29,13 @@ public class Kiosk_R_Part extends AppCompatActivity {
     public void goto_Kiosk_R_Hospital (View v){
         Intent goto_Kiosk_R_Hospital = new Intent(getApplicationContext(),Kiosk_R_Hospital.class);
         startActivity(goto_Kiosk_R_Hospital);
-
+        finish();
     }
+
+    public void goto_Kiosk_Main (View v){
+        Intent goto_Kiosk_Main = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(goto_Kiosk_Main);
+        finish();
+    }
+
 }

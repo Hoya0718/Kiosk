@@ -15,8 +15,6 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class Kiosk_R_Hospital_Acceptance extends AppCompatActivity {
-
-    Handler handler = new Handler();
     private TextView ssn_2 ;
 
     private Button num_0_2,num_1_2,num_2_2,num_3_2,num_4_2,num_5_2,num_6_2,num_7_2,num_8_2,num_9_2,check_2,cl_2;
@@ -27,7 +25,7 @@ public class Kiosk_R_Hospital_Acceptance extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk29);
+        setContentView(R.layout.activity_kiosk_r_hospital_acceptance);
 
         ssn_2 = findViewById(R.id.SSN_2);
         text_size = (myapp)getApplication();

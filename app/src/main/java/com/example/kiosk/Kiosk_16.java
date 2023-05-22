@@ -24,7 +24,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-public class Kiosk_16 extends AppCompatActivity {
+public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener {
 
     private TextToSpeech tts;
     private myapp sound;
@@ -142,6 +142,9 @@ public class Kiosk_16 extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         listView.setAdapter(adapter);
         searchView = findViewById(R.id.searchView);
+
+        jeonbuk_btn.setOnClickListener(this::onClick);
+        busan_btn.setOnClickListener(this::onClick);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -154,160 +157,162 @@ public class Kiosk_16 extends AppCompatActivity {
             }
         });
 
-        seoul_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (central_btn.getVisibility() == View.GONE) {
-                    central_btn.setVisibility(View.VISIBLE);
-                    eastseoul_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    central_btn.setVisibility(View.GONE);
-                    eastseoul_btn.setVisibility(View.GONE);
-                }
-            }
-        });
-        incheon_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (incheon_bus_btn.getVisibility() == View.GONE) {
-                    incheon_bus_btn.setVisibility(View.VISIBLE);
-                    incheonairport_btn.setVisibility(View.VISIBLE);
-                    sungnam_btn.setVisibility(View.VISIBLE);
-                    suwon_btn.setVisibility(View.VISIBLE);
-                    ansan_btn.setVisibility(View.VISIBLE);
-                    yongin_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    incheon_bus_btn.setVisibility(View.GONE);
-                    incheonairport_btn.setVisibility(View.GONE);
-                    sungnam_btn.setVisibility(View.GONE);
-                    suwon_btn.setVisibility(View.GONE);
-                    ansan_btn.setVisibility(View.GONE);
-                    yongin_btn.setVisibility(View.GONE);
-                }
-            }
-        });
+//        seoul_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (central_btn.getVisibility() == View.GONE) {
+//                    central_btn.setVisibility(View.VISIBLE);
+//                    eastseoul_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    central_btn.setVisibility(View.GONE);
+//                    eastseoul_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
+//        incheon_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (incheon_bus_btn.getVisibility() == View.GONE) {
+//                    incheon_bus_btn.setVisibility(View.VISIBLE);
+//                    incheonairport_btn.setVisibility(View.VISIBLE);
+//                    sungnam_btn.setVisibility(View.VISIBLE);
+//                    suwon_btn.setVisibility(View.VISIBLE);
+//                    ansan_btn.setVisibility(View.VISIBLE);
+//                    yongin_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    incheon_bus_btn.setVisibility(View.GONE);
+//                    incheonairport_btn.setVisibility(View.GONE);
+//                    sungnam_btn.setVisibility(View.GONE);
+//                    suwon_btn.setVisibility(View.GONE);
+//                    ansan_btn.setVisibility(View.GONE);
+//                    yongin_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
+//
+//
+//
+//        kangwon_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (gangneung_btn.getVisibility() == View.GONE) {
+//                    chunchun_btn.setVisibility(View.VISIBLE);
+//                    sokcho_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    gangneung_btn.setVisibility(View.GONE);
+//                    chunchun_btn.setVisibility(View.GONE);
+//                    sokcho_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
+//
+//        sejong_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (daejun_bus_btn.getVisibility() == View.GONE) {
+//                    sejong_bus_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    daejun_bus_btn.setVisibility(View.GONE);
+//                    sejong_bus_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
+//
+//        chungnam_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (nonsan_btn.getVisibility() == View.GONE) {
+//                    cheonan_btn.setVisibility(View.VISIBLE);
+//                    gongju_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    nonsan_btn.setVisibility(View.GONE);
+//                    cheonan_btn.setVisibility(View.GONE);
+//                    gongju_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
+//
+//        chungbuk_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (cheongju_btn.getVisibility() == View.GONE) {
+//                    jechun_btn.setVisibility(View.VISIBLE);
+//                    chungju_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    cheongju_btn.setVisibility(View.GONE);
+//                    jechun_btn.setVisibility(View.GONE);
+//                    gongju_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
+//
+//        kwangju_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (kwangju_bus_btn.getVisibility() == View.GONE) {
+//                    suncheon_btn.setVisibility(View.VISIBLE);
+//                    damyang_btn.setVisibility(View.VISIBLE);
+//                    naju_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    kwangju_bus_btn.setVisibility(View.GONE);
+//                    suncheon_btn.setVisibility(View.GONE);
+//                    damyang_btn.setVisibility(View.GONE);
+//                    naju_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
+//
+//        jeonbuk_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (jeonju_btn.getVisibility() == View.GONE) {
+//                    gunsan_btn.setVisibility(View.VISIBLE);
+//                    namwon_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    jeonju_btn.setVisibility(View.GONE);
+//                    gunsan_btn.setVisibility(View.GONE);
+//                    namwon_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
 
-        kangwon_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (gangneung_btn.getVisibility() == View.GONE) {
-                    chunchun_btn.setVisibility(View.VISIBLE);
-                    sokcho_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    gangneung_btn.setVisibility(View.GONE);
-                    chunchun_btn.setVisibility(View.GONE);
-                    sokcho_btn.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        sejong_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (daejun_bus_btn.getVisibility() == View.GONE) {
-                    sejong_bus_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    daejun_bus_btn.setVisibility(View.GONE);
-                    sejong_bus_btn.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        chungnam_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (nonsan_btn.getVisibility() == View.GONE) {
-                    cheonan_btn.setVisibility(View.VISIBLE);
-                    gongju_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    nonsan_btn.setVisibility(View.GONE);
-                    cheonan_btn.setVisibility(View.GONE);
-                    gongju_btn.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        chungbuk_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (cheongju_btn.getVisibility() == View.GONE) {
-                    jechun_btn.setVisibility(View.VISIBLE);
-                    chungju_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    cheongju_btn.setVisibility(View.GONE);
-                    jechun_btn.setVisibility(View.GONE);
-                    gongju_btn.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        kwangju_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (kwangju_bus_btn.getVisibility() == View.GONE) {
-                    suncheon_btn.setVisibility(View.VISIBLE);
-                    damyang_btn.setVisibility(View.VISIBLE);
-                    naju_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    kwangju_bus_btn.setVisibility(View.GONE);
-                    suncheon_btn.setVisibility(View.GONE);
-                    damyang_btn.setVisibility(View.GONE);
-                    naju_btn.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        jeonbuk_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (jeonju_btn.getVisibility() == View.GONE) {
-                    gunsan_btn.setVisibility(View.VISIBLE);
-                    namwon_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    jeonju_btn.setVisibility(View.GONE);
-                    gunsan_btn.setVisibility(View.GONE);
-                    namwon_btn.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        busan_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (busan_bus_btn.getVisibility() == View.GONE) {
-                    ulsan_btn.setVisibility(View.VISIBLE);
-                    gimhae_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    busan_bus_btn.setVisibility(View.GONE);
-                    ulsan_btn.setVisibility(View.GONE);
-                    gimhae_btn.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        daegu_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (eastdaegu_btn.getVisibility() == View.GONE) {
-                    westdaegu_btn.setVisibility(View.VISIBLE);
-                    gyeongju_btn.setVisibility(View.VISIBLE);
-                }
-                else {
-                    eastdaegu_btn.setVisibility(View.GONE);
-                    westdaegu_btn.setVisibility(View.GONE);
-                    gyeongju_btn.setVisibility(View.GONE);
-                }
-            }
-        });
+//        busan_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (busan_bus_btn.getVisibility() == View.GONE) {
+//                    ulsan_btn.setVisibility(View.VISIBLE);
+//                    gimhae_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    busan_bus_btn.setVisibility(View.GONE);
+//                    ulsan_btn.setVisibility(View.GONE);
+//                    gimhae_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
+//
+//        daegu_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (eastdaegu_btn.getVisibility() == View.GONE) {
+//                    westdaegu_btn.setVisibility(View.VISIBLE);
+//                    gyeongju_btn.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    eastdaegu_btn.setVisibility(View.GONE);
+//                    westdaegu_btn.setVisibility(View.GONE);
+//                    gyeongju_btn.setVisibility(View.GONE);
+//                }
+//            }
+//        });
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -356,6 +361,42 @@ public class Kiosk_16 extends AppCompatActivity {
                 }, 2000);
             }
         }, 12000);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.jeonbuk_btn:
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                if (jeonju_btn.getVisibility() == View.GONE) {
+                    jeonju_btn.setVisibility(View.GONE);
+                    gunsan_btn.setVisibility(View.VISIBLE);
+                    namwon_btn.setVisibility(View.VISIBLE);
+                }
+                else {
+                    jeonju_btn.setVisibility(View.GONE);
+                    gunsan_btn.setVisibility(View.GONE);
+                    namwon_btn.setVisibility(View.GONE);
+                }
+                break;
+            case R.id.busan_btn:
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                if (busan_bus_btn.getVisibility() == View.GONE) {
+                    busan_bus_btn.setVisibility(View.VISIBLE);
+                    ulsan_btn.setVisibility(View.VISIBLE);
+                    gimhae_btn.setVisibility(View.VISIBLE);
+                }
+                else {
+                    busan_bus_btn.setVisibility(View.GONE);
+                    ulsan_btn.setVisibility(View.GONE);
+                    gimhae_btn.setVisibility(View.GONE);
+                }
+                break;
+        }
     }
 
     private void performSearch(String query) {

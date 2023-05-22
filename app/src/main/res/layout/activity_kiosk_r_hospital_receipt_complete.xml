@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_27">
+    tools:context=".Kiosk_R_Hospital_Receipt_Complete">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -196,7 +196,7 @@
             android:id="@+id/print_receipt"
             android:layout_width="300dp"
             android:layout_height="80dp"
-            android:onClick="goto_kiosk_28"
+            android:onClick="goto_Kiosk_R_H"
             android:text="@string/printing"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
@@ -213,13 +213,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="홈" />
+            android:onClick="goto_Kiosk_H_Main"
+            android:text="홈"
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
             android:id="@+id/button14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="뒤로가기" />
+            android:onClick="goto_Kiosk_R_H_R"
+            android:text="뒤로가기"
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 </LinearLayout>

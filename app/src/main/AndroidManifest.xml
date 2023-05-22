@@ -19,6 +19,33 @@
         android:theme="@style/Theme.Kiosk"
         tools:targetApi="31">
         <activity
+            android:name=".Kiosk_R_Hospital_Pay_Complete"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Hospital_Pay"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Hospital_Acceptance_Complete"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Hospital_Acceptance"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Hospital_Receipt_Complete"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Hospital_Department"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Hospital_Receipt"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Hospital"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Part"
+            android:exported="false" />
+        <activity
             android:name=".Kiosk_30_2"
             android:exported="false" />
         <activity
@@ -144,7 +171,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

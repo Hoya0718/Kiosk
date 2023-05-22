@@ -14,13 +14,10 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class Kiosk_29 extends AppCompatActivity {
+public class Kiosk_R_Hospital_Acceptance extends AppCompatActivity {
 
     Handler handler = new Handler();
-    private AnimationDrawable anim;
     private TextView ssn_2 ;
-    private TextToSpeech tts;
-    private myapp sound;
 
     private Button num_0_2,num_1_2,num_2_2,num_3_2,num_4_2,num_5_2,num_6_2,num_7_2,num_8_2,num_9_2,check_2,cl_2;
     private myapp text_size;
@@ -35,7 +32,6 @@ public class Kiosk_29 extends AppCompatActivity {
         ssn_2 = findViewById(R.id.SSN_2);
         text_size = (myapp)getApplication();
         pnpnpn = (myapp) getApplication();
-        sound = (myapp) getApplication();
         num_0_2 = findViewById(R.id.num_0_2);
         check_2 = findViewById(R.id.Check_2_2);
         cl_2 = findViewById(R.id.CL_2);
@@ -64,41 +60,8 @@ public class Kiosk_29 extends AppCompatActivity {
         num_7_2.setTextSize(text_size.getId());
         num_8_2.setTextSize(text_size.getId());
         num_9_2.setTextSize(text_size.getId());
-
-        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
-                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("처방전을 받기 전 본인 확인을 위해 주민등록번호를 입력해야합니다. 주민등록번호를 입력해보세요.");
-                    } else {
-                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Before you receive your prescription, you will need to enter your social security number to verify your identity. Please enter your social security number.");
-                    }
-                }
-            }
-        });
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                tts.setSpeechRate(sound.getTtsSpeed()) ;
-                sound.getTtsVolume();
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("아래에 숫자를 통해 주민등록번호를 입력하실 수 있어요.");
-                else
-                    speakText("You can enter your social security number via the numbers below.");
-            }
-        }, 15000);
-
-
     }
-    private void speakText(String text) {
 
-        tts.setSpeechRate(sound.getTtsSpeed()) ;
-        sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-    }
     public void put_n(View view) {
         String current = ssn_2.getText().toString();
 
@@ -210,45 +173,30 @@ public class Kiosk_29 extends AppCompatActivity {
                 }
         }
     }
-    public void goto_kiosk_29_2(View v) {
+    public void goto_Kiosk_R_H_A_C(View v) {
 
-        Intent goto_kiosk_29_2= new Intent(getApplicationContext(), Kiosk_29_2.class);
+        Intent goto_Kiosk_R_H_A_C= new Intent(getApplicationContext(), Kiosk_R_Hospital_Acceptance_Complete.class);
         if(ssn_2.length() == 14) {
-            tts.shutdown();
             get_num_2 = ssn_2.getText().toString();
             pnpnpn.setGet_pn_2(get_num_2);
-            startActivity(goto_kiosk_29_2);
+            startActivity(goto_Kiosk_R_H_A_C);
         }
         else {
-                if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주민등록번호가 맞는지 확인해주세요.");
-                    ssn_2.setBackgroundResource(R.drawable.anim_list2);
-                    anim = (AnimationDrawable) ssn_2.getBackground();
-                    anim.start();
-                    Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else{
-                    ssn_2.setBackgroundResource(R.drawable.anim_list2);
-                    anim = (AnimationDrawable) ssn_2.getBackground();
-                    anim.start();
-                    speakText("Please verify your social security number.");
-                    Toast.makeText(getApplicationContext(), "Please verify your social security number.", Toast.LENGTH_LONG).show();}
+            if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해주세요.", Toast.LENGTH_LONG).show();
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Please verify your social security number.", Toast.LENGTH_LONG).show();}
         }
     }
-
-    protected void onDestroy() {
-        if(tts != null) {
-            tts.stop();
-            tts.shutdown();
-            tts=null;
-        }
-        super.onDestroy();
+    public void goto_Kiosk_H_Main(View v){
+        Intent goto_Kiosk_H_Main = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
+        startActivity(goto_Kiosk_H_Main);
+        finish();
     }
-    protected void onPause() {
-        if (tts != null) {
-            // TTS 발화 중지
-            tts.stop();
-        }
-        super.onPause();
+    public void goto_Back(View v) {
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
+        startActivity(goto_Back);
+        finish();
     }
 }

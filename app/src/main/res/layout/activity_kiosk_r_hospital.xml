@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_28">
+    tools:context=".Kiosk_R_Hospital">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,11 +14,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hos_accept_txt"
+            android:id="@+id/r_H_Info_Txt"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/hospital_list_3"
+            android:text="접수/수납을 하시려면 아래 버튼을 선택해주세요"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
@@ -29,16 +31,18 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/hosb_1"
+            android:id="@+id/r_H_Receipt_Btn"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="10dp"
-            android:enabled="false"
-            android:gravity="center"
-            android:text="@string/receipt_2"
+            android:layout_weight="1"
+            android:onClick="goto_Kiosk_R_H_Receipt"
+            android:text="접수하기"
             android:textSize="@dimen/font_size_medium" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -48,30 +52,17 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/acceptance"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/r_H_Acceptance_Btn"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="50dp"
-            android:gravity="center"
-            android:onClick="goto_kiosk_29"
-            android:text="@string/acception_2"
+            android:layout_weight="1"
+            android:onClick="goto_Kiosk_R_H_Acceptance"
+            android:text="수납 및 처방전 발행"
             android:textSize="@dimen/font_size_medium" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView47"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -82,19 +73,13 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/button20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="홈"
-            android:textSize="@dimen/font_size_medium" />
-
-        <Button
-            android:id="@+id/button16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:onClick="goto_Back"
             android:text="뒤로가기"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
+
 </LinearLayout>

@@ -7,18 +7,37 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Kiosk_R_Hospital_Acceptance_Complete extends AppCompatActivity {
 
     private CheckBox check_Money;
+    private TextView department;
+    private TextView treatment_day;
+    private TextView pnpn;
+    private myapp pn;
 
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_hospital_acceptance_complete);
 
+        pn = (myapp) getApplication();
+        pnpn = findViewById(R.id.pnpn);
+        department = (findViewById(R.id.department_2));
         check_Money = (findViewById(R.id.check_Money));
+        treatment_day = (findViewById(R.id.treatment_day));
+
+        department.setText(pn.getDepartment());
+        pnpn.setText(pn.getGet_pn_2().substring(0,6));
+        String formattedTime = sdf.format(new Date(pn.getDay()));
+        treatment_day.setText(formattedTime);
+
 
     }
 
@@ -39,11 +58,9 @@ public class Kiosk_R_Hospital_Acceptance_Complete extends AppCompatActivity {
     public void goto_Kiosk_H_Main(View v){
         Intent goto_Kiosk_H_Main = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
         startActivity(goto_Kiosk_H_Main);
-        finish();
     }
     public void goto_Back(View v) {
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Hospital_Acceptance.class);
         startActivity(goto_Back);
-        finish();
     }
 }

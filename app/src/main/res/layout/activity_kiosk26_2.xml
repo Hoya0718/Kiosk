@@ -158,7 +158,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:text='@null' />
+                android:text='@null'
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/button2"
@@ -169,7 +170,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:text="@null" />
+                android:text="@null"
+                android:visibility="invisible" />
         </LinearLayout>
 
     </LinearLayout>
@@ -181,17 +183,21 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/button11"
-            android:layout_width="0dp"
+            android:id="@+id/button19"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="홈" />
+            android:onClick="goto_Kiosk_H_M"
+            android:text="홈"
+            android:textSize="@dimen/font_size_medium" />
 
         <Button
-            android:id="@+id/button12"
-            android:layout_width="0dp"
+            android:id="@+id/button22"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:onClick="goto_Back"
+            android:text="뒤로가기"
+            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 </LinearLayout>

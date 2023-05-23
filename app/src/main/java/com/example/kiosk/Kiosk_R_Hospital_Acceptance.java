@@ -177,7 +177,13 @@ public class Kiosk_R_Hospital_Acceptance extends AppCompatActivity {
         if(ssn_2.length() == 14) {
             get_num_2 = ssn_2.getText().toString();
             pnpnpn.setGet_pn_2(get_num_2);
-            startActivity(goto_Kiosk_R_H_A_C);
+            char pass = get_num_2.charAt(7);
+            if (pass == '1' || pass == '2' || pass == '3' || pass == '4') {
+                startActivity(goto_Kiosk_R_H_A_C);
+
+            }
+            else
+                Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
         }
         else {
             if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
@@ -187,14 +193,9 @@ public class Kiosk_R_Hospital_Acceptance extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Please verify your social security number.", Toast.LENGTH_LONG).show();}
         }
     }
-    public void goto_Kiosk_H_Main(View v){
-        Intent goto_Kiosk_H_Main = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
-        startActivity(goto_Kiosk_H_Main);
-        finish();
-    }
+
     public void goto_Back(View v) {
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
         startActivity(goto_Back);
-        finish();
     }
 }

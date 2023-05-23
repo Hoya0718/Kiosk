@@ -105,11 +105,9 @@ public class Kiosk_R_Hospital_Department extends AppCompatActivity {
     public void goto_Kiosk_H_Main(View v){
         Intent goto_Kiosk_H_Main = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
         startActivity(goto_Kiosk_H_Main);
-        finish();
     }
     public void goto_Back(View v) {
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Hospital_Receipt.class);
         startActivity(goto_Back);
-        finish();
     }
 }

@@ -16,6 +16,5 @@ public class Kiosk_R_Congratulations extends AppCompatActivity {
     public void goto_Kiosk_R_P(View v){
         Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), Kiosk_R_Part.class);
         startActivity(goto_Kiosk_R_P);
-        finish();
     }
 }

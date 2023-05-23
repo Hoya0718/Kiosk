@@ -212,12 +212,19 @@ public class Kiosk_29 extends AppCompatActivity {
     }
     public void goto_kiosk_29_2(View v) {
 
-        Intent goto_kiosk_29_2= new Intent(getApplicationContext(), Kiosk_29_2.class);
-        if(ssn_2.length() == 14) {
+        Intent goto_kiosk_29_2 = new Intent(getApplicationContext(), Kiosk_29_2.class);
+        if (ssn_2.length() == 14) {
             tts.shutdown();
             get_num_2 = ssn_2.getText().toString();
             pnpnpn.setGet_pn_2(get_num_2);
-            startActivity(goto_kiosk_29_2);
+            char pass = get_num_2.charAt(7);
+            if (pass == '1' || pass == '2' || pass == '3' || pass == '4') {
+                startActivity(goto_kiosk_29_2);
+
+            } else
+                Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
+        
+
         }
         else {
                 if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
@@ -236,6 +243,19 @@ public class Kiosk_29 extends AppCompatActivity {
         }
     }
 
+    public void goto_Kiosk_H_M(View v) {
+        tts.shutdown();
+        Intent goto_Kiosk_H_M = new Intent(getApplicationContext(), Kiosk_25.class);
+        startActivity(goto_Kiosk_H_M);
+
+    }
+
+    public void goto_back(View v) {
+        tts.shutdown();
+        Intent goto_back = new Intent(getApplicationContext(), Kiosk_28.class);
+        startActivity(goto_back);
+
+    }
     protected void onDestroy() {
         if(tts != null) {
             tts.stop();

@@ -235,18 +235,11 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/button9"
-            android:layout_width="0dp"
+            android:id="@+id/button22"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="홈"
-            android:textSize="@dimen/font_size_medium" />
-
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:onClick="goto_Back"
             android:text="뒤로가기"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>

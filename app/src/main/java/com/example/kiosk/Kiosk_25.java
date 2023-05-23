@@ -78,10 +78,15 @@ public class Kiosk_25 extends AppCompatActivity {
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
     public void goto_kiosk_26(View v){
-            tts.shutdown();
 
+        tts.shutdown();
         Intent goto_kiosk_26 = new Intent(getApplicationContext(),Kiosk_26.class);
         startActivity(goto_kiosk_26);
+    }
+    public void goto_Back(View v){
+        tts.shutdown();
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_24.class);
+        startActivity(goto_Back);
     }
 
     protected void onDestroy() {

@@ -76,7 +76,7 @@ public class Kiosk_26 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("접수를 하실려면 주민등록번호와 개인정보 수집 동의를 눌러주셔야 병원 접수가 됩니다. 주민등록번호를 입력하시고 네모 칸을 꼭 눌러주세요");
+                        speakText("접수를 하실려면 주민등록번호와 개인정보 수집 동의를 눌러주셔야 병원 접수가 됩니다. 개인정보 수집 동의를 눌러주신 후 주민등록번호를 입력하시고 확인을 눌러주세요");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("You'll need to enter your social security number to register. Try entering your social security number.");
@@ -106,7 +106,7 @@ public class Kiosk_26 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.num_0:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "0");
+                ssn.setText(current + '0');
                 if (ssn.length() == 7) {
                     ssn.setText(current + "-0");
                 }
@@ -116,7 +116,7 @@ public class Kiosk_26 extends AppCompatActivity {
 
             case R.id.num_1:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "1");
+                ssn.setText(current + '1');
                 if(ssn.length()==7) {
                     ssn.setText(current + "-1");
                 }
@@ -125,7 +125,7 @@ public class Kiosk_26 extends AppCompatActivity {
                 break;
             case R.id.num_2:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "2");
+                ssn.setText(current + '2');
                 if(ssn.length()==7){
                     ssn.setText(current + "-2");
                 }
@@ -134,7 +134,7 @@ public class Kiosk_26 extends AppCompatActivity {
                 break;
             case R.id.num_3:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "3");
+                ssn.setText(current + '3');
                 if(ssn.length()==7){
                     ssn.setText(current + "-3");
                 }
@@ -143,7 +143,7 @@ public class Kiosk_26 extends AppCompatActivity {
                 break;
             case R.id.num_4:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "4");
+                ssn.setText(current + '4');
                 if(ssn.length()==7){
                     ssn.setText(current + "-4");;
                 }
@@ -152,16 +152,16 @@ public class Kiosk_26 extends AppCompatActivity {
                 break;
             case R.id.num_5:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "5");
-                if(ssn.length()==7){
+                ssn.setText(current + '5');
+                if(ssn.length()==7) {
                     ssn.setText(current + "-5");
-                    if(ssn.length()==8)
-                        ssn.setText(current + '*');
                 }
+                if(ssn.length()>=9)
+                        ssn.setText(current + '*');
                 break;
             case R.id.num_6:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "6");
+                ssn.setText(current + '6');
                 if(ssn.length()==7){
                     ssn.setText(current + "-6");
                 }
@@ -170,30 +170,30 @@ public class Kiosk_26 extends AppCompatActivity {
                 break;
             case R.id.num_7:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "7");
+                ssn.setText(current +'7');
                 if(ssn.length()==7){
-                    ssn.setText(current + "-7");
+                    ssn.setText(current +"-7");
                 }
                 if (ssn.length() >= 9)
-                    ssn.setText(current + '*');
+                    ssn.setText(current +'*');
                 break;
             case R.id.num_8:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "8");
+                ssn.setText(current +'8');
                 if(ssn.length()==7){
-                    ssn.setText(current + "-8");
+                    ssn.setText(current +"-8");
                 }
                 if (ssn.length() >= 9)
-                    ssn.setText(current + '*');
+                    ssn.setText(current +'*');
                 break;
             case R.id.num_9:
                 ssn.setTextSize(text_size.getId());
-                ssn.setText(current + "9");
+                ssn.setText(current +'9');
                 if(ssn.length()==7){
-                    ssn.setText(current + "-9");
+                    ssn.setText(current +"-9");
                 }
                 if (ssn.length() >= 9)
-                    ssn.setText(current + '*');
+                    ssn.setText(current +'*');
                 break;
             case R.id.CL:
                 if(ssn.length() ==0){
@@ -220,7 +220,12 @@ public class Kiosk_26 extends AppCompatActivity {
                 pn.setDay(clickTime);
                 tts.shutdown();
                 Intent goto_kiosk_26_2 = new Intent(this,Kiosk_26_2.class);
-                startActivity(goto_kiosk_26_2);
+                char pass = get_num.charAt(7);
+                if (pass == '1' || pass == '2' || pass == '3' || pass == '4') {
+                    startActivity(goto_kiosk_26_2);
+                }
+                else
+                    Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
             }
             else {
                 if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
@@ -258,6 +263,10 @@ public class Kiosk_26 extends AppCompatActivity {
         }
     }
 
+    public void goto_Back(View v){
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_25.class);
+        startActivity(goto_Back);
+    }
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

@@ -124,9 +124,9 @@ public class Kiosk_R_Hospital_Receipt extends AppCompatActivity {
                 ssn.setText(current + "5");
                 if (ssn.length() == 7) {
                     ssn.setText(current + "-5");
-                    if (ssn.length() == 8)
-                        ssn.setText(current + '*');
                 }
+                if (ssn.length() >= 9)
+                    ssn.setText(current + '*');
                 break;
             case R.id.num_6:
                 ssn.setTextSize(text_size.getId());
@@ -183,11 +183,17 @@ public class Kiosk_R_Hospital_Receipt extends AppCompatActivity {
         if (personal_Information.isChecked()) {
             if (ssn.length() == 14) {
                 get_num = ssn.getText().toString();
+                char pass = get_num.charAt(7);
+
                 pn.setGet_pn(get_num);
                 clickTime = System.currentTimeMillis();
                 pn.setDay(clickTime);
                 Intent goto_Kiosk_R_H_D = new Intent(this, Kiosk_R_Hospital_Department.class);
-                startActivity(goto_Kiosk_R_H_D);
+                if (pass == '1' || pass == '2' || pass == '3' || pass == '4') {
+                    startActivity(goto_Kiosk_R_H_D);
+                }
+                else
+                    Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
             } else {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
@@ -203,14 +209,9 @@ public class Kiosk_R_Hospital_Receipt extends AppCompatActivity {
             }
         }
     }
-    public void goto_Kiosk_H_Main(View v){
-        Intent goto_Kiosk_H_Main = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
-        startActivity(goto_Kiosk_H_Main);
-        finish();
-    }
+
     public void goto_Back(View v) {
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
         startActivity(goto_Back);
-        finish();
     }
 }

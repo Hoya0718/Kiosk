@@ -16,6 +16,5 @@ public class Kiosk_R_Hospital_Pay_Complete extends AppCompatActivity {
     public void goto_Kiosk_R_H_C (View v){
         Intent goto_Kiosk_R_H_C = new Intent(getApplicationContext(), Kiosk_R_Congratulations.class);
         startActivity(goto_Kiosk_R_H_C);
-        finish();
     }
 }

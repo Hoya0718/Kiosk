@@ -39,9 +39,6 @@ public class Kiosk_8_1 extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
-    private String intentString;
-    private String intentInt;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,12 +55,6 @@ public class Kiosk_8_1 extends AppCompatActivity {
         set.setTextSize(text_size.getId());
         sig.setTextSize(text_size.getId());
         cancel.setTextSize(text_size.getId());
-
-        Intent intent = getIntent();
-        if (intent != null) {
-            intentString = intent.getStringExtra("name");
-            intentInt = intent.getStringExtra("value");
-        }
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -100,15 +91,7 @@ public class Kiosk_8_1 extends AppCompatActivity {
     public void popup_kiosk_08_2(View view) {
         tts.shutdown();
         Intent popup_kiosk_08_2 = new Intent(getApplicationContext(), Kiosk_8_2.class);
-        popup_kiosk_08_2.putExtra("name", intentString);
-        popup_kiosk_08_2.putExtra("value", intentInt);
         startActivity(popup_kiosk_08_2);
-    }
-
-    public void plus_kiosk_07_b(View view) {
-        tts.shutdown();
-        Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
-        startActivity(goto_kiosk_07_b);
     }
 
     public void goto_kiosk_07_b(View view) {

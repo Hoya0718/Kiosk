@@ -18,24 +18,12 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
 
     private myapp sound;
 
-    private myapp text_size;
-    private Button cancel;
-
-    private AnimationDrawable anim;
-    Handler handler = new Handler();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_pay);
 
         sound = (myapp) getApplication();
-
-        text_size = (myapp) getApplication();
-
-        cancel = findViewById(R.id.cancel_Btn);
-
-        cancel.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

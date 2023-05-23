@@ -120,7 +120,6 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -160,7 +159,6 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -249,7 +247,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -287,7 +284,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -325,7 +321,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -371,7 +366,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -411,7 +405,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -451,7 +444,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -499,7 +491,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -539,7 +530,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -579,7 +569,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -643,7 +632,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:onClick="popup_kiosk_08_7"
             android:text="@string/order_history"
             android:textSize="18sp" />
 

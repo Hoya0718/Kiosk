@@ -27,11 +27,6 @@ public class Kiosk_8_2 extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
-    private TextView burger_text;
-
-    private String intentString;
-    private String intentInt;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,17 +43,6 @@ public class Kiosk_8_2 extends AppCompatActivity {
         set.setTextSize(text_size.getId());
         large.setTextSize(text_size.getId());
         cancel.setTextSize(text_size.getId());
-
-        burger_text = findViewById(R.id.burger_text);
-
-        Intent intent = getIntent();
-        if (intent != null) {
-            intentString = intent.getStringExtra("name");
-            intentInt = intent.getStringExtra("value");
-            if (intentString != null) {
-                burger_text.setText(intentString);
-            }
-        }
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

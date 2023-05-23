@@ -117,6 +117,7 @@ public class Kiosk_5 extends AppCompatActivity {
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        //
     }
 
     protected void onDestroy() {

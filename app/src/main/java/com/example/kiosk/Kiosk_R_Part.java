@@ -14,8 +14,8 @@ public class Kiosk_R_Part extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_part);
     }
 
-    public void goto_Kiosk_R_F_M(View v){
-        Intent goto_Kiosk_R_F_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Main.class);
+    public void goto_Kiosk_R_F_M (View v){
+        Intent goto_Kiosk_R_F_M = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Main.class);
         startActivity(goto_Kiosk_R_F_M);
     }
 

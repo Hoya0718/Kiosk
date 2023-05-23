@@ -27,7 +27,7 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk11);
+        setContentView(R.layout.activity_kiosk_r_fastfood_pay);
 
         sound = (myapp) getApplication();
 

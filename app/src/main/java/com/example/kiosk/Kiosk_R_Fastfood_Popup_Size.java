@@ -35,7 +35,7 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk08_2);
+        setContentView(R.layout.activity_kiosk_r_fastfood_popup_size);
 
         sound = (myapp) getApplication();
 

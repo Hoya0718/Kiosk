@@ -50,7 +50,7 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk07_b);
+        setContentView(R.layout.activity_kiosk_r_fastfood_menu_burger);
 
         sound = (myapp) getApplication();
 

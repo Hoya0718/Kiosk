@@ -26,7 +26,6 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     }
 
     public void goto_Kiosk_R_F_M_E(View view) {
-        tts.shutdown();
         Intent goto_Kiosk_R_F_M_E = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_End.class);
         startActivity(goto_Kiosk_R_F_M_E);
     }

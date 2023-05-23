@@ -11,51 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:gravity="center">
-
-        <TextView
-            android:id="@+id/select_menu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="@string/select_menu"
-            android:textAlignment="center"
-            android:textColor="#033359"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/arrow_1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/arrow_1"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/payment"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="@string/payment"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/arrow_2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/arrow_2"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/complete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="@string/complete"
-            android:textAlignment="center"
-            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -97,10 +52,16 @@
                     android:text="▣ " />
 
                 <TextView
-                    android:id="@+id/burger_set_text"
-                    android:layout_width="match_parent"
+                    android:id="@+id/burger_text"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/big_mc_set" />
+                    android:text="@string/big_mc" />
+
+                <TextView
+                    android:id="@+id/size_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_menu" />
             </LinearLayout>
 
             <LinearLayout
@@ -115,7 +76,7 @@
                     android:text="▣ " />
 
                 <TextView
-                    android:id="@+id/side_set_text"
+                    android:id="@+id/side_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/french_fries" />
@@ -158,141 +119,157 @@
 
         </LinearLayout>
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <TableRow
+            <!--1-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/chistr"
+                <LinearLayout
+                    android:id="@+id/chistr_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/chistr" />
 
                     <TextView
+                        android:id="@+id/chistr_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/chistr"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/chistr" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩2,000"
-                        android:gravity="center"/>
-                </TableLayout>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="₩2,000" />
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/chijadu"
+                <LinearLayout
+                    android:id="@+id/chijadu_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/chijadu" />
 
                     <TextView
+                        android:id="@+id/chijadu_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/chijadu"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/chijadu" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩2,000"
-                        android:gravity="center"/>
-                </TableLayout>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="₩2,000" />
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/drinkoran"
+                <LinearLayout
+                    android:id="@+id/drinkoran_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/drinkoran" />
 
                     <TextView
+                        android:id="@+id/drinkoran_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/drinkoran"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/drinkoran" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩1,600"
-                        android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="₩1,600" />
+                </LinearLayout>
+            </LinearLayout>
 
-            <TableRow
+            <!--2-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/shakestr"
+                <LinearLayout
+                    android:id="@+id/shakestr_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -303,6 +280,7 @@
                         app:srcCompat="@drawable/shakestr" />
 
                     <TextView
+                        android:id="@+id/shakestr_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -316,20 +294,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_margin="5dp"
                         android:text="₩2,800"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/shakecho"
+                <LinearLayout
+                    android:id="@+id/shakecho_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -340,6 +318,7 @@
                         app:srcCompat="@drawable/shakecho" />
 
                     <TextView
+                        android:id="@+id/shakecho_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -353,20 +332,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_margin="5dp"
                         android:text="₩2,800"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/shakeba"
+                <LinearLayout
+                    android:id="@+id/shakeba_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -377,6 +356,7 @@
                         app:srcCompat="@drawable/shakeba" />
 
                     <TextView
+                        android:id="@+id/shakeba_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -390,27 +370,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_margin="5dp"
                         android:text="₩2,800"
                         android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
+                </LinearLayout>
+            </LinearLayout>
 
-            <TableRow
+            <!--3-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/drinkcoca"
+                <LinearLayout
+                    android:id="@+id/drinkcoca_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -421,7 +402,7 @@
                         app:srcCompat="@drawable/drinkcoca" />
 
                     <TextView
-                        android:id="@+id/coca_text"
+                        android:id="@+id/drinkcoca_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -432,7 +413,6 @@
                         android:gravity="center"/>
 
                     <TextView
-                        android:id="@+id/coca_price"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -441,15 +421,17 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩1,700"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/drinkcoze"
+                <LinearLayout
+                    android:id="@+id/drinkcoze_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -460,6 +442,7 @@
                         app:srcCompat="@drawable/drinkcoze" />
 
                     <TextView
+                        android:id="@+id/drinkcoze_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -478,15 +461,17 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩1,700"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/drinkspri"
+                <LinearLayout
+                    android:id="@+id/drinkspri_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -497,6 +482,7 @@
                         app:srcCompat="@drawable/drinkspri" />
 
                     <TextView
+                        android:id="@+id/drinkspri_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -515,21 +501,25 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩1,700"
                         android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
+                </LinearLayout>
+            </LinearLayout>
 
-            <TableRow
+            <!--4-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/drinkhwan"
+                <LinearLayout
+                    android:id="@+id/drinkhwan_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -540,6 +530,7 @@
                         app:srcCompat="@drawable/drinkhwan" />
 
                     <TextView
+                        android:id="@+id/drinkhwan_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -558,15 +549,17 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩1,700"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/milk"
+                <LinearLayout
+                    android:id="@+id/milk_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -577,6 +570,7 @@
                         app:srcCompat="@drawable/milk" />
 
                     <TextView
+                        android:id="@+id/milk_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -593,17 +587,19 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="1,600"
+                        android:text="₩1,600"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/water"
+                <LinearLayout
+                    android:id="@+id/water_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_T"
                     android:orientation="vertical">
 
                     <ImageView
@@ -614,6 +610,7 @@
                         app:srcCompat="@drawable/water" />
 
                     <TextView
+                        android:id="@+id/water_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -632,10 +629,9 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩1,300"
                         android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
-        </TableLayout>
-
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout

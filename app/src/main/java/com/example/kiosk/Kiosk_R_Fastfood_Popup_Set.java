@@ -14,8 +14,9 @@ import java.util.Locale;
 
 public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
 
-    private String intentString;
-    private String intentInt;
+    private int value;
+    private int burger;
+    private String burgerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,25 +25,31 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent != null) {
-            intentString = intent.getStringExtra("name");
-            intentInt = intent.getStringExtra("value");
+            value = intent.getIntExtra("value", 0);
+            burger = intent.getIntExtra("burger", 0);
+            burgerName = intent.getStringExtra("burgerName");
         }
     }
 
     public void goto_Kiosk_R_F_P_Sz(View view) {
         Intent goto_Kiosk_R_F_P_Sz = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Size.class);
-        goto_Kiosk_R_F_P_Sz.putExtra("name", intentString);
-        goto_Kiosk_R_F_P_Sz.putExtra("value", intentInt);
+        goto_Kiosk_R_F_P_Sz.putExtra("value", value);
+        goto_Kiosk_R_F_P_Sz.putExtra("burger", burger);
+        goto_Kiosk_R_F_P_Sz.putExtra("burgerName", burgerName);
         startActivity(goto_Kiosk_R_F_P_Sz);
     }
 
     public void goto_Kiosk_R_F_M_Bp(View view) {
         Intent goto_Kiosk_R_F_M_Bp = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
+        value+=burger;
+        goto_Kiosk_R_F_M_Bp.putExtra("value", value);
+        goto_Kiosk_R_F_M_Bp.putExtra("burgerName", burgerName);
         startActivity(goto_Kiosk_R_F_M_Bp);
     }
 
     public void goto_Kiosk_R_F_M_B(View view) {
         Intent goto_Kiosk_R_F_M_B = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
+        goto_Kiosk_R_F_M_B.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_B);
     }
 }

@@ -15,8 +15,9 @@ import java.util.Locale;
 public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
 
     private TextToSpeech tts;
-
     private myapp sound;
+
+    private int value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,11 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
                 }
             }
         });
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            value = intent.getIntExtra("value", 0);
+        }
     }
 
     public void goto_Kiosk_R_H_C (View v){
@@ -48,6 +54,7 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
     public void goto_Kiosk_R_F_P_M(View v){
         tts.shutdown();
         Intent goto_Kiosk_R_F_P_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Pay_Meth.class);
+        goto_Kiosk_R_F_P_M.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_P_M);
     }
 

@@ -14,10 +14,17 @@ import java.util.Locale;
 
 public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
 
+    private int value;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_order_hist);
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            value = intent.getIntExtra("value", 0);
+        }
     }
 
     public void goto_Kiosk_R_F_M(View v){
@@ -26,7 +33,14 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
     }
 
     public void goto_Kiosk_R_F_P_M(View v){
-        Intent goto_Kiosk_F_R_P_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Pay_Meth.class);
-        startActivity(goto_Kiosk_F_R_P_M);
+        Intent goto_Kiosk_R_F_P_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Pay_Meth.class);
+        goto_Kiosk_R_F_P_M.putExtra("value", value);
+        startActivity(goto_Kiosk_R_F_P_M);
+    }
+
+    public void goto_Kiosk_R_F_M_B(View view) {
+        Intent goto_Kiosk_R_F_M_B = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
+        goto_Kiosk_R_F_M_B.putExtra("value", value);
+        startActivity(goto_Kiosk_R_F_M_B);
     }
 }

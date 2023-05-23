@@ -19,7 +19,9 @@ import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +46,20 @@ public class Kiosk_7_b extends AppCompatActivity {
 
     private TextView bigmc_text;
     private TextView bigmc_price;
+
+    private int value;
+    private TextView money_text;
+    private TextView b1955_text;
+    private TextView batodi_text;
+    private TextView mcchi_text;
+    private TextView mccri_text;
+    private TextView quater_text;
+    private TextView sanhi_text;
+    private TextView susu_text;
+    private TextView subi_text;
+    private TextView bulgogi_text;
+    private TextView cheeze_text;
+    private TextView ham_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +86,22 @@ public class Kiosk_7_b extends AppCompatActivity {
 
         bigmc_text = findViewById(R.id.bigmc_text);
         bigmc_price = findViewById(R.id.bigmc_price);
+
+        value = 0;
+        money_text = findViewById(R.id.money_text);
+        b1955_text = findViewById(R.id.b1955_text);
+        batodi_text = findViewById(R.id.batodi_text);
+        bigmc_text = findViewById(R.id.bigmc_text);
+        mcchi_text = findViewById(R.id.mcchi_text);
+        mccri_text = findViewById(R.id.mccri_text);
+        quater_text = findViewById(R.id.quater_text);
+        sanhi_text = findViewById(R.id.sanhi_text);
+        susu_text = findViewById(R.id.susu_text);
+        subi_text = findViewById(R.id.subi_text);
+        bulgogi_text = findViewById(R.id.bulgogi_text);
+        cheeze_text = findViewById(R.id.cheeze_text);
+        ham_text = findViewById(R.id.ham_text);
+
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -115,35 +147,107 @@ public class Kiosk_7_b extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_06 = new Intent(getApplicationContext(),Kiosk_6.class);
         startActivity(goto_kiosk_06);
-        finish();
     }
 
     public void goto_kiosk_07_s(View v){
         tts.shutdown();
         Intent goto_kiosk_07_s = new Intent(getApplicationContext(), Kiosk_7_s.class);
         startActivity(goto_kiosk_07_s);
-        finish();
     }
 
     public void goto_kiosk_07_d(View v){
         tts.shutdown();
         Intent goto_kiosk_07_d = new Intent(getApplicationContext(), Kiosk_7_d.class);
         startActivity(goto_kiosk_07_d);
-        finish();
     }
 
     public void popup_kiosk_08_1(View view) {
-        tts.shutdown();
         Intent popup_kiosk_08_1 = new Intent(getApplicationContext(), Kiosk_8_1.class);
-        startActivity(popup_kiosk_08_1);
-        finish();
+        switch (view.getId()) {
+            case R.id.b1955_lay:
+                tts.shutdown();
+                value+=6400;
+                money_text.setText(String.valueOf(value));
+                String burger1955 = b1955_text.getText().toString();
+                popup_kiosk_08_1.putExtra("name", burger1955);
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.batodi_lay:
+                tts.shutdown();
+                value+=5800;
+                String burgerbatodi = batodi_text.getText().toString();
+                popup_kiosk_08_1.putExtra("name", burgerbatodi);
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.bigmc_lay:
+                tts.shutdown();
+                value+=5200;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.mcchi_lay:
+                tts.shutdown();
+                value+=3500;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.mccri_lay:
+                tts.shutdown();
+                value+=5900;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.quater_lay:
+                tts.shutdown();
+                value+=5500;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.sanhi_lay:
+                tts.shutdown();
+                value+=5200;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.susu_lay:
+                tts.shutdown();
+                value+=4700;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.subi_lay:
+                tts.shutdown();
+                value+=5800;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.bulgogi_lay:
+                tts.shutdown();
+                value+=2300;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.cheeze_lay:
+                tts.shutdown();
+                value+=2700;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+            case R.id.ham_lay:
+                tts.shutdown();
+                value+=2500;
+                popup_kiosk_08_1.putExtra("value", value);
+                startActivity(popup_kiosk_08_1);
+                break;
+        }
     }
 
     public void popup_kiosk_08_7(View view) {
         tts.shutdown();
         Intent popup_kiosk_08_7 = new Intent(getApplicationContext(), Kiosk_8_7.class);
         startActivity(popup_kiosk_08_7);
-        finish();
     }
 
     private void speakText(String text) {

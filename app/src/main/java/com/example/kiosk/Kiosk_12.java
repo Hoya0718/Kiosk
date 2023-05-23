@@ -73,7 +73,6 @@ public class Kiosk_12 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_5 = new Intent(getApplicationContext(),Kiosk_5.class);
         startActivity(goto_kiosk_5);
-        finish();
     }
 
     private void speakText(String text) {

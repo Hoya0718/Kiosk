@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +27,11 @@ public class Kiosk_8_2 extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
+    private TextView burger_text;
+
+    private String intentString;
+    private String intentInt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +48,17 @@ public class Kiosk_8_2 extends AppCompatActivity {
         set.setTextSize(text_size.getId());
         large.setTextSize(text_size.getId());
         cancel.setTextSize(text_size.getId());
+
+        burger_text = findViewById(R.id.burger_text);
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            intentString = intent.getStringExtra("name");
+            intentInt = intent.getStringExtra("value");
+            if (intentString != null) {
+                burger_text.setText(intentString);
+            }
+        }
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -79,14 +96,12 @@ public class Kiosk_8_2 extends AppCompatActivity {
         tts.shutdown();
         Intent popup_kiosk_08_3 = new Intent(getApplicationContext(), Kiosk_8_3.class);
         startActivity(popup_kiosk_08_3);
-        finish();
     }
 
     public void popup_kiosk_08_1(View view) {
         tts.shutdown();
         Intent popup_kiosk_08_1 = new Intent(getApplicationContext(), Kiosk_8_1.class);
         startActivity(popup_kiosk_08_1);
-        finish();
     }
 
     private void speakText(String text) {

@@ -336,7 +336,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
-            android:onClick="goto_Kiosk_R_F_M_E"
+            android:onClick="goto_Kiosk_R_F_M_B"
             android:text="@string/add_to_cart"
             android:textSize="18sp" />
     </LinearLayout>

@@ -49,9 +49,6 @@
             android:name=".Kiosk_R_Fastfood_Menu_Side"
             android:exported="false" />
         <activity
-            android:name=".Kiosk_R_Fastfood_Menu_End"
-            android:exported="false" />
-        <activity
             android:name=".Kiosk_R_Fastfood_Menu_Drink"
             android:exported="false" />
         <activity

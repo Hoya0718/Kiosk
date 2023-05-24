@@ -62,23 +62,6 @@
             android:gravity="left|center_vertical"
             android:text="6,500"
             android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/kcal_text"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.8"
-            android:gravity="right|center_vertical"
-            android:text="1105"
-            android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.8"
-            android:gravity="left|center_vertical"
-            android:text="kcal"
-            android:textSize="30sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -129,6 +112,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:id="@+id/set_burger_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="3"
@@ -136,19 +120,12 @@
                                 app:srcCompat="@drawable/bigmc" />
 
                             <TextView
+                                android:id="@+id/set_burger_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
                                 android:layout_margin="5dp"
                                 android:text="@string/big_mc"
-                                android:gravity="center"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:layout_margin="5dp"
-                                android:text="₩5,200"
                                 android:gravity="center"/>
                         </TableLayout>
 
@@ -162,6 +139,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:id="@+id/set_side_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="3"
@@ -169,19 +147,12 @@
                                 app:srcCompat="@drawable/huri" />
 
                             <TextView
+                                android:id="@+id/set_side_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
                                 android:layout_margin="5dp"
                                 android:text="@string/huri"
-                                android:gravity="center"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:layout_margin="5dp"
-                                android:text="₩2,000"
                                 android:gravity="center"/>
                         </TableLayout>
 
@@ -195,6 +166,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:id="@+id/set_drink_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="3"
@@ -202,19 +174,12 @@
                                 app:srcCompat="@drawable/drinkcoca" />
 
                             <TextView
+                                android:id="@+id/set_drink_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
                                 android:layout_margin="5dp"
                                 android:text="@string/drinkcoca"
-                                android:gravity="center"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:layout_margin="5dp"
-                                android:text="₩1,700"
                                 android:gravity="center"/>
                         </TableLayout>
                     </TableRow>
@@ -239,6 +204,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:layout_weight="1"
+            android:onClick="count_minus"
             android:text="-"
             android:textSize="18sp" />
 
@@ -257,6 +223,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
+            android:onClick="count_plus"
             android:text="+"
             android:textSize="18sp" />
     </LinearLayout>

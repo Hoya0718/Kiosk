@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,14 +17,19 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
 
     private int value;
 
+    private TextView value_text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_order_hist);
 
+        value_text = findViewById(R.id.value_text);
+
         Intent intent = getIntent();
         if (intent != null) {
             value = intent.getIntExtra("value", 0);
+            value_text.setText(String.valueOf(value));
         }
     }
 

@@ -35,7 +35,9 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <TableLayout
+        <LinearLayout
+            android:id="@+id/snackshu_lay"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
@@ -44,66 +46,80 @@
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
             android:background="@drawable/table_border"
+            android:onClick="goto_Kiosk_R_F_O_H"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
                 android:layout_margin="5dp"
+                android:layout_weight="3"
                 app:srcCompat="@drawable/snackshu" />
 
             <TextView
+                android:id="@+id/snackshu_text"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:text="@string/snackshu"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/snackshu" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:text="₩2,300"
-                android:gravity="center"/>
-        </TableLayout>
+                android:gravity="center"
+                android:text="₩2,300" />
+        </LinearLayout>
 
-        <TableLayout
+        <LinearLayout
+            android:id="@+id/mcnurget_lay"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
             android:background="@drawable/table_border"
+            android:onClick="goto_Kiosk_R_F_O_H"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
                 android:layout_margin="5dp"
+                android:layout_weight="3"
                 app:srcCompat="@drawable/mcnurget" />
 
             <TextView
+                android:id="@+id/mcnurget_text"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:text="@string/mcnurget"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/mcnurget" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:text="₩2,900"
-                android:gravity="center"/>
-        </TableLayout>
+                android:gravity="center"
+                android:text="₩2,900" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout

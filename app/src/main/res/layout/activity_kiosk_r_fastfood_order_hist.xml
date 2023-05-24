@@ -42,7 +42,7 @@
                         android:textSize="10dp" />
 
                     <ImageView
-                        android:id="@+id/burger_img"
+                        android:id="@+id/menu_img"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
@@ -73,23 +73,6 @@
                         android:layout_weight="0.8"
                         android:gravity="center"
                         android:text="@string/set_menu"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/kcal_text"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.8"
-                        android:gravity="right|center_vertical"
-                        android:text="1105"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.8"
-                        android:gravity="left|center_vertical"
-                        android:text="kcal"
                         android:textSize="18sp" />
 
                     <LinearLayout

@@ -121,15 +121,6 @@ public class Kiosk_14 extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
-
-                    refund_ticket_btn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_14.this, Kiosk_14_refund.class);
-                            tts.shutdown();
-                            startActivity(intent);
-                        }
-                    });
                 }
             }
         });
@@ -145,12 +136,8 @@ public class Kiosk_14 extends AppCompatActivity {
                     public void run() {
                         buy_ticket_btn.setBackgroundResource(R.drawable.anim_list);
                         reserved_ticket_btn.setBackgroundResource(R.drawable.anim_list);
-                        refund_ticket_btn.setBackgroundResource(R.drawable.anim_list);
                         anim = (AnimationDrawable) buy_ticket_btn.getBackground();
-                        anim.start();
                         anim = (AnimationDrawable) reserved_ticket_btn.getBackground();
-                        anim.start();
-                        anim = (AnimationDrawable) refund_ticket_btn.getBackground();
                         anim.start();
                     }
                 }, 2000);

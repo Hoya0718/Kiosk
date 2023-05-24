@@ -86,6 +86,12 @@ public class Kiosk_6 extends AppCompatActivity {
         startActivity(goto_kiosk_07_b);
     }
 
+    public void goto_Back(View v){
+        tts.shutdown();
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_5.class);
+        startActivity(goto_Back);
+    }
+
     private void speakText(String text) {
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();

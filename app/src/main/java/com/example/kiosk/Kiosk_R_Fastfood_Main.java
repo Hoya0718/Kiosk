@@ -29,4 +29,9 @@ public class Kiosk_R_Fastfood_Main extends AppCompatActivity {
         goto_Kiosk_R_F_M_B.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_B);
     }
+
+    public void goto_Back(View v){
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Part.class);
+        startActivity(goto_Back);
+    }
 }

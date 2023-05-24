@@ -97,7 +97,7 @@ public class Kiosk_9 extends AppCompatActivity {
     private void speakText(String text) {
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
 
     protected void onDestroy() {

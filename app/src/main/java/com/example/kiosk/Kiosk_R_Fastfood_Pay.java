@@ -72,6 +72,7 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
     protected void onPause() {
         if (tts != null) {
             // TTS 발화 중지

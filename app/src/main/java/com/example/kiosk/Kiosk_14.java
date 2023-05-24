@@ -126,25 +126,6 @@ public class Kiosk_14 extends AppCompatActivity {
                 }
             }
         });
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-//                    speakText("승차권 구매 버튼은 여기에 있어요.");
-//                else
-//                    speakText("Buy ticket button is Here");
-//                handler.postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        buy_ticket_btn.setBackgroundResource(R.drawable.anim_list);
-//                        reserved_ticket_btn.setBackgroundResource(R.drawable.anim_list);
-//                        anim = (AnimationDrawable) buy_ticket_btn.getBackground();
-//                        anim = (AnimationDrawable) reserved_ticket_btn.getBackground();
-//                        anim.start();
-//                    }
-//                }, 2000);
-//            }
-//        }, 20000);
         tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
             boolean one = true;
             @Override

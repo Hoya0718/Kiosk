@@ -117,9 +117,9 @@ public class Kiosk_19 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("앉고 싶은 자리를 예매할 수 있는 화면입니다." +
+                        speakText("앉고 싶은 자리를 예매할 수 있는 화면입니다." +
                                 "매진이라고 써진 좌석은 다른 사람이 이미 예약해서" +
-                                "선택할 수 없는 좌석입니다. 다른 좌석을 골라주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "선택할 수 없는 좌석입니다. 다른 좌석을 골라주세요.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정

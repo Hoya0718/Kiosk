@@ -134,8 +134,8 @@ public class Kiosk_17 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("ㅁ 버튼을 누르게 되면 앞글자가 ㅁ인 버스 정류장들이 나옵니다." +
-                                "오른쪽에 새로 생긴 버튼 중에서 가고 싶은 곳 버튼을 클릭해주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                        speakText("ㅁ 버튼을 누르게 되면 앞글자가 ㅁ인 버스 정류장들이 나옵니다." +
+                                "오른쪽에 새로 생긴 버튼 중에서 가고 싶은 곳 버튼을 클릭해주세요.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정

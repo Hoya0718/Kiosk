@@ -7,6 +7,8 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -88,26 +90,51 @@ public class Kiosk_14_refund extends AppCompatActivity {
                 }
             }
         });
-        handler.postDelayed(new Runnable() {
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
             @Override
-            public void run() {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("승차권 구매 버튼은 여기에 있어요.");
-                else
-                    speakText("Buy ticket button is Here");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        b_payment_btn.setBackgroundResource(R.drawable.anim_list);
-                        b_cancel_btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) b_payment_btn.getBackground();
-                        anim.start();
-                        anim = (AnimationDrawable) b_cancel_btn.getBackground();
-                        anim.start();
-                    }
-                }, 2000);
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
             }
-        }, 20000);
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("승차권 구매 버튼은 여기에 있어요.");
+                                else
+                                    speakText("Buy ticket button is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            b_cancel_btn.setBackgroundResource(R.drawable.anim_list);
+                            b_payment_btn.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) b_cancel_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) b_payment_btn.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
     private void startButtonBorderAnimation(Button button) {
         AnimationDrawable buttonBorderAnimation = (AnimationDrawable) button.getBackground();

@@ -88,9 +88,9 @@ public class Kiosk_18 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("가고 싶은 곳을 고르셨나요?" +
+                        speakText("가고 싶은 곳을 고르셨나요?" +
                                 "그럼 이제 버스 종류, 출발 시간을 보고" +
-                                "타고 싶은 버스를 고르기 위해 좌석 선택 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "타고 싶은 버스를 고르기 위해 좌석 선택 버튼을 눌러주세요.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정

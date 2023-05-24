@@ -9,6 +9,8 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -69,10 +71,10 @@ public class Kiosk_15 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("이 화면에서는 가고 싶은 곳을 선택할 수 있습니다." +
+                        speakText("이 화면에서는 가고 싶은 곳을 선택할 수 있습니다." +
                                 "도착지 버튼을 눌러주세요" +
                                 "만약 처음 화면으로 돌아가고 싶으시면 처음 화면으로 돌아가기" +
-                                "버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "버튼을 눌러주세요.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -117,30 +119,58 @@ public class Kiosk_15 extends AppCompatActivity {
                 }
             }
         });
-        handler.postDelayed(new Runnable() {
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
             @Override
-            public void run() {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("목적지 버튼은 여기에 있어요.");
-                else
-                    speakText("Destination button is Here");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        destination_btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) destination_btn.getBackground();
-                        anim.start();
-                    }
-                }, 2000);
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
             }
-        }, 11000);
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("승차권 구매 버튼은 여기에 있어요.");
+                                else
+                                    speakText("Buy ticket button is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            destination_btn.setBackgroundResource(R.drawable.anim_list);
+                            b_homescreen_btn.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) destination_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) b_homescreen_btn.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
 
     protected void onDestroy() {

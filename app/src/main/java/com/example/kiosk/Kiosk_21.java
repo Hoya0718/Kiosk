@@ -9,6 +9,8 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -80,10 +82,10 @@ public class Kiosk_21 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("목적지는 맞게 골랐는지. 버스 종류와 좌석은 정확하게 골랐는지" +
+                        speakText("목적지는 맞게 골랐는지. 버스 종류와 좌석은 정확하게 골랐는지" +
                                 " 확인해주시고, 맞게 고르셨다면 결제하기 버튼을 눌러주세요" +
                                 "만약 잘못 고르셨다면 취소하기 버튼을 눌러서 " +
-                                "이전 화면으로 돌아가실 수 있습니다.", TextToSpeech.QUEUE_FLUSH, null, null);
+                                "이전 화면으로 돌아가실 수 있습니다.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -118,23 +120,71 @@ public class Kiosk_21 extends AppCompatActivity {
                 }
             }
         });
-        handler.postDelayed(new Runnable() {
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+//                    speakText("결제하기 버튼은 여기에있어요.");
+//                else
+//                    speakText("The payment button is here");
+//                handler.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        b_payment_btn.setBackgroundResource(R.drawable.anim_list);
+//                        anim = (AnimationDrawable) b_payment_btn.getBackground();
+//                        anim.start();
+//                    }
+//                }, 2000);
+//            }
+//        }, 16000);
+        Log.d("delaySpeak1", "start");
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
+
             @Override
-            public void run() {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("결제하기 버튼은 여기에있어요.");
-                else
-                    speakText("The payment button is here");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        b_payment_btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) b_payment_btn.getBackground();
-                        anim.start();
-                    }
-                }, 2000);
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak1", "onstart");
             }
-        }, 16000);
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("승차권 구매 버튼은 여기에 있어요.");
+                                else
+                                    speakText("Buy ticket button is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            b_cancel_btn.setBackgroundResource(R.drawable.anim_list);
+                            b_payment_btn.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) b_cancel_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) b_payment_btn.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak1", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak1", "onError");
+            }
+        });
+        Log.d("delaySpeak1", "end");
     }
 
 
@@ -142,7 +192,7 @@ public class Kiosk_21 extends AppCompatActivity {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
     protected void onDestroy() {
         if(tts != null) {

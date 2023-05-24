@@ -166,9 +166,9 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        tts.speak("서울 버튼을 누르게 되면 서울에 있는 버스 정류장들이 나옵니다." +
+                        speakText("서울 버튼을 누르게 되면 서울에 있는 버스 정류장들이 나옵니다." +
                                     "이번에는 앞글자를 사용해서 찾아보겠습니다." +
-                                    "ㅁ 버튼을 눌러보세요", TextToSpeech.QUEUE_FLUSH, null, null);
+                                    "ㅁ 버튼을 눌러보세요");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정

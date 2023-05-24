@@ -163,7 +163,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="       9시 20분                                          우등버스                                           40분                                                    매진          "
+                android:text="           9시 20분                                          우등버스                                      40분                                              매진                          "
                 android:textStyle="bold"/>
         </LinearLayout>
 
@@ -181,7 +181,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="              9시 40분                                          고속버스                                        1시간 10분                                          10               >           "
+                android:text="           9시 40분                                          고속버스                                     1시간 10분                                          10               >           "
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -201,10 +201,31 @@
                 android:textSize="15sp"
                 android:text="             10시 00분                                          일반버스                                        1시간 30분                                          14               >          "
                 android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <Button
+                android:id="@+id/b_cancel_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:text="뒤로 가기"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="40sp"
+                android:autoSizeStepGranularity="2sp"/>
+
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
-
-
-
-
+</LinearLayout>

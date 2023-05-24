@@ -7,98 +7,92 @@
     android:orientation="vertical"
     tools:context=".Kiosk_21">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.2"
         android:background="@drawable/table_border">
 
-
-        <EditText
-            android:id="@+id/editTextTextMultiLine2"
-            android:layout_width="404dp"
-            android:layout_height="39dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            tools:layout_editor_absoluteX="362dp"
-            tools:layout_editor_absoluteY="204dp" />
-
         <TextView
-            android:id="@+id/textView35"
-            android:layout_width="138dp"
-            android:layout_height="79dp"
-            android:text="목포"
+            android:id="@+id/textView6"
+            android:layout_width="140dp"
+            android:layout_height="75dp"
             android:gravity="center"
-            tools:layout_editor_absoluteX="64dp"
-            tools:layout_editor_absoluteY="35dp" />
+            android:text="목포"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.249" />
 
         <TextView
-            android:id="@+id/textView37"
-            android:layout_width="136dp"
-            android:layout_height="78dp"
+            android:id="@+id/textView5"
+            android:layout_width="140dp"
+            android:layout_height="75dp"
             android:gravity="center"
             android:text="도착지"
-            tools:layout_editor_absoluteX="66dp"
-            tools:layout_editor_absoluteY="184dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.66" />
 
         <TextView
-            android:id="@+id/textView24"
-            android:layout_width="659dp"
-            android:layout_height="90dp"
-            android:text="결제 금액                                                                                                                                     "
-            android:gravity = "center"
-            tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="307dp" />
-
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="125dp"
-            android:layout_height="65dp"
-            android:text="선택한 버스"
-            android:gravity="center"
-            tools:layout_editor_absoluteX="385dp"
-            tools:layout_editor_absoluteY="54dp" />
-
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="125dp"
-            android:layout_height="65dp"
+            android:id="@+id/textView12"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:text="선택한 버스"
-            tools:layout_editor_absoluteX="568dp"
-            tools:layout_editor_absoluteY="54dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.475"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.239" />
 
         <TextView
-            android:id="@+id/textView23"
-            android:layout_width="125dp"
-            android:layout_height="65dp"
-            android:text="좌석 번호"
+            android:id="@+id/textView14"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
             android:gravity="center"
-            tools:layout_editor_absoluteX="385dp"
-            tools:layout_editor_absoluteY="158dp" />
+            android:text="좌석번호"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.635" />
 
         <TextView
-            android:id="@+id/textView26"
-            android:layout_width="125dp"
-            android:layout_height="65dp"
+            android:id="@+id/textView16"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
             android:gravity="center"
-            android:text="좌석 번호"
-            tools:layout_editor_absoluteX="568dp"
-            tools:layout_editor_absoluteY="158dp" />
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.768"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.239" />
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
-            android:layout_width="404dp"
-            android:layout_height="39dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            tools:layout_editor_absoluteX="362dp"
-            tools:layout_editor_absoluteY="88dp" />
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.768"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.635" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"

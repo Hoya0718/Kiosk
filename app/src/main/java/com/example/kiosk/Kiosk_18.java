@@ -38,6 +38,7 @@ public class Kiosk_18 extends AppCompatActivity {
     private Button soldout1_btn;
     private Button soldout2_btn;
     private Button soldout3_btn;
+    private Button b_cancel_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,7 @@ public class Kiosk_18 extends AppCompatActivity {
         soldout1_btn = findViewById(R.id.soldout1_btn);
         soldout2_btn = findViewById(R.id.soldout2_btn);
         soldout3_btn = findViewById(R.id.soldout3_btn);
+        b_cancel_btn = findViewById(R.id.b_cancel_btn);
 
         textView17.setTextSize(text_size.getId());
         textView36.setTextSize(text_size.getId());
@@ -77,6 +79,7 @@ public class Kiosk_18 extends AppCompatActivity {
         soldout1_btn.setTextSize(text_size.getId());
         soldout2_btn.setTextSize(text_size.getId());
         soldout3_btn.setTextSize(text_size.getId());
+        b_cancel_btn.setTextSize(text_size.getId());
 
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -168,6 +171,15 @@ public class Kiosk_18 extends AppCompatActivity {
                                 tts.shutdown();
                                 startActivity(intent);
                             }
+                        }
+                    });
+
+                    b_cancel_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_18.this, Kiosk_16.class);
+                            tts.shutdown();
+                            startActivity(intent);
                         }
                     });
                 }

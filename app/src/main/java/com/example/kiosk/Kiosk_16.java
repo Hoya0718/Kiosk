@@ -182,7 +182,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
 
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_16.this, Kiosk_17.class);
+                            Intent intent = new Intent(Kiosk_16.this, Kiosk_18.class);
                             tts.shutdown();
                             startActivity(intent);
                         }

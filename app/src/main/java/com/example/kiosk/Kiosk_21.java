@@ -23,7 +23,7 @@ public class Kiosk_21 extends AppCompatActivity {
     private String price = "표 가격";
     private String seat = "좌석 번호";
 
-    private TextView textView24, textView25, textView26, textView37;
+    private TextView textView5, textView6, textView12, textView14, textView16, textView20;
     private TextToSpeech tts;
     private int currentVolume;
     private AudioManager audioManager;
@@ -46,27 +46,33 @@ public class Kiosk_21 extends AppCompatActivity {
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
 
-        textView24 = findViewById(R.id.textView24);
-        textView25 = findViewById(R.id.textView25);
-        textView26 = findViewById(R.id.textView26);
-        textView37 = findViewById(R.id.textView37);
+        textView5 = findViewById(R.id.textView5);
+        textView6 = findViewById(R.id.textView6);
+        textView12 = findViewById(R.id.textView12);
+        textView14 = findViewById(R.id.textView14);
+        textView16 = findViewById(R.id.textView16);
+        textView20 = findViewById(R.id.textView20);
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
         b_payment_btn = findViewById(R.id.b_payment_btn);
 
-        textView24.setTextSize(text_size.getId());
-        textView25.setTextSize(text_size.getId());
-        textView26.setTextSize(text_size.getId());
-        textView37.setTextSize(text_size.getId());
+        textView5.setTextSize(text_size.getId());
+        textView6.setTextSize(text_size.getId());
+        textView12.setTextSize(text_size.getId());
+        textView14.setTextSize(text_size.getId());
+        textView16.setTextSize(text_size.getId());
+        textView20.setTextSize(text_size.getId());
         b_cancel_btn.setTextSize(text_size.getId());
         b_payment_btn.setTextSize(text_size.getId());
 
         Intent intent = getIntent();
 
-        String text = intent.getStringExtra("text");
+        String destination = intent.getStringExtra("desnination");
+        String bus = intent.getStringExtra("bus");
+        String seat = intent.getStringExtra("seat");
 
-        textView24.setText(text);
-        textView25.setText(text);
-        textView26.setText(text);
+        textView5.setText(destination);
+        textView16.setText(bus);
+        textView20.setText(seat);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

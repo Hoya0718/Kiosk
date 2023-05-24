@@ -213,7 +213,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goto_Kiosk_H_Main"
+            android:onClick="goto_Kiosk_Main"
             android:text="홈"
             android:textSize="@dimen/font_size_medium" />
 
@@ -222,7 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goto_Kiosk_R_H_R"
+            android:onClick="goto_Back"
             android:text="뒤로가기"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>

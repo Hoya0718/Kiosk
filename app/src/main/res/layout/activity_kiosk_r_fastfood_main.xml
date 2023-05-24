@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kiosk_R_Fastfood_Main" >
+
+    <Button
+        android:id="@+id/store_Btn"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="1"
+        android:onClick="goto_Kiosk_R_F_M_B"
+        android:text="@string/store"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/takeout_Btn"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="1"
+        android:onClick="goto_Kiosk_R_F_M_B"
+        android:text="@string/takeout"
+        android:textSize="18sp" />
+</LinearLayout>

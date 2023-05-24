@@ -29,7 +29,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:onClick="goto_Kiosk_R_Fastfood"
+            android:onClick="goto_Kiosk_R_F_M"
             android:text="패스트푸드"
             android:textSize="18sp" />
 

@@ -102,7 +102,7 @@ public class Kiosk_26_2 extends AppCompatActivity {
 
     public void goto_kiosk_27(View v) {
 
-        Intent goto_kiosk_27 = new Intent(this,Kiosk_27.class);
+        Intent goto_kiosk_27 = new Intent(getApplicationContext(),Kiosk_27.class);
         switch (v.getId()) {
             case R.id.btn_1:
                 tts.shutdown();
@@ -154,6 +154,18 @@ public class Kiosk_26_2 extends AppCompatActivity {
                 startActivity(goto_kiosk_27);
                 break;
         }
+    }
+
+    public void goto_Kiosk_H_M(View v) {
+        tts.shutdown();
+        Intent goto_Kiosk_H_M = new Intent(getApplicationContext(), Kiosk_25.class);
+        startActivity(goto_Kiosk_H_M);
+    }
+
+    public void goto_back(View v) {
+        tts.shutdown();
+        Intent goto_back = new Intent(getApplicationContext(), Kiosk_26.class);
+        startActivity(goto_back);
     }
     protected void onDestroy() {
         if(tts != null) {

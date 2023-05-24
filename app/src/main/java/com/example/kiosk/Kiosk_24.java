@@ -93,6 +93,12 @@ public class Kiosk_24 extends AppCompatActivity {
         startActivity(goto_kiosk_25);
     }
 
+    public void goto_Kiosk_Main(View v){
+        tts.shutdown();
+        Intent goto_Kiosk_Main = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(goto_Kiosk_Main);
+    }
+
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;

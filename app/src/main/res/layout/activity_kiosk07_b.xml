@@ -98,139 +98,150 @@
 
         </LinearLayout>
 
-        <TableLayout
+        <!--1-->
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/b1955"
+                <LinearLayout
+                    android:id="@+id/b1955_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/b1955" />
 
                     <TextView
+                        android:id="@+id/b1955_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/b1955"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/b1955" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩6,400"
-                        android:gravity="center"/>
-                </TableLayout>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="₩6,400" />
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/batodi"
+                <LinearLayout
+                    android:id="@+id/batodi_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/batodi" />
 
                     <TextView
+                        android:id="@+id/batodi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/batodi"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/batodi" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩5,800"
-                        android:gravity="center"/>
-                </TableLayout>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="₩5,800" />
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/bigmc"
+                <LinearLayout
+                    android:id="@+id/bigmc_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:onClick="popup_kiosk_08_1"
+                    android:layout_weight="1"
                     android:background="@drawable/table_border"
+                    android:onClick="popup_kiosk_08_1"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/bigmc" />
 
                     <TextView
                         android:id="@+id/bigmc_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/big_mc"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/big_mc" />
 
                     <TextView
                         android:id="@+id/bigmc_price"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩5,200"
-                        android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="₩5,200" />
+                </LinearLayout>
+            </LinearLayout>
 
-            <TableRow
+            <!--2-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/mcchi"
+                <LinearLayout
+                    android:id="@+id/mcchi_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -246,6 +257,7 @@
                         app:srcCompat="@drawable/mcchi" />
 
                     <TextView
+                        android:id="@+id/mcchi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -262,10 +274,11 @@
                         android:layout_margin="5dp"
                         android:text="₩3,500"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/mccri"
+                <LinearLayout
+                    android:id="@+id/mccri_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -281,6 +294,7 @@
                         app:srcCompat="@drawable/mccri" />
 
                     <TextView
+                        android:id="@+id/mccri_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -297,10 +311,11 @@
                         android:layout_margin="5dp"
                         android:text="₩5,900"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/quater"
+                <LinearLayout
+                    android:id="@+id/quater_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -316,6 +331,7 @@
                         app:srcCompat="@drawable/quater" />
 
                     <TextView
+                        android:id="@+id/quater_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -332,16 +348,19 @@
                         android:layout_margin="5dp"
                         android:text="₩5,500"
                         android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
+                </LinearLayout>
+            </LinearLayout>
 
-            <TableRow
+            <!--3-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/sanhi"
+                <LinearLayout
+                    android:id="@+id/sanhi_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -357,6 +376,7 @@
                         app:srcCompat="@drawable/sanhi" />
 
                     <TextView
+                        android:id="@+id/sanhi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -375,10 +395,11 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩5,200"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/susu"
+                <LinearLayout
+                    android:id="@+id/susu_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -394,6 +415,7 @@
                         app:srcCompat="@drawable/susu" />
 
                     <TextView
+                        android:id="@+id/susu_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -412,10 +434,11 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩4,700"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/subi"
+                <LinearLayout
+                    android:id="@+id/subi_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -431,6 +454,7 @@
                         app:srcCompat="@drawable/subi" />
 
                     <TextView
+                        android:id="@+id/subi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -449,16 +473,19 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩5,800"
                         android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
+                </LinearLayout>
+            </LinearLayout>
 
-            <TableRow
+            <!--4-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/bulgogi"
+                <LinearLayout
+                    android:id="@+id/bulgogi_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -474,6 +501,7 @@
                         app:srcCompat="@drawable/bulgogi" />
 
                     <TextView
+                        android:id="@+id/bulgogi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -492,10 +520,11 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩2,300"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/cheeze"
+                <LinearLayout
+                    android:id="@+id/cheeze_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -511,6 +540,7 @@
                         app:srcCompat="@drawable/cheeze" />
 
                     <TextView
+                        android:id="@+id/cheeze_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -527,12 +557,13 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="2,700"
+                        android:text="₩2,700"
                         android:gravity="center"/>
-                </TableLayout>
+                </LinearLayout>
 
-                <TableLayout
-                    android:id="@+id/ham"
+                <LinearLayout
+                    android:id="@+id/ham_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -548,6 +579,7 @@
                         app:srcCompat="@drawable/ham" />
 
                     <TextView
+                        android:id="@+id/ham_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -566,10 +598,9 @@
                         android:layout_marginBottom="5dp"
                         android:text="₩2,500"
                         android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
-        </TableLayout>
-
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -601,7 +632,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:onClick="goto_kiosk_08_7"
             android:text="@string/order_history"
             android:textSize="18sp" />
 
@@ -626,7 +656,6 @@
             android:layout_width="160dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:onClick="help_tts"
             android:text="@string/help_features"
             android:textSize="18sp" />
     </LinearLayout>

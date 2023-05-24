@@ -86,7 +86,7 @@
                         android:textSize="10dp" />
 
                     <ImageView
-                        android:id="@+id/burger"
+                        android:id="@+id/burger_img"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
@@ -94,7 +94,7 @@
                         app:srcCompat="@drawable/bigmc" />
 
                     <TextView
-                        android:id="@+id/tot_text"
+                        android:id="@+id/burger_text"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1.4"
@@ -103,7 +103,6 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/textView12"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.3"
@@ -112,7 +111,7 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/size_text"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
@@ -121,7 +120,7 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/kcal_text"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
@@ -130,7 +129,6 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/textView44"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
@@ -172,7 +170,6 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView9"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.4"
@@ -181,7 +178,7 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/price_text"
+                        android:id="@+id/total_text"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -283,7 +280,6 @@
             android:layout_width="160dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:onClick="help_tts"
             android:text="@string/help_features"
             android:textSize="18sp" />
     </LinearLayout>

@@ -159,6 +159,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:text='@null'
+                android:visibility="invisible"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
@@ -171,6 +172,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:text="@null"
+                android:visibility="invisible"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 

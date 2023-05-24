@@ -19,7 +19,9 @@ import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -115,35 +117,24 @@ public class Kiosk_7_b extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_06 = new Intent(getApplicationContext(),Kiosk_6.class);
         startActivity(goto_kiosk_06);
-        finish();
     }
 
     public void goto_kiosk_07_s(View v){
         tts.shutdown();
         Intent goto_kiosk_07_s = new Intent(getApplicationContext(), Kiosk_7_s.class);
         startActivity(goto_kiosk_07_s);
-        finish();
     }
 
     public void goto_kiosk_07_d(View v){
         tts.shutdown();
         Intent goto_kiosk_07_d = new Intent(getApplicationContext(), Kiosk_7_d.class);
         startActivity(goto_kiosk_07_d);
-        finish();
     }
 
     public void popup_kiosk_08_1(View view) {
         tts.shutdown();
         Intent popup_kiosk_08_1 = new Intent(getApplicationContext(), Kiosk_8_1.class);
         startActivity(popup_kiosk_08_1);
-        finish();
-    }
-
-    public void popup_kiosk_08_7(View view) {
-        tts.shutdown();
-        Intent popup_kiosk_08_7 = new Intent(getApplicationContext(), Kiosk_8_7.class);
-        startActivity(popup_kiosk_08_7);
-        finish();
     }
 
     private void speakText(String text) {

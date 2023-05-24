@@ -101,12 +101,23 @@ public class Kiosk_5 extends AppCompatActivity {
         Intent goto_kiosk_25 = new Intent(getApplicationContext(),Kiosk_25.class);
         startActivity(goto_kiosk_25);
     }
+    public void goto_Kiosk_Main(View v){
+        tts.shutdown();
+        Intent goto_Kiosk_Main = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(goto_Kiosk_Main);
+    }
+    public void goto_Back(View v){
+        tts.shutdown();
+        Intent goto_Back = new Intent(getApplicationContext(),Kiosk_4.class);
+        startActivity(goto_Back);
+    }
 
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        //
     }
 
     protected void onDestroy() {

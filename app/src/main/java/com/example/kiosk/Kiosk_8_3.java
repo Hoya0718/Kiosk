@@ -25,8 +25,8 @@ public class Kiosk_8_3 extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
-    private TextView french_text;
-    private TextView french_price;
+    private TextView huri_text;
+    private TextView huri_price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +41,8 @@ public class Kiosk_8_3 extends AppCompatActivity {
 
         cancel.setTextSize(text_size.getId());
 
-        french_text = findViewById(R.id.french_text);
-        french_price = findViewById(R.id.french_price);
+        huri_text = findViewById(R.id.huri_text);
+        huri_price = findViewById(R.id.huri_price);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -67,12 +67,12 @@ public class Kiosk_8_3 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        french_text.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) french_text.getBackground();
+                        huri_text.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) huri_text.getBackground();
                         anim.start();
 
-                        french_price.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) french_price.getBackground();
+                        huri_price.setBackgroundResource(R.drawable.anim_list);
+                        anim = (AnimationDrawable) huri_price.getBackground();
                         anim.start();
                     }
                 }, 2000);
@@ -84,14 +84,12 @@ public class Kiosk_8_3 extends AppCompatActivity {
         tts.shutdown();
         Intent popup_kiosk_08_4 = new Intent(getApplicationContext(), Kiosk_8_4.class);
         startActivity(popup_kiosk_08_4);
-        finish();
     }
 
     public void popup_kiosk_08_2(View view) {
         tts.shutdown();
         Intent popup_kiosk_08_2 = new Intent(getApplicationContext(), Kiosk_8_2.class);
         startActivity(popup_kiosk_08_2);
-        finish();
     }
 
     private void speakText(String text) {

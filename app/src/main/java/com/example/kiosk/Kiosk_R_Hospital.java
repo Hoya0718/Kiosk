@@ -17,17 +17,17 @@ public class Kiosk_R_Hospital extends AppCompatActivity {
     public void goto_Kiosk_R_H_Receipt(View v){
         Intent goto_Kiosk_R_H_Receipt = new Intent(getApplicationContext(), Kiosk_R_Hospital_Receipt.class);
         startActivity(goto_Kiosk_R_H_Receipt);
-        finish();
+
     }
 
     public void goto_Kiosk_R_H_Acceptance(View v){
         Intent goto_Kiosk_R_H_Acceptance = new Intent(getApplicationContext(), Kiosk_R_Hospital_Acceptance.class);
         startActivity(goto_Kiosk_R_H_Acceptance);
-        finish();
+
     }
     public void goto_Back(View v){
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Part.class);
         startActivity(goto_Back);
-        finish();
+
     }
 }

@@ -76,13 +76,11 @@ public class MainActivity extends AppCompatActivity {
         tts.shutdown();
         Intent intent = new Intent(getApplicationContext(),Kiosk_2.class);
         startActivity(intent);
-
     }
     public void goto_Kiosk_R_Part(View v){
         tts.shutdown();
         Intent goto_Kiosk_R_Part = new Intent(getApplicationContext(), Kiosk_R_Part.class);
         startActivity(goto_Kiosk_R_Part);
-
     }
     public void change_to_korean(View v) {
 

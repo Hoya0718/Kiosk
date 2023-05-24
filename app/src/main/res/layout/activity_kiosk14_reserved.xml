@@ -27,13 +27,20 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
+        <CheckBox
+            android:id="@+id/person_Information"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:text="개인정보 수집 동의" />
+
         <TextView
             android:id="@+id/bus_birthdate"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.7"
-            android:text="생년월일(99-12-31)"
+            android:layout_weight="0.3"
             android:gravity="left"
+            android:text="주민등록번호(000000-0000000)"
             android:textSize="@dimen/font_size_medium" />
 
         <TextView
@@ -45,23 +52,7 @@
             android:text=""
             android:textSize="@dimen/font_size_medium" />
 
-        <TextView
-            android:id="@+id/phone"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7"
-            android:text="휴대폰 번호(010-1234-5678)"
-            android:textSize="@dimen/font_size_medium" />
 
-        <TextView
-            android:id="@+id/phonenumber"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.9"
-            android:gravity="center"
-            android:hint=""
-            android:maxLength="14"
-            android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 
     <TableLayout
@@ -75,7 +66,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/num_1"
+                android:id="@+id/num1_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -87,7 +78,7 @@
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
-                android:id="@+id/num_2"
+                android:id="@+id/num2_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -99,7 +90,7 @@
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
-                android:id="@+id/num_3"
+                android:id="@+id/num3_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -117,7 +108,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/num_4"
+                android:id="@+id/num4_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -129,7 +120,7 @@
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
-                android:id="@+id/num_5"
+                android:id="@+id/num5_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -141,7 +132,7 @@
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
-                android:id="@+id/num_6"
+                android:id="@+id/num6_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -159,7 +150,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/num_7"
+                android:id="@+id/num7_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -171,7 +162,7 @@
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
-                android:id="@+id/num_8"
+                android:id="@+id/num8_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -183,7 +174,7 @@
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
-                android:id="@+id/num_9"
+                android:id="@+id/num9_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -201,7 +192,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/CL"
+                android:id="@+id/modify_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -213,7 +204,7 @@
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
-                android:id="@+id/num_0"
+                android:id="@+id/num0_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
@@ -225,14 +216,14 @@
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
-                android:id="@+id/Check_2"
+                android:id="@+id/comfirm_btn"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="goto_kiosk_26_2"
+                android:onClick="goto_kiosk_15"
                 android:text="@string/check"
                 android:textSize="@dimen/font_size_medium" />
         </TableRow>

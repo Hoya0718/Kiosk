@@ -106,6 +106,12 @@
             android:name=".Kiosk_15"
             android:exported="true" />
         <activity
+            android:name=".Kiosk_14_refund"
+            android:exported="true"/>
+        <activity
+            android:name=".Kiosk_14_reserved"
+            android:exported="true"/>
+        <activity
             android:name=".Kiosk_14"
             android:exported="true" />
         <activity

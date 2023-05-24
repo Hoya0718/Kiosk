@@ -12,8 +12,10 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
         app:queryHint = "목적지를 입력하세요"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:visibility="visible"/>
 
     <ListView
         android:id="@+id/listView"
@@ -265,7 +267,7 @@
             <Button
                 android:id="@+id/central_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="센트럴시티"
                 android:textSize="15sp"
@@ -274,7 +276,7 @@
             <Button
                 android:id="@+id/eastseoul_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="동서울"
                 android:textSize="15sp"
@@ -283,7 +285,7 @@
             <Button
                 android:id="@+id/incheon_bus_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="인천"
                 android:textSize="15sp"
@@ -292,7 +294,7 @@
             <Button
                 android:id="@+id/incheonairport_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="인천공항"
                 android:textSize="15sp"
@@ -301,7 +303,7 @@
             <Button
                 android:id="@+id/sungnam_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="성남"
                 android:textSize="15sp"
@@ -310,7 +312,7 @@
             <Button
                 android:id="@+id/suwon_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="수원"
                 android:textSize="15sp"
@@ -319,7 +321,7 @@
             <Button
                 android:id="@+id/ansan_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="안산"
                 android:textSize="15sp"
@@ -328,7 +330,7 @@
             <Button
                 android:id="@+id/yongin_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="용인"
                 android:textSize="15sp"
@@ -337,7 +339,7 @@
             <Button
                 android:id="@+id/gangneung_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="강릉"
                 android:textSize="15sp"
@@ -346,7 +348,7 @@
             <Button
                 android:id="@+id/chunchun_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="춘천"
                 android:textSize="15sp"
@@ -355,7 +357,7 @@
             <Button
                 android:id="@+id/sokcho_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="속초"
                 android:textSize="15sp"
@@ -364,7 +366,7 @@
             <Button
                 android:id="@+id/daejun_bus_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="대전"
                 android:textSize="15sp"
@@ -373,7 +375,7 @@
             <Button
                 android:id="@+id/sejong_bus_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="세종"
                 android:textSize="15sp"
@@ -382,7 +384,7 @@
             <Button
                 android:id="@+id/nonsan_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130sp"
                 android:layout_weight="1"
                 android:text="논산"
                 android:textSize="15sp"

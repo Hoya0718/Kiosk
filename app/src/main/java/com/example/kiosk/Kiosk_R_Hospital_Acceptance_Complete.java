@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Kiosk_R_Hospital_Acceptance_Complete extends AppCompatActivity {
@@ -21,6 +22,9 @@ public class Kiosk_R_Hospital_Acceptance_Complete extends AppCompatActivity {
     private TextView pnpn;
     private myapp pn;
 
+    long now = System.currentTimeMillis();
+
+    Date date = new Date(now);
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +36,9 @@ public class Kiosk_R_Hospital_Acceptance_Complete extends AppCompatActivity {
         department = (findViewById(R.id.department_2));
         check_Money = (findViewById(R.id.check_Money));
         treatment_day = (findViewById(R.id.treatment_day));
-
         department.setText(pn.getDepartment());
         pnpn.setText(pn.getGet_pn_2().substring(0,6));
-        String formattedTime = sdf.format(new Date(pn.getDay()));
+        String formattedTime = sdf.format(date);
         treatment_day.setText(formattedTime);
 
 

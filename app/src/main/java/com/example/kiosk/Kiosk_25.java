@@ -43,10 +43,10 @@ public class Kiosk_25 extends AppCompatActivity {
             if (status != TextToSpeech.ERROR) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("병원 접수를 하기위해 보이는 창입니다. 접수하기를 눌러 병원접수를 할 수 있어요. 접수를 해볼까요?");
+                    speakText("병원 접수와 수납을 위해 보이는 창입니다. 접수하기나 수납하기를 눌러 접수 수납을 할 수 있어요. 접수나 수납을 해볼까요?");
                 } else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This is the window for making a medical intake. You can make an intake by tapping Submit. Let's do it.");
+                    speakText("This is the window you will see for reception and filing. You can make an intake or a filing by pressing Make Intake or Make Filing. Let's make an intake or filing.");
                 }
             }
         }
@@ -56,19 +56,22 @@ public class Kiosk_25 extends AppCompatActivity {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("접수하기는 여기에 있어요. 접수하기를 눌러보세요.");
+                    speakText("접수하기는 여기에 있고 수납하기는 여기에 있어요. 접수하기나 수납하기를 눌러보세요.");
                 else
-                    speakText("submission is here");
+                    speakText("Receive is here and File is here. Tap Receive or File to get started");
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         receipt.setBackgroundResource(R.drawable.anim_list);
                         anim = (AnimationDrawable) receipt.getBackground();
                         anim.start();
+                        acceptance.setBackgroundResource(R.drawable.anim_list2);
+                        anim = (AnimationDrawable) acceptance.getBackground();
+                        anim.start();
                     }
                 }, 3000);
             }
-        }, 10000);
+        }, 15000);
     }
 
     private void speakText(String text) {
@@ -85,8 +88,14 @@ public class Kiosk_25 extends AppCompatActivity {
     }
     public void goto_Back(View v){
         tts.shutdown();
-        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_24.class);
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_5.class);
         startActivity(goto_Back);
+    }
+
+    public void goto_kiosk_29(View v){
+        tts.shutdown();
+        Intent goto_kiosk_29 = new Intent(getApplicationContext(), Kiosk_29.class);
+        startActivity(goto_kiosk_29);
     }
 
     protected void onDestroy() {

@@ -96,7 +96,7 @@ public class Kiosk_27 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("접수가 완료되었습니다. 접수증 출력을 눌러주세요. 실제 병원에서는 아래에 접수증이 출력이될거에요.");
+                        speakText("접수완료를 보여주는 창입니다. 접수증 출력을 눌러주세요. 실제 병원에서는 아래에 접수증이 출력이될거에요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("The registration has been completed, please click Print Receipt. In a real hospital, you will see a receipt below.");
@@ -130,10 +130,10 @@ public class Kiosk_27 extends AppCompatActivity {
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
-    public void goto_kiosk_28(View v) {
+    public void goto_kiosk_25(View v) {
         tts.shutdown();
-        Intent goto_kiosk_28 = new Intent(getApplicationContext(), Kiosk_28.class);
-        startActivity(goto_kiosk_28);
+        Intent goto_kiosk_25 = new Intent(getApplicationContext(), Kiosk_25.class);
+        startActivity(goto_kiosk_25);
     }
 
     public void goto_Kiosk_H_M(View v) {
@@ -142,10 +142,10 @@ public class Kiosk_27 extends AppCompatActivity {
         startActivity(goto_Kiosk_H_M);
     }
 
-    public void goto_back(View v) {
+    public void goto_Back(View v) {
         tts.shutdown();
-        Intent goto_back = new Intent(getApplicationContext(), Kiosk_26.class);
-        startActivity(goto_back);
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_26_2.class);
+        startActivity(goto_Back);
     }
 
     protected void onDestroy() {

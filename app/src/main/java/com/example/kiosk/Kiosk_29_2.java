@@ -30,6 +30,10 @@ public class Kiosk_29_2 extends AppCompatActivity {
     private myapp text_size;
     private CheckBox check_Money;
 
+    long now = System.currentTimeMillis();
+
+    Date date = new Date(now);
+
     private TextView t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13;
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
     @Override
@@ -77,10 +81,11 @@ public class Kiosk_29_2 extends AppCompatActivity {
 
         department_2.setText(pn.getDepartment());
         pnpn.setText(pn.getGet_pn_2().substring(0,6));
-        String formattedTime = sdf.format(new Date(pn.getDay()));
-        treatment_day.setText(formattedTime);
         check_Money = findViewById(R.id.check_Money);
         sound = (myapp) getApplication();
+
+        String formattedTime = sdf.format(date);
+        treatment_day.setText(formattedTime);
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
@@ -154,10 +159,10 @@ public class Kiosk_29_2 extends AppCompatActivity {
         startActivity(goto_Kiosk_H_M);
     }
 
-    public void goto_back(View v) {
+    public void goto_Back(View v) {
         tts.shutdown();
-        Intent goto_back = new Intent(getApplicationContext(), Kiosk_29.class);
-        startActivity(goto_back);
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_29.class);
+        startActivity(goto_Back);
 
     }
 

@@ -250,10 +250,10 @@ public class Kiosk_29 extends AppCompatActivity {
 
     }
 
-    public void goto_back(View v) {
+    public void goto_Back(View v) {
         tts.shutdown();
-        Intent goto_back = new Intent(getApplicationContext(), Kiosk_28.class);
-        startActivity(goto_back);
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_25.class);
+        startActivity(goto_Back);
 
     }
     protected void onDestroy() {

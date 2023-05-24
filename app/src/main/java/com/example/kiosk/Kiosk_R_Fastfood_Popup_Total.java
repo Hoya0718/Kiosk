@@ -20,6 +20,7 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     private int side;
     private int drink;
     private int total;
+    private int count;
     private String burgerName;
     private String burgerSize;
     private String sideName;
@@ -29,6 +30,12 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     private TextView size_text;
     private TextView total_text;
 
+    private TextView set_burger_text;
+    private TextView set_side_text;
+    private TextView set_drink_text;
+
+    private TextView count_text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +44,12 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         burger_text = findViewById(R.id.burger_text);
         size_text = findViewById(R.id.size_text);
         total_text = findViewById(R.id.total_text);
+
+        set_burger_text = findViewById(R.id.set_burger_text);
+        set_side_text = findViewById(R.id.set_side_text);
+        set_drink_text = findViewById(R.id.set_drink_text);
+
+        count_text = findViewById(R.id.count_text);
 
         Intent intent = getIntent();
         if (intent != null) {
@@ -50,13 +63,36 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
             drinkName = intent.getStringExtra("drinkName");
             if (burgerName != null) {
                 burger_text.setText(burgerName);
+                set_burger_text.setText(burgerName);
             }
             if (burgerSize != null) {
                 size_text.setText(burgerSize);
             }
+            if (sideName != null) {
+                set_side_text.setText(sideName);
+            }
+            if (drinkName != null) {
+                set_drink_text.setText(drinkName);
+            }
             total = burger + side + drink;
             total_text.setText(String.valueOf(total));
         }
+
+        count = 1;
+    }
+
+    public void count_minus(View view) {
+        if (count>1) {
+            count--;
+            count_text.setText(String.valueOf(count));
+            total_text.setText(String.valueOf(total*count));
+        }
+    }
+
+    public void count_plus(View view) {
+        count++;
+        count_text.setText(String.valueOf(count));
+        total_text.setText(String.valueOf(total*count));
     }
 
     public void goto_Kiosk_R_F_P_D(View view) {
@@ -72,6 +108,7 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
 
     public void goto_Kiosk_R_F_M_B(View view) {
         Intent goto_Kiosk_R_F_M_B = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
+        total *= count;
         value += total;
         goto_Kiosk_R_F_M_B.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_B);

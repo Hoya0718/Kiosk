@@ -27,8 +27,16 @@ public class Kiosk_R_Fastfood_Popup_Reco extends AppCompatActivity {
         }
     }
 
-    public void goto_Kiosk_R_F_O_H(View v){
+    public void goto_Kiosk_R_F_O_H(View view){
         Intent goto_Kiosk_R_F_O_H = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Order_Hist.class);
+        switch (view.getId()) {
+            case R.id.snackshu_lay:
+                value+=2300;
+                break;
+            case R.id.mcnurget_lay:
+                value+=2900;
+                break;
+        }
         goto_Kiosk_R_F_O_H.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_O_H);
     }

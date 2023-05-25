@@ -152,7 +152,7 @@
 
                 android:layout_weight="1"
                 android:gravity="top"
-                android:text="                   " />
+                android:text="@null" />
 
             <TextView
                 android:id="@+id/textView76"

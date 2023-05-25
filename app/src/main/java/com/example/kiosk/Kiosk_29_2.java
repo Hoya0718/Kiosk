@@ -7,6 +7,8 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -100,11 +102,11 @@ public class Kiosk_29_2 extends AppCompatActivity {
             }
         });
 
-        handler.postDelayed(new Runnable() {
+        /*handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("수납여부는 여기에있고 지불하기는 여기에 있어요. 지불하기를 눌러보세요.");
+                    speakText("수납여부는 주황색으로 표시했고 지불하기는 초록색으로 표시했어요. 수납여부를 누르시고 지불하기를 눌러보세요.");
                 else
                     speakText("The checkout is here and the payment is here.e");
                 handler.postDelayed(new Runnable() {
@@ -119,14 +121,57 @@ public class Kiosk_29_2 extends AppCompatActivity {
                     }
                 }, 4000);
             }
-        }, 17000);
+        }, 17000);*/
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("수납여부는 주황색으로 표시했고 지불하기는 초록색으로 표시했어요. 수납여부를 누르시고 지불하기를 눌러보세요.");
+                                else
+                                    speakText("We've colored Acceptable in orange and Pay in green. Tap Acceptable and then Pay.");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            check_Money.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable)check_Money.getBackground();
+                            anim.start();
+                            pay_for_.setBackgroundResource(R.drawable.anim_list2);
+                            anim = (AnimationDrawable)pay_for_.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
 
     }
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,"delaySpeak");
     }
 
     public void goto_kiosk_30(View v){

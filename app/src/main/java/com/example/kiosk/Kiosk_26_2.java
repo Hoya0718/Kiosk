@@ -7,6 +7,8 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -73,7 +75,7 @@ public class Kiosk_26_2 extends AppCompatActivity {
             }
         });
 
-    handler.postDelayed(new Runnable() {
+    /*handler.postDelayed(new Runnable() {
         @Override
         public void run() {
             if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
@@ -91,13 +93,54 @@ public class Kiosk_26_2 extends AppCompatActivity {
                 }
             }, 3500);
         }
-    }, 12000);
+    }, 12000);*/
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("원하시는 진료과목이 없으시다면 정형외과를 눌러보세요.");
+                                else
+                                    speakText("If you don't see the specialty you're looking for, try Orthopedics.");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            btn_4.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable)btn_4.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
+
 }
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
 
     public void goto_kiosk_27(View v) {

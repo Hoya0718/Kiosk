@@ -1,16 +1,20 @@
 package com.example.kiosk;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.ByteArrayOutputStream;
 import java.util.Locale;
 
 public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
@@ -22,6 +26,9 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
     private String burgerName;
     private String burgerSize;
     private String sideName;
+    private String drinkName;
+    private byte[] burgerArray;
+    private byte[] sideArray;
 
     private TextView burger_text;
     private TextView size_text;
@@ -39,6 +46,21 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
     private TextView drinkhwan_text;
     private TextView milk_text;
     private TextView water_text;
+
+    private ImageView chistr_img;
+    private ImageView chijadu_img;
+    private ImageView drinkoran_img;
+    private ImageView shakestr_img;
+    private ImageView shakecho_img;
+    private ImageView shakeba_img;
+    private ImageView drinkcoca_img;
+    private ImageView drinkcoze_img;
+    private ImageView drinkspri_img;
+    private ImageView drinkhwan_img;
+    private ImageView milk_img;
+    private ImageView water_img;
+
+    private Bitmap drinkBitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,14 +84,32 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
         milk_text = findViewById(R.id.milk_text);
         water_text = findViewById(R.id.water_text);
 
+        chistr_img = findViewById(R.id.chistr_img);
+        chijadu_img = findViewById(R.id.chijadu_img);
+        drinkoran_img = findViewById(R.id.drinkoran_img);
+        shakestr_img = findViewById(R.id.shakestr_img);
+        shakecho_img = findViewById(R.id.shakecho_img);
+        shakeba_img = findViewById(R.id.shakeba_img);
+        drinkcoca_img = findViewById(R.id.drinkcoca_img);
+        drinkcoze_img = findViewById(R.id.drinkcoze_img);
+        drinkspri_img = findViewById(R.id.drinkspri_img);
+        drinkhwan_img = findViewById(R.id.drinkhwan_img);
+        milk_img = findViewById(R.id.milk_img);
+        water_img = findViewById(R.id.water_img);
+
         Intent intent = getIntent();
         if (intent != null) {
             value = intent.getIntExtra("value", 0);
-            burger = intent.getIntExtra("burger", 0);
+
             burgerName = intent.getStringExtra("burgerName");
+            burgerArray = intent.getByteArrayExtra("burgerImage");
+            burger = intent.getIntExtra("burger", 0);
             burgerSize = intent.getStringExtra("burgerSize");
+
             side = intent.getIntExtra("side", 0);
             sideName = intent.getStringExtra("sideName");
+            sideArray = intent.getByteArrayExtra("sideImage");
+
             if (burgerName != null) {
                 burger_text.setText(burgerName);
             }
@@ -87,94 +127,119 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
     public void goto_Kiosk_R_F_P_T(View view) {
         Intent goto_Kiosk_R_F_P_T = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Total.class);
         goto_Kiosk_R_F_P_T.putExtra("value", value);
+
         goto_Kiosk_R_F_P_T.putExtra("burger", burger);
         goto_Kiosk_R_F_P_T.putExtra("burgerName", burgerName);
+        goto_Kiosk_R_F_P_T.putExtra("burgerImage", burgerArray);
         goto_Kiosk_R_F_P_T.putExtra("burgerSize", burgerSize);
+
         goto_Kiosk_R_F_P_T.putExtra("side", side);
         goto_Kiosk_R_F_P_T.putExtra("sideName", sideName);
+        goto_Kiosk_R_F_P_T.putExtra("sideImage", sideArray);
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+
         switch (view.getId()) {
+
             case R.id.chistr_lay:
                 drink+=2000;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String chistr = chistr_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", chistr);
+                drinkName = chistr_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)chistr_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.chijadu_lay:
                 drink+=2000;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String chijadu = chijadu_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", chijadu);
+                drinkName = chijadu_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)chijadu_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.drinkoran_lay:
                 drink+=1600;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String drinkoran = drinkoran_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", drinkoran);
+                drinkName = drinkoran_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)drinkoran_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.shakestr_lay:
                 drink+=2800;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String shakestr = shakestr_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", shakestr);
+                drinkName = shakestr_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)shakestr_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.shakecho_lay:
                 drink+=2800;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String shakecho = shakecho_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", shakecho);
+                drinkName = shakecho_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)shakecho_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.shakeba_lay:
                 drink+=2800;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String shakeba = shakeba_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", shakeba);
+                drinkName = shakeba_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)shakeba_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.drinkcoca_lay:
                 drink+=1700;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String drinkcoca = drinkcoca_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", drinkcoca);
+                drinkName = drinkcoca_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)drinkcoca_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.drinkcoze_lay:
                 drink+=1700;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String drinkcoze = drinkcoze_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", drinkcoze);
+                drinkName = drinkcoze_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)drinkcoze_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.drinkspri_lay:
                 drink+=1700;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String drinkspri = drinkspri_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", drinkspri);
+                drinkName = drinkspri_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)drinkspri_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.drinkhwan_lay:
                 drink+=1700;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String drinkhwan = drinkhwan_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", drinkhwan);
+                drinkName = drinkhwan_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)drinkhwan_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.milk_lay:
                 drink+=1600;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String milk = milk_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", milk);
+                drinkName = milk_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)milk_img.getDrawable()).getBitmap();
                 break;
+
             case R.id.water_lay:
                 drink+=1300;
-                goto_Kiosk_R_F_P_T.putExtra("drink", drink);
-                String water = water_text.getText().toString();
-                goto_Kiosk_R_F_P_T.putExtra("drinkName", water);
+                drinkName = water_text.getText().toString();
+                drinkBitmap = ((BitmapDrawable)water_img.getDrawable()).getBitmap();
                 break;
+
         }
+
+//        float scale = (float) (1024/(float)drinkBitmap.getWidth());
+//        int image_w = (int) (drinkBitmap.getWidth() * scale);
+//        int image_h = (int) (drinkBitmap.getHeight() * scale);
+//        Bitmap drinkResize = Bitmap.createScaledBitmap(drinkBitmap, image_w, image_h, true);
+//        drinkResize.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+//        byte[] drinkArray = stream.toByteArray();
+//        goto_Kiosk_R_F_P_T.putExtra("drinkImage", drinkArray);
+
+        goto_Kiosk_R_F_P_T.putExtra("drink", drink);
+        goto_Kiosk_R_F_P_T.putExtra("drinkName", drinkName);
         startActivity(goto_Kiosk_R_F_P_T);
     }
 
     public void goto_Kiosk_R_F_P_Sd(View view) {
         Intent goto_Kiosk_R_F_P_Sd = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Side.class);
         goto_Kiosk_R_F_P_Sd.putExtra("value", value);
+
         goto_Kiosk_R_F_P_Sd.putExtra("burger", burger);
         goto_Kiosk_R_F_P_Sd.putExtra("burgerName", burgerName);
-        goto_Kiosk_R_F_P_Sd.putExtra("burgerName", burgerSize);
+        goto_Kiosk_R_F_P_Sd.putExtra("burgerImage", burgerArray);
+        goto_Kiosk_R_F_P_Sd.putExtra("burgerSize", burgerSize);
+
+        goto_Kiosk_R_F_P_Sd.putExtra("side", side);
+        goto_Kiosk_R_F_P_Sd.putExtra("burgerName", sideName);
+        goto_Kiosk_R_F_P_Sd.putExtra("burgerImage", sideArray);
         startActivity(goto_Kiosk_R_F_P_Sd);
     }
 }

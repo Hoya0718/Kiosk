@@ -18,6 +18,8 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
     private int value;
     private int burger;
     private String burgerName;
+    private String burgerSize;
+    private byte[] burgerArray;
 
     private TextView burger_text;
 
@@ -37,8 +39,11 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             value = intent.getIntExtra("value", 0);
+
             burger = intent.getIntExtra("burger", 0);
             burgerName = intent.getStringExtra("burgerName");
+            burgerArray = intent.getByteArrayExtra("burgerImage");
+
             if (burgerName != null) {
                 burger_text.setText(burgerName);
             }
@@ -48,26 +53,34 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
     public void goto_Kiosk_R_F_P_Sd(View view) {
         Intent goto_Kiosk_R_F_P_Sd = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Side.class);
         goto_Kiosk_R_F_P_Sd.putExtra("value", value);
+
+        switch (view.getId()) {
+
+            case R.id.set_Btn:
+                burgerSize = set_Btn.getText().toString();
+                break;
+
+            case R.id.lar_Btn:
+                burger+=700;
+                burgerSize = lar_Btn.getText().toString();
+                break;
+
+        }
+
         goto_Kiosk_R_F_P_Sd.putExtra("burger", burger);
         goto_Kiosk_R_F_P_Sd.putExtra("burgerName", burgerName);
-        switch (view.getId()) {
-            case R.id.set_Btn:
-                String setmenu = set_Btn.getText().toString();
-                goto_Kiosk_R_F_P_Sd.putExtra("burgerSize", setmenu);
-                break;
-            case R.id.lar_Btn:
-                String larmenu = lar_Btn.getText().toString();
-                goto_Kiosk_R_F_P_Sd.putExtra("burgerSize", larmenu);
-                break;
-        }
+        goto_Kiosk_R_F_P_Sd.putExtra("burgerImage", burgerArray);
+        goto_Kiosk_R_F_P_Sd.putExtra("burgerSize", burgerSize);
         startActivity(goto_Kiosk_R_F_P_Sd);
     }
 
     public void goto_Kiosk_R_F_P_St(View view) {
         Intent goto_Kiosk_R_F_P_St = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Set.class);
         goto_Kiosk_R_F_P_St.putExtra("value", value);
+
         goto_Kiosk_R_F_P_St.putExtra("burger", burger);
         goto_Kiosk_R_F_P_St.putExtra("burgerName", burgerName);
+        goto_Kiosk_R_F_P_St.putExtra("burgerImage", burgerArray);
         startActivity(goto_Kiosk_R_F_P_St);
     }
 }

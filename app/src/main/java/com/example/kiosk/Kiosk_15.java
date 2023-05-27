@@ -72,8 +72,8 @@ public class Kiosk_15 extends AppCompatActivity {
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("이 화면에서는 가고 싶은 곳을 선택할 수 있습니다." +
-                                "도착지 버튼을 눌러주세요" +
-                                "만약 처음 화면으로 돌아가고 싶으시면 처음 화면으로 돌아가기" +
+                                "가고 싶은 곳을 고르기 위해서 목적지 버튼을 눌러주세요." +
+                                "만약 처음 화면으로 돌아가고 싶으시면 화면 아래쪽에 있는 처음 화면으로 돌아가기" +
                                 "버튼을 눌러주세요.");
                     }
                     else {
@@ -139,17 +139,14 @@ public class Kiosk_15 extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("승차권 구매 버튼은 여기에 있어요.");
+                                    speakText("도착지를 선택할 수 있는 버튼은 여기 있습니다");
                                 else
-                                    speakText("Buy ticket button is Here");
+                                    speakText("The button to select your destination is here");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
                             destination_btn.setBackgroundResource(R.drawable.anim_list);
-                            b_homescreen_btn.setBackgroundResource(R.drawable.anim_list);
                             anim = (AnimationDrawable) destination_btn.getBackground();
-                            anim.start();
-                            anim = (AnimationDrawable) b_homescreen_btn.getBackground();
                             anim.start();
                         }
                     }, 2000);

@@ -319,4 +319,6 @@
     <string name="milk">우유</string>
     <string name="water">생수</string>
     <string name="aa">아</string>
+    <string name="selected_bus">선택한 버스</string>
+    <string name="seat_number">좌석번호</string>
 </resources>

@@ -9,6 +9,8 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -89,8 +91,9 @@ public class Kiosk_18 extends AppCompatActivity {
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("가고 싶은 곳을 고르셨나요?" +
-                                "그럼 이제 버스 종류, 출발 시간을 보고" +
-                                "타고 싶은 버스를 고르기 위해 좌석 선택 버튼을 눌러주세요.");
+                                "그럼 이제 버스 종류, 출발 시간을 확인하시고" +
+                                "타고 싶은 버스를 고르기 위해 좌석 선택 버튼을 눌러주세요." +
+                                "만약 목적지를 잘못 고르셨다면 뒤로가기 버튼을 눌러서 뒤로 돌아가실 수 있습니다.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -185,29 +188,54 @@ public class Kiosk_18 extends AppCompatActivity {
                 }
             }
         });
-        handler.postDelayed(new Runnable() {
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
             @Override
-            public void run() {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("좌석 선택 버튼은 여기에있어요.");
-                else
-                    speakText("The seat selection button is here");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        seat_selection1_btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) seat_selection1_btn.getBackground();
-                        anim.start();
-                        seat_selection2_btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) seat_selection2_btn.getBackground();
-                        anim.start();
-                        seat_selection3_btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) seat_selection3_btn.getBackground();
-                        anim.start();
-                    }
-                }, 2000);
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
             }
-        }, 11000);
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("승차권 구매 버튼을 눌러서 다음 단계로 갈 수 있습니다.");
+                                else
+                                    speakText("Buy ticket button is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            seat_selection1_btn.setBackgroundResource(R.drawable.anim_list);
+                            seat_selection2_btn.setBackgroundResource(R.drawable.anim_list);
+                            seat_selection3_btn.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) seat_selection1_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) seat_selection2_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) seat_selection3_btn.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
 
@@ -215,7 +243,7 @@ public class Kiosk_18 extends AppCompatActivity {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
     protected void onDestroy() {
         if(tts != null) {

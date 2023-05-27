@@ -19,6 +19,27 @@
         android:theme="@style/Theme.Kiosk"
         tools:targetApi="31">
         <activity
+            android:name=".Kiosk_R_Bus_SelectSeat"
+            android:exported="false"/>
+        <activity
+            android:name=".Kiosk_R_Bus_SelectDestination"
+            android:exported="false"/>
+        <activity
+            android:name=".Kiosk_R_Bus_SelectBustype"
+            android:exported="false"/>
+        <activity
+            android:name=".Kiosk_R_Bus_VerifyTicket"
+            android:exported="false"/>
+        <activity
+            android:name=".Kiosk_R_Bus_Congratulations"
+            android:exported="false"/>
+        <activity
+            android:name=".Kiosk_R_Bus_Main"
+            android:exported="false"/>
+        <activity
+            android:name=".Kiosk_R_Bus_Destination"
+            android:exported="false"/>
+        <activity
             android:name=".Kiosk_R_Fastfood_Popup_Total"
             android:exported="false" />
         <activity
@@ -124,7 +145,7 @@
             android:name=".Kiosk_23"
             android:exported="true" />
         <activity
-            android:name=".Kiosk_22"
+            android:name=".Kiosk_22_nouse"
             android:exported="true" />
         <activity
             android:name=".Kiosk_21"
@@ -139,7 +160,7 @@
             android:name=".Kiosk_18"
             android:exported="true" />
         <activity
-            android:name=".Kiosk_17"
+            android:name=".Kiosk_17_nouse"
             android:exported="true" />
         <activity
             android:name=".Kiosk_16"
@@ -149,6 +170,9 @@
             android:exported="true" />
         <activity
             android:name=".Kiosk_14_refund"
+            android:exported="true"/>
+        <activity
+            android:name=".Kiosk_14_reserved_1"
             android:exported="true"/>
         <activity
             android:name=".Kiosk_14_reserved"

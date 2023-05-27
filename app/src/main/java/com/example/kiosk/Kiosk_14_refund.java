@@ -59,14 +59,14 @@ public class Kiosk_14_refund extends AppCompatActivity {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
 
-                        speakText("여기서는 승차권을 구매하실 수 있고, 예매한 승차권을 확인하실 수도 있습니다." +
-                                "또 잘못 예매한 승차권을 환불하실 수 있습니다." +
-                                "우선 승차권을 예매하는 방법에 대해 배워보겠습니다." +
-                                "승차권 구매 버튼을 눌러주세요");
+                        speakText("여기서는 구매한 승차권을 환불하실 수 있습니다." +
+                                "화면 중앙에 환불 규정 표를 확인해주세요." +
+                                "규정 표를 확인하셨다면, 승차권을 투입구에 넣어주세요." +
+                                "환불하지 않으실 거라면 취소하기 버튼을 눌러주세요");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("You can purchase tickets here, and you can also check tickets you have reserved." +
-                                "First, let's learn how to book tickets. Please click the buy ticket button");
+                        speakText("You can refund the tickets you have purchased here. Please check the refund policy table in the center of the screen." +
+                                "After checking the rules table, insert the ticket into the slot. If you do not wish to receive a refund, please click the Cancel button.");
                     }
 
                     b_cancel_btn.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +82,7 @@ public class Kiosk_14_refund extends AppCompatActivity {
                     b_payment_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_14_refund.this, Kiosk_15.class);
+                            Intent intent = new Intent(Kiosk_14_refund.this, Kiosk_23.class);
                             tts.shutdown();
                             startActivity(intent);
                         }
@@ -110,9 +110,9 @@ public class Kiosk_14_refund extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("승차권 구매 버튼은 여기에 있어요.");
+                                    speakText("환불하기 버튼은 여기에 있어요.");
                                 else
-                                    speakText("Buy ticket button is Here");
+                                    speakText("The refund button is here");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
@@ -147,7 +147,7 @@ public class Kiosk_14_refund extends AppCompatActivity {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
     protected void onDestroy() {
         if(tts != null) {

@@ -9,13 +9,12 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class Kiosk_17 extends AppCompatActivity {
+public class Kiosk_17_nouse extends AppCompatActivity {
     private String destination; //목적지
     private String bus;
     private String seat;
@@ -61,7 +60,7 @@ public class Kiosk_17 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk17);
+        setContentView(R.layout.activity_kiosk17_nouse);
 
         sound = (myapp) getApplication();
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -146,7 +145,7 @@ public class Kiosk_17 extends AppCompatActivity {
                     muan_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
+                            Intent intent = new Intent(Kiosk_17_nouse.this, Kiosk_18.class);
                             intent.putExtra("destination", "무안");
                             tts.shutdown();
                             startActivity(intent);
@@ -156,7 +155,7 @@ public class Kiosk_17 extends AppCompatActivity {
                     masan_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
+                            Intent intent = new Intent(Kiosk_17_nouse.this, Kiosk_18.class);
                             intent.putExtra("destination", "마산");
                             tts.shutdown();
                             startActivity(intent);
@@ -166,7 +165,7 @@ public class Kiosk_17 extends AppCompatActivity {
                     muanairport_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
+                            Intent intent = new Intent(Kiosk_17_nouse.this, Kiosk_18.class);
                             intent.putExtra("destination", "무안공항");
                             tts.shutdown();
                             startActivity(intent);
@@ -176,7 +175,7 @@ public class Kiosk_17 extends AppCompatActivity {
                     muju_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
+                            Intent intent = new Intent(Kiosk_17_nouse.this, Kiosk_18.class);
                             intent.putExtra("destination", "무주");
                             tts.shutdown();
                             startActivity(intent);
@@ -186,7 +185,7 @@ public class Kiosk_17 extends AppCompatActivity {
                     maryang_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_17.this, Kiosk_18.class);
+                            Intent intent = new Intent(Kiosk_17_nouse.this, Kiosk_18.class);
                             intent.putExtra("destination", "마량");
                             tts.shutdown();
                             startActivity(intent);

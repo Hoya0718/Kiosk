@@ -89,9 +89,9 @@ public class Kiosk_23 extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("승차권 구매 버튼은 여기에 있어요.");
+                                    speakText("처음으로 돌아가기 버튼을 눌러주세요~.");
                                 else
-                                    speakText("Buy ticket button is Here");
+                                    speakText("Please press the back button");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
@@ -118,7 +118,7 @@ public class Kiosk_23 extends AppCompatActivity {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
     protected void onDestroy() {
         if(tts != null) {

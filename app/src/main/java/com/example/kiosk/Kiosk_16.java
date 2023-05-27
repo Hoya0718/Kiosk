@@ -11,8 +11,10 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -133,32 +135,18 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         gimhae_btn.setTextSize(text_size.getId()); eastdaegu_btn.setTextSize(text_size.getId());
         westdaegu_btn.setTextSize(text_size.getId()); gyeongju_btn.setTextSize(text_size.getId());
 
-        busan_btn.setOnClickListener(this);
-        jeonbuk_btn.setOnClickListener(this);
-        seoul_btn.setOnClickListener(this);
-        incheon_btn.setOnClickListener(this);
-        kwangju_btn.setOnClickListener(this);
-        sejong_btn.setOnClickListener(this);
-        kangwon_btn.setOnClickListener(this);
-        daegu_btn.setOnClickListener(this);
-        chungbuk_btn.setOnClickListener(this);
-        chungnam_btn.setOnClickListener(this);
-        giyeok_btn.setOnClickListener(this);
-        nieun_btn.setOnClickListener(this);
-        digeut_btn.setOnClickListener(this);
-        rieul_btn.setOnClickListener(this);
-        mieum_btn.setOnClickListener(this);
-        bieup_btn.setOnClickListener(this);
-        siot_btn.setOnClickListener(this);
-        ieung_btn.setOnClickListener(this);
-        jieut_btn.setOnClickListener(this);
-        chieut_btn.setOnClickListener(this);
-        kieuk_btn.setOnClickListener(this);
-        tieut_btn.setOnClickListener(this);
-        pieup_btn.setOnClickListener(this);
-        hieut_btn.setOnClickListener(this);
-
-
+        busan_btn.setOnClickListener(this); jeonbuk_btn.setOnClickListener(this);
+        seoul_btn.setOnClickListener(this); incheon_btn.setOnClickListener(this);
+        kwangju_btn.setOnClickListener(this); sejong_btn.setOnClickListener(this);
+        kangwon_btn.setOnClickListener(this); daegu_btn.setOnClickListener(this);
+        chungbuk_btn.setOnClickListener(this); chungnam_btn.setOnClickListener(this);
+        giyeok_btn.setOnClickListener(this); nieun_btn.setOnClickListener(this);
+        digeut_btn.setOnClickListener(this); rieul_btn.setOnClickListener(this);
+        mieum_btn.setOnClickListener(this); bieup_btn.setOnClickListener(this);
+        siot_btn.setOnClickListener(this); ieung_btn.setOnClickListener(this);
+        jieut_btn.setOnClickListener(this); chieut_btn.setOnClickListener(this);
+        kieuk_btn.setOnClickListener(this); tieut_btn.setOnClickListener(this);
+        pieup_btn.setOnClickListener(this); hieut_btn.setOnClickListener(this);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -166,27 +154,16 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("서울 버튼을 누르게 되면 서울에 있는 버스 정류장들이 나옵니다." +
-                                    "이번에는 앞글자를 사용해서 찾아보겠습니다." +
-                                    "ㅁ 버튼을 눌러보세요");
+                        speakText("이곳에서는 목적지를 선택하실 수 있습니다. 서울, 강원 등의 버튼을 누르면 그 지역에 있는 버스 정류장을 찾을 수 있습니다." +
+                                    "또 ㄱ,ㄴ,ㄷ 버튼을 누르면 그 단어로 시작하는 정류장들을 찾을 수 있습니다." +
+                                    "동서울 버스 정류장을 찾아볼까요? 서울 버튼 혹은 ㄷ 버튼을 눌러주세요.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("When you press the seoul button, the bus stops in seoul appear." +
-                                "This time, let's use the first letter to find it." +
-                                "Please press the ㅁ button");
+                        speakText("Here you can choose your destination. If you press a button for Seoul, Gangwon, etc., you can find bus stops in that area." +
+                                "Also, if you press the ㄱ, ㄴ, ㄷ buttons, you can find stops starting with that word." +
+                                "Shall we find the East Seoul bus stop? Please press the Seoul button or the ㄷ button.");
                     }
-                    mieum_btn = findViewById(R.id.mieum_btn);
-
-                    mieum_btn.setOnClickListener(new View.OnClickListener() {
-
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_16.this, Kiosk_18.class);
-                            tts.shutdown();
-                            startActivity(intent);
-                        }
-                    });
 
                     eastseoul_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -500,23 +477,51 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 }
             }
         });
-        handler.postDelayed(new Runnable() {
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
             @Override
-            public void run() {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("ㅁ 버튼은 여기에 있어요.");
-                else
-                    speakText("ㅁ button is Here");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mieum_btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) mieum_btn.getBackground();
-                        anim.start();
-                    }
-                }, 2000);
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
             }
-        }, 12000);
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("서울 버튼, ㄷ 버튼을  눌러서 동서울을 찾을 수 있습니다.");
+                                else
+                                    speakText("Buy ticket button is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            seoul_btn.setBackgroundResource(R.drawable.anim_list);
+                            digeut_btn.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) seoul_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) digeut_btn.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
     @Override
@@ -1060,7 +1065,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
     protected void onDestroy() {
         if(tts != null) {

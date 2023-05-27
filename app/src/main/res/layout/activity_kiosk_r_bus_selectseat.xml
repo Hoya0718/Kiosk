@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_19">
+    tools:context=".Kiosk_R_Bus_SelectSeat">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_9_btn"
+                    android:id="@+id/b_soldout1_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -55,7 +55,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/b_10_btn"
+                    android:id="@+id/b_soldout2_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -76,14 +76,14 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_7_btn"
+                    android:id="@+id/b_4A_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="7"
+                    android:text="4A"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -92,14 +92,14 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/b_8_btn"
+                    android:id="@+id/b_4B_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="8"
+                    android:text="4B"
                     android:background="#ff8800"
                     android:textStyle="bold"
                     android:textSize="15sp"
@@ -114,7 +114,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_5_btn"
+                    android:id="@+id/b_soldout3_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -129,14 +129,14 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/b_6_btn"
+                    android:id="@+id/b_3B_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="6"
+                    android:text="3B"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -152,7 +152,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_3_btn"
+                    android:id="@+id/b_soldout4_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -167,14 +167,14 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/b_4_btn"
+                    android:id="@+id/b_2B_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="4"
+                    android:text="2B"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -190,7 +190,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_1_btn"
+                    android:id="@+id/b_soldout5_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -205,7 +205,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/b_2_btn"
+                    android:id="@+id/b_soldout6_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -261,14 +261,14 @@
 
 
                 <Button
-                    android:id="@+id/b_19_btn"
+                    android:id="@+id/b_5C_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="19"
+                    android:text="5C"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -276,14 +276,14 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/b_20_btn"
+                    android:id="@+id/b_5D_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="20"
+                    android:text="5D"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -296,7 +296,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_17_btn"
+                    android:id="@+id/b_soldout7_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -311,7 +311,7 @@
                     tools:layout_marginLeft="5dp" />
 
                 <Button
-                    android:id="@+id/b_18_btn"
+                    android:id="@+id/b_soldout8_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -332,7 +332,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_15_btn"
+                    android:id="@+id/b_soldout9_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -347,7 +347,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/b_16_btn"
+                    android:id="@+id/b_soldout10_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -366,28 +366,28 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_13_btn"
+                    android:id="@+id/b_2C_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="13"
+                    android:text="2C"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
                     tools:layout_marginLeft="5dp" />
 
                 <Button
-                    android:id="@+id/b_14_btn"
+                    android:id="@+id/b_2D_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="14"
+                    android:text="2D"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -402,7 +402,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/b_11_btn"
+                    android:id="@+id/b_soldout11_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
@@ -417,7 +417,7 @@
                     android:minHeight="0dp"/>
 
                 <Button
-                    android:id="@+id/b_12_btn"
+                    android:id="@+id/b_soldout12_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"

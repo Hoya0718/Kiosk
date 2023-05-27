@@ -77,13 +77,13 @@ public class Kiosk_14 extends AppCompatActivity {
 
                         speakText("여기서는 승차권을 구매하실 수 있고, 예매한 승차권을 확인하실 수도 있습니다." +
                                 "또 잘못 예매한 승차권을 환불하실 수 있습니다." +
-                                "우선 승차권을 예매하는 방법에 대해 배워보겠습니다." +
-                                "승차권 구매 버튼을 눌러주세요");
+                                "승차권 구매, 예매한 승차권 확인, 승차권 환불 기능중 배우고 싶은 기능의 버튼을 눌러보세요.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("You can purchase tickets here, and you can also check tickets you have reserved." +
-                                "First, let's learn how to book tickets. Please click the buy ticket button");
+                                "And also get a refund for tickets that you have incorrectly reserved" +
+                                "Press the button of the function you want to learn among ticket purchase, ticket confirmation, and ticket refund functions.");
                     }
 
 
@@ -123,6 +123,15 @@ public class Kiosk_14 extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
+
+                    refund_ticket_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_14.this, Kiosk_14_refund.class);
+                            tts.shutdown();
+                            startActivity(intent);
+                        }
+                    });
                 }
             }
         });
@@ -146,17 +155,20 @@ public class Kiosk_14 extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("승차권 구매 버튼은 여기에 있어요.");
+                                    speakText("여기 있는 세 가지 버튼 중 한가지 버튼을 눌러주세요");
                                 else
-                                    speakText("Buy ticket button is Here");
+                                    speakText("Please press one of the three buttons here");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
                             buy_ticket_btn.setBackgroundResource(R.drawable.anim_list);
                             reserved_ticket_btn.setBackgroundResource(R.drawable.anim_list);
+                            refund_ticket_btn.setBackgroundResource(R.drawable.anim_list);
                             anim = (AnimationDrawable) buy_ticket_btn.getBackground();
                             anim.start();
                             anim = (AnimationDrawable) reserved_ticket_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) refund_ticket_btn.getBackground();
                             anim.start();
                         }
                     }, 2000);

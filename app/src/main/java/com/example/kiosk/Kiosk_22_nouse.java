@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class Kiosk_22 extends AppCompatActivity {
+public class Kiosk_22_nouse extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
     private int currentVolume;
@@ -31,7 +31,7 @@ public class Kiosk_22 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk22);
+        setContentView(R.layout.activity_kiosk22_nouse);
 
         sound = (myapp) getApplication();
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -59,7 +59,7 @@ public class Kiosk_22 extends AppCompatActivity {
                     b_cancel1_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_22.this, Kiosk_14.class);
+                            Intent intent = new Intent(Kiosk_22_nouse.this, Kiosk_14.class);
                             tts.shutdown();
                             startActivity(intent);
                         }
@@ -70,7 +70,7 @@ public class Kiosk_22 extends AppCompatActivity {
                     imageView3.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_22.this, Kiosk_23.class);
+                            Intent intent = new Intent(Kiosk_22_nouse.this, Kiosk_23.class);
                             tts.shutdown();
                             startActivity(intent);
                         }

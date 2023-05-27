@@ -1,80 +1,78 @@
 package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuBuilder;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Locale;
+import android.widget.Toast;
 
-public class Kiosk_21 extends AppCompatActivity {
-    private String destination = "목적지"; //목적지
-    private String price = "표 가격";
-    private String seat = "좌석 번호";
 
-    private TextView textView5, textView6, textView12, textView14, textView16, textView20;
-    private TextToSpeech tts;
+public class Kiosk_14_reserved_1 extends AppCompatActivity {
     private int currentVolume;
     private AudioManager audioManager;
+    private TextToSpeech tts;
     private myapp sound;
     private myapp text_size;
     private AnimationDrawable anim;
+    private Button b_cancel_btn;
+    private Button b_payment_btn;
+    private Button ticket_btn;
+    private TextView textView17, bus_departuretime, bus_type, bus_takentime;
     Handler handler = new Handler();
-
-    private Button b_cancel_btn; //취소하기
-    private Button b_payment_btn; //결제하기
+    private boolean isColorChanged = false;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk21);
+        setContentView(R.layout.activity_kiosk14_reserved_1);
 
         sound = (myapp) getApplication();
+        text_size = (myapp) getApplication();
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-        text_size = (myapp) getApplication();
 
-        textView5 = findViewById(R.id.textView5);
-        textView6 = findViewById(R.id.textView6);
-        textView12 = findViewById(R.id.textView12);
-        textView14 = findViewById(R.id.textView14);
-        textView16 = findViewById(R.id.textView16);
-        textView20 = findViewById(R.id.textView20);
+        ticket_btn = findViewById(R.id.ticket_btn);
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
         b_payment_btn = findViewById(R.id.b_payment_btn);
+        textView17 = findViewById(R.id.textView17);
+        bus_departuretime = findViewById(R.id.bus_departuretime);
+        bus_type = findViewById(R.id.bus_type);
+        bus_takentime = findViewById(R.id.bus_takentime);
 
-        textView5.setTextSize(text_size.getId());
-        textView6.setTextSize(text_size.getId());
-        textView12.setTextSize(text_size.getId());
-        textView14.setTextSize(text_size.getId());
-        textView16.setTextSize(text_size.getId());
-        textView20.setTextSize(text_size.getId());
+        ticket_btn.setTextSize(text_size.getId());
         b_cancel_btn.setTextSize(text_size.getId());
         b_payment_btn.setTextSize(text_size.getId());
+        textView17.setTextSize(text_size.getId());
+        bus_departuretime.setTextSize(text_size.getId());
+        bus_type.setTextSize(text_size.getId());
+        bus_takentime.setTextSize(text_size.getId());
 
-        Intent intent = getIntent();
-
-        String destination = intent.getStringExtra("destination");
-        String bus = intent.getStringExtra("bus");
-        String seat = intent.getStringExtra("seat");
-
-        textView5.setText(destination);
-        textView16.setText(bus);
-        textView20.setText(seat);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -82,29 +80,37 @@ public class Kiosk_21 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("목적지는 맞게 골랐는지. 버스 종류와 좌석은 정확하게 골랐는지" +
-                                " 확인해주시고, 맞게 고르셨다면 결제하기 버튼을 눌러주세요" +
-                                "만약 잘못 고르셨다면 취소하기 버튼을 눌러서 " +
-                                "이전 화면으로 돌아간 후, 알맞게 다시 고르실 수 있습니다." +
-                                "화면의 이미지처럼 카드를 투입구에 꽂아주세요");
+
+                        speakText("여기서는 예매한 승차권을 확인하고 뽑을 수 있습니다." +
+                                "예매한 승차권 버튼을 클릭하고 발권하기 버튼을 누르면 티켓이 출력됩니다." +
+                                "승차권 버튼을 누르고, 발권하기 버튼을 눌러주세요");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Make sure you have chosen the correct destination, bus type and seat" +
-                                "If you have selected the right one, please click the checkout button" +
-                                "If you make a mistake, you can click the Cancel button " +
-                                "to return to the previous screen." +
-                                "Insert the card into the slot as shown in the image on the screen.");
+                        speakText("Here you can check and pick up your reserved tickets." +
+                                "Click the reserved ticket button and click the issue ticket button to print the ticket." +
+                                "Press the ticket button, then press the issue ticket button");
                     }
 
+                    ticket_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(isColorChanged) {
+                                ticket_btn.setBackgroundColor(Color.LTGRAY);
+                                isColorChanged = false;
+                            }
+                            else {
+                                ticket_btn.setBackgroundColor(Color.RED);
+                                isColorChanged = true;
+                            }
+                        }
 
-                    b_cancel_btn = findViewById(R.id.b_cancel_btn);
-                    b_payment_btn = findViewById(R.id.b_payment_btn);
+                    });
 
                     b_cancel_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_21.this, Kiosk_14.class);
+                            Intent intent = new Intent(Kiosk_14_reserved_1.this, Kiosk_14.class);
                             tts.shutdown();
                             startActivity(intent);
                         }
@@ -113,24 +119,20 @@ public class Kiosk_21 extends AppCompatActivity {
                     b_payment_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_21.this, Kiosk_23.class);
+                            Intent intent = new Intent(Kiosk_14_reserved_1.this, Kiosk_23.class);
                             tts.shutdown();
                             startActivity(intent);
                         }
                     });
-
                 }
             }
         });
-
-        Log.d("delaySpeak1", "start");
         tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
             boolean one = true;
-
             @Override
             public void onStart(String delaySpeak) {
                 // TTS가 말하기 시작했습니다.
-                Log.d("delaySpeak1", "onstart");
+                Log.d("delaySpeak", "onstart");
             }
 
             @Override
@@ -145,9 +147,9 @@ public class Kiosk_21 extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("결제하기 버튼을 눌러주세요.");
+                                    speakText("발권하기 버튼은 여기에 있어요.");
                                 else
-                                    speakText("Please click the Make Payment button.");
+                                    speakText("The button to issue a ticket is here.");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
@@ -156,7 +158,7 @@ public class Kiosk_21 extends AppCompatActivity {
                             anim.start();
                         }
                     }, 2000);
-                    Log.d("delaySpeak1", "onDone");
+                    Log.d("delaySpeak", "onDone");
                     one=false;
                 }
             }
@@ -164,12 +166,16 @@ public class Kiosk_21 extends AppCompatActivity {
             @Override
             public void onError(String delaySpeak) {
                 //에러 발생시
-                Log.d("delaySpeak1", "onError");
+                Log.d("delaySpeak", "onError");
             }
         });
-        Log.d("delaySpeak1", "end");
     }
-
+    private void startButtonBorderAnimation(Button button) {
+        AnimationDrawable buttonBorderAnimation = (AnimationDrawable) button.getBackground();
+        if (buttonBorderAnimation != null) {
+            buttonBorderAnimation.start();
+        }
+    }
 
     private void speakText(String text) {
 
@@ -193,3 +199,4 @@ public class Kiosk_21 extends AppCompatActivity {
         super.onPause();
     }
 }
+

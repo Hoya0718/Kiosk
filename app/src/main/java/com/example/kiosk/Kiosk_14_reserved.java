@@ -7,6 +7,8 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -25,11 +27,13 @@ public class Kiosk_14_reserved extends AppCompatActivity {
 
     private String get_num;
     private Button num0_btn, num1_btn,num2_btn,num3_btn,num4_btn,num5_btn,num6_btn,num7_btn,num8_btn,num9_btn,modify_btn, confirm_btn;
+    private Button b_cancel_btn, b_payment_btn;
     private myapp pn;
 
     private myapp text_size;
     private long clickTime;
     private AnimationDrawable anim;
+    Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +59,8 @@ public class Kiosk_14_reserved extends AppCompatActivity {
         num8_btn = findViewById(R.id.num8_btn);
         num9_btn = findViewById(R.id.num9_btn);
         confirm_btn = findViewById(R.id.comfirm_btn);
+        b_cancel_btn = findViewById(R.id.b_cancel_btn);
+        b_payment_btn = findViewById(R.id.b_payment_btn);
 
         num0_btn.setTextSize(text_size.getId());
         num1_btn.setTextSize(text_size.getId());
@@ -72,6 +78,8 @@ public class Kiosk_14_reserved extends AppCompatActivity {
         bus_infoinput.setTextSize(text_size.getId());
         person_Information.setTextSize(text_size.getId());
         bus_birthdate_input.setTextSize(text_size.getId());
+        b_cancel_btn.setTextSize(text_size.getId());
+        b_payment_btn.setTextSize(text_size.getId());
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
 
             public void onInit(int status) {
@@ -84,20 +92,72 @@ public class Kiosk_14_reserved extends AppCompatActivity {
                         speakText("You'll need to enter your social security number to register. Try entering your social security number.");
                     }
                 }
+
+                b_cancel_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Kiosk_14_reserved.this, Kiosk_14.class);
+                        tts.shutdown();
+                        startActivity(intent);
+                    }
+                });
+
+                b_payment_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Kiosk_14_reserved.this, Kiosk_14_reserved_1.class);
+                        tts.shutdown();
+                        startActivity(intent);
+                    }
+                });
+            }
+
+
+        });
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("조회하기 버튼은 여기에 있어요.");
+                                else
+                                    speakText("The inquiry button is here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            b_payment_btn.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) b_payment_btn.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                tts.setSpeechRate(sound.getTtsSpeed());
-                sound.getTtsVolume();
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.");
-                else
-                    speakText("You can enter your social security number through the numbers below.");
-            }
-        }, 17000);
+
     }
 
     public void put_n(View view) {
@@ -212,58 +272,12 @@ public class Kiosk_14_reserved extends AppCompatActivity {
                 }
         }
     }
-    public void goto_kiosk_14_reserved(View v) {
-        if(person_Information.isChecked()) {
-            if (bus_birthdate_input.length() == 14) {
-                get_num = bus_birthdate_input.getText().toString();
-                pn.setGet_pn(get_num);
-                clickTime = System.currentTimeMillis();
-                pn.setDay(clickTime);
-                tts.shutdown();
-                Intent goto_kiosk_14_reversed = new Intent(this,Kiosk_26_2.class);
-                startActivity(goto_kiosk_14_reversed);
-            }
-            else {
-                if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주민등록번호가 맞는지 확인해주세요.");
-                    bus_birthdate_input.setBackgroundResource(R.drawable.anim_list2);
-                    anim = (AnimationDrawable) bus_birthdate_input.getBackground();
-                    anim.start();
-                    Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
-                }
-                else {
-                    speakText("Please verify your social security number");
-                    bus_birthdate_input.setBackgroundResource(R.drawable.anim_list2);
-                    anim = (AnimationDrawable) bus_birthdate_input.getBackground();
-                    anim.start();
-                    Toast.makeText(getApplicationContext(), "Please verify your social security number", Toast.LENGTH_LONG).show();
-                }
-            }
-        }
-        else {
-            if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                speakText("개인정보 수집 동의를 눌러주세요");
-                person_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) person_Information.getBackground();
-                anim.start();
-                Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
-            }
-            else{
-                speakText("Agree to collect personal information.");
-                person_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) person_Information.getBackground();
-                anim.start();
-                Toast.makeText(getApplicationContext(), "Agree to collect personal information.", Toast.LENGTH_LONG).show();
-            }
-
-        }
-    }
 
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
 
     protected void onDestroy() {

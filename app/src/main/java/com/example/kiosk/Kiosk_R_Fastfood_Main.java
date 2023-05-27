@@ -34,4 +34,8 @@ public class Kiosk_R_Fastfood_Main extends AppCompatActivity {
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Part.class);
         startActivity(goto_Back);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

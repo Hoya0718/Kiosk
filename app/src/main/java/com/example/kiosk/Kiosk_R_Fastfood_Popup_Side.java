@@ -221,4 +221,8 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         goto_Kiosk_R_F_P_Sz.putExtra("burgerSize", burgerSize);
         startActivity(goto_Kiosk_R_F_P_Sz);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

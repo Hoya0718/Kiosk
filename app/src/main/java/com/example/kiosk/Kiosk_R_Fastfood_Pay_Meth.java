@@ -38,4 +38,8 @@ public class Kiosk_R_Fastfood_Pay_Meth extends AppCompatActivity {
         goto_Kiosk_F_R_P.putExtra("value", value);
         startActivity(goto_Kiosk_F_R_P);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

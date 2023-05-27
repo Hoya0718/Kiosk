@@ -60,4 +60,8 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
         goto_Kiosk_R_F_M_B.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_B);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

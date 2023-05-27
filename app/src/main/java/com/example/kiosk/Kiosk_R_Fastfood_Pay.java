@@ -80,4 +80,8 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
         }
         super.onPause();
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

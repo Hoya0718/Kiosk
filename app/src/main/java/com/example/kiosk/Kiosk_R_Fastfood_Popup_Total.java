@@ -163,4 +163,8 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         Intent goto_Kiosk_R_F_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Main.class);
         startActivity(goto_Kiosk_R_F_M);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

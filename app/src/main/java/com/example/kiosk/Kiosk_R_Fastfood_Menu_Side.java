@@ -213,4 +213,8 @@ public class Kiosk_R_Fastfood_Menu_Side extends AppCompatActivity {
             startActivity(goto_Kiosk_R_F_P_R);
         }
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

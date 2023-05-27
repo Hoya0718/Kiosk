@@ -83,4 +83,8 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
         goto_Kiosk_R_F_P_St.putExtra("burgerImage", burgerArray);
         startActivity(goto_Kiosk_R_F_P_St);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

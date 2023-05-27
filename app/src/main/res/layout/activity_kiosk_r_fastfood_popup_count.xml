@@ -129,7 +129,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
-            android:onClick="goto_Kiosk_R_F_P_B"
+            android:onClick="goto_Kiosk_R_F_M_B"
             android:text="@string/cancel_no"
             android:textSize="18sp" />
 

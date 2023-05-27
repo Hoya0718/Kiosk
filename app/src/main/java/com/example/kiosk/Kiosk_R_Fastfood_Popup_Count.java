@@ -87,4 +87,8 @@ public class Kiosk_R_Fastfood_Popup_Count extends AppCompatActivity {
         goto_Kiosk_R_F_M_Bp.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_Bp);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

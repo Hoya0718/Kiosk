@@ -26,7 +26,7 @@ import java.util.Locale;
 public class Kiosk_15 extends AppCompatActivity {
     private SimpleDateFormat mFormat = new SimpleDateFormat("MM dd (E)", Locale.KOREAN);
 
-    private TextToSpeech tts;
+    private TextToSpeech tts;//
     private int currentVolume;
     private AudioManager audioManager;
 

@@ -19,7 +19,7 @@ import java.util.Locale;
 
 public class Kiosk_14_reserved extends AppCompatActivity {
 
-    private TextView bus_infoinput, bus_birthdate, bus_birthdate_input;
+    private TextView bus_infoinput, bus_birthdate, bus_birthdate_input;//
     private TextToSpeech tts;
     private myapp sound;
 

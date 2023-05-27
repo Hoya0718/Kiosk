@@ -20,7 +20,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="서울"
-            android:textSize="15sp" />
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/incheon_btn"

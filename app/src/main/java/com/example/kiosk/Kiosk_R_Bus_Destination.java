@@ -17,7 +17,7 @@ public class Kiosk_R_Bus_Destination extends AppCompatActivity {
 
     private Button destination_btn; //도착지 버튼
     private Button b_homescreen_btn; //홈 버튼
-    private TextView textView10;
+    private TextView textView10;//
     private TextView textView102;
     private TextView textView15;
 

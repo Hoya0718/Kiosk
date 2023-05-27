@@ -22,7 +22,7 @@ import java.util.Locale;
 
 public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
     private String destination = "목적지"; //목적지
-    private String price = "표 가격";
+    private String price = "표 가격";//
     private String seat = "좌석 번호";
 
     private TextView textView5, textView6, textView12, textView14, textView16, textView20;

@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Locale;
 
 public class Kiosk_14_refund extends AppCompatActivity {
-    private int currentVolume;
+    private int currentVolume;//
     private AudioManager audioManager;
     private TextToSpeech tts;
     private myapp sound;

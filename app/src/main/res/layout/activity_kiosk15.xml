@@ -70,7 +70,7 @@
             android:layout_weight="0.7"
             android:text="@string/b_arrive"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
     </LinearLayout>
 
     <LinearLayout

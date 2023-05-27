@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class Kiosk_21 extends AppCompatActivity {
-    private String destination = "목적지"; //목적지
+    private String destination = "목적지";
     private String price = "표 가격";
     private String seat = "좌석 번호";
 

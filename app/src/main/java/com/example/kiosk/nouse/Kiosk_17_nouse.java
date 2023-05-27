@@ -1,4 +1,4 @@
-package com.example.kiosk;
+package com.example.kiosk.nouse;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,11 +12,15 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.kiosk.Kiosk_18;
+import com.example.kiosk.R;
+import com.example.kiosk.myapp;
+
 import java.util.Locale;
 
 public class Kiosk_17_nouse extends AppCompatActivity {
     private String destination; //목적지
-    private String bus;
+    private String bus;//
     private String seat;
     private String price;
     private TextToSpeech tts;

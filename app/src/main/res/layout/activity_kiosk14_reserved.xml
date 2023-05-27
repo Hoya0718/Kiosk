@@ -225,7 +225,7 @@
                 android:gravity="center"
                 android:onClick="goto_kiosk_15"
                 android:text="@string/check"
-                android:textSize="@dimen/font_size_medium" />
+                android:textSize="@dimen/font_size_medium"/>
         </TableRow>
     </TableLayout>
 

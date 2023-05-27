@@ -35,7 +35,7 @@
             android:id="@+id/imageView10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/refund_standard" />
+            app:srcCompat="@drawable/refund_standard"/>
 
     </LinearLayout>
 

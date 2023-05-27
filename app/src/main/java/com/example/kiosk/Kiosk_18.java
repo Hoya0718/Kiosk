@@ -18,7 +18,7 @@ import android.widget.TextView;
 import java.util.Locale;
 
 public class Kiosk_18 extends AppCompatActivity {
-    private TextToSpeech tts;
+    private TextToSpeech tts;//
     private myapp sound;
     private int currentVolume;
     private AudioManager audioManager;

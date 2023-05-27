@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_22_nouse">
+    tools:context=".nouse.Kiosk_22_nouse">
 
     <TextView
         android:id="@+id/textView40"

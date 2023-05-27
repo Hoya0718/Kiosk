@@ -28,7 +28,7 @@ import java.util.Locale;
 
 public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements View.OnClickListener {
 
-    private Button seoul_btn, incheon_btn, kangwon_btn, sejong_btn;
+    private Button seoul_btn, incheon_btn, kangwon_btn, sejong_btn;//
     private Button chungnam_btn, chungbuk_btn, kwangju_btn, jeonbuk_btn;
     private Button busan_btn, daegu_btn, giyeok_btn, nieun_btn;
     private Button digeut_btn, rieul_btn, mieum_btn, bieup_btn;

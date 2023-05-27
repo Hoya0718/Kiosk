@@ -17,7 +17,7 @@ import android.widget.Button;
 import java.util.Locale;
 
 public class Kiosk_R_Bus_Congratulations extends AppCompatActivity {
-    private Button b_backbegin_btn; //처음으로 돌아가
+    private Button b_backbegin_btn; //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

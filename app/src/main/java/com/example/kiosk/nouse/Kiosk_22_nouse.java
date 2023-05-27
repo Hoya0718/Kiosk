@@ -1,4 +1,4 @@
-package com.example.kiosk;
+package com.example.kiosk.nouse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,10 +14,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.kiosk.Kiosk_14;
+import com.example.kiosk.Kiosk_23;
+import com.example.kiosk.R;
+import com.example.kiosk.myapp;
+
 import java.util.Locale;
 
 public class Kiosk_22_nouse extends AppCompatActivity {
-    private TextToSpeech tts;
+    private TextToSpeech tts;//
     private myapp sound;
     private int currentVolume;
     private AudioManager audioManager;

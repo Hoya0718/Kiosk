@@ -30,7 +30,7 @@ import java.util.Locale;
 
 public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener {
 
-    private TextToSpeech tts;
+    private TextToSpeech tts;//
     private myapp sound;
     private myapp text_size;
     private AnimationDrawable anim;

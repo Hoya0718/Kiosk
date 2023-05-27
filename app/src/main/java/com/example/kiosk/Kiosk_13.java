@@ -16,7 +16,7 @@ import java.util.Locale;
 
 public class Kiosk_13 extends AppCompatActivity {
     private int currentVolume;
-    private AudioManager audioManager;
+    private AudioManager audioManager;//
 
     private TextToSpeech tts;
     private myapp sound;

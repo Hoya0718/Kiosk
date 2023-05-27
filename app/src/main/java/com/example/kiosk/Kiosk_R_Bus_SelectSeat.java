@@ -19,7 +19,7 @@ import org.w3c.dom.Text;
 import java.util.Locale;
 
 public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
-    private TextView textView32, textView33, textView34;
+    private TextView textView32, textView33, textView34;//
     private Button b_soldout1_btn, b_soldout2_btn, b_soldout3_btn;
     private Button b_soldout4_btn, b_soldout5_btn, b_soldout6_btn;
     private Button b_soldout7_btn, b_soldout8_btn, b_soldout9_btn;

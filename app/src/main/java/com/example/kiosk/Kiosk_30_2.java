@@ -3,9 +3,12 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,6 +26,8 @@ public class Kiosk_30_2 extends AppCompatActivity {
     private myapp sound;
     private Handler handler;
     private Runnable runnable;
+
+    private AnimationDrawable anim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +60,7 @@ public class Kiosk_30_2 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("결제 완료 창을 보여줍니다. 실제 키오스크는 아래에 처방전이 나옵니다.");
+                        speakText("결제 완료 창을 보여줍니다. 실제 키오스크는 아래에 처방전이 나옵니다. 확인을 눌러주세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("The payment completion window appears. Below you will see your prescription.");
@@ -64,12 +69,53 @@ public class Kiosk_30_2 extends AppCompatActivity {
             }
         });
 
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("접수하기는 여기에 있고 수납하기는 여기에 있어요. 접수하기나 수납하기를 눌러보세요.");
+                                else
+                                    speakText("Receive is here and File is here. Tap Receive or File to get started");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            chch.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable)chch.getBackground();
+                            anim.start();
+
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
+
     }
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
     public void goto_kiosk_31(View v){
         tts.shutdown();
@@ -107,6 +153,4 @@ public class Kiosk_30_2 extends AppCompatActivity {
         }
         super.onPause();
     }
-
-
 }

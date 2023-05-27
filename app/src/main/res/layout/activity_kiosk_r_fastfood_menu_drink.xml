@@ -76,10 +76,11 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/chistr_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_margin="5dp"
@@ -116,10 +117,11 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/chijadu_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_margin="5dp"
@@ -156,10 +158,11 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/drinkoran_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_margin="5dp"
@@ -204,10 +207,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/shakestr_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -242,10 +246,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/shakecho_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -280,10 +285,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/shakeba_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -326,10 +332,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/drinkcoca_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -366,10 +373,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/drinkcoze_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -406,10 +414,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/drinkspri_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -454,10 +463,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/drinkhwan_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -494,10 +504,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/milk_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -534,10 +545,11 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="money_plus"
+                    android:onClick="goto_Kiosk_R_F_P_C"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/water_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"

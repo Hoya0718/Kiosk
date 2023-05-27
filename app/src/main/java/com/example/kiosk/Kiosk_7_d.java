@@ -5,6 +5,8 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -56,32 +58,77 @@ public class Kiosk_7_d extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("음료 메뉴 화면입니다. 빅맥을 고르기 위해 버거 메뉴 화면으로 돌아가주세요.");
+                    speakText("음료 메뉴 화면입니다." +
+                            "빅맥을 고르기 위해 버거 메뉴 화면으로 돌아가주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This is the beverage menu screen. Please return to the Burger Menu screen to select a Big Mc.");
+                    speakText("This is the drink menu screen." +
+                            "Please return to the Burger Menu screen to select a Big Mc.");
                 }
             }
         });
 
-        handler.postDelayed(new Runnable() {
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+//                    speakText("버튼은 여기에 있어요.");
+//                else
+//                    speakText("Button is Here");
+//                handler.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        burger.setBackgroundResource(R.drawable.anim_list);
+//                        anim = (AnimationDrawable) burger.getBackground();
+//                        anim.start();
+//                    }
+//                }, 2000);
+//            }
+//        }, 10000);
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
             @Override
-            public void run() {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("버튼은 여기에 있어요.");
-                else
-                    speakText("Button is Here");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        burger.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) burger.getBackground();
-                        anim.start();
-                    }
-                }, 2000);
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
             }
-        }, 10000);
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("버튼은 여기에 있어요.");
+                                else
+                                    speakText("Button is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            burger.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) burger.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
     public void goto_kiosk_06(View v){

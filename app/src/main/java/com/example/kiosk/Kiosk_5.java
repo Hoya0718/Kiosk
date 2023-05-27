@@ -108,7 +108,7 @@ public class Kiosk_5 extends AppCompatActivity {
     }
     public void goto_Back(View v){
         tts.shutdown();
-        Intent goto_Back = new Intent(getApplicationContext(),Kiosk_4.class);
+        Intent goto_Back = new Intent(getApplicationContext(),Kiosk_3.class);
         startActivity(goto_Back);
     }
 

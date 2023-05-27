@@ -7,6 +7,8 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -79,7 +81,7 @@ public class Kiosk_29 extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
+        /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed()) ;
@@ -89,7 +91,43 @@ public class Kiosk_29 extends AppCompatActivity {
                 else
                     speakText("You can enter your social security number via the numbers below.");
             }
-        }, 15000);
+        }, 15000);*/
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("아래에 숫자를 통해 주민등록번호를 입력하실 수 있어요.");
+                                else
+                                    speakText("You can enter your social security number via the numbers below.");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
 
 
     }
@@ -97,7 +135,7 @@ public class Kiosk_29 extends AppCompatActivity {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
     public void put_n(View view) {
         String current = ssn_2.getText().toString();

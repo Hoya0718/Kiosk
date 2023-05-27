@@ -10,7 +10,8 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import java.util.Locale;
 
 public class Kiosk_25 extends AppCompatActivity {
@@ -52,7 +53,7 @@ public class Kiosk_25 extends AppCompatActivity {
         }
     });
 
-        handler.postDelayed(new Runnable() {
+       /* handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
@@ -71,14 +72,59 @@ public class Kiosk_25 extends AppCompatActivity {
                     }
                 }, 3000);
             }
-        }, 15000);
+        }, 15000);*/
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("접수하기는 여기에 있고 수납하기는 여기에 있어요. 접수하기나 수납하기를 눌러보세요.");
+                                else
+                                    speakText("Receive is here and File is here. Tap Receive or File to get started");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            receipt.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable)receipt.getBackground();
+                            anim.start();
+
+                            acceptance.setBackgroundResource(R.drawable.anim_list2);
+                            anim = (AnimationDrawable)acceptance.getBackground();
+                            anim.start();
+
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
     public void goto_kiosk_26(View v){
 

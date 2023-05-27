@@ -7,6 +7,8 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -26,7 +28,7 @@ public class Kiosk_26 extends AppCompatActivity {
     private String get_num;
     private Button num_0, num_1,num_2,num_3,num_4,num_5,num_6,num_7,num_8,num_9,cl, check;
     private myapp pn;
-
+    Handler handler = new Handler();
     private myapp text_size;
     private long clickTime;
     private AnimationDrawable anim;
@@ -85,7 +87,7 @@ public class Kiosk_26 extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
+        /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 tts.setSpeechRate(sound.getTtsSpeed());
@@ -95,8 +97,46 @@ public class Kiosk_26 extends AppCompatActivity {
                 else
                     speakText("You can enter your social security number through the numbers below.");
             }
-        }, 17000);
+        }, 17000);*/
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.");
+                                else
+                                    speakText("You can enter your social security number through the numbers below.");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
+
 
 
     public void put_n(View view) {
@@ -271,7 +311,7 @@ public class Kiosk_26 extends AppCompatActivity {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
 
     protected void onDestroy() {

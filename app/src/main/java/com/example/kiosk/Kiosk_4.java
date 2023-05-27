@@ -82,12 +82,15 @@ public class Kiosk_4 extends AppCompatActivity {
                 }
             }
         });
+
+
+
     }
     private void speakText(String text) {
 
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,"delaySpeak");
     }
 
     public void volume_size_medium(View v) {

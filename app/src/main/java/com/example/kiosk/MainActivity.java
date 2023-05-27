@@ -15,12 +15,16 @@ import android.widget.Button;
 
 import java.util.Locale;
 
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
+
 public class MainActivity extends AppCompatActivity {
     private TextToSpeech tts;
 
     private Button practice_Btn;
     Handler handler = new Handler();
     private AnimationDrawable anim;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,26 +37,25 @@ public class MainActivity extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(KOREAN);
-                        speakText("안녕하세요 교육용 키오스크입니다. 저를 따라오시면 키오스크의 사용이 쉬워질거에요. 연습을 눌러볼까요?");
+                        speakText("안녕하세요 교육용 키오스크입니다. 저를 따라오시면 키오스크의 사용이 쉬워질거에요. 처음 사용하시는 경우 연습을 눌러볼까요?");
 
-                    }
-                    else
-                    {
+                    } else {
                         getResources().getConfiguration().locale.getLanguage().equals("en");
                         tts.setLanguage(Locale.ENGLISH);
-                        speakText("Hello, this is the Education Kiosk. Follow me and the kiosk will be easy to use.");
+                        speakText("Hello, this is the training kiosk. Follow me and the kiosk will be easy to use. If this is your first time, let's hit practice?");
                     }
                 }
             }
         });
 
+        /*
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("연습은 여기에있어요.");
+                    speakText("연습은 여기에있어요 연습을 눌러보세요.");
                 else
-                    speakText("Practice is Here");
+                    speakText("The practice button is here, click Practice");
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -63,13 +66,52 @@ public class MainActivity extends AppCompatActivity {
                 }, 2000);
             }
         }, 10000);
+        */
+
+
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("연습은 여기에있어요 연습을 눌러보세요.");
+                                else
+                                    speakText("The practice button is here, click Practice");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            practice_Btn.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable)practice_Btn.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
-
-
     private void speakText(String text) {
-
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null,null);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
 
     public void goto_kiosk02(View v){

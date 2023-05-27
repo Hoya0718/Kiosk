@@ -5,6 +5,8 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -48,36 +50,87 @@ public class Kiosk_8_3 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("빅맥 세트가 선택되었습니다. 사이드 메뉴에서 후렌치 후라이를 골라주세요.");
+                    speakText("빅맥 세트가 선택되었습니다." +
+                            "이제 사이드 메뉴와 음료만 고르면 됩니다." +
+                            "사이드 메뉴에서 가장 인기있는 후렌치 후라이를 골라주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Big Mc set was selected. Choose French fries from the side menu.");
+                    speakText("Big Mc set is selected." +
+                            "Now I just have to choose a side menu and a drink." +
+                            "Choose the most popular French fries from the side menu.");
                 }
             }
         });
 
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("후렌치 후라이는 여기에 있어요.");
-                else
-                    speakText("French fries is Here");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        huri_text.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) huri_text.getBackground();
-                        anim.start();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+//                    speakText("후렌치 후라이는 여기에 있어요.");
+//                else
+//                    speakText("French fries is Here");
+//                handler.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        huri_text.setBackgroundResource(R.drawable.anim_list);
+//                        anim = (AnimationDrawable) huri_text.getBackground();
+//                        anim.start();
+//
+//                        huri_price.setBackgroundResource(R.drawable.anim_list);
+//                        anim = (AnimationDrawable) huri_price.getBackground();
+//                        anim.start();
+//                    }
+//                }, 2000);
+//            }
+//        }, 10000);
 
-                        huri_price.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) huri_price.getBackground();
-                        anim.start();
-                    }
-                }, 2000);
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
             }
-        }, 10000);
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("후렌치 후라이는 여기에 있어요.");
+                                else
+                                    speakText("French fries is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            huri_text.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) huri_text.getBackground();
+                            anim.start();
+
+                            huri_price.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) huri_price.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
     public void popup_kiosk_08_4(View view) {

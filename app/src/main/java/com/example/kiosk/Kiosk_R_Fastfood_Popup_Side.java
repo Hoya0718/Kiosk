@@ -121,8 +121,6 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         goto_Kiosk_R_F_P_D.putExtra("burgerImage", burgerArray);
         goto_Kiosk_R_F_P_D.putExtra("burgerSize", burgerSize);
 
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
         switch (view.getId()) {
 
             case R.id.snacksan_lay:
@@ -199,6 +197,7 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
 
         }
 
+//        ByteArrayOutputStream stream = new ByteArrayOutputStream();
 //        float scale = (float) (1024/(float)sideBitmap.getWidth());
 //        int image_w = (int) (sideBitmap.getWidth() * scale);
 //        int image_h = (int) (sideBitmap.getHeight() * scale);

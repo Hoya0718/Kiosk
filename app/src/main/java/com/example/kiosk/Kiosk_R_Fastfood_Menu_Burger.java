@@ -119,8 +119,6 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
         Intent goto_Kiosk_R_F_P_St = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Set.class);
         goto_Kiosk_R_F_P_St.putExtra("value", value);
 
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
         switch (view.getId()) {
 
             case R.id.b1955_lay:
@@ -197,6 +195,7 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
 
         }
 
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
         float scale = (float) (1024/(float)burgerBitmap.getWidth());
         int image_w = (int) (burgerBitmap.getWidth() * scale);
         int image_h = (int) (burgerBitmap.getHeight() * scale);

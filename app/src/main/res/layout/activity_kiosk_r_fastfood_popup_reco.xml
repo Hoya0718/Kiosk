@@ -50,6 +50,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/snackshu_img"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="5dp"
@@ -93,6 +94,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/mcnurget_img"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="5dp"

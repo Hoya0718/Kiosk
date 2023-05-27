@@ -137,8 +137,6 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
         goto_Kiosk_R_F_P_T.putExtra("sideName", sideName);
         goto_Kiosk_R_F_P_T.putExtra("sideImage", sideArray);
 
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
         switch (view.getId()) {
 
             case R.id.chistr_lay:
@@ -215,6 +213,7 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
 
         }
 
+//        ByteArrayOutputStream stream = new ByteArrayOutputStream();
 //        float scale = (float) (1024/(float)drinkBitmap.getWidth());
 //        int image_w = (int) (drinkBitmap.getWidth() * scale);
 //        int image_h = (int) (drinkBitmap.getHeight() * scale);

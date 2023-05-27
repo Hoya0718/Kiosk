@@ -79,14 +79,16 @@ public class Kiosk_7_b extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("버거 메뉴 화면입니다. 빅맥 세트 한 개를 주문해보겠습니다." +
-                            "세트의 구성으로는 후렌치 후라이, 코카콜라를 골라보겠습니다." +
+                    speakText("버거 메뉴를 고르는 화면입니다." +
+                            "이 화면에서는 왼쪽 버튼들을 눌러 다른 종류의 메뉴들을 볼 수 있습니다." +
+                            "버거의 종류를 고르는 것부터 난관인데 가장 인기있는 버거인 빅맥을 주문해보겠습니다." +
                             "메뉴에서 빅맥을 골라주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This is the burger menu screen. Let's order a Big Mc set." +
-                            "For the composition of the set, I'll choose French fries and Coca-Cola." +
+                    speakText("This is the screen to choose a burger menu." +
+                            "On this screen, you can see different types of menus by pressing the buttons on the left." +
+                            "Choosing the type of burger is a challenge, so I'll order the most popular burger, the Big Mc." +
                             "Choose a Big Mc from the menu, please.");
                 }
             }

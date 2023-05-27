@@ -62,11 +62,17 @@ public class Kiosk_8_1 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("세트 메뉴 여부를 물어보는 화면입니다. 세트 버튼을 눌러주세요.");
+                    speakText("빅맥이 선택되었습니다." +
+                            "이 화면은 세트 메뉴 여부를 물어보는 화면입니다." +
+                            "세트 메뉴를 고르면 사이드 메뉴와 음료를 값싸게 먹을 수 있습니다." +
+                            "세트 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This screen asks for a set menu. Please press the Set button.");
+                    speakText("Big Mc is selected." +
+                            "This screen asks whether or not you want a set menu." +
+                            "If you choose the set menu, you can get a cheap side menu and drinks." +
+                            "Please press the set button.");
                 }
             }
         });
@@ -109,9 +115,9 @@ public class Kiosk_8_1 extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("버튼은 여기에 있어요.");
+                                    speakText("세트는 여기에 있어요.");
                                 else
-                                    speakText("Button is Here");
+                                    speakText("Set menu is Here");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼

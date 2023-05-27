@@ -50,11 +50,13 @@ public class Kiosk_8_4 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("후렌치 후라이가 선택되었습니다. 음료 메뉴에서 코카콜라를 골라주세요.");
+                    speakText("후렌치 후라이가 선택되었습니다." +
+                            "음료 메뉴에서 가장 인기있는 코카콜라를 골라주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("French fries were selected. Please choose Coca-Cola from the drink menu.");
+                    speakText("French fries is selected." +
+                            "Choose the most popular Coca-Cola from the drink menu.");
                 }
             }
         });

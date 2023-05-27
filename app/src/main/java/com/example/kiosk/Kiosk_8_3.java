@@ -50,11 +50,15 @@ public class Kiosk_8_3 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("빅맥 세트가 선택되었습니다. 사이드 메뉴에서 후렌치 후라이를 골라주세요.");
+                    speakText("빅맥 세트가 선택되었습니다." +
+                            "이제 사이드 메뉴와 음료만 고르면 됩니다." +
+                            "사이드 메뉴에서 가장 인기있는 후렌치 후라이를 골라주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Big Mc set was selected. Choose French fries from the side menu.");
+                    speakText("Big Mc set is selected." +
+                            "Now I just have to choose a side menu and a drink." +
+                            "Choose the most popular French fries from the side menu.");
                 }
             }
         });

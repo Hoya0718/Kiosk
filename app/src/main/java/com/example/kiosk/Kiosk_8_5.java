@@ -55,13 +55,15 @@ public class Kiosk_8_5 extends AppCompatActivity {
                     speakText("지금까지 고른 버거의 항목들을 보여주는 화면입니다." +
                             "빅맥 세트가 추가되었습니다." +
                             "빅맥 세트의 구성은 빅맥, 후렌치 후라이, 코카콜라로 세팅되었습니다." +
+                            "이 화면에서는 고른 메뉴의 수량을 조절할 수 있습니다." +
                             "장바구니 추가 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("This screen shows the items of the burgers you've selected so far." +
                             "The Big Mc set has been added." +
-                            "The Big Mac set consists of a Big Mc, French fries, and Coca-Cola." +
+                            "The Big Mc set consists of a Big Mc, French fries, and Coca-Cola." +
+                            "On this screen, you can adjust the quantity of the selected menu." +
                             "Please press the Add to Cart button.");
                 }
             }

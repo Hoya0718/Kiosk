@@ -58,11 +58,13 @@ public class Kiosk_7_d extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("음료 메뉴 화면입니다. 빅맥을 고르기 위해 버거 메뉴 화면으로 돌아가주세요.");
+                    speakText("음료 메뉴 화면입니다." +
+                            "빅맥을 고르기 위해 버거 메뉴 화면으로 돌아가주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This is the beverage menu screen. Please return to the Burger Menu screen to select a Big Mc.");
+                    speakText("This is the drink menu screen." +
+                            "Please return to the Burger Menu screen to select a Big Mc.");
                 }
             }
         });

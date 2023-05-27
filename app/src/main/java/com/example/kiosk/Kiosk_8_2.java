@@ -50,11 +50,17 @@ public class Kiosk_8_2 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("세트의 크기를 물어보는 화면입니다. 세트 버튼을 눌러주세요.");
+                    speakText("세트가 선택되었습니다." +
+                            "이 화면은 세트의 크기를 물어보는 화면입니다." +
+                            "라지 세트는 양이 많아요." +
+                            "세트 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This screen asks for the size of the set. Please press the set button.");
+                    speakText("The set is selected." +
+                            "This screen asks for the size of the set." +
+                            "The large set has a lot of volume." +
+                            "Please press the set button.");
                 }
             }
         });
@@ -97,9 +103,9 @@ public class Kiosk_8_2 extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("버튼은 여기에 있어요.");
+                                    speakText("세트는 여기에 있어요.");
                                 else
-                                    speakText("Button is Here");
+                                    speakText("Set menu is Here");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼

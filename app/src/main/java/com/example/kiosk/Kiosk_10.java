@@ -49,13 +49,17 @@ public class Kiosk_10 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("결제 방법을 선택하는 화면입니다." +
-                            "카드 결제 버튼를 눌러주세요.");
+                    speakText("주문이 완료되었습니다." +
+                            "이제 결제를 진행해주시면 됩니다." +
+                            "다양한 결제 방식 중 카드 결제를 연습해보겠습니다." +
+                            "카드 결제를 눌러주세요");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This is the screen to select a payment method." +
-                            "Please press the credit card payment button.");
+                    speakText("Your order has been completed." +
+                            "You can proceed with the payment now." +
+                            "Practice card payment among various payment methods." +
+                            "Choose a credit card payment");
                 }
             }
         });
@@ -98,9 +102,9 @@ public class Kiosk_10 extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("버튼은 여기에 있어요.");
+                                    speakText("카드 결제는 여기에 있어요.");
                                 else
-                                    speakText("Button is Here");
+                                    speakText("Card payment is Here");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼

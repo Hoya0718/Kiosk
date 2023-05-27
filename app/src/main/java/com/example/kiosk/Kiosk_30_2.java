@@ -153,6 +153,4 @@ public class Kiosk_30_2 extends AppCompatActivity {
         }
         super.onPause();
     }
-
-
 }

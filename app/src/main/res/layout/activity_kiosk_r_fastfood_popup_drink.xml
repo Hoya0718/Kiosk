@@ -53,15 +53,10 @@
 
                 <TextView
                     android:id="@+id/burger_text"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/big_mc" />
 
-                <TextView
-                    android:id="@+id/size_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/set_menu" />
             </LinearLayout>
 
             <LinearLayout

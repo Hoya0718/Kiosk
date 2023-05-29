@@ -24,6 +24,8 @@ public class Kiosk_R_Fastfood_Popup_Count extends AppCompatActivity {
     private int count;
     private TextView count_text;
 
+    private Bitmap plusBitmap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +52,8 @@ public class Kiosk_R_Fastfood_Popup_Count extends AppCompatActivity {
             }
 
             if (plusArray != null) {
-                Bitmap drinkBitmap = BitmapFactory.decodeByteArray(plusArray, 0, plusArray.length);
-                plus_img.setImageBitmap(drinkBitmap);
+                plusBitmap = BitmapFactory.decodeByteArray(plusArray, 0, plusArray.length);
+                plus_img.setImageBitmap(plusBitmap);
             }
         }
 
@@ -83,6 +85,10 @@ public class Kiosk_R_Fastfood_Popup_Count extends AppCompatActivity {
 
         plus *= count;
         value+=plus;
+
+        myapp orderHistory = (myapp) getApplicationContext();
+        Order order = new Order(plusName, plus, count, plusBitmap);
+        orderHistory.addOrder(order);
 
         goto_Kiosk_R_F_M_Bp.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_Bp);

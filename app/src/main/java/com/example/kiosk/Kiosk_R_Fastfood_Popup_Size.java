@@ -18,7 +18,6 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
     private int value;
     private int burger;
     private String burgerName;
-    private String burgerSize;
     private byte[] burgerArray;
 
     private TextView burger_text;
@@ -57,12 +56,12 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
         switch (view.getId()) {
 
             case R.id.set_Btn:
-                burgerSize = set_Btn.getText().toString();
+                burgerName += " - 세트";
                 break;
 
             case R.id.lar_Btn:
                 burger+=700;
-                burgerSize = lar_Btn.getText().toString();
+                burgerName += " - 라지 세트";
                 break;
 
         }
@@ -70,7 +69,6 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
         goto_Kiosk_R_F_P_Sd.putExtra("burger", burger);
         goto_Kiosk_R_F_P_Sd.putExtra("burgerName", burgerName);
         goto_Kiosk_R_F_P_Sd.putExtra("burgerImage", burgerArray);
-        goto_Kiosk_R_F_P_Sd.putExtra("burgerSize", burgerSize);
         startActivity(goto_Kiosk_R_F_P_Sd);
     }
 

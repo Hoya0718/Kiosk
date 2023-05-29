@@ -1,6 +1,8 @@
 package com.example.kiosk;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,6 +20,8 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
     private int burger;
     private String burgerName;
     private byte[] burgerArray;
+
+    private Bitmap burgerBitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,12 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
         Intent goto_Kiosk_R_F_M_Bp = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
 
         value+=burger;
+
+        burgerBitmap = BitmapFactory.decodeByteArray(burgerArray, 0, burgerArray.length);
+
+        myapp orderHistory = (myapp) getApplicationContext();
+        Order order = new Order(burgerName, burger, 1, burgerBitmap);
+        orderHistory.addOrder(order);
 
         goto_Kiosk_R_F_M_Bp.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_Bp);

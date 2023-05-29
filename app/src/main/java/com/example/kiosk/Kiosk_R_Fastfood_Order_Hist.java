@@ -35,6 +35,10 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
 
     public void goto_Kiosk_R_F_M(View v){
         Intent goto_Kiosk_R_F_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Main.class);
+
+        myapp orderHistory = (myapp) getApplicationContext();
+        orderHistory.clearOrderList();
+
         startActivity(goto_Kiosk_R_F_M);
     }
 

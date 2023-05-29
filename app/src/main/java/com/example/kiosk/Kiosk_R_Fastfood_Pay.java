@@ -48,6 +48,10 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
     public void goto_Kiosk_R_H_C (View v){
         tts.shutdown();
         Intent goto_Kiosk_R_H_C = new Intent(getApplicationContext(), Kiosk_R_Congratulations.class);
+
+        myapp orderHistory = (myapp) getApplicationContext();
+        orderHistory.clearOrderList();
+
         startActivity(goto_Kiosk_R_H_C);
     }
 

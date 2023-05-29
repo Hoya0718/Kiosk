@@ -86,9 +86,9 @@ public class Kiosk_R_Fastfood_Popup_Count extends AppCompatActivity {
         plus *= count;
         value+=plus;
 
-//        OrderHistory orderHistory = (OrderHistory) getApplicationContext();
-//        Order order = new Order(plusName, plus, count, plusBitmap);
-//        orderHistory.addOrder(order);
+        myapp orderHistory = (myapp) getApplicationContext();
+        Order order = new Order(plusName, plus, count, plusBitmap);
+        orderHistory.addOrder(order);
 
         goto_Kiosk_R_F_M_Bp.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_Bp);

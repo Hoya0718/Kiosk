@@ -69,9 +69,9 @@ public class Kiosk_R_Fastfood_Popup_Reco extends AppCompatActivity {
 
         value+=reco;
 
-//        OrderHistory orderHistory = (OrderHistory) getApplicationContext();
-//        Order order = new Order(recoName, reco, 1, recoBitmap);
-//        orderHistory.addOrder(order);
+        myapp orderHistory = (myapp) getApplicationContext();
+        Order order = new Order(recoName, reco, 1, recoBitmap);
+        orderHistory.addOrder(order);
 
         goto_Kiosk_R_F_O_H.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_O_H);

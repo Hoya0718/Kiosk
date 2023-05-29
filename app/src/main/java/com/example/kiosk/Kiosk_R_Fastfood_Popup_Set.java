@@ -57,9 +57,9 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
 
         burgerBitmap = BitmapFactory.decodeByteArray(burgerArray, 0, burgerArray.length);
 
-//        OrderHistory orderHistory = (OrderHistory) getApplicationContext();
-//        Order order = new Order(burgerName, burger, 1, burgerBitmap);
-//        orderHistory.addOrder(order);
+        myapp orderHistory = (myapp) getApplicationContext();
+        Order order = new Order(burgerName, burger, 1, burgerBitmap);
+        orderHistory.addOrder(order);
 
         goto_Kiosk_R_F_M_Bp.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_Bp);

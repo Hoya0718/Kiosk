@@ -197,14 +197,14 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
 
         }
 
-//        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-//        float scale = (float) (1024/(float)sideBitmap.getWidth());
-//        int image_w = (int) (sideBitmap.getWidth() * scale);
-//        int image_h = (int) (sideBitmap.getHeight() * scale);
-//        Bitmap sideResize = Bitmap.createScaledBitmap(sideBitmap, image_w, image_h, true);
-//        sideResize.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-//        byte[] sideArray = stream.toByteArray();
-//        goto_Kiosk_R_F_P_D.putExtra("sideImage", sideArray);
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        float scale = (float) (1024/(float)sideBitmap.getWidth());
+        int image_w = (int) (sideBitmap.getWidth() * scale);
+        int image_h = (int) (sideBitmap.getHeight() * scale);
+        Bitmap sideResize = Bitmap.createScaledBitmap(sideBitmap, image_w, image_h, true);
+        sideResize.compress(Bitmap.CompressFormat.JPEG, 70, stream);
+        byte[] sideArray = stream.toByteArray();
+        goto_Kiosk_R_F_P_D.putExtra("sideImage", sideArray);
 
         goto_Kiosk_R_F_P_D.putExtra("side", side);
         goto_Kiosk_R_F_P_D.putExtra("sideName", sideName);

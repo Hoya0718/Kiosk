@@ -68,10 +68,48 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
     // 대구/경북
     private Button eastdaegu_btn, westdaegu_btn, gyeongju_btn;
 
+    private List<String> list;
+    private ListView listView;
+    private EditText editSearch;
+    private SearchAdapter adapter;
+    private ArrayList<String> arraylist;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk16);
+
+        editSearch = findViewById(R.id.editSearch);
+        listView = findViewById(R.id.listView);
+
+        list = new ArrayList<String>();
+
+        settingList();
+
+        arraylist = new ArrayList<String>();
+        arraylist.addAll(list);
+
+        adapter = new SearchAdapter(list, this);
+
+        listView.setAdapter(adapter);
+
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i , int i1, int i2) {
+
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String text = editSearch.getText().toString();
+                search(text);
+            }
+        });
+
+
 
         sound = (myapp) getApplication();
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -1069,9 +1107,25 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         }
     }
 
+    public void search(String charText) {
+        list.clear();
 
-    private void performSearch(String query) {
-        Toast.makeText(this, "검색어 : " + query, Toast.LENGTH_SHORT).show();
+        if(charText.length() == 0) {
+            list.addAll(arraylist);
+        }
+        else {
+            for(int i = 0; i < arraylist.size(); i++) {
+                if(arraylist.get(i).toLowerCase(Locale.getDefault()).contains(charText)) {
+                    list.add(arraylist.get(i));
+                }
+            }
+        }
+        adapter.notifyDataSetChanged();
+    }
+
+    private void settingList() {
+        list.add("동서울"); list.add("센트럴시티"); list.add("나주"); list.add("충주");
+
     }
     private void speakText(String text) {
 

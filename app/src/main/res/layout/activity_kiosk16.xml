@@ -7,12 +7,10 @@
     android:orientation="vertical"
     tools:context=".Kiosk_16">
 
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView"
+    <EditText
+        android:id="@+id/editSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:iconifiedByDefault="false"
         app:queryHint = "목적지를 입력하세요"
         android:textSize="20sp"
         android:visibility="visible"/>
@@ -22,6 +20,7 @@
         android:layout_below="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:divider="#999999"
         android:dividerHeight="1dp"
         android:visibility="gone">
 

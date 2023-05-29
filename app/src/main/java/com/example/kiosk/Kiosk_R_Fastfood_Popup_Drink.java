@@ -213,14 +213,14 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
 
         }
 
-//        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-//        float scale = (float) (1024/(float)drinkBitmap.getWidth());
-//        int image_w = (int) (drinkBitmap.getWidth() * scale);
-//        int image_h = (int) (drinkBitmap.getHeight() * scale);
-//        Bitmap drinkResize = Bitmap.createScaledBitmap(drinkBitmap, image_w, image_h, true);
-//        drinkResize.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-//        byte[] drinkArray = stream.toByteArray();
-//        goto_Kiosk_R_F_P_T.putExtra("drinkImage", drinkArray);
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        float scale = (float) (1024/(float)drinkBitmap.getWidth());
+        int image_w = (int) (drinkBitmap.getWidth() * scale);
+        int image_h = (int) (drinkBitmap.getHeight() * scale);
+        Bitmap drinkResize = Bitmap.createScaledBitmap(drinkBitmap, image_w, image_h, true);
+        drinkResize.compress(Bitmap.CompressFormat.JPEG, 70, stream);
+        byte[] drinkArray = stream.toByteArray();
+        goto_Kiosk_R_F_P_T.putExtra("drinkImage", drinkArray);
 
         goto_Kiosk_R_F_P_T.putExtra("drink", drink);
         goto_Kiosk_R_F_P_T.putExtra("drinkName", drinkName);

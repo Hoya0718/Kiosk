@@ -200,7 +200,7 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
         int image_w = (int) (burgerBitmap.getWidth() * scale);
         int image_h = (int) (burgerBitmap.getHeight() * scale);
         Bitmap burgerResize = Bitmap.createScaledBitmap(burgerBitmap, image_w, image_h, true);
-        burgerResize.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+        burgerResize.compress(Bitmap.CompressFormat.JPEG, 70, stream);
         byte[] burgerArray = stream.toByteArray();
         goto_Kiosk_R_F_P_St.putExtra("burgerImage", burgerArray);
 

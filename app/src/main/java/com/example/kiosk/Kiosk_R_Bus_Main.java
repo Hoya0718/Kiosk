@@ -33,7 +33,7 @@ import android.widget.Toast;
 
 public class Kiosk_R_Bus_Main extends AppCompatActivity {
 
-    private Button buy_ticket_btn;//
+    private Button buy_ticket_btn;
     private Button reserved_ticket_btn;
     private Button refund_ticket_btn;
     private TextView textView11;
@@ -51,7 +51,6 @@ public class Kiosk_R_Bus_Main extends AppCompatActivity {
         reserved_ticket_btn = findViewById(R.id.reserved_ticket_btn);
         refund_ticket_btn = findViewById(R.id.refund_ticket_btn);
         textView11 = findViewById(R.id.textView11);
-
 
         Calendar c = Calendar.getInstance();
 
@@ -72,7 +71,7 @@ public class Kiosk_R_Bus_Main extends AppCompatActivity {
         buy_ticket_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_Main.this, Kiosk_15.class);
+                Intent intent = new Intent(Kiosk_R_Bus_Main.this, Kiosk_R_Bus_Destination.class);
                 startActivity(intent);
             }
 
@@ -80,7 +79,15 @@ public class Kiosk_R_Bus_Main extends AppCompatActivity {
         reserved_ticket_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_Main.this, Kiosk_14_reserved.class);
+                Intent intent = new Intent(Kiosk_R_Bus_Main.this, Kiosk_R_Bus_Reserved.class);
+                startActivity(intent);
+            }
+        });
+
+        refund_ticket_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Kiosk_R_Bus_Main.this, Kiosk_R_Bus_Refund.class);
                 startActivity(intent);
             }
         });

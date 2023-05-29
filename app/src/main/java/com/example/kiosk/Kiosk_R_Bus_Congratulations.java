@@ -32,7 +32,7 @@ public class Kiosk_R_Bus_Congratulations extends AppCompatActivity {
         b_backbegin_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_Congratulations.this, Kiosk_5.class);
+                Intent intent = new Intent(Kiosk_R_Bus_Congratulations.this, Kiosk_R_Part.class);
                 startActivity(intent);
             }
 

@@ -28,6 +28,12 @@
             android:name=".Kiosk_R_Bus_Refund"
             android:exported="false"/>
         <activity
+            android:name=".Kiosk_R_Bus_Reserved"
+            android:exported="false"/>
+        <activity
+            android:name=".Kiosk_R_Bus_Reserved_1"
+            android:exported="false"/>
+        <activity
             android:name=".Kiosk_R_Bus_SelectDestination"
             android:exported="false"/>
         <activity

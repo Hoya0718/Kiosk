@@ -21,11 +21,19 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
-    private String destination = "목적지"; //목적지
-    private String price = "표 가격";//
+    private String departuretime = "출발 시간";
+    private String destination = "목적지";
+    private String price = "표 가격";
     private String seat = "좌석 번호";
 
-    private TextView textView5, textView6, textView12, textView14, textView16, textView20;
+    private TextView textView2, textView3, textView5, textView6, textView12, textView14, textView16, textView20;
+    private TextToSpeech tts;
+    private int currentVolume;
+    private AudioManager audioManager;
+    private myapp sound;
+    private myapp text_size;
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
 
     private Button b_cancel_btn; //취소하기
     private Button b_payment_btn; //결제하기
@@ -36,6 +44,13 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_bus_verifyticket);
 
+        sound = (myapp) getApplication();
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+        text_size = (myapp) getApplication();
+
+        textView2 = findViewById(R.id.textView2);
+        textView3 = findViewById(R.id.textView3);
         textView5 = findViewById(R.id.textView5);
         textView6 = findViewById(R.id.textView6);
         textView12 = findViewById(R.id.textView12);
@@ -47,10 +62,12 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String destination = intent.getStringExtra("desnination");
+        String destination = intent.getStringExtra("destination");
         String bus = intent.getStringExtra("bus");
         String seat = intent.getStringExtra("seat");
+        String departuretime = intent.getStringExtra("departuretime");
 
+        textView3.setText(departuretime);
         textView5.setText(destination);
         textView16.setText(bus);
         textView20.setText(seat);
@@ -65,7 +82,6 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         b_payment_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,4 +92,5 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
 
     }
 }
+
 

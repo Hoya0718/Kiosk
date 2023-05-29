@@ -54,10 +54,8 @@ public class Kiosk_R_Bus_SelectBustype extends AppCompatActivity {
         soldout3_btn = findViewById(R.id.soldout3_btn);
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
 
-
         Intent intent = getIntent();
         String destination = intent.getStringExtra("destination");
-
 
         textView18 = findViewById(R.id.textView18);
         if (destination != null) {

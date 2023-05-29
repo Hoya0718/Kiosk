@@ -18,7 +18,6 @@ import android.widget.TextView;
 import java.util.Locale;
 
 public class Kiosk_18 extends AppCompatActivity {
-    String departuretime;
     private TextToSpeech tts;//
     private myapp sound;
     private int currentVolume;
@@ -120,7 +119,7 @@ public class Kiosk_18 extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                                intent.putExtra("departuretime", departuretime);
+                                intent.putExtra("departuretime", "8시 30분");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "우등버스");
                                 intent.putExtra("price", "25,000원");
@@ -128,7 +127,7 @@ public class Kiosk_18 extends AppCompatActivity {
                                 startActivity(intent);
                             }
                             else {
-                                intent.putExtra("departuretime", departuretime);
+                                intent.putExtra("departuretime", "8 : 30");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "Honor bus");
                                 intent.putExtra("price", "25,000won");
@@ -144,7 +143,7 @@ public class Kiosk_18 extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                                intent.putExtra("departuretime", departuretime);
+                                intent.putExtra("departuretime", "9시 40분");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "고속버스");
                                 intent.putExtra("price", "20,000원");
@@ -152,7 +151,7 @@ public class Kiosk_18 extends AppCompatActivity {
                                 startActivity(intent);
                             }
                             else {
-                                intent.putExtra("departuretime", departuretime);
+                                intent.putExtra("departuretime", "09 : 40");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "Express bus");
                                 intent.putExtra("price", "20,000won");
@@ -166,7 +165,7 @@ public class Kiosk_18 extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                                intent.putExtra("departuretime", departuretime);
+                                intent.putExtra("departuretime", "10시 00분");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "일반버스");
                                 intent.putExtra("price", "15,000원");
@@ -174,7 +173,7 @@ public class Kiosk_18 extends AppCompatActivity {
                                 startActivity(intent);
                             }
                             else{
-                                intent.putExtra("departuretime", departuretime);
+                                intent.putExtra("departuretime", "10 : 00");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", "Regular bus");
                                 intent.putExtra("price", "15,000won");

@@ -25,7 +25,6 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     private int total;
     private int count;
     private String burgerName;
-    private String burgerSize;
     private String sideName;
     private String drinkName;
     private byte[] burgerArray;
@@ -33,7 +32,6 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     private byte[] drinkArray;
 
     private TextView burger_text;
-    private TextView size_text;
     private TextView total_text;
 
     private TextView set_burger_text;
@@ -46,13 +44,16 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
 
     private TextView count_text;
 
+    private Bitmap burgerBitmap;
+    private Bitmap sideBitmap;
+    private Bitmap drinkBitmap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_total);
 
         burger_text = findViewById(R.id.burger_text);
-        size_text = findViewById(R.id.size_text);
         total_text = findViewById(R.id.total_text);
 
         set_burger_text = findViewById(R.id.set_burger_text);
@@ -72,7 +73,6 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
             burger = intent.getIntExtra("burger", 0);
             burgerName = intent.getStringExtra("burgerName");
             burgerArray = intent.getByteArrayExtra("burgerImage");
-            burgerSize = intent.getStringExtra("burgerSize");
 
             side = intent.getIntExtra("side", 0);
             sideName = intent.getStringExtra("sideName");
@@ -87,10 +87,8 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
 
             if (burgerName != null) {
                 burger_text.setText(burgerName);
-                set_burger_text.setText(burgerName);
-            }
-            if (burgerSize != null) {
-                size_text.setText(burgerSize);
+                String set_burger = burgerName.replaceAll("\\s-\\s(라지\\s)?세트", "");
+                set_burger_text.setText(set_burger);
             }
             if (sideName != null) {
                 set_side_text.setText(sideName);
@@ -100,15 +98,15 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
             }
 
             if (burgerArray != null) {
-                Bitmap burgerBitmap = BitmapFactory.decodeByteArray(burgerArray, 0, burgerArray.length);
+                burgerBitmap = BitmapFactory.decodeByteArray(burgerArray, 0, burgerArray.length);
                 set_burger_img.setImageBitmap(burgerBitmap);
             }
             if (sideArray != null) {
-                Bitmap sideBitmap = BitmapFactory.decodeByteArray(sideArray, 0, sideArray.length);
+                sideBitmap = BitmapFactory.decodeByteArray(sideArray, 0, sideArray.length);
                 set_side_img.setImageBitmap(sideBitmap);
             }
             if (drinkArray != null) {
-                Bitmap drinkBitmap = BitmapFactory.decodeByteArray(drinkArray, 0, drinkArray.length);
+                drinkBitmap = BitmapFactory.decodeByteArray(drinkArray, 0, drinkArray.length);
                 set_drink_img.setImageBitmap(drinkBitmap);
             }
         }
@@ -137,7 +135,6 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         goto_Kiosk_R_F_P_D.putExtra("burger", burger);
         goto_Kiosk_R_F_P_D.putExtra("burgerName", burgerName);
         goto_Kiosk_R_F_P_D.putExtra("burgerImage", burgerArray);
-        goto_Kiosk_R_F_P_D.putExtra("burgerSize", burgerSize);
 
         goto_Kiosk_R_F_P_D.putExtra("side", side);
         goto_Kiosk_R_F_P_D.putExtra("sideName", sideName);
@@ -154,6 +151,10 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
 
         total *= count;
         value += total;
+
+//        OrderHistory orderHistory = (OrderHistory) getApplicationContext();
+//        Order order = new Order(burgerName, total, count, burgerBitmap);
+//        orderHistory.addOrder(order);
 
         goto_Kiosk_R_F_M_B.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_M_B);

@@ -23,12 +23,10 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
     private int burger;
     private int side;
     private String burgerName;
-    private String burgerSize;
     private String sideName;
     private byte[] burgerArray;
 
     private TextView burger_text;
-    private TextView size_text;
 
     private TextView snacksan_text;
     private TextView snackshu_text;
@@ -64,7 +62,6 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_side);
 
         burger_text = findViewById(R.id.burger_text);
-        size_text = findViewById(R.id.size_text);
 
         snacksan_text = findViewById(R.id.snacksan_text);
         snackshu_text = findViewById(R.id.snackshu_text);
@@ -99,13 +96,9 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
             burger = intent.getIntExtra("burger", 0);
             burgerName = intent.getStringExtra("burgerName");
             burgerArray = intent.getByteArrayExtra("burgerImage");
-            burgerSize = intent.getStringExtra("burgerSize");
 
             if (burgerName != null) {
                 burger_text.setText(burgerName);
-            }
-            if (burgerSize != null) {
-                size_text.setText(burgerSize);
             }
         }
 
@@ -119,7 +112,6 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         goto_Kiosk_R_F_P_D.putExtra("burger", burger);
         goto_Kiosk_R_F_P_D.putExtra("burgerName", burgerName);
         goto_Kiosk_R_F_P_D.putExtra("burgerImage", burgerArray);
-        goto_Kiosk_R_F_P_D.putExtra("burgerSize", burgerSize);
 
         switch (view.getId()) {
 
@@ -215,10 +207,11 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         Intent goto_Kiosk_R_F_P_Sz = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Size.class);
         goto_Kiosk_R_F_P_Sz.putExtra("value", value);
 
+        burgerName = burgerName.replaceAll("\\s-\\s(라지\\s)?세트", "");
+
         goto_Kiosk_R_F_P_Sz.putExtra("burger", burger);
         goto_Kiosk_R_F_P_Sz.putExtra("burgerName", burgerName);
         goto_Kiosk_R_F_P_Sz.putExtra("burgerImage", burgerArray);
-        goto_Kiosk_R_F_P_Sz.putExtra("burgerSize", burgerSize);
         startActivity(goto_Kiosk_R_F_P_Sz);
     }
 

@@ -24,14 +24,12 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
     private int side;
     private int drink;
     private String burgerName;
-    private String burgerSize;
     private String sideName;
     private String drinkName;
     private byte[] burgerArray;
     private byte[] sideArray;
 
     private TextView burger_text;
-    private TextView size_text;
     private TextView side_text;
 
     private TextView chistr_text;
@@ -68,7 +66,6 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_drink);
 
         burger_text = findViewById(R.id.burger_text);
-        size_text = findViewById(R.id.size_text);
         side_text = findViewById(R.id.side_text);
 
         chistr_text = findViewById(R.id.chistr_text);
@@ -104,7 +101,6 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
             burgerName = intent.getStringExtra("burgerName");
             burgerArray = intent.getByteArrayExtra("burgerImage");
             burger = intent.getIntExtra("burger", 0);
-            burgerSize = intent.getStringExtra("burgerSize");
 
             side = intent.getIntExtra("side", 0);
             sideName = intent.getStringExtra("sideName");
@@ -112,9 +108,6 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
 
             if (burgerName != null) {
                 burger_text.setText(burgerName);
-            }
-            if (burgerSize != null) {
-                size_text.setText(burgerSize);
             }
             if (sideName != null) {
                 side_text.setText(sideName);
@@ -131,7 +124,6 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
         goto_Kiosk_R_F_P_T.putExtra("burger", burger);
         goto_Kiosk_R_F_P_T.putExtra("burgerName", burgerName);
         goto_Kiosk_R_F_P_T.putExtra("burgerImage", burgerArray);
-        goto_Kiosk_R_F_P_T.putExtra("burgerSize", burgerSize);
 
         goto_Kiosk_R_F_P_T.putExtra("side", side);
         goto_Kiosk_R_F_P_T.putExtra("sideName", sideName);
@@ -234,11 +226,10 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
         goto_Kiosk_R_F_P_Sd.putExtra("burger", burger);
         goto_Kiosk_R_F_P_Sd.putExtra("burgerName", burgerName);
         goto_Kiosk_R_F_P_Sd.putExtra("burgerImage", burgerArray);
-        goto_Kiosk_R_F_P_Sd.putExtra("burgerSize", burgerSize);
 
         goto_Kiosk_R_F_P_Sd.putExtra("side", side);
-        goto_Kiosk_R_F_P_Sd.putExtra("burgerName", sideName);
-        goto_Kiosk_R_F_P_Sd.putExtra("burgerImage", sideArray);
+        goto_Kiosk_R_F_P_Sd.putExtra("sideName", sideName);
+        goto_Kiosk_R_F_P_Sd.putExtra("sideImage", sideArray);
         startActivity(goto_Kiosk_R_F_P_Sd);
     }
 

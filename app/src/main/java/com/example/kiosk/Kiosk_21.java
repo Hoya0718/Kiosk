@@ -70,11 +70,11 @@ public class Kiosk_21 extends AppCompatActivity {
         b_payment_btn.setTextSize(text_size.getId());
 
         Intent intent = getIntent();
-
+        String departuretime = intent.getStringExtra("departuretime");
         String destination = intent.getStringExtra("destination");
         String bus = intent.getStringExtra("bus");
         String seat = intent.getStringExtra("seat");
-        String departuretime = intent.getStringExtra("departuretime");
+
 
         textView3.setText(departuretime);
         textView5.setText(destination);

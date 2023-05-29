@@ -155,7 +155,6 @@ public class Kiosk_14_refund extends AppCompatActivity {
     }
     protected void onPause() {
         if (tts != null) {
-            // TTS 발화 중지
             tts.stop();
         }
         super.onPause();

@@ -92,7 +92,6 @@ public class Kiosk_R_Bus_Reserved_1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_R_Bus_Reserved_1.this, Kiosk_R_Bus_Reserved.class);
-                tts.shutdown();
                 startActivity(intent);
             }
         });
@@ -101,7 +100,6 @@ public class Kiosk_R_Bus_Reserved_1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_R_Bus_Reserved_1.this, Kiosk_R_Bus_Congratulations.class);
-                tts.shutdown();
                 startActivity(intent);
             }
         });

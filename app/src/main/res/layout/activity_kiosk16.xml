@@ -8,12 +8,14 @@
     tools:context=".Kiosk_16">
 
     <EditText
-        android:id="@+id/editSearch"
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:queryHint = "목적지를 입력하세요"
+        app:iconifiedByDefault="true"
+        android:singleLine="true"
         android:textSize="20sp"
-        android:visibility="visible"/>
+        android:visibility="visible"
+        app:queryHint="목적지를 입력하세요" />
 
     <ListView
         android:id="@+id/listView"

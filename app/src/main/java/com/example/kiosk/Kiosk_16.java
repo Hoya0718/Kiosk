@@ -1,7 +1,6 @@
 package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
@@ -19,6 +18,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -70,7 +70,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
 
     private List<String> list;
     private ListView listView;
-    private EditText editSearch;
+    private EditText editText;
     private SearchAdapter adapter;
     private ArrayList<String> arraylist;
 
@@ -79,7 +79,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk16);
 
-        editSearch = findViewById(R.id.editSearch);
+        editText = findViewById(R.id.editText);
         listView = findViewById(R.id.listView);
 
         list = new ArrayList<String>();
@@ -93,7 +93,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
 
         listView.setAdapter(adapter);
 
-        editSearch.addTextChangedListener(new TextWatcher() {
+        editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -104,12 +104,10 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
             }
             @Override
             public void afterTextChanged(Editable editable) {
-                String text = editSearch.getText().toString();
+                String text = editText.getText().toString();
                 search(text);
             }
         });
-
-
 
         sound = (myapp) getApplication();
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);

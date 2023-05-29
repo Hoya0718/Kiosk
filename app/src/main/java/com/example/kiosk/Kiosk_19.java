@@ -21,6 +21,7 @@ import org.w3c.dom.Text;
 import java.util.Locale;
 
 public class Kiosk_19 extends AppCompatActivity {
+    String departuretime;
     private TextToSpeech tts;//
     private myapp sound;
     private int currentVolume;
@@ -101,30 +102,32 @@ public class Kiosk_19 extends AppCompatActivity {
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("앉고 싶은 좌석를 예매할 수 있는 화면입니다." +
-                                "매진이라고 써진 좌석은 다른 사람이 이미 예약해서" +
-                                "선택할 수 없는 좌석입니다. 다른 좌석을 골라주세요.");
+                        speakText("앉고 싶은 좌석를 예매할 수 있는 화면입니다. 버스 좌석 번호는 앞 자리의 운전석을 기준으로 배정되어있습니다." +
+                                "매진이라고 써진 좌석은 다른 사람이 이미 예약해서 선택할 수 없는 좌석입니다. 다른 좌석을 골라주세요.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("This is a screen where you can reserve a seat you want to sit on." +
+                                "Bus seat numbers are occupied based on the production seat in the front seat." +
                                 "Seats marked sold out are seats that have already been reserved by someone else and cannot be selected." +
                                 "Choose a different seat");
                     }
 
 
-                    b_6_btn.setOnClickListener(new View.OnClickListener() {
+                    b_3_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 String seat = intent1.getStringExtra("seat");
+                                intent.putExtra("departuretime", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "6번");
+                                intent.putExtra("seat", "3번");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
@@ -132,12 +135,14 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                             else{
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 String seat = intent1.getStringExtra("seat");
+                                intent.putExtra("departuretime", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "6");
+                                intent.putExtra("seat", "3");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
@@ -145,68 +150,6 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-
-                    b_8_btn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                                Intent intent1 = getIntent();
-                                String bus = intent1.getStringExtra("bus");
-                                String destination = intent1.getStringExtra("destination");
-                                intent.putExtra("destination", destination);
-                                intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "8번");
-                                String price = intent1.getStringExtra("price");
-                                intent.putExtra("price", price);
-                                tts.shutdown();
-                                startActivity(intent);
-                            }
-                            else {
-                                Intent intent1 = getIntent();
-                                String bus = intent1.getStringExtra("bus");
-                                String destination = intent1.getStringExtra("destination");
-                                intent.putExtra("destination", destination);
-                                intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "8");
-                                String price = intent1.getStringExtra("price");
-                                intent.putExtra("price", price);
-                                tts.shutdown();
-                                startActivity(intent);
-                            }
-                        }
-                    });
-                    b_7_btn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
-                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                                Intent intent1 = getIntent();
-                                String bus = intent1.getStringExtra("bus");
-                                String destination = intent1.getStringExtra("destination");
-                                intent.putExtra("destination", destination);
-                                intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "7번");
-                                String price = intent1.getStringExtra("price");
-                                intent.putExtra("price", price);
-                                tts.shutdown();
-                                startActivity(intent);
-                            }
-                            else {
-                                Intent intent1 = getIntent();
-                                String bus = intent1.getStringExtra("bus");
-                                String destination = intent1.getStringExtra("destination");
-                                intent.putExtra("destination", destination);
-                                intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "7");
-                                String price = intent1.getStringExtra("price");
-                                intent.putExtra("price", price);
-                                tts.shutdown();
-                                startActivity(intent);
-                            }
-                        }
-                    });
-
 
                     b_4_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -214,6 +157,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 intent.putExtra("destination", destination);
@@ -226,6 +170,7 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                             else {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 intent.putExtra("destination", destination);
@@ -238,17 +183,18 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-                    b_20_btn.setOnClickListener(new View.OnClickListener() {
+                    b_5_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "20번");
+                                intent.putExtra("seat", "5번");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
@@ -256,11 +202,12 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                             else {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "20");
+                                intent.putExtra("seat", "5");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
@@ -268,17 +215,20 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-                    b_19_btn.setOnClickListener(new View.OnClickListener() {
+
+
+                    b_6_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "19번");
+                                intent.putExtra("seat", "6번");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
@@ -286,11 +236,12 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                             else {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "19");
+                                intent.putExtra("seat", "6");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
@@ -298,17 +249,18 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
-                    b_13_btn.setOnClickListener(new View.OnClickListener() {
+                    b_10_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "13번");
+                                intent.putExtra("seat", "10번");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
@@ -316,11 +268,12 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                             else {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
-                                intent.putExtra("seat", "13");
+                                intent.putExtra("seat", "10");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
@@ -351,6 +304,66 @@ public class Kiosk_19 extends AppCompatActivity {
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "14");
+                                String price = intent1.getStringExtra("price");
+                                intent.putExtra("price", price);
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                        }
+                    });
+                    b_15_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                                Intent intent1 = getIntent();
+                                String bus = intent1.getStringExtra("bus");
+                                String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", bus);
+                                intent.putExtra("seat", "15번");
+                                String price = intent1.getStringExtra("price");
+                                intent.putExtra("price", price);
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else {
+                                Intent intent1 = getIntent();
+                                String bus = intent1.getStringExtra("bus");
+                                String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", bus);
+                                intent.putExtra("seat", "15");
+                                String price = intent1.getStringExtra("price");
+                                intent.putExtra("price", price);
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                        }
+                    });
+                    b_16_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                                Intent intent1 = getIntent();
+                                String bus = intent1.getStringExtra("bus");
+                                String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", bus);
+                                intent.putExtra("seat", "16번");
+                                String price = intent1.getStringExtra("price");
+                                intent.putExtra("price", price);
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else {
+                                Intent intent1 = getIntent();
+                                String bus = intent1.getStringExtra("bus");
+                                String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", bus);
+                                intent.putExtra("seat", "16");
                                 String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();

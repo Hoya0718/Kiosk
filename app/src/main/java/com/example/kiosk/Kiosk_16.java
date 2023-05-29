@@ -30,7 +30,7 @@ import java.util.Locale;
 
 public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener {
 
-    private TextToSpeech tts;//
+    private TextToSpeech tts;
     private myapp sound;
     private myapp text_size;
     private AnimationDrawable anim;
@@ -44,6 +44,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
     private Button digeut_btn, rieul_btn, mieum_btn, bieup_btn;
     private Button siot_btn, ieung_btn, jieut_btn, chieut_btn;
     private Button kieuk_btn, tieut_btn, pieup_btn, hieut_btn;
+    private Button button3;
 
     // 서울
     private Button central_btn, eastseoul_btn;
@@ -105,6 +106,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         busan_bus_btn = findViewById(R.id.busan_bus_btn); ulsan_btn = findViewById(R.id.ulsan_btn);
         gimhae_btn = findViewById(R.id.gimhae_btn); eastdaegu_btn = findViewById(R.id.eastdaegu_btn);
         westdaegu_btn = findViewById(R.id.westdaegu_btn); gyeongju_btn = findViewById(R.id.gyeongju_btn);
+        button3 = findViewById(R.id.button3);
 
         giyeok_btn.setTextSize(text_size.getId()); nieun_btn.setTextSize(text_size.getId());
         digeut_btn.setTextSize(text_size.getId()); rieul_btn.setTextSize(text_size.getId());
@@ -134,6 +136,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         busan_bus_btn.setTextSize(text_size.getId()); ulsan_btn.setTextSize(text_size.getId());
         gimhae_btn.setTextSize(text_size.getId()); eastdaegu_btn.setTextSize(text_size.getId());
         westdaegu_btn.setTextSize(text_size.getId()); gyeongju_btn.setTextSize(text_size.getId());
+        button3.setTextSize(text_size.getId());
 
         busan_btn.setOnClickListener(this); jeonbuk_btn.setOnClickListener(this);
         seoul_btn.setOnClickListener(this); incheon_btn.setOnClickListener(this);
@@ -154,7 +157,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("이곳에서는 목적지를 선택하실 수 있습니다. 서울, 강원 등의 버튼을 누르면 그 지역에 있는 버스 정류장을 찾을 수 있습니다." +
+                        speakText("이곳에서는 목적지를 선택하실 수 있습니다. 지역 이름 버튼을 누르면 그 지역에 있는 버스 정류장을 찾을 수 있습니다." +
                                     "또 ㄱ,ㄴ,ㄷ 버튼을 누르면 그 단어로 시작하는 정류장들을 찾을 수 있습니다." +
                                     "동서울 버스 정류장을 찾아볼까요? 서울 버튼 혹은 ㄷ 버튼을 눌러주세요.");
                     }
@@ -470,6 +473,15 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_16.this, Kiosk_18.class);
                             intent.putExtra("destination", "경주");
+                            tts.shutdown();
+                            startActivity(intent);
+                        }
+                    });
+
+                    button3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_16.this, Kiosk_15.class);
                             tts.shutdown();
                             startActivity(intent);
                         }

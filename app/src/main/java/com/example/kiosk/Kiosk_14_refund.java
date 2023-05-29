@@ -116,10 +116,7 @@ public class Kiosk_14_refund extends AppCompatActivity {
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
-                            b_cancel_btn.setBackgroundResource(R.drawable.anim_list);
                             b_payment_btn.setBackgroundResource(R.drawable.anim_list);
-                            anim = (AnimationDrawable) b_cancel_btn.getBackground();
-                            anim.start();
                             anim = (AnimationDrawable) b_payment_btn.getBackground();
                             anim.start();
                         }
@@ -144,7 +141,6 @@ public class Kiosk_14_refund extends AppCompatActivity {
     }
 
     private void speakText(String text) {
-
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");

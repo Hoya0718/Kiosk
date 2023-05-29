@@ -32,7 +32,7 @@ import android.widget.Toast;
 
 
 public class Kiosk_14 extends AppCompatActivity {
-    private int currentVolume;//
+    private int currentVolume;
     private AudioManager audioManager;
     private TextToSpeech tts;
     private myapp sound;

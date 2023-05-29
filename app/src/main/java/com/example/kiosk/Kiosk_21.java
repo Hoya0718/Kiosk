@@ -21,11 +21,12 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class Kiosk_21 extends AppCompatActivity {
+    private String departuretime = "출발 시간";
     private String destination = "목적지";
     private String price = "표 가격";
     private String seat = "좌석 번호";
 
-    private TextView textView5, textView6, textView12, textView14, textView16, textView20;
+    private TextView textView3, textView5, textView6, textView12, textView14, textView16, textView20;
     private TextToSpeech tts;
     private int currentVolume;
     private AudioManager audioManager;
@@ -48,6 +49,7 @@ public class Kiosk_21 extends AppCompatActivity {
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
 
+        textView3 = findViewById(R.id.textView3);
         textView5 = findViewById(R.id.textView5);
         textView6 = findViewById(R.id.textView6);
         textView12 = findViewById(R.id.textView12);
@@ -57,6 +59,7 @@ public class Kiosk_21 extends AppCompatActivity {
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
         b_payment_btn = findViewById(R.id.b_payment_btn);
 
+        textView3.setTextSize(text_size.getId());
         textView5.setTextSize(text_size.getId());
         textView6.setTextSize(text_size.getId());
         textView12.setTextSize(text_size.getId());
@@ -71,7 +74,9 @@ public class Kiosk_21 extends AppCompatActivity {
         String destination = intent.getStringExtra("destination");
         String bus = intent.getStringExtra("bus");
         String seat = intent.getStringExtra("seat");
+        String departuretime = intent.getStringExtra("departuretime");
 
+        textView3.setText(departuretime);
         textView5.setText(destination);
         textView16.setText(bus);
         textView20.setText(seat);

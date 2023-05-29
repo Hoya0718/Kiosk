@@ -13,7 +13,6 @@
         android:layout_height="0dp"
         android:layout_marginTop="70dp"
         android:layout_weight="5"
-        android:onClick="goto_kiosk_5"
         app:srcCompat="@drawable/congraturation"/>
 
     <Button

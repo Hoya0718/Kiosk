@@ -1,21 +1,13 @@
 package com.example.kiosk;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
-import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.speech.tts.TextToSpeech;
-import android.speech.tts.UtteranceProgressListener;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Locale;
 
 public class Kiosk_R_Bus_Refund extends AppCompatActivity {
 
@@ -27,7 +19,7 @@ public class Kiosk_R_Bus_Refund extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk14_refund);
+        setContentView(R.layout.activity_kiosk_r_bus_refund);
 
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
         b_payment_btn = findViewById(R.id.b_payment_btn);

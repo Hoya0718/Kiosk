@@ -3,6 +3,7 @@ package com.example.kiosk;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -14,6 +15,7 @@ import android.speech.tts.UtteranceProgressListener;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -68,46 +70,15 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
     // 대구/경북
     private Button eastdaegu_btn, westdaegu_btn, gyeongju_btn;
 
-    private List<String> list;
-    private ListView listView;
-    private EditText editText;
-    private SearchAdapter adapter;
-    private ArrayList<String> arraylist;
+    private TextView textView1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk16);
 
-        editText = findViewById(R.id.editText);
-        listView = findViewById(R.id.listView);
-
-        list = new ArrayList<String>();
-
-        settingList();
-
-        arraylist = new ArrayList<String>();
-        arraylist.addAll(list);
-
-        adapter = new SearchAdapter(list, this);
-
-        listView.setAdapter(adapter);
-
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i , int i1, int i2) {
-
-            }
-            @Override
-            public void afterTextChanged(Editable editable) {
-                String text = editText.getText().toString();
-                search(text);
-            }
-        });
+        textView1 = findViewById(R.id.textView1);
 
         sound = (myapp) getApplication();
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -522,6 +493,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                             startActivity(intent);
                         }
                     });
+
                 }
             }
         });
@@ -574,49 +546,78 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.seoul_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (eastseoul_btn.getVisibility() == View.GONE) {
                     eastseoul_btn.setVisibility(View.VISIBLE);
                     central_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     eastseoul_btn.setVisibility(View.GONE);
                     central_btn.setVisibility(View.GONE);
                 }
                 break;
             case R.id.incheon_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (incheonairport_btn.getVisibility() == View.GONE) {
                     incheonairport_btn.setVisibility(View.VISIBLE);
@@ -624,8 +625,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                     suwon_btn.setVisibility(View.VISIBLE);
                     ansan_btn.setVisibility(View.VISIBLE);
                     yongin_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     incheonairport_btn.setVisibility(View.GONE);
                     sungnam_btn.setVisibility(View.GONE);
                     suwon_btn.setVisibility(View.GONE);
@@ -634,139 +634,209 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 }
                 break;
             case R.id.kangwon_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (gangneung_btn.getVisibility() == View.GONE) {
                     gangneung_btn.setVisibility(View.VISIBLE);
                     sokcho_btn.setVisibility(View.VISIBLE);
                     chunchun_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     gangneung_btn.setVisibility(View.GONE);
                     sokcho_btn.setVisibility(View.GONE);
                     chunchun_btn.setVisibility(View.GONE);
                 }
                 break;
             case R.id.sejong_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (daejun_bus_btn.getVisibility() == View.GONE) {
                     daejun_bus_btn.setVisibility(View.VISIBLE);
                     sejong_bus_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     daejun_bus_btn.setVisibility(View.GONE);
                     sejong_bus_btn.setVisibility(View.GONE);
                 }
                 break;
             case R.id.chungnam_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (nonsan_btn.getVisibility() == View.GONE) {
                     nonsan_btn.setVisibility(View.VISIBLE);
                     cheonan_btn.setVisibility(View.VISIBLE);
                     gongju_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     nonsan_btn.setVisibility(View.GONE);
                     cheonan_btn.setVisibility(View.GONE);
                     gongju_btn.setVisibility(View.GONE);
                 }
                 break;
             case R.id.chungbuk_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (cheongju_btn.getVisibility() == View.GONE) {
                     cheongju_btn.setVisibility(View.VISIBLE);
                     chungju_btn.setVisibility(View.VISIBLE);
                     jechun_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     cheongju_btn.setVisibility(View.GONE);
                     chungju_btn.setVisibility(View.GONE);
                     jechun_btn.setVisibility(View.GONE);
                 }
                 break;
             case R.id.kwangju_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (kwangju_bus_btn.getVisibility() == View.GONE) {
                     kwangju_bus_btn.setVisibility(View.GONE);
                     suncheon_btn.setVisibility(View.VISIBLE);
                     damyang_btn.setVisibility(View.VISIBLE);
                     naju_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     kwangju_bus_btn.setVisibility(View.GONE);
                     suncheon_btn.setVisibility(View.GONE);
                     damyang_btn.setVisibility(View.GONE);
@@ -774,115 +844,171 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 }
                 break;
             case R.id.jeonbuk_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (jeonju_btn.getVisibility() == View.GONE) {
                     jeonju_btn.setVisibility(View.VISIBLE);
                     gunsan_btn.setVisibility(View.VISIBLE);
                     namwon_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     jeonju_btn.setVisibility(View.GONE);
                     gunsan_btn.setVisibility(View.GONE);
                     namwon_btn.setVisibility(View.GONE);
                 }
                 break;
             case R.id.busan_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (busan_bus_btn.getVisibility() == View.GONE) {
                     busan_bus_btn.setVisibility(View.VISIBLE);
                     ulsan_btn.setVisibility(View.VISIBLE);
                     gimhae_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     busan_bus_btn.setVisibility(View.GONE);
                     ulsan_btn.setVisibility(View.GONE);
                     gimhae_btn.setVisibility(View.GONE);
                 }
                 break;
             case R.id.daegu_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (eastdaegu_btn.getVisibility() == View.GONE) {
                     eastdaegu_btn.setVisibility(View.VISIBLE);
                     westdaegu_btn.setVisibility(View.VISIBLE);
                     gyeongju_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     eastdaegu_btn.setVisibility(View.GONE);
                     westdaegu_btn.setVisibility(View.GONE);
                     gyeongju_btn.setVisibility(View.GONE);
                 }
                 break;
             case R.id.giyeok_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
-                if(gangneung_btn.getVisibility() == View.GONE) {
+                if (gangneung_btn.getVisibility() == View.GONE) {
                     gangneung_btn.setVisibility(View.VISIBLE);
                     gyeongju_btn.setVisibility(View.VISIBLE);
                     gunsan_btn.setVisibility(View.VISIBLE);
                     kwangju_bus_btn.setVisibility(View.VISIBLE);
                     gongju_btn.setVisibility(View.VISIBLE);
                     gimhae_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     gangneung_btn.setVisibility(View.GONE);
                     gyeongju_btn.setVisibility(View.GONE);
                     gunsan_btn.setVisibility(View.GONE);
@@ -893,28 +1019,42 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 break;
 
             case R.id.nieun_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
-                if(nonsan_btn.getVisibility() == View.GONE) {
+                if (nonsan_btn.getVisibility() == View.GONE) {
                     nonsan_btn.setVisibility(View.VISIBLE);
                     naju_btn.setVisibility(View.VISIBLE);
                     namwon_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     nonsan_btn.setVisibility(View.GONE);
                     naju_btn.setVisibility(View.GONE);
                     namwon_btn.setVisibility(View.GONE);
@@ -922,29 +1062,43 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 break;
 
             case R.id.digeut_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
-                if(eastseoul_btn.getVisibility() == View.GONE) {
+                if (eastseoul_btn.getVisibility() == View.GONE) {
                     eastseoul_btn.setVisibility(View.VISIBLE);
                     daejun_bus_btn.setVisibility(View.VISIBLE);
                     damyang_btn.setVisibility(View.VISIBLE);
                     eastdaegu_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     eastseoul_btn.setVisibility(View.GONE);
                     daejun_bus_btn.setVisibility(View.GONE);
                     damyang_btn.setVisibility(View.GONE);
@@ -953,48 +1107,77 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 break;
 
             case R.id.bieup_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
-                if(busan_bus_btn.getVisibility() == View.GONE) {
+                if (busan_bus_btn.getVisibility() == View.GONE) {
                     busan_bus_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     busan_bus_btn.setVisibility(View.GONE);
                 }
                 break;
 
             case R.id.siot_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
-                if(central_btn.getVisibility() == View.GONE) {
+                if (central_btn.getVisibility() == View.GONE) {
                     central_btn.setVisibility(View.VISIBLE);
                     suwon_btn.setVisibility(View.VISIBLE);
                     sejong_btn.setVisibility(View.VISIBLE);
@@ -1002,8 +1185,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                     suncheon_btn.setVisibility(View.VISIBLE);
                     westdaegu_btn.setVisibility(View.VISIBLE);
                     sungnam_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     central_btn.setVisibility(View.GONE);
                     suwon_btn.setVisibility(View.GONE);
                     sejong_btn.setVisibility(View.GONE);
@@ -1015,29 +1197,43 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 break;
 
             case R.id.ieung_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
-                if(incheonairport_btn.getVisibility() == View.GONE) {
+                if (incheonairport_btn.getVisibility() == View.GONE) {
                     incheonairport_btn.setVisibility(View.VISIBLE);
                     ansan_btn.setVisibility(View.VISIBLE);
                     yongin_btn.setVisibility(View.VISIBLE);
                     ulsan_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     incheonairport_btn.setVisibility(View.GONE);
                     ansan_btn.setVisibility(View.GONE);
                     yongin_btn.setVisibility(View.GONE);
@@ -1046,56 +1242,84 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 break;
 
             case R.id.jieut_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
-                if(jeonju_btn.getVisibility() == View.GONE) {
+                if (jeonju_btn.getVisibility() == View.GONE) {
                     jeonju_btn.setVisibility(View.VISIBLE);
                     jechun_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     jeonju_btn.setVisibility(View.GONE);
                     jechun_btn.setVisibility(View.GONE);
                 }
                 break;
 
             case R.id.chieut_btn:
-                eastseoul_btn.setVisibility(View.GONE); central_btn.setVisibility(View.GONE);
-                incheonairport_btn.setVisibility(View.GONE); sungnam_btn.setVisibility(View.GONE);
-                suwon_btn.setVisibility(View.GONE); ansan_btn.setVisibility(View.GONE);
-                yongin_btn.setVisibility(View.GONE); gangneung_btn.setVisibility(View.GONE);
-                chunchun_btn.setVisibility(View.GONE); sokcho_btn.setVisibility(View.GONE);
-                daejun_bus_btn.setVisibility(View.GONE); sejong_bus_btn.setVisibility(View.GONE);
-                nonsan_btn.setVisibility(View.GONE); cheonan_btn.setVisibility(View.GONE);
-                gongju_btn.setVisibility(View.GONE); cheongju_btn.setVisibility(View.GONE);
-                jechun_btn.setVisibility(View.GONE); chungju_btn.setVisibility(View.GONE);
-                kwangju_bus_btn.setVisibility(View.GONE); suncheon_btn.setVisibility(View.GONE);
-                damyang_btn.setVisibility(View.GONE); naju_btn.setVisibility(View.GONE);
-                jeonju_btn.setVisibility(View.GONE); gunsan_btn.setVisibility(View.GONE);
-                namwon_btn.setVisibility(View.GONE); busan_bus_btn.setVisibility(View.GONE);
-                ulsan_btn.setVisibility(View.GONE); gimhae_btn.setVisibility(View.GONE);
-                eastdaegu_btn.setVisibility(View.GONE); westdaegu_btn.setVisibility(View.GONE);
+                eastseoul_btn.setVisibility(View.GONE);
+                central_btn.setVisibility(View.GONE);
+                incheonairport_btn.setVisibility(View.GONE);
+                sungnam_btn.setVisibility(View.GONE);
+                suwon_btn.setVisibility(View.GONE);
+                ansan_btn.setVisibility(View.GONE);
+                yongin_btn.setVisibility(View.GONE);
+                gangneung_btn.setVisibility(View.GONE);
+                chunchun_btn.setVisibility(View.GONE);
+                sokcho_btn.setVisibility(View.GONE);
+                daejun_bus_btn.setVisibility(View.GONE);
+                sejong_bus_btn.setVisibility(View.GONE);
+                nonsan_btn.setVisibility(View.GONE);
+                cheonan_btn.setVisibility(View.GONE);
+                gongju_btn.setVisibility(View.GONE);
+                cheongju_btn.setVisibility(View.GONE);
+                jechun_btn.setVisibility(View.GONE);
+                chungju_btn.setVisibility(View.GONE);
+                kwangju_bus_btn.setVisibility(View.GONE);
+                suncheon_btn.setVisibility(View.GONE);
+                damyang_btn.setVisibility(View.GONE);
+                naju_btn.setVisibility(View.GONE);
+                jeonju_btn.setVisibility(View.GONE);
+                gunsan_btn.setVisibility(View.GONE);
+                namwon_btn.setVisibility(View.GONE);
+                busan_bus_btn.setVisibility(View.GONE);
+                ulsan_btn.setVisibility(View.GONE);
+                gimhae_btn.setVisibility(View.GONE);
+                eastdaegu_btn.setVisibility(View.GONE);
+                westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
-                if(chunchun_btn.getVisibility() == View.GONE) {
+                if (chunchun_btn.getVisibility() == View.GONE) {
                     chunchun_btn.setVisibility(View.VISIBLE);
                     cheonan_btn.setVisibility(View.VISIBLE);
                     cheongju_btn.setVisibility(View.VISIBLE);
                     chungju_btn.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     chunchun_btn.setVisibility(View.GONE);
                     cheonan_btn.setVisibility(View.GONE);
                     cheongju_btn.setVisibility(View.GONE);
@@ -1103,27 +1327,6 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                 }
                 break;
         }
-    }
-
-    public void search(String charText) {
-        list.clear();
-
-        if(charText.length() == 0) {
-            list.addAll(arraylist);
-        }
-        else {
-            for(int i = 0; i < arraylist.size(); i++) {
-                if(arraylist.get(i).toLowerCase(Locale.getDefault()).contains(charText)) {
-                    list.add(arraylist.get(i));
-                }
-            }
-        }
-        adapter.notifyDataSetChanged();
-    }
-
-    private void settingList() {
-        list.add("동서울"); list.add("센트럴시티"); list.add("나주"); list.add("충주");
-
     }
     private void speakText(String text) {
 

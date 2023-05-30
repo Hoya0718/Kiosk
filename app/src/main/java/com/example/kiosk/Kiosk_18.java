@@ -26,6 +26,8 @@ public class Kiosk_18 extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
+    private String departuretime;
+
     private TextView textView18;
     private TextView textView36;
     private TextView textView17;

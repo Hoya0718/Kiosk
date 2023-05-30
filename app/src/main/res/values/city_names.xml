@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "city_names">
+        <item> Apple </item>
+        <item> Banana </item>
+        <item> Cocoa </item>
+        <item> Delicious </item>
+        <item> Eagle </item>
+    </string-array>
+</resources>

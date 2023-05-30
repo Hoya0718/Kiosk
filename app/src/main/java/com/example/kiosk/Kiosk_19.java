@@ -21,8 +21,7 @@ import org.w3c.dom.Text;
 import java.util.Locale;
 
 public class Kiosk_19 extends AppCompatActivity {
-    String departuretime;
-    private TextToSpeech tts;//
+    private TextToSpeech tts;
     private myapp sound;
     private int currentVolume;
     private AudioManager audioManager;
@@ -136,14 +135,14 @@ public class Kiosk_19 extends AppCompatActivity {
                             else{
                                 Intent intent1 = getIntent();
                                 String departuretime = intent1.getStringExtra("departuretime");
-                                String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                String bus = intent1.getStringExtra("bus");
                                 String seat = intent1.getStringExtra("seat");
+                                String price = intent1.getStringExtra("price");
                                 intent.putExtra("departuretime", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "3");
-                                String price = intent1.getStringExtra("price");
                                 intent.putExtra("price", price);
                                 tts.shutdown();
                                 startActivity(intent);
@@ -160,6 +159,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "4번");
@@ -173,6 +173,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "4");
@@ -192,6 +193,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "5번");
@@ -205,6 +207,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "5");
@@ -226,6 +229,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "6번");
@@ -239,6 +243,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "6");
@@ -258,6 +263,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "10번");
@@ -271,6 +277,7 @@ public class Kiosk_19 extends AppCompatActivity {
                                 String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "10");
@@ -287,8 +294,10 @@ public class Kiosk_19 extends AppCompatActivity {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "14번");
@@ -299,8 +308,10 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                             else {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "14");
@@ -317,8 +328,10 @@ public class Kiosk_19 extends AppCompatActivity {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "15번");
@@ -329,8 +342,10 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                             else {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "15");
@@ -347,8 +362,10 @@ public class Kiosk_19 extends AppCompatActivity {
                             Intent intent = new Intent(Kiosk_19.this, Kiosk_21.class);
                             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "16번");
@@ -359,8 +376,10 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                             else {
                                 Intent intent1 = getIntent();
+                                String departuretime = intent1.getStringExtra("departuretime");
                                 String bus = intent1.getStringExtra("bus");
                                 String destination = intent1.getStringExtra("destination");
+                                intent.putExtra("departure", departuretime);
                                 intent.putExtra("destination", destination);
                                 intent.putExtra("bus", bus);
                                 intent.putExtra("seat", "16");

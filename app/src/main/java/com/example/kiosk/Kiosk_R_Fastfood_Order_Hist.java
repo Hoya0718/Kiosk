@@ -7,10 +7,14 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
 import java.util.Locale;
 
 public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
@@ -19,10 +23,28 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
 
     private TextView value_text;
 
+    private ImageView menu_img;
+    private TextView menu_name_text;
+    private TextView menu_count_text;
+    private TextView menu_price_text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_order_hist);
+
+        myapp orderHistory = (myapp) getApplicationContext();
+        List<Order> orderList = orderHistory.getOrderList();
+
+        menu_img = findViewById(R.id.menu_img);
+        menu_name_text = findViewById(R.id.menu_name_text);
+        menu_count_text = findViewById(R.id.menu_count_text);
+        menu_price_text = findViewById(R.id.menu_price_text);
+
+        menu_img.setImageBitmap(orderList.get(0).getOrderBitmap());
+        menu_name_text.setText(orderList.get(0).getOrderName());
+        menu_count_text.setText(String.valueOf(orderList.get(0).getOrderCount()));
+        menu_price_text.setText(String.valueOf(orderList.get(0).getOrderPrice()));
 
         value_text = findViewById(R.id.value_text);
 

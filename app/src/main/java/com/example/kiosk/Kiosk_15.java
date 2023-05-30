@@ -72,7 +72,7 @@ public class Kiosk_15 extends AppCompatActivity {
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("이 화면에서는 가고 싶은 곳을 선택할 수 있습니다." +
-                                "가고 싶은 곳을 고르기 위해서 목적지 버튼을 눌러주세요." +
+                                "가고 싶은 곳을 고르기 위해서 도착지 버튼을 눌러주세요." +
                                 "만약 처음 화면으로 돌아가고 싶으시면 화면 아래쪽에 있는 처음 화면으로 돌아가기" +
                                 "버튼을 눌러주세요.");
                     }

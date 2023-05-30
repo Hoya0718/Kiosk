@@ -98,7 +98,7 @@ public class Kiosk_27 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("접수완료를 보여주는 창입니다. 접수증 출력을 눌러주세요. 실제 병원에서는 아래에 접수증이 출력이될거에요.");
+                        speakText("접수완료를 보여주는 창입니다. 생년월일, 이름이 본인이 맞으신지 확인하시고 접수증 출력을 눌러보세요. 실제 병원에서는 아래에 접수증이 출력이될거에요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("The registration has been completed, please click Print Receipt. In a real hospital, you will see a receipt below.");

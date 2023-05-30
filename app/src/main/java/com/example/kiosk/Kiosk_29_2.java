@@ -93,7 +93,7 @@ public class Kiosk_29_2 extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("처방전 발행과 결제비용을 보여주는 화면이에요. 처방전과 비용을 확인하시면 돼요. 확인 후  수납여부와 지불하기를 눌러볼까요?");
+                        speakText("처방전 발행과 결제비용을 보여주는 화면이에요. 성명과 주민등록번호로 본인이 맞는지 확인하시고 비용을 확인해보세요. 확인 후  수납여부와 지불하기를 눌러볼까요?");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("This is the screen before the prescription is filled. Make sure you are who you say you are and tap Accept.");

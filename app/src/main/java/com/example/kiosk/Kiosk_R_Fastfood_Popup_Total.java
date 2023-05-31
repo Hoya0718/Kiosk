@@ -149,8 +149,7 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     public void goto_Kiosk_R_F_M_B(View view) {
         Intent goto_Kiosk_R_F_M_B = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
 
-        total *= count;
-        value += total;
+        value += total * count;
 
         burgerName += " - " + sideName + " - " + drinkName;
 

@@ -181,10 +181,10 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                         if (order.getOrderName().equals(textView.getText().toString())) {
                             // 배열에서 가격과 카운트 업데이트
                             order.setOrderCount(currentCount);
-                            // 총합 가격 업데이트
-                            updateTotalPrice(orderList, value_text);
                             // 메뉴 가격 텍스트뷰 업데이트
                             updateMenuPrice(priceTextView, order);
+                            // 총합 가격 업데이트
+                            updateTotalPrice(orderList, value_text);
                             // 이후 필요한 로직 수행
                             // ...
                             break;
@@ -210,10 +210,10 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                         if (order.getOrderName().equals(textView.getText().toString())) {
                             // 배열에서 가격과 카운트 업데이트
                             order.setOrderCount(currentCount);
-                            // 총합 가격 업데이트
-                            updateTotalPrice(orderList, value_text);
                             // 메뉴 가격 텍스트뷰 업데이트
                             updateMenuPrice(priceTextView, order);
+                            // 총합 가격 업데이트
+                            updateTotalPrice(orderList, value_text);
                             // 이후 필요한 로직 수행
                             // ...
                             break;
@@ -249,6 +249,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
         value = totalPrice;
     }
 
+    // 가격을 업데이트하는 메소드
     private void updateMenuPrice(TextView priceTextView, Order order) {
         int menuPrice = order.getOrderPrice() * order.getOrderCount();
         priceTextView.setText(String.valueOf(menuPrice));

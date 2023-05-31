@@ -83,8 +83,7 @@ public class Kiosk_R_Fastfood_Popup_Count extends AppCompatActivity {
     public void goto_Kiosk_R_F_M_Bp(View view) {
         Intent goto_Kiosk_R_F_M_Bp = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
 
-        plus *= count;
-        value+=plus;
+        value+=plus * count;
 
         myapp orderHistory = (myapp) getApplicationContext();
         Order order = new Order(plusName, plus, count, plusBitmap);

@@ -140,6 +140,28 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             plusButton.setText("+");
             plusButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 10);
 
+            // "₩" TextView 생성
+            TextView wonTextView = new TextView(this);
+            wonTextView.setLayoutParams(new LinearLayout.LayoutParams(
+                    0,
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    0.4f
+            ));
+            wonTextView.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+            wonTextView.setText("₩");
+            wonTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+
+            // 메뉴 가격
+            TextView priceTextView = new TextView(this);
+            priceTextView.setLayoutParams(new LinearLayout.LayoutParams(
+                    0,
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    0.9f
+            ));
+            priceTextView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
+            priceTextView.setText(String.valueOf(orderList.get(i).getOrderPrice()));
+            priceTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+
             // "-" 버튼 클릭 이벤트 처리
             minusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -161,6 +183,8 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                             order.setOrderCount(currentCount);
                             // 총합 가격 업데이트
                             updateTotalPrice(orderList, value_text);
+                            // 메뉴 가격 텍스트뷰 업데이트
+                            updateMenuPrice(priceTextView, order);
                             // 이후 필요한 로직 수행
                             // ...
                             break;
@@ -188,6 +212,8 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                             order.setOrderCount(currentCount);
                             // 총합 가격 업데이트
                             updateTotalPrice(orderList, value_text);
+                            // 메뉴 가격 텍스트뷰 업데이트
+                            updateMenuPrice(priceTextView, order);
                             // 이후 필요한 로직 수행
                             // ...
                             break;
@@ -195,28 +221,6 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                     }
                 }
             });
-
-            // "₩" TextView 생성
-            TextView wonTextView = new TextView(this);
-            wonTextView.setLayoutParams(new LinearLayout.LayoutParams(
-                    0,
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    0.4f
-            ));
-            wonTextView.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
-            wonTextView.setText("₩");
-            wonTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-
-            // 메뉴 가격
-            TextView priceTextView = new TextView(this);
-            priceTextView.setLayoutParams(new LinearLayout.LayoutParams(
-                    0,
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    0.9f
-            ));
-            priceTextView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
-            priceTextView.setText(String.valueOf(orderList.get(i).getOrderPrice()));
-            priceTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
 
             // 하위 뷰들을 상위 LinearLayout에 추가
             subLinearLayout.addView(minusButton);
@@ -243,6 +247,11 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
         }
         value_text.setText(String.valueOf(totalPrice));
         value = totalPrice;
+    }
+
+    private void updateMenuPrice(TextView priceTextView, Order order) {
+        int menuPrice = order.getOrderPrice() * order.getOrderCount();
+        priceTextView.setText(String.valueOf(menuPrice));
     }
 
     public void goto_Kiosk_R_F_M(View v){

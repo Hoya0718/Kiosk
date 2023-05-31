@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="goto_Back"
-            android:text="뒤로가기"
+            android:text="@string/back"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 </LinearLayout>

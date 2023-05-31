@@ -56,12 +56,12 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
         switch (view.getId()) {
 
             case R.id.set_Btn:
-                burgerName += " - 세트";
+                burgerName += " - " + set_Btn.getText().toString();
                 break;
 
             case R.id.lar_Btn:
                 burger+=700;
-                burgerName += " - 라지 세트";
+                burgerName += " - " + lar_Btn.getText().toString();
                 break;
 
         }

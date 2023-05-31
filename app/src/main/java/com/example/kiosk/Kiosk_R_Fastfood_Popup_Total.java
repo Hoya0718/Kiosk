@@ -152,6 +152,8 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         total *= count;
         value += total;
 
+        burgerName += " - " + sideName + " - " + drinkName;
+
         myapp orderHistory = (myapp) getApplicationContext();
         Order order = new Order(burgerName, total, count, burgerBitmap);
         orderHistory.addOrder(order);

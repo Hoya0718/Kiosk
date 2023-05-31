@@ -55,6 +55,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                     LinearLayout.LayoutParams.MATCH_PARENT
             ));
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+            linearLayout.setGravity(Gravity.CENTER);
 
             // 삭제 버튼
             Button deleteButton = new Button(this);
@@ -64,7 +65,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                     1
             ));
             deleteButton.setGravity(Gravity.CENTER);
-            deleteButton.setText("삭제");
+            deleteButton.setText(getResources().getString(R.string.delete));
             deleteButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 10);
 
             // 삭제 버튼 기능
@@ -73,6 +74,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                 public void onClick(View v) {
                     containerLayout.removeView(linearLayout);
                     orderList.remove(order);
+                    updateTotalPrice(orderList, value_text);
                 }
             });
 
@@ -90,7 +92,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             TextView textView = new TextView(this);
             textView.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
-                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
                     2.5f
             ));
             textView.setGravity(Gravity.CENTER);
@@ -111,7 +113,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             Button minusButton = new Button(this);
             minusButton.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
-                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
                     1.5f
             ));
             minusButton.setText("-");
@@ -132,7 +134,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             Button plusButton = new Button(this);
             plusButton.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
-                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
                     1.5f
             ));
             plusButton.setText("+");

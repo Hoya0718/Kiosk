@@ -36,7 +36,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5"
+            android:layout_weight="0.3"
             android:orientation="horizontal"
             android:background="@drawable/table_border">
 
@@ -69,22 +69,50 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:background="@drawable/table_border">
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:background="@drawable/table_border"
+            android:orientation="horizontal">
 
             <Button
-                android:id="@+id/ticket_btn"
-                android:layout_width="0dp"
+                android:id="@+id/ticket_departure_btn"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="         목포                                                                     어딘가                                                              checkbox"
+                android:layout_gravity="center"
+                android:text="목포"
                 android:textSize="15sp"
+                android:layout_marginRight="-10dp"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/ticket_destination_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="광주(유스퀘어)"
+                android:textSize="15sp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/ticket_check_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text=">"
+                android:textSize="15sp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                android:textStyle="bold" />
+
+
         </LinearLayout>
 
         <LinearLayout

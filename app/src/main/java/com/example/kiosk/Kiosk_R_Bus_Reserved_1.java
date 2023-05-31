@@ -41,8 +41,8 @@ public class Kiosk_R_Bus_Reserved_1 extends AppCompatActivity {
     private AnimationDrawable anim;
     private Button b_cancel_btn;
     private Button b_payment_btn;
-    private Button ticket_btn;
-    private TextView textView17, bus_departuretime, bus_type, bus_takentime;
+    private TextView textView17, bus_departuretime, bus_type, bus_check;
+    private Button ticket_departuretime_btn, ticket_destination_btn, ticket_check_btn;
     Handler handler = new Handler();
     private boolean isColorChanged = false;
 
@@ -50,42 +50,83 @@ public class Kiosk_R_Bus_Reserved_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk14_reserved_1);
+        setContentView(R.layout.activity_kiosk_r_bus_reserved_1);
 
         sound = (myapp) getApplication();
         text_size = (myapp) getApplication();
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        ticket_btn = findViewById(R.id.ticket_btn);
+        bus_departuretime = findViewById(R.id.bus_departuretime);
+        bus_type = findViewById(R.id.bus_type);
+        bus_check = findViewById(R.id.bus_check);
+        ticket_departuretime_btn = findViewById(R.id.ticket_departure_btn);
+        ticket_destination_btn = findViewById(R.id.ticket_destination_btn);
+        ticket_check_btn = findViewById(R.id.ticket_check_btn);
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
         b_payment_btn = findViewById(R.id.b_payment_btn);
         textView17 = findViewById(R.id.textView17);
-        bus_departuretime = findViewById(R.id.bus_departuretime);
-        bus_type = findViewById(R.id.bus_type);
-        bus_takentime = findViewById(R.id.bus_takentime);
 
-        ticket_btn.setTextSize(text_size.getId());
+        ticket_departuretime_btn.setTextSize(text_size.getId());
+        ticket_destination_btn.setTextSize(text_size.getId());
+        ticket_check_btn.setTextSize(text_size.getId());
         b_cancel_btn.setTextSize(text_size.getId());
         b_payment_btn.setTextSize(text_size.getId());
         textView17.setTextSize(text_size.getId());
         bus_departuretime.setTextSize(text_size.getId());
         bus_type.setTextSize(text_size.getId());
-        bus_takentime.setTextSize(text_size.getId());
+        bus_check.setTextSize(text_size.getId());
 
-        ticket_btn.setOnClickListener(new View.OnClickListener() {
+        ticket_departuretime_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(isColorChanged) {
-                    ticket_btn.setBackgroundColor(Color.LTGRAY);
+                    ticket_departuretime_btn.setBackgroundColor(Color.LTGRAY);
+                    ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
+                    ticket_check_btn.setBackgroundColor(Color.LTGRAY);
                     isColorChanged = false;
                 }
                 else {
-                    ticket_btn.setBackgroundColor(Color.RED);
+                    ticket_departuretime_btn.setBackgroundColor(Color.CYAN);
+                    ticket_destination_btn.setBackgroundColor(Color.CYAN);
+                    ticket_check_btn.setBackgroundColor(Color.CYAN);
                     isColorChanged = true;
                 }
             }
-
+        });
+        ticket_destination_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isColorChanged) {
+                    ticket_departuretime_btn.setBackgroundColor(Color.LTGRAY);
+                    ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
+                    ticket_check_btn.setBackgroundColor(Color.LTGRAY);
+                    isColorChanged = false;
+                }
+                else {
+                    ticket_departuretime_btn.setBackgroundColor(Color.CYAN);
+                    ticket_destination_btn.setBackgroundColor(Color.CYAN);
+                    ticket_check_btn.setBackgroundColor(Color.CYAN);
+                    isColorChanged = true;
+                }
+            }
+        });
+        ticket_check_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isColorChanged) {
+                    ticket_departuretime_btn.setBackgroundColor(Color.LTGRAY);
+                    ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
+                    ticket_check_btn.setBackgroundColor(Color.LTGRAY);
+                    isColorChanged = false;
+                }
+                else {
+                    ticket_departuretime_btn.setBackgroundColor(Color.CYAN);
+                    ticket_destination_btn.setBackgroundColor(Color.CYAN);
+                    ticket_check_btn.setBackgroundColor(Color.CYAN);
+                    isColorChanged = true;
+                }
+            }
         });
 
         b_cancel_btn.setOnClickListener(new View.OnClickListener() {

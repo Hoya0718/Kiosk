@@ -419,30 +419,30 @@ public class Kiosk_19 extends AppCompatActivity {
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
+                            b_3_btn.setBackgroundResource(R.drawable.anim_list);
                             b_4_btn.setBackgroundResource(R.drawable.anim_list);
+                            b_5_btn.setBackgroundResource(R.drawable.anim_list);
                             b_6_btn.setBackgroundResource(R.drawable.anim_list);
-                            b_7_btn.setBackgroundResource(R.drawable.anim_list);
-                            b_8_btn.setBackgroundResource(R.drawable.anim_list);
-                            b_13_btn.setBackgroundResource(R.drawable.anim_list);
+                            b_10_btn.setBackgroundResource(R.drawable.anim_list);
                             b_14_btn.setBackgroundResource(R.drawable.anim_list);
-                            b_19_btn.setBackgroundResource(R.drawable.anim_list);
-                            b_20_btn.setBackgroundResource(R.drawable.anim_list);
+                            b_15_btn.setBackgroundResource(R.drawable.anim_list);
+                            b_16_btn.setBackgroundResource(R.drawable.anim_list);
 
+                            anim = (AnimationDrawable) b_3_btn.getBackground();
+                            anim.start();
                             anim = (AnimationDrawable) b_4_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) b_5_btn.getBackground();
                             anim.start();
                             anim = (AnimationDrawable) b_6_btn.getBackground();
                             anim.start();
-                            anim = (AnimationDrawable) b_7_btn.getBackground();
-                            anim.start();
-                            anim = (AnimationDrawable) b_8_btn.getBackground();
-                            anim.start();
-                            anim = (AnimationDrawable) b_13_btn.getBackground();
+                            anim = (AnimationDrawable) b_10_btn.getBackground();
                             anim.start();
                             anim = (AnimationDrawable) b_14_btn.getBackground();
                             anim.start();
-                            anim = (AnimationDrawable) b_19_btn.getBackground();
+                            anim = (AnimationDrawable) b_15_btn.getBackground();
                             anim.start();
-                            anim = (AnimationDrawable) b_20_btn.getBackground();
+                            anim = (AnimationDrawable) b_16_btn.getBackground();
                             anim.start();
                         }
                     }, 2000);

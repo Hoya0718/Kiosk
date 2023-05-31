@@ -51,27 +51,34 @@ public class Kiosk_R_Fastfood_Popup_Reco extends AppCompatActivity {
     public void goto_Kiosk_R_F_O_H(View view){
         Intent goto_Kiosk_R_F_O_H = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Order_Hist.class);
 
+        myapp orderHistory = (myapp) getApplicationContext();
+        Order order;
+
         switch (view.getId()) {
 
             case R.id.snackshu_lay:
                 reco+=2300;
                 recoName = snackshu_text.getText().toString();
                 recoBitmap = ((BitmapDrawable)snackshu_img.getDrawable()).getBitmap();
+
+                value+=reco;
+
+                order = new Order(recoName, reco, 1, recoBitmap);
+                orderHistory.addOrder(order);
                 break;
 
             case R.id.mcnurget_lay:
                 reco+=2900;
                 recoName = mcnurget_text.getText().toString();
                 recoBitmap = ((BitmapDrawable)mcnurget_img.getDrawable()).getBitmap();
+
+                value+=reco;
+
+                order = new Order(recoName, reco, 1, recoBitmap);
+                orderHistory.addOrder(order);
                 break;
 
         }
-
-        value+=reco;
-
-        myapp orderHistory = (myapp) getApplicationContext();
-        Order order = new Order(recoName, reco, 1, recoBitmap);
-        orderHistory.addOrder(order);
 
         goto_Kiosk_R_F_O_H.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_O_H);

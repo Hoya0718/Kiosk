@@ -92,7 +92,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="잔여석"/>
+                android:text="@string/bus_remainseat"/>
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,7 +108,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="           8시 30분                                          우등버스                                            40분                                                 3              >"
+            android:text="@string/_8_30_40_3"
             android:textStyle="bold"/>
     </LinearLayout>
 
@@ -126,7 +126,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="15sp"
-            android:text="         8시 40분                                          고속버스                                        1시간 10분                                          매진           "
+            android:text="@string/_8_40_1_10"
             android:textStyle="bold"/>
     </LinearLayout>
 
@@ -142,7 +142,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="        8시 50분                                          일반버스                                        1시간 30분                                          매진           "
+            android:text="@string/_8_50_1_30"
             android:gravity="center"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -163,7 +163,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="           9시 20분                                          우등버스                                      40분                                              매진                          "
+                android:text="@string/_9_20_40"
                 android:textStyle="bold"/>
         </LinearLayout>
 
@@ -181,7 +181,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:text="           9시 40분                                          고속버스                                     1시간 10분                                          10               >           "
+                android:text="@string/_9_40_1_10_10"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -216,7 +216,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
-                android:text="뒤로 가기"
+                android:text="@string/bus_goback2"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:autoSizeTextType="uniform"

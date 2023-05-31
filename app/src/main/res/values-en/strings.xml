@@ -320,4 +320,25 @@
     <string name="water">Water</string>
     <string name="aa">aa</string>
     <string name="back">Back</string>
+    <string name="selected_bus">Selected Bus</string>
+    <string name="seat_number">Seat Number</string>
+    <string name="bus_time">Bus Time</string>
+    <string name="bus_pushticket">Please insert the ticket into the slot</string>
+    <string name="bus_tax">The final cancellation fee is calculated according to the guideline\\n  above based on the time the [Refund] button at the bottom is pressed.</string>
+    <string name="bus_pushoneticket">Please insert one at a time into the ticket refund slot.</string>
+    <string name="bus_refund">Refund</string>
+    <string name="bus_inputreserved">Enter your reservation inquiry information</string>
+    <string name="bus_goback">Go Backscreen</string>
+    <string name="bus_chooseticket">Choose a booked ticket</string>
+    <string name="bus_destination">Destination</string>
+    <string name="bus_issue">Issue</string>
+    <string name="bus_goback1">Go Backscreen</string>
+    <string name="bus_remainseat">RemainSeat</string>
+    <string name="_8_30_40_3">8:30 honor bus 40m</string>
+    <string name="_8_40_1_10">8:40 express bus 1h 10m</string>
+    <string name="_8_50_1_30">8:50 regular bus 1h 30m</string>
+    <string name="_9_20_40">9:20 honor bus 40m</string>
+    <string name="_9_40_1_10_10">9:40 express bus 1h 10m</string>
+    <string name="bus_goback2">Go Backscreen</string>
+    <string name="bus_departuretime">Bus Departuretime</string>
 </resources>

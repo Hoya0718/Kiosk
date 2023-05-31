@@ -46,7 +46,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
     private Button digeut_btn, rieul_btn, mieum_btn, bieup_btn;
     private Button siot_btn, ieung_btn, jieut_btn, chieut_btn;
     private Button kieuk_btn, tieut_btn, pieup_btn, hieut_btn;
-    private Button button3;
+    private Button button3, button20;
 
     // 서울
     private Button central_btn, eastseoul_btn;
@@ -71,6 +71,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
     private Button eastdaegu_btn, westdaegu_btn, gyeongju_btn;
 
     private TextView textView1;
+    private SearchView searchView;
 
 
     @Override
@@ -84,6 +85,8 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
+
+        searchView  = findViewById(R.id.searchView);
 
         giyeok_btn = findViewById(R.id.giyeok_btn); nieun_btn = findViewById(R.id.nieun_btn);
         digeut_btn = findViewById(R.id.digeut_btn); rieul_btn = findViewById(R.id.rieul_btn);
@@ -113,7 +116,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         busan_bus_btn = findViewById(R.id.busan_bus_btn); ulsan_btn = findViewById(R.id.ulsan_btn);
         gimhae_btn = findViewById(R.id.gimhae_btn); eastdaegu_btn = findViewById(R.id.eastdaegu_btn);
         westdaegu_btn = findViewById(R.id.westdaegu_btn); gyeongju_btn = findViewById(R.id.gyeongju_btn);
-        button3 = findViewById(R.id.button3);
+        button3 = findViewById(R.id.button3); button20 = findViewById(R.id.button20);
 
         giyeok_btn.setTextSize(text_size.getId()); nieun_btn.setTextSize(text_size.getId());
         digeut_btn.setTextSize(text_size.getId()); rieul_btn.setTextSize(text_size.getId());
@@ -143,7 +146,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         busan_bus_btn.setTextSize(text_size.getId()); ulsan_btn.setTextSize(text_size.getId());
         gimhae_btn.setTextSize(text_size.getId()); eastdaegu_btn.setTextSize(text_size.getId());
         westdaegu_btn.setTextSize(text_size.getId()); gyeongju_btn.setTextSize(text_size.getId());
-        button3.setTextSize(text_size.getId());
+        button3.setTextSize(text_size.getId()); button20.setTextSize(text_size.getId());
 
         busan_btn.setOnClickListener(this); jeonbuk_btn.setOnClickListener(this);
         seoul_btn.setOnClickListener(this); incheon_btn.setOnClickListener(this);
@@ -493,6 +496,16 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                             startActivity(intent);
                         }
                     });
+
+                    button20.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_16.this, Kiosk_17.class);
+                            tts.shutdown();
+                            startActivity(intent);
+                        }
+                    });
+
 
                 }
             }

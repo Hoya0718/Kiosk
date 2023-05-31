@@ -19,7 +19,7 @@
             android:layout_height="0dp"
             android:layout_weight="1.5"
             android:gravity="center"
-            android:text="예매조회 정보를 입력하세요"
+            android:text="@string/bus_inputreserved"
             android:textSize="@dimen/font_size_medium" />
 
         <CheckBox
@@ -227,7 +227,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="goto_Back"
-            android:text="뒤로가기"
+            android:text="@string/bus_goback"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
 </LinearLayout>

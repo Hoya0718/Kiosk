@@ -4,313 +4,600 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Kiosk_16">
+    android:orientation="vertical"
+    tools:context=".Kiosk_17">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        android:singleLine="true"
+        android:textSize="20sp"
+        android:visible="true"
+        android:enabled="true"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:actionViewClass="android.widget.SearchView"
+        android:queryHint="목적지를 입력하세요" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#999999"
+        android:dividerHeight="1dp"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:visibility="gone">
+
+    </TextView>
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:orientation="vertical">
+        android:layout_weight="0.7">
 
-        <Button
-            android:id="@+id/seoul_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="서울"
-            android:textSize="15sp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/incheon_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="인천/경기"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/seoul_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="서울"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/kangwon_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="강원도"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/incheon_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="인천/경기"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/sejong_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="대전/세종"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/kangwon_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="강원도"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/chungnam_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="충청남도"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/sejong_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="대전/세종"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/chungbuk_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="충청북도"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/chungnam_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="충청남도"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/kwangju_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="광주/전남"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/chungbuk_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="충청북도"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/jeonbuk_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="전라북도"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/kwangju_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="광주/전남"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/busan_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="부산/경남"
-            android:textSize="15sp" />
+            <Button
+                android:id="@+id/jeonbuk_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="전라북도"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/daegu_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
+            <Button
+                android:id="@+id/busan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="부산/경남"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/daegu_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="대구/경북"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="대구/경북"
-            android:textSize="15sp" />
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/giyeok_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㄱ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/nieun_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㄴ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/digeut_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㄷ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/rieul_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㄹ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/mieum_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅁ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/bieup_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅂ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/siot_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅅ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/ieung_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅇ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/jieut_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅈ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/chieut_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅊ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/kieuk_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅋ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/tieut_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅌ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/pieup_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅍ"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/hieut_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ㅎ"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/central_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="센트럴시티"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/eastseoul_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="동서울"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/incheon_bus_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="인천"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/incheonairport_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="인천공항"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/sungnam_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="성남"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/suwon_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="수원"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/ansan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="안산"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/yongin_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="용인"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/gangneung_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="강릉"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/chunchun_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="춘천"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/sokcho_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="속초"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/daejun_bus_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="대전"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/sejong_bus_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="세종"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/nonsan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="논산"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/cheonan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="천안"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/gongju_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="공주"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/cheongju_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="청주"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/jechun_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="제천"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/chungju_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="충주"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/kwangju_bus_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="광주(유스퀘어)"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/suncheon_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="순천"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/damyang_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="담양"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/naju_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="나주"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/jeonju_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="전주"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/gunsan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="군산"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/namwon_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="남원"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/busan_bus_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="부산"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/ulsan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="울산"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/gimhae_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="김해"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/eastdaegu_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="동대구"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/westdaegu_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="서대구"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/gyeongju_btn"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:layout_weight="1"
+                android:text="경주"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+        </TableLayout>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_weight="4"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/giyeok_btn"
+            android:id="@+id/button3"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50sp"
             android:layout_weight="1"
-            android:text="ㄱ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="50dp"
+            android:text="뒤로 돌아가기" />
 
         <Button
-            android:id="@+id/nieun_btn"
+            android:id="@+id/button20"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50sp"
             android:layout_weight="1"
-            android:text="ㄴ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="50dp"
+            android:text="17번" />
 
-        <Button
-            android:id="@+id/digeut_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㄷ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
 
-        <Button
-            android:id="@+id/rieul_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㄹ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/mieum_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅁ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/bieup_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅂ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/siot_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅅ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/ieung_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅇ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/jieut_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅈ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/chieut_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅊ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/kieuk_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅋ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/tieut_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅌ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/pieup_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅍ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/hieut_btn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="ㅎ"
-            android:textSize="15sp"
-            android:textAlignment="center" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:orientation="vertical">
 
-
-        <Button
-            android:id="@+id/masan_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="1"
-            android:text="마산"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/muan_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="1"
-            android:text="무안"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/muanairport_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="1"
-            android:text="무안공항"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/muju_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="1"
-            android:text="무주"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/maryang_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="1"
-            android:text="마량"
-            android:textSize="15sp" />
-    </LinearLayout>
 </LinearLayout>

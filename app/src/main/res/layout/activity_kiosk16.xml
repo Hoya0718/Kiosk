@@ -11,7 +11,7 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:iconifiedByDefault="true"
+        app:iconifiedByDefault="false"
         android:singleLine="true"
         android:textSize="20sp"
         android:visible="true"
@@ -576,7 +576,19 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="50dp"
-            android:text="뒤로 돌아가기" />
+            android:text="@string/bus_goback1" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="50dp"
+            android:text="17번" />
+
 
     </LinearLayout>
 

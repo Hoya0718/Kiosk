@@ -9,6 +9,8 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,7 +19,9 @@ import java.util.Locale;
 
 public class Kiosk_R_Bus_SelectBustype extends AppCompatActivity {
 
-    private TextView textView18;//
+    private String departuretime;
+
+    private TextView textView18;
     private TextView textView36;
     private TextView textView17;
     private TextView bus_departuretime;
@@ -54,24 +58,32 @@ public class Kiosk_R_Bus_SelectBustype extends AppCompatActivity {
         soldout3_btn = findViewById(R.id.soldout3_btn);
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
 
+
         Intent intent = getIntent();
         String destination = intent.getStringExtra("destination");
 
+        //목적지 표시
         textView18 = findViewById(R.id.textView18);
         if (destination != null) {
             textView18.setText(destination);
         }
 
+        seat_selection1_btn = findViewById(R.id.seat_selection1_btn);
+        seat_selection2_btn = findViewById(R.id.seat_selection2_btn);
+        seat_selection3_btn = findViewById(R.id.seat_selection3_btn);
+
         seat_selection1_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_SelectBustype.this, Kiosk_R_Bus_VerifyTicket.class);
+                Intent intent = new Intent(Kiosk_R_Bus_SelectBustype.this, Kiosk_R_Bus_SelectSeat.class);
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    intent.putExtra("departuretime", "8시 30분");
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", "우등버스");
                     intent.putExtra("price", "25,000원");
                     startActivity(intent);
                 } else {
+                    intent.putExtra("departuretime", "8 : 30");
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", "Honor bus");
                     intent.putExtra("price", "25,000won");
@@ -84,13 +96,15 @@ public class Kiosk_R_Bus_SelectBustype extends AppCompatActivity {
         seat_selection2_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_SelectBustype.this, Kiosk_R_Bus_VerifyTicket.class);
+                Intent intent = new Intent(Kiosk_R_Bus_SelectBustype.this, Kiosk_R_Bus_SelectSeat.class);
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    intent.putExtra("departuretime", "9시 40분");
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", "고속버스");
                     intent.putExtra("price", "20,000원");
                     startActivity(intent);
                 } else {
+                    intent.putExtra("departuretime", "09 : 40");
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", "Express bus");
                     intent.putExtra("price", "20,000won");
@@ -101,13 +115,15 @@ public class Kiosk_R_Bus_SelectBustype extends AppCompatActivity {
         seat_selection3_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_SelectBustype.this, Kiosk_R_Bus_VerifyTicket.class);
+                Intent intent = new Intent(Kiosk_R_Bus_SelectBustype.this, Kiosk_R_Bus_SelectSeat.class);
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    intent.putExtra("departuretime", "10시 00분");
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", "일반버스");
                     intent.putExtra("price", "15,000원");
                     startActivity(intent);
                 } else {
+                    intent.putExtra("departuretime", "10 : 00");
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", "Regular bus");
                     intent.putExtra("price", "15,000won");
@@ -119,7 +135,7 @@ public class Kiosk_R_Bus_SelectBustype extends AppCompatActivity {
         b_cancel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_SelectBustype.this, Kiosk_R_Bus_VerifyTicket.class);
+                Intent intent = new Intent(Kiosk_R_Bus_SelectBustype.this, Kiosk_R_Bus_SelectSeat.class);
                 startActivity(intent);
             }
         });

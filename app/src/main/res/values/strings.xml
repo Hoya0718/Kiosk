@@ -341,4 +341,5 @@
     <string name="_9_40_1_10_10">9시 40분 고속버스 1시간 10분 10 ></string>
     <string name="bus_goback2">뒤로 가기</string>
     <string name="bus_departuretime">출발 시간</string>
+    <string name="hohome">홈</string>
 </resources>

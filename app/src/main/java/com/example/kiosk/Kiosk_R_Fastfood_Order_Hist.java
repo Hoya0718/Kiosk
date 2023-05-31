@@ -75,6 +75,12 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                     containerLayout.removeView(linearLayout);
                     orderList.remove(order);
                     updateTotalPrice(orderList, value_text);
+
+                    if (containerLayout.getChildCount() == 0) {
+                        Intent goto_Kiosk_R_F_M_B = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
+                        goto_Kiosk_R_F_M_B.putExtra("value", value);
+                        startActivity(goto_Kiosk_R_F_M_B);
+                    }
                 }
             });
 
@@ -185,8 +191,6 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                             updateMenuPrice(priceTextView, order);
                             // 총합 가격 업데이트
                             updateTotalPrice(orderList, value_text);
-                            // 이후 필요한 로직 수행
-                            // ...
                             break;
                         }
                     }
@@ -214,8 +218,6 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                             updateMenuPrice(priceTextView, order);
                             // 총합 가격 업데이트
                             updateTotalPrice(orderList, value_text);
-                            // 이후 필요한 로직 수행
-                            // ...
                             break;
                         }
                     }
@@ -265,9 +267,11 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
     }
 
     public void goto_Kiosk_R_F_P_M(View v){
-        Intent goto_Kiosk_R_F_P_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Pay_Meth.class);
-        goto_Kiosk_R_F_P_M.putExtra("value", value);
-        startActivity(goto_Kiosk_R_F_P_M);
+        if (value != 0){
+            Intent goto_Kiosk_R_F_P_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Pay_Meth.class);
+            goto_Kiosk_R_F_P_M.putExtra("value", value);
+            startActivity(goto_Kiosk_R_F_P_M);
+        }
     }
 
     public void goto_Kiosk_R_F_M_B(View view) {

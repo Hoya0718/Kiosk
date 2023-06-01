@@ -55,6 +55,7 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
 
     private Bitmap burgerBitmap;
 
+    private TextView showMission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +89,10 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
         bulgogi_img = findViewById(R.id.bulgogi_img);
         cheeze_img = findViewById(R.id.cheeze_img);
         ham_img = findViewById(R.id.ham_img);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

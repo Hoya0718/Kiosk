@@ -48,6 +48,8 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     private Bitmap sideBitmap;
     private Bitmap drinkBitmap;
 
+    private TextView showMission;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +67,10 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         set_drink_img = findViewById(R.id.set_drink_img);
 
         count_text = findViewById(R.id.count_text);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

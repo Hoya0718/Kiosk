@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,10 +24,16 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
 
     private Bitmap burgerBitmap;
 
+    private TextView showMission;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_set);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

@@ -64,4 +64,9 @@ public class myapp extends Application {
     public void clearOrderList() {
         orderList.clear();
     }
+
+    // 임무
+    private String checkFastfoodMission;
+    public String getCheckFastfoodMission() {return checkFastfoodMission;}
+    public void setCheckFastfoodMission(String a) {this.checkFastfoodMission=a;}
 }

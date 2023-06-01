@@ -60,6 +60,8 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
 
     private Bitmap drinkBitmap;
 
+    private TextView showMission;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +95,10 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
         drinkhwan_img = findViewById(R.id.drinkhwan_img);
         milk_img = findViewById(R.id.milk_img);
         water_img = findViewById(R.id.water_img);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

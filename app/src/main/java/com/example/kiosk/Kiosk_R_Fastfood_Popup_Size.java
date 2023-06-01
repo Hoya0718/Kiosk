@@ -25,10 +25,16 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
     private Button set_Btn;
     private Button lar_Btn;
 
+    private TextView showMission;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_size);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         burger_text = findViewById(R.id.burger_text);
 

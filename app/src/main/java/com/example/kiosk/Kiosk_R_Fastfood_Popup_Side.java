@@ -56,6 +56,8 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
 
     private Bitmap sideBitmap;
 
+    private TextView showMission;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +90,10 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         icesu_img = findViewById(R.id.icesu_img);
         iceco_img = findViewById(R.id.iceco_img);
         iceba_img = findViewById(R.id.iceba_img);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

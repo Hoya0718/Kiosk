@@ -25,6 +25,8 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
 
     private TextView value_text;
 
+    private TextView showMission;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +37,12 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             value = intent.getIntExtra("value", 0);
         }
 
-        myapp orderHistory = (myapp) getApplicationContext();
-        List<Order> orderList = orderHistory.getOrderList();
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
+
+
+        List<Order> orderList = myApp.getOrderList();
 
         LinearLayout containerLayout = findViewById(R.id.container_layout);
 
@@ -56,6 +62,10 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             ));
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
             linearLayout.setGravity(Gravity.CENTER);
+            linearLayout.setPadding(2, 2, 2, 2);  // 마진 적용
+
+            // 스타일 적용
+            linearLayout.setBackgroundResource(R.drawable.table_border);
 
             // 삭제 버튼
             Button deleteButton = new Button(this);
@@ -165,7 +175,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                     0.9f
             ));
             priceTextView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
-            priceTextView.setText(String.valueOf(orderList.get(i).getOrderPrice()));
+            priceTextView.setText(String.valueOf(orderList.get(i).getOrderPrice() * orderList.get(i).getOrderCount()));
             priceTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
 
             // "-" 버튼 클릭 이벤트 처리

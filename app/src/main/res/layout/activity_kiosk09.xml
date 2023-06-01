@@ -68,13 +68,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TableLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
 
-                <TableRow
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/table_border">
 
                     <Button
                         android:id="@+id/delete_Btn"
@@ -167,12 +169,12 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.9"
                         android:gravity="left|center_vertical"
-                        android:text="6,500"
+                        android:text="6,700"
                         android:textSize="18sp" />
 
-                </TableRow>
+                </LinearLayout>
 
-            </TableLayout>
+            </LinearLayout>
         </ScrollView>
 
     </LinearLayout>
@@ -208,7 +210,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.8"
             android:gravity="left|center_vertical"
-            android:text="6,500"
+            android:text="6,700"
             android:textSize="18sp" />
     </LinearLayout>
 

@@ -69,4 +69,12 @@ public class myapp extends Application {
     private String checkFastfoodMission;
     public String getCheckFastfoodMission() {return checkFastfoodMission;}
     public void setCheckFastfoodMission(String a) {this.checkFastfoodMission=a;}
+
+    private String checkBusMission;
+    public String getCheckBusMission() {return checkBusMission;}
+    public void setCheckBusMission(String a) {this.checkBusMission=a;}
+
+    private String checkHospitalMission;
+    public String getCheckHospitalMission() {return checkHospitalMission;}
+    public void setCheckHospitalMission(String a) {this.checkHospitalMission=a;}
 }

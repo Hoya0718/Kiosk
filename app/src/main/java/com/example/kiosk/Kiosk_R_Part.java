@@ -116,13 +116,100 @@ public class Kiosk_R_Part extends AppCompatActivity {
     }
 
     public void goto_Kiosk_R_Bus (View v){
-        Intent goto_Kiosk_R_Bus = new Intent(getApplicationContext(),Kiosk_R_Bus_Main.class);
-        startActivity(goto_Kiosk_R_Bus);
+
+        String[] bus_destination = {
+                "센트럴시티","동서울",
+                "인천","인천공항","성남","수원","안산","용인",
+                "강릉","춘천","속초",
+                "대전","세종",
+                "논산","천안","공주",
+                "청주","제천","충주",
+                "광주(유스퀘어)","순천","담양","나주",
+                "전주","군산","남원",
+                "부산","울산","김해",
+                "동대구","서대구","경주"
+        };
+
+        String[] bus_type = {"우등버스","고속버스"};
+
+        String[] bus_seat = {"3","4","5","6","10","14","15","16"};
+
+        String randomDestination = getRandomValue(bus_destination);
+        String randomBusType = getRandomValue(bus_type);
+        String randomSeat = getRandomValue(bus_seat);
+
+        // 팝업 띄우기
+        AlertDialog.Builder builder = new AlertDialog.Builder(Kiosk_R_Part.this);
+        builder.setTitle("임무");
+        builder.setMessage("버스를 예매하는 임무입니다.\n아래와 같은 버스를 예매하세요.\n" +
+                "\n목적지 : " + randomDestination +
+                "\n버스 종류 : " + randomBusType +
+                "\n좌석 : " + randomSeat);
+
+        myapp myApp = (myapp) getApplicationContext();
+        String checkBusMission = randomDestination + " - " + randomBusType + " - " + randomSeat;
+        myApp.setCheckBusMission(checkBusMission);
+
+        builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // 다음 화면으로 넘어가는 코드 작성
+                Intent goto_Kiosk_R_B_M = new Intent(Kiosk_R_Part.this, Kiosk_R_Bus_Main.class);
+                startActivity(goto_Kiosk_R_B_M);
+            }
+        });
+        builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // 취소 버튼을 눌렀을 때 동작할 코드 작성
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     public void goto_Kiosk_R_Hospital (View v){
-        Intent goto_Kiosk_R_Hospital = new Intent(getApplicationContext(),Kiosk_R_Hospital.class);
-        startActivity(goto_Kiosk_R_Hospital);
+
+        String[] hospital_department = {
+                getString(R.string.cardiology),
+                getString(R.string.respiratory),
+                getString(R.string.neurosurgery),
+                getString(R.string.department_Family_Medicine),
+                getString(R.string.urology),
+                getString(R.string.orthopedics),
+                getString(R.string.gastroenterology),
+        };
+
+        String randomDepartment = getRandomValue(hospital_department);
+
+        // 팝업 띄우기
+        AlertDialog.Builder builder = new AlertDialog.Builder(Kiosk_R_Part.this);
+        builder.setTitle("임무");
+        builder.setMessage("진료과를 접수하는 임무입니다.\n아래와 같은 부서를 접수하세요.\n" +
+                "\n부서 : " + randomDepartment);
+
+        myapp myApp = (myapp) getApplicationContext();
+        String checkHospitalMission = randomDepartment;
+        myApp.setCheckHospitalMission(checkHospitalMission);
+
+        builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // 다음 화면으로 넘어가는 코드 작성
+                Intent goto_Kiosk_R_H = new Intent(Kiosk_R_Part.this, Kiosk_R_Hospital.class);
+                startActivity(goto_Kiosk_R_H);
+            }
+        });
+        builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // 취소 버튼을 눌렀을 때 동작할 코드 작성
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     public void goto_Kiosk_Main (View v){

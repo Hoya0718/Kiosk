@@ -108,6 +108,18 @@
             android:background="@drawable/table_border">
 
             <Button
+                android:id="@+id/seat_selection1_1_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="8시 30분"
+                android:textStyle="bold"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"/>
+
+            <Button
                 android:id="@+id/seat_selection1_2_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

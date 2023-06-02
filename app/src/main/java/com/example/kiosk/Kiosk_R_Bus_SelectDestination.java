@@ -1,9 +1,9 @@
 package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -11,12 +11,16 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,12 +32,13 @@ import java.util.Locale;
 
 public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements View.OnClickListener {
 
-    private Button seoul_btn, incheon_btn, kangwon_btn, sejong_btn;//
+    private Button seoul_btn, incheon_btn, kangwon_btn, sejong_btn;
     private Button chungnam_btn, chungbuk_btn, kwangju_btn, jeonbuk_btn;
     private Button busan_btn, daegu_btn, giyeok_btn, nieun_btn;
     private Button digeut_btn, rieul_btn, mieum_btn, bieup_btn;
     private Button siot_btn, ieung_btn, jieut_btn, chieut_btn;
     private Button kieuk_btn, tieut_btn, pieup_btn, hieut_btn;
+    private Button button3;
 
     // 서울
     private Button central_btn, eastseoul_btn;
@@ -57,10 +62,16 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
     // 대구/경북
     private Button eastdaegu_btn, westdaegu_btn, gyeongju_btn;
 
+    private TextView textView1;
+    private SearchView searchView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_bus_selectdestination);
+
+        searchView = findViewById(R.id.searchView);
 
         giyeok_btn = findViewById(R.id.giyeok_btn);
         nieun_btn = findViewById(R.id.nieun_btn);
@@ -117,6 +128,7 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
         eastdaegu_btn = findViewById(R.id.eastdaegu_btn);
         westdaegu_btn = findViewById(R.id.westdaegu_btn);
         gyeongju_btn = findViewById(R.id.gyeongju_btn);
+        button3 = findViewById(R.id.button3);
 
         busan_btn.setOnClickListener(this);
         jeonbuk_btn.setOnClickListener(this);
@@ -422,8 +434,19 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
                 startActivity(intent);
             }
         });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Kiosk_R_Bus_SelectDestination.this, Kiosk_R_Bus_Destination.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.seoul_btn:
@@ -1414,11 +1437,5 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
                 break;
         }
     }
-
-
-    private void performSearch(String query) {
-        Toast.makeText(this, "검색어 : " + query, Toast.LENGTH_SHORT).show();
-    }
 }
-
 

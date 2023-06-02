@@ -20,15 +20,6 @@
         android:actionViewClass="android.widget.SearchView"
         android:queryHint="목적지를 입력하세요" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:dividerHeight="1dp"
-        android:visibility="gone">
-
-    </TextView>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

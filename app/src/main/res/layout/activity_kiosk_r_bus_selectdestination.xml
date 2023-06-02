@@ -7,29 +7,23 @@
     android:orientation="vertical"
     tools:context=".Kiosk_R_Bus_SelectDestination">
 
-
-    <androidx.appcompat.widget.SearchView
+    <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:iconifiedByDefault="false"
-        app:queryHint = "목적지를 입력하세요"
+        android:singleLine="true"
         android:textSize="20sp"
-        android:visibility="visible"/>
-
-    <ListView
-        android:id="@+id/listView"
-        android:layout_below="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:dividerHeight="1dp"
-        android:visibility="gone">
-
-    </ListView>
+        android:visible="true"
+        android:enabled="true"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:actionViewClass="android.widget.SearchView"
+        android:queryHint="목적지를 입력하세요" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -271,7 +265,7 @@
                 android:layout_weight="1"
                 android:text="센트럴시티"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/eastseoul_btn"
@@ -280,7 +274,7 @@
                 android:layout_weight="1"
                 android:text="동서울"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/incheon_bus_btn"
@@ -289,7 +283,7 @@
                 android:layout_weight="1"
                 android:text="인천"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/incheonairport_btn"
@@ -298,7 +292,7 @@
                 android:layout_weight="1"
                 android:text="인천공항"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/sungnam_btn"
@@ -307,7 +301,7 @@
                 android:layout_weight="1"
                 android:text="성남"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/suwon_btn"
@@ -316,7 +310,7 @@
                 android:layout_weight="1"
                 android:text="수원"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/ansan_btn"
@@ -325,7 +319,7 @@
                 android:layout_weight="1"
                 android:text="안산"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/yongin_btn"
@@ -334,7 +328,7 @@
                 android:layout_weight="1"
                 android:text="용인"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/gangneung_btn"
@@ -343,7 +337,7 @@
                 android:layout_weight="1"
                 android:text="강릉"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/chunchun_btn"
@@ -352,7 +346,7 @@
                 android:layout_weight="1"
                 android:text="춘천"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/sokcho_btn"
@@ -361,7 +355,7 @@
                 android:layout_weight="1"
                 android:text="속초"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/daejun_bus_btn"
@@ -370,7 +364,7 @@
                 android:layout_weight="1"
                 android:text="대전"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/sejong_bus_btn"
@@ -379,7 +373,7 @@
                 android:layout_weight="1"
                 android:text="세종"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/nonsan_btn"
@@ -388,7 +382,7 @@
                 android:layout_weight="1"
                 android:text="논산"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/cheonan_btn"
@@ -397,7 +391,7 @@
                 android:layout_weight="1"
                 android:text="천안"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/gongju_btn"
@@ -406,7 +400,7 @@
                 android:layout_weight="1"
                 android:text="공주"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
 
             <Button
@@ -416,7 +410,7 @@
                 android:layout_weight="1"
                 android:text="청주"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/jechun_btn"
@@ -425,7 +419,7 @@
                 android:layout_weight="1"
                 android:text="제천"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/chungju_btn"
@@ -434,7 +428,7 @@
                 android:layout_weight="1"
                 android:text="충주"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/kwangju_bus_btn"
@@ -443,7 +437,7 @@
                 android:layout_weight="1"
                 android:text="광주(유스퀘어)"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/suncheon_btn"
@@ -452,7 +446,7 @@
                 android:layout_weight="1"
                 android:text="순천"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/damyang_btn"
@@ -461,7 +455,7 @@
                 android:layout_weight="1"
                 android:text="담양"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/naju_btn"
@@ -470,7 +464,7 @@
                 android:layout_weight="1"
                 android:text="나주"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/jeonju_btn"
@@ -479,7 +473,8 @@
                 android:layout_weight="1"
                 android:text="전주"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/gunsan_btn"
                 android:layout_width="match_parent"
@@ -487,7 +482,8 @@
                 android:layout_weight="1"
                 android:text="군산"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/namwon_btn"
                 android:layout_width="match_parent"
@@ -495,7 +491,8 @@
                 android:layout_weight="1"
                 android:text="남원"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/busan_bus_btn"
                 android:layout_width="match_parent"
@@ -503,7 +500,7 @@
                 android:layout_weight="1"
                 android:text="부산"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/ulsan_btn"
@@ -512,7 +509,7 @@
                 android:layout_weight="1"
                 android:text="울산"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/gimhae_btn"
@@ -521,7 +518,7 @@
                 android:layout_weight="1"
                 android:text="김해"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
 
             <Button
@@ -531,7 +528,7 @@
                 android:layout_weight="1"
                 android:text="동대구"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/westdaegu_btn"
@@ -540,7 +537,7 @@
                 android:layout_weight="1"
                 android:text="서대구"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/gyeongju_btn"
@@ -549,9 +546,30 @@
                 android:layout_weight="1"
                 android:text="경주"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
         </TableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/bus_goback1" />
+
+
     </LinearLayout>
 
 

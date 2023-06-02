@@ -78,11 +78,11 @@ public class Kiosk_14_reserved extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("승차권 확인을 하실려면 주민등록번호와 개인정보 수집 동의를 눌러주셔야 확인하실 수 있습니다. 개인정보 수집 동의를 눌러주신 후 주민등록번호를 입력하시고 조회하기 버튼을 눌러주세요");
+                        speakText("승차권 확인을 하실려면 주민등록번호와 개인정보 수집 동의를 눌러주셔야 확인하실 수 있습니다. 개인정보 수집 동의를 눌러주신 후 주민등록번호를 입력하시고 확인 버튼을 눌러주세요");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("You can agree to the collection of your resident registration number and personal information that requires confirmation of claim. After agreeing to the collection of personal information, " +
-                                "enter your resident registration number and click the Search button.");
+                                "enter your resident registration number and click the Check button.");
                     }
                 }
             }

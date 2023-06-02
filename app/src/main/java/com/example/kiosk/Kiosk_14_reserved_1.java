@@ -87,6 +87,7 @@ public class Kiosk_14_reserved_1 extends AppCompatActivity {
 
                         speakText("여기서는 예매한 승차권을 확인하고 뽑을 수 있습니다." +
                                 "예매한 승차권 버튼을 클릭하고 발권하기 버튼을 누르면 티켓이 출력됩니다." +
+                                "버튼을 누르면 버튼의 색깔이 파란색으로 바뀌면서 눌린 걸 확인하실 수 있습니다. " +
                                 "승차권 버튼을 누르고, 발권하기 버튼을 눌러주세요");
                     }
                     else {
@@ -214,6 +215,7 @@ public class Kiosk_14_reserved_1 extends AppCompatActivity {
             }
         });
     }
+
     private void startButtonBorderAnimation(Button button) {
         AnimationDrawable buttonBorderAnimation = (AnimationDrawable) button.getBackground();
         if (buttonBorderAnimation != null) {

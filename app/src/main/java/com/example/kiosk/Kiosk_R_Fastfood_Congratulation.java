@@ -27,10 +27,6 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         long minutes = measTime / 60; // 분 계산
         long seconds = measTime % 60; // 초 계산
 
-        Log.d("beforeTime", String.valueOf(beforeTime));
-        Log.d("afterTime", String.valueOf(afterTime));
-        Log.d("measTime", String.valueOf(measTime));
-
         List<Order> orderList = myApp.getOrderList();
         String checkMission = myApp.getCheckFastfoodMission();
         String missionComplete = "실패";
@@ -42,16 +38,24 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         }
 
         goto_5 = findViewById(R.id.goto_5);
-        goto_5.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
-                "임무 성공 여부 : " + missionComplete + "\n" +
-                "처음으로 돌아가기");
+        if (myApp.getCheckCheck()) {
+            goto_5.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+                    "임무 성공 여부 : " + missionComplete + "\n" +
+                    "처음으로 돌아가기");
+        } else {
+            goto_5.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+                    "처음으로 돌아가기");
+        }
+
     }
 
     public void goto_Kiosk_R_P(View v){
         Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), Kiosk_R_Part.class);
 
-        myapp orderHistory = (myapp) getApplicationContext();
-        orderHistory.clearOrderList();
+        myapp myApp = (myapp) getApplicationContext();
+        myApp.clearOrderList();
+        myApp.setCheckFastfoodMission("X");
+        myApp.setCheckCheck(false);
 
         startActivity(goto_Kiosk_R_P);
     }

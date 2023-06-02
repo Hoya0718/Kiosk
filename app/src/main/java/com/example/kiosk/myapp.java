@@ -66,15 +66,15 @@ public class myapp extends Application {
     }
 
     // 임무
-    private String checkFastfoodMission;
+    private String checkFastfoodMission = "X";
     public String getCheckFastfoodMission() {return checkFastfoodMission;}
     public void setCheckFastfoodMission(String a) {this.checkFastfoodMission=a;}
 
-    private String checkBusMission;
+    private String checkBusMission = "X";
     public String getCheckBusMission() {return checkBusMission;}
     public void setCheckBusMission(String a) {this.checkBusMission=a;}
 
-    private String checkHospitalMission;
+    private String checkHospitalMission = "X";
     public String getCheckHospitalMission() {return checkHospitalMission;}
     public void setCheckHospitalMission(String a) {this.checkHospitalMission=a;}
 
@@ -82,4 +82,7 @@ public class myapp extends Application {
     public long getTime() {return time;}
     public void setTime(long a) {this.time=a;}
 
+    private boolean check = false;
+    public boolean getCheckCheck() {return check;}
+    public void setCheckCheck(boolean a) {this.check=a;}
 }

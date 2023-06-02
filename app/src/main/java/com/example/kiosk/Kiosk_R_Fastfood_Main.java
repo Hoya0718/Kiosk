@@ -21,6 +21,9 @@ public class Kiosk_R_Fastfood_Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_main);
 
+        myapp myApp = (myapp) getApplicationContext();
+        myApp.setTime((long)System.currentTimeMillis());
+
         value = 0;
     }
 

@@ -77,4 +77,9 @@ public class myapp extends Application {
     private String checkHospitalMission;
     public String getCheckHospitalMission() {return checkHospitalMission;}
     public void setCheckHospitalMission(String a) {this.checkHospitalMission=a;}
+
+    private long time = 0;
+    public long getTime() {return time;}
+    public void setTime(long a) {this.time=a;}
+
 }

@@ -734,7 +734,7 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
                 westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (kwangju_bus_btn.getVisibility() == View.GONE) {
-                    kwangju_bus_btn.setVisibility(View.GONE);
+                    kwangju_bus_btn.setVisibility(View.VISIBLE);
                     suncheon_btn.setVisibility(View.VISIBLE);
                     damyang_btn.setVisibility(View.VISIBLE);
                     naju_btn.setVisibility(View.VISIBLE);

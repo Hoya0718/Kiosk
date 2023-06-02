@@ -260,13 +260,6 @@
             android:text="@string/home"
             android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/help_Btn"
-            android:layout_width="160dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:text="@string/help_features"
-            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>

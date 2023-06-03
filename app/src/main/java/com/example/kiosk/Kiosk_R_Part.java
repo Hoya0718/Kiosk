@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 
 import java.util.Random;
@@ -133,16 +132,17 @@ public class Kiosk_R_Part extends AppCompatActivity {
         if (checkBox.isChecked()) {
 
             String[] bus_destination = {
-                    "센트럴시티","동서울",
-                    "인천","인천공항","성남","수원","안산","용인",
-                    "강릉","춘천","속초",
-                    "대전","세종",
-                    "논산","천안","공주",
-                    "청주","제천","충주",
-                    "광주(유스퀘어)","순천","담양","나주",
-                    "전주","군산","남원",
-                    "부산","울산","김해",
-                    "동대구","서대구","경주"
+                    getString(R.string.central), getString(R.string.eastseoul),
+                    getString(R.string.incheon_bus),getString(R.string.incheonairport),getString(R.string.sungnam),
+                    getString(R.string.suwon),getString(R.string.ansan),getString(R.string.yongin),
+                    getString(R.string.gangneung),getString(R.string.chuncheon),getString(R.string.sokcho),
+                    getString(R.string.daejun),getString(R.string.sejong),
+                    getString(R.string.nonsan),getString(R.string.cheonan),getString(R.string.gongju),
+                    getString(R.string.cheongju),getString(R.string.jechun),getString(R.string.chungju),
+                    getString(R.string.kwangjuu),getString(R.string.suncheon),getString(R.string.damyang),getString(R.string.naju),
+                    getString(R.string.jeonju),getString(R.string.gunsan),getString(R.string.namwon),
+                    getString(R.string.busan),getString(R.string.ulsan),getString(R.string.gimhae),
+                    getString(R.string.eastdaegu),getString(R.string.westdaegu),getString(R.string.gyeongju)
             };
 
             String[] bus_type = {"우등버스","고속버스"};

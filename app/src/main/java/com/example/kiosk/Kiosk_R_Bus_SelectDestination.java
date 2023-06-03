@@ -1,9 +1,8 @@
 package com.example.kiosk;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.SearchManager;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -15,22 +14,25 @@ import android.speech.tts.UtteranceProgressListener;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SearchView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements View.OnClickListener {
+    private List<String> list;          // 데이터를 넣은 리스트변수
+    private EditText editText;        // 검색어를 입력할 Input 창
+    private SearchAdapter adapter;      // 리스트뷰에 연결할 아답터
+    private ArrayList<String> arraylist;
+    private Map<String, Button> destinationMap;     //목적지 해쉬맵
+
 
     private Button seoul_btn, incheon_btn, kangwon_btn, sejong_btn;
     private Button chungnam_btn, chungbuk_btn, kwangju_btn, jeonbuk_btn;
@@ -63,15 +65,14 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
     private Button eastdaegu_btn, westdaegu_btn, gyeongju_btn;
 
     private TextView textView1;
-    private SearchView searchView;
 
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_bus_selectdestination);
-
-        searchView = findViewById(R.id.searchView);
 
         giyeok_btn = findViewById(R.id.giyeok_btn);
         nieun_btn = findViewById(R.id.nieun_btn);
@@ -130,6 +131,7 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
         gyeongju_btn = findViewById(R.id.gyeongju_btn);
         button3 = findViewById(R.id.button3);
 
+
         busan_btn.setOnClickListener(this);
         jeonbuk_btn.setOnClickListener(this);
         seoul_btn.setOnClickListener(this);
@@ -155,6 +157,80 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
         pieup_btn.setOnClickListener(this);
         hieut_btn.setOnClickListener(this);
 
+        editText = (EditText) findViewById(R.id.editText);
+
+
+        // 리스트를 생성한다.
+        list = new ArrayList<String>();
+        destinationMap = new HashMap<>();
+
+        // 검색에 사용할 데이터을 미리 저장한다.
+        settingList();
+        mapSettig();
+
+        // 리스트의 모든 데이터를 arraylist에 복사한다.// list 복사본을 만든다.
+        arraylist = new ArrayList<String>();
+        arraylist.addAll(list);
+
+        // 리스트에 연동될 아답터를 생성한다.
+        adapter = new SearchAdapter(list, this);
+
+//        // 리스트뷰에 아답터를 연결한다.
+//        listView.setAdapter(adapter);
+//        listView.setVisibility(View.INVISIBLE);
+        editText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
+        // input창에 검색어를 입력시 "addTextChangedListener" 이벤트 리스너를 정의한다.
+        editText.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (editText.getText().length() == 0) {
+
+                    for (Map.Entry<String, Button> item : destinationMap.entrySet()) {
+                        item.getValue().setVisibility(View.GONE);
+                    }
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                // input창에 문자를 입력할때마다 호출된다.
+                // search 메소드를 호출한다.
+                if (editText.length() > 0) {
+                    String text = editText.getText().toString();
+
+                    search(text);
+                }
+                for (Map.Entry<String, Button> item : destinationMap.entrySet()) {
+                    item.getValue().setVisibility(View.GONE);
+                }
+
+
+                for (String a : list) {
+                    Log.d("listLog", a);
+                    Log.d("listLog", String.valueOf(destinationMap.get(a).getText()));
+                    if (!destinationMap.get(a).equals(null)) {
+                        destinationMap.get(a).setVisibility(View.VISIBLE);
+                    }
+                    if (editText.length() == 0) {
+                        for (Map.Entry<String, Button> item : destinationMap.entrySet()) {
+                            item.getValue().setVisibility(View.GONE);
+                        }
+                    }
+                }
+
+            }
+        });
 
         eastseoul_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -438,12 +514,14 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_SelectDestination.this, Kiosk_R_Bus_Destination.class);
+                Intent intent = new Intent(Kiosk_R_Bus_SelectDestination.this, Kiosk_R_Bus_SelectBustype.class);
                 startActivity(intent);
             }
         });
 
+
     }
+
 
 
     @Override
@@ -734,7 +812,7 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
                 westdaegu_btn.setVisibility(View.GONE);
                 gyeongju_btn.setVisibility(View.GONE);
                 if (kwangju_bus_btn.getVisibility() == View.GONE) {
-                    kwangju_bus_btn.setVisibility(View.VISIBLE);
+                    kwangju_bus_btn.setVisibility(View.GONE);
                     suncheon_btn.setVisibility(View.VISIBLE);
                     damyang_btn.setVisibility(View.VISIBLE);
                     naju_btn.setVisibility(View.VISIBLE);
@@ -1437,5 +1515,109 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
                 break;
         }
     }
+
+
+
+    // 검색을 수행하는 메소드
+    public void search(String charText) {
+
+        // 문자 입력시마다 리스트를 지우고 새로 뿌려준다.
+        list.clear();
+
+        // 문자 입력이 없을때는 모든 데이터를 보여준다.
+        if (charText.length() == 0) {
+
+        }
+        // 문자 입력을 할때..
+        else
+        {
+            // 리스트의 모든 데이터를 검색한다.
+            for(int i = 0;i < arraylist.size(); i++)
+            {
+                // arraylist의 모든 데이터에 입력받은 단어(charText)가 포함되어 있으면 true를 반환한다.
+                if (arraylist.get(i).toLowerCase().contains(charText))
+                {
+                    // 검색된 데이터를 리스트에 추가한다.
+                    list.add(arraylist.get(i));
+
+                }
+            }
+        }
+        // 리스트 데이터가 변경되었으므로 아답터를 갱신하여 검색된 데이터를 화면에 보여준다.
+        adapter.notifyDataSetChanged();
+    }
+
+    // 검색에 사용될 데이터를 리스트에 추가한다.
+    private void settingList(){
+        list.add("동서울");
+        list.add("센트럴시티");
+        list.add("인천");
+        list.add("인천공항");
+        list.add("성남");
+        list.add("수원");
+        list.add("안산");
+        list.add("용인");
+        list.add("강릉");
+        list.add("춘천");
+        list.add("속초");
+        list.add("대전");
+        list.add("세종");
+        list.add("논산");
+        list.add("천안");
+        list.add("공주");
+        list.add("충주");
+        list.add("제천");
+        list.add("청주");
+        list.add("광주(유스퀘어)");
+        list.add("순천");
+        list.add("담양");
+        list.add("나주");
+        list.add("전주");
+        list.add("나주");
+        list.add("전주");
+        list.add("군산");
+        list.add("남원");
+        list.add("부산");
+        list.add("울산");
+        list.add("김해");
+        list.add("동대구");
+        list.add("서대구");
+        list.add("경주");
+    }
+    private void mapSettig(){
+        destinationMap.put("동서울", eastseoul_btn);
+        destinationMap.put("센트럴시티", central_btn);
+        destinationMap.put("인천", incheon_btn);
+        destinationMap.put("인천공항", incheonairport_btn);
+        destinationMap.put("성남", sungnam_btn);
+        destinationMap.put("수원", suwon_btn);
+        destinationMap.put("안산", ansan_btn);
+        destinationMap.put("용인", yongin_btn);
+        destinationMap.put("강릉", gangneung_btn);
+        destinationMap.put("춘천", chunchun_btn);
+        destinationMap.put("속초", sokcho_btn);
+        destinationMap.put("대전", daejun_bus_btn);
+        destinationMap.put("세종", sejong_bus_btn);
+        destinationMap.put("논산", nonsan_btn);
+        destinationMap.put("천안", cheonan_btn);
+        destinationMap.put("공주", gongju_btn);
+        destinationMap.put("충주", chungju_btn);
+        destinationMap.put("제천", jechun_btn);
+        destinationMap.put("청주", cheongju_btn);
+        destinationMap.put("광주(유스퀘어)", kwangju_bus_btn);
+        destinationMap.put("순천", suncheon_btn);
+        destinationMap.put("담양", damyang_btn);
+        destinationMap.put("나주", naju_btn);
+        destinationMap.put("전주", jeonju_btn);
+        destinationMap.put("군산", gunsan_btn);
+        destinationMap.put("남원", namwon_btn);
+        destinationMap.put("부산", busan_bus_btn);
+        destinationMap.put("울산", ulsan_btn);
+        destinationMap.put("김해", gimhae_btn);
+        destinationMap.put("동대구", eastdaegu_btn);
+        destinationMap.put("서대구", westdaegu_btn);
+        destinationMap.put("경주", gyeongju_btn);
+    }
 }
+
 

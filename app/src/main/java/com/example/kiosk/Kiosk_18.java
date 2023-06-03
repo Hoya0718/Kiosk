@@ -41,6 +41,7 @@ public class Kiosk_18 extends AppCompatActivity {
     private Button seat_selection3_1_btn, seat_selection3_2_btn, seat_selection3_3_btn, seat_selection3_4_btn;
     private Button seat_selection4_1_btn, seat_selection4_2_btn, seat_selection4_3_btn, seat_selection4_4_btn;
     private Button seat_selection5_1_btn, seat_selection5_2_btn, seat_selection5_3_btn, seat_selection5_4_btn;
+    private Button seat_selection6_1_btn, seat_selection6_2_btn, seat_selection6_3_btn, seat_selection6_4_btn;
 
     private Button b_cancel_btn;
 
@@ -72,6 +73,8 @@ public class Kiosk_18 extends AppCompatActivity {
         seat_selection4_3_btn = findViewById(R.id.seat_selection4_3_btn); seat_selection4_4_btn = findViewById(R.id.seat_selection4_4_btn);
         seat_selection5_1_btn = findViewById(R.id.seat_selection5_1_btn); seat_selection5_2_btn = findViewById(R.id.seat_selection5_2_btn);
         seat_selection5_3_btn = findViewById(R.id.seat_selection5_3_btn); seat_selection5_4_btn = findViewById(R.id.seat_selection5_4_btn);
+        seat_selection6_1_btn = findViewById(R.id.seat_selection6_1_btn); seat_selection6_2_btn = findViewById(R.id.seat_selection6_2_btn);
+        seat_selection6_3_btn = findViewById(R.id.seat_selection6_3_btn); seat_selection6_4_btn = findViewById(R.id.seat_selection6_4_btn);
 
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
 
@@ -92,6 +95,8 @@ public class Kiosk_18 extends AppCompatActivity {
         seat_selection4_3_btn.setTextSize(text_size.getId()); seat_selection4_4_btn.setTextSize(text_size.getId());
         seat_selection5_1_btn.setTextSize(text_size.getId()); seat_selection5_2_btn.setTextSize(text_size.getId());
         seat_selection5_3_btn.setTextSize(text_size.getId()); seat_selection5_4_btn.setTextSize(text_size.getId());
+        seat_selection6_1_btn.setTextSize(text_size.getId()); seat_selection6_2_btn.setTextSize(text_size.getId());
+        seat_selection6_3_btn.setTextSize(text_size.getId()); seat_selection6_4_btn.setTextSize(text_size.getId());
 
 
         b_cancel_btn.setTextSize(text_size.getId());
@@ -309,6 +314,98 @@ public class Kiosk_18 extends AppCompatActivity {
                         }
                     });
 
+                    seat_selection6_1_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                                intent.putExtra("departuretime", "10시 00분");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "일반버스");
+                                intent.putExtra("price", "15,000원");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else {
+                                intent.putExtra("departuretime", "10 : 00");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "regular bus");
+                                intent.putExtra("price", "15,000won");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                        }
+                    });
+
+                    seat_selection6_2_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                                intent.putExtra("departuretime", "10시 00분");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "일반버스");
+                                intent.putExtra("price", "15,000원");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else {
+                                intent.putExtra("departuretime", "10 : 00");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "regular bus");
+                                intent.putExtra("price", "15,000won");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                        }
+                    });
+
+                    seat_selection6_3_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                                intent.putExtra("departuretime", "10시 00분");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "일반버스");
+                                intent.putExtra("price", "15,000원");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else {
+                                intent.putExtra("departuretime", "10 : 00");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "regular bus");
+                                intent.putExtra("price", "15,000won");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                        }
+                    });
+
+                    seat_selection6_4_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_18.this, Kiosk_19.class);
+                            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                                intent.putExtra("departuretime", "10시 00분");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "일반버스");
+                                intent.putExtra("price", "15,000원");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                            else {
+                                intent.putExtra("departuretime", "10 : 00");
+                                intent.putExtra("destination", destination);
+                                intent.putExtra("bus", "regular bus");
+                                intent.putExtra("price", "15,000won");
+                                tts.shutdown();
+                                startActivity(intent);
+                            }
+                        }
+                    });
+
                     b_cancel_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -354,6 +451,10 @@ public class Kiosk_18 extends AppCompatActivity {
                             seat_selection5_2_btn.setBackgroundResource(R.drawable.anim_list);
                             seat_selection5_3_btn.setBackgroundResource(R.drawable.anim_list);
                             seat_selection5_4_btn.setBackgroundResource(R.drawable.anim_list);
+                            seat_selection6_1_btn.setBackgroundResource(R.drawable.anim_list);
+                            seat_selection6_2_btn.setBackgroundResource(R.drawable.anim_list);
+                            seat_selection6_3_btn.setBackgroundResource(R.drawable.anim_list);
+                            seat_selection6_4_btn.setBackgroundResource(R.drawable.anim_list);
                             anim = (AnimationDrawable) seat_selection1_1_btn.getBackground();
                             anim.start();
                             anim = (AnimationDrawable) seat_selection1_2_btn.getBackground();
@@ -369,6 +470,14 @@ public class Kiosk_18 extends AppCompatActivity {
                             anim = (AnimationDrawable) seat_selection5_3_btn.getBackground();
                             anim.start();
                             anim = (AnimationDrawable) seat_selection5_4_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) seat_selection6_1_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) seat_selection6_2_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) seat_selection6_3_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) seat_selection6_4_btn.getBackground();
                             anim.start();
                         }
                     }, 2000);

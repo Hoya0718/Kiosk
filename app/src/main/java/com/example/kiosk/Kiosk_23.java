@@ -48,12 +48,13 @@ public class Kiosk_23 extends AppCompatActivity {
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("축하드립니다. 버스 연습 단계가 완료되었습니다" +
-                                "처음으로 돌아가기 버튼을 눌러주세요");
+                                "화면 아래쪽에 있는 처음으로 돌아가기 버튼을 눌러서" +
+                                "처음 화면으로 돌아간 후 다른 상황들도 체험해보세요");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("Congratulations. Bus practice phase is complete" +
-                                "Please click the back button");
+                                "Go back to the first screen by pressing the back button at the bottom of the screen and experience other situations.");
                     }
                     b_backbegin_btn = findViewById(R.id.b_backbegin_btn);
                     b_backbegin_btn.setOnClickListener(new View.OnClickListener() {

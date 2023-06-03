@@ -7,18 +7,13 @@
     android:orientation="vertical"
     tools:context=".Kiosk_16">
 
-    <SearchView
-        android:id="@+id/searchView"
+    <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:iconifiedByDefault="false"
-        android:singleLine="true"
-        android:textSize="20sp"
-        android:visible="true"
-        android:enabled="true"
-        android:showAsAction="collapseActionView|ifRoom"
-        android:actionViewClass="android.widget.SearchView"
-        android:queryHint="목적지를 입력하세요" />
+        android:ems="10"
+        android:inputType="text"
+        android:text="" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,7 +33,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="서울"
+                android:text="@string/seoul"
                 android:textSize="18sp" />
 
             <Button
@@ -48,7 +43,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="인천/경기"
+                android:text="@string/incheon"
                 android:textSize="18sp" />
 
             <Button
@@ -58,7 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="강원도"
+                android:text="@string/kangwon"
                 android:textSize="18sp" />
 
             <Button
@@ -68,7 +63,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="대전/세종"
+                android:text="@string/dajun"
                 android:textSize="18sp" />
 
             <Button
@@ -78,7 +73,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="충청남도"
+                android:text="@string/chungnam"
                 android:textSize="18sp" />
 
             <Button
@@ -88,7 +83,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="충청북도"
+                android:text="@string/chungbuk"
                 android:textSize="18sp" />
 
             <Button
@@ -98,7 +93,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="광주/전남"
+                android:text="@string/kwangju"
                 android:textSize="18sp" />
 
             <Button
@@ -108,7 +103,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="전라북도"
+                android:text="@string/jeonbuk"
                 android:textSize="18sp" />
 
             <Button
@@ -118,7 +113,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="부산/경남"
+                android:text="@string/busan"
                 android:textSize="18sp" />
 
             <Button
@@ -128,7 +123,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="대구/경북"
+                android:text="@string/dague"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -143,7 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㄱ"
+                android:text="@string/giyeok"
                 android:textSize="18sp" />
 
             <Button
@@ -151,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㄴ"
+                android:text="@string/nieun"
                 android:textSize="18sp" />
 
             <Button
@@ -159,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㄷ"
+                android:text="@string/diguet"
                 android:textSize="18sp" />
 
             <Button
@@ -167,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㄹ"
+                android:text="@string/rieul"
                 android:textSize="18sp" />
 
             <Button
@@ -175,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅁ"
+                android:text="@string/mieum"
                 android:textSize="18sp" />
 
             <Button
@@ -183,7 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅂ"
+                android:text="@string/bieup"
                 android:textSize="18sp" />
 
             <Button
@@ -191,7 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅅ"
+                android:text="@string/siot"
                 android:textSize="18sp" />
 
             <Button
@@ -199,7 +194,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅇ"
+                android:text="@string/ieung"
                 android:textSize="18sp" />
 
             <Button
@@ -207,7 +202,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅈ"
+                android:text="@string/jieut"
                 android:textSize="18sp" />
 
             <Button
@@ -215,7 +210,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅊ"
+                android:text="@string/chieut"
                 android:textSize="18sp" />
 
             <Button
@@ -223,7 +218,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅋ"
+                android:text="@string/kieuk"
                 android:textSize="18sp" />
 
             <Button
@@ -231,7 +226,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅌ"
+                android:text="@string/tieut"
                 android:textSize="18sp" />
 
             <Button
@@ -239,7 +234,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅍ"
+                android:text="@string/pieup"
                 android:textSize="18sp" />
 
             <Button
@@ -247,7 +242,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:text="ㅎ"
+                android:text="@string/hieut"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -263,7 +258,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="센트럴시티"
+                android:text="@string/central"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -272,7 +267,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="동서울"
+                android:text="@string/eastseoul"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -281,7 +276,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="인천"
+                android:text="@string/incheon_bus"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -290,7 +285,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="인천공항"
+                android:text="@string/incheonairport"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -299,7 +294,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="성남"
+                android:text="@string/sungnam"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -308,7 +303,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="수원"
+                android:text="@string/suwon"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -317,7 +312,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="안산"
+                android:text="@string/ansan"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -326,7 +321,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="용인"
+                android:text="@string/yongin"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -335,7 +330,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="강릉"
+                android:text="@string/gangneung"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -344,7 +339,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="춘천"
+                android:text="@string/chuncheon"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -353,7 +348,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="속초"
+                android:text="@string/sokcho"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -362,7 +357,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="대전"
+                android:text="@string/daejun"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -371,7 +366,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="세종"
+                android:text="@string/sejong"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -380,7 +375,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="논산"
+                android:text="@string/nonsan"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -389,7 +384,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="천안"
+                android:text="@string/cheonan"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -398,7 +393,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="공주"
+                android:text="@string/gongju"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -408,7 +403,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="청주"
+                android:text="@string/cheongju"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -417,7 +412,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="제천"
+                android:text="@string/jechun"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -426,7 +421,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="충주"
+                android:text="@string/chungju"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -435,7 +430,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="광주(유스퀘어)"
+                android:text="@string/kwangjuu"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -444,7 +439,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="순천"
+                android:text="@string/suncheon"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -453,7 +448,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="담양"
+                android:text="@string/damyang"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -462,7 +457,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="나주"
+                android:text="@string/naju"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -471,7 +466,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="전주"
+                android:text="@string/jeonju"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -480,7 +475,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="군산"
+                android:text="@string/gunsan"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -489,7 +484,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="남원"
+                android:text="@string/namwon"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -498,7 +493,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="부산"
+                android:text="@string/busan_bus"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -507,7 +502,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="울산"
+                android:text="@string/ulsan"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -516,7 +511,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="김해"
+                android:text="@string/gimhae"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -526,7 +521,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="동대구"
+                android:text="@string/eastdaegu"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -535,7 +530,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="서대구"
+                android:text="@string/westdaegu"
                 android:textSize="15sp"
                 android:visibility="gone" />
 
@@ -544,7 +539,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130sp"
                 android:layout_weight="1"
-                android:text="경주"
+                android:text="@string/gyeongju"
                 android:textSize="15sp"
                 android:visibility="gone" />
 

@@ -50,15 +50,17 @@ public class Kiosk_10 extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("주문이 완료되었습니다." +
-                            "이제 결제를 진행해주시면 됩니다." +
-                            "다양한 결제 방식 중 카드 결제를 연습해보겠습니다." +
+                            "결제 방법으로는 카드 결제와 모바일 상품권이 있습니다." +
+                            "카드 결제를 선택하면 카드를 카드 리더기에 대야하고," +
+                            "모바일 상품권을 선택하면 모바일의 QR코드를 QR코드 리더기에 비추어야합니다." +
                             "카드 결제를 눌러주세요");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("Your order has been completed." +
-                            "You can proceed with the payment now." +
-                            "Practice card payment among various payment methods." +
+                            "Payment methods include credit card payment and mobile gift certificates." +
+                            "If you choose to pay by card, you must swipe your card over the card reader," +
+                            "If you choose a mobile gift certificate, you need to show the mobile's QR code to the QR code reader." +
                             "Choose a credit card payment");
                 }
             }

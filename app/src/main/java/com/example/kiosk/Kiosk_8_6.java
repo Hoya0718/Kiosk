@@ -56,15 +56,15 @@ public class Kiosk_8_6 extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("버거 메뉴 화면으로 돌아왔습니다." +
-                            "좌측 하단에 가격이 추가되었습니다." +
-                            "이제 결제 단계로 넘어가보겠습니다." +
+                            "빅맥 세트가 주문 내역에 추가되어서 왼쪽 하단에 가격이 증가했습니다." +
+                            "장바구니를 결제하기 위해서는 주문 내역 화면으로 가야합니다." +
                             "주문 내역 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("You have returned to the Burger Menu screen." +
-                            "Price added to bottom left." +
-                            "Now let's move on to the payment phase." +
+                            "The Big Mc set has been added to your order history, so the price has increased in the bottom left corner." +
+                            "You need to go to the order history screen to pay for the cart." +
                             "Please press the order history button.");
                 }
             }

@@ -44,12 +44,16 @@ public class Kiosk_8_7 extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("메뉴 추천 화면입니다." +
-                            "더 이상 추가할 메뉴가 없으므로 선택 안함 버튼을 눌러주세요.");
+                            "상단에 추천하는 메뉴를 누른다면 바로 주문 내역에 추가됩니다." +
+                            "추천 메뉴를 고르지 않는다면 선택 안함 버튼을 누르고 다음 화면으로 넘어갈 수 있습니다." +
+                            "선택 안함 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("This is the menu recommendation screen." +
-                            "There are no more menu items to add, so please press the Unselect button.");
+                            "If you click on the recommended menu at the top, it will be added to your order history immediately." +
+                            "If you do not choose a recommended menu, you can click the No selection button and go to the next screen." +
+                            "Please click the Uncheck button.");
                 }
             }
         });

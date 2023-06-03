@@ -53,6 +53,8 @@ public class Kiosk_8_5 extends AppCompatActivity {
                             "빅맥 세트가 추가되었습니다." +
                             "빅맥 세트의 구성은 빅맥, 후렌치 후라이, 코카콜라로 세팅되었습니다." +
                             "이 화면에서는 고른 메뉴의 수량을 조절할 수 있습니다." +
+                            "취소 버튼을 누르면 이전 화면으로 가고," +
+                            "장바구니 추가 버튼을 누르면 상단의 메뉴가 주문 내역에 추가됩니다." +
                             "장바구니 추가 버튼을 눌러주세요.");
                 }
                 else {
@@ -61,6 +63,8 @@ public class Kiosk_8_5 extends AppCompatActivity {
                             "The Big Mc set has been added." +
                             "The Big Mc set consists of a Big Mc, French fries, and Coca-Cola." +
                             "On this screen, you can adjust the quantity of the selected menu." +
+                            "If you press the cancel button, you go to the previous screen," +
+                            "and if you press the add to cart button, the menu at the top is added to your order history." +
                             "Please press the Add to Cart button.");
                 }
             }

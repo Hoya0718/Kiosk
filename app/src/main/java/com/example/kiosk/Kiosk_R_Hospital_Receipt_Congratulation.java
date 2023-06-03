@@ -8,12 +8,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
 
+    private myapp myApp;
     private Button kiosk_r_hospital_btn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +24,7 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         Intent intent = getIntent();
         String text = intent.getStringExtra("text");
 
-        myapp myApp = (myapp) getApplicationContext();
+        myApp = (myapp) getApplicationContext();
         long beforeTime = myApp.getTime();
         long afterTime = System.currentTimeMillis();
         long measTime = (afterTime - beforeTime) / 1000;
@@ -39,11 +41,11 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
 
         kiosk_r_hospital_btn = findViewById(R.id.kiosk_r_hospital_btn);
         if (myApp.getCheckCheck()) {
-            kiosk_r_hospital_btn.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+            kiosk_r_hospital_btn.setText("접수 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + missionComplete + "\n" +
                     "처음으로 돌아가기");
         } else {
-            kiosk_r_hospital_btn.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+            kiosk_r_hospital_btn.setText("접수 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "처음으로 돌아가기");
         }
     }

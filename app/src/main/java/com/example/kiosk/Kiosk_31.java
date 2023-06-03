@@ -26,7 +26,7 @@ public class Kiosk_31 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk31);
         sound = (myapp) getApplication();
         text_size = (myapp) getApplication();
-        goto_5 =findViewById(R.id.goto_5);
+        goto_5 =findViewById(R.id.concon);
 
         goto_5.setTextSize(text_size.getId());
 

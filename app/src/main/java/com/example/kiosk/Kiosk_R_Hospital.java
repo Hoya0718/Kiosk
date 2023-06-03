@@ -14,9 +14,8 @@ public class Kiosk_R_Hospital extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_hospital);
 
         myapp myApp = (myapp) getApplicationContext();
-        if (!myApp.getCheckCheck()){
-            myApp.setTime(System.currentTimeMillis());
-        }
+        myApp.setTime(System.currentTimeMillis());
+
     }
 
     public void goto_Kiosk_R_H_Receipt(View v){

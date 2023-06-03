@@ -2,7 +2,6 @@ package com.example.kiosk;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -37,7 +36,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             }
         }
 
-        goto_5 = findViewById(R.id.goto_5);
+        goto_5 = findViewById(R.id.concon);
         if (myApp.getCheckCheck()) {
             goto_5.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + missionComplete + "\n" +

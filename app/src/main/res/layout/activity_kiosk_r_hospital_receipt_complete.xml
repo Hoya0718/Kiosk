@@ -196,7 +196,7 @@
             android:id="@+id/print_receipt"
             android:layout_width="300dp"
             android:layout_height="80dp"
-            android:onClick="goto_Kiosk_R_H"
+            android:onClick="goto_Kiosk_R_H_C"
             android:text="@string/printing"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>

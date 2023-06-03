@@ -21,7 +21,6 @@
         </intent>
     </queries>
 
-
     <application
         android:name=".myapp"
         android:allowBackup="true"
@@ -32,40 +31,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kiosk"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Kiosk_R_Hospital_Receipt_Congratulation"
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Fastfood_Congratulation"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_Congratulations"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_Destination"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_Refund"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_Reserved"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_Reserved_1"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_SelectDestination"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_SelectBustype"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_SelectSeat"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_VerifyTicket"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Bus_Main"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Kiosk_R_Fastfood_Popup_Count"
             android:exported="false" />
@@ -185,23 +186,23 @@
             android:exported="true" />
         <activity
             android:name=".Kiosk_17"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Kiosk_16"
             android:exported="true"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop" />
         <activity
             android:name=".Kiosk_15"
             android:exported="true" />
         <activity
             android:name=".Kiosk_14_refund"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Kiosk_14_reserved_1"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Kiosk_14_reserved"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Kiosk_14"
             android:exported="true" />
@@ -273,14 +274,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
-                <action android:name = "android.intent.action.SEARCH"/>
+                <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
 
             <meta-data
-                android:name = "android.app.searchable"
-                android:resource="@xml/searchable"/>
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
         </activity>
     </application>
 

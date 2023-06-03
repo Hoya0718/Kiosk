@@ -17,8 +17,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SearchView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,10 +27,9 @@ import java.util.Map;
 
 public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener {
     private List<String> list;          // 데이터를 넣은 리스트변수
-    private ListView listView;          // 검색을 보여줄 리스트변수
     private EditText editText;        // 검색어를 입력할 Input 창
     private SearchAdapter adapter;      // 리스트뷰에 연결할 아답터
-    private ArrayList<String> arraylist; //
+    private ArrayList<String> arraylist;
     private Map<String, Button> destinationMap;     //목적지 해쉬맵
 
     private TextToSpeech tts;
@@ -49,7 +46,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
     private Button digeut_btn, rieul_btn, mieum_btn, bieup_btn;
     private Button siot_btn, ieung_btn, jieut_btn, chieut_btn;
     private Button kieuk_btn, tieut_btn, pieup_btn, hieut_btn;
-    private Button button3, button20;
+    private Button button3;
 
     // 서울
     private Button central_btn, eastseoul_btn;
@@ -72,9 +69,6 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
     private Button busan_bus_btn, ulsan_btn, gimhae_btn;
     // 대구/경북
     private Button eastdaegu_btn, westdaegu_btn, gyeongju_btn;
-
-    private TextView textView1;
-
 
 
     @SuppressLint("MissingInflatedId")
@@ -116,7 +110,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         busan_bus_btn = findViewById(R.id.busan_bus_btn); ulsan_btn = findViewById(R.id.ulsan_btn);
         gimhae_btn = findViewById(R.id.gimhae_btn); eastdaegu_btn = findViewById(R.id.eastdaegu_btn);
         westdaegu_btn = findViewById(R.id.westdaegu_btn); gyeongju_btn = findViewById(R.id.gyeongju_btn);
-        button3 = findViewById(R.id.button3); button20 = findViewById(R.id.button20);
+        button3 = findViewById(R.id.button3);
 
         giyeok_btn.setTextSize(text_size.getId()); nieun_btn.setTextSize(text_size.getId());
         digeut_btn.setTextSize(text_size.getId()); rieul_btn.setTextSize(text_size.getId());
@@ -146,7 +140,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         busan_bus_btn.setTextSize(text_size.getId()); ulsan_btn.setTextSize(text_size.getId());
         gimhae_btn.setTextSize(text_size.getId()); eastdaegu_btn.setTextSize(text_size.getId());
         westdaegu_btn.setTextSize(text_size.getId()); gyeongju_btn.setTextSize(text_size.getId());
-        button3.setTextSize(text_size.getId()); button20.setTextSize(text_size.getId());
+        button3.setTextSize(text_size.getId());
 
         busan_btn.setOnClickListener(this); jeonbuk_btn.setOnClickListener(this);
         seoul_btn.setOnClickListener(this); incheon_btn.setOnClickListener(this);
@@ -235,8 +229,6 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
 
             }
         });
-
-
 
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {

@@ -260,12 +260,13 @@ public class Kiosk_26 extends AppCompatActivity {
                 pn.setDay(clickTime);
                 tts.shutdown();
                 Intent goto_kiosk_26_2 = new Intent(this,Kiosk_26_2.class);
-                char pass = get_num.charAt(7);
-                if (pass == '1' || pass == '2' || pass == '3' || pass == '4') {
+                char pass_7 = get_num.charAt(7);
+                if (pass_7 == '1' || pass_7 == '2' || pass_7 == '3' || pass_7 == '4') {
                     startActivity(goto_kiosk_26_2);
                 }
+
                 else
-                    Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "주민등록번호를 확인해주세요.", Toast.LENGTH_LONG).show();
             }
             else {
                 if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {

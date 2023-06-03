@@ -61,12 +61,16 @@ public class Kiosk_14_refund extends AppCompatActivity {
 
                         speakText("여기서는 구매한 승차권을 환불하실 수 있습니다." +
                                 "화면 중앙에 환불 규정 표를 확인해주세요." +
+                                "환불 규정의 경우 출발 2일전, 출발 1일전, 출발 전 1시간 이내 등 시간마다" +
+                                "환불되는 가격이 다를 수 있으므로 꼭 확인해주세요." +
                                 "규정 표를 확인하셨다면, 승차권을 투입구에 넣어주세요." +
-                                "환불하지 않으실 거라면 취소하기 버튼을 눌러주세요");
+                                "환불하지 않으실 거라면 아래쪽에 있는 취소하기 버튼을 눌러주세요");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("You can refund the tickets you have purchased here. Please check the refund policy table in the center of the screen." +
-                                "After checking the rules table, insert the ticket into the slot. If you do not wish to receive a refund, please click the Cancel button.");
+                        speakText("You can refund the tickets you have purchased here." +
+                                "Please check the refund policy table in the center of the screen." +
+                                "Regarding the refund policy, the refunded price may vary for each hour, such as 2 days before departure, 1 day before departure, and within 1 hour before departure, so please check it." +
+                                "After checking the rule table, insert the ticket into the slot. If you do not wish to receive a refund, please click the Cancel button at the bottom.");
                     }
 
                     b_cancel_btn.setOnClickListener(new View.OnClickListener() {

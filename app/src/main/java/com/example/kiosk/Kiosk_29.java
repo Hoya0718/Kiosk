@@ -247,8 +247,8 @@ public class Kiosk_29 extends AppCompatActivity {
         }
     }
 
-    public void goto_Kiosk_29_2(View v) {
-        Intent goto_Kiosk_29_2 = new Intent(this, Kiosk_29_2.class);
+    public void goto_kiosk_29_2(View v) {
+        Intent goto_kiosk_29_2 = new Intent(this, Kiosk_29_2.class);
         if (ssn_2.length() != 14) {
             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                 speakText("주민등록번호가 맞는지 확인해주세요.");
@@ -265,6 +265,7 @@ public class Kiosk_29 extends AppCompatActivity {
             }
         } else {
             get_num_2 = ssn_2.getText().toString();
+            pnpnpn.setGet_pn_2(get_num_2);
 
             char one = get_num_2.charAt(0);
             char two = get_num_2.charAt(1);
@@ -311,7 +312,7 @@ public class Kiosk_29 extends AppCompatActivity {
                 anim.start();
                 Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
             } else {
-                startActivity(goto_Kiosk_29_2);
+                startActivity(goto_kiosk_29_2);
             }
         }
     }

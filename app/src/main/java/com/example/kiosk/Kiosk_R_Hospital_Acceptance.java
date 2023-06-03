@@ -181,6 +181,7 @@ public class Kiosk_R_Hospital_Acceptance extends AppCompatActivity {
             }
         } else {
             get_num_2 = ssn_2.getText().toString();
+            pnpnpn.setGet_pn_2(get_num_2);
 
             char one = get_num_2.charAt(0);
             char two = get_num_2.charAt(1);

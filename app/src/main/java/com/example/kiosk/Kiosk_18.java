@@ -111,12 +111,14 @@ public class Kiosk_18 extends AppCompatActivity {
                         speakText("가고 싶은 곳을 고르셨나요?" +
                                 "그럼 이제 버스 종류, 출발 시간을 확인하시고" +
                                 "타고 싶은 버스를 고르기 위해 좌석 선택 버튼을 눌러주세요." +
+                                "매진이라고 써진 버튼은 탈 수 있는 좌석이 없는 버스입니다." +
                                 "만약 도착지를 잘못 고르셨다면 뒤로가기 버튼을 눌러서 뒤로 돌아가실 수 있습니다.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("Have you chosen where you want to go? " +
                                 "Then press the seat select button to see the bus type, " +
+                                "The button that says sold out is a bus with no available seats." +
                                 "departure time and select the bus you want to ride.");
                     }
                     Intent intent = getIntent();

@@ -19,7 +19,7 @@ import java.util.Locale;
 
 public class Kiosk_14_reserved extends AppCompatActivity {
 
-    private TextView ssn ,hos_bar_txt;//
+    private TextView ssn ,hos_bar_txt;
     private TextToSpeech tts;
     private myapp sound;
 
@@ -78,27 +78,17 @@ public class Kiosk_14_reserved extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("승차권 확인을 하실려면 주민등록번호와 개인정보 수집 동의를 눌러주셔야 확인하실 수 있습니다. 개인정보 수집 동의를 눌러주신 후 주민등록번호를 입력하시고 확인 버튼을 눌러주세요");
+                        speakText("승차권 확인을 하기 위해서는 주민등록번호와 개인정보 수집 동의를 눌러주셔야 확인하실 수 있습니다. 개인정보 수집 동의 글자를 눌러주신 후 주민등록번호를 입력하시고 확인 버튼을 눌러주세요" +
+                                "주민등록번호는 밑에 있는 숫자를 누르시면 채울 수 있습니다. 만약 글자를 잘못 적으셨다면 정정이라고 써진 버튼을 누르면 지울 수 있습니다.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("You can agree to the collection of your resident registration number and personal information that requires confirmation of claim. After agreeing to the collection of personal information, " +
-                                "enter your resident registration number and click the Check button.");
+                                "enter your resident registration number and click the Check button." +
+                                "You can fill in the resident registration number by clicking the number below. If you wrote a letter incorrectly, you can erase it by clicking the button labeled Correct.");
                     }
                 }
             }
         });
-
-        /*new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                tts.setSpeechRate(sound.getTtsSpeed());
-                sound.getTtsVolume();
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.");
-                else
-                    speakText("You can enter your social security number through the numbers below.");
-            }
-        }, 17000);*/
 
         tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
 
@@ -117,9 +107,11 @@ public class Kiosk_14_reserved extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요.");
+                                    speakText("아래의 숫자를 통해 주민등록번호를 입력하실 수 있어요." +
+                                            "만약 잘못 적으셨다면 정정 버튼을 누르면 한글자씩 지우실 수 있습니다.");
                                 else
-                                    speakText("You can enter your social security number through the numbers below.");
+                                    speakText("You can enter your social security number through the numbers below." +
+                                            "If you make a mistake, you can delete it one by one by clicking the correct button.");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼

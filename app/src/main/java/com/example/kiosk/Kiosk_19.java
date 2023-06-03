@@ -102,13 +102,14 @@ public class Kiosk_19 extends AppCompatActivity {
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("앉고 싶은 좌석를 예매할 수 있는 화면입니다. 버스 좌석 번호는 앞 자리의 운전석을 기준으로 배정되어있습니다." +
-                                "매진이라고 써진 좌석은 다른 사람이 이미 예약해서 선택할 수 없는 좌석입니다." +
-                                "매진이 써지지 않은 다른 좌석을 골라주세요.");
+                                "매진이라고 써진 회색 좌석은 다른 사람이 이미 예약해서 선택할 수 없는 좌석입니다." +
+                                " 매진된 좌석이 아닌 경우 버튼의 색깔이 주황색입니다. 매진이 써지지 않은 다른 좌석을 골라주세요. ");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("This is a screen where you can reserve a seat you want to sit on." +
                                 "Bus seat numbers are occupied based on the production seat in the front seat." +
+                                "If the seat is not sold out, the color of the button is orange." +
                                 "Seats marked sold out are seats that have already been reserved by someone else and cannot be selected." +
                                 "Choose a different seat");
                     }

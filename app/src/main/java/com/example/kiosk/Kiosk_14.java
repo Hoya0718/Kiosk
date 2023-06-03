@@ -32,7 +32,7 @@ import android.widget.Toast;
 
 
 public class Kiosk_14 extends AppCompatActivity {
-    private int currentVolume;//
+    private int currentVolume;
     private AudioManager audioManager;
     private TextToSpeech tts;
     private myapp sound;
@@ -85,7 +85,6 @@ public class Kiosk_14 extends AppCompatActivity {
                                 "And also get a refund for tickets that you have incorrectly reserved" +
                                 "Press the button of the function you want to learn among ticket purchase, ticket confirmation, and ticket refund functions.");
                     }
-
 
                     textView11 = (TextView) findViewById(R.id.textView11);
 
@@ -155,9 +154,15 @@ public class Kiosk_14 extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("여기 있는 세 가지 버튼 중 한가지 버튼을 눌러주세요");
+                                    speakText("여기 있는 세 가지 버튼 중 한가지 버튼을 눌러주세요" +
+                                            "첫 번째 버튼은 승차권을 구매하는 버튼" +
+                                            "두 번째 버튼은 예매한 승차권을 확인하고 뽑는 버튼" +
+                                            "세 번째 버튼은 예매한 승차권을 환불하는 버튼입니다.");
                                 else
-                                    speakText("Please press one of the three buttons here");
+                                    speakText("Please press one of the three buttons here" +
+                                            "The first button is a button to purchase a ticket" +
+                                            "The second button is a button that checks and draws tickets you have reserved." +
+                                            "The third button is a button to refund the reserved ticket.");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼

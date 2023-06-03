@@ -61,16 +61,22 @@ public class Kiosk_14_refund extends AppCompatActivity {
 
                         speakText("여기서는 구매한 승차권을 환불하실 수 있습니다." +
                                 "화면 중앙에 환불 규정 표를 확인해주세요." +
-                                "환불 규정의 경우 출발 2일전, 출발 1일전, 출발 전 1시간 이내 등 시간마다" +
-                                "환불되는 가격이 다를 수 있으므로 꼭 확인해주세요." +
-                                "규정 표를 확인하셨다면, 승차권을 투입구에 넣어주세요." +
-                                "환불하지 않으실 거라면 아래쪽에 있는 취소하기 버튼을 눌러주세요");
+                                "환불 규정의 경우 출발 2일전, 당일날 출발하는 승차권을 발권하는 시간 기준으로 1시간 이내의 경우에는 전액 환불이 가능합니다." +
+                                "출발 1일전부터 출발 1시간 전까지는 전액 환불이 아닌 5%의 취소 수수료가 붙습니다." +
+                                "출발 전 1시간 이내에는 10%의 취소 수수료가 붙습니다." +
+                                "만약 버스가 출발해버렸다면 시외 버스의 경우에는 출발 후 6시간 이내에는 30%의 취소 수수료가 붙고 출발 6시간 이후에는 환불이 불가능합니다." +
+                                "고속 버스의 경우에는 버스 도착시간 이전에 환불할 시 30%의 취소 수수료가 붙고 버스가 도착한 이후에는 환불이 불가능합니다." +
+                                "최종 취소 수수료는 하단의 환불 버튼을 누르는 시간을 기준으로 위의 안내 기준에 따라 계산됩니다." +
+                                "이 점 유의하시고 환불하기 버튼을 눌러주세요.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("You can refund the tickets you have purchased here." +
-                                "Please check the refund policy table in the center of the screen." +
-                                "Regarding the refund policy, the refunded price may vary for each hour, such as 2 days before departure, 1 day before departure, and within 1 hour before departure, so please check it." +
-                                "After checking the rule table, insert the ticket into the slot. If you do not wish to receive a refund, please click the Cancel button at the bottom.");
+                        speakText("You can refund the tickets you have purchased here. Check the Foundation Rules Table in the center of the screen" +
+                                "In the case of the refund policy, a full refund is possible if it is less than 1 hour from the time of issuing the ticket for departure on the same day, 2 days before departure." +
+                                "From 1 day before departure to 1 hour before departure, a 5% cancellation fee is charged, not a full refund." +
+                                "A 10% cancellation fee applies within 1 hour prior to departure. If the bus has departed, a 30% cancellation fee is charged for intercity buses within 6 hours of departure, and refunds are not possible after 6 hours of departure." +
+                                "In the case of express buses, a 30% cancellation fee is charged if refunded before the bus arrives, and refunds are not possible after the bus arrives." +
+                                "The final cancellation fee will be calculated according to the guideline above based on the time the refund button at the bottom is pressed. " +
+                                "Please note this point and click the refund button.");
                     }
 
                     b_cancel_btn.setOnClickListener(new View.OnClickListener() {

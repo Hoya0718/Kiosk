@@ -33,7 +33,7 @@ import android.widget.Toast;
 
 public class Kiosk_R_Bus_Main extends AppCompatActivity {
 
-    private Button buy_ticket_btn;
+    private Button buy_ticket_btn;//
     private Button reserved_ticket_btn;
     private Button refund_ticket_btn;
     private TextView textView11;

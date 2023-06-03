@@ -230,4 +230,5 @@
             android:text="@string/bus_goback"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
+
 </LinearLayout>

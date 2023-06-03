@@ -21,7 +21,7 @@ import org.w3c.dom.Text;
 import java.util.Locale;
 
 public class Kiosk_19 extends AppCompatActivity {
-    private TextToSpeech tts;
+    private TextToSpeech tts;//
     private myapp sound;
     private int currentVolume;
     private AudioManager audioManager;

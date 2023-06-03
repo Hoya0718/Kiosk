@@ -230,4 +230,5 @@
             android:text="뒤로가기"
             android:textSize="@dimen/font_size_medium" />
     </LinearLayout>
+
 </LinearLayout>

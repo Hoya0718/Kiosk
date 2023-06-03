@@ -21,7 +21,7 @@ import org.w3c.dom.Text;
 import java.util.Locale;
 
 public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
-    private TextView textView32;
+    private TextView textView32;//
     private TextView textView34;
     private TextView textView33;
     private Button b_1_btn, b_2_btn, b_3_btn, b_4_btn, b_5_btn;

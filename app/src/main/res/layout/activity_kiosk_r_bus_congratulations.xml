@@ -26,4 +26,5 @@
         android:layout_weight="1"
         android:text="@string/b_gofirst1"
         android:textSize="@dimen/font_size_medium" />
+
 </LinearLayout>

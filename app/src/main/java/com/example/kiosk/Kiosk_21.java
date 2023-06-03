@@ -27,7 +27,7 @@ public class Kiosk_21 extends AppCompatActivity {
     private String seat = "좌석 번호";
 
     private TextView textView3, textView5, textView6, textView12, textView14, textView16, textView20;
-    private TextToSpeech tts;
+    private TextToSpeech tts;//
     private int currentVolume;
     private AudioManager audioManager;
     private myapp sound;

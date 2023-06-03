@@ -35,8 +35,8 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
     private AnimationDrawable anim;
     Handler handler = new Handler();
 
-    private Button b_cancel_btn; //취소하기
-    private Button b_payment_btn; //결제하기
+    private Button b_cancel_btn;
+    private Button b_payment_btn;
 
 
     @Override
@@ -49,7 +49,6 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
         currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         text_size = (myapp) getApplication();
 
-        textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
         textView5 = findViewById(R.id.textView5);
         textView6 = findViewById(R.id.textView6);

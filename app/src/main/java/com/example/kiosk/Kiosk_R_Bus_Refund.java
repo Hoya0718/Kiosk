@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Kiosk_R_Bus_Refund extends AppCompatActivity {
 
-    private Button b_cancel_btn, b_payment_btn;
+    private Button b_cancel_btn, b_payment_btn;//
 
     private TextView textView2, textView19, textView43;
     Handler handler = new Handler();

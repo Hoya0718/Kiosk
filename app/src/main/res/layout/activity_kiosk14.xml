@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bus_time"
             android:textAlignment="center"
-            android:textSize="40sp"/>
+            android:textSize="35sp"/>
     </LinearLayout>
 
     <LinearLayout

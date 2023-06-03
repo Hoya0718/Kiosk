@@ -185,9 +185,6 @@
             android:name=".Kiosk_18"
             android:exported="true" />
         <activity
-            android:name=".Kiosk_17"
-            android:exported="true" />
-        <activity
             android:name=".Kiosk_16"
             android:exported="true"
             android:launchMode="singleTop" />

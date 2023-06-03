@@ -32,7 +32,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
     private ListView listView;          // 검색을 보여줄 리스트변수
     private EditText editText;        // 검색어를 입력할 Input 창
     private SearchAdapter adapter;      // 리스트뷰에 연결할 아답터
-    private ArrayList<String> arraylist;
+    private ArrayList<String> arraylist; //
     private Map<String, Button> destinationMap;     //목적지 해쉬맵
 
     private TextToSpeech tts;
@@ -574,16 +574,6 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                             startActivity(intent);
                         }
                     });
-
-                    button20.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_16.this, Kiosk_17.class);
-                            tts.shutdown();
-                            startActivity(intent);
-                        }
-                    });
-
 
                 }
             }

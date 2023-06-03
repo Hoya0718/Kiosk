@@ -19,7 +19,7 @@ import java.util.Locale;
 
 public class Kiosk_R_Bus_SelectBustype extends AppCompatActivity {
 
-    private TextView textView18;
+    private TextView textView18;//
     private TextView textView36;
     private TextView textView17;
     private TextView bus_departuretime;

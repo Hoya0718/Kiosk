@@ -159,7 +159,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
             builder.setMessage("버스를 예매하는 임무입니다.\n아래와 같은 버스를 예매하세요.\n" +
                     "\n목적지 : " + randomDestination +
                     "\n버스 종류 : " + randomBusType +
-                    "\n좌석 : " + randomSeat);
+                    "\n좌석 : " + randomSeat); 
 
             myapp myApp = (myapp) getApplicationContext();
             String checkBusMission = randomDestination + " - " + randomBusType + " - " + randomSeat;

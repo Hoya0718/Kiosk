@@ -100,4 +100,5 @@
             android:text="@string/b_gofirst"
             android:textSize="18sp" />
     </LinearLayout>
+
 </LinearLayout>

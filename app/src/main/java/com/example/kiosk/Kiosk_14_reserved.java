@@ -19,7 +19,7 @@ import java.util.Locale;
 
 public class Kiosk_14_reserved extends AppCompatActivity {
 
-    private TextView ssn ,hos_bar_txt;
+    private TextView ssn ,hos_bar_txt;//
     private TextToSpeech tts;
     private myapp sound;
 

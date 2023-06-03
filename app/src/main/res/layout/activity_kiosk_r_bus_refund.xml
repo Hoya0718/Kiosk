@@ -117,4 +117,5 @@
             android:autoSizeMaxTextSize="40sp"
             android:autoSizeStepGranularity="2sp"/>
     </LinearLayout>
+
 </LinearLayout>

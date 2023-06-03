@@ -19,7 +19,7 @@ import java.util.Locale;
 
 public class Kiosk_R_Bus_Reserved extends AppCompatActivity {
 
-    private TextView ssn ,hos_bar_txt;
+    private TextView ssn ,hos_bar_txt;//
 
     private CheckBox personal_Information;
 

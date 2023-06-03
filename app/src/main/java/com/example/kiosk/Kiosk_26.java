@@ -304,6 +304,112 @@ public class Kiosk_26 extends AppCompatActivity {
         }
     }
 
+    public void goto_Kiosk_26_2(View v) {
+        Intent goto_Kiosk_26_2 = new Intent(this, Kiosk_26_2.class);
+        if (!personal_Information.isChecked()) {
+            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                speakText("개인정보 수집 동의를 눌러주세요.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
+            } else {
+                speakText("Agree to collect personal information.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "Agree to collect personal information.", Toast.LENGTH_LONG).show();
+            }
+        } else if (ssn.length() != 14) {
+            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                speakText("주민등록번호의 길이가 맞는지 확인해 주세요.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "주민등록번호의 길이가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
+            } else {
+                speakText("Please verify your social security number");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "Please verify your social security number", Toast.LENGTH_LONG).show();
+            }
+        } else {
+            get_num = ssn.getText().toString();
+
+            char one = get_num.charAt(0);
+            char two = get_num.charAt(1);
+            char three = get_num.charAt(2);
+            char four = get_num.charAt(3);
+            char five = get_num.charAt(4);
+            char six = get_num.charAt(5);
+            char seven = get_num.charAt(7);
+
+            pn.setGet_pn(get_num);
+            clickTime = System.currentTimeMillis();
+            pn.setDay(clickTime);
+
+            if (three != '0' && three != '1') {
+                speakText("유효하지 않은 월입니다.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 월입니다.", Toast.LENGTH_LONG).show();
+            } else if (three == '1' && !(four == '0' || four == '1' || four == '2')) {
+                speakText("유효하지 않은 월입니다.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 월입니다.", Toast.LENGTH_LONG).show();
+            } else if (five != '0' && five != '1' && five != '2' && five != '3') {
+                speakText("유효하지 않은 일입니다.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 일입니다.", Toast.LENGTH_LONG).show();
+            } else if (five == '3' && !(six == '0' || six == '1')) {
+                speakText("유효하지 않은 일입니다.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 일입니다.", Toast.LENGTH_LONG).show();
+            } else if (checkInvalidDay(one,two,three,four,five,six)) {
+                speakText("유효하지 않은 생년월일입니다.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 생년월일입니다.", Toast.LENGTH_LONG).show();
+            } else if (!(seven == '1' || seven == '2' || seven == '3' || seven == '4')) {
+                speakText("주민등록번호 뒷자리를 확인해주세요.");
+                personal_Information.setBackgroundResource(R.drawable.anim_list);
+                anim = (AnimationDrawable) personal_Information.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
+            } else {
+                startActivity(goto_Kiosk_26_2);
+            }
+        }
+    }
+
+    private boolean checkInvalidDay(char one, char two, char three, char four, char five, char six) {
+
+        int year = Integer.parseInt(String.valueOf(one) + String.valueOf(two));
+        int month = Integer.parseInt(String.valueOf(three) + String.valueOf(four));
+        int day = Integer.parseInt(String.valueOf(five) + String.valueOf(six));
+
+        if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && (day < 1 || day > 31)) {
+            return true;
+        } else if ((month == 4 || month == 6 || month == 9 || month == 11) && (day < 1 || day > 30)) {
+            return true;
+        } else if (month == 2) {
+            if ((year % 4 == 0 && (day < 1 || day > 29)) || (year % 4 != 0 && (day < 1 || day > 28))) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public void goto_Back(View v){
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_25.class);
         startActivity(goto_Back);

@@ -144,7 +144,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_0_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "0");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-0");
                 }
                 if (ssn_2.length() >= 9)
@@ -153,7 +153,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_1_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "1");
-                if(ssn_2.length()==7) {
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-1");
                 }
                 if (ssn_2.length() >= 9)
@@ -162,7 +162,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_2_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "2");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-2");
                 }
                 if (ssn_2.length() >= 9)
@@ -171,7 +171,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_3_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "3");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-3");
                 }
                 if (ssn_2.length() >= 9)
@@ -180,7 +180,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_4_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "4");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-4");
                 }
                 if (ssn_2.length() >= 9)
@@ -189,7 +189,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_5_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "5");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-5");
                 }
                 if (ssn_2.length() >= 9)
@@ -198,7 +198,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_6_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "6");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-6");
                 }
                 if (ssn_2.length() >= 9)
@@ -207,7 +207,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_7_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "7");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-7");
                 }
                 if (ssn_2.length() >= 9)
@@ -216,7 +216,7 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_8_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "8");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-8");
                 }
                 if (ssn_2.length() >= 9)
@@ -225,60 +225,114 @@ public class Kiosk_29 extends AppCompatActivity {
             case R.id.num_9_2:
                 ssn_2.setTextSize(text_size.getId());
                 ssn_2.setText(current + "9");
-                if(ssn_2.length()==7){
+                if (ssn_2.length() == 7) {
                     ssn_2.setText(current + "-9");
                 }
                 if (ssn_2.length() >= 9)
                     ssn_2.setText(current + '*');
                 break;
             case R.id.CL_2:
-                if(ssn_2.length() ==0){
-                    if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                if (ssn_2.length() == 0) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Enter your social security number.", Toast.LENGTH_LONG).show();
                     }
-                    else{
-                        Toast.makeText(getApplicationContext(), "Enter your social security number.", Toast.LENGTH_LONG).show();}
-                }
-                else if(ssn_2.length() == 8){
+                } else if (ssn_2.length() == 8) {
                     ssn_2.setText(current.substring(0, current.length() - 2));
-                }
-                else {
+                } else {
                     ssn_2.setText(current.substring(0, current.length() - 1));
                     break;
                 }
         }
     }
-    public void goto_kiosk_29_2(View v) {
 
-        Intent goto_kiosk_29_2 = new Intent(getApplicationContext(), Kiosk_29_2.class);
-        if (ssn_2.length() == 14) {
-            tts.shutdown();
+    public void goto_Kiosk_29_2(View v) {
+        Intent goto_Kiosk_29_2 = new Intent(this, Kiosk_29_2.class);
+        if (ssn_2.length() != 14) {
+            if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                speakText("주민등록번호가 맞는지 확인해주세요.");
+                ssn_2.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn_2.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "주민등록번호의 길이가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
+            } else {
+                speakText("Please verify your social security number");
+                ssn_2.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn_2.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "Please verify your social security number", Toast.LENGTH_LONG).show();
+            }
+        } else {
             get_num_2 = ssn_2.getText().toString();
-            pnpnpn.setGet_pn_2(get_num_2);
-            char pass = get_num_2.charAt(7);
-            if (pass == '1' || pass == '2' || pass == '3' || pass == '4') {
-                startActivity(goto_kiosk_29_2);
 
-            } else
+            char one = get_num_2.charAt(0);
+            char two = get_num_2.charAt(1);
+            char three = get_num_2.charAt(2);
+            char four = get_num_2.charAt(3);
+            char five = get_num_2.charAt(4);
+            char six = get_num_2.charAt(5);
+            char seven = get_num_2.charAt(7);
+
+            if (three != '0' && three != '1') {
+                speakText("유효하지 않은 월입니다.");
+                ssn_2.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn_2.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 월입니다.", Toast.LENGTH_LONG).show();
+            } else if (three == '1' && !(four == '0' || four == '1' || four == '2')) {
+                speakText("유효하지 않은 월입니다.");
+                ssn_2.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn_2.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 월입니다.", Toast.LENGTH_LONG).show();
+            } else if (five != '0' && five != '1' && five != '2' && five != '3') {
+                speakText("유효하지 않은 일입니다.");
+                ssn_2.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn_2.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 일입니다.", Toast.LENGTH_LONG).show();
+            } else if (five == '3' && !(six == '0' || six == '1')) {
+                speakText("유효하지 않은 일입니다.");
+                ssn_2.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn_2.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 일입니다.", Toast.LENGTH_LONG).show();
+            } else if (checkInvalidDay(one,two,three,four,five,six)) {
+                speakText("유효하지 않은 생년월일입니다.");
+                ssn_2.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn_2.getBackground();
+                anim.start();
+                Toast.makeText(getApplicationContext(), "유효하지 않은 생년월일입니다.", Toast.LENGTH_LONG).show();
+            } else if (!(seven == '1' || seven == '2' || seven == '3' || seven == '4')) {
+                speakText("주민등록번호 뒷자리를 확인해주세요.");
+                ssn_2.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn_2.getBackground();
+                anim.start();
                 Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
-        
+            } else {
+                startActivity(goto_Kiosk_29_2);
+            }
+        }
+    }
 
+    private boolean checkInvalidDay(char one, char two, char three, char four, char five, char six) {
+
+        int year = Integer.parseInt(String.valueOf(one) + String.valueOf(two));
+        int month = Integer.parseInt(String.valueOf(three) + String.valueOf(four));
+        int day = Integer.parseInt(String.valueOf(five) + String.valueOf(six));
+
+        if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && (day < 1 || day > 31)) {
+            return true;
+        } else if ((month == 4 || month == 6 || month == 9 || month == 11) && (day < 1 || day > 30)) {
+            return true;
+        } else if (month == 2) {
+            if ((year % 4 == 0 && (day < 1 || day > 29)) || (year % 4 != 0 && (day < 1 || day > 28))) {
+                return true;
+            }
         }
-        else {
-                if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주민등록번호가 맞는지 확인해주세요.");
-                    ssn_2.setBackgroundResource(R.drawable.anim_list2);
-                    anim = (AnimationDrawable) ssn_2.getBackground();
-                    anim.start();
-                    Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else{
-                    ssn_2.setBackgroundResource(R.drawable.anim_list2);
-                    anim = (AnimationDrawable) ssn_2.getBackground();
-                    anim.start();
-                    speakText("Please verify your social security number.");
-                    Toast.makeText(getApplicationContext(), "Please verify your social security number.", Toast.LENGTH_LONG).show();}
-        }
+
+        return false;
     }
 
     public void goto_Kiosk_H_M(View v) {

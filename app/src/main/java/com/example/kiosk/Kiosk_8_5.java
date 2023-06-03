@@ -24,7 +24,6 @@ public class Kiosk_8_5 extends AppCompatActivity {
     private Button canca;
     private Button add_car;
     private Button home;
-    private Button help;
 
     private AnimationDrawable anim;
     Handler handler = new Handler();
@@ -41,12 +40,10 @@ public class Kiosk_8_5 extends AppCompatActivity {
         canca = findViewById(R.id.canca_Btn);
         add_car = findViewById(R.id.add_car_Btn);
         home = findViewById(R.id.home_Btn);
-        help = findViewById(R.id.help_Btn);
 
         canca.setTextSize(text_size.getId());
         add_car.setTextSize(text_size.getId());
         home.setTextSize(text_size.getId());
-        help.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

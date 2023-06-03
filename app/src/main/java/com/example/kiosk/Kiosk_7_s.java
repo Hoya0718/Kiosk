@@ -26,7 +26,6 @@ public class Kiosk_7_s extends AppCompatActivity {
     private Button drink;
     private Button ord_his;
     private Button home;
-    private Button help;
 
     private AnimationDrawable anim;
     Handler handler = new Handler();
@@ -45,14 +44,12 @@ public class Kiosk_7_s extends AppCompatActivity {
         drink = findViewById(R.id.drink_Btn);
         ord_his = findViewById(R.id.ord_his_Btn);
         home = findViewById(R.id.home_Btn);
-        help = findViewById(R.id.help_Btn);
 
         burger.setTextSize(text_size.getId());
         side.setTextSize(text_size.getId());
         drink.setTextSize(text_size.getId());
         ord_his.setTextSize(text_size.getId());
         home.setTextSize(text_size.getId());
-        help.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

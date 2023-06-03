@@ -33,7 +33,7 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         String checkMission = myApp.getCheckHospitalMission();
         String missionComplete = "실패";
 
-        if (text == checkMission) {
+        if (text.equals(checkMission)) {
             missionComplete = "성공";
         }
 
@@ -52,15 +52,15 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         Intent goto_Kiosk_R_H = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
         Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), Kiosk_R_Part.class);
 
-
         myapp myApp = (myapp) getApplicationContext();
         if(myApp.getCheckCheck()){
             myApp.setCheckHospitalMission("X");
             myApp.setCheckCheck(false);
             startActivity(goto_Kiosk_R_P);
+        } else {
+            myApp.setCheckHospitalMission("X");
+            myApp.setCheckCheck(false);
+            startActivity(goto_Kiosk_R_H);
         }
-        myApp.setCheckHospitalMission("X");
-        myApp.setCheckCheck(false);
-        startActivity(goto_Kiosk_R_H);
     }
 }

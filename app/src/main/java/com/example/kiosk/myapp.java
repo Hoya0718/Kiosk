@@ -66,23 +66,23 @@ public class myapp extends Application {
     }
 
     // 임무
-    private String checkFastfoodMission = "X";
+    private String checkFastfoodMission;
     public String getCheckFastfoodMission() {return checkFastfoodMission;}
     public void setCheckFastfoodMission(String a) {this.checkFastfoodMission=a;}
 
-    private String checkBusMission = "X";
+    private String checkBusMission;
     public String getCheckBusMission() {return checkBusMission;}
     public void setCheckBusMission(String a) {this.checkBusMission=a;}
 
-    private String checkHospitalMission = "X";
+    private String checkHospitalMission;
     public String getCheckHospitalMission() {return checkHospitalMission;}
     public void setCheckHospitalMission(String a) {this.checkHospitalMission=a;}
 
-    private long time = 0;
+    private long time;
     public long getTime() {return time;}
     public void setTime(long a) {this.time=a;}
 
-    private boolean check = false;
+    private boolean check;
     public boolean getCheckCheck() {return check;}
     public void setCheckCheck(boolean a) {this.check=a;}
 }

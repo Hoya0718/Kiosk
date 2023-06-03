@@ -32,6 +32,11 @@ public class Kiosk_R_Hospital extends AppCompatActivity {
     }
     public void goto_Back(View v){
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Part.class);
+
+        myapp myApp = (myapp) getApplicationContext();
+        myApp.setCheckHospitalMission("X");
+        myApp.setCheckCheck(false);
+
         startActivity(goto_Back);
 
     }

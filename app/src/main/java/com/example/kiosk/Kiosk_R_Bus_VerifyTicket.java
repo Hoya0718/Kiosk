@@ -76,9 +76,9 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
         SimpleDateFormat format;
 
         if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
-            format = new SimpleDateFormat("yyyy/MMM/dd(E)", Locale.KOREAN);
+            format = new SimpleDateFormat("yyyy-MM-dd(E)", Locale.KOREAN);
         else
-            format = new SimpleDateFormat("yyyy/MMM/dd(E)", Locale.ENGLISH);
+            format = new SimpleDateFormat("yyyy-MM-dd(E)", Locale.ENGLISH);
         textView22.setText(format.format(c.getTime()));
 
         b_cancel_btn.setOnClickListener(new View.OnClickListener() {

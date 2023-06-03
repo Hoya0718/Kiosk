@@ -43,6 +43,8 @@ public class Kiosk_30 extends AppCompatActivity {
     private OutputStream outputStream;
 
     // 여기까지
+
+
     private TextToSpeech tts;
     private myapp sound;
     private myapp text_size;

@@ -16,6 +16,8 @@ public class Kiosk_R_Hospital_Receipt_Complete extends AppCompatActivity {
     private TextView day;
     private TextView hos_department_2;
     private TextView hos_98;
+
+    private String text;
     private myapp pn;
 
     @Override
@@ -32,7 +34,7 @@ public class Kiosk_R_Hospital_Receipt_Complete extends AppCompatActivity {
 
         hos_98.setText(pn.getGet_pn().substring(0,6));
         Intent intent = getIntent();
-        String text = intent.getStringExtra("text");
+        text = intent.getStringExtra("text");
         hos_department_2.setText(text);
         Calendar c = Calendar.getInstance();
         SimpleDateFormat format;
@@ -49,8 +51,9 @@ public class Kiosk_R_Hospital_Receipt_Complete extends AppCompatActivity {
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_R_Hospital_Department.class);
         startActivity(goto_Back);
     }
-    public void goto_Kiosk_R_H(View v){
-        Intent goto_Kiosk_R_H = new Intent(getApplicationContext(), Kiosk_R_Hospital.class);
-        startActivity(goto_Kiosk_R_H);
+    public void goto_Kiosk_R_H_C(View v){
+        Intent goto_Kiosk_R_H_C = new Intent(getApplicationContext(), Kiosk_R_Hospital_Receipt_Congratulation.class);
+        goto_Kiosk_R_H_C.putExtra("text", text);
+        startActivity(goto_Kiosk_R_H_C);
     }
 }

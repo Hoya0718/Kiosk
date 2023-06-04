@@ -27,6 +27,13 @@ public class Kiosk_R_Hospital_Acceptance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_hospital_acceptance);
 
+        myapp myApp = (myapp) getApplicationContext();
+        if (myApp.getPracticeHospitalCheck()) {
+            myApp.setP_H_A_Time(System.currentTimeMillis());
+        } else {
+            myApp.setR_Time(System.currentTimeMillis());
+        }
+
         ssn_2 = findViewById(R.id.SSN_2);
         text_size = (myapp)getApplication();
         pnpnpn = (myapp) getApplication();

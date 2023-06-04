@@ -23,9 +23,6 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         long afterTime = System.currentTimeMillis();
         long measTime = (afterTime - beforeTime) / 1000;
 
-        long minutes = measTime / 60; // 분 계산
-        long seconds = measTime % 60; // 초 계산
-
         List<Order> orderList = myApp.getOrderList();
         String checkMission = myApp.getCheckFastfoodMission();
         String missionComplete = "실패";
@@ -40,11 +37,11 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         if (myApp.getPracticeFastfoodCheck()) {
 
         } else if (myApp.getMissionCheck()) {
-            goto_5.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+            goto_5.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "임무 성공 여부 : " + missionComplete + "\n" +
                     "처음으로 돌아가기");
         } else {
-            goto_5.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+            goto_5.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "처음으로 돌아가기");
         }
 

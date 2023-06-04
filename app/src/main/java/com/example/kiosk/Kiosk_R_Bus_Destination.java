@@ -28,7 +28,7 @@ public class Kiosk_R_Bus_Destination extends AppCompatActivity {
 
         myapp myApp = (myapp) getApplicationContext();
         if (myApp.getPracticeBusCheck()) {
-            myApp.setP_Time(System.currentTimeMillis());
+            myApp.setP_B_Time(System.currentTimeMillis());
         } else {
             myApp.setR_Time(System.currentTimeMillis());
         }

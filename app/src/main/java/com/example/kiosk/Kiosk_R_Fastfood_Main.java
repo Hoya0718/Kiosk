@@ -23,7 +23,7 @@ public class Kiosk_R_Fastfood_Main extends AppCompatActivity {
 
         myapp myApp = (myapp) getApplicationContext();
         if (myApp.getPracticeFastfoodCheck()) {
-            myApp.setP_Time(System.currentTimeMillis());
+            myApp.setP_F_Time(System.currentTimeMillis());
         } else {
             myApp.setR_Time(System.currentTimeMillis());
         }

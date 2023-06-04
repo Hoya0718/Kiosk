@@ -29,9 +29,6 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         long afterTime = System.currentTimeMillis();
         long measTime = (afterTime - beforeTime) / 1000;
 
-        long minutes = measTime / 60; // 분 계산
-        long seconds = measTime % 60; // 초 계산
-
         String checkMission = myApp.getCheckHospitalMission();
         String missionComplete = "실패";
 
@@ -43,11 +40,11 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         if (myApp.getPracticeHospitalCheck()) {
 
         } else if (myApp.getMissionCheck()) {
-            kiosk_r_hospital_btn.setText("접수 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+            kiosk_r_hospital_btn.setText("접수 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "임무 성공 여부 : " + missionComplete + "\n" +
                     "처음으로 돌아가기");
         } else {
-            kiosk_r_hospital_btn.setText("접수 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+            kiosk_r_hospital_btn.setText("접수 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "처음으로 돌아가기");
         }
     }

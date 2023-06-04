@@ -78,9 +78,21 @@ public class myapp extends Application {
     public String getCheckHospitalMission() {return checkHospitalMission;}
     public void setCheckHospitalMission(String a) {this.checkHospitalMission=a;}
 
-    private long r_time;
-    public long getR_Time() {return r_time;}
-    public void setR_Time(long a) {this.r_time=a;}
+    private long p_f_time;
+    public long getR_F_Time() {return p_f_time;}
+    public void setP_F_Time(long a) {this.p_f_time=a;}
+
+    private long p_b_time;
+    public long getR_B_Time() {return p_b_time;}
+    public void setP_B_Time(long a) {this.p_b_time=a;}
+
+    private long p_h_r_time;
+    public long getP_H_R_Time() {return p_h_r_time;}
+    public void setP_H_R_Time(long a) {this.p_h_r_time=a;}
+
+    private long p_h_a_time;
+    public long getP_H_A_Time() {return p_h_a_time;}
+    public void setP_H_A_Time(long a) {this.p_h_a_time=a;}
 
     private boolean practiceFastfoodCheck = false;
     public boolean getPracticeFastfoodCheck() {return practiceFastfoodCheck;}
@@ -90,13 +102,13 @@ public class myapp extends Application {
     public boolean getPracticeBusCheck() {return practiceBusCheck;}
     public void setPracticeBusCheck(boolean a) {this.practiceBusCheck=a;}
 
-    private boolean practiceHospitalCheck = false;
-    public boolean getPracticeHospitalCheck() {return practiceHospitalCheck;}
-    public void setPracticeHospitalCheck(boolean a) {this.practiceHospitalCheck=a;}
+    private boolean practiceHospitalAcceptanceCheck = false;
+    public boolean getPracticeHospitalCheck() {return practiceHospitalAcceptanceCheck;}
+    public void setPracticeHospitalCheck(boolean a) {this.practiceHospitalAcceptanceCheck=a;}
 
-    private long p_time;
-    public long getP_Time() {return p_time;}
-    public void setP_Time(long a) {this.p_time=a;}
+    private long r_time;
+    public long getR_Time() {return r_time;}
+    public void setR_Time(long a) {this.r_time=a;}
 
     private boolean missionCheck;
     public boolean getMissionCheck() {return missionCheck;}

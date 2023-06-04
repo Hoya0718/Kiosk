@@ -78,11 +78,11 @@ public class myapp extends Application {
     public String getCheckHospitalMission() {return checkHospitalMission;}
     public void setCheckHospitalMission(String a) {this.checkHospitalMission=a;}
 
-    private long time;
-    public long getTime() {return time;}
-    public void setTime(long a) {this.time=a;}
+    private long r_time;
+    public long getR_Time() {return r_time;}
+    public void setR_Time(long a) {this.r_time=a;}
 
-    private boolean check;
-    public boolean getCheckCheck() {return check;}
-    public void setCheckCheck(boolean a) {this.check=a;}
+    private boolean missionCheck;
+    public boolean getMissionCheck() {return missionCheck;}
+    public void setMissionCheck(boolean a) {this.missionCheck=a;}
 }

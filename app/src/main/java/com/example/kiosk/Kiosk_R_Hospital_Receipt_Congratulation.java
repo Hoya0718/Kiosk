@@ -25,7 +25,7 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         String text = intent.getStringExtra("text");
 
         myApp = (myapp) getApplicationContext();
-        long beforeTime = myApp.getTime();
+        long beforeTime = myApp.getR_Time();
         long afterTime = System.currentTimeMillis();
         long measTime = (afterTime - beforeTime) / 1000;
 
@@ -40,7 +40,7 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         }
 
         kiosk_r_hospital_btn = findViewById(R.id.kiosk_r_hospital_btn);
-        if (myApp.getCheckCheck()) {
+        if (myApp.getMissionCheck()) {
             kiosk_r_hospital_btn.setText("접수 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + missionComplete + "\n" +
                     "처음으로 돌아가기");
@@ -55,13 +55,13 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), Kiosk_R_Part.class);
 
         myapp myApp = (myapp) getApplicationContext();
-        if(myApp.getCheckCheck()){
+        if(myApp.getMissionCheck()){
             myApp.setCheckHospitalMission("X");
-            myApp.setCheckCheck(false);
+            myApp.setMissionCheck(false);
             startActivity(goto_Kiosk_R_P);
         } else {
             myApp.setCheckHospitalMission("X");
-            myApp.setCheckCheck(false);
+            myApp.setMissionCheck(false);
             startActivity(goto_Kiosk_R_H);
         }
     }

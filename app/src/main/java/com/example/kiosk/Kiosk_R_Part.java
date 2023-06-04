@@ -101,7 +101,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
             myapp myApp = (myapp) getApplicationContext();
             String checkFastfoodMission = randomBurger + " - " + randomSize + " - " + randomSide + " - " + randomDrink;
             myApp.setCheckFastfoodMission(checkFastfoodMission);
-            myApp.setCheckCheck(true);
+            myApp.setMissionCheck(true);
 
             builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                 @Override
@@ -125,7 +125,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
             Intent goto_Kiosk_R_F_M = new Intent(Kiosk_R_Part.this, Kiosk_R_Fastfood_Main.class);
             myapp myApp = (myapp) getApplicationContext();
             myApp.setCheckFastfoodMission("X");
-            myApp.setCheckCheck(false);
+            myApp.setMissionCheck(false);
             startActivity(goto_Kiosk_R_F_M);
         }
     }
@@ -167,7 +167,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
             myapp myApp = (myapp) getApplicationContext();
             String checkBusMission = randomDestination + " - " + randomBusType + " - " + randomSeat;
             myApp.setCheckBusMission(checkBusMission);
-            myApp.setCheckCheck(true);
+            myApp.setMissionCheck(true);
 
             builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                 @Override
@@ -191,7 +191,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
             Intent goto_Kiosk_R_B_M = new Intent(Kiosk_R_Part.this, Kiosk_R_Bus_Main.class);
             myapp myApp = (myapp) getApplicationContext();
             myApp.setCheckFastfoodMission("X");
-            myApp.setCheckCheck(false);
+            myApp.setMissionCheck(false);
             startActivity(goto_Kiosk_R_B_M);
         }
     }
@@ -221,7 +221,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
             myapp myApp = (myapp) getApplicationContext();
             String checkHospitalMission = randomDepartment;
             myApp.setCheckHospitalMission(checkHospitalMission);
-            myApp.setCheckCheck(true);
+            myApp.setMissionCheck(true);
 
             builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                 @Override

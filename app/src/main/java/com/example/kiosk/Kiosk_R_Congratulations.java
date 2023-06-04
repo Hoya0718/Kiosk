@@ -16,7 +16,7 @@ public class Kiosk_R_Congratulations extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_congratulations);
 
         myapp myApp = (myapp) getApplicationContext();
-        long beforeTime = myApp.getTime();
+        long beforeTime = myApp.getR_Time();
         long afterTime = System.currentTimeMillis();
         long measTime = (afterTime - beforeTime) / 1000;
 
@@ -24,7 +24,7 @@ public class Kiosk_R_Congratulations extends AppCompatActivity {
         long seconds = measTime % 60; // 초 계산
 
         concon = findViewById(R.id.concon);
-        if (myApp.getCheckCheck()) {
+        if (myApp.getMissionCheck()) {
             concon.setText("수납 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + "실패" + "\n" +
                     "처음으로 돌아가기");

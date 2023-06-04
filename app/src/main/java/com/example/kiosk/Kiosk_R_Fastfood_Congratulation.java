@@ -19,7 +19,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_fastfood_congratulation);
 
         myapp myApp = (myapp) getApplicationContext();
-        long beforeTime = myApp.getTime();
+        long beforeTime = myApp.getR_Time();
         long afterTime = System.currentTimeMillis();
         long measTime = (afterTime - beforeTime) / 1000;
 
@@ -37,7 +37,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         }
 
         goto_5 = findViewById(R.id.concon);
-        if (myApp.getCheckCheck()) {
+        if (myApp.getMissionCheck()) {
             goto_5.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + missionComplete + "\n" +
                     "처음으로 돌아가기");
@@ -54,7 +54,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         myapp myApp = (myapp) getApplicationContext();
         myApp.clearOrderList();
         myApp.setCheckFastfoodMission("X");
-        myApp.setCheckCheck(false);
+        myApp.setMissionCheck(false);
 
         startActivity(goto_Kiosk_R_P);
     }

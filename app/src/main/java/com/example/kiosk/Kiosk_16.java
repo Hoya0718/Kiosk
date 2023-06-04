@@ -237,15 +237,20 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                     sound.setTtsVolume(currentVolume);
                     if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("이곳에서는 도착지를 선택하실 수 있습니다. 지역 이름 버튼을 누르면 그 지역에 있는 버스 정류장을 찾을 수 있습니다." +
-                                "또 ㄱ,ㄴ,ㄷ 버튼을 누르면 그 단어로 시작하는 정류장들을 찾을 수 있습니다." +
-                                "동서울 버스 정류장을 찾아볼까요? 서울 버튼 혹은 ㄷ 버튼을 눌러주세요.");
+                        speakText("이곳에서는 도착지를 선택하실 수 있습니다. 가고 싶은 도착지를 찾을 수 있는 방법은 3가지가 있습니다. 첫번째 방법은 화면 왼쪽에 있는 서울, 강원도, 충청남도, 전라북도처럼 지역 이름이 써진 버튼을 누르면 " +
+                                "그 지역에 있는 모든 버스정류장들이 출력됩니다. 두번째 방법은 ㄱ,ㄴ,ㄷ 처럼 앞 글자가 써진 버튼을 누르면 그 단어로 시작하는 정류장들을 찾을 수 있습니다." +
+                                "마지막으로 화면 맨 위에 있는 목적지를 입력해주세요 라고 써진 칸을 누르게 되면 아래쪽에 키보드가 나오면서 검색을 할 수 있게 됩니다." +
+                                "키보드에 가고 싶은 곳을 검색하면 빈 화면에 검색한 도착지 버튼이 나옵니다. 버튼을 누르면 가고 싶은 곳을 고를 수 있습니다." +
+                                "동서울을 찾아볼까요? 동서울은 서울 지역에 있으니 서울 버튼을 눌러도 되고, ㄷ으로 시작하니 ㄷ 버튼을 눌러도 됩니다." +
+                                "만약 찾기 힘드시다면 검색을 사용해서 찾으실 수 있습니다.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Here you can choose your destination. If you press a button for Seoul, Gangwon, etc., you can find bus stops in that area." +
-                                "Also, if you press the ㄱ, ㄴ, ㄷ buttons, you can find stops starting with that word." +
-                                "Shall we find the East Seoul bus stop? Please press the Seoul button or the ㄷ button.");
+                        speakText("Here you can select your destination. There are 3 ways to find the destination you want to go to." +
+                                "In the first method, if you press the button with the name of a region such as Seoul, Gangwon-do, Chungcheongnam-do, and Jeollabuk-do on the left side of the screen, all bus stops in that region are output." +
+                                "In the second way, if you press the button with the first letter written like a, b, c, you can find stops that start with that word. Finally, if you press the box that says \"Please enter a destination\" at the top of the screen, a keyboard appears at the bottom and you can search." +
+                                "When you search for a place you want to go on the keyboard, the searched destination button appears on a blank screen." +
+                                "You can choose the place you want to go by pressing the button. Shall we look for Dong Seoul? East Seoul is located in the Seoul area, so you can press the Seoul button, or you can press the C button since it starts with a letter. If you have trouble finding it, you can use the search to find it.");
                     }
 
                     eastseoul_btn.setOnClickListener(new View.OnClickListener() {

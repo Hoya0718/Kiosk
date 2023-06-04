@@ -25,15 +25,30 @@ public class Kiosk_R_Bus_Congratulations extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_bus_congratulations);
 
         myapp myApp = (myapp) getApplicationContext();
-        long beforeTime = myApp.getR_Time();
-        long afterTime = System.currentTimeMillis();
-        long measTime = (afterTime - beforeTime) / 1000;
 
-        long minutes = measTime / 60; // 분 계산
-        long seconds = measTime % 60; // 초 계산
+        long beforeTime;
+        long afterTime;
+        long measTime;
+        long minutes;
+        long seconds;
+
+        if (myApp.getPracticeBusCheck()) {
+            beforeTime = myApp.getP_Time();
+            afterTime = System.currentTimeMillis();
+            measTime = (afterTime - beforeTime) / 1000;
+
+            minutes = measTime / 60; // 분 계산
+            seconds = measTime % 60; // 초 계산
+        } else {
+            beforeTime = myApp.getR_Time();
+            afterTime = System.currentTimeMillis();
+            measTime = (afterTime - beforeTime) / 1000;
+
+            minutes = measTime / 60; // 분 계산
+            seconds = measTime % 60; // 초 계산
+        }
 
         b_backbegin_btn = findViewById(R.id.b_backbegin_btn);
-
         if (myApp.getPracticeBusCheck()) {
 
         } else if (myApp.getMissionCheck()) {

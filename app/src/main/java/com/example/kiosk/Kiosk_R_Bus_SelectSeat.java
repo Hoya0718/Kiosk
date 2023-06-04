@@ -21,7 +21,7 @@ import org.w3c.dom.Text;
 import java.util.Locale;
 
 public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
-    private TextView textView32;//
+    private TextView textView32;
     private TextView textView34;
     private TextView textView33;
     private Button b_1_btn, b_2_btn, b_3_btn, b_4_btn, b_5_btn;
@@ -68,7 +68,6 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
-                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
@@ -81,7 +80,6 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String destination = intent1.getStringExtra("destination");
                     String bus = intent1.getStringExtra("bus");
-                    String seat = intent1.getStringExtra("seat");
                     String price = intent1.getStringExtra("price");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
@@ -102,11 +100,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
-                    intent.putExtra("seat", "4번");
-                    String price = intent1.getStringExtra("price");
+                    intent.putExtra("seat", seat);
                     intent.putExtra("price", price);
                     startActivity(intent);
                 } else {
@@ -114,11 +113,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "4");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 }
@@ -133,11 +133,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "5번");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 } else {
@@ -145,11 +146,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "5");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 }
@@ -166,11 +168,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "6번");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 } else {
@@ -178,11 +181,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "6");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 }
@@ -197,11 +201,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "10번");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 } else {
@@ -209,11 +214,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "10");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 }
@@ -228,11 +234,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "14번");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 } else {
@@ -240,11 +247,12 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
+                    String seat = intent1.getStringExtra("seat");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "14");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 }
@@ -259,11 +267,11 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "15번");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 } else {
@@ -271,11 +279,11 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "15");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 }
@@ -290,11 +298,11 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "16번");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 } else {
@@ -302,11 +310,11 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     String departuretime = intent1.getStringExtra("departuretime");
                     String bus = intent1.getStringExtra("bus");
                     String destination = intent1.getStringExtra("destination");
+                    String price = intent1.getStringExtra("price");
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
                     intent.putExtra("seat", "16");
-                    String price = intent1.getStringExtra("price");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 }

@@ -81,7 +81,7 @@ public class Kiosk_21 extends AppCompatActivity {
         String destination = intent.getStringExtra("destination");
         String bus = intent.getStringExtra("bus");
         String seat = intent.getStringExtra("seat");
-
+        String price = intent.getStringExtra("price");
 
         textView3.setText(departuretime);
         textView5.setText(destination);
@@ -119,7 +119,6 @@ public class Kiosk_21 extends AppCompatActivity {
                     else
                         format = new SimpleDateFormat("yyyy/MMM/dd(E)", Locale.ENGLISH);
                     textView22.setText(format.format(c.getTime()));
-
 
                     b_cancel_btn = findViewById(R.id.b_cancel_btn);
                     b_payment_btn = findViewById(R.id.b_payment_btn);

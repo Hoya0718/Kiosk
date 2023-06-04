@@ -98,8 +98,9 @@ public class Kiosk_14_reserved_1 extends AppCompatActivity {
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Here you can check and pick up your reserved tickets." +
-                                "Click the reserved ticket button and click the issue ticket button to print the ticket." +
+                        speakText("Here, you can check and pick up your reserved tickets." +
+                                "Click the reserved ticket button and press the issue ticket button to print the ticket." +
+                                "When you press a button, the color of the button changes to blue to confirm that it has been pressed." +
                                 "Press the ticket button, then press the issue ticket button");
                     }
 

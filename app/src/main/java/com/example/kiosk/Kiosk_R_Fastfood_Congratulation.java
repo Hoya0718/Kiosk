@@ -37,7 +37,9 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         }
 
         goto_5 = findViewById(R.id.concon);
-        if (myApp.getMissionCheck()) {
+        if (myApp.getPracticeFastfoodCheck()) {
+
+        } else if (myApp.getMissionCheck()) {
             goto_5.setText("소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + missionComplete + "\n" +
                     "처음으로 돌아가기");

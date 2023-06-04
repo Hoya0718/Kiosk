@@ -22,7 +22,11 @@ public class Kiosk_R_Fastfood_Main extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_fastfood_main);
 
         myapp myApp = (myapp) getApplicationContext();
-        myApp.setR_Time(System.currentTimeMillis());
+        if (myApp.getPracticeFastfoodCheck()) {
+            myApp.setP_Time(System.currentTimeMillis());
+        } else {
+            myApp.setR_Time(System.currentTimeMillis());
+        }
 
         value = 0;
     }

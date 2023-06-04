@@ -27,7 +27,11 @@ public class Kiosk_R_Bus_Destination extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_bus_destination);
 
         myapp myApp = (myapp) getApplicationContext();
-        myApp.setR_Time(System.currentTimeMillis());
+        if (myApp.getPracticeBusCheck()) {
+            myApp.setP_Time(System.currentTimeMillis());
+        } else {
+            myApp.setR_Time(System.currentTimeMillis());
+        }
 
         destination_btn = findViewById(R.id.destination_btn);
         b_homescreen_btn = findViewById(R.id.b_homescreen_btn);

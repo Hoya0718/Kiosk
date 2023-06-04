@@ -14,7 +14,11 @@ public class Kiosk_R_Hospital extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_hospital);
 
         myapp myApp = (myapp) getApplicationContext();
-        myApp.setR_Time(System.currentTimeMillis());
+        if (myApp.getPracticeHospitalCheck()) {
+            myApp.setP_Time(System.currentTimeMillis());
+        } else {
+            myApp.setR_Time(System.currentTimeMillis());
+        }
 
     }
 

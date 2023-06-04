@@ -82,6 +82,22 @@ public class myapp extends Application {
     public long getR_Time() {return r_time;}
     public void setR_Time(long a) {this.r_time=a;}
 
+    private boolean practiceFastfoodCheck = false;
+    public boolean getPracticeFastfoodCheck() {return practiceFastfoodCheck;}
+    public void setPracticeFastfoodCheck(boolean a) {this.practiceFastfoodCheck=a;}
+
+    private boolean practiceBusCheck = false;
+    public boolean getPracticeBusCheck() {return practiceBusCheck;}
+    public void setPracticeBusCheck(boolean a) {this.practiceBusCheck=a;}
+
+    private boolean practiceHospitalCheck = false;
+    public boolean getPracticeHospitalCheck() {return practiceHospitalCheck;}
+    public void setPracticeHospitalCheck(boolean a) {this.practiceHospitalCheck=a;}
+
+    private long p_time;
+    public long getP_Time() {return p_time;}
+    public void setP_Time(long a) {this.p_time=a;}
+
     private boolean missionCheck;
     public boolean getMissionCheck() {return missionCheck;}
     public void setMissionCheck(boolean a) {this.missionCheck=a;}

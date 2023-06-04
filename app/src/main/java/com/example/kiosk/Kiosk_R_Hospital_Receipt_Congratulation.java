@@ -40,7 +40,9 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         }
 
         kiosk_r_hospital_btn = findViewById(R.id.kiosk_r_hospital_btn);
-        if (myApp.getMissionCheck()) {
+        if (myApp.getPracticeHospitalCheck()) {
+
+        } else if (myApp.getMissionCheck()) {
             kiosk_r_hospital_btn.setText("접수 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + missionComplete + "\n" +
                     "처음으로 돌아가기");

@@ -34,7 +34,9 @@ public class Kiosk_R_Bus_Congratulations extends AppCompatActivity {
 
         b_backbegin_btn = findViewById(R.id.b_backbegin_btn);
 
-        if (myApp.getMissionCheck()) {
+        if (myApp.getPracticeBusCheck()) {
+
+        } else if (myApp.getMissionCheck()) {
             b_backbegin_btn.setText("예매 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + "실패" + "\n" +
                     "처음으로 돌아가기");

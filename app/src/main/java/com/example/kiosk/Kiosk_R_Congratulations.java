@@ -16,15 +16,33 @@ public class Kiosk_R_Congratulations extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_congratulations);
 
         myapp myApp = (myapp) getApplicationContext();
-        long beforeTime = myApp.getR_Time();
-        long afterTime = System.currentTimeMillis();
-        long measTime = (afterTime - beforeTime) / 1000;
 
-        long minutes = measTime / 60; // 분 계산
-        long seconds = measTime % 60; // 초 계산
+        long beforeTime;
+        long afterTime;
+        long measTime;
+        long minutes;
+        long seconds;
+
+        if (myApp.getPracticeHospitalCheck()) {
+            beforeTime = myApp.getP_Time();
+            afterTime = System.currentTimeMillis();
+            measTime = (afterTime - beforeTime) / 1000;
+
+            minutes = measTime / 60; // 분 계산
+            seconds = measTime % 60; // 초 계산
+        } else {
+            beforeTime = myApp.getR_Time();
+            afterTime = System.currentTimeMillis();
+            measTime = (afterTime - beforeTime) / 1000;
+
+            minutes = measTime / 60; // 분 계산
+            seconds = measTime % 60; // 초 계산
+        }
 
         concon = findViewById(R.id.concon);
-        if (myApp.getMissionCheck()) {
+        if (myApp.getPracticeHospitalCheck()) {
+
+        } else if (myApp.getMissionCheck()) {
             concon.setText("수납 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
                     "임무 성공 여부 : " + "실패" + "\n" +
                     "처음으로 돌아가기");

@@ -23,6 +23,8 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,10 +43,14 @@ public class Kiosk_14_reserved_1 extends AppCompatActivity {
     private AnimationDrawable anim;
     private Button b_cancel_btn;
     private Button b_payment_btn;
-    private Button ticket_departure_btn, ticket_destination_btn, ticket_check_btn;
     private TextView textView17, bus_departuretime, bus_type, bus_takentime;
     Handler handler = new Handler();
     private boolean isColorChanged = false;
+    private boolean isAnyButtonClicked = false;
+
+    private Button ticket_departure_btn;
+    private Button ticket_destination_btn;
+    private Button ticket_check_btn;
 
 
     @Override
@@ -100,35 +106,36 @@ public class Kiosk_14_reserved_1 extends AppCompatActivity {
                     ticket_departure_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            if(isColorChanged) {
-                                ticket_departure_btn.setBackgroundColor(Color.LTGRAY);
-                                ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
-                                ticket_check_btn.setBackgroundColor(Color.LTGRAY);
-                                isColorChanged = false;
-                            }
-                            else {
+                            if (!isAnyButtonClicked) {
                                 ticket_departure_btn.setBackgroundColor(Color.CYAN);
                                 ticket_destination_btn.setBackgroundColor(Color.CYAN);
                                 ticket_check_btn.setBackgroundColor(Color.CYAN);
-                                isColorChanged = true;
+                                isAnyButtonClicked = true;
+                                b_payment_btn.setEnabled(true);
+                            } else {
+                                ticket_departure_btn.setBackgroundColor(Color.LTGRAY);
+                                ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
+                                ticket_check_btn.setBackgroundColor(Color.LTGRAY);
+                                isAnyButtonClicked = false;
+                                b_payment_btn.setEnabled(false);
                             }
                         }
-
                     });
                     ticket_destination_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            if(isColorChanged) {
-                                ticket_departure_btn.setBackgroundColor(Color.LTGRAY);
-                                ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
-                                ticket_check_btn.setBackgroundColor(Color.LTGRAY);
-                                isColorChanged = false;
-                            }
-                            else {
+                            if (!isAnyButtonClicked) {
                                 ticket_departure_btn.setBackgroundColor(Color.CYAN);
                                 ticket_destination_btn.setBackgroundColor(Color.CYAN);
                                 ticket_check_btn.setBackgroundColor(Color.CYAN);
-                                isColorChanged = true;
+                                isAnyButtonClicked = true;
+                                b_payment_btn.setEnabled(true);
+                            } else {
+                                ticket_departure_btn.setBackgroundColor(Color.LTGRAY);
+                                ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
+                                ticket_check_btn.setBackgroundColor(Color.LTGRAY);
+                                isAnyButtonClicked = false;
+                                b_payment_btn.setEnabled(false);
                             }
                         }
 
@@ -136,17 +143,18 @@ public class Kiosk_14_reserved_1 extends AppCompatActivity {
                     ticket_check_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            if(isColorChanged) {
-                                ticket_departure_btn.setBackgroundColor(Color.LTGRAY);
-                                ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
-                                ticket_check_btn.setBackgroundColor(Color.LTGRAY);
-                                isColorChanged = false;
-                            }
-                            else {
+                            if (!isAnyButtonClicked) {
                                 ticket_departure_btn.setBackgroundColor(Color.CYAN);
                                 ticket_destination_btn.setBackgroundColor(Color.CYAN);
                                 ticket_check_btn.setBackgroundColor(Color.CYAN);
-                                isColorChanged = true;
+                                isAnyButtonClicked = true;
+                                b_payment_btn.setEnabled(true);
+                            } else {
+                                ticket_departure_btn.setBackgroundColor(Color.LTGRAY);
+                                ticket_destination_btn.setBackgroundColor(Color.LTGRAY);
+                                ticket_check_btn.setBackgroundColor(Color.LTGRAY);
+                                isAnyButtonClicked = false;
+                                b_payment_btn.setEnabled(false);
                             }
                         }
 
@@ -169,6 +177,8 @@ public class Kiosk_14_reserved_1 extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
+
+                    b_payment_btn.setEnabled(false);
                 }
             }
         });

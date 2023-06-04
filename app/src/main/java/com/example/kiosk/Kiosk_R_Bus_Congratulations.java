@@ -31,14 +31,20 @@ public class Kiosk_R_Bus_Congratulations extends AppCompatActivity {
 
         b_backbegin_btn = findViewById(R.id.b_backbegin_btn);
         if (myApp.getPracticeBusCheck()) {
-
+            long pTime = myApp.getR_F_Time();
+            long diffTime = pTime - measTime;
+            b_backbegin_btn.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
+                    "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                    "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
         } else if (myApp.getMissionCheck()) {
             b_backbegin_btn.setText("예매 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "임무 성공 여부 : " + "실패" + "\n" +
                     "처음으로 돌아가기");
+            myApp.setR_B_Time(measTime);
         } else {
             b_backbegin_btn.setText("예매 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "처음으로 돌아가기");
+            myApp.setR_B_Time(measTime);
         }
 
         b_backbegin_btn.setOnClickListener(new View.OnClickListener() {

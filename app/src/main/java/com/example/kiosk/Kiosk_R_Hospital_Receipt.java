@@ -31,11 +31,7 @@ public class Kiosk_R_Hospital_Receipt extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_hospital_receipt);
 
         myapp myApp = (myapp) getApplicationContext();
-        if (myApp.getPracticeHospitalCheck()) {
-            myApp.setP_H_R_Time(System.currentTimeMillis());
-        } else {
-            myApp.setR_Time(System.currentTimeMillis());
-        }
+        myApp.setR_Time(System.currentTimeMillis());
 
         pn = (myapp) getApplication();
         text_size = (myapp) getApplication();

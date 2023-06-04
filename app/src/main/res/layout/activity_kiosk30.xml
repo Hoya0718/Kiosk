@@ -12,10 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="center"
         android:text="@string/insert_card"
-        android:textSize="30sp" />
+        android:textSize="50sp" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -23,7 +23,7 @@
         android:layout_height="0dp"
         android:layout_weight="10"
         android:onClick="goto_kiosk_30_2"
-        app:srcCompat="@drawable/liquidate" />
+        app:srcCompat="@drawable/Kiosk_pay" />
 
     <Button
         android:id="@+id/hos_cancel"
@@ -34,6 +34,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
         android:layout_weight="2"
+        android:onClick="cancel"
         android:text="@string/pay_cancle"
         android:textSize="@dimen/font_size_medium" />
 </LinearLayout>

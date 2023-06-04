@@ -13,9 +13,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +26,8 @@ import java.util.UUID;
 
 public class Kiosk_30 extends AppCompatActivity {
 
+
+    private TextToSpeech tts;
 
     //블루투스 선언 코드는 여기부터
 
@@ -44,8 +47,6 @@ public class Kiosk_30 extends AppCompatActivity {
 
     // 여기까지
 
-
-    private TextToSpeech tts;
     private myapp sound;
     private myapp text_size;
     private Button hos_cancel;
@@ -59,19 +60,6 @@ public class Kiosk_30 extends AppCompatActivity {
         hos_cancel = findViewById(R.id.hos_cancel);
 
         hos_cancel.setTextSize(text_size.getId());
-        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
-                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                        speakText("카드를 그림과 같이 넣어주세요.");
-                    } else {
-                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("Insert the card as shown.");
-                    }
-                }
-            }
-        });
 
         //블루투스 추가 코드는 여기서 부터
 
@@ -135,6 +123,20 @@ public class Kiosk_30 extends AppCompatActivity {
         }
 
         //여기까지
+
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("마지막으로 결제하는 방법을 알아보겠습니다. 결제는 화면과 같이 키오스크 하단에 있는 네모에 카드르 3초간 가져다 주시면 화면이 전환이 돕니다.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("This is the screen before the prescription is filled. Make sure you are who you say you are and tap Accept.");
+                    }
+                }
+            }
+        });
 
     }
 
@@ -257,5 +259,12 @@ public class Kiosk_30 extends AppCompatActivity {
             tts.stop();
         }
         super.onPause();
+    }
+
+    public void cancel (View v){
+        tts.shutdown();
+        Intent cancel = new Intent (getApplicationContext(), Kiosk_29_2.class);
+        disconnectBluetooth();
+        startActivity(cancel);
     }
 }

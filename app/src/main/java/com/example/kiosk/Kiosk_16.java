@@ -607,6 +607,8 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                             anim.start();
                             anim = (AnimationDrawable) digeut_btn.getBackground();
                             anim.start();
+                            anim = (AnimationDrawable) eastseoul_btn.getBackground();
+                            anim.start();
                         }
                     }, 2000);
                     Log.d("delaySpeak", "onDone");
@@ -1692,8 +1694,6 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         list.add("광주(유스퀘어)");
         list.add("순천");
         list.add("담양");
-        list.add("나주");
-        list.add("전주");
         list.add("나주");
         list.add("전주");
         list.add("군산");

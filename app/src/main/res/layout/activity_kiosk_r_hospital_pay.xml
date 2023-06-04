@@ -23,7 +23,7 @@
         android:layout_height="0dp"
         android:layout_weight="10"
         android:onClick="goto_Kiosk_R_H_P_C"
-        app:srcCompat="@drawable/Kiosk_pay" />
+        app:srcCompat="@drawable/kiosk_pay" />
 
     <Button
         android:id="@+id/hos_cancel"

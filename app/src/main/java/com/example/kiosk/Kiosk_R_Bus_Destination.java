@@ -26,6 +26,9 @@ public class Kiosk_R_Bus_Destination extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_bus_destination);
 
+        myapp myApp = (myapp) getApplicationContext();
+        myApp.setTime(System.currentTimeMillis());
+
         destination_btn = findViewById(R.id.destination_btn);
         b_homescreen_btn = findViewById(R.id.b_homescreen_btn);
         textView10 = findViewById(R.id.textView10);
@@ -57,6 +60,11 @@ public class Kiosk_R_Bus_Destination extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Kiosk_R_Bus_Destination.this, Kiosk_R_Bus_Main.class);
+
+                myapp myApp = (myapp) getApplicationContext();
+                myApp.setCheckBusMission("X");
+                myApp.setCheckCheck(false);
+
                 startActivity(intent);
             }
         });

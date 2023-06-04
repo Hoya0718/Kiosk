@@ -24,11 +24,25 @@ public class Kiosk_R_Bus_Congratulations extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_bus_congratulations);
 
+        myapp myApp = (myapp) getApplicationContext();
+        long beforeTime = myApp.getTime();
+        long afterTime = System.currentTimeMillis();
+        long measTime = (afterTime - beforeTime) / 1000;
+
+        long minutes = measTime / 60; // 분 계산
+        long seconds = measTime % 60; // 초 계산
+
         b_backbegin_btn = findViewById(R.id.b_backbegin_btn);
 
+        if (myApp.getCheckCheck()) {
+            b_backbegin_btn.setText("예매 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+                    "임무 성공 여부 : " + "실패" + "\n" +
+                    "처음으로 돌아가기");
+        } else {
+            b_backbegin_btn.setText("예매 소요 시간 : " + minutes + "분 " + seconds + "초\n" +
+                    "처음으로 돌아가기");
+        }
 
-
-        b_backbegin_btn = findViewById(R.id.b_backbegin_btn);
         b_backbegin_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

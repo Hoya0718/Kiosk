@@ -148,7 +148,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
                     getString(R.string.eastdaegu),getString(R.string.westdaegu),getString(R.string.gyeongju)
             };
 
-            String[] bus_type = {"우등버스","고속버스"};
+            String[] bus_type = {getString(R.string.b_honorbus1),"고속버스", "일반버스"};
 
             String[] bus_seat = {"3","4","5","6","10","14","15","16"};
 

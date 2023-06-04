@@ -33,7 +33,7 @@ import android.widget.Toast;
 
 public class Kiosk_R_Bus_Main extends AppCompatActivity {
 
-    private Button buy_ticket_btn;//
+    private Button buy_ticket_btn;
     private Button reserved_ticket_btn;
     private Button refund_ticket_btn;
     private TextView textView11;
@@ -46,6 +46,7 @@ public class Kiosk_R_Bus_Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_bus_main);
+        
 
         buy_ticket_btn = findViewById(R.id.buy_ticket_btn);
         reserved_ticket_btn = findViewById(R.id.reserved_ticket_btn);

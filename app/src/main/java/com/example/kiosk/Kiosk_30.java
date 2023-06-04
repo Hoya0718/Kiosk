@@ -132,7 +132,7 @@ public class Kiosk_30 extends AppCompatActivity {
                         speakText("마지막으로 결제하는 방법을 알아보겠습니다. 결제는 화면과 같이 키오스크 하단에 있는 네모에 카드르 3초간 가져다 주시면 화면이 전환이 돕니다.");
                     } else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                        speakText("This is the screen before the prescription is filled. Make sure you are who you say you are and tap Accept.");
+                        speakText("Finally, let's see how to make a payment. To make a payment, you need to touch your card to the square at the bottom of the kiosk for 3 seconds and the screen will switch, as shown on the screen.");
                     }
                 }
             }

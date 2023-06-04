@@ -68,13 +68,14 @@ public class Kiosk_11 extends AppCompatActivity {
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("카드를 그림과 같이 꽂아주세요.");
-                }
-                else {
-                    tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Insert the card as shown in the picture.");
+                if (status != TextToSpeech.ERROR) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("마지막으로 결제하는 방법을 알아보겠습니다. 결제는 화면과 같이 키오스크 하단에 있는 네모칸에 카드르 3초간 접촉해 주시면 화면이 전환이 됩니다.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("Finally, let's see how to make a payment. To make a payment, you need to touch your card to the square at the bottom of the kiosk for 3 seconds and the screen will switch, as shown on the screen.");
+                    }
                 }
             }
         });
@@ -242,15 +243,17 @@ public class Kiosk_11 extends AppCompatActivity {
 
     // 여기까지
 
-    public void goto_kiosk_10(View v){
+    public void cancel (View v){
         tts.shutdown();
-        Intent goto_kiosk_10 = new Intent(getApplicationContext(),Kiosk_10.class);
-        startActivity(goto_kiosk_10);
+        Intent cancel = new Intent (getApplicationContext(), Kiosk_29_2.class);
+        disconnectBluetooth();
+        startActivity(cancel);
     }
 
     public void goto_kiosk_12(View v){
         tts.shutdown();
         Intent goto_kiosk_12 = new Intent(getApplicationContext(),Kiosk_12.class);
+        disconnectBluetooth();
         startActivity(goto_kiosk_12);
     }
 

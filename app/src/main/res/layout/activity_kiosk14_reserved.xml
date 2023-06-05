@@ -209,7 +209,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="goto_kiosk_26_2"
+                android:onClick="goto_kiosk_14_reserved_1"
                 android:text="@string/check"
                 android:textSize="@dimen/font_size_medium" />
         </TableRow>

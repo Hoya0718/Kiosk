@@ -252,86 +252,17 @@ public class Kiosk_26 extends AppCompatActivity {
         }
     }
     public void goto_kiosk_26_2(View v) {
-        if(personal_Information.isChecked()) {
-            if (ssn.length() == 14) {
-                get_num = ssn.getText().toString();
-                pn.setGet_pn(get_num);
-                clickTime = System.currentTimeMillis();
-                pn.setDay(clickTime);
-                tts.shutdown();
-                Intent goto_kiosk_26_2 = new Intent(this,Kiosk_26_2.class);
-                char pass_7 = get_num.charAt(7);
-                if (pass_7 == '1' || pass_7 == '2' || pass_7 == '3' || pass_7 == '4') {
-                    startActivity(goto_kiosk_26_2);
-                }
-
-                else
-                    Toast.makeText(getApplicationContext(), "주민등록번호를 확인해주세요.", Toast.LENGTH_LONG).show();
-            }
-            else {
-                if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주민등록번호가 맞는지 확인해주세요.");
-                    ssn.setBackgroundResource(R.drawable.anim_list2);
-                    anim = (AnimationDrawable) ssn.getBackground();
-                    anim.start();
-                    Toast.makeText(getApplicationContext(), "주민등록번호가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
-                }
-                else {
-                    speakText("Please verify your social security number");
-                    ssn.setBackgroundResource(R.drawable.anim_list2);
-                    anim = (AnimationDrawable) ssn.getBackground();
-                    anim.start();
-                    Toast.makeText(getApplicationContext(), "Please verify your social security number", Toast.LENGTH_LONG).show();
-                }
-            }
-        }
-        else {
-            if(getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                speakText("개인정보 수집 동의를 눌러주세요");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
-                anim.start();
-                Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
-            }
-            else{
-                speakText("Agree to collect personal information.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
-                anim.start();
-                Toast.makeText(getApplicationContext(), "Agree to collect personal information.", Toast.LENGTH_LONG).show();
-            }
-
-        }
-    }
-
-    public void goto_Kiosk_26_2(View v) {
-        Intent goto_Kiosk_26_2 = new Intent(this, Kiosk_26_2.class);
+        Intent goto_kiosk_26_2 = new Intent(this, Kiosk_26_2.class);
         if (!personal_Information.isChecked()) {
             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                speakText("개인정보 수집 동의를 눌러주세요.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
-                anim.start();
                 Toast.makeText(getApplicationContext(), "개인정보 수집 동의를 눌러주세요.", Toast.LENGTH_LONG).show();
             } else {
-                speakText("Agree to collect personal information.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
-                anim.start();
                 Toast.makeText(getApplicationContext(), "Agree to collect personal information.", Toast.LENGTH_LONG).show();
             }
         } else if (ssn.length() != 14) {
             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                speakText("주민등록번호의 길이가 맞는지 확인해 주세요.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
-                anim.start();
                 Toast.makeText(getApplicationContext(), "주민등록번호의 길이가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
             } else {
-                speakText("Please verify your social security number");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
-                anim.start();
                 Toast.makeText(getApplicationContext(), "Please verify your social security number", Toast.LENGTH_LONG).show();
             }
         } else {
@@ -351,42 +282,42 @@ public class Kiosk_26 extends AppCompatActivity {
 
             if (three != '0' && three != '1') {
                 speakText("유효하지 않은 월입니다.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
+                ssn.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn.getBackground();
                 anim.start();
                 Toast.makeText(getApplicationContext(), "유효하지 않은 월입니다.", Toast.LENGTH_LONG).show();
             } else if (three == '1' && !(four == '0' || four == '1' || four == '2')) {
                 speakText("유효하지 않은 월입니다.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
+                ssn.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn.getBackground();
                 anim.start();
                 Toast.makeText(getApplicationContext(), "유효하지 않은 월입니다.", Toast.LENGTH_LONG).show();
             } else if (five != '0' && five != '1' && five != '2' && five != '3') {
                 speakText("유효하지 않은 일입니다.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
+                ssn.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn.getBackground();
                 anim.start();
                 Toast.makeText(getApplicationContext(), "유효하지 않은 일입니다.", Toast.LENGTH_LONG).show();
             } else if (five == '3' && !(six == '0' || six == '1')) {
                 speakText("유효하지 않은 일입니다.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
+                ssn.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn.getBackground();
                 anim.start();
                 Toast.makeText(getApplicationContext(), "유효하지 않은 일입니다.", Toast.LENGTH_LONG).show();
             } else if (checkInvalidDay(one,two,three,four,five,six)) {
                 speakText("유효하지 않은 생년월일입니다.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
+                ssn.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn.getBackground();
                 anim.start();
                 Toast.makeText(getApplicationContext(), "유효하지 않은 생년월일입니다.", Toast.LENGTH_LONG).show();
             } else if (!(seven == '1' || seven == '2' || seven == '3' || seven == '4')) {
                 speakText("주민등록번호 뒷자리를 확인해주세요.");
-                personal_Information.setBackgroundResource(R.drawable.anim_list);
-                anim = (AnimationDrawable) personal_Information.getBackground();
+                ssn.setBackgroundResource(R.drawable.anim_list2);
+                anim = (AnimationDrawable) ssn.getBackground();
                 anim.start();
                 Toast.makeText(getApplicationContext(), "주민등록번호 뒷자리를 확인해주세요.", Toast.LENGTH_LONG).show();
             } else {
-                startActivity(goto_Kiosk_26_2);
+                startActivity(goto_kiosk_26_2);
             }
         }
     }

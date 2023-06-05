@@ -102,9 +102,9 @@ public class myapp extends Application {
     public boolean getPracticeBusCheck() {return practiceBusCheck;}
     public void setPracticeBusCheck(boolean a) {this.practiceBusCheck=a;}
 
-    private boolean practiceHospitalAcceptanceCheck = false;
-    public boolean getPracticeHospitalCheck() {return practiceHospitalAcceptanceCheck;}
-    public void setPracticeHospitalCheck(boolean a) {this.practiceHospitalAcceptanceCheck=a;}
+    private boolean practiceHospitalCheck = false;
+    public boolean getPracticeHospitalCheck() {return practiceHospitalCheck;}
+    public void setPracticeHospitalCheck(boolean a) {this.practiceHospitalCheck=a;}
 
     private long r_time;
     public long getR_Time() {return r_time;}

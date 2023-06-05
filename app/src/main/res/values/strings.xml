@@ -186,7 +186,7 @@
     <string name="b_startdate">출발일</string>
     <string name="b_Mokpo1">목포</string>
     <string name="b_arrive">도착지</string>
-    <string name="b_nextbus">출발 1분전부터는 발권되지 않습니다. 다음 출발 차량을 이용해주세요</string>
+    <string name="b_nextbus">출발 1분전부터는 발권되지 않습니다.   다음 출발 차량을 이용해주세요</string>
     <string name="b_gofirst">처음 화면으로 돌아가기</string>
     <string name="b_Seoul1">서울특별시</string>
     <string name="b_Incheon1">인천/경기</string>

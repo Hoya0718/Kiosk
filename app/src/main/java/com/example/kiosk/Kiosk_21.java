@@ -38,7 +38,6 @@ public class Kiosk_21 extends AppCompatActivity {
     Handler handler = new Handler();
 
     private Button b_cancel_btn;
-    private Button b_payment_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +60,6 @@ public class Kiosk_21 extends AppCompatActivity {
         textView21 = findViewById(R.id.textView21);
         textView22 = findViewById(R.id.textView22);
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
-        b_payment_btn = findViewById(R.id.b_payment_btn);
 
         textView3.setTextSize(text_size.getId());
         textView5.setTextSize(text_size.getId());
@@ -74,7 +72,6 @@ public class Kiosk_21 extends AppCompatActivity {
         textView21.setTextSize(text_size.getId());
         textView22.setTextSize(text_size.getId());
         b_cancel_btn.setTextSize(text_size.getId());
-        b_payment_btn.setTextSize(text_size.getId());
 
         Intent intent = getIntent();
         String departuretime = intent.getStringExtra("departuretime");
@@ -121,7 +118,6 @@ public class Kiosk_21 extends AppCompatActivity {
                     textView22.setText(format.format(c.getTime()));
 
                     b_cancel_btn = findViewById(R.id.b_cancel_btn);
-                    b_payment_btn = findViewById(R.id.b_payment_btn);
 
                     b_cancel_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -131,16 +127,6 @@ public class Kiosk_21 extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
-
-                    b_payment_btn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_21.this, Kiosk_23.class);
-                            tts.shutdown();
-                            startActivity(intent);
-                        }
-                    });
-
                 }
             }
         });
@@ -172,10 +158,7 @@ public class Kiosk_21 extends AppCompatActivity {
                                     speakText("Please click the Make Payment button.");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
-                            //버튼
-                            b_payment_btn.setBackgroundResource(R.drawable.anim_list);
-                            anim = (AnimationDrawable) b_payment_btn.getBackground();
-                            anim.start();
+
                         }
                     }, 2000);
                     Log.d("delaySpeak1", "onDone");

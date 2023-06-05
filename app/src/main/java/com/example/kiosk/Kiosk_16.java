@@ -155,7 +155,7 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
         kieuk_btn.setOnClickListener(this); tieut_btn.setOnClickListener(this);
         pieup_btn.setOnClickListener(this); hieut_btn.setOnClickListener(this);
 
-        editText = (EditText) findViewById(R.id.editText);
+        editText =  findViewById(R.id.editText);
 
 
         // 리스트를 생성한다.
@@ -595,19 +595,25 @@ public class Kiosk_16 extends AppCompatActivity implements View.OnClickListener 
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("서울 버튼, ㄷ 버튼을  눌러서 동서울을 찾을 수 있습니다.");
+                                    speakText("서울 버튼, ㄷ 버튼을  눌러서 동서울을 찾을 수 있습니다." +
+                                            "다른　방법으로는　반짝거리고　있는　검색창을　눌러서　검색하실　수　있습니다．");
                                 else
-                                    speakText("Buy ticket button is Here");
+                                    speakText("You can find East Seoul by pressing the Seoul button and the ㄷ button." +
+                                            "Alternatively, you can search by tapping on the “flashing” search box.");
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
                             seoul_btn.setBackgroundResource(R.drawable.anim_list);
                             digeut_btn.setBackgroundResource(R.drawable.anim_list);
+                            eastseoul_btn.setBackgroundResource(R.drawable.anim_list);
+                            editText.setBackgroundResource(R.drawable.anim_list);
                             anim = (AnimationDrawable) seoul_btn.getBackground();
                             anim.start();
                             anim = (AnimationDrawable) digeut_btn.getBackground();
                             anim.start();
                             anim = (AnimationDrawable) eastseoul_btn.getBackground();
+                            anim.start();
+                            anim = (AnimationDrawable) editText.getBackground();
                             anim.start();
                         }
                     }, 2000);

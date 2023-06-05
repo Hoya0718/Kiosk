@@ -170,28 +170,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     // onDestroy가 두개라 하나로 합쳐줌
-    @Override
     protected void onDestroy() {
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts=null;
+        }
         super.onDestroy();
+    }
 
-        if (socket != null) {
-            try {
-                socket.close();
-            } catch (IOException e) {
-                Log.e(TAG, "Error occurred while closing the socket: " + e.getMessage());
-            }
-        }
-        super.onDestroy();
-    }
-    private void disconnectBluetooth() {
-        if (socket != null) {
-            try {
-                socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
     // 여기까지
 

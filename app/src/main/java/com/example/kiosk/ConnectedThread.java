@@ -12,6 +12,7 @@ public class ConnectedThread extends Thread {
     private final InputStream mmInStream;
     private final OutputStream OutStream;
 
+
     public ConnectedThread(BluetoothSocket socket) {
         mmSocket = socket;
         InputStream tmpIn = null;

@@ -84,36 +84,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        // 아두이노 디바이스 생성
-        arduinoDevice = bluetoothAdapter.getRemoteDevice(ARDUINO_MAC_ADDRESS);
-
-        // BluetoothSocket을 통한 연결 수립
-        try {
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            socket = arduinoDevice.createRfcommSocketToServiceRecord(MY_UUID);
-            socket.connect();
-
-            // InputStream과 OutputStream 설정
-            inputStream = socket.getInputStream();
-            outputStream = socket.getOutputStream();
-
-            // 아두이노로부터 데이터 읽기 예시
-            readDataFromArduino();
-
-        } catch (IOException e) {
-            // 연결 실패 처리
-            e.printStackTrace();
-        }
-
         //여기까지
 
 
@@ -198,63 +168,6 @@ public class MainActivity extends AppCompatActivity {
 
     //여기도 추가
 
-    private void readDataFromArduino() {
-        final Handler handler = new Handler();
-        // 데이터를 수신하기 위한 버퍼를 생성
-        readBufferPosition = 0;
-        readBuffer = new byte[1024];
-        // 데이터를 수신하기 위한 쓰레드 생성
-        workerThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while(!Thread.currentThread().isInterrupted()) {
-                    try {
-                        // 데이터를 수신했는지 확인합니다.
-                        int byteAvailable = inputStream.available();
-
-                        // 데이터가 수신 된 경우
-                        if(byteAvailable > 0) {
-                            // 입력 스트림에서 바이트 단위로 읽어 옵니다.
-                            byte[] bytes = new byte[byteAvailable];
-                            inputStream.read(bytes);
-                            // 입력 스트림 바이트를 한 바이트씩 읽어 옵니다.
-                            for(int i = 0; i < byteAvailable; i++) {
-                                byte tempByte = bytes[i];
-                                // 개행문자를 기준으로 받음(한줄)
-                                if(tempByte == '\n') {
-                                    // readBuffer 배열을 encodedBytes로 복사
-                                    byte[] encodedBytes = new byte[readBufferPosition];
-                                    System.arraycopy(readBuffer, 0, encodedBytes, 0, encodedBytes.length);
-                                    // 인코딩 된 바이트 배열을 문자열로 변환
-                                    final String text = new String(encodedBytes, "UTF-8");
-                                    readBufferPosition = 0;
-                                    handler.post(new Runnable() {
-                                        @Override
-                                        public void run() {
-
-                                            Toast.makeText(getApplicationContext(),"블루투스가 연결되었습니다.",Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                                } // 개행 문자가 아닐 경우
-                                else {
-                                    readBuffer[readBufferPosition++] = tempByte;
-                                }
-                            }
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    try {
-                        // 1초마다 받아옴
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
-        workerThread.start();
-    }
 
     // onDestroy가 두개라 하나로 합쳐줌
     @Override
@@ -289,13 +202,11 @@ public class MainActivity extends AppCompatActivity {
     public void goto_kiosk02(View v){
         tts.shutdown();
         Intent intent = new Intent(getApplicationContext(),Kiosk_2.class);
-        disconnectBluetooth();
         startActivity(intent);
     }
     public void goto_Kiosk_R_Part(View v){
         tts.shutdown();
         Intent goto_Kiosk_R_Part = new Intent(getApplicationContext(), Kiosk_R_Part.class);
-        disconnectBluetooth();
         startActivity(goto_Kiosk_R_Part);
     }
     public void change_to_korean(View v) {
@@ -307,7 +218,6 @@ public class MainActivity extends AppCompatActivity {
         config.setLocale(newLocale);
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         Intent intent = new Intent(this, MainActivity.class);
-        disconnectBluetooth();
         startActivity(intent);
         //Intent goto_Kiosk_R_Part = new Intent(this, Kiosk_R_Part.class);
         //startActivity(goto_Kiosk_R_Part);
@@ -321,7 +231,6 @@ public class MainActivity extends AppCompatActivity {
         config.setLocale(newLocale);
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         Intent intent = new Intent(this, MainActivity.class);
-        disconnectBluetooth();
         startActivity(intent);
     }
 

@@ -37,30 +37,49 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
         }
 
         concon = findViewById(R.id.concon);
-        if (myApp.getPracticeHospitalCheck()) {
-            long pTime = myApp.getR_H_R_Time();
+        if (myApp.getPracticeFastfoodCheck()) {
+            long pTime = myApp.getR_F_Time();
             long diffTime = pTime - measTime;
-            concon.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
-                    "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                    "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
-        } else if (myApp.getR_H_R_Time() != 0) {
-            long rTime = myApp.getR_H_R_Time();
+            if (diffTime > 0) {
+                concon.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
+                        "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요\n" +
+                        "처음으로 돌아가기");
+            } else {
+                concon.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
+                        "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 늦었어요\n" +
+                        "처음으로 돌아가기");
+            }
+            if (measTime < myApp.getR_F_Time()){
+                myApp.setR_F_Time(measTime);
+            }
+        } else if (myApp.getR_F_Time() != 0) {
+            long rTime = myApp.getR_F_Time();
             long diffTime = rTime - measTime;
-            concon.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
-                    "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                    "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
-            if (measTime < myApp.getR_H_R_Time()){
-                myApp.setR_H_R_Time(measTime);
+            if (diffTime > 0) {
+                concon.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
+                        "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요\n" +
+                        "처음으로 돌아가기");
+            } else {
+                concon.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
+                        "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 늦었어요\n" +
+                        "처음으로 돌아가기");
+            }
+            if (measTime < myApp.getR_F_Time()){
+                myApp.setR_F_Time(measTime);
             }
         } else {
-            concon.setText("접수 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+            concon.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "처음으로 돌아가기");
-            myApp.setR_H_R_Time(measTime);
+            myApp.setR_F_Time(measTime);
         }
 
         if (myApp.getMissionCheck()) {
             String currentText = concon.getText().toString();
-            String appendedText = currentText + "\n" + "임무 성공 여부 : " + missionComplete;
+            String appendedText = currentText + "\n임무 성공 여부 : " + missionComplete;
             concon.setText(appendedText);
         }
 

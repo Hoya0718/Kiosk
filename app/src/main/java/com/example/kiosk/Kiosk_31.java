@@ -31,7 +31,9 @@ public class Kiosk_31 extends AppCompatActivity {
         goto_5.setTextSize(text_size.getId());
 
         myapp myApp = (myapp) getApplicationContext();
-        myApp.setPracticeHospitalCheck(true);
+        if (myApp.getR_H_R_Time() != 0 || myApp.getR_H_A_Time() != 0) {
+            myApp.setPracticeHospitalCheck(true);
+        }
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override

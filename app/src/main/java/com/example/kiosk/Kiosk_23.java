@@ -41,7 +41,10 @@ public class Kiosk_23 extends AppCompatActivity {
         b_backbegin_btn.setTextSize(text_size.getId());
 
         myapp myApp = (myapp) getApplicationContext();
-        myApp.setPracticeBusCheck(true);
+
+        if (myApp.getR_B_Time() != 0) {
+            myApp.setPracticeBusCheck(true);
+        }
 
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {

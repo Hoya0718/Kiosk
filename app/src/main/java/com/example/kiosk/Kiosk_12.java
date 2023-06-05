@@ -40,7 +40,9 @@ public class Kiosk_12 extends AppCompatActivity {
         first.setTextSize(text_size.getId());
 
         myapp myApp = (myapp) getApplicationContext();
-        myApp.setPracticeFastfoodCheck(true);
+        if (myApp.getR_F_Time() != 0) {
+            myApp.setPracticeFastfoodCheck(true);
+        }
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

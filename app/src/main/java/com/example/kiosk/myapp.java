@@ -78,19 +78,19 @@ public class myapp extends Application {
     public String getCheckHospitalMission() {return checkHospitalMission;}
     public void setCheckHospitalMission(String a) {this.checkHospitalMission=a;}
 
-    private long r_f_time;
+    private long r_f_time = 0;
     public long getR_F_Time() {return r_f_time;}
     public void setR_F_Time(long a) {this.r_f_time=a;}
 
-    private long r_b_time;
+    private long r_b_time = 0;
     public long getR_B_Time() {return r_b_time;}
     public void setR_B_Time(long a) {this.r_b_time=a;}
 
-    private long r_h_r_time;
+    private long r_h_r_time = 0;
     public long getR_H_R_Time() {return r_h_r_time;}
     public void setR_H_R_Time(long a) {this.r_h_r_time=a;}
 
-    private long r_h_a_time;
+    private long r_h_a_time = 0;
     public long getR_H_A_Time() {return r_h_a_time;}
     public void setR_H_A_Time(long a) {this.r_h_a_time=a;}
 

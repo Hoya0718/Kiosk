@@ -15,7 +15,7 @@ import java.util.List;
 public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
 
     private myapp myApp;
-    private Button concon;
+    private TextView con_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,51 +36,50 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
             missionComplete = "성공";
         }
 
-        concon = findViewById(R.id.concon);
+        con_text = findViewById(R.id.con_text);
         if (myApp.getPracticeFastfoodCheck()) {
-            long pTime = myApp.getR_F_Time();
-            long diffTime = pTime - measTime;
-            if (diffTime > 0) {
-                concon.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
+            long pTime = myApp.getR_H_R_Time();
+            long diffTime;
+            if (pTime > measTime) {
+                diffTime = pTime - measTime;
+                con_text.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
                         "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요\n" +
-                        "처음으로 돌아가기");
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요");
             } else {
-                concon.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
+                diffTime = measTime - pTime;
+                con_text.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
                         "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 늦었어요\n" +
-                        "처음으로 돌아가기");
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 늦었어요");
             }
-            if (measTime < myApp.getR_F_Time()){
-                myApp.setR_F_Time(measTime);
+            if (measTime < myApp.getR_H_R_Time()){
+                myApp.setR_H_R_Time(measTime);
             }
-        } else if (myApp.getR_F_Time() != 0) {
-            long rTime = myApp.getR_F_Time();
-            long diffTime = rTime - measTime;
-            if (diffTime > 0) {
-                concon.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
+        } else if (myApp.getR_H_R_Time() != 0) {
+            long rTime = myApp.getR_H_R_Time();
+            long diffTime;
+            if (rTime > measTime) {
+                diffTime = rTime - measTime;
+                con_text.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
                         "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요\n" +
-                        "처음으로 돌아가기");
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요");
             } else {
-                concon.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
+                diffTime = measTime - rTime;
+                con_text.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
                         "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 늦었어요\n" +
-                        "처음으로 돌아가기");
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 늦었어요");
             }
-            if (measTime < myApp.getR_F_Time()){
-                myApp.setR_F_Time(measTime);
+            if (measTime < myApp.getR_H_R_Time()){
+                myApp.setR_H_R_Time(measTime);
             }
         } else {
-            concon.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                    "처음으로 돌아가기");
-            myApp.setR_F_Time(measTime);
+            con_text.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초");
+            myApp.setR_H_R_Time(measTime);
         }
 
         if (myApp.getMissionCheck()) {
-            String currentText = concon.getText().toString();
+            String currentText = con_text.getText().toString();
             String appendedText = currentText + "\n임무 성공 여부 : " + missionComplete;
-            concon.setText(appendedText);
+            con_text.setText(appendedText);
         }
 
     }

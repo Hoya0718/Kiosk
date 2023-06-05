@@ -12,8 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="70dp"
-        android:layout_weight="5"
+        android:layout_weight="4"
         app:srcCompat="@drawable/congraturation" />
+
+    <TextView
+        android:id="@+id/con_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="18dp"
+        android:gravity="center" />
 
     <Button
         android:id="@+id/concon"

@@ -41,6 +41,7 @@ public class Kiosk_14 extends AppCompatActivity {
     private Button buy_ticket_btn;
     private Button reserved_ticket_btn;
     private Button refund_ticket_btn;
+    private Button b_cancel_btn;
     private TextView textView11;
     Handler handler = new Handler();
 
@@ -60,11 +61,13 @@ public class Kiosk_14 extends AppCompatActivity {
         buy_ticket_btn = findViewById(R.id.buy_ticket_btn);
         reserved_ticket_btn = findViewById(R.id.reserved_ticket_btn);
         refund_ticket_btn = findViewById(R.id.refund_ticket_btn);
+        b_cancel_btn = findViewById(R.id.b_cancel_btn);
         textView11 = findViewById(R.id.textView11);
 
         buy_ticket_btn.setTextSize(text_size.getId());
         reserved_ticket_btn.setTextSize(text_size.getId());
         refund_ticket_btn.setTextSize(text_size.getId());
+        b_cancel_btn.setTextSize(text_size.getId());
         textView11.setTextSize(text_size.getId());
 
 
@@ -77,13 +80,15 @@ public class Kiosk_14 extends AppCompatActivity {
 
                         speakText("여기서는 승차권을 구매하실 수 있고, 예매한 승차권을 확인하실 수도 있습니다." +
                                 "또 잘못 예매한 승차권을 환불하실 수 있습니다." +
-                                "승차권 구매, 예매한 승차권 확인, 승차권 환불 기능중 배우고 싶은 기능의 버튼을 눌러보세요.");
+                                "승차권 구매, 예매한 승차권 확인, 승차권 환불 기능중 배우고 싶은 기능의 버튼을 눌러보세요." +
+                                "만약 버스 연습이 아닌 다른 상황을 연습하고 싶으시다면 뒤로 돌아가기 버튼을 눌러주세요.");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                         speakText("You can purchase tickets here, and you can also check tickets you have reserved." +
                                 "And also get a refund for tickets that you have incorrectly reserved" +
-                                "Press the button of the function you want to learn among ticket purchase, ticket confirmation, and ticket refund functions.");
+                                "Press the button of the function you want to learn among ticket purchase, ticket confirmation, and ticket refund functions." +
+                                "If you want to practice a situation other than the bus practice, please press the back button.");
                     }
 
                     textView11 = (TextView) findViewById(R.id.textView11);
@@ -99,10 +104,6 @@ public class Kiosk_14 extends AppCompatActivity {
 
 
                     textView11.setText(format.format(c.getTime()));
-
-                    buy_ticket_btn = findViewById(R.id.buy_ticket_btn);
-                    reserved_ticket_btn = findViewById(R.id.reserved_ticket_btn);
-                    refund_ticket_btn = findViewById(R.id.refund_ticket_btn);
 
                     buy_ticket_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -127,6 +128,15 @@ public class Kiosk_14 extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(Kiosk_14.this, Kiosk_14_refund.class);
+                            tts.shutdown();
+                            startActivity(intent);
+                        }
+                    });
+
+                    b_cancel_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_14.this, Kiosk_5.class);
                             tts.shutdown();
                             startActivity(intent);
                         }

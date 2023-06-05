@@ -258,6 +258,10 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
             }
         }
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }
 
 

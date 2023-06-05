@@ -113,6 +113,10 @@ public class Kiosk_R_Bus_Reserved_1 extends AppCompatActivity {
 
         b_payment_btn.setEnabled(false);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }
 
 

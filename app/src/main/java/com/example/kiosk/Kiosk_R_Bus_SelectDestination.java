@@ -1616,6 +1616,10 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
         destinationMap.put("서대구", westdaegu_btn);
         destinationMap.put("경주", gyeongju_btn);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }
 
 

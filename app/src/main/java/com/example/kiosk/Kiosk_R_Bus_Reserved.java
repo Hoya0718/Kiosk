@@ -235,4 +235,8 @@ public class Kiosk_R_Bus_Reserved extends AppCompatActivity {
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_14.class);
         startActivity(goto_Back);
     }
+
+    public void onBackPressed() {
+        // 뒤로가기 버튼 무시
+    }
 }

@@ -3,22 +3,34 @@ package com.example.kiosk;
 import static java.util.Locale.KOREAN;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.IOException;
 import java.util.Locale;
+import java.util.UUID;
 
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "BluetoothConnection";
+    private static final String ARDUINO_MAC_ADDRESS = "00:21:09:01:2A:2B"; // 아두이노의 실제 블루투스 맥 주소로 대체해야 합니다.
+    private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); // 아두이노와 동일한 UUID 사용
+
+
     private TextToSpeech tts;
 
     private Button practice_Btn;
@@ -31,6 +43,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         practice_Btn = findViewById(R.id.practice_Btn);
+
+        String[] permission_list;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            permission_list = new String[]{
+                    android.Manifest.permission.ACCESS_FINE_LOCATION,
+                    android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                    android.Manifest.permission.BLUETOOTH_SCAN,
+                    android.Manifest.permission.BLUETOOTH_ADMIN,
+                    android.Manifest.permission.BLUETOOTH_ADVERTISE,
+                    android.Manifest.permission.BLUETOOTH_CONNECT,
+            };
+        } else {
+            permission_list = new String[]{
+                    android.Manifest.permission.ACCESS_FINE_LOCATION,
+                    android.Manifest.permission.ACCESS_COARSE_LOCATION
+            };
+        }
+
+
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 tts.setLanguage(KOREAN);

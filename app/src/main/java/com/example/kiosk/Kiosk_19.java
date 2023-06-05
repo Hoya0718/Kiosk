@@ -45,19 +45,8 @@ public class Kiosk_19 extends AppCompatActivity {
     private Button b_6_btn, b_7_btn, b_8_btn, b_9_btn, b_10_btn;
     private Button b_11_btn, b_12_btn, b_13_btn, b_14_btn, b_15_btn;
     private Button b_16_btn, b_17_btn, b_18_btn, b_19_btn, b_20_btn;
-    private static final String TAG = "BluetoothConnection";
-    private static final String ARDUINO_MAC_ADDRESS = "00:21:09:01:2A:2B"; // 아두이노의 실제 블루투스 맥 주소로 대체해야 합니다.
-    private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); // 아두이노와 동일한 UUID 사용
+    private Button b_goback_btn;
 
-    private Thread workerThread = null; //문자열 수신에 사용되는 쓰레드
-    private byte[] readBuffer; //수신된 문자열 저장 버퍼
-
-    private BluetoothAdapter bluetoothAdapter;
-    private BluetoothDevice arduinoDevice;
-    private int readBufferPosition; //버퍼  내 문자 저장 위치
-    private BluetoothSocket socket;
-    private InputStream inputStream;
-    private OutputStream outputStream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +78,7 @@ public class Kiosk_19 extends AppCompatActivity {
         b_18_btn = findViewById(R.id.b_18_btn);
         b_19_btn = findViewById(R.id.b_19_btn);
         b_20_btn = findViewById(R.id.b_20_btn);
+        b_goback_btn = findViewById(R.id.b_goback_btn);
         textView32 = findViewById(R.id.textView32);
         textView33 = findViewById(R.id.textView33);
         textView34 = findViewById(R.id.textView34);
@@ -113,68 +103,10 @@ public class Kiosk_19 extends AppCompatActivity {
         b_18_btn.setTextSize(text_size.getId());
         b_19_btn.setTextSize(text_size.getId());
         b_20_btn.setTextSize(text_size.getId());
+        b_goback_btn.setTextSize(text_size.getId());
         textView32.setTextSize(text_size.getId());
         textView33.setTextSize(text_size.getId());
         textView34.setTextSize(text_size.getId());
-
-        String[] permission_list;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            permission_list = new String[]{
-                    android.Manifest.permission.ACCESS_FINE_LOCATION,
-                    android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                    android.Manifest.permission.BLUETOOTH_SCAN,
-                    android.Manifest.permission.BLUETOOTH_ADMIN,
-                    android.Manifest.permission.BLUETOOTH_ADVERTISE,
-                    android.Manifest.permission.BLUETOOTH_CONNECT,
-            };
-        } else {
-            permission_list = new String[]{
-                    android.Manifest.permission.ACCESS_FINE_LOCATION,
-                    android.Manifest.permission.ACCESS_COARSE_LOCATION
-            };
-        }
-
-        ActivityCompat.requestPermissions(Kiosk_19.this, permission_list, 1); // 각자의 클래스명 지정해야합니다.
-
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
-        // BluetoothAdapter 초기화
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (bluetoothAdapter == null) {
-            // 디바이스가 블루투스를 지원하지 않는 경우 처리
-            return;
-        }
-
-        // 아두이노 디바이스 생성
-        arduinoDevice = bluetoothAdapter.getRemoteDevice(ARDUINO_MAC_ADDRESS);
-
-        // BluetoothSocket을 통한 연결 수립
-        try {
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            socket = arduinoDevice.createRfcommSocketToServiceRecord(MY_UUID);
-            socket.connect();
-
-            // InputStream과 OutputStream 설정
-            inputStream = socket.getInputStream();
-            outputStream = socket.getOutputStream();
-
-            // 아두이노로부터 데이터 읽기 예시
-            readDataFromArduino();
-
-        } catch (IOException e) {
-            // 연결 실패 처리
-            e.printStackTrace();
-        }
-
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -184,7 +116,8 @@ public class Kiosk_19 extends AppCompatActivity {
                         tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                         speakText("앉고 싶은 좌석를 예매할 수 있는 화면입니다. 버스 좌석 번호는 앞 자리의 운전석을 기준으로 배정되어있습니다." +
                                 "매진이라고 써진 회색 좌석은 다른 사람이 이미 예약해서 선택할 수 없는 좌석입니다." +
-                                " 매진된 좌석이 아닌 경우 버튼의 색깔이 주황색입니다. 매진이 써지지 않은 다른 좌석을 골라주세요. ");
+                                "매진된 좌석이 아닌 경우 버튼의 색깔이 주황색입니다. 매진이 써지지 않은 다른 좌석을 골라주세요." +
+                                "만약 이전 화면으로 돌아가고 싶으시다면 화면 하단에 있는 뒤로 돌아가기 버튼을 눌러주세요 ");
                     }
                     else {
                         tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -192,7 +125,8 @@ public class Kiosk_19 extends AppCompatActivity {
                                 "Bus seat numbers are occupied based on the production seat in the front seat." +
                                 "If the seat is not sold out, the color of the button is orange." +
                                 "Seats marked sold out are seats that have already been reserved by someone else and cannot be selected." +
-                                "Choose a different seat");
+                                "Choose a different seat" +
+                                "If you want to go back to the previous screen, press the back button at the bottom of the screen.");
                     }
 
 
@@ -473,6 +407,13 @@ public class Kiosk_19 extends AppCompatActivity {
                             }
                         }
                     });
+
+                    b_goback_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Kiosk_19.this, Kiosk_18.class);
+                        }
+                    });
                 }
             }
         });
@@ -541,70 +482,6 @@ public class Kiosk_19 extends AppCompatActivity {
             }
         });
     }
-    private void readDataFromArduino() {
-        final Handler handler = new Handler();
-        // 데이터를 수신하기 위한 버퍼를 생성
-        readBufferPosition = 0;
-        readBuffer = new byte[1024];
-        // 데이터를 수신하기 위한 쓰레드 생성
-        workerThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while(!Thread.currentThread().isInterrupted()) {
-                    try {
-                        // 데이터를 수신했는지 확인합니다.
-                        int byteAvailable = inputStream.available();
-
-                        // 데이터가 수신 된 경우
-                        if(byteAvailable > 0) {
-                            // 입력 스트림에서 바이트 단위로 읽어 옵니다.
-                            byte[] bytes = new byte[byteAvailable];
-                            inputStream.read(bytes);
-                            // 입력 스트림 바이트를 한 바이트씩 읽어 옵니다.
-                            for(int i = 0; i < byteAvailable; i++) {
-                                byte tempByte = bytes[i];
-                                // 개행문자를 기준으로 받음(한줄)
-                                if(tempByte == '\n') {
-                                    // readBuffer 배열을 encodedBytes로 복사
-                                    byte[] encodedBytes = new byte[readBufferPosition];
-                                    System.arraycopy(readBuffer, 0, encodedBytes, 0, encodedBytes.length);
-                                    // 인코딩 된 바이트 배열을 문자열로 변환
-                                    final String text = new String(encodedBytes, "UTF-8");
-                                    readBufferPosition = 0;
-                                    handler.post(new Runnable() {
-                                        @Override
-                                        public void run() {
-
-                                            if (text.contains("success")) {
-                                                Intent intent = new Intent(Kiosk_19.this, Kiosk_30_2.class); //(해당클래스명.this, 다음 클래스명.class)
-                                                tts.shutdown();
-                                                disconnectBluetooth();
-                                                startActivity(intent);
-
-                                            }
-                                        }
-                                    });
-                                } // 개행 문자가 아닐 경우
-                                else {
-                                    readBuffer[readBufferPosition++] = tempByte;
-                                }
-                            }
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    try {
-                        // 1초마다 받아옴
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
-        workerThread.start();
-    }
-
 
     private void speakText(String text) {
 
@@ -612,33 +489,14 @@ public class Kiosk_19 extends AppCompatActivity {
         sound.getTtsVolume();
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
 
+    protected void onDestroy() {
         if(tts != null) {
             tts.stop();
             tts.shutdown();
             tts=null;
         }
-
-        if (socket != null) {
-            try {
-                socket.close();
-            } catch (IOException e) {
-                Log.e(TAG, "Error occurred while closing the socket: " + e.getMessage());
-            }
-        }
         super.onDestroy();
-    }
-    private void disconnectBluetooth() {
-        if (socket != null) {
-            try {
-                socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
     protected void onPause() {
         if (tts != null) {

@@ -39,7 +39,7 @@ public class Kiosk_R_Bus_SelectBustype extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk18);
+        setContentView(R.layout.activity_kiosk_r_bus_selectbustype);
 
 
         textView17 = findViewById(R.id.textView17);

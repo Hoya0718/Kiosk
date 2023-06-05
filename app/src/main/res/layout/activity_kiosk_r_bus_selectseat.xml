@@ -83,7 +83,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="5"
+                    android:text="@string/b_5"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -99,7 +99,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="6"
+                    android:text="@string/b_6"
                     android:background="#ff8800"
                     android:textStyle="bold"
                     android:textSize="15sp"
@@ -136,7 +136,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="10"
+                    android:text="@string/b_10"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -178,7 +178,7 @@
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:onClick='onClick'
-                    android:text="14"
+                    android:text="@string/b_14"
                     android:textSize="15sp"
                     android:textStyle="bold"
                     tools:layout_marginLeft="5dp" />
@@ -268,7 +268,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="3"
+                    android:text="@string/b_3"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -284,7 +284,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:background="#ff8800"
-                    android:text="4"
+                    android:text="@string/b_4"
                     android:textSize="15sp"
                     android:textStyle="bold"
                     tools:layout_marginLeft="5dp" />
@@ -373,7 +373,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="15"
+                    android:text="@string/b_15"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -387,7 +387,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
-                    android:text="16"
+                    android:text="@string/b_16"
                     android:background="#ff8800"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -432,6 +432,17 @@
                     android:minHeight="0dp"/>
             </TableRow>
         </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3">
 
+        <Button
+            android:id="@+id/b_goback_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="뒤로 돌아가기" />
     </LinearLayout>
 </LinearLayout>

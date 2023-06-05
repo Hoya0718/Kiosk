@@ -262,7 +262,7 @@ public class Kiosk_14_reserved extends AppCompatActivity {
             char seven = get_num.charAt(7);
 
             if (three != '0' && three != '1') {
-                speakText("유효하지 않은 월입니다.");
+                speakText("유효하지 않은 주민등록번호 형식입니다.");
                 ssn.setBackgroundResource(R.drawable.anim_list2);
                 anim = (AnimationDrawable) ssn.getBackground();
                 anim.start();

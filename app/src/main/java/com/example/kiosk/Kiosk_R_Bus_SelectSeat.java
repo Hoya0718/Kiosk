@@ -28,6 +28,7 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
     private Button b_6_btn, b_7_btn, b_8_btn, b_9_btn, b_10_btn;
     private Button b_11_btn, b_12_btn, b_13_btn, b_14_btn, b_15_btn;
     private Button b_16_btn, b_17_btn, b_18_btn, b_19_btn, b_20_btn;
+    private Button b_goback_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
         b_18_btn = findViewById(R.id.b_18_btn);
         b_19_btn = findViewById(R.id.b_19_btn);
         b_20_btn = findViewById(R.id.b_20_btn);
+        b_goback_btn = findViewById(R.id.b_goback_btn);
         textView32 = findViewById(R.id.textView32);
         textView33 = findViewById(R.id.textView33);
         textView34 = findViewById(R.id.textView34);
@@ -318,6 +320,13 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     intent.putExtra("price", price);
                     startActivity(intent);
                 }
+            }
+        });
+
+        b_goback_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Kiosk_R_Bus_SelectSeat.this, Kiosk_R_Bus_SelectBustype.class);
             }
         });
     }

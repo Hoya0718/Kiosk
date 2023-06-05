@@ -6,13 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.CheckBox;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class Kiosk_R_Part extends AppCompatActivity {
 
+    private TextToSpeech tts;
+    private myapp sound;
     private CheckBox checkBox;
 
     @Override
@@ -20,7 +24,23 @@ public class Kiosk_R_Part extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_part);
 
+        sound = (myapp) getApplication();
+
         checkBox = findViewById(R.id.checkBox);
+
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                        tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
+                        speakText("좌측 상단에 있는 임무를 누르면 각 상황별로 임무를 부여하게됩니다. 임무를 해보고싶으시다면 임무를 누르고 상황을 선택해 보세요.");
+                    } else {
+                        tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
+                        speakText("Tap Missions in the top left corner and you will be given a mission for each situation. If you're interested in trying out a mission, tap Missions and select a situation.");
+                    }
+                }
+            }
+        });
     }
 
     // 배열에서 랜덤한 값 가져오기
@@ -108,6 +128,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
                 public void onClick(DialogInterface dialog, int which) {
                     // 다음 화면으로 넘어가는 코드 작성
                     Intent goto_Kiosk_R_F_M = new Intent(Kiosk_R_Part.this, Kiosk_R_Fastfood_Main.class);
+                    tts.shutdown();
                     startActivity(goto_Kiosk_R_F_M);
                 }
             });
@@ -126,6 +147,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
             myapp myApp = (myapp) getApplicationContext();
             myApp.setCheckFastfoodMission("X");
             myApp.setMissionCheck(false);
+            tts.shutdown();
             startActivity(goto_Kiosk_R_F_M);
         }
     }
@@ -175,6 +197,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
                 public void onClick(DialogInterface dialog, int which) {
                     // 다음 화면으로 넘어가는 코드 작성
                     Intent goto_Kiosk_R_B_M = new Intent(Kiosk_R_Part.this, Kiosk_R_Bus_Main.class);
+                    tts.shutdown();
                     startActivity(goto_Kiosk_R_B_M);
                 }
             });
@@ -193,6 +216,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
             myapp myApp = (myapp) getApplicationContext();
             myApp.setCheckFastfoodMission("X");
             myApp.setMissionCheck(false);
+            tts.shutdown();
             startActivity(goto_Kiosk_R_B_M);
         }
     }
@@ -229,6 +253,7 @@ public class Kiosk_R_Part extends AppCompatActivity {
                 public void onClick(DialogInterface dialog, int which) {
                     // 다음 화면으로 넘어가는 코드 작성
                     Intent goto_Kiosk_R_H = new Intent(Kiosk_R_Part.this, Kiosk_R_Hospital.class);
+                    tts.shutdown();
                     startActivity(goto_Kiosk_R_H);
                 }
             });
@@ -244,13 +269,36 @@ public class Kiosk_R_Part extends AppCompatActivity {
 
         } else {
             Intent goto_Kiosk_R_H = new Intent(Kiosk_R_Part.this, Kiosk_R_Hospital.class);
+            tts.shutdown();
             startActivity(goto_Kiosk_R_H);
         }
     }
 
     public void goto_Kiosk_Main (View v){
+        tts.shutdown();
         Intent goto_Kiosk_Main = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(goto_Kiosk_Main);
+    }
+    private void speakText(String text) {
+        tts.setSpeechRate(sound.getTtsSpeed()) ;
+        sound.getTtsVolume();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "delaySpeak");
+    }
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts = null;
+        }
+    }
+    protected void onPause () {
+        if (tts != null) {
+            // TTS 발화 중지
+            tts.stop();
+        }
+        super.onPause();
     }
 
 }

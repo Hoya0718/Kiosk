@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
 
-    private Button goto_5;
+    private Button concon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,22 +33,32 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             }
         }
 
-        goto_5 = findViewById(R.id.concon);
+        concon = findViewById(R.id.concon);
         if (myApp.getPracticeFastfoodCheck()) {
             long pTime = myApp.getR_F_Time();
             long diffTime = pTime - measTime;
-            goto_5.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
+            concon.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
                     "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
-        } else if (myApp.getMissionCheck()) {
-            goto_5.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                    "임무 성공 여부 : " + missionComplete + "\n" +
-                    "처음으로 돌아가기");
-            myApp.setR_F_Time(measTime);
+        } else if (myApp.getR_F_Time() != 0) {
+            long rTime = myApp.getR_F_Time();
+            long diffTime = rTime - measTime;
+            concon.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
+                    "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                    "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
+            if (measTime < myApp.getR_F_Time()){
+                myApp.setR_F_Time(measTime);
+            }
         } else {
-            goto_5.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+            concon.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "처음으로 돌아가기");
             myApp.setR_F_Time(measTime);
+        }
+
+        if (myApp.getMissionCheck()) {
+            String currentText = concon.getText().toString();
+            String appendedText = currentText + "\n" + "임무 성공 여부 : " + missionComplete;
+            concon.setText(appendedText);
         }
 
     }

@@ -15,7 +15,7 @@ import java.util.List;
 public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
 
     private myapp myApp;
-    private Button kiosk_r_hospital_btn;
+    private Button concon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,23 +36,34 @@ public class Kiosk_R_Hospital_Receipt_Congratulation extends AppCompatActivity {
             missionComplete = "성공";
         }
 
-        kiosk_r_hospital_btn = findViewById(R.id.kiosk_r_hospital_btn);
+        concon = findViewById(R.id.concon);
         if (myApp.getPracticeHospitalCheck()) {
-            long pTime = myApp.getR_F_Time();
+            long pTime = myApp.getR_H_R_Time();
             long diffTime = pTime - measTime;
-            kiosk_r_hospital_btn.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
+            concon.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
                     "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
-        } else if (myApp.getMissionCheck()) {
-            kiosk_r_hospital_btn.setText("접수 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                    "임무 성공 여부 : " + missionComplete + "\n" +
-                    "처음으로 돌아가기");
-            myApp.setR_H_R_Time(measTime);
+        } else if (myApp.getR_H_R_Time() != 0) {
+            long rTime = myApp.getR_H_R_Time();
+            long diffTime = rTime - measTime;
+            concon.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
+                    "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                    "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
+            if (measTime < myApp.getR_H_R_Time()){
+                myApp.setR_H_R_Time(measTime);
+            }
         } else {
-            kiosk_r_hospital_btn.setText("접수 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+            concon.setText("접수 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "처음으로 돌아가기");
             myApp.setR_H_R_Time(measTime);
         }
+
+        if (myApp.getMissionCheck()) {
+            String currentText = concon.getText().toString();
+            String appendedText = currentText + "\n" + "임무 성공 여부 : " + missionComplete;
+            concon.setText(appendedText);
+        }
+
     }
 
     public void goto_Kiosk_R_H(View v){

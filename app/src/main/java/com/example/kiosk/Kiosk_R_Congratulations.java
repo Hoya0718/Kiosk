@@ -22,21 +22,26 @@ public class Kiosk_R_Congratulations extends AppCompatActivity {
 
         concon = findViewById(R.id.concon);
         if (myApp.getPracticeHospitalCheck()) {
-            long pTime = myApp.getR_F_Time();
+            long pTime = myApp.getR_H_A_Time();
             long diffTime = pTime - measTime;
             concon.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
                     "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
-        } else if (myApp.getMissionCheck()) {
-            concon.setText("수납 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                    "임무 성공 여부 : " + "실패" + "\n" +
-                    "처음으로 돌아가기");
-            myApp.setR_H_A_Time(measTime);
+        } else if (myApp.getR_H_A_Time() != 0) {
+            long rTime = myApp.getR_H_A_Time();
+            long diffTime = rTime - measTime;
+            concon.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
+                    "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                    "소요 시간 차이 : " + (diffTime / 60) + "분 " + (diffTime % 60) + "초\n");
+            if (measTime < myApp.getR_H_A_Time()){
+                myApp.setR_H_A_Time(measTime);
+            }
         } else {
-            concon.setText("수납 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+            concon.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
                     "처음으로 돌아가기");
             myApp.setR_H_A_Time(measTime);
         }
+
     }
     public void goto_Kiosk_R_P(View v){
         Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), Kiosk_R_Part.class);

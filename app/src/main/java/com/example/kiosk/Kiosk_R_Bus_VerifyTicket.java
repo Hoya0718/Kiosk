@@ -136,13 +136,17 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
 
         Intent intent = getIntent();
-        text = intent.getStringExtra("text");
+
 
         String destination = intent.getStringExtra("destination");
         String bus = intent.getStringExtra("bus");
         String seat = intent.getStringExtra("seat");
         String departuretime = intent.getStringExtra("departuretime");
         String price = intent.getStringExtra("price");
+
+        intent.putExtra("destination", destination);
+        intent.putExtra("departuretime", departuretime);
+        intent.putExtra("seat", seat);
 
         textView3.setText(departuretime);
         textView5.setText(destination);

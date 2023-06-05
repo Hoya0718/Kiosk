@@ -30,7 +30,11 @@ public class Kiosk_R_Bus_Congratulations extends AppCompatActivity {
         long measTime = (afterTime - beforeTime) / 1000;
 
         Intent intent = getIntent();
-        String text = intent.getStringExtra("text");
+        String destination = intent.getStringExtra("destination");
+        String departuretime = intent.getStringExtra("departuretime");
+        String seat = intent.getStringExtra("seat");
+
+        String text = destination + " - " + departuretime + " - " + seat;
 
         String checkMission = myApp.getCheckHospitalMission();
         String missionComplete = "실패";

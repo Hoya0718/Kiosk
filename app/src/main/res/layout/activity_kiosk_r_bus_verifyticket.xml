@@ -228,22 +228,7 @@
             android:autoSizeMaxTextSize="40sp"
             android:autoSizeStepGranularity="2sp"/>
 
-        <Button
-            android:id="@+id/b_payment_btn"
-            android:layout_width="match_parent"
-            android:layout_height="90sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeStepGranularity="2sp"
-            android:autoSizeTextType="uniform"
-            android:text="@string/b_payment"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+
     </LinearLayout>
 
 </LinearLayout>

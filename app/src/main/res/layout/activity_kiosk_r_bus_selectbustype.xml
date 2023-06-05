@@ -152,7 +152,7 @@
                 android:layout_marginRight="-10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="10  >"
+                android:text="8  >"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -377,7 +377,7 @@
                 android:layout_marginRight="-10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="10  >"
+                android:text="8  >"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -433,7 +433,7 @@
                 android:layout_marginRight="-10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="10  >"
+                android:text="8  >"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>

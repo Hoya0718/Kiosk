@@ -41,9 +41,8 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
 
     private TextView textView2, textView3, textView5, textView6, textView9, textView12, textView14, textView16, textView20, textView21, textView22;
 
-
     private Button b_cancel_btn;
-    private Button b_payment_btn;
+
 
     private static final String TAG = "BluetoothConnection";
     private static final String ARDUINO_MAC_ADDRESS = "00:21:09:01:2A:2B"; // 아두이노의 실제 블루투스 맥 주소로 대체해야 합니다.
@@ -134,7 +133,6 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
         textView21 = findViewById(R.id.textView21);
         textView22 = findViewById(R.id.textView22);
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
-        b_payment_btn = findViewById(R.id.b_payment_btn);
 
         Intent intent = getIntent();
 
@@ -151,7 +149,6 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
         textView21.setText(price);
 
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
-        b_payment_btn = findViewById(R.id.b_payment_btn);
 
         Calendar c = Calendar.getInstance();
 
@@ -170,14 +167,6 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        b_payment_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_VerifyTicket.this, Kiosk_R_Bus_Congratulations.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
     private void readDataFromArduino() {

@@ -27,6 +27,7 @@ import java.util.UUID;
 
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -231,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
                                         @Override
                                         public void run() {
 
-
+                                            Toast.makeText(getApplicationContext(),"블루투스가 연결되었습니다.",Toast.LENGTH_SHORT).show();
                                         }
                                     });
                                 } // 개행 문자가 아닐 경우
@@ -288,11 +289,13 @@ public class MainActivity extends AppCompatActivity {
     public void goto_kiosk02(View v){
         tts.shutdown();
         Intent intent = new Intent(getApplicationContext(),Kiosk_2.class);
+        disconnectBluetooth();
         startActivity(intent);
     }
     public void goto_Kiosk_R_Part(View v){
         tts.shutdown();
         Intent goto_Kiosk_R_Part = new Intent(getApplicationContext(), Kiosk_R_Part.class);
+        disconnectBluetooth();
         startActivity(goto_Kiosk_R_Part);
     }
     public void change_to_korean(View v) {
@@ -304,6 +307,7 @@ public class MainActivity extends AppCompatActivity {
         config.setLocale(newLocale);
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         Intent intent = new Intent(this, MainActivity.class);
+        disconnectBluetooth();
         startActivity(intent);
         //Intent goto_Kiosk_R_Part = new Intent(this, Kiosk_R_Part.class);
         //startActivity(goto_Kiosk_R_Part);
@@ -317,6 +321,7 @@ public class MainActivity extends AppCompatActivity {
         config.setLocale(newLocale);
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         Intent intent = new Intent(this, MainActivity.class);
+        disconnectBluetooth();
         startActivity(intent);
     }
 

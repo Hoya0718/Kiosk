@@ -201,11 +201,7 @@ public class Kiosk_R_Hospital_Pay extends AppCompatActivity {
 
     // 여기까지
 
-    public void goto_Kiosk_R_H_P_C(View v){
-        Intent goto_Kiosk_R_H_P_C = new Intent(getApplicationContext(), Kiosk_R_Hospital_Pay_Complete.class);
-        disconnectBluetooth();
-        startActivity(goto_Kiosk_R_H_P_C);
-    }
+
     public void goto_Back(View v) {
         Intent goto_Kiosk_Back = new Intent(getApplicationContext(), Kiosk_R_Hospital_Acceptance_Complete.class);
         disconnectBluetooth();

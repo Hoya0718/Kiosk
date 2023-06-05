@@ -250,13 +250,6 @@ public class Kiosk_11 extends AppCompatActivity {
         startActivity(cancel);
     }
 
-    public void goto_kiosk_12(View v){
-        tts.shutdown();
-        Intent goto_kiosk_12 = new Intent(getApplicationContext(),Kiosk_12.class);
-        disconnectBluetooth();
-        startActivity(goto_kiosk_12);
-    }
-
     private void speakText(String text) {
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();

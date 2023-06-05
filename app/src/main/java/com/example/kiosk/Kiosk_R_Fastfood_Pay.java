@@ -203,6 +203,7 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
     private void disconnectBluetooth() {
         if (socket != null) {
             try {
+                workerThread = null;
                 socket.getInputStream().close();
                 socket.getOutputStream().close();
                 socket.close();

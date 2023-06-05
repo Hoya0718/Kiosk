@@ -116,7 +116,7 @@
                 android:layout_marginRight="-10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="8시 30분"
+                android:text="@string/_8_30_"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -341,7 +341,7 @@
                 android:layout_marginRight="-10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="9시 40분"
+                android:text="@string/_9_40_"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -397,7 +397,7 @@
                 android:layout_marginRight="-10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="10시 00분"
+                android:text="@string/_10_00_"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 

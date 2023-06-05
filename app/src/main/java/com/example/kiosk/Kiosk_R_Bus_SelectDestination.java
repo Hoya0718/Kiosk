@@ -514,7 +514,7 @@ public class Kiosk_R_Bus_SelectDestination extends AppCompatActivity implements 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_SelectDestination.this, Kiosk_R_Bus_SelectBustype.class);
+                Intent intent = new Intent(Kiosk_R_Bus_SelectDestination.this, Kiosk_R_Bus_Destination.class);
                 startActivity(intent);
             }
         });

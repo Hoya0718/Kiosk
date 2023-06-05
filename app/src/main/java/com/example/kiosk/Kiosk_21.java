@@ -122,7 +122,7 @@ public class Kiosk_21 extends AppCompatActivity {
                     b_cancel_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Kiosk_21.this, Kiosk_14.class);
+                            Intent intent = new Intent(Kiosk_21.this, Kiosk_16.class);
                             tts.shutdown();
                             startActivity(intent);
                         }

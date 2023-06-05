@@ -323,7 +323,7 @@ public class Kiosk_14_reserved extends AppCompatActivity {
     }
 
     public void goto_Back(View v){
-        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_14_reserved.class);
+        Intent goto_Back = new Intent(getApplicationContext(), Kiosk_14.class);
         startActivity(goto_Back);
     }
     private void speakText(String text) {

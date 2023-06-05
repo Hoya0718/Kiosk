@@ -148,12 +148,13 @@ public class Kiosk_R_Part extends AppCompatActivity {
                     getString(R.string.eastdaegu),getString(R.string.westdaegu),getString(R.string.gyeongju)
             };
 
-            String[] bus_type = {getString(R.string.b_honorbus1),"고속버스", "일반버스"};
+            String[] bus_time = {getString(R.string._8_30_), getString(R.string._9_40_), getString(R.string._10_00_)};
 
-            String[] bus_seat = {"3","4","5","6","10","14","15","16"};
+            String[] bus_seat = {getString(R.string.b_3),getString(R.string.b_4),getString(R.string.b_5),getString(R.string.b_6),
+                    getString(R.string.b_10),getString(R.string.b_14),getString(R.string.b_15),getString(R.string.b_16)};
 
             String randomDestination = getRandomValue(bus_destination);
-            String randomBusType = getRandomValue(bus_type);
+            String randomBusTime = getRandomValue(bus_time);
             String randomSeat = getRandomValue(bus_seat);
 
             // 팝업 띄우기
@@ -161,11 +162,11 @@ public class Kiosk_R_Part extends AppCompatActivity {
             builder.setTitle("임무");
             builder.setMessage("버스를 예매하는 임무입니다.\n아래와 같은 버스를 예매하세요.\n" +
                     "\n목적지 : " + randomDestination +
-                    "\n버스 종류 : " + randomBusType +
+                    "\n버스 시간 : " + randomBusTime +
                     "\n좌석 : " + randomSeat); 
 
             myapp myApp = (myapp) getApplicationContext();
-            String checkBusMission = randomDestination + " - " + randomBusType + " - " + randomSeat;
+            String checkBusMission = randomDestination + " - " + randomBusTime + " - " + randomSeat;
             myApp.setCheckBusMission(checkBusMission);
             myApp.setMissionCheck(true);
 

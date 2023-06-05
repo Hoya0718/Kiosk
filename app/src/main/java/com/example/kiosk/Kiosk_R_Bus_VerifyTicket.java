@@ -163,7 +163,7 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
         b_cancel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Kiosk_R_Bus_VerifyTicket.this, Kiosk_R_Bus_SelectSeat.class);
+                Intent intent = new Intent(Kiosk_R_Bus_VerifyTicket.this, Kiosk_R_Bus_SelectDestination.class);
                 startActivity(intent);
             }
         });
@@ -204,7 +204,7 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
                                         public void run() {
 
                                             if (text.contains("success")) {
-                                                Intent intent = new Intent(Kiosk_R_Bus_VerifyTicket.this, Kiosk_R_Hospital_Pay_Complete.class); //(해당클래스명.this, 다음 클래스명.class)
+                                                Intent intent = new Intent(Kiosk_R_Bus_VerifyTicket.this, Kiosk_R_Bus_Congratulations.class); //(해당클래스명.this, 다음 클래스명.class)
                                                 disconnectBluetooth();
                                                 startActivity(intent);
 
@@ -252,8 +252,6 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
             }
         }
     }
-
-
 }
 
 

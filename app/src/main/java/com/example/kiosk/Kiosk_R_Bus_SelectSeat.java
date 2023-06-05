@@ -105,7 +105,7 @@ public class Kiosk_R_Bus_SelectSeat extends AppCompatActivity {
                     intent.putExtra("departuretime", departuretime);
                     intent.putExtra("destination", destination);
                     intent.putExtra("bus", bus);
-                    intent.putExtra("seat", seat);
+                    intent.putExtra("seat", "4번");
                     intent.putExtra("price", price);
                     startActivity(intent);
                 } else {

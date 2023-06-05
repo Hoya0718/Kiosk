@@ -398,4 +398,15 @@
     <string name="eastdaegu">동대구</string>
     <string name="westdaegu">서대구</string>
     <string name="gyeongju">경주</string>
+    <string name="_8_30_">8시 30분</string>
+    <string name="_9_40_">9시 40분</string>
+    <string name="_10_00_">10시 00분</string>
+    <string name="b_3">3</string>
+    <string name="b_4">4</string>
+    <string name="b_5">5</string>
+    <string name="b_6">6</string>
+    <string name="b_10">10</string>
+    <string name="b_14">14</string>
+    <string name="b_15">15</string>
+    <string name="b_16">16</string>
 </resources>

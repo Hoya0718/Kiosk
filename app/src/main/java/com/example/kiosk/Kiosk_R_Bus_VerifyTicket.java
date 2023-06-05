@@ -42,6 +42,7 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
     private TextView textView2, textView3, textView5, textView6, textView9, textView12, textView14, textView16, textView20, textView21, textView22;
 
     private Button b_cancel_btn;
+    private String text;
 
 
     private static final String TAG = "BluetoothConnection";
@@ -135,6 +136,7 @@ public class Kiosk_R_Bus_VerifyTicket extends AppCompatActivity {
         b_cancel_btn = findViewById(R.id.b_cancel_btn);
 
         Intent intent = getIntent();
+        text = intent.getStringExtra("text");
 
         String destination = intent.getStringExtra("destination");
         String bus = intent.getStringExtra("bus");

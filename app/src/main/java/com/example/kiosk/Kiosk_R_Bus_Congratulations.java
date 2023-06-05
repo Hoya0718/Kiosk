@@ -75,7 +75,6 @@ public class Kiosk_R_Bus_Congratulations extends AppCompatActivity {
             }
 
         });
-
     }
 }
 

@@ -85,7 +85,7 @@
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:text="@string/delete"
-                        android:textSize="10dp" />
+                        android:textSize="10sp" />
 
                     <ImageView
                         android:id="@+id/burger_img"
@@ -134,7 +134,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1.5"
                             android:text="-"
-                            android:textSize="10dp" />
+                            android:textSize="10sp" />
 
                         <TextView
                             android:id="@+id/count_text"
@@ -151,7 +151,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1.5"
                             android:text="+"
-                            android:textSize="10dp" />
+                            android:textSize="10sp" />
                     </LinearLayout>
 
                     <TextView

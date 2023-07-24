@@ -227,7 +227,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:onClick="goto_Kiosk_R_F_M_S"
+                android:onClick="goto_Kiosk_R_F_M_D"
                 android:background="@drawable/table_border"
                 android:orientation="horizontal">
 

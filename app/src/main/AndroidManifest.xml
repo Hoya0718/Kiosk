@@ -32,6 +32,33 @@
         android:theme="@style/Theme.Kiosk"
         tools:targetApi="31">
         <activity
+            android:name=".Hospital_Medical_Record"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital_Printing_complete"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital_Printing"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital_Pay_Remove"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital_Pay"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital_Pay_List"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital_in_progress"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital_Prescription"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital_Main"
+            android:exported="false" />
+        <activity
             android:name=".Kiosk_R_Hospital_Receipt_Congratulation"
             android:exported="false" />
         <activity

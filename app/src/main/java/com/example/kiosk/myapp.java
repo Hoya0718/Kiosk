@@ -19,6 +19,11 @@ public class myapp extends Application {
 
     private String department;
 
+    private String h_ssn;
+
+    public void setH_ssn(String a) { this.h_ssn = a;}
+    public String getH_ssn() { return h_ssn;}
+
     public void setGet_pn_2(String a) {this.get_pn_2 =a;}
     public String getGet_pn_2() {return get_pn_2;}
 

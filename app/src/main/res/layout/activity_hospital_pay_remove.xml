@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    tools:context=".Hospital_Pay_Remove">
+
+    <TextView
+        android:id="@+id/textView74"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="목포해양대학교병원"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView82"
+        android:layout_width="600dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/hospital_txt_gray_tlr"
+        android:gravity="bottom|center_horizontal"
+        android:text="카드 넣는곳"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView74" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="600dp"
+        android:layout_height="350dp"
+        android:background="@drawable/hospital_txt_gray_lr"
+        android:onClick="goto_printing"
+        app:layout_constraintStart_toStartOf="@+id/textView82"
+        app:layout_constraintTop_toBottomOf="@+id/textView82"
+        app:srcCompat="@drawable/card_remove" />
+
+    <TextView
+        android:id="@+id/textView83"
+        android:layout_width="600dp"
+        android:layout_height="200dp"
+        android:background="@drawable/hospital_txt_gray_all"
+        android:gravity="center"
+        android:text="카드투입구에서\n카드를 꺼내주세요."
+        android:textColor="#4169E1"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+</androidx.constraintlayout.widget.ConstraintLayout>

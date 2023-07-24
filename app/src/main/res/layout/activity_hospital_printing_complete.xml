@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    tools:context=".Hospital_Printing_complete">
+
+    <TextView
+        android:id="@+id/textView105"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="50dp"
+        android:text="목포해양대학교병원"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="600dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/hospital_txt_gray_tlr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView105"
+        app:srcCompat="@drawable/diagnosis_print_check" />
+
+    <TextView
+        android:id="@+id/textView88"
+        android:layout_width="600dp"
+        android:layout_height="200dp"
+        android:background="@drawable/hospital_txt_gray_lr"
+        android:gravity="center"
+        android:text="홍길동님의 출력물\n총 장이 출력되었습니다."
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+    <TextView
+        android:id="@+id/textView100"
+        android:layout_width="600dp"
+        android:layout_height="200dp"
+        android:background="@drawable/hospital_txt_gray_all"
+        android:gravity="center"
+        android:text="이용해주셔서 감사합니다."
+        android:textColor="#4169E1"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/textView88"
+        app:layout_constraintTop_toBottomOf="@+id/textView88" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

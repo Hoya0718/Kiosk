@@ -195,6 +195,11 @@ public class MainActivity extends AppCompatActivity {
         Intent goto_Kiosk_R_Part = new Intent(getApplicationContext(), Kiosk_R_Part.class);
         startActivity(goto_Kiosk_R_Part);
     }
+    public void a(View v){
+        tts.shutdown();
+        Intent a = new Intent(getApplicationContext(),Hospital_Main.class);
+        startActivity(a);
+    }
     public void change_to_korean(View v) {
 
         tts.shutdown();
@@ -227,5 +232,4 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onPause();
     }
-
 }

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    tools:context=".Hospital_Pay">
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:background="@drawable/hospital_txt_gray_br"
+        android:gravity="right|center_vertical"
+        android:paddingRight="30dp"
+        android:text="일시불"
+        android:textColor="#4169E1"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/textView73"
+        app:layout_constraintTop_toBottomOf="@+id/textView79" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="목포해양대학교병원"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="600dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/hospital_txt_gray_tlr"
+        android:gravity="bottom|center_horizontal"
+        android:text="카드넣는 곳"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+    <TextView
+        android:id="@+id/textView72"
+        android:layout_width="600dp"
+        android:layout_height="200dp"
+        android:background="@drawable/hospital_txt_gray_blr"
+        android:gravity="center"
+        android:text="카드투입구에\n카드를 넣어주세요."
+        android:textColor="#4169E1"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView73"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/hospital_txt_gray_bl"
+        android:gravity="center"
+        android:text="할부개월수"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/textView77"
+        app:layout_constraintTop_toBottomOf="@+id/textView77" />
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/hospital_txt_gray_tl"
+        android:gravity="center"
+        android:text="결제금액"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/textView72"
+        app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+    <TextView
+        android:id="@+id/textView79"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="@drawable/hospital_txt_gray_t"
+        android:gravity="right|center_vertical"
+        android:text="151,600"
+        android:textColor="#4169E1"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/textView77"
+        app:layout_constraintTop_toTopOf="@+id/textView77" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="600dp"
+        android:layout_height="350dp"
+        android:background="@drawable/hospital_txt_gray_lr"
+        android:onClick="goto_pay_remove"
+        app:layout_constraintStart_toStartOf="@+id/textView71"
+        app:layout_constraintTop_toBottomOf="@+id/textView71"
+        app:srcCompat="@drawable/card_img" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/hospital_txt_gray_tr"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="원"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/textView79"
+        app:layout_constraintTop_toTopOf="@+id/textView79" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center">
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="0.5">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
 
     </LinearLayout>
 
@@ -32,7 +41,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:gravity="center"
+        android:layout_weight="0.5">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -40,11 +57,8 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:layout_margin="5dp"
             android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_O_H"
             android:orientation="vertical">
@@ -84,11 +98,49 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/table_border"
+            android:onClick="goto_Kiosk_R_F_O_H"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mcnurget_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                app:srcCompat="@drawable/mcnurget" />
+
+            <TextView
+                android:id="@+id/mcnurget_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mcnurget" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="₩2,900" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mcnurget_lay"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
             android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_O_H"
             android:orientation="vertical">
@@ -130,6 +182,136 @@
         android:layout_weight="3"
         android:orientation="horizontal">
 
+        <LinearLayout
+            android:id="@+id/snackshu_lay"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/table_border"
+            android:onClick="goto_Kiosk_R_F_O_H"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/snackshu_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                app:srcCompat="@drawable/snackshu" />
+
+            <TextView
+                android:id="@+id/snackshu_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/snackshu" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="₩2,300" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mcnurget_lay"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/table_border"
+            android:onClick="goto_Kiosk_R_F_O_H"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mcnurget_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                app:srcCompat="@drawable/mcnurget" />
+
+            <TextView
+                android:id="@+id/mcnurget_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mcnurget" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="₩2,900" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mcnurget_lay"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/table_border"
+            android:onClick="goto_Kiosk_R_F_O_H"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mcnurget_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                app:srcCompat="@drawable/mcnurget" />
+
+            <TextView
+                android:id="@+id/mcnurget_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mcnurget" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="₩2,900" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+
     </LinearLayout>
 
     <LinearLayout
@@ -142,13 +324,17 @@
             android:id="@+id/desel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
             android:onClick="goto_Kiosk_R_F_O_H"
             android:text="@string/deselect"
             android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+
     </LinearLayout>
 
 </LinearLayout>

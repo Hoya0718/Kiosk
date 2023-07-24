@@ -9,8 +9,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center">
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="0.5">
 
         <TextView
             android:layout_width="0dp"
@@ -23,21 +24,29 @@
             android:id="@+id/showMission"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="3"
             android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mcchi" />
 
         <TextView
             android:id="@+id/burger_text"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:layout_weight="3"
+            android:layout_marginLeft="5dp"
             android:text="@string/big_mc"
             android:textSize="30sp" />
     </LinearLayout>
@@ -45,7 +54,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -74,71 +92,71 @@
 
         </LinearLayout>
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:gravity="center">
+            android:layout_weight="3"
+            android:orientation="vertical">
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:orientation="horizontal"
                 android:layout_weight="1">
 
-                <TableLayout
+                <Button
+                    android:id="@+id/set_Btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical">
+                    android:onClick="goto_Kiosk_R_F_P_Sd"
+                    android:text="@string/set_menu"
+                    android:textSize="18sp" />
 
-                    <Button
-                        android:id="@+id/set_Btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="goto_Kiosk_R_F_P_Sd"
-                        android:text="@string/set_menu"
-                        android:textSize="18sp" />
-                </TableLayout>
-
-                <TableLayout
+                <Button
+                    android:id="@+id/lar_Btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical">
+                    android:onClick="goto_Kiosk_R_F_P_Sd"
+                    android:text="@string/large_menu"
+                    android:textSize="18sp" />
 
-                    <Button
-                        android:id="@+id/lar_Btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="goto_Kiosk_R_F_P_Sd"
-                        android:text="@string/large_menu"
-                        android:textSize="18sp" />
-                </TableLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
-            </TableRow>
+                </LinearLayout>
 
-            <TableRow
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
-            </TableRow>
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-            <TableRow
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
-            </TableRow>
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-            <TableRow
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
-            </TableRow>
-        </TableLayout>
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -152,10 +170,6 @@
             android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
             android:onClick="goto_Kiosk_R_F_P_St"
             android:text="@string/cancle"
             android:textSize="18sp" />

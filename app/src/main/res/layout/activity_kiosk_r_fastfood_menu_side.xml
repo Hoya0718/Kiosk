@@ -9,15 +9,40 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center">
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="11"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mcchi" />
+
+        <TextView
+            android:id="@+id/burger_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="@string/side"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -29,27 +54,57 @@
             android:orientation="vertical">
 
             <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="추천메뉴"
+                android:textSize="18sp" />
+
+            <Button
                 android:id="@+id/burger_Btn"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
                 android:onClick="goto_Kiosk_R_F_M_B"
                 android:text="@string/birger"
                 android:textSize="18sp" />
 
             <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="해피스낵"
+                android:textSize="18sp" />
+
+            <Button
                 android:id="@+id/side_Btn"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
                 android:enabled="false"
                 android:text="@string/side"
                 android:textSize="18sp" />
 
             <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="커피"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="디저트"
+                android:textSize="18sp" />
+
+            <Button
                 android:id="@+id/drink_Btn"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
                 android:onClick="goto_Kiosk_R_F_M_D"
                 android:text="@string/drink"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="해피밀"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -57,7 +112,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="3"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -584,7 +639,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <TextView
@@ -624,7 +679,7 @@
 
         <Button
             android:id="@+id/home_Btn"
-            android:layout_width="160dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="goto_Kiosk_R_F_M"
             android:text="@string/home"

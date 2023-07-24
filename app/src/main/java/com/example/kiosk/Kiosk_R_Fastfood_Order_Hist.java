@@ -64,9 +64,6 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             linearLayout.setGravity(Gravity.CENTER);
             linearLayout.setPadding(2, 2, 2, 2);  // 마진 적용
 
-            // 스타일 적용
-            linearLayout.setBackgroundResource(R.drawable.table_border);
-
             // 삭제 버튼
             Button deleteButton = new Button(this);
             deleteButton.setLayoutParams(new LinearLayout.LayoutParams(

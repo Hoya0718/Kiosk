@@ -18,14 +18,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="임무 : "
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/showMission"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/mcchi" />
+            app:srcCompat="@drawable/mc" />
 
         <TextView
             android:id="@+id/burger_text"
@@ -47,8 +47,9 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:layout_marginLeft="5dp"
+            android:textStyle="bold"
             android:text="@string/big_mc"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -70,7 +71,7 @@
             android:layout_marginLeft="5dp"
             android:textStyle="bold"
             android:text="세트메뉴 음료를 선택해세요"
-            android:textSize="20sp" />
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -100,6 +101,7 @@
                     android:id="@+id/burger_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/big_mc" />
 
             </LinearLayout>
@@ -119,6 +121,7 @@
                     android:id="@+id/side_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/french_fries" />
             </LinearLayout>
 
@@ -136,6 +139,7 @@
                     android:id="@+id/cho_dri_text_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/choose_drink" />
             </LinearLayout>
 
@@ -153,6 +157,7 @@
                     android:id="@+id/che_ord_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/check_order" />
 
             </LinearLayout>
@@ -201,6 +206,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="@string/chistr" />
 
                     <TextView
@@ -211,6 +217,7 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="₩2,000" />
                 </LinearLayout>
 
@@ -242,6 +249,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="@string/chijadu" />
 
                     <TextView
@@ -252,6 +260,7 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="₩2,000" />
                 </LinearLayout>
 
@@ -283,6 +292,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="@string/drinkoran" />
 
                     <TextView
@@ -293,6 +303,7 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="₩1,600" />
                 </LinearLayout>
             </LinearLayout>
@@ -331,6 +342,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/shakestr"
                         android:gravity="center"/>
 
@@ -339,6 +351,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:textSize="18sp"
                         android:text="₩2,800"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -370,6 +383,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/shakecho"
                         android:gravity="center"/>
 
@@ -378,6 +392,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:textSize="18sp"
                         android:text="₩2,800"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -409,6 +424,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/shakeba"
                         android:gravity="center"/>
 
@@ -417,6 +433,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:textSize="18sp"
                         android:text="₩2,800"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -456,6 +473,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/drinkcoca"
                         android:gravity="center"/>
 
@@ -466,6 +484,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,700"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -497,6 +516,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/drinkcoze"
                         android:gravity="center"/>
 
@@ -507,6 +527,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,700"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -538,6 +559,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/drinkspri"
                         android:gravity="center"/>
 
@@ -548,6 +570,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,700"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -587,6 +610,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/drinkhwan"
                         android:gravity="center"/>
 
@@ -597,6 +621,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,700"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -628,6 +653,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/milk"
                         android:gravity="center"/>
 
@@ -638,6 +664,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,600"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -669,6 +696,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/water"
                         android:gravity="center"/>
 
@@ -679,6 +707,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,300"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -696,9 +725,14 @@
             android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_P_Sd"
             android:text="@string/cancle"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
 </LinearLayout>

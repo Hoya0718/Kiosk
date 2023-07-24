@@ -18,14 +18,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="임무 : "
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/showMission"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/mcchi" />
+            app:srcCompat="@drawable/mc" />
 
         <TextView
             android:id="@+id/burger_text"
@@ -47,8 +47,9 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:layout_marginLeft="5dp"
+            android:textStyle="bold"
             android:text="@string/big_mc"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,6 +87,7 @@
                     android:id="@+id/che_ord_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/check_order" />
 
             </LinearLayout>
@@ -109,24 +111,27 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:gravity="bottom|center_horizontal"
                     android:onClick="goto_Kiosk_R_F_P_Sd"
                     android:text="@string/set_menu"
-                    android:textSize="18sp" />
+                    android:textSize="30sp" />
 
                 <Button
                     android:id="@+id/lar_Btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:gravity="bottom|center_horizontal"
                     android:onClick="goto_Kiosk_R_F_P_Sd"
                     android:text="@string/large_menu"
-                    android:textSize="18sp" />
+                    android:textSize="30sp" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_weight="1" >
 
                 </LinearLayout>
 
@@ -170,9 +175,14 @@
             android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_P_St"
             android:text="@string/cancle"
-            android:textSize="18sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
 </LinearLayout>

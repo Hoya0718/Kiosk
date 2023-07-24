@@ -18,14 +18,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="임무 : "
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/showMission"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -155,7 +155,7 @@
 
             android:gravity="right|center_vertical"
             android:text="@string/total"
-            android:textSize="18sp" />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/textView59"
@@ -164,7 +164,7 @@
             android:layout_weight="0.2"
             android:gravity="right|center_vertical"
             android:text="₩ "
-            android:textSize="18sp" />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/value_text"
@@ -173,7 +173,7 @@
             android:layout_weight="0.8"
             android:gravity="left|center_vertical"
             android:text="6,500"
-            android:textSize="18sp" />
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -187,33 +187,73 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_M_B"
             android:text="@string/add_order"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/com_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:onClick="goto_Kiosk_R_F_P_M"
             android:text="@string/complete_order"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:layout_weight="0.25">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/home_Btn"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_M"
             android:text="@string/home"
-            android:textSize="18sp" />
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25">
 
     </LinearLayout>
 

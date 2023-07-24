@@ -26,7 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/mcchi" />
+            app:srcCompat="@drawable/mc" />
 
         <TextView
             android:id="@+id/burger_text"
@@ -35,8 +35,9 @@
             android:layout_weight="3"
             android:gravity="center_vertical"
             android:layout_marginLeft="5dp"
+            android:textStyle="bold"
             android:text="@string/drink"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,59 +54,219 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <Button
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="추천메뉴"
-                android:textSize="18sp" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/table_border"
+                android:orientation="horizontal">
 
-            <Button
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/mc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="추천메뉴"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/burger_Btn"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
                 android:onClick="goto_Kiosk_R_F_M_B"
-                android:text="@string/birger"
-                android:textSize="18sp" />
+                android:background="@drawable/table_border"
+                android:orientation="horizontal">
 
-            <Button
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/mc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="@string/birger"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="해피스낵"
-                android:textSize="18sp" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/table_border"
+                android:orientation="horizontal">
 
-            <Button
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/mc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="해피스낵"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/side_Btn"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
                 android:onClick="goto_Kiosk_R_F_M_S"
-                android:text="@string/side"
-                android:textSize="18sp" />
+                android:background="@drawable/table_border"
+                android:orientation="horizontal">
 
-            <Button
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/mc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="@string/side"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="커피"
-                android:textSize="18sp" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/table_border"
+                android:orientation="horizontal">
 
-            <Button
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/mc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="커피"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="디저트"
-                android:textSize="18sp" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/table_border"
+                android:orientation="horizontal">
 
-            <Button
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/mc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="디저트"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/drink_Btn"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:enabled="false"
-                android:text="@string/drink"
-                android:textSize="18sp" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/table_border"
+                android:backgroundTint="#D3D3D3"
+                android:orientation="horizontal">
 
-            <Button
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/mc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="@string/drink"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="해피밀"
-                android:textSize="18sp" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/table_border"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/mc" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="해피밀"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4.7">
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -151,6 +312,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="@string/chistr" />
 
                     <TextView
@@ -161,6 +323,7 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="₩2,000" />
                 </LinearLayout>
 
@@ -192,6 +355,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="@string/chijadu" />
 
                     <TextView
@@ -202,6 +366,7 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="₩2,000" />
                 </LinearLayout>
 
@@ -233,6 +398,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="@string/drinkoran" />
 
                     <TextView
@@ -243,6 +409,7 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:textSize="18sp"
                         android:text="₩1,600" />
                 </LinearLayout>
             </LinearLayout>
@@ -282,6 +449,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:text="@string/shakestr"
+                        android:textSize="18sp"
                         android:gravity="center"/>
 
                     <TextView
@@ -290,6 +458,7 @@
                         android:layout_weight="1"
                         android:layout_margin="5dp"
                         android:text="₩2,800"
+                        android:textSize="18sp"
                         android:gravity="center"/>
                 </LinearLayout>
 
@@ -321,6 +490,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:text="@string/shakecho"
+                        android:textSize="18sp"
                         android:gravity="center"/>
 
                     <TextView
@@ -329,6 +499,7 @@
                         android:layout_weight="1"
                         android:layout_margin="5dp"
                         android:text="₩2,800"
+                        android:textSize="18sp"
                         android:gravity="center"/>
                 </LinearLayout>
 
@@ -359,6 +530,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/shakeba"
                         android:gravity="center"/>
 
@@ -367,6 +539,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:layout_margin="5dp"
+                        android:textSize="18sp"
                         android:text="₩2,800"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -406,6 +579,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/drinkcoca"
                         android:gravity="center"/>
 
@@ -416,6 +590,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,700"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -447,6 +622,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/drinkcoze"
                         android:gravity="center"/>
 
@@ -457,6 +633,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,700"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -488,6 +665,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/drinkspri"
                         android:gravity="center"/>
 
@@ -498,6 +676,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,700"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -537,6 +716,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/drinkhwan"
                         android:gravity="center"/>
 
@@ -547,6 +727,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,700"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -578,6 +759,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/milk"
                         android:gravity="center"/>
 
@@ -588,6 +770,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,600"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -619,6 +802,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:textSize="18sp"
                         android:text="@string/water"
                         android:gravity="center"/>
 
@@ -629,6 +813,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
                         android:text="₩1,300"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -649,7 +834,7 @@
             android:layout_weight="1"
             android:gravity="right|center_vertical"
             android:text="₩ "
-            android:textSize="18sp" />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/money_text"
@@ -658,7 +843,7 @@
             android:layout_weight="1"
             android:gravity="left|center_vertical"
             android:text="0"
-            android:textSize="18sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/ord_his_Btn"
@@ -667,23 +852,54 @@
             android:layout_weight="2"
             android:onClick="goto_Kiosk_R_F_P_R"
             android:text="@string/order_history"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:layout_weight="0.25">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/home_Btn"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_M"
             android:text="@string/home"
-            android:textSize="18sp" />
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25">
 
     </LinearLayout>
 

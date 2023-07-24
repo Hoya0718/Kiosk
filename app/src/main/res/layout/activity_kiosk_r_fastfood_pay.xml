@@ -7,33 +7,74 @@
     android:orientation="vertical"
     tools:context=".Kiosk_R_Fastfood_Pay">
 
-    <TextView
-        android:id="@+id/card_ex_text"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        android:layout_weight="2"
         android:gravity="center"
-        android:text="그림과 같이 카드를 접촉해주세요."
-        android:textSize="50sp" />
+        android:layout_weight="1" >
 
-    <ImageView
-        android:id="@+id/liquidate"
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
-        app:srcCompat="@drawable/kiosk_pay_img" />
+        android:gravity="center"
+        android:layout_weight="1" >
 
-    <Button
-        android:id="@+id/cancel_Btn"
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mc" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="50dp"
-        android:layout_weight="2"
-        android:onClick="goto_Kiosk_R_F_P_M"
-        android:text="@string/pay_cancle"
-        android:textSize="18sp" />
+        android:gravity="center"
+        android:layout_weight="2" >
+
+        <TextView
+            android:id="@+id/card_ex_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="아래 결제 단말기에서 결제를\n진행해 주세요"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="6" >
+
+        <ImageView
+            android:id="@+id/liquidate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="goto_Kiosk_R_F_C"
+            app:srcCompat="@drawable/kiosk_pay_img" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1" >
+
+    </LinearLayout>
+
 </LinearLayout>

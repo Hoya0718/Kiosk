@@ -18,14 +18,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="임무 : "
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/showMission"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/mcchi" />
+            app:srcCompat="@drawable/mc" />
 
         <TextView
             android:id="@+id/burger_text"
@@ -47,8 +47,9 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:layout_marginLeft="5dp"
+            android:textStyle="bold"
             android:text="@string/big_mc"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,8 +63,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:textStyle="bold"
             android:text="@string/order_to_set"
-            android:textSize="30sp" />
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -79,9 +81,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
             android:onClick="goto_Kiosk_R_F_P_Sz"
             android:text="@string/set_menu"
-            android:textSize="18sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/sig_Btn"
@@ -90,9 +93,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
             android:onClick="goto_Kiosk_R_F_M_Bp"
             android:text="@string/single_item"
-            android:textSize="18sp" />
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -115,9 +119,10 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_M_B"
             android:text="@string/cancle"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -135,13 +140,6 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="goto_Back"
-            android:text="@string/home"
-            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>

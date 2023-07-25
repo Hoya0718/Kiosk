@@ -87,7 +87,7 @@
         android:layout_height="100dp"
         android:background="@drawable/hospital_txt_gray_t"
         android:gravity="right|center_vertical"
-        android:text="151,600"
+        android:text="0"
         android:textColor="#4169E1"
         android:textSize="40sp"
         app:layout_constraintStart_toEndOf="@+id/textView77"

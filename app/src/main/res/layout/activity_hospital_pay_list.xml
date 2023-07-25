@@ -217,7 +217,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button9" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/credit_one"
         android:layout_width="130dp"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
@@ -239,7 +239,7 @@
         android:text="신용카드\n할부"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/button16"
+        app:layout_constraintStart_toEndOf="@+id/credit_one"
         app:layout_constraintTop_toBottomOf="@+id/textView55" />
 
     <Button
@@ -290,7 +290,7 @@
         android:layout_height="50dp"
         android:background="@drawable/hospital_txt_gray_b"
         android:gravity="center"
-        android:text="156,100원"
+        android:text="무료"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView56"
         app:layout_constraintTop_toBottomOf="@+id/textView45" />
@@ -371,7 +371,7 @@
         android:layout_height="70dp"
         android:background="@drawable/hospital_txt_gray_tb"
         android:gravity="right|center_vertical"
-        android:text="156,100"
+        android:text="0"
         android:textColor="#4169E1"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/textView55"

@@ -42,7 +42,6 @@
             app:srcCompat="@drawable/mc" />
 
         <TextView
-            android:id="@+id/burger_text"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -223,6 +222,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/fastfood_btn_background_yellow"
             android:onClick="goto_Kiosk_R_F_P_M"
             android:text="@string/complete_order"
             android:textSize="30sp" />

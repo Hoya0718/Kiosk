@@ -58,7 +58,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             LinearLayout linearLayout = new LinearLayout(this);
             linearLayout.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.MATCH_PARENT
+                    LinearLayout.LayoutParams.WRAP_CONTENT
             ));
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
             linearLayout.setGravity(Gravity.CENTER);
@@ -73,7 +73,8 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             ));
             deleteButton.setGravity(Gravity.CENTER);
             deleteButton.setText(getResources().getString(R.string.delete));
-            deleteButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 10);
+            deleteButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25);
+            deleteButton.setBackgroundResource(R.drawable.fastfood_btn_background_yellow); // This line sets the background
 
             // 삭제 버튼 기능
             deleteButton.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +111,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             ));
             textView.setGravity(Gravity.CENTER);
             textView.setText(orderList.get(i).getOrderName());
-            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
 
             // 카운트 레이아웃
             LinearLayout subLinearLayout = new LinearLayout(this);
@@ -130,7 +131,8 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                     1.5f
             ));
             minusButton.setText("-");
-            minusButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 10);
+            minusButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25);
+            minusButton.setBackgroundResource(R.drawable.table_border); // This line sets the background
 
             // 메뉴 개수
             TextView countTextView = new TextView(this);
@@ -141,7 +143,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             ));
             countTextView.setGravity(Gravity.CENTER);
             countTextView.setText(String.valueOf(orderList.get(i).getOrderCount()));
-            countTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            countTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
 
             // "+" 버튼
             Button plusButton = new Button(this);
@@ -151,7 +153,8 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
                     1.5f
             ));
             plusButton.setText("+");
-            plusButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 10);
+            plusButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25);
+            plusButton.setBackgroundResource(R.drawable.table_border); // This line sets the background
 
             // "₩" TextView 생성
             TextView wonTextView = new TextView(this);
@@ -162,7 +165,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             ));
             wonTextView.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
             wonTextView.setText("₩");
-            wonTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            wonTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
 
             // 메뉴 가격
             TextView priceTextView = new TextView(this);
@@ -173,7 +176,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             ));
             priceTextView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
             priceTextView.setText(String.valueOf(orderList.get(i).getOrderPrice() * orderList.get(i).getOrderCount()));
-            priceTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            priceTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
 
             // "-" 버튼 클릭 이벤트 처리
             minusButton.setOnClickListener(new View.OnClickListener() {

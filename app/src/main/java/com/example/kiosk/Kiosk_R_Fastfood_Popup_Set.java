@@ -26,6 +26,8 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
 
     private TextView showMission;
 
+    private TextView burger_text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,8 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
         showMission = findViewById(R.id.showMission);
         showMission.setText(myApp.getCheckFastfoodMission());
 
+        burger_text = findViewById(R.id.burger_text);
+
         Intent intent = getIntent();
         if (intent != null) {
             value = intent.getIntExtra("value", 0);
@@ -42,6 +46,10 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
             burger = intent.getIntExtra("burger", 0);
             burgerName = intent.getStringExtra("burgerName");
             burgerArray = intent.getByteArrayExtra("burgerImage");
+
+            if (burgerName != null) {
+                burger_text.setText(burgerName);
+            }
         }
     }
 
@@ -80,5 +88,10 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
 
     public void onBackPressed() {
         // 뒤로가기 버튼 무시
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
+        burgerBitmap = null;
     }
 }

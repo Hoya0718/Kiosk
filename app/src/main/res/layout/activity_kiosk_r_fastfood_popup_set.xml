@@ -41,6 +41,7 @@
             app:srcCompat="@drawable/mc" />
 
         <TextView
+            android:id="@+id/burger_text"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"

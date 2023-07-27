@@ -32,6 +32,28 @@
         android:theme="@style/Theme.Kiosk"
         tools:targetApi="31">
         <activity
+            android:name=".KioskMain"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".KioskUser"
+            android:exported="false" />
+        <activity
+            android:name=".KioskJoin"
+            android:exported="false" />
+        <activity
             android:name=".Hospital_Medical_Record"
             android:exported="false" />
         <activity
@@ -292,20 +314,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -98,7 +98,7 @@ public class Hospital_Pay_List extends AppCompatActivity {
                             //tts
                             if (!tts.isSpeaking()) {
                                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("수납 처방전은 여기에있어요 눌러보세요.");
+                                    speakText("신용카드 결제는 여기에있어요 눌러보세요.");
                                 else
                                     speakText("The storage prescription is here, tap it.");
                                 Log.d("test", "isSpeaking true");

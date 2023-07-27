@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66BBFF"
+    tools:context=".TO_SSN2">
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="주민등록번호(등본)"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="720dp"
+        android:layout_height="800dp"
+        android:layout_marginTop="100dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+    <TextView
+        android:id="@+id/textView84"
+        android:layout_width="720dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="주민등록번호를 입력해 주십시오."
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/textView85"
+        android:layout_width="720dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/textView84"
+        app:layout_constraintTop_toBottomOf="@+id/textView84" />
+
+    <Button
+        android:id="@+id/button41"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/textView85"
+        app:layout_constraintTop_toBottomOf="@+id/textView85" />
+
+    <Button
+        android:id="@+id/button42"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="2"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/button41"
+        app:layout_constraintTop_toTopOf="@+id/button41" />
+
+    <Button
+        android:id="@+id/button64"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="3"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/button42"
+        app:layout_constraintTop_toTopOf="@+id/button42" />
+
+    <Button
+        android:id="@+id/button65"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="4"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button41"
+        app:layout_constraintTop_toBottomOf="@+id/button41" />
+
+    <Button
+        android:id="@+id/button66"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="5"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button42"
+        app:layout_constraintTop_toTopOf="@+id/button65" />
+
+    <Button
+        android:id="@+id/button67"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="6"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button64"
+        app:layout_constraintTop_toTopOf="@+id/button66" />
+
+    <Button
+        android:id="@+id/button68"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="7"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button65"
+        app:layout_constraintTop_toBottomOf="@+id/button65" />
+
+    <Button
+        android:id="@+id/button69"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="8"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button66"
+        app:layout_constraintTop_toTopOf="@+id/button68" />
+
+    <Button
+        android:id="@+id/button70"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="9"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button67"
+        app:layout_constraintTop_toTopOf="@+id/button69" />
+
+    <Button
+        android:id="@+id/button71"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="정정"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button68"
+        app:layout_constraintTop_toBottomOf="@+id/button68" />
+
+    <Button
+        android:id="@+id/button72"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button69"
+        app:layout_constraintTop_toTopOf="@+id/button71" />
+
+    <Button
+        android:id="@+id/button73"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="삭제"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/button70"
+        app:layout_constraintTop_toTopOf="@+id/button72" />
+
+    <Button
+        android:id="@+id/button74"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:text="처음화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/button75" />
+
+    <Button
+        android:id="@+id/button75"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:text="이전화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/button74"
+        app:layout_constraintTop_toTopOf="@+id/button76" />
+
+    <Button
+        android:id="@+id/button76"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goto_II"
+        android:text="확인"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

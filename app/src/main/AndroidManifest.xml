@@ -54,6 +54,36 @@
             android:name=".KioskJoin"
             android:exported="false" />
         <activity
+            android:name=".TO_Card_Insert"
+            android:exported="false" />
+        <activity
+            android:name=".TO_Pay"
+            android:exported="false" />
+        <activity
+            android:name=".TO_Pay_list"
+            android:exported="false" />
+        <activity
+            android:name=".TO_Get_Num"
+            android:exported="false" />
+        <activity
+            android:name=".TO_Is_fee_examption"
+            android:exported="false" />
+        <activity
+            android:name=".TO_ADD"
+            android:exported="false" />
+        <activity
+            android:name=".TO_Issuance_info"
+            android:exported="false" />
+        <activity
+            android:name=".TO_SSN2"
+            android:exported="false" />
+        <activity
+            android:name=".TO_SSN"
+            android:exported="false" />
+        <activity
+            android:name=".Town_Office"
+            android:exported="false" />
+        <activity
             android:name=".Hospital_Medical_Record"
             android:exported="false" />
         <activity

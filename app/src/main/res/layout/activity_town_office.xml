@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66BBFF"
+    tools:context=".Town_Office">
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="발급서비스"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="720dp"
+        android:layout_height="800dp"
+        android:layout_marginTop="100dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <Button
+        android:id="@+id/ssn_btn"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="goto_SSN"
+        android:text="주민등록"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="지적, 토지, 건축"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/ssn_btn"
+        app:layout_constraintTop_toTopOf="@+id/ssn_btn" />
+
+    <Button
+        android:id="@+id/button26"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="차량"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/button16"
+        app:layout_constraintTop_toTopOf="@+id/ssn_btn" />
+
+    <Button
+        android:id="@+id/button27"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="보건복지"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/ssn_btn"
+        app:layout_constraintTop_toBottomOf="@+id/ssn_btn" />
+
+    <Button
+        android:id="@+id/button28"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="농지대장, 농업경영체"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button16"
+        app:layout_constraintTop_toTopOf="@+id/button27" />
+
+    <Button
+        android:id="@+id/button29"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="가족관계등록부"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button26"
+        app:layout_constraintTop_toTopOf="@+id/button28" />
+
+    <Button
+        android:id="@+id/button30"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="제적부"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button27"
+        app:layout_constraintTop_toBottomOf="@+id/button27" />
+
+    <Button
+        android:id="@+id/button31"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="국민연금"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button28"
+        app:layout_constraintTop_toTopOf="@+id/button30" />
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:text="지방세"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button29"
+        app:layout_constraintTop_toTopOf="@+id/button31" />
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:background="#4169E1"
+        android:text="문서 찾기"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <Button
+        android:id="@+id/zoom_in"
+        android:layout_width="260dp"
+        android:layout_height="110dp"
+        android:background="#BFA8CD"
+        android:text="화면 확대(저시력인용)"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/button31"
+        app:layout_constraintTop_toTopOf="@+id/button33" />
+
+    <Button
+        android:id="@+id/button39"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FFDAA2"
+        android:text="서비스\n시간"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/button40"
+        app:layout_constraintTop_toTopOf="@+id/zoom_in" />
+
+    <Button
+        android:id="@+id/button40"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:background="#49AC38"
+        android:text="설치장소"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/button39" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

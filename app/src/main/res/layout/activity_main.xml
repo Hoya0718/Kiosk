@@ -111,7 +111,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="a"
-                android:text="Button" />
+                android:text="새로운 병원" />
+
+            <Button
+                android:id="@+id/button102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goto_to_Main"
+                android:text="동사무소" />
         </LinearLayout>
 
     </LinearLayout>

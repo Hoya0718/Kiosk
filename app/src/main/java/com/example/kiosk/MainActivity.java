@@ -200,6 +200,11 @@ public class MainActivity extends AppCompatActivity {
         Intent a = new Intent(getApplicationContext(),Hospital_Main.class);
         startActivity(a);
     }
+    public void goto_to_Main(View v){
+        tts.shutdown();
+        Intent goto_to_Main = new Intent(getApplicationContext(), Town_Office.class);
+        startActivity(goto_to_Main);
+    }
     public void change_to_korean(View v) {
 
         tts.shutdown();

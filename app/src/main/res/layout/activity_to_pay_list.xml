@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#66BBFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TO_Pay_list">
+
+    <TextView
+        android:id="@+id/textView131"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="주민등록번호(등본)"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="720dp"
+        android:layout_height="800dp"
+        android:layout_marginTop="72dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView131" />
+
+    <TextView
+        android:id="@+id/textView132"
+        android:layout_width="720dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:text="민원 신청 내용을 확인해주세요"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/view8" />
+
+    <TextView
+        android:id="@+id/textView133"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="신청증명서"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/view8"
+        app:layout_constraintTop_toBottomOf="@+id/textView132" />
+
+    <TextView
+        android:id="@+id/textView134"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="신  청  인"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/textView133"
+        app:layout_constraintTop_toBottomOf="@+id/textView133" />
+
+    <TextView
+        android:id="@+id/textView135"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="신 청 부 수"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/textView134"
+        app:layout_constraintTop_toBottomOf="@+id/textView134" />
+
+    <TextView
+        android:id="@+id/textView136"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="1부당 수수료"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/textView135"
+        app:layout_constraintTop_toBottomOf="@+id/textView135" />
+
+    <TextView
+        android:id="@+id/textView137"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="합계"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/textView136"
+        app:layout_constraintTop_toBottomOf="@+id/textView136" />
+
+    <Button
+        android:id="@+id/button98"
+        android:layout_width="230dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="goto_pay"
+        android:text="카드결제"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view8"
+        app:layout_constraintStart_toStartOf="@+id/textView137" />
+
+    <Button
+        android:id="@+id/button101"
+        android:layout_width="230dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="40dp"
+        android:text="현금결제"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/button98"
+        app:layout_constraintTop_toTopOf="@+id/button98" />
+
+    <Button
+        android:id="@+id/button107"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:text="처음화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view8"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <Button
+        android:id="@+id/button108"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:text="이전화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/button107"
+        app:layout_constraintTop_toTopOf="@+id/button107" />
+
+    <TextView
+        android:id="@+id/textView145"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="주민등록표(등본)"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textView133"
+        app:layout_constraintTop_toTopOf="@+id/textView133" />
+
+    <TextView
+        android:id="@+id/textView146"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="홍길동"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textView134"
+        app:layout_constraintTop_toTopOf="@+id/textView134" />
+
+    <TextView
+        android:id="@+id/textView147"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="부"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/textView148"
+        app:layout_constraintTop_toTopOf="@+id/textView148" />
+
+    <TextView
+        android:id="@+id/textView148"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textView135"
+        app:layout_constraintTop_toTopOf="@+id/textView135" />
+
+    <TextView
+        android:id="@+id/textView149"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="200"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textView136"
+        app:layout_constraintTop_toTopOf="@+id/textView136" />
+
+    <TextView
+        android:id="@+id/textView151"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="200"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textView137"
+        app:layout_constraintTop_toTopOf="@+id/textView137" />
+
+    <TextView
+        android:id="@+id/textView152"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="원"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/textView151"
+        app:layout_constraintTop_toTopOf="@+id/textView151" />
+
+    <TextView
+        android:id="@+id/textView150"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="원"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/textView149"
+        app:layout_constraintTop_toTopOf="@+id/textView149" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,8 +22,8 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
 
     private TextView burger_text;
 
-    private Button set_Btn;
-    private Button lar_Btn;
+    private TextView set_text;
+    private TextView lar_text;
 
     private TextView showMission;
 
@@ -38,8 +38,8 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
 
         burger_text = findViewById(R.id.burger_text);
 
-        set_Btn = findViewById(R.id.set_Btn);
-        lar_Btn = findViewById(R.id.lar_Btn);
+        set_text = findViewById(R.id.set_text);
+        lar_text = findViewById(R.id.lar_text);
 
         Intent intent = getIntent();
         if (intent != null) {
@@ -62,12 +62,12 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
         switch (view.getId()) {
 
             case R.id.set_Btn:
-                burgerName += " - " + set_Btn.getText().toString();
+                burgerName += " - " + set_text.getText().toString();
                 break;
 
             case R.id.lar_Btn:
                 burger+=700;
-                burgerName += " - " + lar_Btn.getText().toString();
+                burgerName += " - " + lar_text.getText().toString();
                 break;
 
         }

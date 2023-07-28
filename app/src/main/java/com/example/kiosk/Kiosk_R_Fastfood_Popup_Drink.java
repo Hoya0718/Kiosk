@@ -30,6 +30,7 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
     private byte[] sideArray;
 
     private TextView burger_text;
+    private TextView burger_txt;
     private TextView side_text;
 
     private TextView chistr_text;
@@ -68,6 +69,7 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_drink);
 
         burger_text = findViewById(R.id.burger_text);
+        burger_txt = findViewById(R.id.burger_txt);
         side_text = findViewById(R.id.side_text);
 
         chistr_text = findViewById(R.id.chistr_text);
@@ -114,6 +116,7 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
 
             if (burgerName != null) {
                 burger_text.setText(burgerName);
+                burger_txt.setText(burgerName);
             }
             if (sideName != null) {
                 side_text.setText(sideName);

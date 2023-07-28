@@ -27,32 +27,15 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
     private byte[] burgerArray;
 
     private TextView burger_text;
+    private TextView burger_txt;
 
-    private TextView snacksan_text;
-    private TextView snackshu_text;
-    private TextView mcnurget_text;
     private TextView huri_text;
-    private TextView hashbra_text;
-    private TextView chickentender_text;
     private TextView chezstick_text;
     private TextView cuol_text;
-    private TextView churu_text;
-    private TextView icesu_text;
-    private TextView iceco_text;
-    private TextView iceba_text;
 
-    private ImageView snacksan_img;
-    private ImageView snackshu_img;
-    private ImageView mcnurget_img;
     private ImageView huri_img;
-    private ImageView hashbra_img;
-    private ImageView chickentender_img;
     private ImageView chezstick_img;
     private ImageView cuol_img;
-    private ImageView churu_img;
-    private ImageView icesu_img;
-    private ImageView iceco_img;
-    private ImageView iceba_img;
 
     private Bitmap sideBitmap;
 
@@ -64,32 +47,15 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_side);
 
         burger_text = findViewById(R.id.burger_text);
+        burger_txt = findViewById(R.id.burger_txt);
 
-        snacksan_text = findViewById(R.id.snacksan_text);
-        snackshu_text = findViewById(R.id.snackshu_text);
-        mcnurget_text = findViewById(R.id.mcnurget_text);
         huri_text = findViewById(R.id.huri_text);
-        hashbra_text = findViewById(R.id.hashbra_text);
-        chickentender_text = findViewById(R.id.chickentender_text);
         chezstick_text = findViewById(R.id.chezstick_text);
         cuol_text = findViewById(R.id.cuol_text);
-        churu_text = findViewById(R.id.churu_text);
-        icesu_text = findViewById(R.id.icesu_text);
-        iceco_text = findViewById(R.id.iceco_text);
-        iceba_text = findViewById(R.id.iceba_text);
 
-        snacksan_img = findViewById(R.id.snacksan_img);
-        snackshu_img = findViewById(R.id.snackshu_img);
-        mcnurget_img = findViewById(R.id.mcnurget_img);
         huri_img = findViewById(R.id.huri_img);
-        hashbra_img = findViewById(R.id.hashbra_img);
-        chickentender_img = findViewById(R.id.chickentender_img);
         chezstick_img = findViewById(R.id.chezstick_img);
         cuol_img = findViewById(R.id.cuol_img);
-        churu_img = findViewById(R.id.churu_img);
-        icesu_img = findViewById(R.id.icesu_img);
-        iceco_img = findViewById(R.id.iceco_img);
-        iceba_img = findViewById(R.id.iceba_img);
 
         myapp myApp = (myapp) getApplicationContext();
         showMission = findViewById(R.id.showMission);
@@ -105,6 +71,7 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
 
             if (burgerName != null) {
                 burger_text.setText(burgerName);
+                burger_txt.setText(burgerName);
             }
         }
 
@@ -121,40 +88,10 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
 
         switch (view.getId()) {
 
-            case R.id.snacksan_lay:
-                side+=3000;
-                sideName = snacksan_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)snacksan_img.getDrawable()).getBitmap();
-                break;
-
-            case R.id.snackshu_lay:
-                side+=2300;
-                sideName = snackshu_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)snackshu_img.getDrawable()).getBitmap();
-                break;
-
-            case R.id.mcnurget_lay:
-                side+=2900;
-                sideName = mcnurget_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)mcnurget_img.getDrawable()).getBitmap();
-                break;
-
             case R.id.huri_lay:
                 side+=2000;
                 sideName = huri_text.getText().toString();
                 sideBitmap = ((BitmapDrawable)huri_img.getDrawable()).getBitmap();
-                break;
-
-            case R.id.hashbra_lay:
-                side+=1300;
-                sideName = hashbra_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)hashbra_img.getDrawable()).getBitmap();
-                break;
-
-            case R.id.chickentender_lay:
-                side+=1200;
-                sideName = chickentender_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)chickentender_img.getDrawable()).getBitmap();
                 break;
 
             case R.id.chezstick_lay:
@@ -167,30 +104,6 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
                 side+=1900;
                 sideName = cuol_text.getText().toString();
                 sideBitmap = ((BitmapDrawable)cuol_img.getDrawable()).getBitmap();
-                break;
-
-            case R.id.churu_lay:
-                side+=1000;
-                sideName = churu_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)churu_img.getDrawable()).getBitmap();
-                break;
-
-            case R.id.icesu_lay:
-                side+=2100;
-                sideName = icesu_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)icesu_img.getDrawable()).getBitmap();
-                break;
-
-            case R.id.iceco_lay:
-                side+=2100;
-                sideName = iceco_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)iceco_img.getDrawable()).getBitmap();
-                break;
-
-            case R.id.iceba_lay:
-                side+=1600;
-                sideName = iceba_text.getText().toString();
-                sideBitmap = ((BitmapDrawable)iceba_img.getDrawable()).getBitmap();
                 break;
 
         }
@@ -213,7 +126,7 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         Intent goto_Kiosk_R_F_P_Sz = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Size.class);
         goto_Kiosk_R_F_P_Sz.putExtra("value", value);
 
-        burgerName = burgerName.replaceAll("\\s-\\s(라지\\s)?세트", "");
+        burgerName = burgerName.replaceAll("\\s-\\s(라지\\s)?(세트|Set)", "");
 
         goto_Kiosk_R_F_P_Sz.putExtra("burger", burger);
         goto_Kiosk_R_F_P_Sz.putExtra("burgerName", burgerName);

@@ -89,9 +89,4 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
     public void onBackPressed() {
         // 뒤로가기 버튼 무시
     }
-
-    public void onDestroy() {
-        super.onDestroy();
-        burgerBitmap = null;
-    }
 }

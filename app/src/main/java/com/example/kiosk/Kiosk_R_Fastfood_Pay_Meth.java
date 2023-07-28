@@ -33,10 +33,10 @@ public class Kiosk_R_Fastfood_Pay_Meth extends AppCompatActivity {
         startActivity(goto_Kiosk_R_F_O_H);
     }
 
-    public void goto_Kiosk_F_R_P(View v){
-        Intent goto_Kiosk_F_R_P = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Pay.class);
-        goto_Kiosk_F_R_P.putExtra("value", value);
-        startActivity(goto_Kiosk_F_R_P);
+    public void goto_Kiosk_R_F_P(View v){
+        Intent goto_Kiosk_R_F_P = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Pay.class);
+        goto_Kiosk_R_F_P.putExtra("value", value);
+        startActivity(goto_Kiosk_R_F_P);
     }
 
     public void onBackPressed() {

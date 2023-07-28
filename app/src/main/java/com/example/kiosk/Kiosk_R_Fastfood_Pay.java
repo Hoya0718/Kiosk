@@ -56,68 +56,68 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
             value = intent.getIntExtra("value", 0);
         }
 
-        //블루투스 추가 코드는 여기서 부터
-
-
-        String[] permission_list;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            permission_list = new String[]{
-                    android.Manifest.permission.ACCESS_FINE_LOCATION,
-                    android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                    android.Manifest.permission.BLUETOOTH_SCAN,
-                    android.Manifest.permission.BLUETOOTH_ADMIN,
-                    android.Manifest.permission.BLUETOOTH_ADVERTISE,
-                    android.Manifest.permission.BLUETOOTH_CONNECT,
-            };
-        } else {
-            permission_list = new String[]{
-                    android.Manifest.permission.ACCESS_FINE_LOCATION,
-                    android.Manifest.permission.ACCESS_COARSE_LOCATION
-            };
-        }
-
-        ActivityCompat.requestPermissions(Kiosk_R_Fastfood_Pay.this, permission_list, 1); // 각자의 클래스명 지정해야합니다.
-
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
-        // BluetoothAdapter 초기화
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (bluetoothAdapter == null) {
-            // 디바이스가 블루투스를 지원하지 않는 경우 처리
-            return;
-        }
-
-        // 아두이노 디바이스 생성
-        arduinoDevice = bluetoothAdapter.getRemoteDevice(ARDUINO_MAC_ADDRESS);
-
-        // BluetoothSocket을 통한 연결 수립
-        try {
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            socket = arduinoDevice.createRfcommSocketToServiceRecord(MY_UUID);
-            socket.connect();
-
-            // InputStream과 OutputStream 설정
-            inputStream = socket.getInputStream();
-            outputStream = socket.getOutputStream();
-
-            // 아두이노로부터 데이터 읽기 예시
-            readDataFromArduino();
-
-        } catch (IOException e) {
-            // 연결 실패 처리
-            e.printStackTrace();
-        }
-
-        //여기까지
+//        //블루투스 추가 코드는 여기서 부터
+//
+//
+//        String[] permission_list;
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+//            permission_list = new String[]{
+//                    android.Manifest.permission.ACCESS_FINE_LOCATION,
+//                    android.Manifest.permission.ACCESS_COARSE_LOCATION,
+//                    android.Manifest.permission.BLUETOOTH_SCAN,
+//                    android.Manifest.permission.BLUETOOTH_ADMIN,
+//                    android.Manifest.permission.BLUETOOTH_ADVERTISE,
+//                    android.Manifest.permission.BLUETOOTH_CONNECT,
+//            };
+//        } else {
+//            permission_list = new String[]{
+//                    android.Manifest.permission.ACCESS_FINE_LOCATION,
+//                    android.Manifest.permission.ACCESS_COARSE_LOCATION
+//            };
+//        }
+//
+//        ActivityCompat.requestPermissions(Kiosk_R_Fastfood_Pay.this, permission_list, 1); // 각자의 클래스명 지정해야합니다.
+//
+//        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+//
+//        // BluetoothAdapter 초기화
+//        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+//        if (bluetoothAdapter == null) {
+//            // 디바이스가 블루투스를 지원하지 않는 경우 처리
+//            return;
+//        }
+//
+//        // 아두이노 디바이스 생성
+//        arduinoDevice = bluetoothAdapter.getRemoteDevice(ARDUINO_MAC_ADDRESS);
+//
+//        // BluetoothSocket을 통한 연결 수립
+//        try {
+//            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+//                // TODO: Consider calling
+//                //    ActivityCompat#requestPermissions
+//                // here to request the missing permissions, and then overriding
+//                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//                //                                          int[] grantResults)
+//                // to handle the case where the user grants the permission. See the documentation
+//                // for ActivityCompat#requestPermissions for more details.
+//                return;
+//            }
+//            socket = arduinoDevice.createRfcommSocketToServiceRecord(MY_UUID);
+//            socket.connect();
+//
+//            // InputStream과 OutputStream 설정
+//            inputStream = socket.getInputStream();
+//            outputStream = socket.getOutputStream();
+//
+//            // 아두이노로부터 데이터 읽기 예시
+//            readDataFromArduino();
+//
+//        } catch (IOException e) {
+//            // 연결 실패 처리
+//            e.printStackTrace();
+//        }
+//
+//        //여기까지
 
     }
 

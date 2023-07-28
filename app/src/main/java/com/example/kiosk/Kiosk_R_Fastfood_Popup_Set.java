@@ -65,19 +65,14 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
         startActivity(goto_Kiosk_R_F_P_Sz);
     }
 
-    public void goto_Kiosk_R_F_M_Bp(View view) {
-        Intent goto_Kiosk_R_F_M_Bp = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
+    public void goto_Kiosk_R_F_P_C(View view) {
+        Intent goto_Kiosk_R_F_P_C = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Count.class);
 
-        value+=burger;
-
-        burgerBitmap = BitmapFactory.decodeByteArray(burgerArray, 0, burgerArray.length);
-
-        myapp orderHistory = (myapp) getApplicationContext();
-        Order order = new Order(burgerName, burger, 1, burgerBitmap);
-        orderHistory.addOrder(order);
-
-        goto_Kiosk_R_F_M_Bp.putExtra("value", value);
-        startActivity(goto_Kiosk_R_F_M_Bp);
+        goto_Kiosk_R_F_P_C.putExtra("value", value);
+        goto_Kiosk_R_F_P_C.putExtra("plus", burger);
+        goto_Kiosk_R_F_P_C.putExtra("plusName", burgerName);
+        goto_Kiosk_R_F_P_C.putExtra("plusImage", burgerArray);
+        startActivity(goto_Kiosk_R_F_P_C);
     }
 
     public void goto_Kiosk_R_F_M_B(View view) {

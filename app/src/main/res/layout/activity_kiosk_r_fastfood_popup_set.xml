@@ -108,7 +108,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:onClick="goto_Kiosk_R_F_M_Bp"
+            android:onClick="goto_Kiosk_R_F_P_C"
             android:background="@drawable/table_border"
             android:orientation="vertical">
 

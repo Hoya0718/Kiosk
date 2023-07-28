@@ -152,8 +152,8 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         startActivity(goto_Kiosk_R_F_P_D);
     }
 
-    public void goto_Kiosk_R_F_M_B(View view) {
-        Intent goto_Kiosk_R_F_M_B = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Menu_Burger.class);
+    public void goto_Kiosk_R_F_Plus(View view) {
+        Intent goto_Kiosk_R_F_Plus = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Plus.class);
 
         value += total * count;
 
@@ -163,8 +163,9 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         Order order = new Order(burgerName, total, count, burgerBitmap);
         orderHistory.addOrder(order);
 
-        goto_Kiosk_R_F_M_B.putExtra("value", value);
-        startActivity(goto_Kiosk_R_F_M_B);
+        goto_Kiosk_R_F_Plus.putExtra("value", value);
+        goto_Kiosk_R_F_Plus.putExtra("plus", total * count);
+        startActivity(goto_Kiosk_R_F_Plus);
     }
 
     public void goto_Kiosk_R_F_M(View v){

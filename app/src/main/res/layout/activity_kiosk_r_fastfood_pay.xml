@@ -48,8 +48,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="1" >
+        android:layout_weight="1"
+        android:gravity="center">
 
     </LinearLayout>
 
@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center"
-        android:layout_weight="6" >
+        android:layout_weight="5" >
 
         <ImageView
             android:id="@+id/liquidate"
@@ -73,6 +73,53 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:layout_weight="1" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/home_Btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/table_border"
+            android:onClick="goto_Kiosk_R_F_P_M"
+            android:text="@string/cancel_no"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25">
 
     </LinearLayout>
 

@@ -27,10 +27,10 @@ public class Kiosk_R_Fastfood_Pay_Meth extends AppCompatActivity {
         }
     }
 
-    public void goto_Kiosk_F_R_O_H(View v){
-        Intent goto_Kiosk_R_F_O_H = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Order_Hist.class);
-        goto_Kiosk_R_F_O_H.putExtra("value", value);
-        startActivity(goto_Kiosk_R_F_O_H);
+    public void goto_Kiosk_F_R_P_T(View v){
+        Intent goto_Kiosk_R_F_P_T = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Pay_Table.class);
+        goto_Kiosk_R_F_P_T.putExtra("value", value);
+        startActivity(goto_Kiosk_R_F_P_T);
     }
 
     public void goto_Kiosk_R_F_P(View v){

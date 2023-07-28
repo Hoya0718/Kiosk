@@ -276,11 +276,11 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
         startActivity(goto_Kiosk_R_F_M);
     }
 
-    public void goto_Kiosk_R_F_P_M(View v){
+    public void goto_Kiosk_R_F_P_T(View v){
         if (value != 0){
-            Intent goto_Kiosk_R_F_P_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Pay_Meth.class);
-            goto_Kiosk_R_F_P_M.putExtra("value", value);
-            startActivity(goto_Kiosk_R_F_P_M);
+            Intent goto_Kiosk_R_F_P_T = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Pay_Table.class);
+            goto_Kiosk_R_F_P_T.putExtra("value", value);
+            startActivity(goto_Kiosk_R_F_P_T);
         }
     }
 

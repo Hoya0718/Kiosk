@@ -732,7 +732,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_P_Sd"
-            android:text="@string/cancle"
+            android:text="@string/cancel_no"
             android:textSize="30sp" />
     </LinearLayout>
 

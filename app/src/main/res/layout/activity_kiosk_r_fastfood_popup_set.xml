@@ -152,7 +152,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_R_F_M_B"
-            android:text="@string/cancle"
+            android:text="@string/cancel_no"
             android:textSize="30sp" />
     </LinearLayout>
 

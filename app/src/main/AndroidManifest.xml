@@ -147,6 +147,9 @@
             android:name=".Kiosk_R_Bus_Main"
             android:exported="false" />
         <activity
+            android:name=".Kiosk_R_Fastfood_Pay_Table"
+            android:exported="false" />
+        <activity
             android:name=".Kiosk_R_Fastfood_Plus"
             android:exported="false" />
         <activity

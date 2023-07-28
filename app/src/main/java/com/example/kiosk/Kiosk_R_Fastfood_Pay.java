@@ -215,12 +215,17 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
 
     // 여기까지
 
-
+    // disconnectBluetooth();
     public void goto_Kiosk_R_F_C(View v){
         Intent goto_Kiosk_R_F_C = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Congratulation.class);
-        disconnectBluetooth();
         goto_Kiosk_R_F_C.putExtra("value", value);
         startActivity(goto_Kiosk_R_F_C);
+    }
+
+    public void goto_Kiosk_R_F_P_M(View v){
+        Intent goto_Kiosk_R_F_P_M = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Pay_Meth.class);
+        goto_Kiosk_R_F_P_M.putExtra("value", value);
+        startActivity(goto_Kiosk_R_F_P_M);
     }
 
     public void onBackPressed() {

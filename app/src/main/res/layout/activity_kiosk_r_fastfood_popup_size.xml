@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
         android:layout_weight="0.5">
 
         <TextView
@@ -26,6 +25,7 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:textSize="25sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -49,32 +49,27 @@
             android:textStyle="bold"
             android:text="@string/big_mc"
             android:textSize="50sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
-        android:orientation="horizontal">
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -82,7 +77,6 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/che_ord_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -163,35 +157,24 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" >
-
-                </LinearLayout>
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-            </LinearLayout>
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-            </LinearLayout>
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-            </LinearLayout>
+                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -200,11 +183,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <Button
-            android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
@@ -215,6 +196,7 @@
             android:onClick="goto_Kiosk_R_F_P_St"
             android:text="@string/cancel_no"
             android:textSize="25sp" />
+
     </LinearLayout>
 
 </LinearLayout>

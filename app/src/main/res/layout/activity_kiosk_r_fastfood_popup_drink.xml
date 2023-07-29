@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
         android:layout_weight="0.5">
 
         <TextView
@@ -24,8 +23,9 @@
             android:id="@+id/showMission"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="3"
             android:textSize="25sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -49,14 +49,13 @@
             android:textStyle="bold"
             android:text="@string/big_mc"
             android:textSize="50sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="0dp"
@@ -71,13 +70,13 @@
             android:textStyle="bold"
             android:text="세트메뉴 음료를 선택해세요"
             android:textSize="40sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
-        android:orientation="horizontal">
+        android:layout_weight="8">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -88,8 +87,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#D3D3D3"
-                android:orientation="horizontal">
+                android:background="#D3D3D3">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -108,8 +106,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#D3D3D3"
-                android:orientation="horizontal">
+                android:background="#D3D3D3">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,12 +119,12 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="@string/french_fries" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -135,17 +132,16 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/cho_dri_text_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="@string/choose_drink" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -153,7 +149,6 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/che_ord_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -167,15 +162,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:gravity="center"
             android:orientation="vertical">
 
             <!--1-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/drinkcoca_lay"
@@ -200,24 +193,25 @@
                         android:id="@+id/drinkcoca_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/drinkcoca"
-                        android:gravity="center"/>
+                        android:text="@string/drinkcoca" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,700"
-                        android:gravity="center"/>
+                        android:text="₩1,700" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -243,27 +237,26 @@
                         android:id="@+id/drinkspri_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/drinkspri"
-                        android:gravity="center"/>
+                        android:text="@string/drinkspri" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,700"
-                        android:gravity="center"/>
+                        android:text="₩1,700" />
+
                 </LinearLayout>
-
-
 
                 <LinearLayout
                     android:id="@+id/drinkhwan_lay"
@@ -288,33 +281,34 @@
                         android:id="@+id/drinkhwan_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/drinkhwan"
-                        android:gravity="center"/>
+                        android:text="@string/drinkhwan" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,700"
-                        android:gravity="center"/>
+                        android:text="₩1,700" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--2-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/drinkcoze_lay"
@@ -339,24 +333,25 @@
                         android:id="@+id/drinkcoze_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/drinkcoze"
-                        android:gravity="center"/>
+                        android:text="@string/drinkcoze" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,700"
-                        android:gravity="center"/>
+                        android:text="₩1,700" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -400,6 +395,7 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩2,000" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -443,15 +439,16 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩2,000" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--3-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/shakestr_lay"
@@ -476,22 +473,25 @@
                         android:id="@+id/shakestr_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/shakestr"
-                        android:gravity="center"/>
+                        android:text="@string/shakestr" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,800"
-                        android:gravity="center"/>
+                        android:text="₩2,800" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -517,22 +517,25 @@
                         android:id="@+id/shakecho_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/shakecho"
-                        android:gravity="center"/>
+                        android:text="@string/shakecho" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,800"
-                        android:gravity="center"/>
+                        android:text="₩2,800" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -558,31 +561,34 @@
                         android:id="@+id/shakeba_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/shakeba"
-                        android:gravity="center"/>
+                        android:text="@string/shakeba" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,800"
-                        android:gravity="center"/>
+                        android:text="₩2,800" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--4-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/drinkoran_lay"
@@ -625,6 +631,7 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩1,600" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -650,24 +657,25 @@
                         android:id="@+id/milk_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/milk"
-                        android:gravity="center"/>
+                        android:text="@string/milk" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,600"
-                        android:gravity="center"/>
+                        android:text="₩1,600" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -693,37 +701,39 @@
                         android:id="@+id/water_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/water"
-                        android:gravity="center"/>
+                        android:text="@string/water" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,300"
-                        android:gravity="center"/>
+                        android:text="₩1,300" />
+
                 </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:layout_weight="1">
 
         <Button
-            android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
@@ -734,6 +744,7 @@
             android:onClick="goto_Kiosk_R_F_P_Sd"
             android:text="@string/cancel_no"
             android:textSize="30sp" />
+
     </LinearLayout>
 
 </LinearLayout>

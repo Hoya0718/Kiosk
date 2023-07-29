@@ -10,16 +10,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:orientation="horizontal">
-
-    </LinearLayout>
+        android:layout_weight="0.5" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:orientation="horizontal">
+        android:layout_weight="1.5">
 
         <ImageView
             android:layout_width="0dp"
@@ -36,20 +32,18 @@
             android:textStyle="bold"
             android:text="@string/drink"
             android:textSize="50sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
-        android:orientation="horizontal">
+        android:layout_weight="8">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:layout_weight="1"
-            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <LinearLayout
@@ -57,12 +51,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_1" />
@@ -84,12 +77,11 @@
                 android:layout_weight="1"
                 android:layout_margin="5dp"
                 android:onClick="goto_Kiosk_R_F_M_B"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_2" />
@@ -109,12 +101,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_3" />
@@ -136,12 +127,11 @@
                 android:layout_weight="1"
                 android:layout_margin="5dp"
                 android:onClick="goto_Kiosk_R_F_M_S"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_4" />
@@ -161,12 +151,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_5" />
@@ -186,12 +175,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_6" />
@@ -212,12 +200,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/fastfood_btn_background_yellow"
-                android:orientation="horizontal">
+                android:background="@drawable/fastfood_btn_background_yellow">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_7" />
@@ -237,12 +224,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_8" />
@@ -260,10 +246,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="4.7">
-
-            </LinearLayout>
-
+                android:layout_weight="4.7" />
 
         </LinearLayout>
 
@@ -271,15 +254,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:gravity="center"
             android:orientation="vertical">
 
             <!--1-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/drinkcoca_lay"
@@ -296,32 +277,33 @@
                         android:id="@+id/drinkcoca_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/drinkcoca" />
 
                     <TextView
                         android:id="@+id/drinkcoca_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/drinkcoca"
-                        android:gravity="center"/>
+                        android:text="@string/drinkcoca" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,700"
-                        android:gravity="center"/>
+                        android:text="₩1,700" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -339,32 +321,33 @@
                         android:id="@+id/drinkspri_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/drinkspri" />
 
                     <TextView
                         android:id="@+id/drinkspri_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/drinkspri"
-                        android:gravity="center"/>
+                        android:text="@string/drinkspri" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,700"
-                        android:gravity="center"/>
+                        android:text="₩1,700" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -382,41 +365,42 @@
                         android:id="@+id/drinkhwan_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/drinkhwan" />
 
                     <TextView
                         android:id="@+id/drinkhwan_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/drinkhwan"
-                        android:gravity="center"/>
+                        android:text="@string/drinkhwan" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,700"
-                        android:gravity="center"/>
+                        android:text="₩1,700" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--2-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/drinkcoze_lay"
@@ -433,32 +417,33 @@
                         android:id="@+id/drinkcoze_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/drinkcoze" />
 
                     <TextView
                         android:id="@+id/drinkcoze_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/drinkcoze"
-                        android:gravity="center"/>
+                        android:text="@string/drinkcoze" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,700"
-                        android:gravity="center"/>
+                        android:text="₩1,700" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -502,6 +487,7 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩2,000" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -545,15 +531,16 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩2,000" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--3-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/shakestr_lay"
@@ -570,30 +557,33 @@
                         android:id="@+id/shakestr_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/shakestr" />
 
                     <TextView
                         android:id="@+id/shakestr_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/shakestr"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:gravity="center"/>
+                        android:text="@string/shakestr" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:text="₩2,800"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:gravity="center"/>
+                        android:text="₩2,800" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -611,30 +601,33 @@
                         android:id="@+id/shakecho_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/shakecho" />
 
                     <TextView
                         android:id="@+id/shakecho_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/shakecho"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:gravity="center"/>
+                        android:text="@string/shakecho" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:text="₩2,800"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:gravity="center"/>
+                        android:text="₩2,800" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -652,39 +645,42 @@
                         android:id="@+id/shakeba_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/shakeba" />
 
                     <TextView
                         android:id="@+id/shakeba_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/shakeba"
-                        android:gravity="center"/>
+                        android:text="@string/shakeba" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,800"
-                        android:gravity="center"/>
+                        android:text="₩2,800" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--4-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/drinkoran_lay"
@@ -727,6 +723,7 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩1,600" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -744,32 +741,33 @@
                         android:id="@+id/milk_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/milk" />
 
                     <TextView
                         android:id="@+id/milk_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/milk"
-                        android:gravity="center"/>
+                        android:text="@string/milk" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,600"
-                        android:gravity="center"/>
+                        android:text="₩1,600" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -787,45 +785,47 @@
                         android:id="@+id/water_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/water" />
 
                     <TextView
                         android:id="@+id/water_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/water"
-                        android:gravity="center"/>
+                        android:text="@string/water" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,300"
-                        android:gravity="center"/>
+                        android:text="₩1,300" />
+
                 </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <TextView
-            android:id="@+id/won"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -857,22 +857,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25">
-
-    </LinearLayout>
+        android:layout_weight="0.25" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:orientation="horizontal">
+        android:layout_weight="0.5">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/home_Btn"
@@ -888,17 +883,13 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
+            android:layout_weight="1" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25">
-
-    </LinearLayout>
+        android:layout_weight="0.25" />
 
 </LinearLayout>

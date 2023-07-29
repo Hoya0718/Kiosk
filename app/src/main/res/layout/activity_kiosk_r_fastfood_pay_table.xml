@@ -10,8 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
-    </LinearLayout>
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +22,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/mc" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -31,13 +31,13 @@
         android:layout_weight="2">
 
         <TextView
-            android:id="@+id/sel_pay_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:textStyle="bold"
             android:text="테이블 서비스를\n이용해 보세요"
             android:textSize="40sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -46,7 +46,6 @@
         android:layout_weight="4">
 
         <LinearLayout
-            android:id="@+id/cert_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -73,7 +72,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/card_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -105,8 +103,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
-    </LinearLayout>
+        android:layout_weight="3" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -114,7 +111,6 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
@@ -125,6 +121,7 @@
             android:onClick="goto_Kiosk_F_R_O_H"
             android:text="뒤로"
             android:textSize="25sp" />
+
     </LinearLayout>
 
 </LinearLayout>

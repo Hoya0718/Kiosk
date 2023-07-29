@@ -10,8 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:gravity="center">
+        android:layout_weight="0.5">
 
         <TextView
             android:layout_width="0dp"
@@ -26,13 +25,13 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:textSize="25sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:orientation="horizontal">
+        android:layout_weight="1.5">
 
         <ImageView
             android:layout_width="0dp"
@@ -49,20 +48,18 @@
             android:textStyle="bold"
             android:text="@string/birger"
             android:textSize="50sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
-        android:orientation="horizontal">
+        android:layout_weight="8">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:layout_weight="1"
-            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <LinearLayout
@@ -70,12 +67,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_1" />
@@ -96,12 +92,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/fastfood_btn_background_yellow"
-                android:orientation="horizontal">
+                android:background="@drawable/fastfood_btn_background_yellow">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_2" />
@@ -121,12 +116,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_3" />
@@ -148,12 +142,11 @@
                 android:layout_weight="1"
                 android:layout_margin="5dp"
                 android:onClick="goto_Kiosk_R_F_M_S"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_4" />
@@ -173,12 +166,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_5" />
@@ -198,12 +190,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_6" />
@@ -225,12 +216,11 @@
                 android:layout_weight="1"
                 android:layout_margin="5dp"
                 android:onClick="goto_Kiosk_R_F_M_D"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_7" />
@@ -250,12 +240,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal">
+                android:background="@drawable/table_border">
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     app:srcCompat="@drawable/menu_8" />
@@ -273,9 +262,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="4.7">
-
-            </LinearLayout>
+                android:layout_weight="4.7" />
 
         </LinearLayout>
 
@@ -283,23 +270,21 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:gravity="center"
             android:orientation="vertical">
 
             <!--1-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/b1955_lay"
                     android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
                     android:background="@drawable/table_border"
                     android:onClick="goto_Kiosk_R_F_P_St"
                     android:orientation="vertical">
@@ -334,6 +319,7 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩6,400" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -341,8 +327,8 @@
                     android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
                     android:background="@drawable/table_border"
                     android:onClick="goto_Kiosk_R_F_P_St"
                     android:orientation="vertical">
@@ -377,6 +363,7 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩5,800" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -384,8 +371,8 @@
                     android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
                     android:background="@drawable/table_border"
                     android:onClick="goto_Kiosk_R_F_P_St"
                     android:orientation="vertical">
@@ -420,15 +407,16 @@
                         android:gravity="center"
                         android:textSize="18sp"
                         android:text="₩5,200" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--2-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/mcchi_lay"
@@ -453,22 +441,25 @@
                         android:id="@+id/mcchi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/mcchi"
-                        android:gravity="center"/>
+                        android:text="@string/mcchi" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩3,500"
-                        android:gravity="center"/>
+                        android:text="₩3,500" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -494,22 +485,25 @@
                         android:id="@+id/mccri_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/mccri"
-                        android:gravity="center"/>
+                        android:text="@string/mccri" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩5,900"
-                        android:gravity="center"/>
+                        android:text="₩5,900" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -535,31 +529,34 @@
                         android:id="@+id/quater_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/quater"
-                        android:gravity="center"/>
+                        android:text="@string/quater" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩5,500"
-                        android:gravity="center"/>
+                        android:text="₩5,500" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--3-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/sanhi_lay"
@@ -584,24 +581,25 @@
                         android:id="@+id/sanhi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/sanhi"
-                        android:gravity="center"/>
+                        android:text="@string/sanhi" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩5,200"
-                        android:gravity="center"/>
+                        android:text="₩5,200" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -627,24 +625,25 @@
                         android:id="@+id/susu_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/susu"
-                        android:gravity="center"/>
+                        android:text="@string/susu" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩4,700"
-                        android:gravity="center"/>
+                        android:text="₩4,700" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -670,33 +669,34 @@
                         android:id="@+id/subi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/subi"
-                        android:gravity="center"/>
+                        android:text="@string/subi" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩5,800"
-                        android:gravity="center"/>
+                        android:text="₩5,800" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <!--4-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/bulgogi_lay"
@@ -721,24 +721,25 @@
                         android:id="@+id/bulgogi_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/bulgogi"
-                        android:gravity="center"/>
+                        android:text="@string/bulgogi" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,300"
-                        android:gravity="center"/>
+                        android:text="₩2,300" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -764,24 +765,25 @@
                         android:id="@+id/cheeze_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/cheeze"
-                        android:gravity="center"/>
+                        android:text="@string/cheeze" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,700"
-                        android:gravity="center"/>
+                        android:text="₩2,700" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -807,37 +809,39 @@
                         android:id="@+id/ham_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/ham"
-                        android:gravity="center"/>
+                        android:text="@string/ham" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,500"
-                        android:gravity="center"/>
+                        android:text="₩2,500" />
+
                 </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <TextView
-            android:id="@+id/won"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -869,22 +873,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25">
-
-    </LinearLayout>
+        android:layout_weight="0.25" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:orientation="horizontal">
+        android:layout_weight="0.5">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/home_Btn"
@@ -900,17 +899,13 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
+            android:layout_weight="1" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25">
-
-    </LinearLayout>
+        android:layout_weight="0.25" />
 
 </LinearLayout>

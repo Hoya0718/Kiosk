@@ -126,7 +126,7 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         Intent goto_Kiosk_R_F_P_Sz = new Intent(getApplicationContext(), Kiosk_R_Fastfood_Popup_Size.class);
         goto_Kiosk_R_F_P_Sz.putExtra("value", value);
 
-        burgerName = burgerName.replaceAll("\\s-\\s(라지\\s)?(세트|Set)", "");
+        burgerName = burgerName.replaceAll("\\s-\\s((라지|Large)\\s)?(세트|Set)", "");
 
         goto_Kiosk_R_F_P_Sz.putExtra("burger", burger);
         goto_Kiosk_R_F_P_Sz.putExtra("burgerName", burgerName);

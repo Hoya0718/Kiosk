@@ -10,28 +10,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="0.5">
-
-    </LinearLayout>
+        android:layout_weight="0.5" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:gravity="center">
-
-    </LinearLayout>
+        android:layout_weight="1.5" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7"
-        android:orientation="horizontal">
+        android:layout_weight="7">
 
         <LinearLayout
-            android:id="@+id/plus_menu_lay"
-            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="20dp"
@@ -45,7 +36,7 @@
                 android:layout_height="0dp"
                 android:layout_margin="5dp"
                 android:layout_weight="3"
-                app:srcCompat="@drawable/snackshu" />
+                app:srcCompat="@drawable/mc" />
 
             <TextView
                 android:id="@+id/plus_name_text"
@@ -57,13 +48,12 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="30sp"
-                android:text="@string/snackshu" />
+                android:text="" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <TextView
                     android:layout_width="0dp"
@@ -83,17 +73,17 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:textSize="30sp"
-                    android:text="2,300" />
+                    android:text="" />
             </LinearLayout>
 
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <Button
             android:id="@+id/minus_Btn"
@@ -137,11 +127,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <Button
-            android:id="@+id/canca_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -155,7 +143,6 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/add_car_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -167,14 +154,12 @@
             android:onClick="goto_Kiosk_R_F_Plus"
             android:text="@string/add_to_cart"
             android:textSize="30sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="1">
-
-    </LinearLayout>
+        android:layout_weight="1" />
 
 </LinearLayout>

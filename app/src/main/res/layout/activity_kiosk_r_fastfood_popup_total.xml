@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
@@ -30,6 +29,7 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:textSize="25sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -39,8 +39,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
+        android:layout_marginBottom="5dp">
 
         <TextView
             android:id="@+id/burger_text"
@@ -60,7 +59,6 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:gravity="center"
         android:layout_weight="1">
 
         <TextView
@@ -97,6 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/total_menu" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -106,8 +105,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
+        android:layout_marginBottom="5dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -115,21 +113,19 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
 
                 <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="200dp"
                     android:layout_weight="1">
 
-                    <TableRow
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1">
 
-                        <TableLayout
-                            android:id="@+id/bigmc"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -151,13 +147,13 @@
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
                                 android:layout_margin="5dp"
+                                android:gravity="center"
                                 android:textSize="18sp"
-                                android:text="@string/big_mc"
-                                android:gravity="center"/>
-                        </TableLayout>
+                                android:text="@string/big_mc" />
 
-                        <TableLayout
-                            android:id="@+id/huri"
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -179,13 +175,13 @@
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
                                 android:layout_margin="5dp"
+                                android:gravity="center"
                                 android:textSize="18sp"
-                                android:text="@string/huri"
-                                android:gravity="center"/>
-                        </TableLayout>
+                                android:text="@string/huri" />
 
-                        <TableLayout
-                            android:id="@+id/drinkcoca"
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -207,25 +203,26 @@
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
                                 android:layout_margin="5dp"
+                                android:gravity="center"
                                 android:textSize="18sp"
-                                android:text="@string/drinkcoca"
-                                android:gravity="center"/>
-                        </TableLayout>
-                    </TableRow>
+                                android:text="@string/drinkcoca" />
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </TableLayout>
+
             </LinearLayout>
+
         </ScrollView>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <Button
             android:id="@+id/minus_Btn"
@@ -264,16 +261,15 @@
             android:onClick="count_plus"
             android:text="+"
             android:textSize="30sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <Button
-            android:id="@+id/canca_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -287,7 +283,6 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/add_car_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -299,27 +294,23 @@
             android:onClick="goto_Kiosk_R_F_Plus"
             android:text="@string/add_to_cart"
             android:textSize="30sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.25">
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:orientation="horizontal">
+        android:layout_weight="0.25" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/home_Btn"
@@ -335,17 +326,13 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
+            android:layout_weight="1" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25">
-
-    </LinearLayout>
+        android:layout_weight="0.25" />
 
 </LinearLayout>

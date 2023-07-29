@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
         android:layout_weight="0.5">
 
         <TextView
@@ -26,6 +25,7 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:textSize="20sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -49,14 +49,13 @@
             android:textStyle="bold"
             android:text="@string/big_mc"
             android:textSize="50sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="0dp"
@@ -71,13 +70,13 @@
             android:textStyle="bold"
             android:text="세트메뉴 사이드를 선택해세요"
             android:textSize="40sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
-        android:orientation="horizontal">
+        android:layout_weight="8">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -88,8 +87,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#D3D3D3"
-                android:orientation="horizontal">
+                android:background="#D3D3D3">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -107,8 +105,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -116,17 +113,16 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/cho_sid_text_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="@string/choose_side" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -134,17 +130,16 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/cho_dri_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="@string/choose_drink" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -152,7 +147,6 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/che_ord_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -191,30 +185,33 @@
                         android:id="@+id/huri_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/huri" />
 
                     <TextView
                         android:id="@+id/huri_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/huri"
-                        android:gravity="center"/>
+                        android:text="@string/huri" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:layout_margin="5dp"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,000"
-                        android:gravity="center"/>
+                        android:text="₩2,000" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -232,32 +229,33 @@
                         android:id="@+id/cuol_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/cuol" />
 
                     <TextView
                         android:id="@+id/cuol_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/cuol"
-                        android:gravity="center"/>
+                        android:text="@string/cuol" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩1,900"
-                        android:gravity="center"/>
+                        android:text="₩1,900" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -275,32 +273,33 @@
                         android:id="@+id/chezstick_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
+                        android:layout_weight="3"
                         app:srcCompat="@drawable/chezstick" />
 
                     <TextView
                         android:id="@+id/chezstick_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="@string/chezstick"
-                        android:gravity="center"/>
+                        android:text="@string/chezstick" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:textSize="18sp"
-                        android:text="₩2,500"
-                        android:gravity="center"/>
+                        android:text="₩2,500" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -309,41 +308,30 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-            </LinearLayout>
+                android:layout_weight="1" />
 
             <!--3-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-
-            </LinearLayout>
+                android:layout_weight="1" />
 
             <!--4-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-            </LinearLayout>
+                android:layout_weight="1" />
 
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:layout_weight="1">
 
         <Button
-            android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
@@ -354,6 +342,7 @@
             android:onClick="goto_Kiosk_R_F_P_Sz"
             android:text="@string/cancel_no"
             android:textSize="25sp" />
+
     </LinearLayout>
 
 </LinearLayout>

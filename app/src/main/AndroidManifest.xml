@@ -147,6 +147,15 @@
             android:name=".Kiosk_R_Bus_Main"
             android:exported="false" />
         <activity
+            android:name=".Kiosk_R_Fastfood_End_1"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Fastfood_End_2"
+            android:exported="false" />
+        <activity
+            android:name=".Kiosk_R_Fastfood_End_3"
+            android:exported="false" />
+        <activity
             android:name=".Kiosk_R_Fastfood_Pay_Table"
             android:exported="false" />
         <activity

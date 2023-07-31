@@ -217,8 +217,7 @@ public class Kiosk_R_Fastfood_Pay extends AppCompatActivity {
 
     // disconnectBluetooth();
     public void goto_Kiosk_R_F_C(View v){
-        Intent goto_Kiosk_R_F_C = new Intent(getApplicationContext(),Kiosk_R_Fastfood_Congratulation.class);
-        goto_Kiosk_R_F_C.putExtra("value", value);
+        Intent goto_Kiosk_R_F_C = new Intent(getApplicationContext(),Kiosk_R_Fastfood_End_3.class);
         startActivity(goto_Kiosk_R_F_C);
     }
 

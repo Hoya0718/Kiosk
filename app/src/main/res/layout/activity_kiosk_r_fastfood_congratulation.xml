@@ -8,7 +8,6 @@
     tools:context=".Kiosk_R_Fastfood_Congratulation">
 
     <ImageView
-        android:id="@+id/imageView7"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="70dp"
@@ -35,4 +34,5 @@
         android:onClick="goto_Kiosk_R_P"
         android:text="@string/taecho"
         android:textSize="@dimen/font_size_medium" />
+
 </LinearLayout>

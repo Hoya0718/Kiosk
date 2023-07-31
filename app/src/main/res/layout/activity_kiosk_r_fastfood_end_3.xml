@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_R_Fastfood_Pay">
+    tools:context=".Kiosk_R_Fastfood_End_3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="아래 결제 단말기에서 결제를\n진행해 주세요"
+            android:text="주문이 접수되었습니다\n영수증을 받으세요"
             android:textSize="50sp" />
 
     </LinearLayout>
@@ -52,52 +52,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="goto_Kiosk_R_F_C"
-            app:srcCompat="@drawable/kiosk_pay_img" />
+            app:srcCompat="@drawable/fast_order" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <!--취소-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.25" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:background="@drawable/table_border"
-            android:onClick="goto_Kiosk_R_F_P_M"
-            android:text="@string/cancel_no"
-            android:textSize="25sp" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.25" />
+        android:layout_weight="2" />
 
 </LinearLayout>

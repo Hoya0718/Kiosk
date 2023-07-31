@@ -20,12 +20,12 @@ public class Kiosk_R_Fastfood_Popup_Size extends AppCompatActivity {
     private String burgerName;
     private byte[] burgerArray;
 
+    private TextView showMission;
     private TextView burger_text;
-
     private TextView set_text;
     private TextView lar_text;
 
-    private TextView showMission;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

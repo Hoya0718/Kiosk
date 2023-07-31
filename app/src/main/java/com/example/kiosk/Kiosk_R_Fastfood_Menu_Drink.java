@@ -24,7 +24,6 @@ public class Kiosk_R_Fastfood_Menu_Drink extends AppCompatActivity {
     private String drinkName;
 
     private TextView money_text;
-
     private TextView chistr_text;
     private TextView chijadu_text;
     private TextView drinkoran_text;

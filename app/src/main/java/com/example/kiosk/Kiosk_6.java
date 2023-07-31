@@ -11,6 +11,7 @@ import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -22,11 +23,8 @@ public class Kiosk_6 extends AppCompatActivity {
     private myapp sound;
 
     private myapp text_size;
-    private Button store;
-    private Button takeout;
-
-    private AnimationDrawable anim;
-    Handler handler = new Handler();
+    private TextView store;
+    private TextView takeout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,75 +54,6 @@ public class Kiosk_6 extends AppCompatActivity {
                             "If you eat at the store, press the store button." +
                             "If you take it out and take it home, press the packaging button.");
                 }
-            }
-        });
-
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-//                    speakText("버튼은 여기에 있어요.");
-//                else
-//                    speakText("Button is Here");
-//                handler.postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        store.setBackgroundResource(R.drawable.anim_list);
-//                        anim = (AnimationDrawable) store.getBackground();
-//                        anim.start();
-//
-//                        takeout.setBackgroundResource(R.drawable.anim_list);
-//                        anim = (AnimationDrawable) takeout.getBackground();
-//                        anim.start();
-//                    }
-//                }, 2000);
-//            }
-//        }, 10000);
-
-        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-            boolean one = true;
-            @Override
-            public void onStart(String delaySpeak) {
-                // TTS가 말하기 시작했습니다.
-                Log.d("delaySpeak", "onstart");
-            }
-
-            @Override
-            public void onDone(String delaySpeak) {
-                // TTS가 말하기 끝났습니다.
-                // 다른 코드를 실행합니다.
-
-                if(one) {
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            //tts
-                            if (!tts.isSpeaking()) {
-                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("버튼은 여기에 있어요.");
-                                else
-                                    speakText("Button is Here");
-                                Log.d("test", "isSpeaking true");
-                            } else Log.d("test", "isSpeeking false");
-                            //버튼
-                            store.setBackgroundResource(R.drawable.anim_list);
-                            anim = (AnimationDrawable) store.getBackground();
-                            anim.start();
-
-                            takeout.setBackgroundResource(R.drawable.anim_list);
-                            anim = (AnimationDrawable) takeout.getBackground();
-                            anim.start();
-                        }
-                    }, 2000);
-                    Log.d("delaySpeak", "onDone");
-                    one=false;
-                }
-            }
-
-            @Override
-            public void onError(String delaySpeak) {
-                //에러 발생시
-                Log.d("delaySpeak", "onError");
             }
         });
     }

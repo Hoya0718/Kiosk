@@ -22,10 +22,7 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
     private String burgerName;
     private byte[] burgerArray;
 
-    private Bitmap burgerBitmap;
-
     private TextView showMission;
-
     private TextView burger_text;
 
     @Override

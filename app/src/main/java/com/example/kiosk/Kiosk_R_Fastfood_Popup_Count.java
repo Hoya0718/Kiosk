@@ -13,16 +13,16 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Kiosk_R_Fastfood_Popup_Count extends AppCompatActivity {
 
     private int value;
+    private int count;
     private int plus;
     private String plusName;
     private byte[] plusArray;
 
-    private ImageView plus_img;
+    private TextView count_text;
     private TextView plus_name_text;
     private TextView plus_money_text;
 
-    private int count;
-    private TextView count_text;
+    private ImageView plus_img;
 
     private Bitmap plusBitmap;
 

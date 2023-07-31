@@ -26,9 +26,9 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
     private String sideName;
     private byte[] burgerArray;
 
+    private TextView showMission;
     private TextView burger_text;
     private TextView burger_txt;
-
     private TextView huri_text;
     private TextView chezstick_text;
     private TextView cuol_text;
@@ -39,12 +39,14 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
 
     private Bitmap sideBitmap;
 
-    private TextView showMission;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_side);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         burger_text = findViewById(R.id.burger_text);
         burger_txt = findViewById(R.id.burger_txt);
@@ -56,10 +58,6 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         huri_img = findViewById(R.id.huri_img);
         chezstick_img = findViewById(R.id.chezstick_img);
         cuol_img = findViewById(R.id.cuol_img);
-
-        myapp myApp = (myapp) getApplicationContext();
-        showMission = findViewById(R.id.showMission);
-        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

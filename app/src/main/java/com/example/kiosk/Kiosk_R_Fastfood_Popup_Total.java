@@ -31,9 +31,10 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     private byte[] sideArray;
     private byte[] drinkArray;
 
+    private TextView showMission;
     private TextView burger_text;
     private TextView total_text;
-
+    private TextView count_text;
     private TextView set_burger_text;
     private TextView set_side_text;
     private TextView set_drink_text;
@@ -42,21 +43,22 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     private ImageView set_side_img;
     private ImageView set_drink_img;
 
-    private TextView count_text;
-
     private Bitmap burgerBitmap;
     private Bitmap sideBitmap;
     private Bitmap drinkBitmap;
-
-    private TextView showMission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_total);
 
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
+
         burger_text = findViewById(R.id.burger_text);
         total_text = findViewById(R.id.total_text);
+        count_text = findViewById(R.id.count_text);
 
         set_burger_text = findViewById(R.id.set_burger_text);
         set_side_text = findViewById(R.id.set_side_text);
@@ -65,12 +67,6 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         set_burger_img = findViewById(R.id.set_burger_img);
         set_side_img = findViewById(R.id.set_side_img);
         set_drink_img = findViewById(R.id.set_drink_img);
-
-        count_text = findViewById(R.id.count_text);
-
-        myapp myApp = (myapp) getApplicationContext();
-        showMission = findViewById(R.id.showMission);
-        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

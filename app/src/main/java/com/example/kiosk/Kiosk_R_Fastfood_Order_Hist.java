@@ -24,7 +24,6 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
     private int value;
 
     private TextView value_text;
-
     private TextView showMission;
 
     @Override
@@ -32,22 +31,19 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_order_hist);
 
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
+
         Intent intent = getIntent();
         if (intent != null) {
             value = intent.getIntExtra("value", 0);
         }
 
-        myapp myApp = (myapp) getApplicationContext();
-        showMission = findViewById(R.id.showMission);
-        showMission.setText(myApp.getCheckFastfoodMission());
-
-
+        // 레이아웃 추가
         List<Order> orderList = myApp.getOrderList();
-
         LinearLayout containerLayout = findViewById(R.id.container_layout);
-
         value_text = findViewById(R.id.value_text);
-
         updateTotalPrice(orderList, value_text);
 
         for (int i = 0; i < orderList.size(); i++) {

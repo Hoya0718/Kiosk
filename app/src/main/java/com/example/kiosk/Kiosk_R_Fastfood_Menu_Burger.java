@@ -24,9 +24,8 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
     private int burger;
     private String burgerName;
 
+    private TextView showMission;
     private TextView money_text;
-
-
     private TextView b1955_text;
     private TextView batodi_text;
     private TextView bigmc_text;
@@ -55,12 +54,14 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
 
     private Bitmap burgerBitmap;
 
-    private TextView showMission;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_menu_burger);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         money_text = findViewById(R.id.money_text);
 
@@ -89,10 +90,6 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
         bulgogi_img = findViewById(R.id.bulgogi_img);
         cheeze_img = findViewById(R.id.cheeze_img);
         ham_img = findViewById(R.id.ham_img);
-
-        myapp myApp = (myapp) getApplicationContext();
-        showMission = findViewById(R.id.showMission);
-        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

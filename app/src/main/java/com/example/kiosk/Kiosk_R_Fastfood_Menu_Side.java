@@ -24,7 +24,6 @@ public class Kiosk_R_Fastfood_Menu_Side extends AppCompatActivity {
     private String sideName;
 
     private TextView money_text;
-
     private TextView snacksan_text;
     private TextView snackshu_text;
     private TextView mcnurget_text;

@@ -29,10 +29,10 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
     private byte[] burgerArray;
     private byte[] sideArray;
 
+    private TextView showMission;
     private TextView burger_text;
     private TextView burger_txt;
     private TextView side_text;
-
     private TextView chistr_text;
     private TextView chijadu_text;
     private TextView drinkoran_text;
@@ -61,12 +61,14 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
 
     private Bitmap drinkBitmap;
 
-    private TextView showMission;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_drink);
+
+        myapp myApp = (myapp) getApplicationContext();
+        showMission = findViewById(R.id.showMission);
+        showMission.setText(myApp.getCheckFastfoodMission());
 
         burger_text = findViewById(R.id.burger_text);
         burger_txt = findViewById(R.id.burger_txt);
@@ -97,10 +99,6 @@ public class Kiosk_R_Fastfood_Popup_Drink extends AppCompatActivity {
         drinkhwan_img = findViewById(R.id.drinkhwan_img);
         milk_img = findViewById(R.id.milk_img);
         water_img = findViewById(R.id.water_img);
-
-        myapp myApp = (myapp) getApplicationContext();
-        showMission = findViewById(R.id.showMission);
-        showMission.setText(myApp.getCheckFastfoodMission());
 
         Intent intent = getIntent();
         if (intent != null) {

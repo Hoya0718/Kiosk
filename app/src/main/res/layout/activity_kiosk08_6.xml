@@ -82,7 +82,7 @@
                 android:layout_height="0dp"
                 android:layout_margin="5dp"
                 android:layout_weight="3"
-                app:srcCompat="@drawable/mc" />
+                app:srcCompat="@drawable/bigmc" />
 
             <TextView
                 android:id="@+id/plus_name_text"
@@ -94,7 +94,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="30sp"
-                android:text="" />
+                android:text="@string/big_mc" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -119,7 +119,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:textSize="30sp"
-                    android:text="" />
+                    android:text="5,200" />
             </LinearLayout>
 
         </LinearLayout>
@@ -140,7 +140,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
-            android:onClick="count_minus"
             android:text="-"
             android:textSize="30sp" />
 
@@ -165,7 +164,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
-            android:onClick="count_plus"
             android:text="+"
             android:textSize="30sp" />
     </LinearLayout>
@@ -184,7 +182,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
-            android:onClick="goto_Kiosk_R_F_M_B"
             android:text="@string/cancel_no"
             android:textSize="30sp" />
 
@@ -197,7 +194,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/fastfood_btn_background_yellow"
-            android:onClick="goto_Kiosk_R_F_Plus"
             android:text="@string/add_to_cart"
             android:textSize="30sp" />
 
@@ -218,7 +214,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_blue"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_5"
+            android:onClick="popup_kiosk_08_5"
             android:text="이전"
             android:textSize="33sp" />
 
@@ -232,7 +228,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_purple"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_7"
+            android:onClick="popup_kiosk_08_7"
             android:text="다음"
             android:textSize="33sp" />
 

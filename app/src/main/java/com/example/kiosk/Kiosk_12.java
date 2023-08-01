@@ -17,14 +17,13 @@ import java.util.Locale;
 public class Kiosk_12 extends AppCompatActivity {
 
     private TextToSpeech tts;
-
     private myapp sound;
 
-    private myapp text_size;
-    private Button first;
-
-    private AnimationDrawable anim;
-    Handler handler = new Handler();
+//    private myapp text_size;
+//    private Button first;
+//
+//    private AnimationDrawable anim;
+//    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +32,11 @@ public class Kiosk_12 extends AppCompatActivity {
 
         sound = (myapp) getApplication();
 
-        text_size = (myapp) getApplication();
-
-        first = findViewById(R.id.first_Btn);
-
-        first.setTextSize(text_size.getId());
+//        text_size = (myapp) getApplication();
+//
+//        first = findViewById(R.id.first_Btn);
+//
+//        first.setTextSize(text_size.getId());
 
         myapp myApp = (myapp) getApplicationContext();
         if (myApp.getR_F_Time() != 0) {
@@ -79,48 +78,48 @@ public class Kiosk_12 extends AppCompatActivity {
 //            }
 //        }, 10000);
 
-        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-            boolean one = true;
-            @Override
-            public void onStart(String delaySpeak) {
-                // TTS가 말하기 시작했습니다.
-                Log.d("delaySpeak", "onstart");
-            }
-
-            @Override
-            public void onDone(String delaySpeak) {
-                // TTS가 말하기 끝났습니다.
-                // 다른 코드를 실행합니다.
-
-                if(one) {
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            //tts
-                            if (!tts.isSpeaking()) {
-                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("버튼은 여기에 있어요.");
-                                else
-                                    speakText("Button is Here");
-                                Log.d("test", "isSpeaking true");
-                            } else Log.d("test", "isSpeeking false");
-                            //버튼
-                            first.setBackgroundResource(R.drawable.anim_list);
-                            anim = (AnimationDrawable) first.getBackground();
-                            anim.start();
-                        }
-                    }, 2000);
-                    Log.d("delaySpeak", "onDone");
-                    one=false;
-                }
-            }
-
-            @Override
-            public void onError(String delaySpeak) {
-                //에러 발생시
-                Log.d("delaySpeak", "onError");
-            }
-        });
+//        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+//            boolean one = true;
+//            @Override
+//            public void onStart(String delaySpeak) {
+//                // TTS가 말하기 시작했습니다.
+//                Log.d("delaySpeak", "onstart");
+//            }
+//
+//            @Override
+//            public void onDone(String delaySpeak) {
+//                // TTS가 말하기 끝났습니다.
+//                // 다른 코드를 실행합니다.
+//
+//                if(one) {
+//                    handler.postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            //tts
+//                            if (!tts.isSpeaking()) {
+//                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+//                                    speakText("버튼은 여기에 있어요.");
+//                                else
+//                                    speakText("Button is Here");
+//                                Log.d("test", "isSpeaking true");
+//                            } else Log.d("test", "isSpeeking false");
+//                            //버튼
+//                            first.setBackgroundResource(R.drawable.anim_list);
+//                            anim = (AnimationDrawable) first.getBackground();
+//                            anim.start();
+//                        }
+//                    }, 2000);
+//                    Log.d("delaySpeak", "onDone");
+//                    one=false;
+//                }
+//            }
+//
+//            @Override
+//            public void onError(String delaySpeak) {
+//                //에러 발생시
+//                Log.d("delaySpeak", "onError");
+//            }
+//        });
     }
 
     public void goto_kiosk_5(View v){

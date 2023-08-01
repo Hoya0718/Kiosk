@@ -61,11 +61,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_weight="1.5">
 
         <TextView
             android:id="@+id/burger_text"
@@ -81,10 +77,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
         android:layout_weight="1">
 
         <TextView
@@ -110,10 +102,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -129,9 +117,7 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginRight="20dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -259,7 +245,6 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
             android:layout_weight="1"
-            android:onClick="count_minus"
             android:text="-"
             android:textSize="30sp" />
 
@@ -284,7 +269,6 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
             android:layout_weight="1"
-            android:onClick="count_plus"
             android:text="+"
             android:textSize="30sp" />
 
@@ -304,7 +288,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
-            android:onClick="goto_Kiosk_R_F_P_D"
             android:text="@string/cancel_no"
             android:textSize="30sp" />
 
@@ -317,7 +300,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/fastfood_btn_background_yellow"
-            android:onClick="goto_Kiosk_R_F_Plus"
             android:text="@string/add_to_cart"
             android:textSize="30sp" />
 
@@ -338,7 +320,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_blue"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_1"
+            android:onClick="popup_kiosk_08_4"
             android:text="이전"
             android:textSize="33sp" />
 
@@ -352,7 +334,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_purple"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_3"
+            android:onClick="popup_kiosk_08_6"
             android:text="다음"
             android:textSize="33sp" />
 

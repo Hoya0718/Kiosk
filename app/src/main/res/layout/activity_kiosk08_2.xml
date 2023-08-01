@@ -134,7 +134,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:onClick="goto_Kiosk_R_F_P_Sd"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -162,7 +161,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:onClick="goto_Kiosk_R_F_P_Sd"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -225,7 +223,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_blue"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_1"
+            android:onClick="popup_kiosk_08_1"
             android:text="이전"
             android:textSize="33sp" />
 
@@ -239,7 +237,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_purple"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_3"
+            android:onClick="popup_kiosk_08_3"
             android:text="다음"
             android:textSize="33sp" />
 

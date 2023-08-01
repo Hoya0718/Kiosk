@@ -19,12 +19,7 @@ import java.util.Locale;
 public class Kiosk_6 extends AppCompatActivity {
 
     private TextToSpeech tts;
-
     private myapp sound;
-
-    private myapp text_size;
-    private TextView store;
-    private TextView takeout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +27,6 @@ public class Kiosk_6 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk06);
 
         sound = (myapp) getApplication();
-
-        text_size = (myapp) getApplication();
-
-        store = findViewById(R.id.store_Btn);
-        takeout = findViewById(R.id.takeout_Btn);
-
-        store.setTextSize(text_size.getId());
-        takeout.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -58,16 +45,16 @@ public class Kiosk_6 extends AppCompatActivity {
         });
     }
 
-    public void goto_kiosk_07_b(View v){
-        tts.shutdown();
-        Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
-        startActivity(goto_kiosk_07_b);
-    }
-
     public void goto_Back(View v){
         tts.shutdown();
         Intent goto_Back = new Intent(getApplicationContext(), Kiosk_5.class);
         startActivity(goto_Back);
+    }
+
+    public void goto_kiosk_07_b(View v){
+        tts.shutdown();
+        Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
+        startActivity(goto_kiosk_07_b);
     }
 
     private void speakText(String text) {

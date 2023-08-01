@@ -108,7 +108,6 @@
             android:layout_weight="1"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
-            android:onClick="goto_Kiosk_R_F_P_Sz"
             android:background="@drawable/table_border"
             android:orientation="vertical">
 
@@ -136,7 +135,6 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:onClick="goto_Kiosk_R_F_P_C"
             android:background="@drawable/table_border"
             android:orientation="vertical">
 
@@ -193,7 +191,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_purple"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_2"
+            android:onClick="popup_kiosk_08_2"
             android:text="다음"
             android:textSize="33sp" />
 

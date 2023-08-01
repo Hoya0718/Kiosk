@@ -93,7 +93,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             imageView.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
                     LinearLayout.LayoutParams.MATCH_PARENT,
-                    0.8f
+                    1f
             ));
             imageView.setForegroundGravity(Gravity.CENTER);
             imageView.setImageBitmap(orderList.get(i).getOrderBitmap());
@@ -103,7 +103,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             textView.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
                     LinearLayout.LayoutParams.WRAP_CONTENT,
-                    2.5f
+                    3f
             ));
             textView.setGravity(Gravity.CENTER);
             textView.setText(orderList.get(i).getOrderName());
@@ -124,7 +124,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             minusButton.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
                     LinearLayout.LayoutParams.WRAP_CONTENT,
-                    1.5f
+                    1f
             ));
             minusButton.setText("-");
             minusButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25);
@@ -146,7 +146,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             plusButton.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
                     LinearLayout.LayoutParams.WRAP_CONTENT,
-                    1.5f
+                    1f
             ));
             plusButton.setText("+");
             plusButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25);
@@ -157,7 +157,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             wonTextView.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
                     LinearLayout.LayoutParams.MATCH_PARENT,
-                    0.4f
+                    0.7f
             ));
             wonTextView.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
             wonTextView.setText("₩");
@@ -168,7 +168,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
             priceTextView.setLayoutParams(new LinearLayout.LayoutParams(
                     0,
                     LinearLayout.LayoutParams.MATCH_PARENT,
-                    0.9f
+                    0.8f
             ));
             priceTextView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
             priceTextView.setText(String.valueOf(orderList.get(i).getOrderPrice() * orderList.get(i).getOrderCount()));

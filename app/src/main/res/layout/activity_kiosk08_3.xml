@@ -208,7 +208,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="goto_Kiosk_R_F_P_D"
                     android:orientation="vertical">
 
                     <ImageView
@@ -252,7 +251,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="goto_Kiosk_R_F_P_D"
                     android:orientation="vertical">
 
                     <ImageView
@@ -296,7 +294,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
-                    android:onClick="goto_Kiosk_R_F_P_D"
                     android:orientation="vertical">
 
                     <ImageView
@@ -371,7 +368,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_blue"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_2"
+            android:onClick="popup_kiosk_08_2"
             android:text="이전"
             android:textSize="33sp" />
 
@@ -385,7 +382,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/hospital_btn_purple"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_08_4"
+            android:onClick="popup_kiosk_08_4"
             android:text="다음"
             android:textSize="33sp" />
 

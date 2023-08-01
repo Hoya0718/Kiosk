@@ -30,16 +30,7 @@ import java.util.Locale;
 public class Kiosk_8_1 extends AppCompatActivity {
 
     private TextToSpeech tts;
-
     private myapp sound;
-
-    private myapp text_size;
-    private Button set;
-    private Button sig;
-    private Button cancel;
-
-    private AnimationDrawable anim;
-    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,16 +38,6 @@ public class Kiosk_8_1 extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk08_1);
 
         sound = (myapp) getApplication();
-
-        text_size = (myapp) getApplication();
-
-        set = findViewById(R.id.set_Btn);
-        sig = findViewById(R.id.sig_Btn);
-        cancel = findViewById(R.id.cancel_Btn);
-
-        set.setTextSize(text_size.getId());
-        sig.setTextSize(text_size.getId());
-        cancel.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -78,79 +59,18 @@ public class Kiosk_8_1 extends AppCompatActivity {
                 }
             }
         });
+    }
 
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-//                    speakText("버튼은 여기에 있어요.");
-//                else
-//                    speakText("Button is Here");
-//                handler.postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        set.setBackgroundResource(R.drawable.anim_list);
-//                        anim = (AnimationDrawable) set.getBackground();
-//                        anim.start();
-//                    }
-//                }, 2000);
-//            }
-//        }, 10000);
-
-        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-            boolean one = true;
-            @Override
-            public void onStart(String delaySpeak) {
-                // TTS가 말하기 시작했습니다.
-                Log.d("delaySpeak", "onstart");
-            }
-
-            @Override
-            public void onDone(String delaySpeak) {
-                // TTS가 말하기 끝났습니다.
-                // 다른 코드를 실행합니다.
-
-                if(one) {
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            //tts
-                            if (!tts.isSpeaking()) {
-                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                                    speakText("세트는 여기에 있어요.");
-                                else
-                                    speakText("Set menu is Here");
-                                Log.d("test", "isSpeaking true");
-                            } else Log.d("test", "isSpeeking false");
-                            //버튼
-                            set.setBackgroundResource(R.drawable.anim_list);
-                            anim = (AnimationDrawable) set.getBackground();
-                            anim.start();
-                        }
-                    }, 2000);
-                    Log.d("delaySpeak", "onDone");
-                    one=false;
-                }
-            }
-
-            @Override
-            public void onError(String delaySpeak) {
-                //에러 발생시
-                Log.d("delaySpeak", "onError");
-            }
-        });
+    public void goto_kiosk_07_d(View view) {
+        tts.shutdown();
+        Intent goto_kiosk_07_d = new Intent(getApplicationContext(), Kiosk_7_d.class);
+        startActivity(goto_kiosk_07_d);
     }
 
     public void popup_kiosk_08_2(View view) {
         tts.shutdown();
         Intent popup_kiosk_08_2 = new Intent(getApplicationContext(), Kiosk_8_2.class);
         startActivity(popup_kiosk_08_2);
-    }
-
-    public void goto_kiosk_07_b(View view) {
-        tts.shutdown();
-        Intent goto_kiosk_07_b = new Intent(getApplicationContext(), Kiosk_7_b.class);
-        startActivity(goto_kiosk_07_b);
     }
 
     private void speakText(String text) {

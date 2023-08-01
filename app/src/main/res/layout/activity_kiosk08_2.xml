@@ -9,86 +9,97 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center">
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
 
         <TextView
             android:id="@+id/select_menu"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="@string/select_menu"
-            android:textAlignment="center"
+            android:textSize="22sp"
             android:textColor="#033359"
-            android:textSize="22sp" />
+            android:text="@string/select_menu" />
 
         <TextView
             android:id="@+id/arrow_1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/arrow_1"
-            android:textAlignment="center" />
+            android:gravity="center"
+            android:text="@string/arrow_1" />
 
         <TextView
             android:id="@+id/payment"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="@string/payment"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@string/payment" />
 
         <TextView
             android:id="@+id/arrow_2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/arrow_2"
-            android:textAlignment="center" />
+            android:gravity="center"
+            android:text="@string/arrow_2" />
 
         <TextView
             android:id="@+id/complete"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="@string/complete"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@string/complete" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mc" />
 
         <TextView
             android:id="@+id/burger_text"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:layout_weight="3"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
             android:text="@string/big_mc"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
-        android:orientation="horizontal">
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -96,99 +107,142 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/che_ord_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/check_order" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:gravity="center">
+            android:layout_weight="3"
+            android:orientation="vertical">
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:orientation="horizontal"
                 android:layout_weight="1">
 
-                <TableLayout
+                <LinearLayout
+                    android:id="@+id/set_Btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="goto_Kiosk_R_F_P_Sd"
+                    android:background="@drawable/table_border"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/set_Btn"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/total_menu" />
+
+                    <TextView
+                        android:id="@+id/set_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:onClick="popup_kiosk_08_3"
+                        android:gravity="center"
                         android:text="@string/set_menu"
-                        android:textSize="18sp" />
-                </TableLayout>
+                        android:textSize="30sp" />
 
-                <TableLayout
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lar_Btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="goto_Kiosk_R_F_P_Sd"
+                    android:background="@drawable/table_border"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/lar_Btn"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/total_menu" />
+
+                    <TextView
+                        android:id="@+id/lar_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="@string/large_menu"
-                        android:textSize="18sp" />
-                </TableLayout>
+                        android:textSize="30sp" />
 
-            </TableRow>
+                </LinearLayout>
 
-            <TableRow
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
-            </TableRow>
+                android:layout_weight="1" />
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
-            </TableRow>
+                android:layout_weight="1" />
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
-            </TableRow>
-        </TableLayout>
+                android:layout_weight="1" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_weight="1" >
 
         <Button
-            android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:onClick="popup_kiosk_08_1"
-            android:text="@string/cancle"
-            android:textSize="18sp" />
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_blue"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_kiosk_08_1"
+            android:text="이전"
+            android:textSize="33sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_purple"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_kiosk_08_3"
+            android:text="다음"
+            android:textSize="33sp" />
+
     </LinearLayout>
 
 </LinearLayout>

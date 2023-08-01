@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="2" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,47 +92,10 @@
         android:layout_height="0dp"
         android:layout_weight="3" />
 
-    <!--취소-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:background="@drawable/table_border"
-            android:text="@string/cancel_no"
-            android:textSize="25sp" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.25" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5" >
+        android:layout_weight="1" >
 
         <Button
             android:layout_width="match_parent"
@@ -142,6 +105,8 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_blue"
+            android:textColor="#FFFFFF"
             android:onClick="goto_Back"
             android:text="이전"
             android:textSize="33sp" />
@@ -154,6 +119,8 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_purple"
+            android:textColor="#FFFFFF"
             android:onClick="goto_kiosk_07_b"
             android:text="다음"
             android:textSize="33sp" />

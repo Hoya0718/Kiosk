@@ -9,75 +9,104 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center">
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
 
         <TextView
             android:id="@+id/select_menu"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="@string/select_menu"
-            android:textAlignment="center"
+            android:textSize="22sp"
             android:textColor="#033359"
-            android:textSize="22sp" />
+            android:text="@string/select_menu" />
 
         <TextView
             android:id="@+id/arrow_1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/arrow_1"
-            android:textAlignment="center" />
+            android:gravity="center"
+            android:text="@string/arrow_1" />
 
         <TextView
             android:id="@+id/payment"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="@string/payment"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@string/payment" />
 
         <TextView
             android:id="@+id/arrow_2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/arrow_2"
-            android:textAlignment="center" />
+            android:gravity="center"
+            android:text="@string/arrow_2" />
 
         <TextView
             android:id="@+id/complete"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="@string/complete"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@string/complete" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mc" />
 
         <TextView
-            android:id="@+id/cho_sid_text"
-            android:layout_width="match_parent"
+            android:id="@+id/burger_txt"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/choose_side"
-            android:textSize="30sp" />
+            android:layout_weight="3"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:text="@string/big_mc"
+            android:textSize="50sp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
-        android:orientation="horizontal">
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:text="@string/choose_side"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -88,8 +117,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#D3D3D3"
-                android:orientation="horizontal">
+                android:background="#D3D3D3">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -97,16 +125,17 @@
                     android:text="▣ " />
 
                 <TextView
-                    android:id="@+id/burger_set_text"
+                    android:id="@+id/burger_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/big_mc_set" />
+                    android:textSize="20sp"
+                    android:text="@string/big_mc" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -114,16 +143,16 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/cho_sid_text_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/choose_side" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -131,16 +160,16 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/cho_dri_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/choose_drink" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -148,512 +177,218 @@
                     android:text="□ " />
 
                 <TextView
-                    android:id="@+id/che_ord_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="@string/check_order" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:gravity="center">
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <TableRow
+            <!--1-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <TableLayout
-                    android:id="@+id/snacksan"
+                <LinearLayout
+                    android:id="@+id/huri_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_D"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/huri_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/snacksan" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/snacksan"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩3,000"
-                        android:gravity="center"/>
-                </TableLayout>
-
-                <TableLayout
-                    android:id="@+id/snackshu"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
                         android:layout_weight="3"
-                        android:layout_margin="5dp"
-                        app:srcCompat="@drawable/snackshu" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/snackshu"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩2,300"
-                        android:gravity="center"/>
-                </TableLayout>
-
-                <TableLayout
-                    android:id="@+id/mcnurget"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:layout_margin="5dp"
-                        app:srcCompat="@drawable/mcnurget" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/mcnurget"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩2,900"
-                        android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
-                <TableLayout
-                    android:id="@+id/huri"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:onClick="popup_kiosk_08_4"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:layout_margin="5dp"
                         app:srcCompat="@drawable/huri" />
 
                     <TextView
                         android:id="@+id/huri_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/huri"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="@string/huri" />
 
                     <TextView
-                        android:id="@+id/huri_price"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩2,000"
-                        android:gravity="center"/>
-                </TableLayout>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="₩2,000" />
 
-                <TableLayout
-                    android:id="@+id/hashbra"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cuol_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_D"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/cuol_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/hashbra" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/hashbra"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩1,300"
-                        android:gravity="center"/>
-                </TableLayout>
-
-                <TableLayout
-                    android:id="@+id/chickentender"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
                         android:layout_weight="3"
-                        android:layout_margin="5dp"
-                        app:srcCompat="@drawable/chickentender" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/chickentender"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩1,200"
-                        android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
-                <TableLayout
-                    android:id="@+id/chezstick"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:layout_margin="5dp"
-                        app:srcCompat="@drawable/chezstick" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/chezstick"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩2,500"
-                        android:gravity="center"/>
-                </TableLayout>
-
-                <TableLayout
-                    android:id="@+id/cuol"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:layout_margin="5dp"
                         app:srcCompat="@drawable/cuol" />
 
                     <TextView
+                        android:id="@+id/cuol_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/cuol"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="@string/cuol" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩1,900"
-                        android:gravity="center"/>
-                </TableLayout>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="₩1,900" />
 
-                <TableLayout
-                    android:id="@+id/churu"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/chezstick_lay"
+                    android:clickable="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:background="@drawable/table_border"
+                    android:onClick="goto_Kiosk_R_F_P_D"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/chezstick_img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/churu" />
+                        android:layout_weight="3"
+                        app:srcCompat="@drawable/chezstick" />
 
                     <TextView
+                        android:id="@+id/chezstick_text"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/churu"
-                        android:gravity="center"/>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="@string/chezstick" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
-                        android:text="₩1,000"
-                        android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:text="₩2,500" />
 
-            <TableRow
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--2-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1" />
 
-                <TableLayout
-                    android:id="@+id/icesu"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
+            <!--3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:layout_margin="5dp"
-                        app:srcCompat="@drawable/icesu" />
+            <!--4-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/icesu"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩2,100"
-                        android:gravity="center"/>
-                </TableLayout>
-
-                <TableLayout
-                    android:id="@+id/iceco"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:layout_margin="5dp"
-                        app:srcCompat="@drawable/iceco" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/iceco"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩2,100"
-                        android:gravity="center"/>
-                </TableLayout>
-
-                <TableLayout
-                    android:id="@+id/iceba"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:layout_margin="5dp"
-                        app:srcCompat="@drawable/iceba" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/iceba"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="₩1,600"
-                        android:gravity="center"/>
-                </TableLayout>
-            </TableRow>
-        </TableLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:layout_weight="1" >
 
         <Button
-            android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:onClick="popup_kiosk_08_2"
-            android:text="@string/cancle"
-            android:textSize="18sp" />
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_blue"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_kiosk_08_2"
+            android:text="이전"
+            android:textSize="33sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_purple"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_kiosk_08_4"
+            android:text="다음"
+            android:textSize="33sp" />
+
     </LinearLayout>
 
 </LinearLayout>

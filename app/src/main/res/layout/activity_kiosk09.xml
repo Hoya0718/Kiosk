@@ -9,53 +9,53 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center">
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
 
         <TextView
             android:id="@+id/select_menu"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="@string/select_menu"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="22sp"
+            android:text="@string/select_menu" />
 
         <TextView
             android:id="@+id/arrow_1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/arrow_1"
-            android:textAlignment="center" />
+            android:gravity="center"
+            android:text="@string/arrow_1" />
 
         <TextView
             android:id="@+id/payment"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="@string/payment"
-            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="18sp"
             android:textColor="#033359"
-            android:textSize="22sp" />
+            android:text="@string/payment" />
 
         <TextView
             android:id="@+id/arrow_2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/arrow_2"
-            android:textAlignment="center" />
+            android:gravity="center"
+            android:text="@string/arrow_2" />
 
         <TextView
             android:id="@+id/complete"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="@string/complete"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@string/complete" />
+
     </LinearLayout>
 
     <LinearLayout

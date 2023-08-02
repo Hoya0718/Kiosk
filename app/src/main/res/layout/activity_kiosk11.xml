@@ -85,7 +85,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="아래 결제 단말기에서 결제를\n진행해 주세요"
+            android:text="@string/termianl_below"
             android:textSize="50sp" />
 
     </LinearLayout>

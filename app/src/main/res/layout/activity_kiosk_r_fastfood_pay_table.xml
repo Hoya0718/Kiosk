@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="테이블 서비스를\n이용해 보세요"
+            android:text="@string/try_ts"
             android:textSize="40sp" />
 
     </LinearLayout>
@@ -59,7 +59,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="테이블 서비스"
+                android:text="@string/ts"
                 android:textSize="30sp" />
 
             <ImageView
@@ -86,7 +86,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="카운터에서 픽업"
+                android:text="@string/pickup"
                 android:textSize="30sp" />
 
             <ImageView
@@ -119,7 +119,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
             android:onClick="goto_Kiosk_F_R_O_H"
-            android:text="뒤로"
+            android:text="@string/backwards"
             android:textSize="25sp" />
 
     </LinearLayout>

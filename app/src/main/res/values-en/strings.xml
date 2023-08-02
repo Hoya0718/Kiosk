@@ -28,9 +28,9 @@
     <string name="takeout">TakeOut</string>
     <string name="select_menu">1. Select Menu</string>
     <string name="arrow_1"><![CDATA[->]]></string>
-    <string name="payment">2. Payment</string>
+    <string name="payment">2. Select Details</string>
     <string name="arrow_2"><![CDATA[->]]></string>
-    <string name="complete">3. Complete</string>
+    <string name="complete">3. Payment</string>
     <string name="drink">Drink</string>
     <string name="birger">Burger</string>
     <string name="side">Side</string>
@@ -410,4 +410,23 @@
     <string name="b_15">15</string>
     <string name="b_16">16</string>
     <string name="b_gooback">go back</string>
+    <string name="dining">Please select a dining location</string>
+    <string name="mission">"Mission : "</string>
+    <string name="reco">Recommend</string>
+    <string name="happy_snack">Happy Snack</string>
+    <string name="coffee">Coffee</string>
+    <string name="dessert">Dessert</string>
+    <string name="happy_meal">Happy Meal</string>
+    <string name="added">Added menu to order history</string>
+    <string name="order">Order</string>
+    <string name="try_ts">Try table service</string>
+    <string name="ts">Table service</string>
+    <string name="pickup">Pick up at the counter</string>
+    <string name="backwards">Backwards</string>
+    <string name="previous_step">Previous step</string>
+    <string name="termianl_below">Please proceed with payment at the payment terminal below</string>
+    <string name="been_received">Your order has been received</string>
+    <string name="get_receipt">Get your receipt</string>
+    <string name="pickupyour">Pick up your order at the counter</string>
+    <string name="thankyou">Thank you</string>
 </resources>

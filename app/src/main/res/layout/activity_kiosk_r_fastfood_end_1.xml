@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="감사합니다"
+            android:text="@string/thankyou"
             android:textSize="50sp" />
 
     </LinearLayout>

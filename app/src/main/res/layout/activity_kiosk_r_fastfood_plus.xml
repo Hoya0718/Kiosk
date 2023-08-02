@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="주문 내역에 메뉴가 추가\n되었습니다"
+            android:text="@string/added"
             android:textSize="50sp" />
 
     </LinearLayout>

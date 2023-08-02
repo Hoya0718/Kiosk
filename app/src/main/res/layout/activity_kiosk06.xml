@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="식사 장소를\n선택해 주세요"
+            android:text="@string/dining"
             android:textSize="60sp" />
     </LinearLayout>
 

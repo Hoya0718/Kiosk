@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="주문하신 제품을 카운터에서\n받아주세요"
+            android:text="@string/pickupyour"
             android:textSize="50sp" />
 
     </LinearLayout>

@@ -76,7 +76,7 @@
             android:gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:textStyle="bold"
-            android:text="주문"
+            android:text="@string/order"
             android:textSize="50sp" />
 
     </LinearLayout>

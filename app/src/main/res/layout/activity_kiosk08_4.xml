@@ -762,7 +762,7 @@
             android:background="@drawable/hospital_btn_blue"
             android:textColor="#FFFFFF"
             android:onClick="popup_kiosk_08_3"
-            android:text="이전"
+            android:text="@string/previous"
             android:textSize="33sp" />
 
         <Button
@@ -776,7 +776,7 @@
             android:background="@drawable/hospital_btn_purple"
             android:textColor="#FFFFFF"
             android:onClick="popup_kiosk_08_5"
-            android:text="다음"
+            android:text="@string/next"
             android:textSize="33sp" />
 
     </LinearLayout>

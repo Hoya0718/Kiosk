@@ -83,22 +83,24 @@
         app:layout_constraintTop_toBottomOf="@+id/textView112" />
 
     <Button
-        android:id="@+id/button77"
+        android:id="@+id/to_btn_to_1"
         android:layout_width="150dp"
         android:layout_height="110dp"
+        android:onClick="goto_to_main"
         android:text="처음화면"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/button78" />
+        app:layout_constraintTop_toTopOf="@+id/to_btn_pre_1" />
 
     <Button
-        android:id="@+id/button78"
+        android:id="@+id/to_btn_pre_1"
         android:layout_width="150dp"
         android:layout_height="110dp"
         android:layout_marginStart="30dp"
+        android:onClick="goto_to_ssn2"
         android:text="이전화면"
         android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/button77"
+        app:layout_constraintStart_toEndOf="@+id/to_btn_to_1"
         app:layout_constraintTop_toTopOf="@+id/button79" />
 
     <Button

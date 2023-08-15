@@ -5,7 +5,6 @@ import static java.util.Locale.KOREAN;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
@@ -46,7 +45,7 @@ public class TO_SSN2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_ssn2);
 
-        to_txt_ssn = findViewById(R.id.to_txt_ssn);
+        to_txt_ssn= findViewById(R.id.to_txt_ssn);
 
         to_btn_0 = findViewById(R.id.to_btn_0);
         to_btn_1 = findViewById(R.id.to_btn_1);
@@ -61,7 +60,7 @@ public class TO_SSN2 extends AppCompatActivity {
         to_btn_cancel = findViewById(R.id.to_btn_cancel);
         to_btn_all_delete = findViewById(R.id.to_btn_all_delete);
 
-        //tts 시작--------------------------------------------------------------------------------------
+        //tts 시작----------------------------------------------------------------------------------
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

@@ -194,6 +194,7 @@
         android:layout_width="150dp"
         android:layout_height="110dp"
         android:layout_marginStart="30dp"
+        android:onClick="goto_fee"
         android:text="이전화면"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/button99"

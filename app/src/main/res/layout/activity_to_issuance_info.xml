@@ -101,10 +101,10 @@
         android:text="이전화면"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/to_btn_to_1"
-        app:layout_constraintTop_toTopOf="@+id/button79" />
+        app:layout_constraintTop_toTopOf="@+id/to_btn_check" />
 
     <Button
-        android:id="@+id/button79"
+        android:id="@+id/to_btn_check"
         android:layout_width="150dp"
         android:layout_height="110dp"
         android:layout_marginTop="30dp"

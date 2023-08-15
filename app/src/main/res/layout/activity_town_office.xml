@@ -181,4 +181,14 @@
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/button39" />
 
+    <Button
+        android:id="@+id/button106"
+        android:layout_width="720dp"
+        android:layout_height="60dp"
+        android:onClick="goto_Main"
+        android:text="뒤로가기"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

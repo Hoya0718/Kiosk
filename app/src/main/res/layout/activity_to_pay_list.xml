@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView136" />
 
     <Button
-        android:id="@+id/button98"
+        android:id="@+id/to_btn_card"
         android:layout_width="230dp"
         android:layout_height="130dp"
         android:layout_marginBottom="30dp"
@@ -107,20 +107,21 @@
         app:layout_constraintStart_toStartOf="@+id/textView137" />
 
     <Button
-        android:id="@+id/button101"
+        android:id="@+id/to_btn_coin"
         android:layout_width="230dp"
         android:layout_height="130dp"
         android:layout_marginStart="40dp"
         android:text="현금결제"
         android:textSize="40sp"
-        app:layout_constraintStart_toEndOf="@+id/button98"
-        app:layout_constraintTop_toTopOf="@+id/button98" />
+        app:layout_constraintStart_toEndOf="@+id/to_btn_card"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_card" />
 
     <Button
         android:id="@+id/button107"
         android:layout_width="150dp"
         android:layout_height="110dp"
         android:layout_marginTop="30dp"
+        android:onClick="goto_to_main"
         android:text="처음화면"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/view8"
@@ -131,6 +132,7 @@
         android:layout_width="150dp"
         android:layout_height="110dp"
         android:layout_marginStart="30dp"
+        android:onClick="goto_get_num"
         android:text="이전화면"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/button107"

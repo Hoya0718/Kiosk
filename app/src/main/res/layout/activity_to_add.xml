@@ -51,7 +51,7 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/view5"
-        app:layout_constraintTop_toBottomOf="@+id/button85" />
+        app:layout_constraintTop_toBottomOf="@+id/to_btn_all" />
 
     <Button
         android:id="@+id/button81"
@@ -109,8 +109,12 @@
         android:id="@+id/textView116"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="세대 구성 사유"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView118"
         app:layout_constraintTop_toBottomOf="@+id/textView118" />
 
@@ -118,8 +122,12 @@
         android:id="@+id/textView117"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="세대 구성 일자"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView116"
         app:layout_constraintTop_toBottomOf="@+id/textView116" />
 
@@ -128,8 +136,12 @@
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginStart="30dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="과거의 주소 변동 사항"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/button80"
         app:layout_constraintTop_toTopOf="@+id/button80" />
 
@@ -137,8 +149,12 @@
         android:id="@+id/textView119"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="신고일"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView117"
         app:layout_constraintTop_toBottomOf="@+id/textView117" />
 
@@ -146,8 +162,12 @@
         android:id="@+id/textView120"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="변동사유"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView119"
         app:layout_constraintTop_toBottomOf="@+id/textView119" />
 
@@ -155,8 +175,12 @@
         android:id="@+id/textView121"
         android:layout_width="325dp"
         android:layout_height="70dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="세대주-세대원 외국인 등록"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView120"
         app:layout_constraintTop_toBottomOf="@+id/textView120" />
 
@@ -164,8 +188,12 @@
         android:id="@+id/textView122"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="주민등록번호 뒷자리"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView121"
         app:layout_constraintTop_toBottomOf="@+id/textView121" />
 
@@ -173,8 +201,12 @@
         android:id="@+id/textView123"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="세대주와 세대원의 관계"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView122"
         app:layout_constraintTop_toBottomOf="@+id/textView122" />
 
@@ -182,29 +214,37 @@
         android:id="@+id/textView124"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:gravity="center"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="동거인"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/textView123"
         app:layout_constraintTop_toBottomOf="@+id/textView123" />
 
     <Button
-        android:id="@+id/button85"
+        android:id="@+id/to_btn_all"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
+        android:background="#0D1B68"
         android:text="전체포함"
-        app:layout_constraintEnd_toStartOf="@+id/button86"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/to_btn_not_all"
         app:layout_constraintTop_toBottomOf="@+id/textView115" />
 
     <Button
-        android:id="@+id/button86"
+        android:id="@+id/to_btn_not_all"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
+        android:background="#0D1B68"
         android:text="전체미포함"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/button85" />
+        app:layout_constraintTop_toTopOf="@+id/to_btn_all" />
 
     <Button
         android:id="@+id/button87"
@@ -212,7 +252,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button86"
+        app:layout_constraintEnd_toEndOf="@+id/to_btn_not_all"
         app:layout_constraintTop_toBottomOf="@+id/textView119" />
 
     <Button
@@ -243,28 +283,28 @@
         app:layout_constraintTop_toTopOf="@+id/button88" />
 
     <Button
-        android:id="@+id/button91"
+        android:id="@+id/to_btn_to_2"
         android:layout_width="150dp"
         android:layout_height="110dp"
         android:onClick="goto_to_main"
         android:text="처음화면"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/button92" />
+        app:layout_constraintTop_toTopOf="@+id/goto_to_issuance" />
 
     <Button
-        android:id="@+id/button92"
+        android:id="@+id/goto_to_issuance"
         android:layout_width="150dp"
         android:layout_height="110dp"
         android:layout_marginStart="30dp"
         android:onClick="goto_to_issuance"
         android:text="이전화면"
         android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/button91"
-        app:layout_constraintTop_toTopOf="@+id/button93" />
+        app:layout_constraintStart_toEndOf="@+id/to_btn_to_2"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_check_1" />
 
     <Button
-        android:id="@+id/button93"
+        android:id="@+id/to_btn_check_1"
         android:layout_width="150dp"
         android:layout_height="110dp"
         android:layout_marginTop="30dp"
@@ -275,12 +315,12 @@
         app:layout_constraintTop_toBottomOf="@+id/view5" />
 
     <Button
-        android:id="@+id/button35"
+        android:id="@+id/to_btn_past_a_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button86"
+        app:layout_constraintEnd_toEndOf="@+id/to_btn_not_all"
         app:layout_constraintTop_toTopOf="@+id/textView118" />
 
     <Button
@@ -289,7 +329,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button35"
+        app:layout_constraintEnd_toEndOf="@+id/to_btn_past_a_not"
         app:layout_constraintTop_toTopOf="@+id/textView116" />
 
     <Button

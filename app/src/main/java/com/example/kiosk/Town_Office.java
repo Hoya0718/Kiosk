@@ -131,4 +131,10 @@ public class Town_Office extends AppCompatActivity {
         Intent goto_SSN = new Intent(getApplicationContext(), TO_SSN.class);
         startActivity(goto_SSN);
     }
+
+    public void goto_Main(View v){
+        tts.shutdown();
+        Intent goto_Main = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(goto_Main);
+    }
 }

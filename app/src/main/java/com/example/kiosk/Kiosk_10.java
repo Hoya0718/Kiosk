@@ -9,6 +9,7 @@ import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,12 +20,30 @@ public class Kiosk_10 extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
 
+    private myapp text_size;
+    private TextView card;
+    private TextView cert;
+    private Button cancel;
+
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk10);
 
         sound = (myapp) getApplication();
+
+        text_size = (myapp) getApplication();
+
+        card = findViewById(R.id.card_text);
+        cert = findViewById(R.id.cert_text);
+        cancel = findViewById(R.id.cancel_Btn);
+
+        card.setTextSize(text_size.getId());
+        cert.setTextSize(text_size.getId());
+        cancel.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -44,6 +63,49 @@ public class Kiosk_10 extends AppCompatActivity {
                             "If you choose a mobile gift certificate, you need to show the mobile's QR code to the QR code reader." +
                             "Choose a credit card payment");
                 }
+            }
+        });
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("카드 결제는 여기에 있어요.");
+                                else
+                                    speakText("Card payment is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            card.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) card.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
             }
         });
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Kiosk_8_6">
+    tools:context=".Intro_8_6">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
             android:layout_weight="3"
             android:gravity="center"
             android:textSize="22sp"
+            android:textColor="#033359"
             android:text="@string/select_menu" />
 
         <TextView
@@ -36,7 +37,6 @@
             android:layout_weight="3"
             android:gravity="center"
             android:textSize="18sp"
-            android:textColor="#033359"
             android:text="@string/payment" />
 
         <TextView
@@ -67,7 +67,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="goto_intro_kiosk_08_6"
+            android:onClick="popup_kiosk_08_6"
             app:srcCompat="@drawable/mc" />
 
     </LinearLayout>
@@ -191,7 +191,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
-            android:onClick="popup_kiosk_08_5"
             android:text="@string/cancel_no"
             android:textSize="30sp" />
 
@@ -204,7 +203,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/fastfood_btn_background_yellow"
-            android:onClick="popup_kiosk_08_7"
             android:text="@string/add_to_cart"
             android:textSize="30sp" />
 
@@ -213,6 +211,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1" >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_blue"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_intro_kiosk_08_5"
+            android:text="@string/previous"
+            android:textSize="33sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_purple"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_intro_kiosk_08_7"
+            android:text="@string/next"
+            android:textSize="33sp" />
+
+    </LinearLayout>
 
 </LinearLayout>

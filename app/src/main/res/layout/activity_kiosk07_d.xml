@@ -67,6 +67,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="goto_intro_kiosk_07_d"
             app:srcCompat="@drawable/mc" />
 
         <TextView
@@ -117,7 +118,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/burger_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -132,10 +132,12 @@
                     app:srcCompat="@drawable/menu_2" />
 
                 <TextView
+                    android:id="@+id/burger_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center_vertical"
+                    android:onClick="goto_kiosk_07_b"
                     android:text="@string/birger"
                     android:textSize="25sp" />
 
@@ -166,7 +168,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/side_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -181,10 +182,12 @@
                     app:srcCompat="@drawable/menu_4" />
 
                 <TextView
+                    android:id="@+id/side_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center_vertical"
+                    android:onClick="goto_kiosk_07_s"
                     android:text="@string/side"
                     android:textSize="25sp" />
 
@@ -239,7 +242,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/drink_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -254,6 +256,7 @@
                     app:srcCompat="@drawable/menu_7" />
 
                 <TextView
+                    android:id="@+id/drink_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
@@ -888,36 +891,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="0.25" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/home_Btn"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/hospital_btn_blue"
-            android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_07_s"
-            android:text="@string/previous"
-            android:textSize="33sp" />
+            android:layout_margin="5dp"
+            android:background="@drawable/table_border"
+            android:onClick="goto_kiosk_06"
+            android:text="@string/home"
+            android:textSize="25sp" />
 
-        <Button
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/hospital_btn_purple"
-            android:textColor="#FFFFFF"
-            android:onClick="popup_kiosk_08_1"
-            android:text="@string/next"
-            android:textSize="33sp" />
+            android:layout_weight="1" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25" />
 
 </LinearLayout>

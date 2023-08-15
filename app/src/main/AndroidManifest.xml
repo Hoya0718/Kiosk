@@ -54,6 +54,39 @@
             android:name=".KioskJoin"
             android:exported="false" />
         <activity
+            android:name=".Intro_7_b"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_7_s"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_7_d"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_8_1"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_8_2"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_8_3"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_8_4"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_8_5"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_8_6"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_8_7"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_9"
+            android:exported="false" />
+        <activity
             android:name=".TO_Card_Insert"
             android:exported="false" />
         <activity

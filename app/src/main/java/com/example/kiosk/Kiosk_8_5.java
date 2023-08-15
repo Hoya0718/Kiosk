@@ -19,12 +19,30 @@ public class Kiosk_8_5 extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
 
+    private myapp text_size;
+    private Button canca;
+    private Button add_car;
+    private Button home;
+
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk08_5);
 
         sound = (myapp) getApplication();
+
+        text_size = (myapp) getApplication();
+
+        canca = findViewById(R.id.canca_Btn);
+        add_car = findViewById(R.id.add_car_Btn);
+        home = findViewById(R.id.home_Btn);
+
+        canca.setTextSize(text_size.getId());
+        add_car.setTextSize(text_size.getId());
+        home.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -50,6 +68,49 @@ public class Kiosk_8_5 extends AppCompatActivity {
                 }
             }
         });
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("버튼은 여기에 있어요.");
+                                else
+                                    speakText("Button is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            add_car.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) add_car.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
     public void popup_kiosk_08_4(View view) {
@@ -62,6 +123,18 @@ public class Kiosk_8_5 extends AppCompatActivity {
         tts.shutdown();
         Intent popup_kiosk_08_6 = new Intent(getApplicationContext(), Kiosk_8_6.class);
         startActivity(popup_kiosk_08_6);
+    }
+
+    public void goto_kiosk_06(View view) {
+        tts.shutdown();
+        Intent popup_kiosk_06 = new Intent(getApplicationContext(), Kiosk_6.class);
+        startActivity(popup_kiosk_06);
+    }
+
+    public void goto_intro_kiosk_08_5(View v){
+        tts.shutdown();
+        Intent goto_intro_kiosk_08_5 = new Intent(getApplicationContext(), Intro_8_5.class);
+        startActivity(goto_intro_kiosk_08_5);
     }
 
     private void speakText(String text) {

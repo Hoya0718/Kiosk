@@ -75,18 +75,9 @@ public class Kiosk_R_Part extends AppCompatActivity {
             };
 
             String[] fastfood_side = {
-                    getString(R.string.snacksan),
-                    getString(R.string.snackshu),
-                    getString(R.string.mcnurget),
                     getString(R.string.huri),
-                    getString(R.string.hashbra),
-                    getString(R.string.chickentender),
                     getString(R.string.chezstick),
-                    getString(R.string.cuol),
-                    getString(R.string.churu),
-                    getString(R.string.icesu),
-                    getString(R.string.iceco),
-                    getString(R.string.iceba)
+                    getString(R.string.cuol)
             };
 
             String[] fastfood_drink = {

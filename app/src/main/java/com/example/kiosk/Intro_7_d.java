@@ -9,12 +9,13 @@ import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class Kiosk_8_6 extends AppCompatActivity {
+public class Intro_7_d extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
@@ -22,7 +23,7 @@ public class Kiosk_8_6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk08_6);
+        setContentView(R.layout.activity_intro_kiosk07_d);
 
         sound = (myapp) getApplication();
 
@@ -30,38 +31,34 @@ public class Kiosk_8_6 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("버거 메뉴 화면으로 돌아왔습니다." +
-                            "빅맥 세트가 주문 내역에 추가되어서 왼쪽 하단에 가격이 증가했습니다." +
-                            "장바구니를 결제하기 위해서는 주문 내역 화면으로 가야합니다." +
-                            "주문 내역 버튼을 눌러주세요.");
+                    speakText("음료 메뉴 화면입니다." +
+                            "빅맥을 고르기 위해 버거 메뉴 화면으로 돌아가주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("You have returned to the Burger Menu screen." +
-                            "The Big Mc set has been added to your order history, so the price has increased in the bottom left corner." +
-                            "You need to go to the order history screen to pay for the cart." +
-                            "Please press the order history button.");
+                    speakText("This is the drink menu screen." +
+                            "Please return to the Burger Menu screen to select a Big Mc.");
                 }
             }
         });
     }
 
-    public void popup_kiosk_08_5(View view) {
+    public void goto_kiosk_07_d(View v){
         tts.shutdown();
-        Intent popup_kiosk_08_5 = new Intent(getApplicationContext(), Kiosk_8_5.class);
-        startActivity(popup_kiosk_08_5);
+        Intent goto_kiosk_07_d = new Intent(getApplicationContext(), Kiosk_7_d.class);
+        startActivity(goto_kiosk_07_d);
     }
 
-    public void popup_kiosk_08_7(View view) {
+    public void goto_intro_kiosk_07_s(View v){
         tts.shutdown();
-        Intent popup_kiosk_08_7 = new Intent(getApplicationContext(), Kiosk_8_7.class);
-        startActivity(popup_kiosk_08_7);
+        Intent goto_intro_kiosk_07_s = new Intent(getApplicationContext(), Intro_7_s.class);
+        startActivity(goto_intro_kiosk_07_s);
     }
 
-    public void goto_intro_kiosk_08_6(View v){
+    public void goto_intro_kiosk_08_1(View v){
         tts.shutdown();
-        Intent goto_intro_kiosk_08_6 = new Intent(getApplicationContext(), Intro_8_6.class);
-        startActivity(goto_intro_kiosk_08_6);
+        Intent goto_intro_kiosk_08_1 = new Intent(getApplicationContext(), Intro_8_1.class);
+        startActivity(goto_intro_kiosk_08_1);
     }
 
     private void speakText(String text) {

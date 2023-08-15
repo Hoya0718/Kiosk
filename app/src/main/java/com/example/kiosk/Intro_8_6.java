@@ -1,20 +1,15 @@
 package com.example.kiosk;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.speech.tts.TextToSpeech;
-import android.speech.tts.UtteranceProgressListener;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class Kiosk_8_6 extends AppCompatActivity {
+public class Intro_8_6 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
@@ -22,7 +17,7 @@ public class Kiosk_8_6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk08_6);
+        setContentView(R.layout.activity_intro_kiosk08_6);
 
         sound = (myapp) getApplication();
 
@@ -46,22 +41,22 @@ public class Kiosk_8_6 extends AppCompatActivity {
         });
     }
 
-    public void popup_kiosk_08_5(View view) {
+    public void popup_kiosk_08_6(View v){
         tts.shutdown();
-        Intent popup_kiosk_08_5 = new Intent(getApplicationContext(), Kiosk_8_5.class);
-        startActivity(popup_kiosk_08_5);
+        Intent popup_kiosk_08_6 = new Intent(getApplicationContext(), Kiosk_8_6.class);
+        startActivity(popup_kiosk_08_6);
     }
 
-    public void popup_kiosk_08_7(View view) {
+    public void goto_intro_kiosk_08_5(View v){
         tts.shutdown();
-        Intent popup_kiosk_08_7 = new Intent(getApplicationContext(), Kiosk_8_7.class);
-        startActivity(popup_kiosk_08_7);
+        Intent goto_intro_kiosk_08_5 = new Intent(getApplicationContext(), Intro_8_5.class);
+        startActivity(goto_intro_kiosk_08_5);
     }
 
-    public void goto_intro_kiosk_08_6(View v){
+    public void goto_intro_kiosk_08_7(View v){
         tts.shutdown();
-        Intent goto_intro_kiosk_08_6 = new Intent(getApplicationContext(), Intro_8_6.class);
-        startActivity(goto_intro_kiosk_08_6);
+        Intent goto_intro_kiosk_08_7 = new Intent(getApplicationContext(), Intro_8_7.class);
+        startActivity(goto_intro_kiosk_08_7);
     }
 
     private void speakText(String text) {

@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Kiosk_8_1">
+    tools:context=".Intro_8_1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
             android:layout_weight="3"
             android:gravity="center"
             android:textSize="22sp"
+            android:textColor="#033359"
             android:text="@string/select_menu" />
 
         <TextView
@@ -36,7 +37,6 @@
             android:layout_weight="3"
             android:gravity="center"
             android:textSize="18sp"
-            android:textColor="#033359"
             android:text="@string/payment" />
 
         <TextView
@@ -67,7 +67,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="goto_intro_kiosk_08_1"
+            android:onClick="popup_kiosk_08_1"
             app:srcCompat="@drawable/mc" />
 
         <TextView
@@ -103,13 +103,13 @@
         android:layout_weight="3">
 
         <LinearLayout
+            android:id="@+id/set_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/table_border"
-            android:onClick="popup_kiosk_08_2"
             android:orientation="vertical">
 
             <ImageView
@@ -120,7 +120,6 @@
                 app:srcCompat="@drawable/total_menu" />
 
             <TextView
-                android:id="@+id/set_text"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -131,6 +130,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/sig_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -147,7 +147,6 @@
                 app:srcCompat="@drawable/bigmc" />
 
             <TextView
-                android:id="@+id/sig_text"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -162,29 +161,41 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="4" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1" >
 
         <Button
-            android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_blue"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_intro_kiosk_07_d"
+            android:text="@string/previous"
+            android:textSize="33sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/table_border"
-            android:onClick="goto_kiosk_07_b"
-            android:text="@string/cancel_no"
-            android:textSize="30sp" />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_purple"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_intro_kiosk_08_2"
+            android:text="@string/next"
+            android:textSize="33sp" />
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3" />
 
 </LinearLayout>

@@ -27,6 +27,8 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.Locale;
 
 public class Kiosk_7_b extends AppCompatActivity {
@@ -34,12 +36,42 @@ public class Kiosk_7_b extends AppCompatActivity {
     private TextToSpeech tts;
     private myapp sound;
 
+    private myapp text_size;
+    private TextView burger;
+    private TextView side;
+    private TextView drink;
+    private Button ord_his;
+    private Button home;
+
+    private AnimationDrawable anim;
+    Handler handler = new Handler();
+
+    private TextView bigmc_text;
+    private TextView bigmc_price;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk07_b);
 
         sound = (myapp) getApplication();
+
+        text_size = (myapp) getApplication();
+
+        burger = findViewById(R.id.burger_text);
+        side = findViewById(R.id.side_text);
+        drink = findViewById(R.id.drink_text);
+        ord_his = findViewById(R.id.ord_his_Btn);
+        home = findViewById(R.id.home_Btn);
+
+        burger.setTextSize(text_size.getId());
+        side.setTextSize(text_size.getId());
+        drink.setTextSize(text_size.getId());
+        ord_his.setTextSize(text_size.getId());
+        home.setTextSize(text_size.getId());
+
+        bigmc_text = findViewById(R.id.bigmc_text);
+        bigmc_price = findViewById(R.id.bigmc_price);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
@@ -59,6 +91,53 @@ public class Kiosk_7_b extends AppCompatActivity {
                 }
             }
         });
+
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            boolean one = true;
+            @Override
+            public void onStart(String delaySpeak) {
+                // TTS가 말하기 시작했습니다.
+                Log.d("delaySpeak", "onstart");
+            }
+
+            @Override
+            public void onDone(String delaySpeak) {
+                // TTS가 말하기 끝났습니다.
+                // 다른 코드를 실행합니다.
+
+                if(one) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //tts
+                            if (!tts.isSpeaking()) {
+                                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
+                                    speakText("빅맥은 여기에 있어요.");
+                                else
+                                    speakText("Big Mc is Here");
+                                Log.d("test", "isSpeaking true");
+                            } else Log.d("test", "isSpeeking false");
+                            //버튼
+                            bigmc_text.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) bigmc_text.getBackground();
+                            anim.start();
+
+                            bigmc_price.setBackgroundResource(R.drawable.anim_list);
+                            anim = (AnimationDrawable) bigmc_price.getBackground();
+                            anim.start();
+                        }
+                    }, 2000);
+                    Log.d("delaySpeak", "onDone");
+                    one=false;
+                }
+            }
+
+            @Override
+            public void onError(String delaySpeak) {
+                //에러 발생시
+                Log.d("delaySpeak", "onError");
+            }
+        });
     }
 
     public void goto_kiosk_06(View v){
@@ -71,6 +150,24 @@ public class Kiosk_7_b extends AppCompatActivity {
         tts.shutdown();
         Intent goto_kiosk_07_s = new Intent(getApplicationContext(), Kiosk_7_s.class);
         startActivity(goto_kiosk_07_s);
+    }
+
+    public void goto_kiosk_07_d(View v){
+        tts.shutdown();
+        Intent goto_kiosk_07_d = new Intent(getApplicationContext(), Kiosk_7_d.class);
+        startActivity(goto_kiosk_07_d);
+    }
+
+    public void popup_kiosk_08_1(View view) {
+        tts.shutdown();
+        Intent popup_kiosk_08_1 = new Intent(getApplicationContext(), Kiosk_8_1.class);
+        startActivity(popup_kiosk_08_1);
+    }
+
+    public void goto_intro_kiosk_07_b(View v){
+        tts.shutdown();
+        Intent goto_intro_kiosk_07_b = new Intent(getApplicationContext(), Intro_7_b.class);
+        startActivity(goto_intro_kiosk_07_b);
     }
 
     private void speakText(String text) {

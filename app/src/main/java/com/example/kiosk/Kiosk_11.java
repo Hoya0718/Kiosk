@@ -244,15 +244,6 @@ public class Kiosk_11 extends AppCompatActivity {
         }
     }
 
-    // 여기까지
-
-    public void cancel (View v){
-        tts.shutdown();
-        Intent cancel = new Intent (getApplicationContext(), Kiosk_29_2.class);
-        disconnectBluetooth();
-        startActivity(cancel);
-    }
-
     private void speakText(String text) {
         tts.setSpeechRate(sound.getTtsSpeed()) ;
         sound.getTtsVolume();

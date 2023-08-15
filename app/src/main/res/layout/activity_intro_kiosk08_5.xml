@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Kiosk_8_5">
+    tools:context=".Intro_8_5">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
             android:layout_weight="3"
             android:gravity="center"
             android:textSize="22sp"
+            android:textColor="#033359"
             android:text="@string/select_menu" />
 
         <TextView
@@ -36,7 +37,6 @@
             android:layout_weight="3"
             android:gravity="center"
             android:textSize="18sp"
-            android:textColor="#033359"
             android:text="@string/payment" />
 
         <TextView
@@ -67,7 +67,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="goto_intro_kiosk_08_5"
+            android:onClick="popup_kiosk_08_5"
             app:srcCompat="@drawable/mc" />
 
         <TextView
@@ -288,7 +288,6 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/canca_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -301,7 +300,6 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/add_car_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -310,7 +308,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/fastfood_btn_background_yellow"
-            android:onClick="popup_kiosk_08_6"
             android:text="@string/add_to_cart"
             android:textSize="30sp" />
 
@@ -319,39 +316,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+        android:layout_weight="1" >
 
         <Button
-            android:id="@+id/home_Btn"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:background="@drawable/table_border"
-            android:onClick="goto_kiosk_06"
-            android:text="@string/home"
-            android:textSize="25sp" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_blue"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_intro_kiosk_08_4"
+            android:text="@string/previous"
+            android:textSize="33sp" />
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/hospital_btn_purple"
+            android:textColor="#FFFFFF"
+            android:onClick="goto_intro_kiosk_08_6"
+            android:text="@string/next"
+            android:textSize="33sp" />
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.25" />
 
 </LinearLayout>

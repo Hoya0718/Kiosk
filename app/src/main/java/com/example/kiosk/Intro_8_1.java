@@ -9,12 +9,13 @@ import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class Kiosk_8_6 extends AppCompatActivity {
+public class Intro_8_1 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
@@ -22,7 +23,7 @@ public class Kiosk_8_6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk08_6);
+        setContentView(R.layout.activity_intro_kiosk08_1);
 
         sound = (myapp) getApplication();
 
@@ -30,38 +31,40 @@ public class Kiosk_8_6 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("버거 메뉴 화면으로 돌아왔습니다." +
-                            "빅맥 세트가 주문 내역에 추가되어서 왼쪽 하단에 가격이 증가했습니다." +
-                            "장바구니를 결제하기 위해서는 주문 내역 화면으로 가야합니다." +
-                            "주문 내역 버튼을 눌러주세요.");
+                    speakText("빅맥이 선택되었습니다." +
+                            "이 화면은 세트 메뉴 여부를 물어보는 화면입니다." +
+                            "세트 메뉴를 고르면 사이드 메뉴와 음료를 값싸게 먹을 수 있습니다." +
+                            "단품은 사이드 메뉴와 음료 없이 햄버거만 나와요." +
+                            "세트 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("You have returned to the Burger Menu screen." +
-                            "The Big Mc set has been added to your order history, so the price has increased in the bottom left corner." +
-                            "You need to go to the order history screen to pay for the cart." +
-                            "Please press the order history button.");
+                    speakText("Big Mc is selected." +
+                            "This screen asks whether or not you want a set menu." +
+                            "If you choose the set menu, you can get a cheap side menu and drinks." +
+                            "Single item only comes with hamburgers, no side menus and no drinks." +
+                            "Please press the set button.");
                 }
             }
         });
     }
 
-    public void popup_kiosk_08_5(View view) {
+    public void popup_kiosk_08_1(View v){
         tts.shutdown();
-        Intent popup_kiosk_08_5 = new Intent(getApplicationContext(), Kiosk_8_5.class);
-        startActivity(popup_kiosk_08_5);
+        Intent popup_kiosk_08_1 = new Intent(getApplicationContext(), Kiosk_8_1.class);
+        startActivity(popup_kiosk_08_1);
     }
 
-    public void popup_kiosk_08_7(View view) {
+    public void goto_intro_kiosk_07_d(View v){
         tts.shutdown();
-        Intent popup_kiosk_08_7 = new Intent(getApplicationContext(), Kiosk_8_7.class);
-        startActivity(popup_kiosk_08_7);
+        Intent goto_intro_kiosk_07_d = new Intent(getApplicationContext(), Intro_7_d.class);
+        startActivity(goto_intro_kiosk_07_d);
     }
 
-    public void goto_intro_kiosk_08_6(View v){
+    public void goto_intro_kiosk_08_2(View v){
         tts.shutdown();
-        Intent goto_intro_kiosk_08_6 = new Intent(getApplicationContext(), Intro_8_6.class);
-        startActivity(goto_intro_kiosk_08_6);
+        Intent goto_intro_kiosk_08_2 = new Intent(getApplicationContext(), Intro_8_2.class);
+        startActivity(goto_intro_kiosk_08_2);
     }
 
     private void speakText(String text) {

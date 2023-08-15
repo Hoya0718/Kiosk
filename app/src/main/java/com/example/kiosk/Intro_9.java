@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class Kiosk_8_6 extends AppCompatActivity {
+public class Intro_9 extends AppCompatActivity {
 
     private TextToSpeech tts;
     private myapp sound;
@@ -22,7 +22,7 @@ public class Kiosk_8_6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kiosk08_6);
+        setContentView(R.layout.activity_intro_kiosk09);
 
         sound = (myapp) getApplication();
 
@@ -30,38 +30,40 @@ public class Kiosk_8_6 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("버거 메뉴 화면으로 돌아왔습니다." +
-                            "빅맥 세트가 주문 내역에 추가되어서 왼쪽 하단에 가격이 증가했습니다." +
-                            "장바구니를 결제하기 위해서는 주문 내역 화면으로 가야합니다." +
-                            "주문 내역 버튼을 눌러주세요.");
+                    speakText("주문 내역에 빅맥 세트가 추가되었습니다." +
+                            "이 화면에서는 메뉴를 삭제 또는 수량을 조절할 수 있습니다." +
+                            "추가 주문을 누르면 버거 선택 화면으로 돌아가서 다른 메뉴를 고를 수 있습니다." +
+                            "결제 방법을 고르기 위해서는 주문 완료 버튼을 눌러야합니다." +
+                            "주문 완료 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("You have returned to the Burger Menu screen." +
-                            "The Big Mc set has been added to your order history, so the price has increased in the bottom left corner." +
-                            "You need to go to the order history screen to pay for the cart." +
-                            "Please press the order history button.");
+                    speakText("The Big Mc set has been added to your order history." +
+                            "On this screen, you can delete the menu or adjust the quantity." +
+                            "Pressing More Order will take you back to the burger selection screen where you can choose another menu item." +
+                            "To choose a payment method, you must press the Complete Order button." +
+                            "Please press the order completion button.");
                 }
             }
         });
     }
 
-    public void popup_kiosk_08_5(View view) {
+    public void goto_kiosk_09(View v){
         tts.shutdown();
-        Intent popup_kiosk_08_5 = new Intent(getApplicationContext(), Kiosk_8_5.class);
-        startActivity(popup_kiosk_08_5);
+        Intent goto_kiosk_09 = new Intent(getApplicationContext(), Kiosk_9.class);
+        startActivity(goto_kiosk_09);
     }
 
-    public void popup_kiosk_08_7(View view) {
+    public void goto_intro_kiosk_08_7(View v){
         tts.shutdown();
-        Intent popup_kiosk_08_7 = new Intent(getApplicationContext(), Kiosk_8_7.class);
-        startActivity(popup_kiosk_08_7);
+        Intent goto_intro_kiosk_08_7 = new Intent(getApplicationContext(), Intro_8_7.class);
+        startActivity(goto_intro_kiosk_08_7);
     }
 
-    public void goto_intro_kiosk_08_6(View v){
+    public void goto_kiosk_10(View v){
         tts.shutdown();
-        Intent goto_intro_kiosk_08_6 = new Intent(getApplicationContext(), Intro_8_6.class);
-        startActivity(goto_intro_kiosk_08_6);
+        Intent goto_kiosk_10 = new Intent(getApplicationContext(), Kiosk_10.class);
+        startActivity(goto_kiosk_10);
     }
 
     private void speakText(String text) {

@@ -36,7 +36,6 @@
             android:layout_weight="3"
             android:gravity="center"
             android:textSize="18sp"
-            android:textColor="#033359"
             android:text="@string/payment" />
 
         <TextView
@@ -54,6 +53,7 @@
             android:layout_weight="3"
             android:gravity="center"
             android:textSize="18sp"
+            android:textColor="#033359"
             android:text="@string/complete" />
 
     </LinearLayout>
@@ -112,6 +112,7 @@
                 app:srcCompat="@drawable/fast_cert" />
 
             <TextView
+                android:id="@+id/cert_text"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -128,6 +129,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/table_border"
+            android:onClick="goto_kiosk_11"
             android:orientation="vertical">
 
             <ImageView
@@ -138,6 +140,7 @@
                 app:srcCompat="@drawable/fast_card" />
 
             <TextView
+                android:id="@+id/card_text"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -162,35 +165,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="1">
 
         <Button
+            android:id="@+id/cancel_Btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/hospital_btn_blue"
-            android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_09"
-            android:text="@string/previous"
-            android:textSize="33sp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/hospital_btn_purple"
-            android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_11"
-            android:text="@string/next"
-            android:textSize="33sp" />
+            android:background="@drawable/table_border"
+            android:onClick="goto_kiosk_09"
+            android:text="@string/previous_step"
+            android:textSize="25sp" />
 
     </LinearLayout>
 

@@ -109,6 +109,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
+            android:onClick="fastfoodIntro"
             android:background="@drawable/table_border"
             android:orientation="vertical">
 
@@ -136,6 +137,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
+            android:onClick="fastfoodIntro"
             android:background="@drawable/table_border"
             android:orientation="vertical">
 

@@ -25,20 +25,58 @@ public class Intro_8_6 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("버거 메뉴 화면으로 돌아왔습니다." +
-                            "빅맥 세트가 주문 내역에 추가되어서 왼쪽 하단에 가격이 증가했습니다." +
-                            "장바구니를 결제하기 위해서는 주문 내역 화면으로 가야합니다." +
-                            "주문 내역 버튼을 눌러주세요.");
+                    speakText("단품을 골랐을 때 나오는 화면입니다." +
+                            "화면의 버튼을 누르면 메뉴에 대한 설명을 들을 수 있습니다." +
+                            "흐름에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("You have returned to the Burger Menu screen." +
-                            "The Big Mc set has been added to your order history, so the price has increased in the bottom left corner." +
-                            "You need to go to the order history screen to pay for the cart." +
-                            "Please press the order history button.");
+                    speakText("This is the screen that appears when you select a single item." +
+                            "Press the button on the screen to hear the explanation of the menu." +
+                            "If you would like an explanation of the flow, please press the McDonald's logo button.");
                 }
             }
         });
+    }
+
+    public void fastfoodIntro(View view) {
+        switch (view.getId()) {
+            case R.id.minus_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("감소");
+                } else {
+                    speakText("minus");
+                }
+                break;
+            case R.id.count_text:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("개수");
+                } else {
+                    speakText("count");
+                }
+                break;
+            case R.id.plus_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("추가");
+                } else {
+                    speakText("plus");
+                }
+                break;
+            case R.id.cancel_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("취소");
+                } else {
+                    speakText("cancel");
+                }
+                break;
+            case R.id.add_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("장바구니 추가");
+                } else {
+                    speakText("add");
+                }
+                break;
+        }
     }
 
     public void popup_kiosk_08_6(View v){

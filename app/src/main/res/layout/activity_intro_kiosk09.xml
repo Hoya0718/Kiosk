@@ -110,6 +110,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_gravity="center"
+                        android:onClick="fastfoodIntro"
                         android:background="@drawable/fastfood_btn_background_yellow"
                         android:text="@string/delete"
                         android:textSize="10sp" />
@@ -143,6 +144,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:onClick="fastfoodIntro"
                             android:background="@drawable/table_border"
                             android:text="-"
                             android:textSize="10sp" />
@@ -153,6 +155,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:onClick="fastfoodIntro"
                             android:text="1"
                             android:textSize="18sp" />
 
@@ -161,6 +164,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:onClick="fastfoodIntro"
                             android:background="@drawable/table_border"
                             android:text="+"
                             android:textSize="10sp" />
@@ -229,6 +233,7 @@
         android:layout_weight="1">
 
         <Button
+            android:id="@+id/more_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -236,11 +241,13 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:onClick="fastfoodIntro"
             android:background="@drawable/table_border"
             android:text="@string/add_order"
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/complete_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -248,6 +255,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:onClick="fastfoodIntro"
             android:background="@drawable/fastfood_btn_background_yellow"
             android:text="@string/complete_order"
             android:textSize="30sp" />

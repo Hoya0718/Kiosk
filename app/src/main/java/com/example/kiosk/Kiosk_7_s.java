@@ -56,12 +56,14 @@ public class Kiosk_7_s extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("사이드 메뉴 화면입니다." +
-                            "빅맥을 고르기 위해 버거 메뉴 화면으로 돌아가주세요.");
+                            "빅맥을 고르기 위해 버거 메뉴 화면으로 돌아가주세요." +
+                            "버튼에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("This is the side menu screen." +
-                            "Please return to the Burger Menu screen to select a Big Mc.");
+                            "Please return to the Burger Menu screen to select a Big Mc." +
+                            "For an explanation of the button, please click the McDonald's logo button.");
                 }
             }
         });

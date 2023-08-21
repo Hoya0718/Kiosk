@@ -208,6 +208,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -251,6 +252,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -294,6 +296,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 

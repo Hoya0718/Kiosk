@@ -80,14 +80,16 @@ public class Kiosk_7_b extends AppCompatActivity {
                     speakText("버거 메뉴를 고르는 화면입니다." +
                             "이 화면에서는 왼쪽 버튼들을 눌러 다른 종류의 메뉴들을 볼 수 있습니다." +
                             "버거의 종류를 고르는 것부터 난관인데 가장 인기있는 버거인 빅맥을 주문해보겠습니다." +
-                            "메뉴에서 빅맥을 골라주세요.");
+                            "메뉴에서 빅맥을 골라주세요." +
+                            "버튼에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("This is the screen to choose a burger menu." +
                             "On this screen, you can see different types of menus by pressing the buttons on the left." +
                             "Choosing the type of burger is a challenge, so I'll order the most popular burger, the Big Mc." +
-                            "Choose a Big Mc from the menu, please.");
+                            "Choose a Big Mc from the menu, please." +
+                            "For an explanation of the button, please click the McDonald's logo button.");
                 }
             }
         });

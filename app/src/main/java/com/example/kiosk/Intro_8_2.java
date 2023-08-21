@@ -31,20 +31,37 @@ public class Intro_8_2 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("세트가 선택되었습니다." +
-                            "이 화면은 세트의 크기를 물어보는 화면입니다." +
-                            "라지 세트는 양이 많아요." +
-                            "세트 버튼을 눌러주세요.");
+                    speakText("세트의 크기를 물어보는 화면입니다." +
+                            "화면의 버튼을 누르면 메뉴에 대한 설명을 들을 수 있습니다." +
+                            "흐름에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("The set is selected." +
-                            "This screen asks for the size of the set." +
-                            "The large set has a lot of volume." +
-                            "Please press the set button.");
+                    speakText("This screen asks for the size of the set." +
+                            "Press the button on the screen to hear the explanation of the menu." +
+                            "If you would like an explanation of the flow, please press the McDonald's logo button.");
                 }
             }
         });
+    }
+
+    public void fastfoodIntro(View view) {
+        switch (view.getId()) {
+            case R.id.set_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("세트");
+                } else {
+                    speakText("set");
+                }
+                break;
+            case R.id.lar_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("라지세트");
+                } else {
+                    speakText("large set");
+                }
+                break;
+        }
     }
 
     public void popup_kiosk_08_2(View v){

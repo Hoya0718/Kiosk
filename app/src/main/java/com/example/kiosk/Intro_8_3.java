@@ -31,18 +31,44 @@ public class Intro_8_3 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("빅맥 세트가 선택되었습니다." +
-                            "이제 사이드 메뉴와 음료만 고르면 됩니다." +
-                            "사이드 메뉴에서 가장 인기있는 후렌치 후라이를 골라주세요.");
+                    speakText("세트 구성 중 사이드 메뉴를 고르는 화면입니다." +
+                            "화면의 버튼을 누르면 메뉴에 대한 설명을 들을 수 있습니다." +
+                            "흐름에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("Big Mc set is selected." +
-                            "Now I just have to choose a side menu and a drink." +
-                            "Choose the most popular French fries from the side menu.");
+                    speakText("This is the screen to choose a side menu during set composition." +
+                            "Press the button on the screen to hear the explanation of the menu." +
+                            "If you would like an explanation of the flow, please press the McDonald's logo button.");
                 }
             }
         });
+    }
+
+    public void fastfoodIntro(View view) {
+        switch (view.getId()) {
+            case R.id.huri_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("후렌치 후라이");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.cuol_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("코울슬로");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.chezstick_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("골든 모짜렐라 치즈스틱");
+                } else {
+                    speakText("burger");
+                }
+                break;
+        }
     }
 
     public void popup_kiosk_08_3(View v){

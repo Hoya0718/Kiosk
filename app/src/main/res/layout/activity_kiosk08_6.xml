@@ -196,6 +196,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/add_ord_Btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

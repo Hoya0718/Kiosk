@@ -30,26 +30,65 @@ public class Intro_8_5 extends AppCompatActivity {
             public void onInit(int status) {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
-                    speakText("지금까지 고른 버거의 항목들을 보여주는 화면입니다." +
-                            "빅맥 세트가 추가되었습니다." +
-                            "빅맥 세트의 구성은 빅맥, 후렌치 후라이, 코카콜라로 세팅되었습니다." +
-                            "이 화면에서는 고른 메뉴의 수량을 조절할 수 있습니다." +
-                            "취소 버튼을 누르면 이전 화면으로 가고," +
-                            "장바구니 추가 버튼을 누르면 상단의 메뉴가 주문 내역에 추가됩니다." +
-                            "장바구니 추가 버튼을 눌러주세요.");
+                    speakText("고른 메뉴의 수량을 조절하는 화면입니다." +
+                            "화면의 버튼을 누르면 메뉴에 대한 설명을 들을 수 있습니다." +
+                            "흐름에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
-                    speakText("This screen shows the items of the burgers you've selected so far." +
-                            "The Big Mc set has been added." +
-                            "The Big Mc set consists of a Big Mc, French fries, and Coca-Cola." +
-                            "On this screen, you can adjust the quantity of the selected menu." +
-                            "If you press the cancel button, you go to the previous screen," +
-                            "and if you press the add to cart button, the menu at the top is added to your order history." +
-                            "Please press the Add to Cart button.");
+                    speakText("This is a screen to adjust the quantity of the selected menu." +
+                            "Press the button on the screen to hear the explanation of the menu." +
+                            "If you would like an explanation of the flow, please press the McDonald's logo button.");
                 }
             }
         });
+    }
+
+    public void fastfoodIntro(View view) {
+        switch (view.getId()) {
+            case R.id.show_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("상품 정보");
+                } else {
+                    speakText("show");
+                }
+                break;
+            case R.id.minus_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("감소");
+                } else {
+                    speakText("minus");
+                }
+                break;
+            case R.id.count_text:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("개수");
+                } else {
+                    speakText("count");
+                }
+                break;
+            case R.id.plus_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("추가");
+                } else {
+                    speakText("plus");
+                }
+                break;
+            case R.id.cancel_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("취소");
+                } else {
+                    speakText("cancel");
+                }
+                break;
+            case R.id.add_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("장바구니 추가");
+                } else {
+                    speakText("add");
+                }
+                break;
+        }
     }
 
     public void popup_kiosk_08_5(View v){

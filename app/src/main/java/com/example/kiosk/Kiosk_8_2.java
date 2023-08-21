@@ -52,14 +52,16 @@ public class Kiosk_8_2 extends AppCompatActivity {
                     speakText("세트가 선택되었습니다." +
                             "이 화면은 세트의 크기를 물어보는 화면입니다." +
                             "라지 세트는 양이 많아요." +
-                            "세트 버튼을 눌러주세요.");
+                            "세트 버튼을 눌러주세요." +
+                            "버튼에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("The set is selected." +
                             "This screen asks for the size of the set." +
                             "The large set has a lot of volume." +
-                            "Please press the set button.");
+                            "Please press the set button." +
+                            "For an explanation of the button, please click the McDonald's logo button.");
                 }
             }
         });

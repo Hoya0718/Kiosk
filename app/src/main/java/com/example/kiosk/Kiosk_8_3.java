@@ -51,13 +51,15 @@ public class Kiosk_8_3 extends AppCompatActivity {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("빅맥 세트가 선택되었습니다." +
                             "이제 사이드 메뉴와 음료만 고르면 됩니다." +
-                            "사이드 메뉴에서 가장 인기있는 후렌치 후라이를 골라주세요.");
+                            "사이드 메뉴에서 가장 인기있는 후렌치 후라이를 골라주세요." +
+                            "버튼에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("Big Mc set is selected." +
                             "Now I just have to choose a side menu and a drink." +
-                            "Choose the most popular French fries from the side menu.");
+                            "Choose the most popular French fries from the side menu." +
+                            "For an explanation of the button, please click the McDonald's logo button.");
                 }
             }
         });

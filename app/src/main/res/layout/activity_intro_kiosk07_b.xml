@@ -94,10 +94,12 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/reco_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="fastfoodIntro"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -144,10 +146,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/snack_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="fastfoodIntro"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -194,10 +198,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/coffee_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="fastfoodIntro"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -218,10 +224,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/dessert_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="fastfoodIntro"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -268,10 +276,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/meal_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="fastfoodIntro"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -317,6 +327,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -360,6 +371,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -403,6 +415,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -454,6 +467,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -497,6 +511,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -540,6 +555,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -591,6 +607,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -634,6 +651,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -677,6 +695,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -728,6 +747,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -771,6 +791,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -814,6 +835,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="fastfoodIntro"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -883,6 +905,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:onClick="fastfoodIntro"
             android:background="@drawable/fastfood_btn_background_yellow"
             android:text="@string/order_history"
             android:textSize="30sp" />

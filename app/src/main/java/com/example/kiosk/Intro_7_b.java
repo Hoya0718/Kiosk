@@ -32,16 +32,14 @@ public class Intro_7_b extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("버거 메뉴를 고르는 화면입니다." +
-                            "이 화면에서는 왼쪽 버튼들을 눌러 다른 종류의 메뉴들을 볼 수 있습니다." +
-                            "버거의 종류를 고르는 것부터 난관인데 가장 인기있는 버거인 빅맥을 주문해보겠습니다." +
-                            "메뉴에서 빅맥을 골라주세요.");
+                            "화면의 버튼을 누르면 메뉴에 대한 설명을 들을 수 있습니다." +
+                            "흐름에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("This is the screen to choose a burger menu." +
-                            "On this screen, you can see different types of menus by pressing the buttons on the left." +
-                            "Choosing the type of burger is a challenge, so I'll order the most popular burger, the Big Mc." +
-                            "Choose a Big Mc from the menu, please.");
+                            "You can hear the explanation of the menu by pressing the button on the screen." +
+                            "For an explanation of the flow, please click the McDonald's logo button.");
                 }
             }
         });
@@ -49,11 +47,25 @@ public class Intro_7_b extends AppCompatActivity {
 
     public void fastfoodIntro(View view) {
         switch (view.getId()) {
+            case R.id.reco_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("추천메뉴");
+                } else {
+                    speakText("reco");
+                }
+                break;
             case R.id.burger_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("버거");
                 } else {
                     speakText("burger");
+                }
+                break;
+            case R.id.snack_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("해피스낵");
+                } else {
+                    speakText("happy-snack");
                 }
                 break;
             case R.id.side_Btn:
@@ -63,11 +75,125 @@ public class Intro_7_b extends AppCompatActivity {
                     speakText("side");
                 }
                 break;
+            case R.id.coffee_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("커피");
+                } else {
+                    speakText("coffee");
+                }
+                break;
+            case R.id.dessert_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("디저트");
+                } else {
+                    speakText("dessert");
+                }
+                break;
             case R.id.drink_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("음료");
                 } else {
                     speakText("drink");
+                }
+                break;
+            case R.id.meal_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("해피밀");
+                } else {
+                    speakText("happy-meal");
+                }
+                break;
+
+            case R.id.b1955_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("일구오오버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.batodi_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("베이컨 토마토 디럭스");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.bigmc_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("빅맥");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.mcchi_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("맥치킨버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.mccri_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("맥크리스피버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.quater_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("쿼터파운드 치즈 버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.sanhi_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("맥스파이시 상하이 버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.susu_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("슈슈버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.subi_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("슈비버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.bulgogi_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("불고기버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.cheeze_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("치즈버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+            case R.id.ham_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("햄버거");
+                } else {
+                    speakText("burger");
+                }
+                break;
+
+            case R.id.ord_his_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("주문 내역");
+                } else {
+                    speakText("order history");
                 }
                 break;
         }

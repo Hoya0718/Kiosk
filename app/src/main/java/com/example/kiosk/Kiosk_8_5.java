@@ -54,7 +54,8 @@ public class Kiosk_8_5 extends AppCompatActivity {
                             "이 화면에서는 고른 메뉴의 수량을 조절할 수 있습니다." +
                             "취소 버튼을 누르면 이전 화면으로 가고," +
                             "장바구니 추가 버튼을 누르면 상단의 메뉴가 주문 내역에 추가됩니다." +
-                            "장바구니 추가 버튼을 눌러주세요.");
+                            "장바구니 추가 버튼을 눌러주세요." +
+                            "버튼에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -64,7 +65,8 @@ public class Kiosk_8_5 extends AppCompatActivity {
                             "On this screen, you can adjust the quantity of the selected menu." +
                             "If you press the cancel button, you go to the previous screen," +
                             "and if you press the add to cart button, the menu at the top is added to your order history." +
-                            "Please press the Add to Cart button.");
+                            "Please press the Add to Cart button." +
+                            "For an explanation of the button, please click the McDonald's logo button.");
                 }
             }
         });

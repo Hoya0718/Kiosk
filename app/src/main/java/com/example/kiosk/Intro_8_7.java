@@ -31,19 +31,43 @@ public class Intro_8_7 extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     tts.setLanguage(Locale.KOREAN); // TTS 언어 설정
                     speakText("메뉴 추천 화면입니다." +
-                            "상단에 추천하는 메뉴를 누른다면 바로 주문 내역에 추가됩니다." +
-                            "추천 메뉴를 고르지 않는다면 선택 안함 버튼을 누르고 다음 화면으로 넘어갈 수 있습니다." +
-                            "선택 안함 버튼을 눌러주세요.");
+                            "화면의 버튼을 누르면 메뉴에 대한 설명을 들을 수 있습니다." +
+                            "흐름에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
                     speakText("This is the menu recommendation screen." +
-                            "If you click on the recommended menu at the top, it will be added to your order history immediately." +
-                            "If you do not choose a recommended menu, you can click the No selection button and go to the next screen." +
-                            "Please click the Uncheck button.");
+                            "Press the button on the screen to hear the explanation of the menu." +
+                            "If you would like an explanation of the flow, please press the McDonald's logo button.");
                 }
             }
         });
+    }
+
+    public void fastfoodIntro(View view) {
+        switch (view.getId()) {
+            case R.id.snackshu_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("슈프림 스낵랩");
+                } else {
+                    speakText("shup");
+                }
+                break;
+            case R.id.mcnurget_lay:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("맥너겟");
+                } else {
+                    speakText("mcnurget");
+                }
+                break;
+            case R.id.desel_Btn:
+                if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
+                    speakText("선택 안함");
+                } else {
+                    speakText("deselect");
+                }
+                break;
+        }
     }
 
     public void popup_kiosk_08_7(View v){

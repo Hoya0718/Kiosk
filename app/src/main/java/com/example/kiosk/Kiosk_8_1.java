@@ -65,7 +65,8 @@ public class Kiosk_8_1 extends AppCompatActivity {
                             "이 화면은 세트 메뉴 여부를 물어보는 화면입니다." +
                             "세트 메뉴를 고르면 사이드 메뉴와 음료를 값싸게 먹을 수 있습니다." +
                             "단품은 사이드 메뉴와 음료 없이 햄버거만 나와요." +
-                            "세트 버튼을 눌러주세요.");
+                            "세트 버튼을 눌러주세요." +
+                            "버튼에 대한 설명을 듣고 싶으면 맥도날드 로고 버튼을 눌러주세요.");
                 }
                 else {
                     tts.setLanguage(Locale.ENGLISH); // TTS 언어 설정
@@ -73,7 +74,8 @@ public class Kiosk_8_1 extends AppCompatActivity {
                             "This screen asks whether or not you want a set menu." +
                             "If you choose the set menu, you can get a cheap side menu and drinks." +
                             "Single item only comes with hamburgers, no side menus and no drinks." +
-                            "Please press the set button.");
+                            "Please press the set button." +
+                            "For an explanation of the button, please click the McDonald's logo button.");
                 }
             }
         });

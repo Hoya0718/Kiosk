@@ -11,19 +11,35 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Locale;
 
 public class TO_Get_Num extends AppCompatActivity {
 
+    // Button, String-----------------------------------------------------------------------------
+    private Button gnn_1, gnn_2, gnn_3, gnn_4, gnn_5, gnn_6, gnn_7, gnn_8, gnn_9;
+    private String input, value, fee;
     // tts 사용 선언---------------------------------------------------------------------------------
     private TextToSpeech tts;
     Handler handler = new Handler();
+
     // tts 사용 선언---------------------------------------------------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_get_num);
+
+        gnn_1 = findViewById(R.id.gnn_1);
+        gnn_2 = findViewById(R.id.gnn_2);
+        gnn_3 = findViewById(R.id.gnn_3);
+        gnn_4 = findViewById(R.id.gnn_4);
+        gnn_5 = findViewById(R.id.gnn_5);
+        gnn_6 = findViewById(R.id.gnn_6);
+        gnn_7 = findViewById(R.id.gnn_7);
+        gnn_8 = findViewById(R.id.gnn_8);
+        gnn_9 = findViewById(R.id.gnn_9);
 
         //tts 시작-----------------------------------------------------------------------------------
 
@@ -72,11 +88,86 @@ public class TO_Get_Num extends AppCompatActivity {
     }
     // tts 끝---------------------------------------------------------------------------------------
 
-    public void goto_pay_List(View v){
+    public void goto_pay_List(View v) {
         tts.shutdown();
-        Intent goto_pay_List = new Intent(getApplicationContext(), TO_Pay_list.class);
-        startActivity(goto_pay_List);
+        Intent goto_pay_List = new Intent(this, TO_Pay_list.class);
+        fee="200";
+        switch (v.getId()) {
+            case R.id.gnn_1:
+                value = "200";
+                goto_pay_List.putExtra("fee", fee);
+                goto_pay_List.putExtra("value", value);
+                input = gnn_1.getText().toString();
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+            case R.id.gnn_2:
+                value = "400";
+                goto_pay_List.putExtra("fee", fee);
+                goto_pay_List.putExtra("value", value);
+                input = gnn_2.getText().toString();
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+            case R.id.gnn_3:
+                value = "600";
+                goto_pay_List.putExtra("fee", fee);
+                goto_pay_List.putExtra("value", value);
+                input = gnn_3.getText().toString();
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+            case R.id.gnn_4:
+                value = "800";
+                goto_pay_List.putExtra("fee", fee);
+                goto_pay_List.putExtra("value", value);
+                input = gnn_4.getText().toString();
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+            case R.id.gnn_5:
+                value = "1000";
+                goto_pay_List.putExtra("fee", fee);
+                goto_pay_List.putExtra("value", value);
+                input = gnn_5.getText().toString();
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+            case R.id.gnn_6:
+                value = "1200";
+                goto_pay_List.putExtra("fee", fee);
+                goto_pay_List.putExtra("value", value);
+                input = gnn_6.getText().toString();
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+            case R.id.gnn_7:
+                value = "1400";
+                goto_pay_List.putExtra("fee", fee);
+                goto_pay_List.putExtra("value", value);
+                input = gnn_7.getText().toString();
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+            case R.id.gnn_8:
+                value = "1600";
+                goto_pay_List.putExtra("fee", fee);
+                input = gnn_8.getText().toString();
+                goto_pay_List.putExtra("value", value);
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+            case R.id.gnn_9:
+                value = "1800";
+                goto_pay_List.putExtra("fee", fee);
+                input = gnn_9.getText().toString();
+                goto_pay_List.putExtra("value", value);
+                goto_pay_List.putExtra("text", input);
+                startActivity(goto_pay_List);
+                break;
+        }
     }
+
     public void goto_fee(View v){
         tts.shutdown();
         Intent goto_fee = new Intent(getApplicationContext(), TO_Is_fee_examption.class);

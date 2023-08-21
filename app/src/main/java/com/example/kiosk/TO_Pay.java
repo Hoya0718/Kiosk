@@ -12,10 +12,17 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.Locale;
 
 public class TO_Pay extends AppCompatActivity {
+
+
+    // TextView, String-----------------------------------------------------------------------------
+    private TextView total_money;
+    private String value;
+    // TextView, String-----------------------------------------------------------------------------
 
     // tts 사용 선언---------------------------------------------------------------------------------
     private TextToSpeech tts;
@@ -30,6 +37,14 @@ public class TO_Pay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_pay);
+
+        total_money = findViewById(R.id.total_money);
+
+        // Intent로 값 받기---------------------------------------------------------------------------
+        Intent intent = getIntent();
+        value = intent.getStringExtra("value");
+        total_money.setText(value);
+        // Intent로 값 받기---------------------------------------------------------------------------
 
         //tts 시작-----------------------------------------------------------------------------------
 

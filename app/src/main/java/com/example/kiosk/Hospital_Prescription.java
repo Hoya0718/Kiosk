@@ -28,7 +28,7 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class Hospital_Prescription extends AppCompatActivity {
-    TextView card_txt, barcode_txt, txt_num;
+    TextView card_txt, barcode_txt, to_txt_ssn;
     String content_1;
     Button h_btn_1, h_btn_2, h_btn_3, h_btn_4, h_btn_5, h_btn_6, h_btn_7, h_btn_8, h_btn_9, h_btn_0, h_btn_cancel, h_btn_check;
     SpannableString spannableString_1, spannableString_2;
@@ -54,7 +54,7 @@ public class Hospital_Prescription extends AppCompatActivity {
         //txt
         card_txt = findViewById(R.id.card_txt);
         barcode_txt = findViewById(R.id.barcode_txt);
-        txt_num = findViewById(R.id.txt_num1);
+        to_txt_ssn = findViewById(R.id.to_txt_ssn1);
         //txt
 
         //btn
@@ -194,131 +194,131 @@ public class Hospital_Prescription extends AppCompatActivity {
     // tts 끝---------------------------------------------------------------------------------------
 
     public void put_n(View view) {
-        String current = txt_num.getText().toString();
+        String current = to_txt_ssn.getText().toString();
 
         switch (view.getId()) {
             case R.id.h_btn_0_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '0');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '0');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-0");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-0");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
 
             case R.id.h_btn_1_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '1');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '1');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-1");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-1");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_2_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '2');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '2');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-2");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-2");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_3_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '3');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '3');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-3");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-3");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_4_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '4');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '4');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-4");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-4");
                     ;
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_5_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '5');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '5');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-5");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-5");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_6_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '6');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '6');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-6");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-6");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_7_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '7');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '7');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-7");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-7");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_8_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '8');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '8');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-8");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-8");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_9_1:
-                txt_num.setTextSize(text_size.getId());
-                txt_num.setText(current + '9');
-                txt_num.setTextSize(30);
+                to_txt_ssn.setTextSize(text_size.getId());
+                to_txt_ssn.setText(current + '9');
+                to_txt_ssn.setTextSize(30);
 
-                if (txt_num.length() == 7) {
-                    txt_num.setText(current + "-9");
+                if (to_txt_ssn.length() == 7) {
+                    to_txt_ssn.setText(current + "-9");
                 }
-                if (txt_num.length() >= 9)
-                    txt_num.setText(current + '*');
+                if (to_txt_ssn.length() >= 9)
+                    to_txt_ssn.setText(current + '*');
                 break;
             case R.id.h_btn_cancel_1:
-                if (txt_num.length() == 0) {
+                if (to_txt_ssn.length() == 0) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
                         Toast.makeText(getApplicationContext(), "주민등록번호를 입력해주세요", Toast.LENGTH_LONG).show();
                     else
                         Toast.makeText(getApplicationContext(), "Enter your social security number", Toast.LENGTH_LONG).show();
-                } else if (txt_num.length() == 8) {
-                    txt_num.setText(current.substring(0, current.length() - 2));
+                } else if (to_txt_ssn.length() == 8) {
+                    to_txt_ssn.setText(current.substring(0, current.length() - 2));
                 } else {
-                    txt_num.setText(current.substring(0, current.length() - 1));
+                    to_txt_ssn.setText(current.substring(0, current.length() - 1));
                     break;
                 }
         }
@@ -326,14 +326,14 @@ public class Hospital_Prescription extends AppCompatActivity {
 
     public void goto_progress(View v) {
         Intent goto_progress = new Intent(this, Hospital_in_progress.class);
-        if (txt_num.length() != 14) {
+        if (to_txt_ssn.length() != 14) {
             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                 Toast.makeText(getApplicationContext(), "주민등록번호의 길이가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(getApplicationContext(), "Please verify your social security number", Toast.LENGTH_LONG).show();
             }
         } else {
-            get_num_2 = txt_num.getText().toString();
+            get_num_2 = to_txt_ssn.getText().toString();
             pnpnpn.setGet_pn_2(get_num_2);
 
             char one = get_num_2.charAt(0);
@@ -344,7 +344,7 @@ public class Hospital_Prescription extends AppCompatActivity {
             char six = get_num_2.charAt(5);
             char seven = get_num_2.charAt(7);
 
-            pn.setH_ssn(txt_num.getText().toString());
+            pn.setH_ssn(to_txt_ssn.getText().toString());
             clickTime = System.currentTimeMillis();
             pn.setDay(clickTime);
 

@@ -20,6 +20,7 @@ public class myapp extends Application {
     private String department;
 
     private String h_ssn;
+    private String get_num_yse;
 
     public void setH_ssn(String a) { this.h_ssn = a;}
     public String getH_ssn() { return h_ssn;}

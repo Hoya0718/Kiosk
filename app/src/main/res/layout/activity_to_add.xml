@@ -230,6 +230,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:background="#0D1B68"
+        android:onClick="all"
         android:text="전체포함"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/to_btn_not_all"
@@ -241,13 +242,14 @@
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:background="#0D1B68"
+        android:onClick="all_not"
         android:text="전체미포함"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view5"
         app:layout_constraintTop_toTopOf="@+id/to_btn_all" />
 
     <Button
-        android:id="@+id/button87"
+        android:id="@+id/why_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
@@ -256,31 +258,31 @@
         app:layout_constraintTop_toBottomOf="@+id/textView119" />
 
     <Button
-        android:id="@+id/button88"
+        android:id="@+id/household_members"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="세대원"
-        app:layout_constraintEnd_toStartOf="@+id/button87"
-        app:layout_constraintTop_toTopOf="@+id/button87" />
+        app:layout_constraintEnd_toStartOf="@+id/why_not"
+        app:layout_constraintTop_toTopOf="@+id/why_not" />
 
     <Button
-        android:id="@+id/button90"
+        android:id="@+id/why"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="포함"
-        app:layout_constraintEnd_toStartOf="@+id/button89"
-        app:layout_constraintTop_toTopOf="@+id/button89" />
+        app:layout_constraintEnd_toStartOf="@+id/household"
+        app:layout_constraintTop_toTopOf="@+id/household" />
 
     <Button
-        android:id="@+id/button89"
+        android:id="@+id/household"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="세대"
-        app:layout_constraintEnd_toStartOf="@+id/button88"
-        app:layout_constraintTop_toTopOf="@+id/button88" />
+        app:layout_constraintEnd_toStartOf="@+id/household_members"
+        app:layout_constraintTop_toTopOf="@+id/household_members" />
 
     <Button
         android:id="@+id/to_btn_to_2"
@@ -315,7 +317,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view5" />
 
     <Button
-        android:id="@+id/to_btn_past_a_not"
+        android:id="@+id/past_a_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
@@ -324,70 +326,70 @@
         app:layout_constraintTop_toTopOf="@+id/textView118" />
 
     <Button
-        android:id="@+id/button41"
+        android:id="@+id/family_config_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/to_btn_past_a_not"
+        app:layout_constraintEnd_toEndOf="@+id/past_a_not"
         app:layout_constraintTop_toTopOf="@+id/textView116" />
 
     <Button
-        android:id="@+id/button42"
+        android:id="@+id/family_config_day_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button41"
+        app:layout_constraintEnd_toEndOf="@+id/family_config_not"
         app:layout_constraintTop_toBottomOf="@+id/textView116" />
 
     <Button
-        android:id="@+id/button64"
+        android:id="@+id/report_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button42"
+        app:layout_constraintEnd_toEndOf="@+id/family_config_day_not"
         app:layout_constraintTop_toBottomOf="@+id/textView117" />
 
     <Button
-        android:id="@+id/button65"
+        android:id="@+id/foreigner_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button87"
+        app:layout_constraintEnd_toEndOf="@+id/why_not"
         app:layout_constraintTop_toTopOf="@+id/textView121" />
 
     <Button
-        android:id="@+id/button66"
+        android:id="@+id/ssn_back_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button65"
+        app:layout_constraintEnd_toEndOf="@+id/foreigner_not"
         app:layout_constraintTop_toTopOf="@+id/textView122" />
 
     <Button
-        android:id="@+id/button67"
+        android:id="@+id/relation_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button66"
+        app:layout_constraintEnd_toEndOf="@+id/ssn_back_not"
         app:layout_constraintTop_toBottomOf="@+id/textView122" />
 
     <Button
-        android:id="@+id/button68"
+        android:id="@+id/partner_not"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
         android:text="미포함"
-        app:layout_constraintEnd_toEndOf="@+id/button67"
+        app:layout_constraintEnd_toEndOf="@+id/relation_not"
         app:layout_constraintTop_toBottomOf="@+id/textView123" />
 
     <Button
-        android:id="@+id/button69"
+        android:id="@+id/past_a"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginTop="5dp"
@@ -401,8 +403,8 @@
         android:layout_height="60dp"
         android:layout_marginStart="15dp"
         android:text="직접입력"
-        app:layout_constraintStart_toEndOf="@+id/button69"
-        app:layout_constraintTop_toTopOf="@+id/button69" />
+        app:layout_constraintStart_toEndOf="@+id/past_a"
+        app:layout_constraintTop_toTopOf="@+id/past_a" />
 
     <TextView
         android:id="@+id/textView59"
@@ -414,52 +416,52 @@
         app:layout_constraintTop_toTopOf="@+id/button70" />
 
     <Button
-        android:id="@+id/button71"
+        android:id="@+id/family_config"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="포함"
-        app:layout_constraintEnd_toStartOf="@+id/button41"
-        app:layout_constraintTop_toTopOf="@+id/button41" />
+        app:layout_constraintEnd_toStartOf="@+id/family_config_not"
+        app:layout_constraintTop_toTopOf="@+id/family_config_not" />
 
     <Button
-        android:id="@+id/button72"
+        android:id="@+id/family_config_day"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="포함"
-        app:layout_constraintEnd_toStartOf="@+id/button42"
-        app:layout_constraintTop_toTopOf="@+id/button42" />
+        app:layout_constraintEnd_toStartOf="@+id/family_config_day_not"
+        app:layout_constraintTop_toTopOf="@+id/family_config_day_not" />
 
     <Button
-        android:id="@+id/button73"
+        android:id="@+id/report"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="포함"
-        app:layout_constraintEnd_toStartOf="@+id/button64"
-        app:layout_constraintTop_toTopOf="@+id/button64" />
+        app:layout_constraintEnd_toStartOf="@+id/report_not"
+        app:layout_constraintTop_toTopOf="@+id/report_not" />
 
     <Button
-        android:id="@+id/button74"
+        android:id="@+id/relation"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="포함"
-        app:layout_constraintEnd_toStartOf="@+id/button67"
-        app:layout_constraintTop_toTopOf="@+id/button67" />
+        app:layout_constraintEnd_toStartOf="@+id/relation_not"
+        app:layout_constraintTop_toTopOf="@+id/relation_not" />
 
     <Button
-        android:id="@+id/button75"
+        android:id="@+id/partner"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="포함"
-        app:layout_constraintEnd_toStartOf="@+id/button68"
-        app:layout_constraintTop_toTopOf="@+id/button68" />
+        app:layout_constraintEnd_toStartOf="@+id/partner_not"
+        app:layout_constraintTop_toTopOf="@+id/partner_not" />
 
     <Button
-        android:id="@+id/button77"
+        android:id="@+id/ssn_back"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:text="포함"
@@ -472,11 +474,11 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:text="("
-        app:layout_constraintStart_toEndOf="@+id/button77"
-        app:layout_constraintTop_toTopOf="@+id/button78" />
+        app:layout_constraintStart_toEndOf="@+id/ssn_back"
+        app:layout_constraintTop_toTopOf="@+id/self" />
 
     <Button
-        android:id="@+id/button78"
+        android:id="@+id/self"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:text="본인"
@@ -489,11 +491,11 @@
         android:layout_height="60dp"
         android:gravity="bottom|center_horizontal"
         android:text=","
-        app:layout_constraintStart_toEndOf="@+id/button78"
-        app:layout_constraintTop_toTopOf="@+id/button104" />
+        app:layout_constraintStart_toEndOf="@+id/self"
+        app:layout_constraintTop_toTopOf="@+id/household_member_ssn" />
 
     <Button
-        android:id="@+id/button104"
+        android:id="@+id/household_member_ssn"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:text="세대원"
@@ -506,17 +508,17 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:text=")"
-        app:layout_constraintStart_toEndOf="@+id/button104"
-        app:layout_constraintTop_toTopOf="@+id/button66" />
+        app:layout_constraintStart_toEndOf="@+id/household_member_ssn"
+        app:layout_constraintTop_toTopOf="@+id/ssn_back_not" />
 
     <Button
-        android:id="@+id/button105"
+        android:id="@+id/foreigner"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
         android:text="포함"
-        app:layout_constraintEnd_toStartOf="@+id/button65"
-        app:layout_constraintTop_toTopOf="@+id/button65" />
+        app:layout_constraintEnd_toStartOf="@+id/foreigner_not"
+        app:layout_constraintTop_toTopOf="@+id/foreigner_not" />
 
     <TextView
         android:id="@+id/textView157"
@@ -524,8 +526,8 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:text="("
-        app:layout_constraintStart_toEndOf="@+id/button90"
-        app:layout_constraintTop_toTopOf="@+id/button90" />
+        app:layout_constraintStart_toEndOf="@+id/why"
+        app:layout_constraintTop_toTopOf="@+id/why" />
 
     <TextView
         android:id="@+id/textView158"
@@ -533,8 +535,8 @@
         android:layout_height="60dp"
         android:gravity="bottom|center_horizontal"
         android:text=","
-        app:layout_constraintStart_toEndOf="@+id/button89"
-        app:layout_constraintTop_toTopOf="@+id/button89" />
+        app:layout_constraintStart_toEndOf="@+id/household"
+        app:layout_constraintTop_toTopOf="@+id/household" />
 
     <TextView
         android:id="@+id/textView159"
@@ -542,6 +544,6 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:text=")"
-        app:layout_constraintStart_toEndOf="@+id/button88"
-        app:layout_constraintTop_toTopOf="@+id/button88" />
+        app:layout_constraintStart_toEndOf="@+id/household_members"
+        app:layout_constraintTop_toTopOf="@+id/household_members" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -166,12 +166,13 @@
         app:layout_constraintTop_toTopOf="@+id/to_btn_8" />
 
     <Button
-        android:id="@+id/to_btn_cancel"
+        android:id="@+id/to_btn_del"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
         android:height="100dp"
         android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
         android:text="정정"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/to_btn_7"
@@ -187,7 +188,7 @@
         android:text="0"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/to_btn_8"
-        app:layout_constraintTop_toTopOf="@+id/to_btn_cancel" />
+        app:layout_constraintTop_toTopOf="@+id/to_btn_del" />
 
     <Button
         android:id="@+id/to_btn_all_delete"

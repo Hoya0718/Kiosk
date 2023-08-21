@@ -116,6 +116,11 @@ public class TO_Is_fee_examption extends AppCompatActivity {
         Intent goto_get_Num = new Intent(getApplicationContext(), TO_Get_Num.class);
         startActivity(goto_get_Num);
     }
+    public void goto_get_Num_yes(View v){
+        tts.shutdown();
+        Intent goto_get_Num_yes = new Intent(getApplicationContext(), to_get_num_yes.class);
+        startActivity(goto_get_Num_yes);
+    }
     public void goto_add(View v){
         tts.shutdown();
         Intent goto_to_issuance = new Intent(getApplicationContext(), TO_Issuance_info.class);

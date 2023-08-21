@@ -48,7 +48,7 @@ public class Kiosk_R_Hospital_Pay extends AppCompatActivity {
         //블루투스 추가 코드는 여기서 부터
 
 
-        String[] permission_list;
+       /* String[] permission_list;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             permission_list = new String[]{
                     android.Manifest.permission.ACCESS_FINE_LOCATION,
@@ -197,6 +197,7 @@ public class Kiosk_R_Hospital_Pay extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+        */
     }
 
     // 여기까지
@@ -204,7 +205,12 @@ public class Kiosk_R_Hospital_Pay extends AppCompatActivity {
 
     public void goto_Back(View v) {
         Intent goto_Kiosk_Back = new Intent(getApplicationContext(), Kiosk_R_Hospital_Acceptance_Complete.class);
-        disconnectBluetooth();
+       // disconnectBluetooth();
         startActivity(goto_Kiosk_Back);
+    }
+    public void goto_next(View v){
+
+        Intent goto_next = new Intent(getApplicationContext(), Kiosk_R_Hospital_Pay_Complete.class);
+        startActivity(goto_next);
     }
 }

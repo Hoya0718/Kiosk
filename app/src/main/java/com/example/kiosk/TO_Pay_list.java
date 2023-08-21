@@ -11,16 +11,19 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Locale;
 
  public class TO_Pay_list extends AppCompatActivity {
 
-     // TextView 사용 선언----------------------------------------------------------------------------
+     // TextView,Button 사용 선언----------------------------------------------------------------------------
+     private TextView paper_num, to_total_money, to_money;
      private Button to_btn_card, to_btn_credit;
-     // TextView 사용 선언----------------------------------------------------------------------------
+     // TextView, Button 사용 선언----------------------------------------------------------------------------
 
      // tts 사용 선언---------------------------------------------------------------------------------
      private TextToSpeech tts;
@@ -29,13 +32,29 @@ import java.util.Locale;
      // anim 사용 선언--------------------------------------------------------------------------------
      private AnimationDrawable anim;
      // anim 사용 선언--------------------------------------------------------------------------------
+     private String text,value, fee;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_pay_list);
 
+        paper_num = findViewById(R.id.paper_num);
         to_btn_card = findViewById(R.id.to_btn_card);
         to_btn_credit = findViewById(R.id.to_btn_coin);
+        to_total_money = findViewById(R.id.to_total_money);
+        to_money = findViewById(R.id.to_money);
+
+        // 인텐트로 값 가져오기------------------------------------------------------------------------
+        Intent intent = getIntent();
+
+        value = intent.getStringExtra("value");
+        text = intent.getStringExtra("text");
+        fee = intent.getStringExtra("fee");
+        paper_num.setText(text);
+        to_total_money.setText(value);
+        to_money.setText(fee);
+        // 인텐트로 값 가져오기------------------------------------------------------------------------
+
         //tts 시작-----------------------------------------------------------------------------------
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -130,12 +149,14 @@ import java.util.Locale;
      public void goto_pay(View v){
         tts.shutdown();
         Intent goto_pay = new Intent(getApplicationContext(), TO_Pay.class);
+        goto_pay.putExtra("value", value);
         startActivity(goto_pay);
      }
-     public void goto_get_num(View v){
+     public void goto_get_num(View v) {
          tts.shutdown();
-         Intent goto_get_num = new Intent(getApplicationContext(), TO_Get_Num.class);
-         startActivity(goto_get_num);
+         finish();
+         //Intent goto_get_num = new Intent(getApplicationContext(), TO_Get_Num.class);
+         //startActivity(goto_get_num);
      }
      public void goto_to_main(View v){
          tts.shutdown();

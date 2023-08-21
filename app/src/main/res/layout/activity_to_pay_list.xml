@@ -165,21 +165,20 @@
         android:gravity="center"
         android:text="부"
         android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/textView148"
-        app:layout_constraintTop_toTopOf="@+id/textView148" />
+        app:layout_constraintStart_toEndOf="@+id/paper_num"
+        app:layout_constraintTop_toTopOf="@+id/paper_num" />
 
     <TextView
-        android:id="@+id/textView148"
+        android:id="@+id/paper_num"
         android:layout_width="220dp"
         android:layout_height="80dp"
         android:gravity="center"
-        android:text="1"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/textView135"
         app:layout_constraintTop_toTopOf="@+id/textView135" />
 
     <TextView
-        android:id="@+id/textView149"
+        android:id="@+id/to_money"
         android:layout_width="220dp"
         android:layout_height="80dp"
         android:gravity="center"
@@ -189,7 +188,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView136" />
 
     <TextView
-        android:id="@+id/textView151"
+        android:id="@+id/to_total_money"
         android:layout_width="220dp"
         android:layout_height="80dp"
         android:gravity="center"
@@ -205,8 +204,8 @@
         android:gravity="center"
         android:text="원"
         android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/textView151"
-        app:layout_constraintTop_toTopOf="@+id/textView151" />
+        app:layout_constraintStart_toEndOf="@+id/to_total_money"
+        app:layout_constraintTop_toTopOf="@+id/to_total_money" />
 
     <TextView
         android:id="@+id/textView150"
@@ -215,6 +214,6 @@
         android:gravity="center"
         android:text="원"
         android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/textView149"
-        app:layout_constraintTop_toTopOf="@+id/textView149" />
+        app:layout_constraintStart_toEndOf="@+id/to_money"
+        app:layout_constraintTop_toTopOf="@+id/to_money" />
 </androidx.constraintlayout.widget.ConstraintLayout>

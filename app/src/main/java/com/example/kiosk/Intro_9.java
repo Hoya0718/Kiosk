@@ -48,42 +48,42 @@ public class Intro_9 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.delete_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("삭제");
+                    speakText("선택한 항목을 제거하거나 삭제하는 동작으로, 주문 내역에서 해당 항목을 없앱니다.");
                 } else {
                     speakText("delete");
                 }
                 break;
             case R.id.minus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("감소");
+                    speakText("수량을 줄이거나 감소시키는 동작으로, 주문하는 양을 조절할 수 있습니다.");
                 } else {
                     speakText("minus");
                 }
                 break;
             case R.id.count_text:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("개수");
+                    speakText("주문할 상품의 개수를 나타내는 숫자입니다.");
                 } else {
                     speakText("count");
                 }
                 break;
             case R.id.plus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("추가");
+                    speakText("수량을 늘리거나 증가시키는 동작으로, 주문하는 양을 늘릴 수 있습니다.");
                 } else {
                     speakText("plus");
                 }
                 break;
             case R.id.more_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("추가 주문");
+                    speakText("이미 주문한 내역에 더 많은 상품을 추가로 주문하고자 할 때 사용하는 동작입니다.");
                 } else {
                     speakText("more");
                 }
                 break;
             case R.id.complete_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주문 완료");
+                    speakText("모든 주문 과정을 마치고, 결제 화면으로 넘어갑니다.");
                 } else {
                     speakText("complete");
                 }

@@ -49,21 +49,21 @@ public class Intro_8_3 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.huri_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("후렌치 후라이");
+                    speakText("후렌치 후라이는 바삭한 감자튀김으로, 입맛을 자극합니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.cuol_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("코울슬로");
+                    speakText("코울슬로는 신선한 채소와 드레싱으로 만든 샐러드로, 상큼하면서도 건강한 선택입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.chezstick_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("골든 모짜렐라 치즈스틱");
+                    speakText("골든 모짜렐라 치즈스틱은 바삭한 외피와 녹아든 모짜렐라 치즈로, 부드럽고 고소한 간식입니다.");
                 } else {
                     speakText("burger");
                 }

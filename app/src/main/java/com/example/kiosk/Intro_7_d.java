@@ -49,56 +49,56 @@ public class Intro_7_d extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.reco_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("추천메뉴");
+                    speakText("추천메뉴에는 맥도날드의 대표적이고 맛있는 메뉴들로 구성된 선택 목록이 있습니다.");
                 } else {
                     speakText("reco");
                 }
                 break;
             case R.id.burger_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("버거");
+                    speakText("버거는 다양한 종류의 신선한 재료로 만든 햄버거로, 빅맥, 치즈버거 등이 포함됩니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.snack_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("해피스낵");
+                    speakText("해피스낵은 작은 사이즈의 간식 메뉴로, 감자튀김 등이 포함되어 있습니다.");
                 } else {
                     speakText("happy-snack");
                 }
                 break;
             case R.id.side_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("사이드");
+                    speakText("사이드는 부가적인 음식 메뉴로, 샐러드나 감자튀김 등이 포함됩니다.");
                 } else {
                     speakText("side");
                 }
                 break;
             case R.id.coffee_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("커피");
+                    speakText("커피는 다양한 종류의 커피 음료로, 아메리카노, 라떼 등이 준비되어 있습니다.");
                 } else {
                     speakText("coffee");
                 }
                 break;
             case R.id.dessert_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("디저트");
+                    speakText("디저트는 달콤한 음식으로, 아이스크림, 파이 등이 제공됩니다.");
                 } else {
                     speakText("dessert");
                 }
                 break;
             case R.id.drink_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("음료");
+                    speakText("음료는 다양한 음료수 메뉴로, 소다, 주스, 커피 등이 포함되어 있습니다.");
                 } else {
                     speakText("drink");
                 }
                 break;
             case R.id.meal_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("해피밀");
+                    speakText("해피밀은 아침 식사 메뉴로, 미니 머핀 등 신선한 아침 음식이 제공됩니다.");
                 } else {
                     speakText("happy-meal");
                 }
@@ -106,84 +106,84 @@ public class Intro_7_d extends AppCompatActivity {
 
             case R.id.drinkcoca_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("코카콜라");
+                    speakText("코카콜라는 캐러멜 풍미의 대표적인 탄산음료입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.drinkspri_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("스프라이트");
+                    speakText("스프라이트는 상쾌한 레몬-라임 맛의 탄산음료입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.drinkhwan_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("환타");
+                    speakText("환타는 풍부한 오렌지 향의 탄산음료입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.drinkcoze_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("코카콜라제로");
+                    speakText("칼로리가 없는 버전의 코카콜라로, 시원하면서도 가벼운 선택지입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.chistr_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("딸기 칠러");
+                    speakText("과일 향기와 시원함이 어우러진 음료로, 딸기의 풍부한 맛을 즐길 수 있습니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.chijadu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("자두 칠러");
+                    speakText("과일 향기와 시원함이 어우러진 음료로, 자두의 풍부한 맛을 즐길 수 있습니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.shakestr_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("딸기 쉐이크");
+                    speakText("부드럽고 크리미한 맛의 딸기 밀크쉐이크입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.shakecho_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("초코 쉐이크");
+                    speakText("부드럽고 크리미한 맛의 초코 밀크쉐이크입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.shakeba_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("바닐라 쉐이크");
+                    speakText("부드럽고 크리미한 맛의 바닐라 밀크쉐이크입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.drinkoran_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("오렌지쥬스");
+                    speakText("신선한 오렌지로 만든 상큼한 주스로, 비타민 C를 함유하며 건강한 선택입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.milk_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("우유");
+                    speakText("고소하고 영양가 있는 우유로, 다양한 음식과 함께 즐길 수 있습니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.water_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("생수");
+                    speakText("깨끗하고 청량한 물로, 목마를 해소할 수 있는 선택지입니다.");
                 } else {
                     speakText("burger");
                 }
@@ -191,7 +191,7 @@ public class Intro_7_d extends AppCompatActivity {
 
             case R.id.ord_his_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주문 내역");
+                    speakText("주문 내역은 주문한 음식과 메뉴에 대한 정보를 확인할 수 있는 기능을 제공합니다.");
                 } else {
                     speakText("order history");
                 }

@@ -49,84 +49,84 @@ public class Intro_8_4 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.drinkcoca_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("코카콜라");
+                    speakText("코카콜라는 캐러멜 풍미의 대표적인 탄산음료입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.drinkspri_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("스프라이트");
+                    speakText("스프라이트는 상쾌한 레몬-라임 맛의 탄산음료입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.drinkhwan_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("환타");
+                    speakText("환타는 풍부한 오렌지 향의 탄산음료입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.drinkcoze_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("코카콜라제로");
+                    speakText("칼로리가 없는 버전의 코카콜라로, 시원하면서도 가벼운 선택지입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.chistr_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("딸기 칠러");
+                    speakText("과일 향기와 시원함이 어우러진 음료로, 딸기의 풍부한 맛을 즐길 수 있습니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.chijadu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("자두 칠러");
+                    speakText("과일 향기와 시원함이 어우러진 음료로, 자두의 풍부한 맛을 즐길 수 있습니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.shakestr_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("딸기 쉐이크");
+                    speakText("부드럽고 크리미한 맛의 딸기 밀크쉐이크입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.shakecho_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("초코 쉐이크");
+                    speakText("부드럽고 크리미한 맛의 초코 밀크쉐이크입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.shakeba_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("바닐라 쉐이크");
+                    speakText("부드럽고 크리미한 맛의 바닐라 밀크쉐이크입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.drinkoran_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("오렌지쥬스");
+                    speakText("신선한 오렌지로 만든 상큼한 주스로, 비타민 C를 함유하며 건강한 선택입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.milk_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("우유");
+                    speakText("고소하고 영양가 있는 우유로, 다양한 음식과 함께 즐길 수 있습니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.water_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("생수");
+                    speakText("깨끗하고 청량한 물로, 목마를 해소할 수 있는 선택지입니다.");
                 } else {
                     speakText("burger");
                 }

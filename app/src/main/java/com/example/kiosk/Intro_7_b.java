@@ -49,56 +49,56 @@ public class Intro_7_b extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.reco_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("추천메뉴");
+                    speakText("추천메뉴에는 맥도날드의 대표적이고 맛있는 메뉴들로 구성된 선택 목록이 있습니다.");
                 } else {
                     speakText("reco");
                 }
                 break;
             case R.id.burger_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("버거");
+                    speakText("버거는 다양한 종류의 신선한 재료로 만든 햄버거로, 빅맥, 치즈버거 등이 포함됩니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.snack_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("해피스낵");
+                    speakText("해피스낵은 작은 사이즈의 간식 메뉴로, 감자튀김 등이 포함되어 있습니다.");
                 } else {
                     speakText("happy-snack");
                 }
                 break;
             case R.id.side_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("사이드");
+                    speakText("사이드는 부가적인 음식 메뉴로, 샐러드나 감자튀김 등이 포함됩니다.");
                 } else {
                     speakText("side");
                 }
                 break;
             case R.id.coffee_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("커피");
+                    speakText("커피는 다양한 종류의 커피 음료로, 아메리카노, 라떼 등이 준비되어 있습니다.");
                 } else {
                     speakText("coffee");
                 }
                 break;
             case R.id.dessert_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("디저트");
+                    speakText("디저트는 달콤한 음식으로, 아이스크림, 파이 등이 제공됩니다.");
                 } else {
                     speakText("dessert");
                 }
                 break;
             case R.id.drink_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("음료");
+                    speakText("음료는 다양한 음료수 메뉴로, 소다, 주스, 커피 등이 포함되어 있습니다.");
                 } else {
                     speakText("drink");
                 }
                 break;
             case R.id.meal_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("해피밀");
+                    speakText("해피밀은 아침 식사 메뉴로, 미니 머핀 등 신선한 아침 음식이 제공됩니다.");
                 } else {
                     speakText("happy-meal");
                 }
@@ -106,84 +106,84 @@ public class Intro_7_b extends AppCompatActivity {
 
             case R.id.b1955_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("일구오오버거");
+                    speakText("일구오오버거는 고소한 특별 소스와 신선한 재료로 만들어진 클래식한 햄버거입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.batodi_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("베이컨 토마토 디럭스");
+                    speakText("베이컨 토마토 디럭스는 풍부한 베이컨과 신선한 토마토가 들어간 프리미엄 버거입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.bigmc_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("빅맥");
+                    speakText("빅맥은 이중 패티와 특별한 소스로 맛을 낸 대표적인 맥도날드 햄버거입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.mcchi_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("맥치킨버거");
+                    speakText("맥치킨버거는 신선한 치킨 패티로 만든 버거로, 부드러운 맛과 풍미를 선사합니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.mccri_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("맥크리스피버거");
+                    speakText("맥크리스피 버거는 고소한 크리스피 치킨 패티가 특징이며, 바삭한 식감이 돋보입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.quater_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("쿼터파운드 치즈 버거");
+                    speakText("쿼터파운드 치즈 버거는 1/4 파운드 패티와 치즈가 들어간 푸짐한 햄버거로, 고기의 풍미가 느껴집니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.sanhi_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("맥스파이시 상하이 버거");
+                    speakText("맥스파이시 상하이 버거는 특별한 향신료와 소스로 맛을 낸 중국 풍의 매콤한 버거입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.susu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("슈슈버거");
+                    speakText("슈슈버거는 신선한 생선 패티로 만든 맥도날드의 피쉬 버거 시리즈입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.subi_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("슈비버거");
+                    speakText("슈비버거는 신선한 생선 패티로 만든 맥도날드의 피쉬 버거 시리즈입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.bulgogi_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("불고기버거");
+                    speakText("불고기버거는 불고기 스타일의 소스로 양념한 버거로, 독특한 맛을 즐길 수 있습니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.cheeze_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("치즈버거");
+                    speakText("치즈버거는 클래식한 햄버거에 치즈를 추가한 메뉴로, 담백하고 간단한 맛이 특징입니다.");
                 } else {
                     speakText("burger");
                 }
                 break;
             case R.id.ham_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("햄버거");
+                    speakText("햄버거는 맥도날드의 대표적인 햄버거로, 신선한 재료와 소스로 구성되어 있습니다.");
                 } else {
                     speakText("burger");
                 }
@@ -191,7 +191,7 @@ public class Intro_7_b extends AppCompatActivity {
 
             case R.id.ord_his_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주문 내역");
+                    speakText("주문 내역은 주문한 음식과 메뉴에 대한 정보를 확인할 수 있는 기능을 제공합니다.");
                 } else {
                     speakText("order history");
                 }

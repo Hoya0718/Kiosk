@@ -49,14 +49,14 @@ public class Intro_8_1 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.set_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("세트");
+                    speakText("세트 메뉴는 메인 음식, 사이드, 음료가 포함된 풀세트로, 다양한 맛과 옵션을 한 번에 즐길 수 있습니다.");
                 } else {
                     speakText("set");
                 }
                 break;
             case R.id.sig_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("단품");
+                    speakText("단품은 개별 음식이나 음료를 선택하여 주문하는 것으로, 원하는 메뉴를 조합하여 맞춤식으로 주문할 수 있습니다.");
                 } else {
                     speakText("single");
                 }

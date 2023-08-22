@@ -43,35 +43,35 @@ public class Intro_8_6 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.minus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("감소");
+                    speakText("수량을 줄이거나 감소시키는 동작으로, 주문하는 양을 조절할 수 있습니다.");
                 } else {
                     speakText("minus");
                 }
                 break;
             case R.id.count_text:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("개수");
+                    speakText("주문할 상품의 개수를 나타내는 숫자입니다.");
                 } else {
                     speakText("count");
                 }
                 break;
             case R.id.plus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("추가");
+                    speakText("수량을 늘리거나 증가시키는 동작으로, 주문하는 양을 늘릴 수 있습니다.");
                 } else {
                     speakText("plus");
                 }
                 break;
             case R.id.cancel_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("취소");
+                    speakText("주문하려던 내용을 취소하거나 변경할 때 사용하는 동작입니다.");
                 } else {
                     speakText("cancel");
                 }
                 break;
             case R.id.add_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("장바구니 추가");
+                    speakText("선택한 상품을 장바구니에 담아 나중에 한 번에 주문할 수 있도록 준비합니다.");
                 } else {
                     speakText("add");
                 }

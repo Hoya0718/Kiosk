@@ -51,84 +51,86 @@ public class Intro_8_4 extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("코카콜라는 캐러멜 풍미의 대표적인 탄산음료입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Coca-Cola is a typical carbonated soft drink with a caramel flavor.");
                 }
                 break;
             case R.id.drinkspri_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("스프라이트는 상쾌한 레몬-라임 맛의 탄산음료입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Sprite is a refreshing lemon-lime flavored soda.");
                 }
                 break;
             case R.id.drinkhwan_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("환타는 풍부한 오렌지 향의 탄산음료입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Fanta is a carbonated soft drink with a rich orange flavor.");
                 }
                 break;
             case R.id.drinkcoze_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("칼로리가 없는 버전의 코카콜라로, 시원하면서도 가벼운 선택지입니다.");
+                    speakText("코카콜라제로는 칼로리가 없는 버전의 코카콜라로, 시원하면서도 가벼운 선택지입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Coca-Cola Zero is a calorie-free version of Coca-Cola, a cool, lightweight option.");
                 }
                 break;
             case R.id.chistr_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("과일 향기와 시원함이 어우러진 음료로, 딸기의 풍부한 맛을 즐길 수 있습니다.");
+                    speakText("딸기 칠러는 과일 향기와 시원함이 어우러진 음료로, 딸기의 풍부한 맛을 즐길 수 있습니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Strawberry chiller is a drink with a fruity aroma and coolness, " +
+                            "allowing you to enjoy the rich taste of strawberries.");
                 }
                 break;
             case R.id.chijadu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("과일 향기와 시원함이 어우러진 음료로, 자두의 풍부한 맛을 즐길 수 있습니다.");
+                    speakText("자두 칠러는 과일 향기와 시원함이 어우러진 음료로, 자두의 풍부한 맛을 즐길 수 있습니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Plum chiller is a drink with a fruity aroma and coolness, " +
+                            "allowing you to enjoy the rich taste of plums.");
                 }
                 break;
             case R.id.shakestr_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("부드럽고 크리미한 맛의 딸기 밀크쉐이크입니다.");
+                    speakText("딸기 쉐이크는 부드럽고 크리미한 맛의 딸기 밀크쉐이크입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Strawberry Shake is a strawberry milkshake with a smooth and creamy taste.");
                 }
                 break;
             case R.id.shakecho_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("부드럽고 크리미한 맛의 초코 밀크쉐이크입니다.");
+                    speakText("초코 쉐이크는 부드럽고 크리미한 맛의 초코 밀크쉐이크입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Choco Shake is a chocolate milkshake with a smooth and creamy taste.");
                 }
                 break;
             case R.id.shakeba_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("부드럽고 크리미한 맛의 바닐라 밀크쉐이크입니다.");
+                    speakText("바닐라 쉐이크는 부드럽고 크리미한 맛의 바닐라 밀크쉐이크입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Vanilla Shake is a smooth and creamy vanilla milkshake.");
                 }
                 break;
             case R.id.drinkoran_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("신선한 오렌지로 만든 상큼한 주스로, 비타민 C를 함유하며 건강한 선택입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Refreshing juice made from fresh oranges, packed with vitamin C and a healthy choice.");
                 }
                 break;
             case R.id.milk_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("고소하고 영양가 있는 우유로, 다양한 음식과 함께 즐길 수 있습니다.");
                 } else {
-                    speakText("burger");
+                    speakText("It is nutritious and nutritious milk, and can be enjoyed with a variety of foods.");
                 }
                 break;
             case R.id.water_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("깨끗하고 청량한 물로, 목마를 해소할 수 있는 선택지입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("It is an option to relieve thirst with clean and refreshing water.");
                 }
                 break;
         }

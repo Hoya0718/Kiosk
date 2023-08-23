@@ -51,56 +51,56 @@ public class Intro_7_s extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("추천메뉴에는 맥도날드의 대표적이고 맛있는 메뉴들로 구성된 선택 목록이 있습니다.");
                 } else {
-                    speakText("reco");
+                    speakText("The recommended menu contains a list of choices made up of McDonald's signature and delicious menu items.");
                 }
                 break;
             case R.id.burger_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("버거는 다양한 종류의 신선한 재료로 만든 햄버거로, 빅맥, 치즈버거 등이 포함됩니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Burgers include hamburgers, Big Macs, and cheeseburgers made with a variety of fresh ingredients.");
                 }
                 break;
             case R.id.snack_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("해피스낵은 작은 사이즈의 간식 메뉴로, 감자튀김 등이 포함되어 있습니다.");
                 } else {
-                    speakText("happy-snack");
+                    speakText("Happy Snack is a small-sized snack menu that includes French fries and more.");
                 }
                 break;
             case R.id.side_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("사이드는 부가적인 음식 메뉴로, 샐러드나 감자튀김 등이 포함됩니다.");
                 } else {
-                    speakText("side");
+                    speakText("Sides are additional food items, such as salad or French fries.");
                 }
                 break;
             case R.id.coffee_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("커피는 다양한 종류의 커피 음료로, 아메리카노, 라떼 등이 준비되어 있습니다.");
                 } else {
-                    speakText("coffee");
+                    speakText("Coffee is a variety of coffee drinks, including Americano and latte.");
                 }
                 break;
             case R.id.dessert_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("디저트는 달콤한 음식으로, 아이스크림, 파이 등이 제공됩니다.");
                 } else {
-                    speakText("dessert");
+                    speakText("Desserts are sweet, with ice cream and pies served.");
                 }
                 break;
             case R.id.drink_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("음료는 다양한 음료수 메뉴로, 소다, 주스, 커피 등이 포함되어 있습니다.");
                 } else {
-                    speakText("drink");
+                    speakText("Beverages include a variety of beverage menus, including sodas, juices, and coffee.");
                 }
                 break;
             case R.id.meal_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("해피밀은 아침 식사 메뉴로, 미니 머핀 등 신선한 아침 음식이 제공됩니다.");
                 } else {
-                    speakText("happy-meal");
+                    speakText("Happy Meal is the breakfast menu, and fresh breakfast items such as mini muffins are provided.");
                 }
                 break;
 
@@ -108,84 +108,85 @@ public class Intro_7_s extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("상하이 치킨 스낵랩은 바삭한 피짜 치킨과 신선한 채소가 들어간 간식으로, 매콤한 소스가 특징입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Shanghai Chicken Snack Wrap is a snack of crispy pizza chicken and fresh vegetables, featuring a spicy sauce.");
                 }
                 break;
             case R.id.snackshu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("슈림프 스낵랩은 슈림프와 신선한 채소가 들어간 간식으로, 매콤한 소스가 특징입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Shrimp Snack Wrap is a snack with shrimp and fresh vegetables, featuring a spicy sauce.");
                 }
                 break;
             case R.id.mcnurget_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("맥너겟은 고소한 닭고기로 만든 작고 바삭한 고기볼로, 부담없이 즐길 수 있는 간식입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("McNuggets are small, crispy meat balls made from savory chicken, and are a light snack that you can enjoy.");
                 }
                 break;
             case R.id.huri_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("후렌치 후라이는 바삭한 감자튀김으로, 입맛을 자극합니다.");
                 } else {
-                    speakText("burger");
+                    speakText("French Fries are crispy French fries that stimulate your taste buds.");
                 }
                 break;
             case R.id.hashbra_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("해쉬 브라운은 감자 튀김 토마토 맛으로, 입맛을 자극합니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Hash Browns are a tomato flavored potato fries that will stimulate your taste buds.");
                 }
                 break;
             case R.id.chickentender_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("맥스파이시 치킨 텐더는 매콤한 햄버거, 닭고기 텐더로, 풍부한 맛과 텍스처가 특징입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("McSpicy Chicken Tenders are spicy hamburgers and chicken tenders, featuring a rich taste and texture.");
                 }
                 break;
             case R.id.chezstick_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("골든 모짜렐라 치즈스틱은 바삭한 외피와 녹아든 모짜렐라 치즈로, 부드럽고 고소한 간식입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Golden Mozzarella Cheese Sticks are a soft, savory snack with a crispy skin and melted mozzarella cheese.");
                 }
                 break;
             case R.id.cuol_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("코울슬로는 신선한 채소와 드레싱으로 만든 샐러드로, 상큼하면서도 건강한 선택입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Coleslaw is a salad made with fresh vegetables and dressing, and is a refreshing and healthy choice.");
                 }
                 break;
             case R.id.churu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("츄러스는 바삭한 외피와 부드러운 속으로, 달콤하게 맛볼 수 있는 디저트입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Churros are a sweet dessert with a crispy skin and soft inside.");
                 }
                 break;
             case R.id.icesu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("딸기 선데이 아이스크림는 상큼한 딸기와 부드러운 아이스크림으로 만든 간단한 디저트로, 달콤한 맛이 일품입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Strawberry Sunday Ice Cream is a simple dessert made with fresh strawberries and soft ice cream, a" +
+                            "nd the sweet taste is excellent.");
                 }
                 break;
             case R.id.iceco_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("초코 선데이 아이스크림는 풍부한 초콜릿 소스와 바닐라 아이스크림이 어우러져 달콤하고 진한 디저트를 이룹니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Choco Sunday Ice Cream combines rich chocolate sauce and vanilla ice cream to form a sweet and rich dessert.");
                 }
                 break;
             case R.id.iceba_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("바닐라 선데이 아이스크림는 부드러운 바닐라 아이스크림과 달콤한 시럽, 훈제 아몬드가 조화를 이룬 맛깔나는 디저트입니다.");
                 } else {
-                    speakText("burger");
+                    speakText("Vanilla Sunday Ice Cream is a delicious dessert that combines soft vanilla ice cream with sweet syrup and smoked almonds.");
                 }
                 break;
 
@@ -193,7 +194,7 @@ public class Intro_7_s extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("주문 내역은 주문한 음식과 메뉴에 대한 정보를 확인할 수 있는 기능을 제공합니다.");
                 } else {
-                    speakText("order history");
+                    speakText("Order history provides the ability to check information about the food and menu you ordered.");
                 }
                 break;
         }

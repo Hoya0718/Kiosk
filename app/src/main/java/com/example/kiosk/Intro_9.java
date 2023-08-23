@@ -50,42 +50,42 @@ public class Intro_9 extends AppCompatActivity {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("선택한 항목을 제거하거나 삭제하는 동작으로, 주문 내역에서 해당 항목을 없앱니다.");
                 } else {
-                    speakText("delete");
+                    speakText("An action to remove or delete the selected item, removing it from the order history.");
                 }
                 break;
             case R.id.minus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("수량을 줄이거나 감소시키는 동작으로, 주문하는 양을 조절할 수 있습니다.");
+                    speakText("수량을 감소시키는 동작으로, 주문하는 양을 조절할 수 있습니다.");
                 } else {
-                    speakText("minus");
+                    speakText("With the action of decreasing the quantity, you can adjust the amount you order.");
                 }
                 break;
             case R.id.count_text:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("주문할 상품의 개수를 나타내는 숫자입니다.");
                 } else {
-                    speakText("count");
+                    speakText("A number representing the number of products to be ordered.");
                 }
                 break;
             case R.id.plus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("수량을 늘리거나 증가시키는 동작으로, 주문하는 양을 늘릴 수 있습니다.");
+                    speakText("수량을 증가시키는 동작으로, 주문하는 양을 늘릴 수 있습니다.");
                 } else {
-                    speakText("plus");
+                    speakText("With the action of increasing the quantity, you can increase the amount you order.");
                 }
                 break;
             case R.id.more_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("이미 주문한 내역에 더 많은 상품을 추가로 주문하고자 할 때 사용하는 동작입니다.");
                 } else {
-                    speakText("more");
+                    speakText("This action is used when you want to order more products in addition to what you have already ordered.");
                 }
                 break;
             case R.id.complete_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                     speakText("모든 주문 과정을 마치고, 결제 화면으로 넘어갑니다.");
                 } else {
-                    speakText("complete");
+                    speakText("After completing all ordering processes, proceed to the payment screen.");
                 }
                 break;
         }

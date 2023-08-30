@@ -49,14 +49,14 @@ public class Intro_8_2 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.set_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("세트는 메인 음식, 사이드 메뉴, 음료가 포함된 조합으로, 한끼 식사에 필요한 모든 것을 편리하게 제공합니다.");
+                    speakText("세트는 메인 음식, 사이드 메뉴, 음료가 함께 포함된 조합으로, 한 끼 식사에 필요한 모든 것을 편리하게 제공해요.");
                 } else {
                     speakText("A set is a combination of a main dish, side menu, and beverage, conveniently providing everything you need for one meal.");
                 }
                 break;
             case R.id.lar_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("라지세트는 보다 풍성한 식사를 위해 세트에 추가로 더 큰 사이드와 음료가 포함되어 있어 더 많은 옵션을 즐길 수 있습니다.");
+                    speakText("라지세트는 보다 풍성한 식사를 위해 세트에 추가로 더 큰 사이드와 음료가 포함돼 있어, 더 다양한 선택을 즐길 수 있어요.");
                 } else {
                     speakText("The Large Set includes an additional larger side and drink in the set for a heartier meal, allowing you more options.");
                 }

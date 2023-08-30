@@ -49,21 +49,21 @@ public class Intro_8_3 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.huri_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("후렌치 후라이는 바삭한 감자튀김으로, 입맛을 자극합니다.");
+                    speakText("후렌치 후라이는 바삭한 감자튀김으로, 입맛을 자극하는 간식이에요.");
                 } else {
                     speakText("French Fries are crispy French fries that stimulate your taste buds.");
                 }
                 break;
             case R.id.cuol_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("코울슬로는 신선한 채소와 드레싱으로 만든 샐러드로, 상큼하면서도 건강한 선택입니다.");
+                    speakText("코울슬로는 신선한 채소와 드레싱으로 만든 상큼한 샐러드로, 건강한 선택이에요.");
                 } else {
                     speakText("Coleslaw is a salad made with fresh vegetables and dressing, and is a refreshing and healthy choice.");
                 }
                 break;
             case R.id.chezstick_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("골든 모짜렐라 치즈스틱은 바삭한 외피와 녹아든 모짜렐라 치즈로, 부드럽고 고소한 간식입니다.");
+                    speakText("골든 모짜렐라 치즈스틱은 바삭한 외피와 녹아든 모짜렐라 치즈로, 부드럽고 고소한 간식이에요.");
                 } else {
                     speakText("Golden Mozzarella Cheese Sticks are a soft, savory snack with a crispy skin and melted mozzarella cheese.");
                 }

@@ -48,21 +48,21 @@ public class Intro_8_7 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.snackshu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("슈림프 스낵랩은 슈림프와 신선한 채소가 들어간 간식으로, 매콤한 소스가 특징입니다.");
+                    speakText("슈림프 스낵랩은 새우와 신선한 채소가 들어간 간식으로, 매콤한 소스가 특징이에요.");
                 } else {
                     speakText("Shrimp Snack Wrap is a snack with shrimp and fresh vegetables, featuring a spicy sauce.");
                 }
                 break;
             case R.id.mcnurget_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("맥너겟은 고소한 닭고기로 만든 작고 바삭한 고기볼로, 부담없이 즐길 수 있는 간식입니다.");
+                    speakText("맥너겟은 고소한 닭고기로 만든 작고 바삭한 고기볼로, 부담없이 즐길 수 있는 간식이에요.");
                 } else {
                     speakText("McNuggets are small, crispy meat balls made from savory chicken, and are a light snack that you can enjoy.");
                 }
                 break;
             case R.id.desel_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("추천 메뉴 중 아무것도 선택하지 않을 때 사용되는 옵션입니다.");
+                    speakText("추천 메뉴 중 아무 것도 선택하지 않을 때 사용되는 옵션입니다.");
                 } else {
                     speakText("This option is used when none of the recommended menus are selected.");
                 }

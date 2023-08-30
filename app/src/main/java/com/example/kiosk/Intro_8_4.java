@@ -77,7 +77,7 @@ public class Intro_8_4 extends AppCompatActivity {
                 break;
             case R.id.chistr_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("딸기 칠러는 과일 향기와 시원함이 어우러진 음료로, 딸기의 풍부한 맛을 즐길 수 있습니다.");
+                    speakText("딸기 칠러는 과일 향기와 시원함이 어우러진 음료로, 딸기의 풍부한 맛을 즐길 수 있어요.");
                 } else {
                     speakText("Strawberry chiller is a drink with a fruity aroma and coolness, " +
                             "allowing you to enjoy the rich taste of strawberries.");
@@ -85,7 +85,7 @@ public class Intro_8_4 extends AppCompatActivity {
                 break;
             case R.id.chijadu_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("자두 칠러는 과일 향기와 시원함이 어우러진 음료로, 자두의 풍부한 맛을 즐길 수 있습니다.");
+                    speakText("자두 칠러는 과일 향기와 시원함이 어우러진 음료로, 자두의 풍부한 맛을 즐길 수 있어요.");
                 } else {
                     speakText("Plum chiller is a drink with a fruity aroma and coolness, " +
                             "allowing you to enjoy the rich taste of plums.");
@@ -93,35 +93,35 @@ public class Intro_8_4 extends AppCompatActivity {
                 break;
             case R.id.shakestr_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("딸기 쉐이크는 부드럽고 크리미한 맛의 딸기 밀크쉐이크입니다.");
+                    speakText("딸기 쉐이크는 부드럽고 크리미한 딸기 밀크쉐이크로, 상큼한 딸기의 맛을 느낄 수 있어요.");
                 } else {
                     speakText("Strawberry Shake is a strawberry milkshake with a smooth and creamy taste.");
                 }
                 break;
             case R.id.shakecho_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("초코 쉐이크는 부드럽고 크리미한 맛의 초코 밀크쉐이크입니다.");
+                    speakText("초코 쉐이크는 부드럽고 크리미한 초코 밀크쉐이크로, 진한 초콜릿의 풍미를 즐길 수 있어요.");
                 } else {
                     speakText("Choco Shake is a chocolate milkshake with a smooth and creamy taste.");
                 }
                 break;
             case R.id.shakeba_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("바닐라 쉐이크는 부드럽고 크리미한 맛의 바닐라 밀크쉐이크입니다.");
+                    speakText("바닐라 쉐이크는 부드럽고 크리미한 바닐라 밀크쉐이크로, 바닐라의 풍미를 느낄 수 있어요.");
                 } else {
                     speakText("Vanilla Shake is a smooth and creamy vanilla milkshake.");
                 }
                 break;
             case R.id.drinkoran_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("신선한 오렌지로 만든 상큼한 주스로, 비타민 C를 함유하며 건강한 선택입니다.");
+                    speakText("신선한 오렌지 주스는 상큼하고 건강한 주스로, 비타민 C가 풍부하게 함유돼 있어요.");
                 } else {
                     speakText("Refreshing juice made from fresh oranges, packed with vitamin C and a healthy choice.");
                 }
                 break;
             case R.id.milk_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("고소하고 영양가 있는 우유로, 다양한 음식과 함께 즐길 수 있습니다.");
+                    speakText("고소하고 영양가 있는 우유는 다양한 요리와 함께 즐길 수 있는 고기질 음료입니다.");
                 } else {
                     speakText("It is nutritious and nutritious milk, and can be enjoyed with a variety of foods.");
                 }

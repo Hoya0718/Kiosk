@@ -48,14 +48,14 @@ public class Intro_8_5 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.show_lay:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("제품에 대한 자세한 내용과 설명을 확인할 수 있는 정보입니다.");
+                    speakText("제품에 대한 자세한 정보와 설명을 확인할 수 있는 정보입니다.");
                 } else {
                     speakText("This is information where you can find more details and explanations about the product.");
                 }
                 break;
             case R.id.minus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("수량을 감소시키는 동작으로, 주문하는 양을 조절할 수 있습니다.");
+                    speakText("수량을 줄이는 동작으로, 주문 양을 조절할 수 있어요.");
                 } else {
                     speakText("With the action of decreasing the quantity, you can adjust the amount you order.");
                 }
@@ -69,21 +69,21 @@ public class Intro_8_5 extends AppCompatActivity {
                 break;
             case R.id.plus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("수량을 증가시키는 동작으로, 주문하는 양을 늘릴 수 있습니다.");
+                    speakText("수량을 늘리는 동작으로, 주문 양을 늘릴 수 있어요.");
                 } else {
                     speakText("With the action of increasing the quantity, you can increase the amount you order.");
                 }
                 break;
             case R.id.cancel_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("주문하려던 내용을 취소하거나 변경할 때 사용하는 동작입니다.");
+                    speakText("주문하려는 내용을 변경하거나 취소할 때 사용하는 동작입니다.");
                 } else {
                     speakText("This action is used when canceling or changing the contents of an order.");
                 }
                 break;
             case R.id.add_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("선택한 상품을 장바구니에 담아 나중에 한 번에 주문할 수 있도록 준비합니다.");
+                    speakText("선택한 상품을 장바구니에 담아 나중에 한 번에 주문할 수 있도록 준비해요.");
                 } else {
                     speakText("Place the selected products in your shopping cart, ready to be ordered at a later time.");
                 }

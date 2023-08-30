@@ -48,14 +48,14 @@ public class Intro_9 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.delete_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("선택한 항목을 제거하거나 삭제하는 동작으로, 주문 내역에서 해당 항목을 없앱니다.");
+                    speakText("선택한 항목을 제거하거나 삭제하는 동작으로, 주문 내역에서 해당 항목을 없애요.");
                 } else {
                     speakText("An action to remove or delete the selected item, removing it from the order history.");
                 }
                 break;
             case R.id.minus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("수량을 감소시키는 동작으로, 주문하는 양을 조절할 수 있습니다.");
+                    speakText("수량을 줄이는 동작으로, 주문 양을 조절할 수 있어요.");
                 } else {
                     speakText("With the action of decreasing the quantity, you can adjust the amount you order.");
                 }
@@ -69,21 +69,21 @@ public class Intro_9 extends AppCompatActivity {
                 break;
             case R.id.plus_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("수량을 증가시키는 동작으로, 주문하는 양을 늘릴 수 있습니다.");
+                    speakText("수량을 늘리는 동작으로, 주문 양을 늘릴 수 있어요.");
                 } else {
                     speakText("With the action of increasing the quantity, you can increase the amount you order.");
                 }
                 break;
             case R.id.more_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("이미 주문한 내역에 더 많은 상품을 추가로 주문하고자 할 때 사용하는 동작입니다.");
+                    speakText("이미 주문한 내역에 더 많은 상품을 추가하려면 이 동작을 사용해요.");
                 } else {
                     speakText("This action is used when you want to order more products in addition to what you have already ordered.");
                 }
                 break;
             case R.id.complete_Btn:
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
-                    speakText("모든 주문 과정을 마치고, 결제 화면으로 넘어갑니다.");
+                    speakText("모든 주문 과정을 마치고 결제 화면으로 이동합니다.");
                 } else {
                     speakText("After completing all ordering processes, proceed to the payment screen.");
                 }

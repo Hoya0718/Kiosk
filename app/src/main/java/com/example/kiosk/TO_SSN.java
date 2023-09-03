@@ -48,7 +48,7 @@ public class TO_SSN extends AppCompatActivity {
                 if (status != TextToSpeech.ERROR) {
                     if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                         tts.setLanguage(KOREAN);
-                        speakText("주민등록표 중 등본을 찾아 눌러보세요.");
+                        speakText("주민등록표 초본은 주소이전 내역으로 많이 사용이됩니다..");
 
                     } else {
                         getResources().getConfiguration().locale.getLanguage().equals("en");

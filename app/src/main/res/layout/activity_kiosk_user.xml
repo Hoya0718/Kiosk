@@ -93,14 +93,17 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_txt_gray_t"
                 android:gravity="center"
                 android:text="패스트푸드"
+                android:textColor="#000000"
                 android:textSize="25dp" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
+                android:background="@drawable/hospital_txt_gray_t"
                 android:orientation="vertical">
 
                 <TextView
@@ -133,14 +136,17 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_txt_gray_tb"
                 android:gravity="center"
                 android:text="버스"
+                android:textColor="#000000"
                 android:textSize="25dp" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
+                android:background="@drawable/hospital_txt_gray_tb"
                 android:orientation="vertical">
 
                 <TextView
@@ -173,14 +179,17 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_txt_gray_b"
                 android:gravity="center"
                 android:text="병원"
+                android:textColor="#000000"
                 android:textSize="25dp" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
+                android:background="@drawable/hospital_txt_gray_b"
                 android:orientation="vertical">
 
                 <TextView
@@ -213,14 +222,17 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_txt_gray_b"
                 android:gravity="center"
                 android:text="무인발급기"
+                android:textColor="#000000"
                 android:textSize="25dp" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
+                android:background="@drawable/hospital_txt_gray_b"
                 android:orientation="vertical">
 
                 <TextView

@@ -88,6 +88,14 @@ public class myapp extends Application {
     public long getR_F_Time() {return r_f_time;}
     public void setR_F_Time(long a) {this.r_f_time=a;}
 
+    private long r_f_pop_time = 0;
+    public long getR_F_Pop_Time() {return r_f_pop_time;}
+    public void setR_F_Pop_Time(long a) {this.r_f_pop_time=a;}
+
+    private long r_f_pay_time = 0;
+    public long getR_F_Pay_Time() {return r_f_pay_time;}
+    public void setR_F_Pay_Time(long a) {this.r_f_pay_time=a;}
+
     private long r_b_time = 0;
     public long getR_B_Time() {return r_b_time;}
     public void setR_B_Time(long a) {this.r_b_time=a;}

@@ -31,6 +31,7 @@ public class Kiosk_R_Fastfood_Popup_Set extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_fastfood_popup_set);
 
         myapp myApp = (myapp) getApplicationContext();
+        myApp.setR_F_Pop_Time(System.currentTimeMillis());
         showMission = findViewById(R.id.showMission);
         showMission.setText(myApp.getCheckFastfoodMission());
 

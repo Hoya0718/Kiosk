@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66BBFF"
+    tools:context=".r_To_Add">
+
+    <TextView
+        android:id="@+id/textView114"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="주민등록번호(등본)"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="720dp"
+        android:layout_height="800dp"
+        android:layout_marginTop="100dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView114" />
+
+    <TextView
+        android:id="@+id/textView115"
+        android:layout_width="720dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="개인정보 보호를 위해 아래의 등본 사항 중 필요한 사항을 선택하신 후 확인 버튼을 누르십시오."
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <Button
+        android:id="@+id/button80"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/hospital_btn_blue2"
+        android:enabled="false"
+        android:text="법원"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/to_btn_all" />
+
+    <Button
+        android:id="@+id/button81"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/hospital_btn_blue2"
+        android:enabled="false"
+        android:text="교육기관"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button80"
+        app:layout_constraintTop_toBottomOf="@+id/button80" />
+
+    <Button
+        android:id="@+id/button82"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/hospital_btn_blue2"
+        android:enabled="false"
+        android:text="공공기관"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button81"
+        app:layout_constraintTop_toBottomOf="@+id/button81" />
+
+    <Button
+        android:id="@+id/button83"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/hospital_btn_blue2"
+        android:enabled="false"
+        android:text="부동산계약"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button82"
+        app:layout_constraintTop_toBottomOf="@+id/button82" />
+
+    <Button
+        android:id="@+id/button84"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/hospital_btn_blue2"
+        android:enabled="false"
+        android:text="금융법원"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/button83"
+        app:layout_constraintTop_toBottomOf="@+id/button83" />
+
+    <TextView
+        android:id="@+id/textView116"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="세대 구성 사유"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView118"
+        app:layout_constraintTop_toBottomOf="@+id/textView118" />
+
+    <TextView
+        android:id="@+id/textView117"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="세대 구성 일자"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView116"
+        app:layout_constraintTop_toBottomOf="@+id/textView116" />
+
+    <TextView
+        android:id="@+id/textView118"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="과거의 주소 변동 사항"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/button80"
+        app:layout_constraintTop_toTopOf="@+id/button80" />
+
+    <TextView
+        android:id="@+id/textView119"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="신고일"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView117"
+        app:layout_constraintTop_toBottomOf="@+id/textView117" />
+
+    <TextView
+        android:id="@+id/textView120"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="변동사유"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView119"
+        app:layout_constraintTop_toBottomOf="@+id/textView119" />
+
+    <TextView
+        android:id="@+id/textView121"
+        android:layout_width="325dp"
+        android:layout_height="70dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="세대주-세대원 외국인 등록"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView120"
+        app:layout_constraintTop_toBottomOf="@+id/textView120" />
+
+    <TextView
+        android:id="@+id/textView122"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="주민등록번호 뒷자리"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView121"
+        app:layout_constraintTop_toBottomOf="@+id/textView121" />
+
+    <TextView
+        android:id="@+id/textView123"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="세대주와 세대원의 관계"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView122"
+        app:layout_constraintTop_toBottomOf="@+id/textView122" />
+
+    <TextView
+        android:id="@+id/textView124"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="#EFEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="동거인"
+        android:textColor="#4169E1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView123"
+        app:layout_constraintTop_toBottomOf="@+id/textView123" />
+
+    <Button
+        android:id="@+id/to_btn_all"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#0D1B68"
+        android:onClick="all"
+        android:text="전체포함"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/to_btn_not_all"
+        app:layout_constraintTop_toBottomOf="@+id/textView115" />
+
+    <Button
+        android:id="@+id/to_btn_not_all"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:background="#0D1B68"
+        android:onClick="all_not"
+        android:text="전체미포함"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_all" />
+
+    <Button
+        android:id="@+id/why_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/to_btn_not_all"
+        app:layout_constraintTop_toBottomOf="@+id/textView119" />
+
+    <Button
+        android:id="@+id/household_members"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="세대원"
+        app:layout_constraintEnd_toStartOf="@+id/why_not"
+        app:layout_constraintTop_toTopOf="@+id/why_not" />
+
+    <Button
+        android:id="@+id/why"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="포함"
+        app:layout_constraintEnd_toStartOf="@+id/household"
+        app:layout_constraintTop_toTopOf="@+id/household" />
+
+    <Button
+        android:id="@+id/household"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="세대"
+        app:layout_constraintEnd_toStartOf="@+id/household_members"
+        app:layout_constraintTop_toTopOf="@+id/household_members" />
+
+    <Button
+        android:id="@+id/to_btn_to_2"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:onClick="goto_to_main"
+        android:text="처음화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/goto_to_issuance" />
+
+    <Button
+        android:id="@+id/goto_to_issuance"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:onClick="goto_to_issuance"
+        android:text="이전화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/to_btn_to_2"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_check_1" />
+
+    <Button
+        android:id="@+id/to_btn_check_1"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goto_fee_Exam"
+        android:text="확인"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <Button
+        android:id="@+id/past_a_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/to_btn_not_all"
+        app:layout_constraintTop_toTopOf="@+id/textView118" />
+
+    <Button
+        android:id="@+id/family_config_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/past_a_not"
+        app:layout_constraintTop_toTopOf="@+id/textView116" />
+
+    <Button
+        android:id="@+id/family_config_day_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/family_config_not"
+        app:layout_constraintTop_toBottomOf="@+id/textView116" />
+
+    <Button
+        android:id="@+id/report_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/family_config_day_not"
+        app:layout_constraintTop_toBottomOf="@+id/textView117" />
+
+    <Button
+        android:id="@+id/foreigner_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/why_not"
+        app:layout_constraintTop_toTopOf="@+id/textView121" />
+
+    <Button
+        android:id="@+id/ssn_back_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/foreigner_not"
+        app:layout_constraintTop_toTopOf="@+id/textView122" />
+
+    <Button
+        android:id="@+id/relation_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/ssn_back_not"
+        app:layout_constraintTop_toBottomOf="@+id/textView122" />
+
+    <Button
+        android:id="@+id/partner_not"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="미포함"
+        app:layout_constraintEnd_toEndOf="@+id/relation_not"
+        app:layout_constraintTop_toBottomOf="@+id/textView123" />
+
+    <Button
+        android:id="@+id/past_a"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:text="전체포함"
+        app:layout_constraintStart_toEndOf="@+id/textView118"
+        app:layout_constraintTop_toTopOf="@+id/textView118" />
+
+    <Button
+        android:id="@+id/button70"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:text="직접입력"
+        app:layout_constraintStart_toEndOf="@+id/past_a"
+        app:layout_constraintTop_toTopOf="@+id/past_a" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="최근 □년"
+        app:layout_constraintStart_toEndOf="@+id/button70"
+        app:layout_constraintTop_toTopOf="@+id/button70" />
+
+    <Button
+        android:id="@+id/family_config"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="포함"
+        app:layout_constraintEnd_toStartOf="@+id/family_config_not"
+        app:layout_constraintTop_toTopOf="@+id/family_config_not" />
+
+    <Button
+        android:id="@+id/family_config_day"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="포함"
+        app:layout_constraintEnd_toStartOf="@+id/family_config_day_not"
+        app:layout_constraintTop_toTopOf="@+id/family_config_day_not" />
+
+    <Button
+        android:id="@+id/report"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="포함"
+        app:layout_constraintEnd_toStartOf="@+id/report_not"
+        app:layout_constraintTop_toTopOf="@+id/report_not" />
+
+    <Button
+        android:id="@+id/relation"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="포함"
+        app:layout_constraintEnd_toStartOf="@+id/relation_not"
+        app:layout_constraintTop_toTopOf="@+id/relation_not" />
+
+    <Button
+        android:id="@+id/partner"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="포함"
+        app:layout_constraintEnd_toStartOf="@+id/partner_not"
+        app:layout_constraintTop_toTopOf="@+id/partner_not" />
+
+    <Button
+        android:id="@+id/ssn_back"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:text="포함"
+        app:layout_constraintStart_toEndOf="@+id/textView122"
+        app:layout_constraintTop_toTopOf="@+id/textView85" />
+
+    <TextView
+        android:id="@+id/textView85"
+        android:layout_width="15dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="("
+        app:layout_constraintStart_toEndOf="@+id/ssn_back"
+        app:layout_constraintTop_toTopOf="@+id/self" />
+
+    <Button
+        android:id="@+id/self"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:text="본인"
+        app:layout_constraintStart_toEndOf="@+id/textView85"
+        app:layout_constraintTop_toTopOf="@+id/textView155" />
+
+    <TextView
+        android:id="@+id/textView155"
+        android:layout_width="15dp"
+        android:layout_height="60dp"
+        android:gravity="bottom|center_horizontal"
+        android:text=","
+        app:layout_constraintStart_toEndOf="@+id/self"
+        app:layout_constraintTop_toTopOf="@+id/household_member_ssn" />
+
+    <Button
+        android:id="@+id/household_member_ssn"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:text="세대원"
+        app:layout_constraintStart_toEndOf="@+id/textView155"
+        app:layout_constraintTop_toTopOf="@+id/textView156" />
+
+    <TextView
+        android:id="@+id/textView156"
+        android:layout_width="15dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text=")"
+        app:layout_constraintStart_toEndOf="@+id/household_member_ssn"
+        app:layout_constraintTop_toTopOf="@+id/ssn_back_not" />
+
+    <Button
+        android:id="@+id/foreigner"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="포함"
+        app:layout_constraintEnd_toStartOf="@+id/foreigner_not"
+        app:layout_constraintTop_toTopOf="@+id/foreigner_not" />
+
+    <TextView
+        android:id="@+id/textView157"
+        android:layout_width="15dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="("
+        app:layout_constraintStart_toEndOf="@+id/why"
+        app:layout_constraintTop_toTopOf="@+id/why" />
+
+    <TextView
+        android:id="@+id/textView158"
+        android:layout_width="15dp"
+        android:layout_height="60dp"
+        android:gravity="bottom|center_horizontal"
+        android:text=","
+        app:layout_constraintStart_toEndOf="@+id/household"
+        app:layout_constraintTop_toTopOf="@+id/household" />
+
+    <TextView
+        android:id="@+id/textView159"
+        android:layout_width="15dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text=")"
+        app:layout_constraintStart_toEndOf="@+id/household_members"
+        app:layout_constraintTop_toTopOf="@+id/household_members" />
+</androidx.constraintlayout.widget.ConstraintLayout>

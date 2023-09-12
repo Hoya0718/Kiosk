@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Hospital_Prescription"
-    tools:layout_editor_absoluteX="50dp"
-    tools:layout_editor_absoluteY="0dp">
-
+    tools:context=".r_Hospital_Prescription">
     <TextView
         android:id="@+id/textView25"
         android:layout_width="600dp"
@@ -234,5 +231,4 @@
         android:onClick="goto_Hospital_Main"
         app:layout_constraintStart_toEndOf="@+id/textView25"
         app:layout_constraintTop_toTopOf="@+id/textView25" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

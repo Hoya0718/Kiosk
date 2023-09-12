@@ -264,11 +264,20 @@ public class Kiosk_R_Part extends AppCompatActivity {
             startActivity(goto_Kiosk_R_H);
         }
     }
-
+    public void a(View v){
+        tts.shutdown();
+        Intent a = new Intent(getApplicationContext(),r_Hospital_main.class);
+        startActivity(a);
+    }
     public void goto_Kiosk_Main (View v){
         tts.shutdown();
         Intent goto_Kiosk_Main = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(goto_Kiosk_Main);
+    }
+    public void goto_PTO(View v){
+        tts.shutdown();
+        Intent goto_PTO = new Intent(getApplicationContext(), P_TO.class);
+        startActivity(goto_PTO);
     }
     private void speakText(String text) {
         tts.setSpeechRate(sound.getTtsSpeed()) ;

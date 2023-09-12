@@ -162,7 +162,7 @@ public class Hospital_Main extends AppCompatActivity {
     }
     public void goto_kiosk_main(View v){ //키오스크 메인 버튼
         tts.shutdown();
-        Intent goto_kiosk_main = new Intent(getApplicationContext(), MainActivity.class);
+        Intent goto_kiosk_main = new Intent(getApplicationContext(), Kiosk_5.class);
         startActivity(goto_kiosk_main);
     }
 

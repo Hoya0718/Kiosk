@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Hospital_Medical_Record extends AppCompatActivity {
+public class r_Hospital_Medical_Record extends AppCompatActivity {
 
     private TextView ssn_txt_1_1;
     private myapp text_size;
@@ -17,7 +17,7 @@ public class Hospital_Medical_Record extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medical_record);
+        setContentView(R.layout.activity_rhospital_medical_record);
 
         ssn_txt_1_1 = findViewById(R.id.ssn_txt_1_1);
         text_size = (myapp) getApplication();
@@ -154,13 +154,13 @@ public class Hospital_Medical_Record extends AppCompatActivity {
                 }
                 break;
             case R.id.h_btn_visitor:
-                Intent intent2 = new Intent(getApplicationContext(),get_WaitingNum.class);
+                Intent intent2 = new Intent(getApplicationContext(), r_Hospital_Get_Waiting_Num.class);
                 startActivity(intent2);
 
         }
     }
     public void goto_progress(View v) {
-        Intent goto_progress = new Intent(this, get_WaitingNum.class);
+        Intent goto_progress = new Intent(this, r_Hospital_Get_Waiting_Num.class);
         if (ssn_txt_1_1.length() != 14) {
             if (getResources().getConfiguration().locale.getLanguage().equals("ko")) {
                 Toast.makeText(getApplicationContext(), "주민등록번호의 길이가 맞는지 확인해 주세요.", Toast.LENGTH_LONG).show();
@@ -215,8 +215,8 @@ public class Hospital_Medical_Record extends AppCompatActivity {
 
         return false;
     }
-    public void goto_Hospital_Main(View v) {
-        Intent goto_Hospital_Main = new Intent(getApplicationContext(), Hospital_Main.class);
+    public void goto_Hospital_Main(View v){
+        Intent goto_Hospital_Main = new Intent(getApplicationContext(),r_Hospital_main.class);
         startActivity(goto_Hospital_Main);
     }
 }

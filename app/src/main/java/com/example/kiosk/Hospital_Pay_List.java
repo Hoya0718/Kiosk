@@ -151,7 +151,7 @@ public class Hospital_Pay_List extends AppCompatActivity {
 
     public void goto_pay(View v){
         tts.shutdown();
-        Intent goto_pay = new Intent(getApplicationContext(), Hospital_Pay.class);
+        Intent goto_pay = new Intent(getApplicationContext(), r_Hospital_Pay.class);
         startActivity(goto_pay);
     }
     public void goto_Hospital_Main(View v){

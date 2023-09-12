@@ -32,6 +32,72 @@
         android:theme="@style/Theme.Kiosk"
         tools:targetApi="31">
         <activity
+            android:name=".User_list"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Card_Insert"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Pay"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Pay_List"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Get_Num_Yes"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Get_Num"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Is_Fee_Examption"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Add"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Issuance_Info"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Ssn2"
+            android:exported="false" />
+        <activity
+            android:name=".r_To_Ssn"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_Printing_Complete"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_Printing"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_Pay_Remove"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_Pay"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_Pay_List"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_In_Progress"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_Get_Waiting_Num"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_Medical_Record"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_Prescription"
+            android:exported="false" />
+        <activity
+            android:name=".r_Hospital_main"
+            android:exported="false" />
+        <activity
+            android:name=".P_TO"
+            android:exported="false" />
+        <activity
             android:name=".get_WaitingNum"
             android:exported="false" />
         <activity

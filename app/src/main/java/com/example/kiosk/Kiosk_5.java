@@ -98,7 +98,7 @@ public class Kiosk_5 extends AppCompatActivity {
 
     public void goto_kiosk_25(View v){
         tts.shutdown();
-        Intent goto_kiosk_25 = new Intent(getApplicationContext(),Kiosk_25.class);
+        Intent goto_kiosk_25 = new Intent(getApplicationContext(),Hospital_Main.class);
         startActivity(goto_kiosk_25);
     }
     public void goto_Kiosk_Main(View v){
@@ -110,6 +110,10 @@ public class Kiosk_5 extends AppCompatActivity {
         tts.shutdown();
         Intent goto_Back = new Intent(getApplicationContext(),Kiosk_3.class);
         startActivity(goto_Back);
+    }
+    public void goto_P_TO(View v){
+        Intent goto_P_TO = new Intent(getApplicationContext(), Town_Office.class);
+        startActivity(goto_P_TO);
     }
 
     private void speakText(String text) {

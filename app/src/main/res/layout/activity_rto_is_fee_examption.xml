@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66BBFF"
+    tools:context=".r_To_Is_Fee_Examption">
+
+    <TextView
+        android:id="@+id/textView125"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="주민등록번호(등본)"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="720dp"
+        android:layout_height="800dp"
+        android:layout_marginTop="100dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView125" />
+
+    <TextView
+        android:id="@+id/textView126"
+        android:layout_width="720dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="수수료 면제대상 여부를 선택해주십시오"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/view6" />
+
+    <TextView
+        android:id="@+id/textView127"
+        android:layout_width="550dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="수수료 면제 대상에 해당하여 수수료 면제를 신청함"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/textView126" />
+
+    <Button
+        android:id="@+id/to_btn_fee_yes"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="80dp"
+        android:onClick="goto_get_Num_yes"
+        android:text="예"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/textView154" />
+
+    <Button
+        android:id="@+id/to_btn_fee_no"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="60dp"
+        android:onClick="goto_get_Num"
+        android:text="아니요"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/to_btn_fee_yes"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_fee_yes" />
+
+    <Button
+        android:id="@+id/button96"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goto_to_main"
+        android:text="처음화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <Button
+        android:id="@+id/button97"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:onClick="goto_add"
+        android:text="이전화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/button96"
+        app:layout_constraintTop_toTopOf="@+id/button96" />
+
+    <TextView
+        android:id="@+id/textView154"
+        android:layout_width="550dp"
+        android:layout_height="75dp"
+        android:gravity="center|clip_vertical"
+        android:text="수수료 면제 대상:   국민기초수급생활자, 국가유공대상자, 한부모가족 대상자"
+        android:textColor="#4169E1"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/textView127"
+        app:layout_constraintTop_toBottomOf="@+id/textView127" />
+</androidx.constraintlayout.widget.ConstraintLayout>

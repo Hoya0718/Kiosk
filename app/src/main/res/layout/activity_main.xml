@@ -104,22 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button37"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="a"
-                android:text="새로운 병원" />
-
-            <Button
-                android:id="@+id/button102"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="goto_to_Main"
-                android:text="동사무소" />
-        </LinearLayout>
+            android:orientation="vertical"/>
 
     </LinearLayout>
 </LinearLayout>

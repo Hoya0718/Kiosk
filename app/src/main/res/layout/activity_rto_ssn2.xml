@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66BBFF"
+    tools:context=".r_To_Ssn2">
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="주민등록번호(등본)"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="720dp"
+        android:layout_height="800dp"
+        android:layout_marginTop="100dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+    <TextView
+        android:id="@+id/textView84"
+        android:layout_width="720dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="주민등록번호를 입력해 주십시오."
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/to_txt_ssn"
+        android:layout_width="720dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:maxLength="14"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/textView84"
+        app:layout_constraintTop_toBottomOf="@+id/textView84" />
+
+    <Button
+        android:id="@+id/to_btn_1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_txt_ssn"
+        app:layout_constraintTop_toBottomOf="@+id/to_txt_ssn" />
+
+    <Button
+        android:id="@+id/to_btn_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="2"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/to_btn_1"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_1" />
+
+    <Button
+        android:id="@+id/to_btn_3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="3"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/to_btn_2"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_2" />
+
+    <Button
+        android:id="@+id/to_btn_4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="4"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_1"
+        app:layout_constraintTop_toBottomOf="@+id/to_btn_1" />
+
+    <Button
+        android:id="@+id/to_btn_5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="5"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_2"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_4" />
+
+    <Button
+        android:id="@+id/to_btn_6"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="6"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_3"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_5" />
+
+    <Button
+        android:id="@+id/to_btn_7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="7"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_4"
+        app:layout_constraintTop_toBottomOf="@+id/to_btn_4" />
+
+    <Button
+        android:id="@+id/to_btn_8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="8"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_5"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_7" />
+
+    <Button
+        android:id="@+id/to_btn_9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="9"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_6"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_8" />
+
+    <Button
+        android:id="@+id/to_btn_del"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="정정"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_7"
+        app:layout_constraintTop_toBottomOf="@+id/to_btn_7" />
+
+    <Button
+        android:id="@+id/to_btn_0"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_8"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_del" />
+
+    <Button
+        android:id="@+id/to_btn_all_delete"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:height="100dp"
+        android:background="@drawable/hospital_btn_gray"
+        android:onClick="put_n"
+        android:text="삭제"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/to_btn_9"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_0" />
+
+    <Button
+        android:id="@+id/to_btn_to"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:onClick="goto_to_main"
+        android:text="처음화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/to_btn_pre" />
+
+    <Button
+        android:id="@+id/to_btn_pre"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:onClick="goto_to_ssn"
+        android:text="이전화면"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/to_btn_to"
+        app:layout_constraintTop_toTopOf="@+id/button76" />
+
+    <Button
+        android:id="@+id/button76"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goto_to_issuance"
+        android:text="확인"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

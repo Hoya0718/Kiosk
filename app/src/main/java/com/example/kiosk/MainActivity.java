@@ -4,6 +4,7 @@ import static java.util.Locale.KOREAN;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.room.Room;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -192,18 +193,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goto_Kiosk_R_Part(View v){
         tts.shutdown();
-        Intent goto_Kiosk_R_Part = new Intent(getApplicationContext(), Kiosk_R_Part.class);
+        Intent goto_Kiosk_R_Part = new Intent(getApplicationContext(), User_list.class);
         startActivity(goto_Kiosk_R_Part);
-    }
-    public void a(View v){
-        tts.shutdown();
-        Intent a = new Intent(getApplicationContext(),Hospital_Main.class);
-        startActivity(a);
-    }
-    public void goto_to_Main(View v){
-        tts.shutdown();
-        Intent goto_to_Main = new Intent(getApplicationContext(), Town_Office.class);
-        startActivity(goto_to_Main);
     }
     public void change_to_korean(View v) {
 

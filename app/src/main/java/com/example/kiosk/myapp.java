@@ -22,6 +22,15 @@ public class myapp extends Application {
     private String h_ssn;
     private String get_num_yse;
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    private String time;
     public void setH_ssn(String a) { this.h_ssn = a;}
     public String getH_ssn() { return h_ssn;}
 

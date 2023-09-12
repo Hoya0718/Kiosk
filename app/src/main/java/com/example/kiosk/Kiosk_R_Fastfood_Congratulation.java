@@ -21,8 +21,13 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
 
         myapp myApp = (myapp) getApplicationContext();
         long beforeTime = myApp.getR_Time();
+        long beforePopTime = myApp.getR_F_Pop_Time();
+        long beforePayTime = myApp.getR_F_Pay_Time();
         long afterTime = System.currentTimeMillis();
-        long measTime = (afterTime - beforeTime) / 1000;
+        long measTime = (afterTime - beforeTime) / 1000;        // 전체
+        long payTime = (afterTime - beforePayTime) / 1000;      // 결제
+        long popTime = (beforePayTime - beforePopTime) / 1000;  // 세부
+        long menuTime = (beforePopTime - beforeTime) / 1000;    // 메뉴
 
         List<Order> orderList = myApp.getOrderList();
         String checkMission = myApp.getCheckFastfoodMission();
@@ -42,7 +47,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                 diffTime = pTime - measTime;
                 con_text.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
                         "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요");
+                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요\n");
             } else {
                 diffTime = measTime - pTime;
                 con_text.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
@@ -70,7 +75,11 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                 myApp.setR_F_Time(measTime);
             }
         } else {
-            con_text.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초");
+            con_text.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                    "구간별 소요 시간\n" +
+                    "메뉴 선택 : " + (menuTime / 60) + "분 " + (menuTime % 60) + "초\n" +
+                    "세부 선택 : " + (popTime / 60) + "분 " + (popTime % 60) + "초\n" +
+                    "결제 : " + (payTime / 60) + "분 " + (payTime % 60) + "초");
             myApp.setR_F_Time(measTime);
         }
 

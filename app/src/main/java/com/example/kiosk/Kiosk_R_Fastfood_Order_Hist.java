@@ -32,6 +32,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
         setContentView(R.layout.activity_kiosk_r_fastfood_order_hist);
 
         myapp myApp = (myapp) getApplicationContext();
+        myApp.setR_F_Pay_Time(System.currentTimeMillis());
         showMission = findViewById(R.id.showMission);
         showMission.setText(myApp.getCheckFastfoodMission());
 

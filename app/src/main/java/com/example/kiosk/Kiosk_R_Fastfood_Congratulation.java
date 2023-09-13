@@ -28,6 +28,10 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         long payTime = (afterTime - beforePayTime) / 1000;      // 결제
         long popTime = (beforePayTime - beforePopTime) / 1000;  // 세부
         long menuTime = (beforePopTime - beforeTime) / 1000;    // 메뉴
+        myApp.set_meansTime(measTime);
+        myApp.set_meansTime(payTime);
+        myApp.set_meansTime(popTime);
+        myApp.set_meansTime(menuTime);
 
         List<Order> orderList = myApp.getOrderList();
         String checkMission = myApp.getCheckFastfoodMission();

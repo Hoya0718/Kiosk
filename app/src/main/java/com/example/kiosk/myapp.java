@@ -136,4 +136,20 @@ public class myapp extends Application {
     private boolean missionCheck;
     public boolean getMissionCheck() {return missionCheck;}
     public void setMissionCheck(boolean a) {this.missionCheck=a;}
+
+    private long measTime;      // 전체
+    public long get_meansTime() {return measTime;}
+    public void set_meansTime(long a) {this.measTime=a;}
+
+    private long payTime;       // 결제
+    public long get_payTime() {return measTime;}
+    public void set_payTime(long a) {this.measTime=a;}
+
+    private long popTime;       // 세부
+    public long get_popTime() {return measTime;}
+    public void set_popTime(long a) {this.measTime=a;}
+
+    private long menuTime;      // 메뉴
+    public long get_menuTime() {return measTime;}
+    public void set_menuTime(long a) {this.measTime=a;}
 }

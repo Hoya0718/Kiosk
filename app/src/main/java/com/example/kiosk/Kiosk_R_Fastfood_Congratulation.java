@@ -7,17 +7,41 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
-
+    List<MainData> dataList = new ArrayList<>();
+    RoomDB database;
+    MainAdapter adapter;
+    private MainDao mainDao;
     private TextView con_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_congratulation);
+
+        database = RoomDB.getInstance(this);
+
+        dataList = database.mainDao().getAll();
+
+        adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, dataList);
+
+
+
+        RoomDB db = Room.databaseBuilder(getApplicationContext(), RoomDB.class, "Time_DB")
+                .fallbackToDestructiveMigration()     //스키마 버젼 변경 가능
+                .allowMainThreadQueries()             // 메인 스레드에서 DB에 IO가능하게
+                .build();
+
+        mainDao = db.mainDao();
+
+        MainData data = new MainData(); //객체 인스턴스 생성
+
+        int myId = database.mainDao().getLastInsertedId();
 
         myapp myApp = (myapp) getApplicationContext();
         long beforeTime = myApp.getR_Time();
@@ -84,6 +108,14 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                     "메뉴 선택 : " + (menuTime / 60) + "분 " + (menuTime % 60) + "초\n" +
                     "세부 선택 : " + (popTime / 60) + "분 " + (popTime % 60) + "초\n" +
                     "결제 : " + (payTime / 60) + "분 " + (payTime % 60) + "초");
+            data.setTime((menuTime / 60) + "분 " + (menuTime % 60) + "초");
+            data.setDetail((popTime / 60) + "분 " + (popTime % 60) + "초");
+            data.setCredit((payTime / 60) + "분 " + (payTime % 60) + "초");
+            database.mainDao().insert(data);
+            database.mainDao().update2(myId,(menuTime / 60) + "분 " + (menuTime % 60) + "초\n");
+            database.mainDao().update3(myId,(popTime / 60) + "분 " + (popTime % 60) + "초\n");
+            database.mainDao().update4(myId,(payTime / 60) + "분 " + (payTime % 60) + "초\n");
+            database.mainDao().deleteNullNameData();
             myApp.setR_F_Time(measTime);
         }
 

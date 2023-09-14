@@ -45,9 +45,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
         View itemView = holder.itemView;
         TextView textView = itemView.findViewById(R.id.text_view);
         TextView text_time = itemView.findViewById(R.id.text_time);
+        TextView credit_time = itemView.findViewById(R.id.credit_time);
+        TextView detail_time = itemView.findViewById(R.id.detail_time);
+
         textView.setText(data.getText());
         text_time.setText(data.getTime());
-
+        credit_time.setText(data.getCredit());
+        detail_time.setText(data.getDetail());
         holder.btEdit.setOnClickListener(new View.OnClickListener()                                 //수정할 때
         {
             @Override
@@ -119,14 +123,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView textView, text_time;
         ImageView btEdit, btDelete;
 
         public ViewHolder(@NonNull View view)
         {
             super(view);
-//            text_time = itemView.findViewById(R.id.text_time);
-//            textView = itemView.findViewById(R.id.text_view);
+
             btEdit = view.findViewById(R.id.bt_edit);
             btDelete = view.findViewById(R.id.bt_delete);
 

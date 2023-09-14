@@ -33,13 +33,71 @@
                 android:hint="사용자 이름"
                 android:textColor="#000000" />
 
-            <TextView
-                android:id="@+id/text_time"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:hint="소요시간" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView163"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="메뉴 소요시간"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/textView165"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="세부 소요시간"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/textView166"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="결제 소요시간"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="소요시간" />
+
+                <TextView
+                    android:id="@+id/detail_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="소요시간" />
+
+                <TextView
+                    android:id="@+id/credit_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="소요시간" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <ImageView

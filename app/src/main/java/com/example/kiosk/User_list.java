@@ -66,6 +66,8 @@ public class User_list extends AppCompatActivity {
                             MainData data = new MainData();
                             data.setText(sText);
                             data.setTime(null);
+                            data.setCredit(null);
+                            data.setDetail(null);
                             database.mainDao().insert(data);
 
                             editText.setText("");

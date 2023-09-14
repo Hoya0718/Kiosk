@@ -12,7 +12,24 @@ public class MainData {
     private String text;
 
     private String time;
+    private String detail;
+    private String credit;
 
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public String getCredit() {
+        return credit;
+    }
+
+    public void setCredit(String credit) {
+        this.credit = credit;
+    }
 
     public String getTime() {
         return time;

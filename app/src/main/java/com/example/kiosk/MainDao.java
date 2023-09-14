@@ -28,6 +28,10 @@ public interface MainDao {
 
     @Query("UPDATE table_name SET time = :aaa Where id = :sID")
     void update2(int sID, String aaa);
+    @Query("UPDATE table_name SET detail = :aaa Where id = :sID")
+    void update3(int sID, String aaa);
+    @Query("UPDATE table_name SET credit = :aaa Where id = :sID")
+    void update4(int sID, String aaa);
 
 
     @Query("DELETE FROM table_name WHERE text IS NULL")

@@ -22,6 +22,31 @@
         android:textSize="18sp"
         android:gravity="center" />
 
+    <TextView
+        android:id="@+id/tot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp" /><![CDATA[
+
+    />
+
+    ]]>
+
+    <TextView
+        android:id="@+id/tot_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tot_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp" />/>
+
     <Button
         android:id="@+id/concon"
         android:layout_width="match_parent"

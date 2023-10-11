@@ -26,6 +26,7 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
     private String sideName;
     private byte[] burgerArray;
 
+    private TextView askMission;
     private TextView showMission;
     private TextView burger_text;
     private TextView burger_txt;
@@ -47,6 +48,11 @@ public class Kiosk_R_Fastfood_Popup_Side extends AppCompatActivity {
         myapp myApp = (myapp) getApplicationContext();
         showMission = findViewById(R.id.showMission);
         showMission.setText(myApp.getCheckFastfoodMission());
+        askMission = findViewById(R.id.askMission);
+
+        if (showMission.getText().toString().equals(" ")) {
+            askMission.setText(" ");
+        }
 
         burger_text = findViewById(R.id.burger_text);
         burger_txt = findViewById(R.id.burger_txt);

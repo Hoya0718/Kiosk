@@ -31,6 +31,7 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
     private byte[] sideArray;
     private byte[] drinkArray;
 
+    private TextView askMission;
     private TextView showMission;
     private TextView burger_text;
     private TextView total_text;
@@ -55,6 +56,11 @@ public class Kiosk_R_Fastfood_Popup_Total extends AppCompatActivity {
         myapp myApp = (myapp) getApplicationContext();
         showMission = findViewById(R.id.showMission);
         showMission.setText(myApp.getCheckFastfoodMission());
+        askMission = findViewById(R.id.askMission);
+
+        if (showMission.getText().toString().equals(" ")) {
+            askMission.setText(" ");
+        }
 
         burger_text = findViewById(R.id.burger_text);
         total_text = findViewById(R.id.total_text);

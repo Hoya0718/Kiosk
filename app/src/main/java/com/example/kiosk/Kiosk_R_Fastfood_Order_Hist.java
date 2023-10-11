@@ -24,6 +24,7 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
     private int value;
 
     private TextView value_text;
+    private TextView askMission;
     private TextView showMission;
 
     @Override
@@ -35,6 +36,11 @@ public class Kiosk_R_Fastfood_Order_Hist extends AppCompatActivity {
         myApp.setR_F_Pay_Time(System.currentTimeMillis());
         showMission = findViewById(R.id.showMission);
         showMission.setText(myApp.getCheckFastfoodMission());
+        askMission = findViewById(R.id.askMission);
+
+        if (showMission.getText().toString().equals(" ")) {
+            askMission.setText(" ");
+        }
 
         Intent intent = getIntent();
         if (intent != null) {

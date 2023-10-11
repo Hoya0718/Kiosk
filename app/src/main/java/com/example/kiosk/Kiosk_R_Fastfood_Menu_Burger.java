@@ -24,6 +24,7 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
     private int burger;
     private String burgerName;
 
+    private TextView askMission;
     private TextView showMission;
     private TextView money_text;
     private TextView b1955_text;
@@ -62,6 +63,11 @@ public class Kiosk_R_Fastfood_Menu_Burger extends AppCompatActivity {
         myapp myApp = (myapp) getApplicationContext();
         showMission = findViewById(R.id.showMission);
         showMission.setText(myApp.getCheckFastfoodMission());
+        askMission = findViewById(R.id.askMission);
+
+        if (showMission.getText().toString().equals(" ")) {
+            askMission.setText(" ");
+        }
 
         money_text = findViewById(R.id.money_text);
 

@@ -13,8 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
     List<MainData> dataList = new ArrayList<>();
@@ -28,6 +31,9 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_r_fastfood_congratulation);
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String formattedDate = dateFormat.format(new Date());
 
         tot = findViewById(R.id.tot);
         tot_1 = findViewById(R.id.tot_1);
@@ -135,13 +141,14 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             data.setTime(md + "분 " + mp + "초");
             data.setDetail(dd + "분 " + dp + "초");
             data.setCredit(pd + "분 " + pp + "초");
+            data.setUserdate(formattedDate);
             database.mainDao().insert(data);
 
 
             database.mainDao().update2(myId,mT);
             database.mainDao().update3(myId,pT_1);
             database.mainDao().update4(myId,pT_2);
-
+            database.mainDao().update5(myId,formattedDate);
             List<MainData> dataList = database.mainDao().getAllDataWithTime_1();
 
             Log.d("DataList", "DataList size: " + dataList.size());
@@ -210,7 +217,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             ad.setNegativeButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),Kiosk_R_Part.class);
+                    Intent intent = new Intent(getApplicationContext(),User_list.class);
                     dialog.dismiss();
                     startActivity(intent);
                 }
@@ -233,7 +240,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             ad.setNegativeButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),Kiosk_R_Part.class);
+                    Intent intent = new Intent(getApplicationContext(),User_list.class);
                     dialog.dismiss();
                     startActivity(intent);
                 }
@@ -257,7 +264,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             ad.setNegativeButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),Kiosk_R_Part.class);
+                    Intent intent = new Intent(getApplicationContext(),User_list.class);
                     dialog.dismiss();
                     startActivity(intent);
                 }
@@ -266,7 +273,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         }
 
         else {
-            Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), Kiosk_R_Part.class);
+            Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), User_list.class);
 
             myapp myApp = (myapp) getApplicationContext();
             myApp.clearOrderList();

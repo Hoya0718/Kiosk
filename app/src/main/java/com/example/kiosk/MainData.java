@@ -14,6 +14,14 @@ public class MainData {
     private String time;
     private String detail;
     private String credit;
+    private String userdate;
+    public String getUserdate() {
+        return userdate;
+    }
+
+    public void setUserdate(String userdate) {
+        this.userdate = userdate;
+    }
 
     public String getDetail() {
         return detail;

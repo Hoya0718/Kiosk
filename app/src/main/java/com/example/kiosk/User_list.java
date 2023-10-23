@@ -68,13 +68,14 @@ public class User_list extends AppCompatActivity {
                             data.setTime(null);
                             data.setCredit(null);
                             data.setDetail(null);
+                            data.setUserdate(null);
                             database.mainDao().insert(data);
 
                             editText.setText("");
                             dataList.clear();
                             dataList.addAll(database.mainDao().getAll());
                             adapter.notifyDataSetChanged();
-                            Intent it = new Intent(getApplicationContext(), Kiosk_R_Part.class);
+                            Intent it = new Intent(getApplicationContext(), User_list.class);
                             startActivity(it);
                         }
                     }

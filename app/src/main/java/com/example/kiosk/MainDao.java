@@ -52,4 +52,7 @@
 
         @Query("SELECT * FROM table_name")
         List<MainData> getAllMainData();
+
+        @Query("SELECT DISTINCT text FROM table_name")
+        List<String> getUserNames();
     }

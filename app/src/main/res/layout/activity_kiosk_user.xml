@@ -25,29 +25,18 @@
             android:layout_weight="1"
             android:orientation="vertical" >
 
-            <Button
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@drawable/hospital_btn_background_blue"
-                android:text="영희"
-                android:textSize="30dp" />
+                android:layout_height="match_parent">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@drawable/table_border"
-                android:text="철수"
-                android:textSize="30dp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    tools:listitem="@layout/list_user_name" />
+            </ScrollView>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@drawable/table_border"
-                android:text="길동"
-                android:textSize="30dp" />
         </LinearLayout>
 
         <LinearLayout

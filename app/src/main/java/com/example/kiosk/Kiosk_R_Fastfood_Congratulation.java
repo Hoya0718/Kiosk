@@ -256,7 +256,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             ad.setPositiveButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),Kiosk_4.class);
+                    Intent intent = new Intent(getApplicationContext(),Kiosk_7_b.class);
                     dialog.dismiss();
                     startActivity(intent);
                 }
@@ -264,7 +264,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             ad.setNegativeButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),User_list.class);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     dialog.dismiss();
                     startActivity(intent);
                 }

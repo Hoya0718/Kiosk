@@ -5,13 +5,31 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 public class KioskUser extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    List<String> userNames;
+    NameAdapter adapter;
+    RoomDB database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kiosk_user);
+
+        recyclerView = findViewById(R.id.recycler_view);
+
+        database = RoomDB.getInstance(this);
+        userNames = database.mainDao().getUserNames();
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new NameAdapter(this, userNames);
+        recyclerView.setAdapter(adapter);
     }
 
     public void goto_kiosk_main(View v){

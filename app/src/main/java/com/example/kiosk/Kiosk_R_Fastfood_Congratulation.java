@@ -21,9 +21,11 @@ import java.util.Locale;
 
 public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
     List<MainData> dataList = new ArrayList<>();
+    List<NewData> newList = new ArrayList<>();
     RoomDB database;
     MainAdapter adapter;
     private MainDao mainDao;
+    private NewDao newDao;
     private TextView con_text, tot, tot_1, tot_2;
     private String mT, pT_1, pT_2;
 
@@ -41,10 +43,12 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         database = RoomDB.getInstance(this);
 
         dataList = database.mainDao().getAll();
+        newList = database.newDao().getAll();
 
 
 
-        adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, dataList);
+//        adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, dataList);
+        adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, newList);
 
 
 
@@ -55,6 +59,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                 .build();
 
         mainDao = db.mainDao();
+        newDao = db.newDao();
 
         MainData data = new MainData(); //객체 인스턴스 생성
 
@@ -142,13 +147,14 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             data.setDetail(dd + "분 " + dp + "초");
             data.setCredit(pd + "분 " + pp + "초");
             data.setUserdate(formattedDate);
+
+            database.mainDao().insert(data);
+            database.mainDao().update2(myId, mT);
+            database.mainDao().update3(myId, pT_1);
+            database.mainDao().update4(myId, pT_2);
+            database.mainDao().update5(myId, formattedDate);
             database.mainDao().insert(data);
 
-
-            database.mainDao().update2(myId,mT);
-            database.mainDao().update3(myId,pT_1);
-            database.mainDao().update4(myId,pT_2);
-            database.mainDao().update5(myId,formattedDate);
             List<MainData> dataList = database.mainDao().getAllDataWithTime_1();
 
             Log.d("DataList", "DataList size: " + dataList.size());

@@ -5,9 +5,6 @@
     import androidx.room.Delete;
     import androidx.room.Insert;
     import androidx.room.Query;
-
-    import java.util.List;
-
     import static androidx.room.OnConflictStrategy.REPLACE;
     @Dao
     public interface MainDao {
@@ -16,6 +13,10 @@
 
         @Delete
         void delete(MainData mainData);
+
+        @Query("DELETE FROM table_name WHERE text = :text")
+        void deleteName(String text);
+
 
         @Delete
         void reset(List<MainData> mainData);
@@ -34,6 +35,9 @@
         void update4(int sID, String aaa);
         @Query("UPDATE table_name SET userdate = :aaa Where id = :sID")
         void update5(int sID, String aaa);
+        @Query("SELECT * FROM table_name WHERE text = :text")
+        MainData getDataByText(String text);
+
         @Query("DELETE FROM table_name WHERE text IS NULL")
         void deleteNullNameData();
 
@@ -55,4 +59,10 @@
 
         @Query("SELECT DISTINCT text FROM table_name")
         List<String> getUserNames();
+
+        @Query("SELECT id FROM table_name WHERE text = :text")
+        int search_name(String text);
+
+        @Query("SELECT userdate FROM table_name WHERE id = :id")
+        String search_is(int id);
     }

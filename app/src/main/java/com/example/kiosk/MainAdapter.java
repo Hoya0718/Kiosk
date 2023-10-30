@@ -1,9 +1,14 @@
 package com.example.kiosk;
 
+import static androidx.core.content.res.TypedArrayUtils.getText;
+
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.LauncherActivity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,18 +29,19 @@ import java.util.List;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
 {
-    private List<MainData> dataList;
+    private List<NewData> newList;
     private Activity context;
     private RoomDB database;
-    private MainDao mainDataDao;
-    public MainAdapter(Activity context, List<MainData> dataList)
+
+
+    public MainAdapter(Activity context, List<NewData> newList)
     {
         this.context = context;
-        this.dataList = dataList;
+        this.newList = newList;
         database = RoomDB.getInstance(context);
-        mainDataDao = database.mainDao();
         notifyDataSetChanged();
     }
+
 
     @NonNull
     @Override
@@ -45,34 +52,111 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MainAdapter.ViewHolder holder, int position)
-    {
+    public void onBindViewHolder(@NonNull final MainAdapter.ViewHolder holder, int position) {
 
-
-        final MainData data = dataList.get(position);
+        final NewData data_n = newList.get(position);
         database = RoomDB.getInstance(context);
         View itemView = holder.itemView;
-        TextView user_list_date = itemView.findViewById(R.id.user_list_date);
         TextView textView = itemView.findViewById(R.id.text_view);
-        TextView text_time = itemView.findViewById(R.id.text_time);
-        TextView credit_time = itemView.findViewById(R.id.credit_time);
-        TextView detail_time = itemView.findViewById(R.id.detail_time);
 
-        textView.setText(data.getText());
-        text_time.setText(data.getTime());
-        credit_time.setText(data.getCredit());
-        detail_time.setText(data.getDetail());
-        user_list_date.setText(data.getUserdate());
+        textView.setText(data_n.getText());
+        ImageView profileImage = holder.profileImage;
+
+        if (data_n.isImageSelected()) {
+            profileImage.setImageResource(data_n.getImageResId());
+        } else {
+            // 기본 이미지(men_img)로 초기화
+            profileImage.setImageResource(R.drawable.men_img);
+        }
+
+        profileImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                builder.setTitle("이미지 선택"); // 팝업의 제목 설정
+
+                LinearLayout layout = new LinearLayout(v.getContext());
+                layout.setOrientation(LinearLayout.HORIZONTAL);
+
+                ImageView image1 = new ImageView(v.getContext());
+                image1.setImageResource(R.drawable.men_img);
+                layout.addView(image1);
+
+                ImageView image2 = new ImageView(v.getContext());
+                image2.setImageResource(R.drawable.women_img);
+                layout.addView(image2);
+
+                builder.setView(layout);
+
+                // 확인 버튼 추가
+                builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 이미지 선택 상태에 따라 이미지 리소스 ID 설정
+                        if (data_n.isImageSelected()) {
+                            profileImage.setImageResource(R.drawable.men_img);
+                            data_n.setImageSelected(false);
+                        } else {
+                            profileImage.setImageResource(R.drawable.women_img);
+                            data_n.setImageSelected(true);
+                        }
+
+                        // SharedPreferences를 사용하여 이미지 선택 상태 저장
+                        SharedPreferences preferences = v.getContext().getSharedPreferences("image_preferences", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putBoolean("is_image_selected_" + data_n.getId(), data_n.isImageSelected());
+                        editor.apply();
+
+                        dialog.dismiss(); // 다이얼로그 닫기
+                    }
+                });
+
+                // 이미지를 클릭했을 때 선택 상태를 토글
+                image1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        data_n.setImageSelected(false);
+                        image1.setSelected(true);
+                        image2.setSelected(false);
+
+                        // 이미지 선택 상태를 SharedPreferences에 저장
+                        saveImageSelectedState(data_n, false);
+                    }
+                });
+
+                image2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        data_n.setImageSelected(true);
+                        image1.setSelected(false);
+                        image2.setSelected(true);
+
+                        // 이미지 선택 상태를 SharedPreferences에 저장
+                        saveImageSelectedState(data_n, true);
+                    }
+                });
+
+                // 팝업 다이얼로그 보이기
+                final AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        // 초기 이미지 설정
+        SharedPreferences preferences = holder.profileImage.getContext().getSharedPreferences("image_preferences", Context.MODE_PRIVATE);
+        boolean isImageSelected = preferences.getBoolean("is_image_selected_" + data_n.getId(), false);
+        data_n.setImageSelected(isImageSelected);
+
+
 
         holder.btEdit.setOnClickListener(new View.OnClickListener()                                 //수정할 때
         {
             @Override
             public void onClick(View v)
             {
-                MainData mainData = dataList.get(holder.getAdapterPosition());
 
-                final int sID = mainData.getId();
-                String sText = mainData.getText();
+                NewData newData = newList.get(holder.getAdapterPosition());
+                final int sID = newData.getId();
+                String sText = newData.getText();
 
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.dialog_update);
@@ -99,10 +183,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
                         dialog.dismiss();
                         String uText = editText.getText().toString().trim();
 
-                        database.mainDao().update(sID, uText);
 
-                        dataList.clear();
-                        dataList.addAll(database.mainDao().getAll());
+
+                        database.newDao().update(sID, uText);
+                        newList.clear();
+                        newList.addAll(database.newDao().getAll());
+
                         notifyDataSetChanged();
                     }
                 });
@@ -115,23 +201,28 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
             @Override
             public void onClick(View v)
             {
-                MainData mainData = dataList.get(holder.getAdapterPosition());
 
-                database.mainDao().delete(mainData);
+                NewData newData = newList.get(holder.getAdapterPosition());
+
+                database.newDao().delete(newData);
+                String delete_text = newData.getText();
+
+                database.mainDao().deleteName(delete_text);
 
                 int position = holder.getAdapterPosition();
-                dataList.remove(position);
+                newList.remove(position);
                 notifyItemRemoved(position);
-                notifyItemRangeChanged(position, dataList.size());
+                notifyItemRangeChanged(position, newList.size());
+
             }
         });
     }
 
     @Override
     public int getItemCount()
-    {
-        return dataList.size();
-    }
+{
+    return newList.size();
+}
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
@@ -151,119 +242,41 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
                 @Override
                 public void onClick(View v){
 
-                    //MainData data = new MainData();
-
                     int selectedPosition = getAdapterPosition();
-                    MainData selectedData = dataList.get(selectedPosition);
-                    int x =  selectedData.getId();
+                    NewData selectedData = newList.get(selectedPosition);
 
-                    //MainData data = mainDataDao.getMainDataById(14);
-                    copyAndAddData(x);
+                    String name;
+                    name = selectedData.getText();
+                    int id_value = database.mainDao().search_name(name);
+                    String isTime = database.mainDao().search_is(id_value);
+
+                    if(isTime != null)
+                    {
+                        MainData data = new MainData();
+                        data.setText(name);
+                        data.setTime(null);
+                        data.setCredit(null);
+                        data.setDetail(null);
+                        data.setUserdate(null);
+                        database.mainDao().insert(data);
+                        Intent it = new Intent(v.getContext(), Kiosk_R_Part.class);
+                        v.getContext().startActivity(it);
+                    }
+
+                    selectedData.setMD_id(id_value);
+                    database.newDao().MD_id(id_value,name);
+
                     Intent it = new Intent(v.getContext(), Kiosk_R_Part.class);
                     v.getContext().startActivity(it);
-                }
+                    }
             });
-
-            profileImage.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    builder.setTitle("이미지 선택"); // 팝업의 제목 설정
-
-
-                    LinearLayout layout = new LinearLayout(v.getContext());
-                    layout.setOrientation(LinearLayout.HORIZONTAL);
-
-                    ImageView image1 = new ImageView(v.getContext());
-                    image1.setImageResource(R.drawable.grandpa);
-                    layout.addView(image1);
-
-                    ImageView image2 = new ImageView(v.getContext());
-                    image2.setImageResource(R.drawable.grandma);
-                    layout.addView(image2);
-
-                    ImageView image3 = new ImageView(v.getContext());
-                    image3.setImageResource(R.drawable.edit_img);
-                    layout.addView(image3);
-
-                    builder.setView(layout);
-
-                    // 확인 버튼 추가
-                    builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            if (image1.isSelected()) {
-                                profileImage.setImageResource(R.drawable.grandpa);
-                            } else if (image2.isSelected()) {
-                                profileImage.setImageResource(R.drawable.grandma);
-                            } else if (image3.isSelected()) {
-                                profileImage.setImageResource(R.drawable.edit_img);
-                            }
-                            dialog.dismiss(); // 다이얼로그 닫기
-                        }
-                    });
-
-                    // 이미지를 클릭했을 때 선택 상태를 토글
-                    image1.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            image1.setSelected(!image1.isSelected());
-                        }
-                    });
-
-                    image2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            image2.setSelected(!image2.isSelected());
-                        }
-                    });
-
-                    image3.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            image3.setSelected(!image3.isSelected());
-                        }
-                    });
-
-                    // 팝업 다이얼로그 보이기
-                    final AlertDialog dialog = builder.create();
-                    dialog.show();
-                }
-            });
-//                    // 취소 버튼 추가
-//                    builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            // 취소 버튼을 클릭했을 때 수행할 동작
-//                            dialog.dismiss(); // 다이얼로그 닫기
-//                        }
-//                    });
-//
-//                    // 팝업 다이얼로그 보이기
-//                    builder.show();
-//                }
-//            });
         }
     }
-    public void copyAndAddData(int originalId) {
-        MainData originalData = mainDataDao.getMainDataById(originalId);
-        if (originalData != null) {
-            MainData newData = new MainData();
-            newData.setText(originalData.getText());
-            newData.setTime(originalData.getTime());
-            newData.setDetail(originalData.getDetail());
-            newData.setCredit(originalData.getCredit());
-            newData.setUserdate(originalData.getUserdate());
-            newData.setId(0); // 또는 다른 ID 할당
-            long newRowId = mainDataDao.insert(newData);
-            if (newRowId != -1) {
-                // 새로운 행 추가 성공
-                Log.d("tjdrhd","tjdrhd");
-                dataList.clear();
-                dataList.addAll(mainDataDao.getAll());
-                notifyDataSetChanged();
-            } else {
-                Log.d("tlfvo","실패");
-            }
-        }
+    private void saveImageSelectedState(NewData data, boolean isImageSelected) {
+        SharedPreferences preferences = context.getSharedPreferences("image_preferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("is_image_selected_" + data.getId(), isImageSelected);
+        editor.apply();
     }
 }
 

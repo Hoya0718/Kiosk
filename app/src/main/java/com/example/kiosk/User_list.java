@@ -22,6 +22,7 @@ public class User_list extends AppCompatActivity {
     RecyclerView recyclerView;
 
     List<MainData> dataList = new ArrayList<>();
+    List<NewData> newList = new ArrayList<>();
     RoomDB database;
     MainAdapter adapter;
 
@@ -38,9 +39,12 @@ public class User_list extends AppCompatActivity {
         database = RoomDB.getInstance(this);
 
         dataList = database.mainDao().getAll();
+        newList = database.newDao().getAll();
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new MainAdapter(User_list.this, dataList);
+        adapter = new MainAdapter(User_list.this, newList);
+        //adapter = new MainAdapter(User_list.this, dataList);
 
         recyclerView.setAdapter(adapter);
 
@@ -61,7 +65,6 @@ public class User_list extends AppCompatActivity {
                         dialog.dismiss();
                         String sText = et.getText().toString().trim();
 
-
                         if (!sText.equals("")) {
                             MainData data = new MainData();
                             data.setText(sText);
@@ -71,10 +74,16 @@ public class User_list extends AppCompatActivity {
                             data.setUserdate(null);
                             database.mainDao().insert(data);
 
+                            NewData data_n = new NewData();
+                            data_n.setText(sText);
+                            data_n.setMD_id(0);
+                            database.newDao().insert(data_n);
+
                             editText.setText("");
-                            dataList.clear();
-                            dataList.addAll(database.mainDao().getAll());
+                            newList.clear();
+                            newList.addAll(database.newDao().getAll());
                             adapter.notifyDataSetChanged();
+
                             Intent it = new Intent(getApplicationContext(), User_list.class);
                             startActivity(it);
                         }
@@ -93,10 +102,15 @@ public class User_list extends AppCompatActivity {
         btReset.setOnClickListener(new View.OnClickListener() {                                     //모든 사용자 삭제
             @Override
             public void onClick(View v) {
-                database.mainDao().reset(dataList);
 
+                database.mainDao().reset(dataList);
                 dataList.clear();
                 dataList.addAll(database.mainDao().getAll());
+                database.newDao().reset(newList);
+
+                database.newDao().reset(newList);
+                newList.clear();
+                newList.addAll(database.newDao().getAll());
                 adapter.notifyDataSetChanged();
             }
         });

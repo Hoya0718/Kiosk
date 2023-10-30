@@ -1,11 +1,13 @@
     package com.example.kiosk;
 
-    import java.util.List;
+    import static androidx.room.OnConflictStrategy.REPLACE;
+
     import androidx.room.Dao;
     import androidx.room.Delete;
     import androidx.room.Insert;
     import androidx.room.Query;
-    import static androidx.room.OnConflictStrategy.REPLACE;
+
+    import java.util.List;
     @Dao
     public interface MainDao {
         @Insert(onConflict = REPLACE)
@@ -65,4 +67,7 @@
 
         @Query("SELECT userdate FROM table_name WHERE id = :id")
         String search_is(int id);
+
+        @Query("SELECT * FROM table_name WHERE text = :searchText")
+        List<MainData> getMatchingItems(String searchText);
     }

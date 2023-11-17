@@ -4,76 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
-
-        android:orientation="vertical"></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/practice_Btn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:onClick="goto_kiosk02"
-            android:text="@string/set_practice"
-            android:textSize="@dimen/font_size_medium" />
-
-        <Button
-            android:id="@+id/real_Btn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:onClick="goto_Kiosk_R_Part"
-            android:text="@string/set_real"
-            android:textSize="@dimen/font_size_medium" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
         android:layout_weight="0.2"
-        android:orientation="vertical"></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/language_Text"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/select_language"
-                android:textSize="30dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
             android:orientation="horizontal">
 
             <Button
@@ -83,9 +28,11 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/btn_circle"
                 android:onClick="change_to_korean"
                 android:text="@string/set_korean"
-                android:textSize="@dimen/font_size_medium" />
+                android:textSize="@dimen/font_size_medium"
+                tools:textSize="30sp" />
 
             <Button
                 android:id="@+id/english_Btn"
@@ -94,17 +41,92 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/btn_circle"
                 android:onClick="change_to_english"
                 android:text="@string/english"
-                android:textSize="@dimen/font_size_medium" />
+                android:textSize="@dimen/font_size_medium"
+                tools:textSize="30sp" />
+
+            <Button
+                android:id="@+id/user_setting"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="200dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/hospital_btn_background_blue"
+                android:onClick="user_setting"
+                android:text="사용자 설정"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
-        <LinearLayout
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView160"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="vertical"/>
+            android:layout_height="200dp"
+            android:layout_marginTop="30sp"
+            android:background="#D2ECD3"
+            android:gravity="center"
+            android:text="교육용 키오스크"
+            android:textColor="#000000"
+            android:textSize="40dp" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:background="@drawable/kiosk_main"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/practice_Btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/hospital_btn_purple"
+            android:onClick="goto_kiosk02"
+            android:text="@string/set_practice"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp" />
+
+        <Button
+            android:id="@+id/real_Btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/hospital_btn_blue2"
+            android:onClick="goto_Kiosk_R_Part"
+            android:text="@string/set_real"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp" />
+
+    </LinearLayout>
+
 </LinearLayout>

@@ -39,10 +39,11 @@ public class KioskUser extends AppCompatActivity {
 
         adapter = new NameAdapter(this, userNames, recordAdapter);
         name_recycler.setAdapter(adapter);
+
     }
 
     public void goto_kiosk_main(View v){
-        Intent goto_kiosk_main = new Intent(getApplicationContext(), KioskMain.class);
+        Intent goto_kiosk_main = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(goto_kiosk_main);
     }
 

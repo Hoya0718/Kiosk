@@ -32,7 +32,7 @@ public class User_list extends AppCompatActivity {
         setContentView(R.layout.activity_user_list);
 
         editText = findViewById(R.id.edit_text);
-        btReset = findViewById(R.id.bt_reset);
+        //btReset = findViewById(R.id.bt_reset);
         bt_user = findViewById(R.id.bt_user);
         recyclerView = findViewById(R.id.recycler_view);
 
@@ -59,7 +59,7 @@ public class User_list extends AppCompatActivity {
                 final EditText et = new EditText(User_list.this);
                 ad.setView(et);
 
-                ad.setPositiveButton("확인", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
+                ad.setNegativeButton("확인", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -89,7 +89,7 @@ public class User_list extends AppCompatActivity {
                         }
                     }
                 });
-                ad.setNegativeButton("취소", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
+                ad.setPositiveButton("취소", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -98,21 +98,24 @@ public class User_list extends AppCompatActivity {
                 ad.show();
             }
         });
-
-        btReset.setOnClickListener(new View.OnClickListener() {                                     //모든 사용자 삭제
-            @Override
-            public void onClick(View v) {
-
-                database.mainDao().reset(dataList);
-                dataList.clear();
-                dataList.addAll(database.mainDao().getAll());
-                database.newDao().reset(newList);
-
-                database.newDao().reset(newList);
-                newList.clear();
-                newList.addAll(database.newDao().getAll());
-                adapter.notifyDataSetChanged();
-            }
-        });
+//        btReset.setOnClickListener(new View.OnClickListener() {                                     //모든 사용자 삭제
+//            @Override
+//            public void onClick(View v) {
+//
+//                database.mainDao().reset(dataList);
+//                dataList.clear();
+//                dataList.addAll(database.mainDao().getAll());
+//                database.newDao().reset(newList);
+//
+//                database.newDao().reset(newList);
+//                newList.clear();
+//                newList.addAll(database.newDao().getAll());
+//                adapter.notifyDataSetChanged();
+//            }
+//        });
+    }
+    public void goto_home(View v){
+        Intent goto_home = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(goto_home);
     }
 }

@@ -70,4 +70,10 @@
 
         @Query("SELECT * FROM table_name WHERE text = :searchText")
         List<MainData> getMatchingItems(String searchText);
+
+        @Query("DELETE FROM table_name WHERE userdate IS NULL")
+        void deleteDate();
+
+//        @Query("DELETE FROM table_name WHERE text = :text")
+//        void deleteName(String text);
     }

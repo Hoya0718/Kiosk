@@ -215,7 +215,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             ad.setPositiveButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),Kiosk_2.class);
+                    Intent intent = new Intent(getApplicationContext(),Kiosk_6.class);
                     dialog.dismiss();
                     startActivity(intent);
                 }
@@ -235,7 +235,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             ad.setIcon(R.mipmap.ic_launcher);
             ad.setTitle("소요 시간");
             ad.setMessage("세부 선택시간이 평균값보다 " + result_2 +"초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
-            ad.setPositiveButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
+            ad.setNegativeButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Intent intent = new Intent(getApplicationContext(),Kiosk_3.class);
@@ -243,7 +243,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            ad.setNegativeButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
+            ad.setPositiveButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Intent intent = new Intent(getApplicationContext(),User_list.class);

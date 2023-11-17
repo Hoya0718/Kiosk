@@ -64,7 +64,7 @@
         android:gravity="center"
         android:text="할부개월수"
         android:textColor="#000000"
-        android:textSize="40sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/textView77"
         app:layout_constraintTop_toBottomOf="@+id/textView77" />
 

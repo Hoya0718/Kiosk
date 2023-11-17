@@ -210,7 +210,7 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/hospital_txt_blue"
         android:gravity="center"
-        android:text="빠른 처리를 원하시는 분은\n진료카드/영수증의 바코드를\n아래 바코드 대는 곳에 읽혀주세요./n"
+        android:text="빠른 처리를 원하시는 분은\n진료카드/영수증의 바코드를\n아래 바코드 대는 곳에 읽혀주세요."
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

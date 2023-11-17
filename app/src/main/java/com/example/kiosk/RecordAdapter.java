@@ -1,6 +1,8 @@
 package com.example.kiosk;
 
 import android.content.Context;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,16 +11,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.ViewHolder> {
 
     private Context context;
     private List<MainData> recordList;
+    private RoomDB database;
 
     public RecordAdapter(Context context, List<MainData> recordList) {
         this.context = context;
         this.recordList = recordList;
+        database = RoomDB.getInstance(context);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -26,6 +32,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.ViewHolder
         TextView timeTextView;
         TextView detailTextView;
         TextView creditTextView;
+
 
         public ViewHolder(View itemView) {
             super(itemView);

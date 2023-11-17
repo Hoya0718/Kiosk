@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private OutputStream outputStream;
     private TextToSpeech tts;
     private BluetoothDevice arduinoDevice;
-    private Button practice_Btn;
+    private Button practice_Btn, user_setting;
     Handler handler = new Handler();
     private AnimationDrawable anim;
 
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         practice_Btn = findViewById(R.id.practice_Btn);
+        user_setting = findViewById(R.id.user_setting);
 
         String[] permission_list;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -86,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
         //여기까지
 
-
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {
                 tts.setLanguage(KOREAN);
@@ -103,27 +103,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        /*
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("연습은 여기에있어요 연습을 눌러보세요.");
-                else
-                    speakText("The practice button is here, click Practice");
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        practice_Btn.setBackgroundResource(R.drawable.anim_list);
-                        anim = (AnimationDrawable) practice_Btn.getBackground();
-                        anim.start();
-                    }
-                }, 2000);
-            }
-        }, 10000);
-        */
-
 
 
         tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
@@ -206,9 +185,8 @@ public class MainActivity extends AppCompatActivity {
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-        //Intent goto_Kiosk_R_Part = new Intent(this, Kiosk_R_Part.class);
-        //startActivity(goto_Kiosk_R_Part);
     }
+
     public void change_to_english(View v) {
 
         tts.shutdown();
@@ -219,6 +197,11 @@ public class MainActivity extends AppCompatActivity {
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+    public void user_setting(View v){
+        tts.shutdown();
+        Intent user_setting = new Intent(getApplicationContext(), KioskUser.class);
+        startActivity(user_setting);
     }
 
     protected void onPause() {

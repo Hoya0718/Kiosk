@@ -36,6 +36,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/hospital_btn_gray"
+        android:onClick="n_sup"
         android:text="주민등록표(초본)"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/view"

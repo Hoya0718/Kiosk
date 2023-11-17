@@ -13,6 +13,7 @@ import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -137,5 +138,8 @@ public class TO_SSN extends AppCompatActivity {
         tts.shutdown();
         Intent goto_to_main = new Intent(getApplicationContext(), Town_Office.class);
         startActivity(goto_to_main);
+    }
+    public void n_sup(View v){
+        Toast.makeText(getApplicationContext(), "지원하지 않는 기능입니다.", Toast.LENGTH_LONG).show();
     }
 }

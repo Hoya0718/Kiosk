@@ -62,13 +62,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
         textView.setText(data_n.getText());
         ImageView profileImage = holder.profileImage;
 
-        if (data_n.isImageSelected()) {
-            profileImage.setImageResource(data_n.getImageResId());
-        } else {
-            // 기본 이미지(men_img)로 초기화
-            profileImage.setImageResource(R.drawable.men_img);
-        }
-
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

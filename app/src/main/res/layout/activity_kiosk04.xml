@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/btn_circle"
     android:orientation="vertical"
     tools:context=".Kiosk_4">
 
@@ -81,18 +82,6 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/volume_size_down"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="50dp"
-                android:layout_weight="1"
-                android:onClick="volume_size_down"
-                android:text="@string/volume_size_down"
-                android:textSize="@dimen/font_size_medium" />
-
-            <Button
                 android:id="@+id/volume_size_medium"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -100,8 +89,22 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_btn_gray"
                 android:onClick="volume_size_medium"
                 android:text="@string/volume_size_medium"
+                android:textSize="@dimen/font_size_medium" />
+
+            <Button
+                android:id="@+id/volume_size_down"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/hospital_btn_gray"
+                android:onClick="volume_size_down"
+                android:text="@string/volume_size_down"
                 android:textSize="@dimen/font_size_medium" />
 
             <Button
@@ -112,9 +115,11 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_btn_gray"
                 android:onClick="volume_size_up"
                 android:text="@string/volume_size_up"
                 android:textSize="@dimen/font_size_medium" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -133,6 +138,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:background="@drawable/btn_circle"
             android:onClick="goto_kiosk_02"
             android:text="@string/previous_3"
             android:textSize="@dimen/font_size_medium" />
@@ -146,6 +152,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:background="@drawable/btn_circle"
             android:onClick="goto_kiosk_03"
             android:text="@string/next_0"
             android:textSize="@dimen/font_size_medium" />

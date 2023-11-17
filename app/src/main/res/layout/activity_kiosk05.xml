@@ -29,9 +29,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/hospital_btn_background_blue"
             android:onClick="goto_kiosk_06"
             android:text="@string/food"
-            android:textSize="18sp" />
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/bus_btn"
@@ -41,9 +43,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/hospital_btn_background_blue"
             android:onClick="goto_kiosk_14"
             android:text="@string/bus"
-            android:textSize="18sp" />
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/hospital_btn"
@@ -53,9 +57,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/hospital_btn_background_blue"
             android:onClick="goto_kiosk_25"
             android:text="@string/hospital"
-            android:textSize="18sp" />
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button37"
@@ -64,9 +70,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/hospital_btn_background_blue"
             android:onClick="goto_P_TO"
             android:text="무인발급기"
-            android:textSize="18sp" />
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
     </LinearLayout>
 
@@ -82,6 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/btn_circle"
             android:onClick="goto_Kiosk_Main"
             android:text="@string/hohome"
             android:textSize="@dimen/font_size_medium" />
@@ -91,6 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/btn_circle"
             android:onClick="goto_Back"
             android:text="@string/back"
             android:textSize="@dimen/font_size_medium" />

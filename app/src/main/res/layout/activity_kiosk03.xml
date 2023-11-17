@@ -89,6 +89,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_btn_gray"
                 android:onClick="volume_speed_slow"
                 android:text="@string/volume_speed_slow"
                 android:textSize="@dimen/font_size_medium" />
@@ -101,6 +102,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_btn_gray"
                 android:onClick="volume_speed_medium"
                 android:text="@string/volume_speed_medium"
                 android:textSize="@dimen/font_size_medium" />
@@ -113,6 +115,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/hospital_btn_gray"
                 android:onClick="volume_speed_fast"
                 android:text="@string/volume_speed_fast"
                 android:textSize="@dimen/font_size_medium" />
@@ -134,6 +137,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:background="@drawable/btn_circle"
             android:onClick="goto_kiosk_04"
             android:text="@string/previous_2"
             android:textSize="@dimen/font_size_medium" />
@@ -147,6 +151,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:background="@drawable/btn_circle"
             android:onClick="goto_kiosk_05"
             android:text="@string/next_2"
             android:textSize="@dimen/font_size_medium" />

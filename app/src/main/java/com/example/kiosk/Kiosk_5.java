@@ -22,6 +22,7 @@ public class Kiosk_5 extends AppCompatActivity {
     private Button fastfood;
     private Button bus;
     private Button hospital;
+    private Button samuso_btn;
 
     private AnimationDrawable anim;
     Handler handler = new Handler();
@@ -40,6 +41,7 @@ public class Kiosk_5 extends AppCompatActivity {
         fastfood = findViewById(R.id.fastfood_btn);
         bus = findViewById(R.id.bus_btn);
         hospital = findViewById(R.id.hospital_btn);
+        samuso_btn = findViewById(R.id.samuso_btn);
 
         fastfood.setTextSize(text_size.getId());
         bus.setTextSize(text_size.getId());
@@ -62,22 +64,24 @@ public class Kiosk_5 extends AppCompatActivity {
             @Override
             public void run() {
                 if (getResources().getConfiguration().locale.getLanguage().equals("ko"))
-                    speakText("세 개의 상황 중 하나를 골라보세요.");
+                    speakText("네 개의 상황 중 하나를 골라보세요.");
                 else
                     speakText("Button is Here");
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        fastfood.setBackgroundResource(R.drawable.anim_list);
+                        fastfood.setBackgroundResource(R.drawable.anim_list_degree);
                         anim = (AnimationDrawable) fastfood.getBackground();
                         anim.start();
-                        bus.setBackgroundResource(R.drawable.anim_list);
+                        bus.setBackgroundResource(R.drawable.anim_list_degree);
                         anim = (AnimationDrawable) bus.getBackground();
                         anim.start();
-                        hospital.setBackgroundResource(R.drawable.anim_list);
+                        hospital.setBackgroundResource(R.drawable.anim_list_degree);
                         anim = (AnimationDrawable) hospital.getBackground();
                         anim.start();
-
+                        samuso_btn.setBackgroundResource(R.drawable.anim_list_degree);
+                        anim = (AnimationDrawable) samuso_btn.getBackground();
+                        anim.start();
                     }
                 }, 2000);
             }

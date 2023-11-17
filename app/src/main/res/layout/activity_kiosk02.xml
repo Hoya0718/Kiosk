@@ -79,8 +79,10 @@
                 android:id="@+id/korean_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/hospital_txt_gray_all"
                 android:gravity="center"
                 android:text="@string/korean_text"
+                android:textColor="@color/black"
                 android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
 

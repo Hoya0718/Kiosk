@@ -42,16 +42,16 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.ViewHolder> {
                 @Override
                 public void onClick(View v) {
 
-                    MainData data = new MainData();
-                    String isNull;
-                    isNull = data.getUserdate();
-                    if(isNull != null) {
-                        Log.d("qwerty","qwerty");
-                    }
-                    else {
-                        database.mainDao().deleteDate();
-                        Log.d("qwerty", "zz");
-                    }
+//                    MainData data = new MainData();
+//                    String isNull;
+//                    isNull = data.getUserdate();
+//                    if(isNull != null) {
+//                        Log.d("qwerty","qwerty");
+//                    }
+//                    else {
+//                        database.mainDao().deleteDate();
+//                        Log.d("qwerty", "zz");
+//                    }
 
                     String text = textView.getText().toString();
                     List<MainData> matchingDates = mainDao.getMatchingItems(text);

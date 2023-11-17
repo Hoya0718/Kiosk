@@ -64,13 +64,14 @@
             android:textSize="25sp" />
 
         <Button
-            android:id="@+id/button37"
+            android:id="@+id/samuso_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/hospital_btn_background_blue"
+            android:gravity="center"
             android:onClick="goto_P_TO"
             android:text="무인발급기"
             android:textColor="@color/black"

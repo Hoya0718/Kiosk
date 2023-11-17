@@ -99,9 +99,9 @@ public class Kiosk_4 extends AppCompatActivity {
         currentVolume = 11;
         sound.setTtsVolume(11);
         if(getResources().getConfiguration().locale.getLanguage().equals("ko"))
-            speakText("크기가 어떠세요");
+            speakText("기본크기입니다");
         else
-            speakText("How's the volume");
+            speakText("This is the default volume.");
     }
 
 

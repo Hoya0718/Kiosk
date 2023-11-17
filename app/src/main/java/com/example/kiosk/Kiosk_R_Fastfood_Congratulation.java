@@ -46,8 +46,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         newList = database.newDao().getAll();
 
 
-
-//        adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, dataList);
+//      adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, dataList);
         adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, newList);
 
 
@@ -63,7 +62,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
 
         MainData data = new MainData(); //객체 인스턴스 생성
 
-        int myId = database.mainDao().getLastInsertedId();
+        //int myId = database.mainDao().getLastInsertedId();
 
         myapp myApp = (myapp) getApplicationContext();
         long beforeTime = myApp.getR_Time();
@@ -85,6 +84,9 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         double pp = (payTime % 60);
         double dd = (popTime / 60);
         double dp = (popTime % 60);
+
+        String name_value;
+        name_value = myApp.getMyName();
 
         mT = Double.toString(menuTime);
         pT_1 = Double.toString(popTime);
@@ -148,12 +150,12 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             data.setCredit(pd + "분 " + pp + "초");
             data.setUserdate(formattedDate);
 
-            database.mainDao().insert(data);
-            database.mainDao().update2(myId, mT);
-            database.mainDao().update3(myId, pT_1);
-            database.mainDao().update4(myId, pT_2);
-            database.mainDao().update5(myId, formattedDate);
-            database.mainDao().insert(data);
+            //database.mainDao().insert(data);
+            database.mainDao().update2(name_value, mT);
+            database.mainDao().update3(name_value, pT_1);
+            database.mainDao().update4(name_value, pT_2);
+            database.mainDao().update5(name_value, formattedDate);
+            //database.mainDao().insert(data);
 
             List<MainData> dataList = database.mainDao().getAllDataWithTime_1();
 
@@ -259,7 +261,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             ad.setIcon(R.mipmap.ic_launcher);
             ad.setTitle("소요 시간");
             ad.setMessage("결제 선택시간이 평균값보다 " + result_3 + "초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
-            ad.setPositiveButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
+            ad.setNegativeButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Intent intent = new Intent(getApplicationContext(),Kiosk_7_b.class);
@@ -267,7 +269,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            ad.setNegativeButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
+            ad.setPositiveButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);

@@ -32,14 +32,20 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
     private List<NewData> newList;
     private Activity context;
     private RoomDB database;
+    private myapp myApp;
 
 
     public MainAdapter(Activity context, List<NewData> newList)
     {
+
         this.context = context;
         this.newList = newList;
         database = RoomDB.getInstance(context);
         notifyDataSetChanged();
+
+        if (context instanceof Activity) {
+            myApp = (myapp) context.getApplicationContext();
+        }
     }
 
 
@@ -175,9 +181,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
                     {
                         dialog.dismiss();
                         String uText = editText.getText().toString().trim();
-
-
-
                         database.newDao().update(sID, uText);
                         newList.clear();
                         newList.addAll(database.newDao().getAll());
@@ -225,7 +228,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
         public ViewHolder(@NonNull View view)
         {
             super(view);
-
             btEdit = view.findViewById(R.id.bt_edit);
             btDelete = view.findViewById(R.id.bt_delete);
             profileImage = view.findViewById(R.id.profileImage);
@@ -240,6 +242,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
 
                     String name;
                     name = selectedData.getText();
+                    myApp.setMyName(name);
                     int id_value = database.mainDao().search_name(name);
                     String isTime = database.mainDao().search_is(id_value);
 
@@ -255,10 +258,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
                         Intent it = new Intent(v.getContext(), Kiosk_R_Part.class);
                         v.getContext().startActivity(it);
                     }
-
                     selectedData.setMD_id(id_value);
                     database.newDao().MD_id(id_value,name);
-
                     Intent it = new Intent(v.getContext(), Kiosk_R_Part.class);
                     v.getContext().startActivity(it);
                     }

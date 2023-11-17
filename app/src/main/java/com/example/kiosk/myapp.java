@@ -12,6 +12,18 @@ public class myapp extends Application {
     private int ttsVolume;
     private float ttsSpeed;
 
+    public String getMyName() {
+        return myName;
+    }
+
+    public void setMyName(String myName) {
+        this.myName = myName;
+    }
+
+    private String myName;
+
+
+
     private String get_pn;
     private String get_pn_2;
 

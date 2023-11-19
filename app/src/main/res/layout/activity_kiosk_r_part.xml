@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="임무"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:textSize="22sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,7 +40,7 @@
             android:background="@drawable/hospital_btn_background_blue"
             android:onClick="goto_Kiosk_R_F_M"
             android:text="@string/food"
-            android:textSize="18sp" />
+            android:textSize="27sp" />
 
         <Button
             android:id="@+id/r_Bus_Btn"
@@ -52,7 +53,7 @@
             android:background="@drawable/hospital_btn_background_blue"
             android:onClick="goto_Kiosk_R_Bus"
             android:text="@string/bus"
-            android:textSize="18sp" />
+            android:textSize="27sp" />
 
         <Button
             android:id="@+id/r_Hospital_Btn"
@@ -65,7 +66,7 @@
             android:background="@drawable/hospital_btn_background_blue"
             android:onClick="a"
             android:text="@string/hospital"
-            android:textSize="18sp" />
+            android:textSize="27sp" />
 
         <Button
             android:id="@+id/button35"
@@ -77,7 +78,7 @@
             android:background="@drawable/hospital_btn_background_blue"
             android:onClick="goto_PTO"
             android:text="무인발급기"
-            android:textSize="18sp" />
+            android:textSize="27sp" />
 
     </LinearLayout>
 
@@ -95,7 +96,8 @@
             android:layout_weight="1"
             android:background="@drawable/btn_circle"
             android:onClick="goto_Kiosk_Main"
-            android:text="@string/hohome" />
+            android:text="@string/hohome"
+            android:textSize="22sp" />
 
     </LinearLayout>
 

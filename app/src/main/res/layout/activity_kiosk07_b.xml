@@ -98,6 +98,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -147,6 +148,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -171,6 +173,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="goto_kiosk_07_s"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -186,7 +189,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center_vertical"
-                    android:onClick="goto_kiosk_07_s"
                     android:text="@string/side"
                     android:textSize="25sp" />
 
@@ -197,6 +199,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -221,6 +224,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -245,6 +249,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="goto_kiosk_07_d"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -260,7 +265,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center_vertical"
-                    android:onClick="goto_kiosk_07_d"
                     android:text="@string/drink"
                     android:textSize="25sp" />
 
@@ -271,6 +275,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -316,6 +321,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -359,6 +365,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -455,6 +462,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -498,6 +506,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -541,6 +550,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -592,6 +602,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -635,6 +646,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -678,6 +690,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -729,6 +742,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -772,6 +786,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -815,6 +830,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:onClick="n_sup"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
 
@@ -885,6 +901,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:background="@drawable/fastfood_btn_background_yellow"
+            android:onClick="n_sup"
             android:text="@string/order_history"
             android:textSize="30sp" />
 

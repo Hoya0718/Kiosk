@@ -51,6 +51,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -101,6 +102,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -150,6 +152,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -174,6 +177,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView
@@ -224,6 +228,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="n_sup"
                 android:background="@drawable/table_border">
 
                 <ImageView

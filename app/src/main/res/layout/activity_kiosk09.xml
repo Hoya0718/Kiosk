@@ -111,6 +111,7 @@
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:background="@drawable/fastfood_btn_background_yellow"
+                        android:onClick="n_sup"
                         android:text="@string/delete"
                         android:textSize="10sp" />
 
@@ -144,6 +145,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@drawable/table_border"
+                            android:onClick="n_sup"
                             android:text="-"
                             android:textSize="10sp" />
 
@@ -162,6 +164,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@drawable/table_border"
+                            android:onClick="n_sup"
                             android:text="+"
                             android:textSize="10sp" />
                     </LinearLayout>
@@ -238,6 +241,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
+            android:onClick="n_sup"
             android:text="@string/add_order"
             android:textSize="30sp" />
 

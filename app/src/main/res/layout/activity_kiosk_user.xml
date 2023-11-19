@@ -62,7 +62,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="날짜별 키오스크 사용 속도"
+            android:text="날짜별 음식점 키오스크 사용 속도"
             android:textSize="30dp" />
 
     </LinearLayout>
@@ -112,7 +112,7 @@
             android:layout_weight="3"
             android:background="@drawable/hospital_btn_blue"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_join"
+            android:onClick="goto_user_list"
             android:text="등  록"
             android:textSize="30dp" />
 
@@ -128,7 +128,7 @@
             android:layout_weight="3"
             android:background="@drawable/hospital_btn_blue"
             android:textColor="#FFFFFF"
-            android:onClick="goto_kiosk_join"
+            android:onClick="goto_user_list"
             android:text="편  집"
             android:textSize="30dp" />
 
@@ -144,6 +144,7 @@
             android:layout_weight="3"
             android:background="@drawable/hospital_btn_purple"
             android:textColor="#FFFFFF"
+            android:onClick="goto_user_list"
             android:text="삭  제"
             android:textSize="30dp" />
 

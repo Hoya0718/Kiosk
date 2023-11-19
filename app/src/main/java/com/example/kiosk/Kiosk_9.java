@@ -9,6 +9,7 @@ import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -150,5 +151,9 @@ public class Kiosk_9 extends AppCompatActivity {
             tts.stop();
         }
         super.onPause();
+    }
+
+    public void n_sup(View v){
+        Toast.makeText(getApplicationContext(), "지원하지 않는 기능입니다.", Toast.LENGTH_LONG).show();
     }
 }

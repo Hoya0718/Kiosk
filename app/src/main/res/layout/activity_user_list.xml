@@ -29,7 +29,8 @@
             android:layout_weight="1"
             android:background="@drawable/btn_circle"
             android:onClick="goto_home"
-            android:text="처음화면으로가기" />
+            android:text="처음 화면으로 가기"
+            android:textSize="20dp"/>
     </LinearLayout>
 
     <LinearLayout

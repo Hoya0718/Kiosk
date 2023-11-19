@@ -137,6 +137,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/table_border"
+            android:onClick="n_sup"
             android:orientation="vertical">
 
             <ImageView

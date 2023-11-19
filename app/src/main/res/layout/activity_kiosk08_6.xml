@@ -149,6 +149,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
+            android:onClick="n_sup"
             android:text="-"
             android:textSize="30sp" />
 
@@ -173,6 +174,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
+            android:onClick="n_sup"
             android:text="+"
             android:textSize="30sp" />
     </LinearLayout>

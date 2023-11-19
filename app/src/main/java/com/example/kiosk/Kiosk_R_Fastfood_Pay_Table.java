@@ -3,6 +3,7 @@ package com.example.kiosk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,5 +36,9 @@ public class Kiosk_R_Fastfood_Pay_Table extends AppCompatActivity {
 
     public void onBackPressed() {
         // 뒤로가기 버튼 무시
+    }
+
+    public void n_sup(View v){
+        Toast.makeText(getApplicationContext(), "지원하지 않는 기능입니다.", Toast.LENGTH_LONG).show();
     }
 }

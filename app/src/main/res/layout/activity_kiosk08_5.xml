@@ -252,6 +252,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
+            android:onClick="n_sup"
             android:layout_weight="1"
             android:text="-"
             android:textSize="30sp" />
@@ -276,6 +277,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
+            android:onClick="n_sup"
             android:layout_weight="1"
             android:text="+"
             android:textSize="30sp" />
@@ -297,6 +299,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/table_border"
+            android:onClick="popup_kiosk_08_4"
             android:text="@string/cancel_no"
             android:textSize="30sp" />
 

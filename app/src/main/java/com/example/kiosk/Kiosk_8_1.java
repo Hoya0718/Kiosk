@@ -1,27 +1,16 @@
 package com.example.kiosk;
 
-import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewParent;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -163,5 +152,9 @@ public class Kiosk_8_1 extends AppCompatActivity {
             tts.stop();
         }
         super.onPause();
+    }
+
+    public void n_sup(View v){
+        Toast.makeText(getApplicationContext(), "지원하지 않는 기능입니다.", Toast.LENGTH_LONG).show();
     }
 }

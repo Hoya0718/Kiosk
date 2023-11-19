@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -45,12 +44,7 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         dataList = database.mainDao().getAll();
         newList = database.newDao().getAll();
 
-
-//      adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, dataList);
         adapter = new MainAdapter(Kiosk_R_Fastfood_Congratulation.this, newList);
-
-
-
 
         RoomDB db = Room.databaseBuilder(getApplicationContext(), RoomDB.class, "Time_DB")
                 .fallbackToDestructiveMigration()     //스키마 버젼 변경 가능
@@ -61,8 +55,6 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         newDao = db.newDao();
 
         MainData data = new MainData(); //객체 인스턴스 생성
-
-        //int myId = database.mainDao().getLastInsertedId();
 
         myapp myApp = (myapp) getApplicationContext();
         long beforeTime = myApp.getR_Time();
@@ -103,59 +95,68 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         }
 
         con_text = findViewById(R.id.con_text);
-        if (myApp.getPracticeFastfoodCheck()) {
-            long pTime = myApp.getR_F_Time();
-            long diffTime;
-            if (pTime > measTime) {
-                diffTime = pTime - measTime;
-                con_text.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
-                        "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요\n");
+        long timeToCompare = myApp.getR_F_Time();
+        String timeType = "";
+
+        if (myApp.getPracticeFastfoodCheck() || timeToCompare != 0) {
+            if (timeToCompare != 0) {
+                timeType = (timeToCompare > measTime) ? "실전 전" : "실전 후";
             } else {
-                diffTime = measTime - pTime;
-                con_text.setText("연습 전 소요 시간 : " + (pTime / 60) + "분 " + (pTime % 60) + "초\n" +
-                        "연습 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 늦었어요");
+                timeType = (myApp.getPracticeFastfoodCheck() && measTime < timeToCompare) ? "연습 전" : "연습 후";
+                if (measTime < timeToCompare) {
+                    myApp.setR_F_Time(measTime);
+                }
             }
-            if (measTime < myApp.getR_F_Time()){
-                myApp.setR_F_Time(measTime);
-            }
-        } else if (myApp.getR_F_Time() != 0) {
-            long rTime = myApp.getR_F_Time();
-            long diffTime;
-            if (rTime > measTime) {
-                diffTime = rTime - measTime;
-                con_text.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
-                        "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 빨랐어요");
-            } else {
-                diffTime = measTime - rTime;
-                con_text.setText("실전 전 소요 시간 : " + (rTime / 60) + "분 " + (rTime % 60) + "초\n" +
-                        "실전 후 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                        "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 늦었어요");
-            }
-            if (measTime < myApp.getR_F_Time()){
-                myApp.setR_F_Time(measTime);
-            }
-        }
-        else
-        {
-            con_text.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
-                    "구간별 소요 시간\n" +
-                    "메뉴 선택 : " + md + "분 " + mp + "초\n" +
-                    "세부 선택 : " + dd + "분 " + dp + "초\n" +
-                    "결제 선택 : " + pd + "분 " + pp + "초");
+
+            long diffTime = Math.abs(timeToCompare - measTime);
+            String status = (timeToCompare > measTime) ? "빨랐어요" : "늦었어요";
+            con_text.setText(timeType + " 소요 시간 : " + (timeToCompare / 60) + "분 " + (timeToCompare % 60) + "초\n" +
+                    "실제 소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                    "이전 기록보다 " + (diffTime / 60) + "분 " + (diffTime % 60) + "초 " + status);
+
+            // 데이터베이스 저장 코드
             data.setTime(md + "분 " + mp + "초");
             data.setDetail(dd + "분 " + dp + "초");
             data.setCredit(pd + "분 " + pp + "초");
             data.setUserdate(formattedDate);
 
-            //database.mainDao().insert(data);
             database.mainDao().update2(name_value, mT);
             database.mainDao().update3(name_value, pT_1);
             database.mainDao().update4(name_value, pT_2);
             database.mainDao().update5(name_value, formattedDate);
-            //database.mainDao().insert(data);
+
+            List<MainData> dataList = database.mainDao().getAllDataWithTime_1();
+
+            Log.d("DataList", "DataList size: " + dataList.size());
+            double averageValue_1 = calculateAverageValue_1(dataList);
+            double averageValue_2 = calculateAverageValue_2(dataList);
+            double averageValue_3 = calculateAverageValue_3(dataList);
+            DecimalFormat decimalFormat = new DecimalFormat("#.#");
+            String formattedAverage_1 = decimalFormat.format(averageValue_1);
+            String formattedAverage_2 = decimalFormat.format(averageValue_2);
+            String formattedAverage_3 = decimalFormat.format(averageValue_3);
+            tot.setText("메뉴 선택 평균값: " + formattedAverage_1 + "초");
+            tot_1.setText("세부 선택 평균값: " +formattedAverage_2 + "초");
+            tot_2.setText("결제 선택 평균값: " +formattedAverage_3 + "초");
+            database.mainDao().deleteNullNameData();
+            myApp.setR_F_Time(measTime);
+        } else {
+            con_text.setText("소요 시간 : " + (measTime / 60) + "분 " + (measTime % 60) + "초\n" +
+                    "구간별 소요 시간\n" +
+                    "메뉴 선택 : " + md + "분 " + mp + "초\n" +
+                    "세부 선택 : " + dd + "분 " + dp + "초\n" +
+                    "결제 선택 : " + pd + "분 " + pp + "초");
+
+            // 데이터베이스 저장 코드
+            data.setTime(md + "분 " + mp + "초");
+            data.setDetail(dd + "분 " + dp + "초");
+            data.setCredit(pd + "분 " + pp + "초");
+            data.setUserdate(formattedDate);
+
+            database.mainDao().update2(name_value, mT);
+            database.mainDao().update3(name_value, pT_1);
+            database.mainDao().update4(name_value, pT_2);
+            database.mainDao().update5(name_value, formattedDate);
 
             List<MainData> dataList = database.mainDao().getAllDataWithTime_1();
 
@@ -182,128 +183,74 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
     }
 
     public void goto_Kiosk_R_P(View v){
+        myapp myApp = (myapp) getApplicationContext();
+        myApp.clearOrderList();
+        myApp.setCheckFastfoodMission("X");
+        myApp.setMissionCheck(false);
 
-        double tot_value;
-        double tot_1_value;
-        double tot_2_value;
-        tot_value = Double.parseDouble(tot.getText().toString().replace("메뉴 선택 평균값: ","").replace("초",""));
-        tot_1_value = Double.parseDouble(tot_1.getText().toString().replace("세부 선택 평균값: ","").replace("초",""));
-        tot_2_value = Double.parseDouble(tot_2.getText().toString().replace("결제 선택 평균값: ","").replace("초",""));
+        double tot_value = parseDoubleValue(tot.getText().toString());
+        double tot_1_value = parseDoubleValue(tot_1.getText().toString());
+        double tot_2_value = parseDoubleValue(tot_2.getText().toString());
 
-        double mT_1;
-        double pT_1_1;
-        double pT_2_1;
+        double mT_1 = parseDoubleValue(mT);
+        double pT_1_1 = parseDoubleValue(pT_1);
+        double pT_2_1 = parseDoubleValue(pT_2);
 
-
-        mT_1 = Double.parseDouble(mT);
-        pT_1_1 = Double.parseDouble(pT_1);
-        pT_2_1 = Double.parseDouble(pT_2);
-
-        double result_1;
-        double result_2;
-        double result_3;
-
-        result_1 = mT_1 - tot_value;
-        result_2 = pT_1_1 - tot_1_value;
-        result_3 = pT_2_1 - tot_2_value;
+        double result_1 = mT_1 - tot_value;
+        double result_2 = pT_1_1 - tot_1_value;
+        double result_3 = pT_2_1 - tot_2_value;
 
         AlertDialog.Builder ad = new AlertDialog.Builder(Kiosk_R_Fastfood_Congratulation.this);
+        ad.setIcon(R.mipmap.ic_launcher);
+        ad.setTitle("소요 시간");
 
-        if((result_1 >=result_2) && (result_1 >= result_3)){
-            Log.d("result","result1");
-            ad.setIcon(R.mipmap.ic_launcher);
-            ad.setTitle("소요 시간");
+        if(result_1 >= result_2 && result_1 >= result_3){
             ad.setMessage("메뉴 선택시간이 평균값보다 " + result_1 + "초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
-            ad.setPositiveButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),Kiosk_6.class);
-                    dialog.dismiss();
-                    startActivity(intent);
-                }
-            });
-            ad.setNegativeButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),User_list.class);
-                    dialog.dismiss();
-                    startActivity(intent);
-                }
-            });
-            ad.show();
-        }
-        else if ((result_2 >= result_1) && (result_2 >= result_3)) {
-            Log.d("result","result2");
-            ad.setIcon(R.mipmap.ic_launcher);
-            ad.setTitle("소요 시간");
+            ad.setPositiveButton("네", createIntentClickListener(Kiosk_7_b.class));
+            ad.setNegativeButton("아니요", createIntentClickListener(MainActivity.class));
+        } else if(result_2 >= result_1 && result_2 >= result_3){
             ad.setMessage("세부 선택시간이 평균값보다 " + result_2 +"초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
-            ad.setNegativeButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),Kiosk_3.class);
-                    dialog.dismiss();
-                    startActivity(intent);
-                }
-            });
-            ad.setPositiveButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),User_list.class);
-                    dialog.dismiss();
-                    startActivity(intent);
-                }
-            });
-            ad.show();
-        }
-        else if((result_3 >= result_1) && (result_3 >= result_2))
-        {
-            Log.d("result","result3");
-            ad.setIcon(R.mipmap.ic_launcher);
-            ad.setTitle("소요 시간");
+            ad.setPositiveButton("아니요", createIntentClickListener(Kiosk_8_1.class));
+            ad.setNegativeButton("네", createIntentClickListener(MainActivity.class));
+        } else if(result_3 >= result_1 && result_3 >= result_2){
             ad.setMessage("결제 선택시간이 평균값보다 " + result_3 + "초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
-            ad.setNegativeButton("네", new DialogInterface.OnClickListener() {            //사용자 이름을 입력시 다음 액티비티로 이동
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(),Kiosk_7_b.class);
-                    dialog.dismiss();
-                    startActivity(intent);
-                }
-            });
-            ad.setPositiveButton("아니요", new DialogInterface.OnClickListener() {            //취소시 팝업 종료
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    dialog.dismiss();
-                    startActivity(intent);
-                }
-            });
-            ad.show();
-        }
-
-        else {
-            Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), User_list.class);
-
-            myapp myApp = (myapp) getApplicationContext();
-            myApp.clearOrderList();
-            myApp.setCheckFastfoodMission("X");
-            myApp.setMissionCheck(false);
-
+            ad.setPositiveButton("네", createIntentClickListener(Kiosk_9.class));
+            ad.setNegativeButton("아니요", createIntentClickListener(MainActivity.class));
+        } else {
+            Intent goto_Kiosk_R_P = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(goto_Kiosk_R_P);
         }
+        ad.show();
     }
+
+    private double parseDoubleValue(String value){
+        try {
+            return Double.parseDouble(value.replaceAll("\\D+", ""));
+        } catch (NumberFormatException | NullPointerException e) {
+            e.printStackTrace();
+        }
+        return 0.0;
+    }
+
+    private DialogInterface.OnClickListener createIntentClickListener(Class<?> cls){
+        return new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getApplicationContext(), cls);
+                startActivity(intent);
+            }
+        };
+    }
+
     private double calculateAverageValue_1(List<MainData> dataList) {
         // dataList가 null이거나 비어있으면 0을 반환하거나 오류 처리를 수행할 수 있습니다.
         if (dataList == null || dataList.isEmpty()) {
             return 0.0;
         }
-
-
         double totalValue_1 = 0.0;
-
         // dataList에서 각 YourEntity 객체의 time 필드 값을 추출하고 더합니다.
         for (MainData entity : dataList) {
             String menu_t = entity.getTime();
-
             if (menu_t != null) {
                 try {
                     double value_1 = Double.parseDouble(menu_t.replace(" ","").trim());
@@ -315,10 +262,10 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                 }
             }
         }
-
         // 평균 값을 계산하여 반환
         return totalValue_1 / (dataList.size()-1);
     }
+
     private double calculateAverageValue_2(List<MainData> dataList) {
         // dataList가 null이거나 비어있으면 0을 반환하거나 오류 처리를 수행할 수 있습니다.
         if (dataList == null || dataList.isEmpty()) {
@@ -339,10 +286,10 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                 }
             }
         }
-
         // 평균 값을 계산하여 반환
         return totalValue_2 / (dataList.size()-1);
     }
+
     private double calculateAverageValue_3(List<MainData> dataList) {
         // dataList가 null이거나 비어있으면 0을 반환하거나 오류 처리를 수행할 수 있습니다.
         if (dataList == null || dataList.isEmpty()) {
@@ -363,8 +310,8 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
                 }
             }
         }
-
         // 평균 값을 계산하여 반환
         return totalValue_3 / (dataList.size()-1);
     }
+
 }

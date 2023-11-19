@@ -8,13 +8,43 @@
     android:orientation="vertical"
     tools:context=".Kiosk_12">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="70dp"
-        android:layout_weight="5"
-        app:srcCompat="@drawable/congraturation" />
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="축하합니다"
+            android:textStyle="bold"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            app:srcCompat="@drawable/congraturation" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7" />
 
     <Button
         android:id="@+id/first_Btn"
@@ -26,6 +56,8 @@
         android:layout_marginBottom="50dp"
         android:layout_weight="1"
         android:onClick="goto_kiosk_5"
+        android:background="@drawable/btn_circle"
         android:text="@string/b_gofirst1"
-        android:textSize="@dimen/font_size_medium" />
+        android:textSize="33sp" />
+
 </LinearLayout>

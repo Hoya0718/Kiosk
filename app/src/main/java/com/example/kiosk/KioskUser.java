@@ -46,4 +46,9 @@ public class KioskUser extends AppCompatActivity {
         Intent goto_user_list = new Intent(getApplicationContext(), User_list.class);
         startActivity(goto_user_list);
     }
+
+    public void goto_kiosk_main(View v){
+        Intent goto_kiosk_main = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(goto_kiosk_main);
+    }
 }

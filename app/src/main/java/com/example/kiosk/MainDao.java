@@ -38,7 +38,7 @@
         @Query("UPDATE table_name SET userdate = :aaa Where text = :sID")
         void update5(String sID, String aaa);
 
-        @Query("DELETE FROM table_name WHERE text IS NULL")
+        @Query("DELETE FROM table_name WHERE time IS NULL")
         void deleteNullNameData();
 
         @Query("SELECT id FROM table_name ORDER BY id DESC LIMIT 1")

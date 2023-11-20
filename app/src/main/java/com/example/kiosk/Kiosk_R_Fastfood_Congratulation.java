@@ -138,15 +138,22 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
             double averageValue_2 = calculateAverageValue_2(dataList);
             double averageValue_3 = calculateAverageValue_3(dataList);
 
+            Log.d("qwerty",Double.toString(averageValue_1));
+            Log.d("qwerty",Double.toString(averageValue_2));
+            Log.d("qwerty",Double.toString(averageValue_3));
+
             int minutes_1 = (int) (averageValue_1 / 60);
             int seconds_1 = (int) (averageValue_1 % 60);
             int minutes_2 = (int) (averageValue_2 / 60);
             int seconds_2 = (int) (averageValue_2 % 60);
             int minutes_3 = (int) (averageValue_3 / 60);
             int seconds_3 = (int) (averageValue_3 % 60);
+
             String formattedAverage_1_minutes_seconds = String.format("%d분%d초", minutes_1, seconds_1);
             String formattedAverage_2_minutes_seconds = String.format("%d분%d초", minutes_2, seconds_2);
             String formattedAverage_3_minutes_seconds = String.format("%d분%d초", minutes_3, seconds_3);
+
+            Log.d("qwerty","평균값"+ formattedAverage_1_minutes_seconds);
 
             tot.setText("메뉴 선택 평균값: " + formattedAverage_1_minutes_seconds);
             tot_1.setText("세부 선택 평균값: " + formattedAverage_2_minutes_seconds);
@@ -217,28 +224,36 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
         double tot_1_value = parseDoubleValue(tot_1.getText().toString());
         double tot_2_value = parseDoubleValue(tot_2.getText().toString());
 
-        double mT_1 = parseDoubleValue(mT);
-        double pT_1_1 = parseDoubleValue(pT_1);
-        double pT_2_1 = parseDoubleValue(pT_2);
+        double averageValue_1 = calculateAverageValue_1(dataList);
+        double averageValue_2 = calculateAverageValue_2(dataList);
+        double averageValue_3 = calculateAverageValue_3(dataList);
 
-        double result_1 = mT_1 - tot_value;
-        double result_2 = pT_1_1 - tot_1_value;
-        double result_3 = pT_2_1 - tot_2_value;
+        double result_1 = averageValue_1 - tot_value;
+        double result_2 = averageValue_2 - tot_1_value;
+        double result_3 = averageValue_3 - tot_2_value;
+
+        int minutes_1 = (int) (averageValue_1 / 60);
+        int seconds_1 = (int) (averageValue_1 % 60);
+        int minutes_2 = (int) (averageValue_2 / 60);
+        int seconds_2 = (int) (averageValue_2 % 60);
+        int minutes_3 = (int) (averageValue_3 / 60);
+        int seconds_3 = (int) (averageValue_3 % 60);
+
 
         AlertDialog.Builder ad = new AlertDialog.Builder(Kiosk_R_Fastfood_Congratulation.this);
         ad.setIcon(R.mipmap.ic_launcher);
         ad.setTitle("소요 시간");
 
         if(result_1 >= result_2 && result_1 >= result_3){
-            ad.setMessage("메뉴 선택시간이 평균값보다 " + result_1 + "초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
+            ad.setMessage("메뉴 선택시간이 평균값보다 " +minutes_1+"분" + seconds_1 + "초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
             ad.setPositiveButton("네", createIntentClickListener(Kiosk_7_b.class));
             ad.setNegativeButton("아니요", createIntentClickListener(MainActivity.class));
         } else if(result_2 >= result_1 && result_2 >= result_3){
-            ad.setMessage("세부 선택시간이 평균값보다 " + result_2 +"초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
-            ad.setPositiveButton("아니요", createIntentClickListener(Kiosk_8_1.class));
-            ad.setNegativeButton("네", createIntentClickListener(MainActivity.class));
+            ad.setMessage("세부 선택시간이 평균값보다 " + minutes_2 + "분" + seconds_2 + "초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
+            ad.setPositiveButton("네", createIntentClickListener(Kiosk_8_1.class));
+            ad.setNegativeButton("아니요", createIntentClickListener(MainActivity.class));
         } else if(result_3 >= result_1 && result_3 >= result_2){
-            ad.setMessage("결제 선택시간이 평균값보다 " + result_3 + "초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
+            ad.setMessage("결제 선택시간이 평균값보다 " + minutes_3 + "분" + seconds_3 + "초 느려요. 연습을 해 보실까요?\n연습을 하시려면 '네' 필요가 없으시다면 '아니요'를 눌러주세요.");
             ad.setPositiveButton("네", createIntentClickListener(Kiosk_9.class));
             ad.setNegativeButton("아니요", createIntentClickListener(MainActivity.class));
         } else {
@@ -269,52 +284,47 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
 
     private double calculateAverageValue_1(List<MainData> dataList) {
         if (dataList == null || dataList.isEmpty()) {
-            Log.d("qwerty","return");
+            Log.d("qwerty", "return");
             return 0.0;
         }
 
-        double totalValue_1 = 0.0;
+        double totalSeconds = 0.0;
         int validDataCount = 0;
-        Log.d("qwerty","n_return");
+        Log.d("return", "n_return");
         for (MainData entity : dataList) {
-            String menu_t = entity.getTime();
-            if (menu_t != null && !menu_t.trim().isEmpty()) {
+            String time_t = entity.getTime();
+            if (time_t != null && !time_t.trim().isEmpty()) {
                 try {
                     // "분"과 "초"를 제거한 후 공백을 제거하고 변환
-                    String cleanedTime = menu_t.replace("분", "").replace("초", "").trim();
-                    Log.d("qwerty","value" + cleanedTime);
+                    String cleanedTime = time_t.replace("분", "").replace("초", "").trim();
+                    Log.d("qwerty", "value" + cleanedTime);
 
-                    // 단위가 "분"인 경우
-                    if (cleanedTime.contains("분")) {
-                        // "분"을 공백으로 대체하고 남은 문자열을 정수로 변환
-                        int minutes = Integer.parseInt(cleanedTime.replace("분", "").trim());
-                        double value_1 = minutes * 60;
-                        totalValue_1 += value_1;
-                        validDataCount++;
-                    } else if (cleanedTime.contains("초")) {
-                        // 단위가 "초"인 경우
-                        int seconds = Integer.parseInt(cleanedTime.replace("초", "").trim());
-                        double value_1 = seconds;
-                        totalValue_1 += value_1;
-                        validDataCount++;
-                    } else {
-                        // ":"를 기준으로 분과 초를 나누어 배열에 저장
-                        String[] timeComponents = cleanedTime.split(":");
+                    // "분"과 "초"가 함께 있는 경우
+                    if (cleanedTime.contains("분") && cleanedTime.contains("초")) {
+                        String[] timeComponents = cleanedTime.split("분|초");
+
                         if (timeComponents.length == 2) {
-                            // 분과 초를 정수로 변환하여 합산
-                            int minutes = Integer.parseInt(timeComponents[0]);
-                            int seconds = Integer.parseInt(timeComponents[1]);
+                            int minutes = Integer.parseInt(timeComponents[0].trim());
+                            int seconds = Integer.parseInt(timeComponents[1].trim());
 
                             // 분과 초가 음수이거나 초가 60 이상인 경우는 유효하지 않은 데이터로 처리
                             if (minutes >= 0 && seconds >= 0 && seconds < 60) {
-                                double value_1 = minutes * 60 + seconds;
-                                totalValue_1 += value_1;
+                                totalSeconds += minutes * 60 + seconds;
                                 validDataCount++;
                             } else {
-                                Log.e("ParsingError", "Invalid time format: " + menu_t);
+                                Log.e("ParsingError", "Invalid time format: " + time_t);
                             }
                         } else {
-                            Log.e("ParsingError", "Invalid time format: " + menu_t);
+                            Log.e("ParsingError", "Invalid time format: " + time_t);
+                        }
+                    } else {
+                        // "분" 또는 "초"만 있는 경우
+                        int timeValue = Integer.parseInt(cleanedTime.trim());
+                        if (timeValue >= 0) {
+                            totalSeconds += timeValue;
+                            validDataCount++;
+                        } else {
+                            Log.e("ParsingError", "Invalid time format: " + time_t);
                         }
                     }
                 } catch (NumberFormatException e) {
@@ -325,59 +335,54 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
 
         // 유효한 데이터가 없다면 0을 반환
         if (validDataCount == 0) {
-            return 0.0;
+            return 1.0;
         }
 
         // 평균 값을 계산하여 반환
-        return totalValue_1 / validDataCount;
+        return totalSeconds / validDataCount;
     }
 
     private double calculateAverageValue_2(List<MainData> dataList) {
         if (dataList == null || dataList.isEmpty()) {
-            Log.d("qwerty","return");
+            Log.d("qwerty", "return");
             return 0.0;
         }
 
-        double totalValue_2 = 0.0;
+        double totalSeconds = 0.0;
         int validDataCount = 0;
-        Log.d("return","n_return");
+        Log.d("return", "n_return");
         for (MainData entity : dataList) {
             String detail_t = entity.getDetail();
             if (detail_t != null && !detail_t.trim().isEmpty()) {
                 try {
                     // "분"과 "초"를 제거한 후 공백을 제거하고 변환
                     String cleanedTime = detail_t.replace("분", "").replace("초", "").trim();
-                    Log.d("qwerty","value" + cleanedTime);
+                    Log.d("qwerty", "value" + cleanedTime);
 
-                    // 단위가 "분"인 경우
-                    if (cleanedTime.contains("분")) {
-                        // "분"을 공백으로 대체하고 남은 문자열을 정수로 변환
-                        int minutes = Integer.parseInt(cleanedTime.replace("분", "").trim());
-                        double value_1 = minutes * 60;
-                        totalValue_2 += value_1;
-                        validDataCount++;
-                    } else if (cleanedTime.contains("초")) {
-                        // 단위가 "초"인 경우
-                        int seconds = Integer.parseInt(cleanedTime.replace("초", "").trim());
-                        double value_1 = seconds;
-                        totalValue_2 += value_1;
-                        validDataCount++;
-                    } else {
-                        // ":"를 기준으로 분과 초를 나누어 배열에 저장
-                        String[] timeComponents = cleanedTime.split(":");
+                    // "분"과 "초"가 함께 있는 경우
+                    if (cleanedTime.contains("분") && cleanedTime.contains("초")) {
+                        String[] timeComponents = cleanedTime.split("분|초");
+
                         if (timeComponents.length == 2) {
-                            // 분과 초를 정수로 변환하여 합산
-                            int minutes = Integer.parseInt(timeComponents[0]);
-                            int seconds = Integer.parseInt(timeComponents[1]);
+                            int minutes = Integer.parseInt(timeComponents[0].trim());
+                            int seconds = Integer.parseInt(timeComponents[1].trim());
 
                             // 분과 초가 음수이거나 초가 60 이상인 경우는 유효하지 않은 데이터로 처리
                             if (minutes >= 0 && seconds >= 0 && seconds < 60) {
-                                double value_1 = minutes * 60 + seconds;
-                                totalValue_2 += value_1;
+                                totalSeconds += minutes * 60 + seconds;
                                 validDataCount++;
                             } else {
                                 Log.e("ParsingError", "Invalid time format: " + detail_t);
                             }
+                        } else {
+                            Log.e("ParsingError", "Invalid time format: " + detail_t);
+                        }
+                    } else {
+                        // "분" 또는 "초"만 있는 경우
+                        int timeValue = Integer.parseInt(cleanedTime.trim());
+                        if (timeValue >= 0) {
+                            totalSeconds += timeValue;
+                            validDataCount++;
                         } else {
                             Log.e("ParsingError", "Invalid time format: " + detail_t);
                         }
@@ -390,59 +395,54 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
 
         // 유효한 데이터가 없다면 0을 반환
         if (validDataCount == 0) {
-            return 0.0;
+            return 1.0;
         }
 
         // 평균 값을 계산하여 반환
-        return totalValue_2 / validDataCount;
+        return totalSeconds / validDataCount;
     }
 
     private double calculateAverageValue_3(List<MainData> dataList) {
         if (dataList == null || dataList.isEmpty()) {
-            Log.d("qwerty","return");
+            Log.d("qwerty", "return");
             return 0.0;
         }
 
-        double totalValue_3 = 0.0;
+        double totalSeconds = 0.0;
         int validDataCount = 0;
-        Log.d("return","n_return");
+        Log.d("return", "n_return");
         for (MainData entity : dataList) {
             String credit_t = entity.getCredit();
             if (credit_t != null && !credit_t.trim().isEmpty()) {
                 try {
                     // "분"과 "초"를 제거한 후 공백을 제거하고 변환
                     String cleanedTime = credit_t.replace("분", "").replace("초", "").trim();
-                    Log.d("qwerty","value" + cleanedTime);
+                    Log.d("qwerty", "value" + cleanedTime);
 
-                    // 단위가 "분"인 경우
-                    if (cleanedTime.contains("분")) {
-                        // "분"을 공백으로 대체하고 남은 문자열을 정수로 변환
-                        int minutes = Integer.parseInt(cleanedTime.replace("분", "").trim());
-                        double value_1 = minutes * 60;
-                        totalValue_3 += value_1;
-                        validDataCount++;
-                    } else if (cleanedTime.contains("초")) {
-                        // 단위가 "초"인 경우
-                        int seconds = Integer.parseInt(cleanedTime.replace("초", "").trim());
-                        double value_1 = seconds;
-                        totalValue_3 += value_1;
-                        validDataCount++;
-                    } else {
-                        // ":"를 기준으로 분과 초를 나누어 배열에 저장
-                        String[] timeComponents = cleanedTime.split(":");
+                    // "분"과 "초"가 함께 있는 경우
+                    if (cleanedTime.contains("분") && cleanedTime.contains("초")) {
+                        String[] timeComponents = cleanedTime.split("분|초");
+
                         if (timeComponents.length == 2) {
-                            // 분과 초를 정수로 변환하여 합산
-                            int minutes = Integer.parseInt(timeComponents[0]);
-                            int seconds = Integer.parseInt(timeComponents[1]);
+                            int minutes = Integer.parseInt(timeComponents[0].trim());
+                            int seconds = Integer.parseInt(timeComponents[1].trim());
 
                             // 분과 초가 음수이거나 초가 60 이상인 경우는 유효하지 않은 데이터로 처리
                             if (minutes >= 0 && seconds >= 0 && seconds < 60) {
-                                double value_1 = minutes * 60 + seconds;
-                                totalValue_3 += value_1;
+                                totalSeconds += minutes * 60 + seconds;
                                 validDataCount++;
                             } else {
                                 Log.e("ParsingError", "Invalid time format: " + credit_t);
                             }
+                        } else {
+                            Log.e("ParsingError", "Invalid time format: " + credit_t);
+                        }
+                    } else {
+                        // "분" 또는 "초"만 있는 경우
+                        int timeValue = Integer.parseInt(cleanedTime.trim());
+                        if (timeValue >= 0) {
+                            totalSeconds += timeValue;
+                            validDataCount++;
                         } else {
                             Log.e("ParsingError", "Invalid time format: " + credit_t);
                         }
@@ -455,11 +455,11 @@ public class Kiosk_R_Fastfood_Congratulation extends AppCompatActivity {
 
         // 유효한 데이터가 없다면 0을 반환
         if (validDataCount == 0) {
-            return 0.0;
+            return 1.0;
         }
 
         // 평균 값을 계산하여 반환
-        return totalValue_3 / validDataCount;
+        return totalSeconds / validDataCount;
     }
 
 }

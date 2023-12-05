@@ -1,32 +1,29 @@
 package com.example.kiosk;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class NameAdapter extends RecyclerView.Adapter<NameAdapter.ViewHolder> {
 
     private Context context;
     private List<String> userNames;
-    private RecordAdapter secondAdapter; // 두 번째 리사이클러뷰 어댑터
-    private MainDao mainDao;
-    private RoomDB database;
+    private NameAdapterListener listener;
 
-    public NameAdapter(Context context, List<String> userNames, RecordAdapter secondAdapter) {
+    public interface NameAdapterListener {
+        void onUserButtonClick(String userName);
+    }
+
+    public NameAdapter(Context context, List<String> userNames, NameAdapterListener listener) {
         this.context = context;
         this.userNames = userNames;
-        this.secondAdapter = secondAdapter; // 두 번째 리사이클러뷰 어댑터 할당
-        this.mainDao = RoomDB.getInstance(context).mainDao(); // MainDao 초기화
-        database = RoomDB.getInstance(context);
+        this.listener = listener;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -41,23 +38,10 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.ViewHolder> {
             user_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    MainData data = new MainData();
-                    String isNull;
-                    isNull = data.getUserdate();
-                    if(isNull != null) {
-                        Log.d("qwerty","qwerty");
+                    String userName = userNames.get(getAdapterPosition());
+                    if (listener != null) {
+                        listener.onUserButtonClick(userName);
                     }
-                    else {
-                        database.mainDao().deleteDate();
-                        Log.d("qwerty", "zz");
-                    }
-
-                    String text = textView.getText().toString();
-                    List<MainData> matchingDates = mainDao.getMatchingItems(text);
-
-                    secondAdapter.updateData(matchingDates);
-
                 }
             });
         }

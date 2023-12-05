@@ -73,17 +73,22 @@
         android:layout_weight="4"
         android:orientation="vertical">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rec_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                tools:listitem="@layout/list_user_rec" />
-        </ScrollView>
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rec_view"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                tools:listitem="@layout/list_user_rec" />-->
+<!--        </ScrollView>-->
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

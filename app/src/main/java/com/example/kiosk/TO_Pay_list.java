@@ -15,6 +15,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -162,5 +163,8 @@ import java.util.Locale;
          tts.shutdown();
          Intent goto_to_main = new Intent(getApplicationContext(), Town_Office.class);
          startActivity(goto_to_main);
+     }
+     public void bill(View v){
+         Toast.makeText(getApplicationContext(),"지원하지 않는 기능입니다.", Toast.LENGTH_LONG).show();
      }
 }

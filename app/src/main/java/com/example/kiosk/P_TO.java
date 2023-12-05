@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 public class P_TO extends AppCompatActivity {
 
+    private myapp myApp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +18,9 @@ public class P_TO extends AppCompatActivity {
     }
     public void goto_Main(View v){
         Intent goto_Main = new Intent(getApplicationContext(), Kiosk_R_Part.class);
+        myapp myApp = (myapp) getApplicationContext();
+        myApp.setCheckFastfoodMission("X");
+        myApp.setMissionCheck(false);
         startActivity(goto_Main);
     }
 

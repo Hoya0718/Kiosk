@@ -37,6 +37,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 goto_pay_List.putExtra("value", value);
                 input = gnn_1.getText().toString();
                 goto_pay_List.putExtra("text", input);
+                goto_pay_List.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
                 startActivity(goto_pay_List);
                 break;
             case R.id.gnn_2:
@@ -45,6 +46,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 goto_pay_List.putExtra("value", value);
                 input = gnn_2.getText().toString();
                 goto_pay_List.putExtra("text", input);
+                goto_pay_List.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
                 startActivity(goto_pay_List);
                 break;
             case R.id.gnn_3:
@@ -53,6 +55,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 goto_pay_List.putExtra("value", value);
                 input = gnn_3.getText().toString();
                 goto_pay_List.putExtra("text", input);
+                goto_pay_List.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
                 startActivity(goto_pay_List);
                 break;
             case R.id.gnn_4:
@@ -61,6 +64,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 goto_pay_List.putExtra("value", value);
                 input = gnn_4.getText().toString();
                 goto_pay_List.putExtra("text", input);
+                goto_pay_List.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
                 startActivity(goto_pay_List);
                 break;
             case R.id.gnn_5:
@@ -69,6 +73,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 goto_pay_List.putExtra("value", value);
                 input = gnn_5.getText().toString();
                 goto_pay_List.putExtra("text", input);
+                goto_pay_List.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
                 startActivity(goto_pay_List);
                 break;
             case R.id.gnn_6:
@@ -77,6 +82,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 goto_pay_List.putExtra("value", value);
                 input = gnn_6.getText().toString();
                 goto_pay_List.putExtra("text", input);
+                goto_pay_List.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
                 startActivity(goto_pay_List);
                 break;
             case R.id.gnn_7:
@@ -85,6 +91,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 goto_pay_List.putExtra("value", value);
                 input = gnn_7.getText().toString();
                 goto_pay_List.putExtra("text", input);
+
                 startActivity(goto_pay_List);
                 break;
             case R.id.gnn_8:
@@ -93,6 +100,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 input = gnn_8.getText().toString();
                 goto_pay_List.putExtra("value", value);
                 goto_pay_List.putExtra("text", input);
+                goto_pay_List.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
                 startActivity(goto_pay_List);
                 break;
             case R.id.gnn_9:
@@ -101,6 +109,7 @@ public class r_To_Get_Num extends AppCompatActivity {
                 input = gnn_9.getText().toString();
                 goto_pay_List.putExtra("value", value);
                 goto_pay_List.putExtra("text", input);
+                goto_pay_List.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
                 startActivity(goto_pay_List);
                 break;
         }
@@ -108,6 +117,7 @@ public class r_To_Get_Num extends AppCompatActivity {
 
     public void goto_fee(View v){
         Intent goto_fee = new Intent(getApplicationContext(), r_To_Is_Fee_Examption.class);
+        goto_fee.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
         startActivity(goto_fee);
     }
     public void goto_to_main(View v){

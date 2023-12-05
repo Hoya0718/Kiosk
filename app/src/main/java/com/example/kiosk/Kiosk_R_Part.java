@@ -212,58 +212,58 @@ public class Kiosk_R_Part extends AppCompatActivity {
         }
     }
 
-    public void goto_Kiosk_R_Hospital (View v){
-
-        if (checkBox.isChecked()) {
-
-            String[] hospital_department = {
-                    getString(R.string.cardiology),
-                    getString(R.string.respiratory),
-                    getString(R.string.neurosurgery),
-                    getString(R.string.department_Family_Medicine),
-                    getString(R.string.urology),
-                    getString(R.string.orthopedics),
-                    getString(R.string.gastroenterology),
-            };
-
-            String randomDepartment = getRandomValue(hospital_department);
-
-            // 팝업 띄우기
-            AlertDialog.Builder builder = new AlertDialog.Builder(Kiosk_R_Part.this);
-            builder.setTitle("임무");
-            builder.setMessage("진료과를 접수하는 임무입니다.\n아래와 같은 부서를 접수하세요.\n" +
-                    "\n부서 : " + randomDepartment);
-
-            myapp myApp = (myapp) getApplicationContext();
-            String checkHospitalMission = randomDepartment;
-            myApp.setCheckHospitalMission(checkHospitalMission);
-            myApp.setMissionCheck(true);
-
-            builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    // 다음 화면으로 넘어가는 코드 작성
-                    Intent goto_Kiosk_R_H = new Intent(Kiosk_R_Part.this, Kiosk_R_Hospital.class);
-                    tts.shutdown();
-                    startActivity(goto_Kiosk_R_H);
-                }
-            });
-            builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    // 취소 버튼을 눌렀을 때 동작할 코드 작성
-                    dialog.dismiss();
-                }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.show();
-
-        } else {
-            Intent goto_Kiosk_R_H = new Intent(Kiosk_R_Part.this, Kiosk_R_Hospital.class);
-            tts.shutdown();
-            startActivity(goto_Kiosk_R_H);
-        }
-    }
+//    public void goto_Kiosk_R_Hospital (View v){
+//
+//        if (checkBox.isChecked()) {
+//
+//            String[] hospital_department = {
+//                    getString(R.string.cardiology),
+//                    getString(R.string.respiratory),
+//                    getString(R.string.neurosurgery),
+//                    getString(R.string.department_Family_Medicine),
+//                    getString(R.string.urology),
+//                    getString(R.string.orthopedics),
+//                    getString(R.string.gastroenterology),
+//            };
+//
+//            String randomDepartment = getRandomValue(hospital_department);
+//
+//            // 팝업 띄우기
+//            AlertDialog.Builder builder = new AlertDialog.Builder(Kiosk_R_Part.this);
+//            builder.setTitle("임무");
+//            builder.setMessage("진료과를 접수하는 임무입니다.\n아래와 같은 부서를 접수하세요.\n" +
+//                    "\n부서 : " + randomDepartment);
+//
+//            myapp myApp = (myapp) getApplicationContext();
+//            String checkHospitalMission = randomDepartment;
+//            myApp.setCheckHospitalMission(checkHospitalMission);
+//            myApp.setMissionCheck(true);
+//
+//            builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    // 다음 화면으로 넘어가는 코드 작성
+//                    Intent goto_Kiosk_R_H = new Intent(Kiosk_R_Part.this, Kiosk_R_Hospital.class);
+//                    tts.shutdown();
+//                    startActivity(goto_Kiosk_R_H);
+//                }
+//            });
+//            builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    // 취소 버튼을 눌렀을 때 동작할 코드 작성
+//                    dialog.dismiss();
+//                }
+//            });
+//            AlertDialog dialog = builder.create();
+//            dialog.show();
+//
+//        } else {
+//            Intent goto_Kiosk_R_H = new Intent(Kiosk_R_Part.this, Kiosk_R_Hospital.class);
+//            tts.shutdown();
+//            startActivity(goto_Kiosk_R_H);
+//        }
+//    }
     public void a(View v){
         tts.shutdown();
         Intent a = new Intent(getApplicationContext(),r_Hospital_main.class);
@@ -275,9 +275,52 @@ public class Kiosk_R_Part extends AppCompatActivity {
         startActivity(goto_Kiosk_Main);
     }
     public void goto_PTO(View v){
-        tts.shutdown();
-        Intent goto_PTO = new Intent(getApplicationContext(), P_TO.class);
-        startActivity(goto_PTO);
+        if (checkBox.isChecked()) {
+
+            String[] TO_destination = {
+                    getString(R.string.select_all), getString(R.string.select_all_not)
+            };
+
+            String randomDestination = getRandomValue(TO_destination);
+
+            // 팝업 띄우기
+            AlertDialog.Builder builder = new AlertDialog.Builder(Kiosk_R_Part.this);
+            builder.setTitle("임무");
+            builder.setMessage("동사무소의 세부사항을 선택하는 임무입니다.\n아래와 같은 세부사항을 선택하세요.\n" +
+                    "\n세부사항 : " + randomDestination);
+
+            myapp myApp = (myapp) getApplicationContext();
+            String checkTOMission = randomDestination;
+            myApp.setCheckTOMission(checkTOMission);
+            myApp.setMissionCheck(true);
+
+            builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // 다음 화면으로 넘어가는 코드 작성
+                    Intent P_TO = new Intent(Kiosk_R_Part.this, P_TO.class);
+                    tts.shutdown();
+                    startActivity(P_TO);
+                }
+            });
+            builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // 취소 버튼을 눌렀을 때 동작할 코드 작성
+                    dialog.dismiss();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+        else {
+            tts.shutdown();
+            myapp myApp = (myapp) getApplicationContext();
+            myApp.setCheckTOMission(" ");
+            myApp.setMissionCheck(false);
+            Intent goto_PTO = new Intent(getApplicationContext(), P_TO.class);
+            startActivity(goto_PTO);
+        }
     }
     private void speakText(String text) {
         tts.setSpeechRate(sound.getTtsSpeed()) ;

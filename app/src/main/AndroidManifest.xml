@@ -31,7 +31,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kiosk"
         tools:targetApi="31">
-
+        <activity
+            android:name=".r_To_misson"
+            android:exported="false" />
         <activity
             android:name=".User_list"
             android:exported="false" />
@@ -446,14 +448,12 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -461,9 +461,7 @@
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
-
         </activity>
-
     </application>
 
 </manifest>

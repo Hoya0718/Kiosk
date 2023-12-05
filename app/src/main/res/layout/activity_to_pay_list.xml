@@ -111,6 +111,7 @@
         android:layout_width="230dp"
         android:layout_height="130dp"
         android:layout_marginStart="40dp"
+        android:onClick="bill"
         android:text="현금결제"
         android:textSize="40sp"
         app:layout_constraintStart_toEndOf="@+id/to_btn_card"

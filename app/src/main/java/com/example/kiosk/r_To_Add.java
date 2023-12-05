@@ -13,18 +13,24 @@ public class r_To_Add extends AppCompatActivity {
 
     private Drawable img;
     // TextView 사용 선언----------------------------------------------------------------------------
-    private TextView to_btn_check_1;
+    private TextView show_misson_1, to_btn_check_1, ask_mission_1;
     // TextView 사용 선언----------------------------------------------------------------------------
     // Button --------------------------------------------------------------------------------------
     private Button to_btn_all, to_btn_not_all, past_a, past_a_not, family_config, family_config_not, family_config_day, family_config_day_not, report, report_not;
     private Button why, household, household_members, why_not, foreigner, foreigner_not, ssn_back, self, household_members_ssn, ssn_back_not;
     private Button relation, relation_not, partner, partner_not;
-
+    private myapp myApp;
     private Drawable originalBackground;
+    private String valuePass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rto_add);
+
+        myApp  = (myapp)getApplication();
+        show_misson_1 = findViewById(R.id.show_misson_1);
+        show_misson_1.setText(myApp.getCheckTOMission());
+        ask_mission_1 = findViewById(R.id.ask_mission_1);
 
         to_btn_all = findViewById(R.id.to_btn_all);
         to_btn_not_all = findViewById(R.id.to_btn_not_all);
@@ -53,9 +59,14 @@ public class r_To_Add extends AppCompatActivity {
         partner_not = findViewById(R.id.partner_not);
 
         originalBackground = past_a_not.getBackground();
+
+        if (show_misson_1.getText().toString().equals(" ")) {
+            ask_mission_1.setText(" ");
+        }
     }
     public void goto_fee_Exam(View v){
         Intent goto_fee_Exam = new Intent(getApplicationContext(), r_To_Is_Fee_Examption.class);
+        goto_fee_Exam.putExtra("TO_destination", valuePass);
         startActivity(goto_fee_Exam);
     }
     public void goto_to_issuance(View v){
@@ -67,6 +78,7 @@ public class r_To_Add extends AppCompatActivity {
         startActivity(goto_to_main);
     }
     public void all(View v){
+        valuePass = "전체포함";
         past_a.setBackgroundResource(R.drawable.to_btn_orange_green);
         family_config.setBackgroundResource(R.drawable.to_btn_orange_green);
         family_config_day.setBackgroundResource(R.drawable.to_btn_orange_green);
@@ -88,6 +100,7 @@ public class r_To_Add extends AppCompatActivity {
         partner_not.setBackground(originalBackground);
     }
     public void all_not(View v){
+        valuePass = "전체미포함";
         past_a_not.setBackgroundResource(R.drawable.to_btn_orange_green);
         family_config_not.setBackgroundResource(R.drawable.to_btn_orange_green);
         family_config_day_not.setBackgroundResource(R.drawable.to_btn_orange_green);

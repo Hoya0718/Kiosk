@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                                 Log.d("test", "isSpeaking true");
                             } else Log.d("test", "isSpeeking false");
                             //버튼
-                            practice_Btn.setBackgroundResource(R.drawable.anim_list);
+                            practice_Btn.setBackgroundResource(R.drawable.anim_list_degree);
                             anim = (AnimationDrawable)practice_Btn.getBackground();
                             anim.start();
                         }

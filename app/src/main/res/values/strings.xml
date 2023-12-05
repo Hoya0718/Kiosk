@@ -429,4 +429,6 @@
     <string name="get_receipt">영수증을 받으세요</string>
     <string name="pickupyour">주문하신 제품을 카운터에서 받아주세요</string>
     <string name="thankyou">감사합니다</string>
+    <string name="select_all">전체포함</string>
+    <string name="select_all_not">전체미포함</string>
 </resources>

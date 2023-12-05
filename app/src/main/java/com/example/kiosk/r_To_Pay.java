@@ -26,6 +26,7 @@ public class r_To_Pay extends AppCompatActivity {
     }
     public void goto_card_Insert(View v){
         Intent goto_card_Insert = new Intent(getApplicationContext(), r_To_Card_Insert.class);
+        goto_card_Insert.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
         startActivity(goto_card_Insert);
     }
     public void goto_to_main(View v){

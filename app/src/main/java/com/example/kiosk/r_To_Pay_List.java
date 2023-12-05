@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class r_To_Pay_List extends AppCompatActivity {
     // TextView,Button 사용 선언----------------------------------------------------------------------------
@@ -38,6 +39,7 @@ public class r_To_Pay_List extends AppCompatActivity {
     public void goto_pay(View v){
         Intent goto_pay = new Intent(getApplicationContext(), r_To_Pay.class);
         goto_pay.putExtra("value", value);
+        goto_pay.putExtra("TO_destination", getIntent().getStringExtra("TO_destination"));
         startActivity(goto_pay);
     }
     public void goto_get_num(View v) {
@@ -48,5 +50,8 @@ public class r_To_Pay_List extends AppCompatActivity {
     public void goto_to_main(View v){
         Intent goto_to_main = new Intent(getApplicationContext(), P_TO.class);
         startActivity(goto_to_main);
+    }
+    public void bill(View v){
+        Toast.makeText(getApplicationContext(),"지원하지 않는 기능입니다.", Toast.LENGTH_LONG).show();
     }
 }

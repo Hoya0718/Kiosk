@@ -46,6 +46,7 @@ public class Kiosk_5 extends AppCompatActivity {
         fastfood.setTextSize(text_size.getId());
         bus.setTextSize(text_size.getId());
         hospital.setTextSize(text_size.getId());
+        samuso_btn.setTextSize(text_size.getId());
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             public void onInit(int status) {

@@ -93,6 +93,19 @@ public class myapp extends Application {
     }
 
     // 임무
+
+    private String checkTOMission;
+    public String getCheckTOMission() {return checkTOMission;}
+    public void setCheckTOMission(String a) {this.checkTOMission=a;}
+
+    private long r_to_time = 0;
+    public long getR_to_time() {return r_to_time;}
+    public void setR_to_time(long a) {this.r_to_time=a;}
+
+    private boolean practiceTOCheck = false;
+    public boolean getPracticeTOCheck() {return practiceFastfoodCheck;}
+    public void setPracticeTOCheck(boolean a) {this.practiceFastfoodCheck=a;}
+
     private String checkFastfoodMission;
     public String getCheckFastfoodMission() {return checkFastfoodMission;}
     public void setCheckFastfoodMission(String a) {this.checkFastfoodMission=a;}
